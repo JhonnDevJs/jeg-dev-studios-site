@@ -1,7 +1,4 @@
-"use client";
-
 import { useState } from "react";
-import "@/styles/proyects.css";
 
 const PROJECTS = [
   {

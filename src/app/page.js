@@ -9,7 +9,7 @@ import ferPhoto from "@/assets/img/img/team/fer-briseño.webp";
 //import ricPhoto from "@/assets/img/img/team/ricardo-ubaldo.webp";
 import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
 import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
-import CardServices from "@/components/cardServices";
+import CardServices from "@/components/CardServices";
 import CardTeam from "@/components/CardTeam";
 
 export default function Home() {
