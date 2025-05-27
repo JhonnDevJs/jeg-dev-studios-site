@@ -1,103 +1,204 @@
 import Image from "next/image";
+import Link from "next/link";
+import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
+import imgDevWeb from "@/assets/img/img/index/img-services/Desarrollo-web-min.webp";
+import imgDevSoft from "@/assets/img/img/index/img-services/desarrollo-software-min.webp";
+import imgDevMob from "@/assets/img/img/index/img-services/desarrollo-movil-min.webp";
+import imgDevGame from "@/assets/img/img/index/img-services/desarrollo-videojuegos-min.webp";
+import ferPhoto from "@/assets/img/img/team/fer-briseño.webp";
+//import ricPhoto from "@/assets/img/img/team/ricardo-ubaldo.webp";
+import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
+import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
+import CardServices from "@/components/cardServices";
+import CardTeam from "@/components/CardTeam";
 
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm/6 text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-[family-name:var(--font-geist-mono)] font-semibold">
-              src/app/page.js
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
-
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+    <>
+      <section className="d-flex flex-md-row flex-column vh-100 p-0 m-0 mt-5 __imageBackground">
+        <article className="d-flex flex-column justify-content-center aling-items-center bg-transparent w-100 h-100 gap-5 p-4">
+          <div className="d-flex flex-column bg-transparent aling-items-center justify-content-start w-100">
+            <h2 className="display-1 h1 text-light text-shadow">
+              Impulsamos tu presencia digital con tecnología innovadora
+            </h2>
+            <p className="fs-1 text-light text-shadow">
+              En JEG Dev Studios transformamos ideas en soluciones digitales
+              efectivas. <br /> Diseñamos y desarrollamos sitios web.
+            </p>
+          </div>
+          <div className="d-flex bg-transparent aling-items-center justify-content-start w-100 gap-5">
+            <Link
+              className="btn btn-light d-flex justify-content-center align-items-center p-3"
+              href="/services"
+              style={{ width: "10rem" }}
+            >
+              Ver Nuestros Servicios
+            </Link>
+            <Link
+              className="btn btn-light d-flex justify-content-center align-items-center p-3"
+              href="/contact"
+              style={{ width: "10rem" }}
+            >
+              Solicita una consulta
+            </Link>
+          </div>
+        </article>
+      </section>
+      <section className="d-flex flex-column justify-content-center align-items-center text-center w-100 p-xl-5 p-3 mt-5 __section-team">
+        <h2>¿Quiénes somos?</h2>
+        <p>
+          Nuestro equipo excepcional de desarrolladores, diseñadores y creativos
+          trabaja en conjunto para ofrecer soluciones digitales personalizadas
+          que se adaptan a las necesidades de cada cliente.
+        </p>
+        <article className="d-flex justify-content-center align-items-center w-100 p-0 m-0">
+          <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-center w-100 h-100 gap-5 p-0 m-0">
+            {/*<CardTeam
+              imageUrl="https://avatars.githubusercontent.com/u/12345678?v=4"
+              name="Ricardo Ubaldo"
+              position="Co-Fundador"
+              linkedin="https://www.linkedin.com/in/ricardo-ubaldo-gonz%C3%A1lez-4522a5291/"
+            />*/}
+            <CardTeam
+              imageUrl={ferPhoto}
+              name="Fernanda Briseño"
+              position="Co-Fundador"
+              links={[
+                {
+                  url: "https://www.linkedin.com/in/fernanda-brise%C3%B1o-64b310342/",
+                  icon: "icon-linkedin-no-bg",
+                  title: "Enlace a perfil de LinkedIn de Fernanda Briseño",
+                },
+                {
+                  url: "https://www.behance.net/karlabriseo1",
+                  icon: "icon-behance",
+                  title: "Enlace a perfil de Behance de Fernanda Briseño",
+                },
+              ]}
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
+            <CardTeam
+              imageUrl={jhonPhoto}
+              name="Jhonatan Espinal"
+              position="CEO & Fundador"
+              links={[
+                {
+                  url: "https://www.linkedin.com/in/jhoneg/",
+                  icon: "icon-linkedin-no-bg",
+                  title: "Enlace a perfil de LinkedIn de Jhonatan Espinal",
+                },
+                {
+                  url: "https://jhoneg-17.github.io/JhonDev/",
+                  icon: "icon-link",
+                  title: "Enlace a sitio web de Jhonatan Espinal",
+                },
+              ]}
+            />
+            <CardTeam
+              imageUrl={leoPhoto}
+              name="Leonardo Gonzalez"
+              position="Co-Fundador"
+              links={[
+                {
+                  url: "https://www.linkedin.com/in/jose-leonardo-gonzalez-valadez-860b012b4/",
+                  icon: "icon-linkedin-no-bg",
+                  title: "Enlace a perfil de LinkedIn de Leonardo Gonzalez",
+                },
+              ]}
+            />
+          </ul>
+        </article>
+      </section>
+      <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5">
+        <div className="d-flex justify-content-center w-100 p-0 m-0">
+          <h2>Sobre lo que hacemos</h2>
         </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+        <div className="d-flex flex-column text-center justify-content-center w-100 p-0 m-0">
+          <h2>Transformamos ideas en experiencias digitales</h2>
+          <p>
+            En <strong>JEG Dev Studios</strong> convertimos tus ideas en
+            proyectos reales. Nuestro equipo desarrolla soluciones digitales
+            personalizadas que incluyen{" "}
+            <strong>sitios web profesionales</strong>,{" "}
+            <strong>aplicaciones móviles</strong>,{" "}
+            <strong>software de escritorio</strong> y{" "}
+            <strong>videojuegos</strong>.
+          </p>
+
+          <p className="w-100">
+            En JEG Dev Studios nos encargamos de traer a la realidad tus ideas
+            mediante soluciones tecnologicas por eso nos dedicamos al desarrollo
+            de sitios web, creacion de aplicaciones moviles y de escritorio
+          </p>
+        </div>
+        <div className="d-flex justify-content-center text-center w-100">
+          <h2>consulta mas sobre nuestros servicios aquí</h2>
+        </div>
+        <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-center w-100 gap-5 p-0 m-0">
+          <CardServices
+            imageUrl={imgDevWeb}
+            title="Desarrollo de sitios web"
+            url="/saber-mas/web-dev"
           />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
+          <CardServices
+            imageUrl={imgDevSoft}
+            title="Desarrollo de software"
+            url="/saber-mas/soft-dev"
           />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
+          <CardServices
+            imageUrl={imgDevMob}
+            title="Desarrollo de aplicaciones"
+            url="/saber-mas/app-dev"
           />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+          <CardServices
+            imageUrl={imgDevGame}
+            title="Desarrollo de videojuegos"
+            url="/saber-mas/games-dev"
+          />
+        </ul>
+      </section>
+      <section className="d-flex flex-column justify-content-center align-items-center vh-100 text-center w-100 p-xl-5 p-3 mt-5">
+        <h2>¿Por qué elegirnos?</h2>
+        <ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
+          <li className="card shadow-sm p-3 text-center">
+            <p className="fs-2 m-0">🏆 +5 años de experiencia combinada</p>
+          </li>
+          <li className="card shadow-sm p-3 text-center">
+            <p className="fs-2 m-0">
+              💡 Soluciones personalizadas a tu negocio
+            </p>
+          </li>
+          <li className="card shadow-sm p-3 text-center">
+            <p className="fs-2 m-0">🤝 Acompañamiento y soporte</p>
+          </li>
+          <li className="card shadow-sm p-3 text-center">
+            <p className="fs-2 m-0">📱 Diseño 100% adaptado a móviles</p>
+          </li>
+        </ul>
+      </section>
+      <section className="d-flex flex-column justify-content-center align-items-center vh-100 text-center w-100 p-xl-5 p-3 mt-5">
+        <h2>¿Tienes un proyecto? Hablemos</h2>
+        <p>
+          Te ofrecemos una <strong>consulta gratuita</strong> donde analizamos
+          tu idea y te damos una guía clara con presupuesto incluido.
+        </p>
+        <div className="d-flex justify-content-center p-2">
+          <Image
+            className="img-fluid"
+            style={{ width: "16rem" }}
+            src={iconLogo}
+            alt="logo de la empresa"
+            width={256}
+            height={256}
+            loading="lazy"
+          />
+        </div>
+        <div className="d-flex justify-content-center w-100 pt-2 pb-2">
+          <Link className="btn btn-dark" href="/contact">
+            Consulta gratuita
+          </Link>
+        </div>
+        <p>Solicita tu consulta gratis ahora</p>
+      </section>
+    </>
   );
 }

@@ -1,26 +1,25 @@
-@import "tailwindcss";
+@import "../assets/icons/icon-fonts/style.css";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+* {
+  font-family: "Bebas Neue", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  box-sizing: border-box;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+.__imageBackground {
+  background-image: url("/fondos/backgraund.webp");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+.__section-team {
+  min-height: 100dvh;
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+.__icons-color::before {
+  color: #000;
 }
