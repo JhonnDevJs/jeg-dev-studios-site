@@ -111,6 +111,14 @@ export const themeColor = "#000000";
 export default function RootLayout({ children }) {
   return (
     <html lang="es">
+      <head>
+        <link
+          rel="preload"
+          as="image"
+          href="/fondos/backgraund.webp"
+          type="image/webp"
+        />
+      </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
