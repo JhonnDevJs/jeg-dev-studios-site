@@ -1,5 +1,3 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import ShoppingCart from "@/components/ShoppingCart";
 import CardProduct from "@/components/CardProduct";

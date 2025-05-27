@@ -1,5 +1,3 @@
-"use client";
-
 import ButtonsSocial from "@/components/ButtonsSocial";
 
 export const metadata = {
