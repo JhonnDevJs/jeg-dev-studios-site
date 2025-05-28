@@ -16,6 +16,14 @@
   background-attachment: fixed;
 }
 
+@media (max-width: 768px) {
+  .__imageBackground {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+  }
+}
+
 .__section-team {
   min-height: 100dvh;
 }
