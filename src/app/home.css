@@ -1,7 +1,91 @@
+/* home.css */
+
 /* Puedes ajustar los colores y el grosor */
+
+.__imageBackground {
+  background-image: url("/fondos/backgraund.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+@media (max-width: 768px) {
+  .__imageBackground {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+  }
+}
+
 .gradient-border {
-  border-width: 2px !important;
-  border-style: solid !important;
-  border-image: linear-gradient(90deg, #1171FD, #947ED8) 1;
+  position: relative;
+  z-index: 1;
+  border: none;
+  border-radius: 0.95rem;
+  background: linear-gradient(90deg, #1171FD, #947ED8);
+  color: #fff;
+  padding: 2px;
+  transition: background 0.3s;
+}
+
+.gradient-border>span,
+.gradient-border .btn-text {
+  display: block;
+  background: #00000000;
+  color: #fff;
+  border-radius: 0.95rem;
+  padding: 0.5rem 1rem;
+  width: 100%;
+  height: 100%;
+  transition: background 0.3s, color 0.3s;
+}
+
+.gradient-border:hover>span,
+.gradient-border:hover .btn-text {
+  background: #fff;
+  color: #181818;
+}
+
+.gradient-border:active>span,
+.gradient-border:focus>span {
+  background: #222;
+
+}
+
+.__section-team {
+  min-height: 100dvh;
+}
+
+.card-services {
+  background: rgba(24, 24, 24, 0.603);
+  /* Fondo semitransparente */
+  backdrop-filter: blur(40px);
+  /* Aplica el blur */
+  -webkit-backdrop-filter: blur(20px);
+  /* Soporte Safari */
   border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.144);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
+}
+
+.navbar-nav.gradient-border {
+  background: #00000000;
+  border-radius: 0.95rem;
+  padding: 2px;
+}
+
+.nav-efecto {
+  transition: transform 0.2s cubic-bezier(.4, 2, .6, 1), color 0.2s;
+}
+
+.nav-efecto:hover,
+.nav-efecto:focus {
+  transform: scale(1.15);
+  color: #947ED8 !important;
+}
+
+.nav-efecto.active {
+  transform: scale(1.15);
+  color: #1171FD !important;
 }

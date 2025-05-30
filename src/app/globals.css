@@ -7,27 +7,56 @@
   box-sizing: border-box;
 }
 
-.__imageBackground {
-  background-image: url("/fondos/backgraund.webp");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+.__icons-color::before {
+  color: #ffffff;
 }
 
-@media (max-width: 768px) {
-  .__imageBackground {
-    background-size: cover;
-    background-position: center center;
-    background-attachment: scroll;
+.header-nav {
+  background: rgba(24, 24, 24, 0.603); /* Fondo semitransparente */
+  backdrop-filter: blur(40px); /* Aplica el blur */
+  -webkit-backdrop-filter: blur(20px); /* Soporte Safari */
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
+  height: 4.5rem;
+}
+
+/* Hamburguesa blanca */
+.navbar-toggler-icon {
+  filter: brightness(0) invert(1);
+}
+
+/* Sin borde al hacer click */
+.navbar-toggler:focus, .navbar-toggler:hover, .navbar-toggler:active {
+  box-shadow: none;
+  outline: none;
+  border: none;
+}
+.gradiant-effect {
+  min-height: 100vh;
+  background: linear-gradient(87deg, #17184e 8.8%, #5a1d50 84.38%);
+  background-size: 200% 200%;
+  animation: gradientMove 8s ease-in-out infinite;
+}
+
+@keyframes gradientMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
   }
 }
 
-.__section-team {
-  min-height: 100dvh;
+@media (max-width: 600px) {
+  .gradiant-effect {
+    background: linear-gradient(120deg, #17184e 20%, #5a1d50 80%);
+    background-size: 300% 300%;
+    min-height: 100vh;
+  }
 }
-
-.__icons-color::before {
-  color: #ffffff;
+.section{
+  margin-top: 4.5rem;
+  min-height: calc(100dvh - 4.5rem);
 }

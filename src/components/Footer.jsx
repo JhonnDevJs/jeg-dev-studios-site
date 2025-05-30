@@ -3,7 +3,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer className="d-flex flex-column justify-content-center align-items-center bg-black text-white w-100 p-3">
-      <section className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-0">
+      <div className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-0">
         <article className="d-flex flex-column justify-content-center align-items-center gap-3">
           <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-start">
             <h2>Contactanos</h2>
@@ -19,7 +19,7 @@ function Footer() {
               +52 55 1219 7135
             </Link>
             <Link
-              href="mailto:jegdevstudios@gmail.com"
+              href="mailto:jegdevstudioscontact@gmail.com"
               className="text-decoration-none text-white fs-5"
               target="_blank"
               rel="noopener noreferrer"
@@ -27,7 +27,7 @@ function Footer() {
               aria-label="Enlace a gmail"
               tabIndex={0}
             >
-              jegdevstudios@gmail.com
+              jegdevstudioscontact@gmail.com
             </Link>
           </div>
           <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-center w-100 h-100 gap-3">
@@ -93,7 +93,7 @@ function Footer() {
             Términos y condiciones
           </Link>
         </article>
-      </section>
+      </div>
       <p className="d-flex justify-content-center w-100 mb-0 mt-3">
         &copy; {new Date().getFullYear()} JEG Dev Studios. Todos los derechos
         reservados.

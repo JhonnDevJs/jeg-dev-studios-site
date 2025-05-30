@@ -1,31 +1,35 @@
+"use client";
+
 import Link from "next/link";
 import Image from "next/image";
 import iconLogo from "../assets/img/logo/logo-bg-transparent.webp";
+import { usePathname } from "next/navigation";
 
 function NavBar() {
+  const pathname = usePathname();
+
   return (
-    <header>
-      <nav className="navbar navbar-expand-lg align-items-center bg-white fixed-top w-100">
+    <header className="shadow-sm">
+      <nav className="navbar navbar-expand-lg align-items-center fixed-top w-100 header-nav">
         <div className="container-fluid d-flex align-items-center">
           {/* Logo y Nombre */}
           <Link
             href="/"
-            className="navbar-brand d-flex text-black justify-content-center align-items-center text-center p-0 gap-2"
+            className="navbar-brand d-flex text-white justify-content-center align-items-center text-center p-0 gap-2" style={{ position: "fixed", top: "0rem", left: "3rem"}}
           >
             <Image
               src={iconLogo}
               alt="Logo"
-              width={40}
-              height={40}
+              width={70}
+              height={70}
               className="d-inline-block align-text-top rounded-circle"
               loading="lazy"
             />
-            <h1 className="m-0 p-0 text-center fs-5">JEG Dev Studios</h1>
           </Link>
 
           {/* Botón Hamburguesa para móviles */}
           <button
-            className="navbar-toggler bg-white border-0"
+            className="navbar-toggler bg-transparent text-white border-0 ms-auto"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"
@@ -37,46 +41,77 @@ function NavBar() {
           </button>
 
           {/* Menú */}
-          <div className="collapse navbar-collapse" id="navbarNav">
-            <ul className="navbar-nav ms-auto"> {/* ms-auto alinea el contenido a la derecha */}
-              <li className="nav-item ">
-                <Link
-                  href="/"
-                  className="nav-link active text-black"
-                  aria-current="page"
-                >
-                  Home
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/services" className="nav-link text-black">
-                  Servicios
-                </Link>
-              </li>
-              <li className="nav-item"> {/* Eliminado d-none */}
-                <Link
-                  href="/proyects"
-              className="nav-link d-none text-black" /* Eliminada clase 'disabled' */
-                > 
-                  Proyectos
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/about" className="nav-link text-black">
-                  Sobre Nosotros
-                </Link>
-              </li>
-              <li className="nav-item"> {/* Eliminado d-none */}
-            <Link href="/blog" className="nav-link d-none text-black"> {/* Eliminada clase 'disabled' */}
-                  Blog
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link href="/contact" className="nav-link text-black">
-                  Contacto
-                </Link>
-              </li>
-            </ul>
+          <div
+            className="collapse navbar-collapse justify-content-center"
+            id="navbarNav"
+          >
+            <div className="gradient-border">
+              <ul
+                className="navbar-nav mx-auto p-1"
+                style={{ background: "#000", borderRadius: "0.95rem" }}
+              >
+                <li className="nav-item">
+                  <Link
+                    href="/"
+                    className={`nav-link text-white nav-efecto${
+                      pathname === "/" ? " active" : ""
+                    }`}
+                  >
+                    Home
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/services"
+                    className={`nav-link text-white nav-efecto${
+                      pathname === "/services" ? " active" : ""
+                    }`}
+                  >
+                    Servicios
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/proyects"
+                    className={`nav-link d-none text-white nav-efecto${
+                      pathname === "/proyects" ? " active" : ""
+                    }`}
+                  >
+                    Proyectos
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/about"
+                    className={`nav-link text-white nav-efecto${
+                      pathname === "/about" ? " active" : ""
+                    }`}
+                  >
+                    Sobre Nosotros
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/blog"
+                    className={`nav-link d-none text-white nav-efecto${
+                      pathname === "/blog" ? " active" : ""
+                    }`}
+                  >
+                    Blog
+                  </Link>
+                </li>
+                <li className="nav-item">
+                  <Link
+                    href="/contact"
+                    className={`nav-link text-white nav-efecto${
+                      pathname === "/contact" ? " active" : ""
+                    }`}
+                  >
+                    Contacto
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
         </div>
       </nav>
