@@ -526,11 +526,18 @@
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+@media (max-width: 768px) {
+  .__imageBackground {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+  }
+}
 .__section-team {
   min-height: 100dvh;
 }
 .__icons-color::before {
-  color: #000;
+  color: #ffffff;
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./node_modules/bootstrap/dist/css/bootstrap.min.css ***!

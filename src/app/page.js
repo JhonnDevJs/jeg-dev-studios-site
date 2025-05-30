@@ -11,35 +11,42 @@ import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
 import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
 import CardServices from "@/components/CardServices";
 import CardTeam from "@/components/CardTeam";
+import "./home.css";
 
 export default function Home() {
   return (
     <>
-      <section className="d-flex flex-md-row flex-column vh-100 p-0 m-0 mt-5 __imageBackground">
-        <article className="d-flex flex-column justify-content-center aling-items-center bg-transparent w-100 h-100 gap-5 p-4">
-          <div className="d-flex flex-column bg-transparent aling-items-center justify-content-start w-100">
-            <h2 className="display-1 h1 text-light text-shadow">
-              Impulsamos tu presencia digital con tecnología innovadora
-            </h2>
-            <p className="fs-1 text-light text-shadow">
-              En JEG Dev Studios transformamos ideas en soluciones digitales
-              efectivas. <br /> Diseñamos y desarrollamos sitios web.
+      <section className="d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 mt-5 __imageBackground">
+        <article className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0" style={{ maxWidth: "46rem"}}>
+          <div className="container p-0 m-0">
+            <h1 className="display-1 text-light text-shadow">
+              JEG Dev Studios
+            </h1>
+            <p className="fs-1 text-light text-shadow text-brack w-100 w-xl-50">
+              No solo creamos páginas web, construimos experiencias digitales.
             </p>
           </div>
-          <div className="d-flex bg-transparent aling-items-center justify-content-start w-100 gap-5">
+          <div className="d-flex flex-column bg-transparent aling-items-center justify-content-start w-100 gap-3">
             <Link
-              className="btn btn-light d-flex justify-content-center align-items-center p-3"
+              className="btn text-white gradient-border"
               href="/services"
-              style={{ width: "10rem" }}
+              style={{ width: "15.3rem" }}
             >
-              Ver Nuestros Servicios
+              Ver nuestros servicios
             </Link>
             <Link
-              className="btn btn-light d-flex justify-content-center align-items-center p-3"
+              className="btn text-white gradient-border"
               href="/contact"
-              style={{ width: "10rem" }}
+              style={{ width: "13.4rem" }}
             >
               Solicita una consulta
+            </Link>
+            <Link
+              href="/about"
+              className="btn text-white gradient-border"
+              style={{ width: "7.8rem" }}
+            >
+              Nosotros
             </Link>
           </div>
         </article>

@@ -1,0 +1,7 @@
+/* Puedes ajustar los colores y el grosor */
+.gradient-border {
+  border-width: 2px !important;
+  border-style: solid !important;
+  border-image: linear-gradient(90deg, #1171FD, #947ED8) 1;
+  border-radius: 1rem;
+}
