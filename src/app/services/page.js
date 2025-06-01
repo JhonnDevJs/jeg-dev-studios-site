@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Servicios de Desarrollo Web | JEG Dev Studios",
+  title: "Servicios | JEG Dev Studios",
   description:
     "Descubre nuestros servicios de desarrollo web, software, apps y videojuegos. Soluciones digitales a medida para tu negocio.",
   keywords:

@@ -6,7 +6,7 @@ import Richi from "@/assets/img/img/team/ricardo.webp";
 
 export default function TeamCarousel() {
   return (
-    <div id="carouselExampleCaptions" className="carousel slide">
+    <div id="carouselExampleCaptions" className="carousel slid px-5">
       <div className="carousel-indicators">
         <button
           type="button"
@@ -37,7 +37,7 @@ export default function TeamCarousel() {
       </div>
       <div
         className="carousel-inner"
-        style={{ maxWidth: "77.5rem", minHeight: "14.25rem" }}
+        style={{ maxWidth: "77.5rem", minHeight: "14.25rem"}}
       >
         <div className="carousel-item active">
           <CardTeam
@@ -120,7 +120,7 @@ export default function TeamCarousel() {
         type="button"
         data-bs-target="#carouselExampleCaptions"
         data-bs-slide="prev"
-        style={{ left: "-4rem", width: "4rem" }}
+        style={{ left: "0rem", width: "4rem" }}
       >
         <span className="carousel-control-prev-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Previous</span>
@@ -130,7 +130,7 @@ export default function TeamCarousel() {
         type="button"
         data-bs-target="#carouselExampleCaptions"
         data-bs-slide="next"
-        style={{ right: "-4rem", width: "4rem" }}
+        style={{ right: "0rem", width: "4rem" }}
       >
         <span className="carousel-control-next-icon" aria-hidden="true"></span>
         <span className="visually-hidden">Next</span>

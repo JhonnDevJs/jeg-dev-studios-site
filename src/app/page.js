@@ -94,7 +94,7 @@ export default function Home() {
         </article>
       </section>
       <section
-        className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5"
+        className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 mt-5"
         style={{ minHeight: "553px" }}
       >
         <h2 className="text-center text-white">
@@ -104,7 +104,7 @@ export default function Home() {
         </h2>
         <TeamCarousel />
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-start text-center w-100 p-xl-5 p-3">
+      <section className="d-flex flex-column bg-transparent justify-content-center align-items-start text-center w-100 gap-3 p-xl-5 p-3">
         <h2 className="display-1 text-white">¿Por qué elegirnos?</h2>
         <ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
           <li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
