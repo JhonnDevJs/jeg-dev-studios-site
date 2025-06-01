@@ -18,9 +18,11 @@ function CardServices({ title, description, url, items = [] }) {
       <div className="card-footer d-flex justify-content-center align-items-center">
         <ul className="list-group list-group-flush w-100">
           {items.map((item, idx) => (
-            <li key={idx} className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100 gap-3">
-              <span class="icon-check-list fs-5"></span>
-              <p className="fs-5 m-0">{item}</p>
+            <li key={idx} className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100">
+              <p className="fs-5 m-0">
+                <span className="icon-check-list fs-5 me-2"></span>
+                {item}
+              </p>
             </li>
           ))}
         </ul>

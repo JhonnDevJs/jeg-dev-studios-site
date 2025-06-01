@@ -50,7 +50,7 @@ export default function ContactClient() {
   return (
     <section className="d-flex flex-md-row flex-column-reverse justify-content-center align-items-center w-100 vh-100 p-xl-5 p-3 gap-5">
       <article className="d-flex flex-column justify-content-center align-items-center text-center w-100 h-100">
-        <h2>Formulario de Contacto</h2>
+        <h2 className="text-white">Formulario de Contacto</h2>
         <form
           className="d-flex flex-column justify-content-center aling-items-center text-center bg-light border border-dark rounded gap-4 p-4"
           id="contactForm"
@@ -103,7 +103,7 @@ export default function ContactClient() {
       </article>
       <aside className="d-flex flex-column justify-content-center align-items-center w-100 h-100 gap-4">
         <div className="text-center">
-          <h2>Contáctanos por redes sociales</h2>
+          <h2 className="text-white">Contáctanos por redes sociales</h2>
         </div>
         <div className="d-flex justify-content-center align-items-center gap-4">
           <ButtonsSocial tamaño={{ width: "7rem" }} />

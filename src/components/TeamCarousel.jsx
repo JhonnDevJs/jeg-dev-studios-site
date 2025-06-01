@@ -37,7 +37,7 @@ export default function TeamCarousel() {
       </div>
       <div
         className="carousel-inner"
-        style={{ width: "77.5rem", minHeight: "14.25rem" }}
+        style={{ maxWidth: "77.5rem", minHeight: "14.25rem" }}
       >
         <div className="carousel-item active">
           <CardTeam
