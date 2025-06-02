@@ -3,7 +3,7 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer className="d-flex flex-column justify-content-center align-items-center bg-black text-white w-100 p-3">
-      <div className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-0">
+      <div className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-3">
         <article className="d-flex flex-column justify-content-center align-items-center gap-3">
           <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-center">
             <h2>Contactanos</h2>
@@ -30,11 +30,11 @@ function Footer() {
               jegdevstudioscontact@gmail.com
             </Link>
           </div>
-          <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-center w-100 h-100 gap-3">
+          <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-center w-100 h-100">
             <h2>Siguenos</h2>
             <div className="d-flex justify-content-center align-items-center gap-3">
               <Link
-                className="d-flex fs-4 text-decoration-none icon-facebook __icons-color"
+                className="d-flex fs-2 text-decoration-none icon-facebook __icons-color"
                 href="https://www.facebook.com/JEGDevStudios"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -43,7 +43,7 @@ function Footer() {
                 tabIndex={0}
               ></Link>
               <Link
-                className="d-flex fs-4 text-decoration-none icon-instagram __icons-color"
+                className="d-flex fs-2 text-decoration-none icon-instagram __icons-color"
                 href="https://instagram.com/jegdevstudios/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -52,7 +52,7 @@ function Footer() {
                 tabIndex={0}
               ></Link>
               <Link
-                className="d-flex fs-4 text-decoration-none icon-linkedin-no-bg __icons-color"
+                className="d-flex fs-2 text-decoration-none icon-linkedin-no-bg __icons-color"
                 href="https://linkedin.com/company/jegdevstudios"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -61,7 +61,7 @@ function Footer() {
                 tabIndex={0}
               ></Link>
               <Link
-                className="d-flex fs-4 text-decoration-none icon-github __icons-color"
+                className="d-flex fs-2 text-decoration-none icon-github __icons-color"
                 href="https://github.com/JEGDevStudios"
                 target="_blank"
                 rel="noopener noreferrer"

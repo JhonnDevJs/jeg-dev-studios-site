@@ -1,7 +1,7 @@
 @import "../assets/icons/icon-fonts/style.css";
 
 * {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "ABeeZee", sans-serif;
   font-weight: 400;
   font-style: normal;
   box-sizing: border-box;
@@ -30,6 +30,7 @@
   outline: none;
   border: none;
 }
+
 .gradiant-effect {
   min-height: 100vh;
   background: linear-gradient(87deg, #17184e 8.8%, #5a1d50 84.38%);
@@ -59,4 +60,10 @@
 .section{
   margin-top: 4.5rem;
   min-height: calc(100dvh - 4.5rem);
+}
+
+.btn-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }

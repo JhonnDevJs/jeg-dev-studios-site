@@ -21,7 +21,7 @@ export default function ServicesClient() {
           />
           <CardServices
             title="Desarrollo de aplicaciones"
-            description="Implementamos estructuras limpias y reutilizables en lenguajes como Python, JavaScript y C# para garantizar estabilidad y crecimiento a largo plazo."
+            description="Implementamos lenguajes como Kotlin, React Native, PHP (Laravel) para garantizar compatibilidad, rendimiento y mantenimiento simplificado, asegurando escalabilidad y eficiencia."
             url="/services/desarrollo-movil"
             items={[
               "Código Modular y Escalable",
@@ -32,7 +32,7 @@ export default function ServicesClient() {
           />
           <CardServices
             title="Desarrollo de software"
-            description="Implementamos desarrollo en lenguajes como Java, Kotlin y React Native para garantizar compatibilidad, rendimiento y mantenimiento simplificado, asegurando escalabilidad y eficiencia."
+            description="Implementamos estructuras limpias y reutilizables en lenguajes como React Native y Java para garantizar estabilidad y crecimiento a largo plazo."
             url="/services/desarrollo-software"
             items={[
               "Clean Code",

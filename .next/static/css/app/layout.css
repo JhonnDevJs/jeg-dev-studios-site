@@ -73,7 +73,7 @@
 @font-face {
   font-family: 'icomoon';
   src: url(/_next/static/media/icomoon.84e39f31.eot);
-  src: url(/_next/static/media/icomoon.84e39f31.eot#iefix) format('embedded-opentype'), url(/_next/static/media/icomoon.35808456.ttf) format('truetype'), url(/_next/static/media/icomoon.63e84181.woff) format('woff'), url(/_next/static/media/icomoon.f72f134f.svg#icomoon) format('svg');
+  src: url(/_next/static/media/icomoon.84e39f31.eot#iefix) format('embedded-opentype'), url(/_next/static/media/icomoon.35808456.ttf) format('truetype'), url(/_next/static/media/icomoon.63e84181.woff) format('woff'), url(/_next/static/media/icomoon.9b8f42ba.svg#icomoon) format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -562,7 +562,7 @@
   content: "\eaca";
 }
 * {
-  font-family: "Bebas Neue", sans-serif;
+  font-family: "ABeeZee", sans-serif;
   font-weight: 400;
   font-style: normal;
   box-sizing: border-box;
@@ -612,6 +612,11 @@
 .section {
   margin-top: 4.5rem;
   min-height: calc(100dvh - 4.5rem);
+}
+.btn-whatsapp {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
 }
 /*!***********************************************************************************************************************************************************************************************************************************************************************************************!*\
   !*** css ./node_modules/next/dist/build/webpack/loaders/css-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[2]!./node_modules/next/dist/build/webpack/loaders/postcss-loader/src/index.js??ruleSet[1].rules[13].oneOf[10].use[3]!./node_modules/bootstrap/dist/css/bootstrap.min.css ***!

@@ -6,6 +6,9 @@ import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
 import "./contactClient.css";
 
 export default function ContactClient() {
+  const [loading, setLoading] = useState(false); // Nuevo estado
+  const [showModal, setShowModal] = useState(false);
+
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -20,6 +23,7 @@ export default function ContactClient() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setLoading(true);
 
     try {
       const response = await fetch(
@@ -34,19 +38,21 @@ export default function ContactClient() {
       );
 
       if (response.ok) {
-        alert("Correo enviado con éxito");
         setFormData({
           name: "",
           email: "",
           type: "",
           message: "",
         });
+        setShowModal(true); // Mostrar modal
       } else {
         alert("Error al enviar el correo");
       }
     } catch (error) {
       console.error("Error:", error);
       alert("Error al enviar el correo");
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -134,12 +140,35 @@ export default function ContactClient() {
               onChange={handleChange}
               required
             />
-            <button type="submit" className="fs-5 fw-bold">
-              Enviar
+            <button type="submit" className="fs-5 fw-bold btn-services">
+              {loading ? (
+                <div className="d-flex align-items-center">
+                  <strong role="status">Enviando...</strong>
+                  <div className="spinner-border ms-auto" aria-hidden="true"></div>
+                </div>
+              ) : (
+                "Enviar"
+              )}
             </button>
           </form>
         </article>
       </section>
+      {showModal && (
+        <div className="custom-modal-backdrop">
+          <div className="custom-modal-content rounded-4 bg-black text-white text-center p-4">
+            <div className="mb-4">
+              <div className="fs-3 fw-bold">Tu mensaje ha sido enviado<br />exitosamente.</div>
+              <div className="fs-5 mt-2">Nos comunicaremos<br />contigo a la brevedad.<br />:)</div>
+            </div>
+            <button
+              className="btn-services"
+              onClick={() => setShowModal(false)}
+            >
+              Aceptar
+            </button>
+          </div>
+        </div>
+      )}
     </>
   );
 }

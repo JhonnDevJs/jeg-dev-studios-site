@@ -11,7 +11,7 @@ function CardServices({ title, description, url, items = [] }) {
       <div className="card-body d-flex flex-column">
         <h3 className="h2 fw-bolder card-title text-start">{title}</h3>
         <p className="fs-5 text-start">{description}</p>
-        <Link href={url} className="btn gradient-border">
+        <Link href={url} className="btn-services">
           <span className="fw-bolder">ver paquetes completos</span>
         </Link>
       </div>

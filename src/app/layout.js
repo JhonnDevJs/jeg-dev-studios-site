@@ -2,6 +2,7 @@ import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
 import Script from "next/script";
 import NavBar from "@/components/NavBar.jsx";
+import BtnWhats from "@/components/WhatsAppButton.jsx";
 import Footer from "@/components/Footer.jsx";
 import "bootstrap/dist/css/bootstrap.min.css";
 
@@ -234,6 +235,7 @@ export default function RootLayout({ children }) {
         <NavBar />
         <main className="container-fluid d-flex flex-column min-vh-100 p-0 m-0">
           {children}
+          <BtnWhats/>
         </main>
         <Footer />
       </body>

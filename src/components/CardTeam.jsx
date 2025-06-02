@@ -36,7 +36,7 @@ function CardTeam({ imageUrl, name, position, description, links }) {
               ))}
             </div>
           </div>
-          <p className="text-secondary m-0">{position}</p>
+          <p className="text-light fst-italic m-0">{position}</p>
         </div>
       </div>
       <div>

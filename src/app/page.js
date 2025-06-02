@@ -1,13 +1,4 @@
-import Image from "next/image";
 import Link from "next/link";
-import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
-import imgDevWeb from "@/assets/img/img/index/img-services/Desarrollo-web-min.webp";
-import imgDevSoft from "@/assets/img/img/index/img-services/desarrollo-software-min.webp";
-import imgDevMob from "@/assets/img/img/index/img-services/desarrollo-movil-min.webp";
-import ferPhoto from "@/assets/img/img/team/fer-briseño.webp";
-//import ricPhoto from "@/assets/img/img/team/ricardo-ubaldo.webp";
-import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
-import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
 import CardServices from "@/components/CardServices";
 import TeamCarousel from "@/components/TeamCarousel";
 import "./home.css";
@@ -30,23 +21,23 @@ export default function Home() {
           </div>
           <div className="d-flex flex-column bg-transparent aling-items-center justify-content-start w-100 gap-3">
             <Link
-              className="btn gradient-border"
+              className="btn-services"
               href="/services"
-              style={{ width: "15.3rem" }}
+              style={{ maxWidth: "15.3rem" }}
             >
               <span className="btn-text">Ver nuestros servicios</span>
             </Link>
             <Link
-              className="btn gradient-border"
+              className="btn-services"
               href="/contact"
-              style={{ width: "13.4rem" }}
+              style={{ maxWidth: "13.4rem" }}
             >
               <span className="btn-text">Solicita una consulta</span>
             </Link>
             <Link
               href="/about"
-              className="btn gradient-border"
-              style={{ width: "7.8rem" }}
+              className="btn-services"
+              style={{ maxWidth: "7.8rem" }}
             >
               <span className="btn-text">Nosotros</span>
             </Link>
@@ -70,7 +61,7 @@ export default function Home() {
             />
             <CardServices
               title="Desarrollo de aplicaciones"
-              description="Implementamos estructuras limpias y reutilizables en lenguajes como Python, JavaScript y C# para garantizar estabilidad y crecimiento a largo plazo."
+              description="Implementamos lenguajes como Kotlin, React Native, PHP (Laravel) para garantizar compatibilidad, rendimiento y mantenimiento simplificado, asegurando escalabilidad y eficiencia."
               url="/services/desarrollo-movil"
               items={[
                 "Código Modular y Escalable",
@@ -81,7 +72,7 @@ export default function Home() {
             />
             <CardServices
               title="Desarrollo de software"
-              description="Implementamos desarrollo en lenguajes como Java, Kotlin y React Native para garantizar compatibilidad, rendimiento y mantenimiento simplificado, asegurando escalabilidad y eficiencia."
+              description="Implementamos estructuras limpias y reutilizables en lenguajes como React Native y Java para garantizar estabilidad y crecimiento a largo plazo."
               url="/services/desarrollo-software"
               items={[
                 "Clean Code",
