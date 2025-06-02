@@ -8,7 +8,7 @@ export const metadata = {
     title: "Desarrollo de Software | Saber Más | JEG Dev Studios",
     description:
       "Conoce el proceso, tecnologías y proyectos de desarrollo de software en JEG Dev Studios.",
-    url: "https://jegdevstudios.com/saber-mas/soft-dev",
+    url: "https://www.jegdevstudios.com/saber-mas/soft-dev",
     siteName: "JEG Dev Studios",
     images: [
       {

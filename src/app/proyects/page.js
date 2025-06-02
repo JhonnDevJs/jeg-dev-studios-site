@@ -8,7 +8,7 @@ export const metadata = {
     title: "Proyectos | JEG Dev Studios",
     description:
       "Explora nuestros mejores proyectos desarrollados por JEG Dev Studios.",
-    url: "https://jegdevstudios.com/proyects",
+    url: "https://www.jegdevstudios.com/proyects",
     siteName: "JEG Dev Studios",
     images: [
       {

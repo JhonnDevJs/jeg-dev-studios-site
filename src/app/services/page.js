@@ -8,7 +8,7 @@ export const metadata = {
     title: "Servicios de Desarrollo Web | JEG Dev Studios",
     description:
       "Descubre nuestros servicios de desarrollo web, software, apps y videojuegos.",
-    url: "https://jegdevstudios.com/services",
+    url: "https://www.jegdevstudios.com/services",
     siteName: "JEG Dev Studios",
     images: [
       {

@@ -8,7 +8,7 @@ export const metadata = {
     title: "Desarrollo Web Profesional | Saber Más | JEG Dev Studios",
     description:
       "Conoce nuestro proceso, tecnologías y paquetes de desarrollo web en JEG Dev Studios.",
-    url: "https://jegdevstudios.com/saber-mas/web-dev",
+    url: "https://www.jegdevstudios.com/saber-mas/web-dev",
     siteName: "JEG Dev Studios",
     images: [
       {

@@ -8,7 +8,7 @@ export const metadata = {
     title: "Sobre Nosotros | JEG Dev Studios",
     description:
       "Conoce la historia, misión, visión y valores de JEG Dev Studios.",
-    url: "https://jegdevstudios.com/about",
+    url: "https://www.jegdevstudios.com/about",
     siteName: "JEG Dev Studios",
     images: [
       {

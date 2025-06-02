@@ -8,7 +8,7 @@ export const metadata = {
     title: "Desarrollo de Aplicaciones | Saber Más | JEG Dev Studios",
     description:
       "Descubre cómo JEG Dev Studios innova en el desarrollo de aplicaciones móviles y de escritorio, utilizando tecnologías modernas y procesos de calidad.",
-    url: "https://jegdevstudios.com/saber-mas/app-dev",
+    url: "https://www.jegdevstudios.com/saber-mas/app-dev",
     siteName: "JEG Dev Studios",
     images: [
       {

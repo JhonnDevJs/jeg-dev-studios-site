@@ -8,7 +8,7 @@ export const metadata = {
     title: "Desarrollo de Videojuegos | Saber Más | JEG Dev Studios",
     description:
       "Conoce el proceso, tecnologías y proyectos de desarrollo de videojuegos en JEG Dev Studios.",
-    url: "https://jegdevstudios.com/saber-mas/games-dev",
+    url: "https://www.jegdevstudios.com/saber-mas/games-dev",
     siteName: "JEG Dev Studios",
     images: [
       {

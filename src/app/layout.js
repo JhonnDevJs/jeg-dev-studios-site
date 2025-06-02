@@ -16,9 +16,10 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://jegdevstudios.com"),
+  metadataBase: new URL("https://www.jegdevstudios.com"),
   title: "JEG Dev Studios | Desarrollamos tu sitio web profesional",
-  description: "JEG Dev Studios: Desarrollo de software, web y apps. Soluciones digitales personalizadas para impulsar tu negocio online.",
+  description:
+    "JEG Dev Studios: Desarrollo de software, web y apps. Soluciones digitales personalizadas para impulsar tu negocio online.",
   keywords:
     "JEG Dev Studios, desarrollo web, desarrollo de software, desarrollo de videojuegos, desarrollo de aplicaciones móviles, diseño web, UX/UI, páginas web personalizadas, aplicaciones de escritorio, tiendas online, e-commerce, landing pages, portafolio web, blogs, soluciones digitales, startups de software, startups de méxico, empresa de desarrollo de software, creación de páginas web, programador web, programador freelance, web developer, desarrollador web independiente, hacer sitio web, crear mi sitio web, crear tu página web, desarrollo de sitios web responsivos, desarrollo de sitios web corporativos, desarrollo de sitios web para empresas, empresas creadoras de software, tecnología creativa, presencia online, servicios digitales, plataformas móviles, innovación tecnológica, empresas desarrolladoras de software, programadores de software, desarrollo de software personalizado, programadores de aplicaciones, software personalizado, contratar desarrolladores, Creadores de software,it services, system integrators, erp software,outsourcing strategy, strategic sourcing, offshore software development, outsourcing companies, global sourcing, application outsourcing services, enterprise application portfolio management, dev studios, jegstudio",
   robots: "index, follow",
@@ -28,7 +29,7 @@ export const metadata = {
     title: "JEG Dev Studios",
   },
   alternates: {
-    canonical: "https://jegdevstudios.com/",
+    canonical: "https://www.jegdevstudios.com/",
   },
   formatDetection: {
     telephone: false,
@@ -38,7 +39,7 @@ export const metadata = {
       "JEG Dev Studios | Programación y Desarrollo Web, Apps y Videojuegos",
     description:
       "En JEG Dev Studios transformamos ideas en experiencias digitales inolvidables. Especializados en desarrollo web, videojuegos, aplicaciones móviles y de escritorio, ofrecemos soluciones personalizadas y creativas para impulsar tu presencia en línea y alcanzar tus objetivos tecnológicos.",
-    url: "https://jegdevstudios.com/",
+    url: "https://www.jegdevstudios.com/",
     siteName: "JEG Dev Studios",
     images: [
       {
@@ -121,7 +122,6 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
       >
-        
         {/* Bootstrap JS */}
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -137,11 +137,11 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "Organization",
               name: "JEG Dev Studios",
-              image: "https://jegdevstudios.com/logo.webp",
-              url: "https://jegdevstudios.com/",
+              image: "https://www.jegdevstudios.com/logo.webp",
+              url: "https://www.jegdevstudios.com/",
               email: "jegdevstudios@outlook.com",
               telephone: "+52 1 5512197135",
-              logo: "https://jegdevstudios.com/icons-SEO/favicon-32x32.png",
+              logo: "https://www.jegdevstudios.com/icons-SEO/favicon-32x32.png",
               address: {
                 "@type": "PostalAddress",
                 addressLocality: "Álvaro Obregón",
@@ -161,8 +161,8 @@ export default function RootLayout({ children }) {
               "@context": "https://schema.org/",
               "@type": "LocalBusiness",
               name: "JEG Dev Studios",
-              image: "https://jegdevstudios.com/img-SEO/metabackground.webp",
-              url: "https://jegdevstudios.com/",
+              image: "https://www.jegdevstudios.com/img-SEO/metabackground.webp",
+              url: "https://www.jegdevstudios.com/",
               telephone: "+52 1 5512197135",
               priceRange: "$$$",
               address: {
