@@ -47,12 +47,12 @@ export default function TeamCarousel() {
             description="Soy Jhonatan Espinal García, desde niño me apasiona la tecnología, desde los microcircuitos hasta la programación. En 2024 fundé JEG Dev Studios, donde creamos soluciones digitales innovadoras como apps, sitios web y videojuegos."
             links={[
               {
-                url: "https://linkedin.com/in/jhonneg",
+                url: "https://www.linkedin.com/in/JhonEG",
                 title: "LinkedIn",
                 icon: "icon-linkedin-no-bg",
               },
               {
-                url: "https://github.com/jhonatanespinal",
+                url: "https://github.com/JhonEG-17",
                 title: "GitHub",
                 icon: "icon-github",
               },
