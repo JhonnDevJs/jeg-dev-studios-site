@@ -67,17 +67,61 @@
   background: rgba(255, 255, 255, 0.1);
 }
 
-.custom-form button {
-  padding: 0.75rem;
-  border: none;
-  border-radius: 12px;
-  background: linear-gradient(90deg, #7b00ff, #ff00cc);
+.custom-modal-backdrop {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(0,0,0,0.7);
+  z-index: 1050;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.custom-modal-content {
+  min-width: 320px;
+  max-width: 90vw;
+  border-radius: 1.5rem;
+  position: relative;
+}
+
+
+.btn-services {
+  position: relative;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo transparente */
+  border-radius: 20px; /* 🔁 Este valor modifica el redondeado */
   color: white;
-  cursor: pointer;
-  transition: background 0.3s ease;
+  text-decoration: none;
+  text-align: center;
+  z-index: 1;
 }
 
-.custom-form button:hover {
-  background: linear-gradient(90deg, #ff00cc, #7b00ff);
+.btn-services::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #7b00ff, #ff00cc);
+  border-radius: 22px; /* Debe ser igual o mayor al de `.card` */
+  z-index: -1;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  padding: 2px;
 }
 
+.btn-services:hover {
+  background: rgb(255, 255, 255); /* Fondo más opaco */
+  color: black;
+}
+
+/* Active (al presionar): efecto de "pulso" */
+.btn-services:active {
+  transform: scale(1.05);
+  background: rgb(255, 255, 255); /* Fondo más opaco */
+  color: black;
+}
