@@ -21,9 +21,9 @@ export default function Home() {
           style={{ maxWidth: "46rem" }}
         >
           <div className="container p-0 m-0">
-            <h1 className="display-1 text-light text-shadow">
+            <h2 className="display-1 h1 text-light text-shadow">
               JEG Dev Studios
-            </h1>
+            </h2>
             <p className="fs-1 text-light text-shadow text-brack w-100 w-xl-50">
               No solo creamos páginas web, construimos experiencias digitales.
             </p>
