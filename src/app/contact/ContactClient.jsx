@@ -1,6 +1,9 @@
 "use client";
 import { useState } from "react";
-import ButtonsSocial from "@/components/ButtonsSocial";
+import Image from "next/image";
+import Link from "next/link";
+import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
+import "./contactClient.css";
 
 export default function ContactClient() {
   const [formData, setFormData] = useState({
@@ -48,67 +51,95 @@ export default function ContactClient() {
   };
 
   return (
-    <section className="d-flex flex-md-row flex-column-reverse justify-content-center align-items-center w-100 vh-100 p-xl-5 p-3 gap-5">
-      <article className="d-flex flex-column justify-content-center align-items-center text-center w-100 h-100">
-        <h2 className="text-white">Formulario de Contacto</h2>
-        <form
-          className="d-flex flex-column justify-content-center aling-items-center text-center bg-light border border-dark rounded gap-4 p-4"
-          id="contactForm"
-          onSubmit={handleSubmit}
-          style={{ width: "24rem" }}
-        >
-          <input
-            type="text"
-            name="name"
-            placeholder="Nombre completo"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-          <input
-            type="email"
-            name="email"
-            placeholder="Correo Electrónico"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-          <label htmlFor="type">Tipo de Consulta</label>
-          <select
-            name="type"
-            value={formData.type}
-            onChange={handleChange}
-            required
+    <>
+      <section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0 m-0">
+        <h2 className="display-1 text-center text-white">Contacto</h2>
+      </section>
+      <section className="d-flex flex-md-row flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 gap-5">
+        <aside className="d-flex flex-column justify-content-center align-items-center w-100 h-100 gap-4">
+          <Image
+            src={iconLogo}
+            width={164}
+            height={164}
+            alt="Logo JEG Dev Studios"
+          ></Image>
+          <p className="fs-3 text-center text-white">
+            Estamos aquí para ayudarte. Escríbenos y nuestro equipo te
+            responderá lo antes posible.
+          </p>
+          <Link
+            href="mailto:jegdevstudioscontact@gmail.com"
+            className="fs-4 text-center text-white"
           >
-            <option value="" disabled>
-              Selecciona un tipo
-            </option>
-            <option value="services">Servicios</option>
-            <option value="support">Soporte</option>
-            <option value="general">General</option>
-          </select>
-          <textarea
-            id="message"
-            name="message"
-            rows={4}
-            placeholder="Escriba su mensaje..."
-            value={formData.message}
-            onChange={handleChange}
-            required
-          />
-          <button className="btn btn-dark" type="submit">
-            Enviar
-          </button>
-        </form>
-      </article>
-      <aside className="d-flex flex-column justify-content-center align-items-center w-100 h-100 gap-4">
-        <div className="text-center">
-          <h2 className="text-white">Contáctanos por redes sociales</h2>
-        </div>
-        <div className="d-flex justify-content-center align-items-center gap-4">
-          <ButtonsSocial tamaño={{ width: "7rem" }} />
-        </div>
-      </aside>
-    </section>
+            jegdevstudioscontact@gmail.com
+          </Link>
+          <Link
+            href="tel:+52 1 5512197135"
+            className="fs-4 text-center text-white"
+          >
+            55-1219-7135
+          </Link>
+        </aside>
+        <article className="d-flex flex-column justify-content-center align-items-center text-center w-100 h-100">
+          <h2 className="text-white">Contactanos</h2>
+          <form
+            className="fs-5 fw-semibold custom-form"
+            id="contactForm"
+            onSubmit={handleSubmit}
+          >
+            <input
+              type="text"
+              name="name"
+              placeholder="Nombre completo"
+              value={formData.name}
+              onChange={handleChange}
+              required
+            />
+            <input
+              type="email"
+              name="email"
+              placeholder="Correo Electrónico"
+              value={formData.email}
+              onChange={handleChange}
+              required
+            />
+            <label htmlFor="type" className="text-white">
+              Tipo de Consulta
+            </label>
+            <select
+              name="type"
+              value={formData.type}
+              onChange={handleChange}
+              required
+            >
+              <option value="" disabled>
+                Selecciona un tipo
+              </option>
+              <option value="services" className="text-black">
+                Servicios
+              </option>
+              <option value="support" className="text-black">
+                Soporte
+              </option>
+              <option value="general" className="text-black">
+                General
+              </option>
+            </select>
+            <textarea
+              id="message"
+              name="message"
+              rows={4}
+              placeholder="Escriba su mensaje..."
+              value={formData.message}
+              onChange={handleChange}
+              required
+            />
+            <button type="submit" className="fs-5 fw-bold">
+              Enviar
+            </button>
+          </form>
+        </article>
+      </section>
+    </>
   );
 }
