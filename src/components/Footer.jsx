@@ -5,7 +5,7 @@ function Footer() {
     <footer className="d-flex flex-column justify-content-center align-items-center bg-black text-white w-100 p-3">
       <div className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-0">
         <article className="d-flex flex-column justify-content-center align-items-center gap-3">
-          <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-start">
+          <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-center">
             <h2>Contactanos</h2>
             <Link
               href="tel:+525512197135"
@@ -94,7 +94,7 @@ function Footer() {
           </Link>
         </article>
       </div>
-      <p className="d-flex justify-content-center w-100 mb-0 mt-3">
+      <p className="d-flex justify-content-center align-items-center text-center w-100 mb-0 mt-3">
         &copy; {new Date().getFullYear()} JEG Dev Studios. Todos los derechos
         reservados.
       </p>

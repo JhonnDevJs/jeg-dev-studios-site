@@ -125,7 +125,11 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = () => ("d09e35fb3151fb5c")
+=======
+/******/ 		__webpack_require__.h = () => ("f1288fe1f68234eb")
+>>>>>>> 8-recrear-el-rediseño-del-home
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */

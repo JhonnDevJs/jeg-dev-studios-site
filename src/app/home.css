@@ -23,7 +23,7 @@
   z-index: 1;
   border: none;
   border-radius: 0.95rem;
-  background: linear-gradient(90deg, #1171FD, #947ED8);
+  background: linear-gradient(90deg, #090EDB, #DA24BB);
   color: #fff;
   padding: 2px;
   transition: background 0.3s;
@@ -82,7 +82,7 @@
 .nav-efecto:hover,
 .nav-efecto:focus {
   transform: scale(1.15);
-  color: #947ED8 !important;
+  color: #DA24BB !important;
 }
 
 .nav-efecto.active {

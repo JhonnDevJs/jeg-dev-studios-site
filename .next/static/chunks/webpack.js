@@ -190,7 +190,11 @@
 /******/ 	
 /******/ 	/* webpack/runtime/getFullHash */
 /******/ 	(() => {
+<<<<<<< HEAD
 /******/ 		__webpack_require__.h = () => ("ab0a71e133a78552")
+=======
+/******/ 		__webpack_require__.h = () => ("671cad41780a7bdd")
+>>>>>>> 8-recrear-el-rediseño-del-home
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/global */

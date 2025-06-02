@@ -12,7 +12,7 @@ function CardServices({ title, description, url, items = [] }) {
         <h3 className="h2 fw-bolder card-title text-start">{title}</h3>
         <p className="fs-5 text-start">{description}</p>
         <Link href={url} className="btn gradient-border">
-          <span>ver paquetes completos</span>
+          <span className="fw-bolder">ver paquetes completos</span>
         </Link>
       </div>
       <div className="card-footer d-flex justify-content-center align-items-center">

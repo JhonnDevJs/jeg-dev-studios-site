@@ -14,6 +14,10 @@
     "/contact/page": [
       "static/chunks/webpack.js",
       "static/chunks/main-app.js",
+<<<<<<< HEAD
+=======
+      "static/css/app/contact/page.css",
+>>>>>>> 8-recrear-el-rediseño-del-home
       "static/chunks/app/contact/page.js"
     ],
     "/page": [
