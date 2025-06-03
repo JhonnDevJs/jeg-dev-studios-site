@@ -6,9 +6,8 @@ export const metadata = {
     "servicios desarrollo web, creacion de sitios web, creacion de landing pages, creacion de e-commerce, adquiere tu sitio web empresarial, soluciones digitales, JEG Dev Studios",
   openGraph: {
     title: "Servicios de Desarrollo Web | JEG Dev Studios",
-    description:
-      "Descubre nuestros servicios de desarrollo web, software, apps y videojuegos.",
-    url: "https://www.jegdevstudios.com/services",
+    description: "Descubre nuestros servicios de desarrollo web",
+    url: "https://www.jegdevstudios.com/services/desarrollo-web/",
     siteName: "JEG Dev Studios",
     images: [
       {
