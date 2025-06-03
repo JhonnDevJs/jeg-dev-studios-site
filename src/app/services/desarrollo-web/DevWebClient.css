@@ -1,25 +1,11 @@
-/* home.css */
-
-/* Puedes ajustar los colores y el grosor */
-
-.__imageBackground {
-  background-image: url("/fondos/backgraund.webp");
+.__image-background-sections {
+  background-image: url("/fondos/backgroundSections.webp");
   background-size: cover;
-  background-position: center;
+  background-position: center center;
   background-repeat: no-repeat;
   background-attachment: fixed;
-}
-
-@media (max-width: 768px) {
-  .__imageBackground {
-    background-size: cover;
-    background-position: center center;
-    background-attachment: scroll;
-  }
-}
-
-.__section-team {
-  min-height: 100dvh;
+  width: 100%;
+  height: 50dvh;
 }
 
 .card-services {
@@ -37,6 +23,7 @@
 .card-services:hover {
   transform: scale(1.05);
 }
+
 
 .btn-services {
   position: relative;

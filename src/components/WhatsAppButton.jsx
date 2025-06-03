@@ -10,7 +10,7 @@ export default function BtnWhats() {
       aria-label="boton de mensaje directo aWhatsApp"
       title="boton de mensaje directo WhatsApp"
     >
-      <span class="icon-whatsapp text-center fs-1 p-0 m-0"></span>
+      <span className="icon-whatsapp text-center fs-1 p-0 m-0"></span>
     </Link>
   );
 }

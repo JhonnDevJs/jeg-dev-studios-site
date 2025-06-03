@@ -1,13 +1,12 @@
+"use client"
 import PropTypes from "prop-types";
-import Image from "next/image";
 
 function CardProduct({
   dataPrice,
   title,
-  text,
   price,
   moneda,
-  imageUrl,
+  items = [],
   onAdd,
 }) {
   const handleAddToCart = () => {
@@ -15,32 +14,38 @@ function CardProduct({
   };
 
   return (
-    <div className="card d-block w-100" data-price={dataPrice}>
-      <div style={{ width: "100%", aspectRatio: "16 / 9", overflow: "hidden" }}>
-        <Image
-          src={imageUrl}
-          className="card-img-top"
-          alt={title}
-          loading="lazy"
-          width={1080}
-          height={607}
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
-      </div>
-      <div className="card-body">
-        <h5 className="card-title text-center">{title}</h5>
-        <p className="card-text">{text}</p>
-        <div className="d-flex flex-column">
-          <p className="card-text">
+    <li
+      className="card d-block bg-transparent border-1 rounded-5 text-white text-start shadow-md p-0 card-services"
+      style={{ width: "25.6rem"}}
+      data-price={dataPrice}
+    >
+      <div className="card-body d-flex flex-column">
+        <h3 className="h2 fw-bolder card-title text-center">{title}</h3>
+        <div className="d-flex justify-content-evenly align-items-center">
+          <p className="text-lit fw-lighter">Desde: </p>
+          <p className="h1 fw-bolder">
+            <span className="fw-lighter">$</span>
             {price}
             <span> {moneda}</span>
           </p>
-          <button className="btn btn-dark" onClick={handleAddToCart}>
-            Añadir +
-          </button>
         </div>
+        <button className="btn-services" onClick={handleAddToCart}>
+          <span className="fw-bolder">Cotizar mi proyecto</span>
+        </button>
       </div>
-    </div>
+      <div className="card-footer d-flex justify-content-center align-items-center">
+        <ul className="list-group list-group-flush w-100">
+          {items.map((item, idx) => (
+            <li key={idx} className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100">
+              <p className="fs-5 m-0">
+                <span className="icon-check-list fs-5 me-2"></span>
+                {item}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </li>
   );
 }
 
@@ -48,10 +53,9 @@ function CardProduct({
 CardProduct.propTypes = {
   dataPrice: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   moneda: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
   onAdd: PropTypes.func.isRequired,
 };
 

@@ -5,7 +5,7 @@ export const metadata = {
   keywords:
     "servicios desarrollo web, desarrollo de software, desarrollo de apps, desarrollo de videojuegos, soluciones digitales, JEG Dev Studios",
   openGraph: {
-    title: "Servicios de Desarrollo Web | JEG Dev Studios",
+    title: "Servicios | JEG Dev Studios",
     description:
       "Descubre nuestros servicios de desarrollo web, software, apps y videojuegos.",
     url: "https://www.jegdevstudios.com/services",

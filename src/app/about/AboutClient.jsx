@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import ButtonsSocial from "@/components/ButtonsSocial";
 
 export default function AboutClient() {
@@ -128,13 +129,28 @@ export default function AboutClient() {
             ¿Listo para llevar tu proyecto al siguiente nivel? Ponte en contacto
             con nosotros hoy mismo.
           </p>
-          <p className="text-white">
-            <strong>Teléfono:</strong>
-            +52 5654320986
-            <br />
-            <strong>Correo Electrónico:</strong>
-            jegdevstudios@outlook.com
-          </p>
+          <Link
+            href="tel:+525512197135"
+            className="text-decoration-none text-white fs-5"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Enlace a teléfono"
+            aria-label="Enlace a teléfono"
+            tabIndex={0}
+          >
+            +52 55 1219 7135
+          </Link>
+          <Link
+            href="mailto:jegdevstudioscontact@gmail.com"
+            className="text-decoration-none text-white fs-5"
+            target="_blank"
+            rel="noopener noreferrer"
+            title="Enlace a gmail"
+            aria-label="Enlace a gmail"
+            tabIndex={0}
+          >
+            jegdevstudioscontact@gmail.com
+          </Link>
           <p className="text-white">
             Síguenos en nuestras redes sociales para estar al tanto de nuestras
             últimas novedades y proyectos:

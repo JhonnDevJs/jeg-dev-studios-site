@@ -25,7 +25,7 @@ export const metadata = {
 
 function AppDev() {
   return (
-    <section className="d-flex flex-column w-100 p-5 m-0 gap-5">
+    <section className="d-flex flex-column text-white w-100 p-5 m-0 gap-5">
       <article className="d-flex flex-column pt-5 gap-3">
         <h1 className="section-title">
           Saber Más sobre Nuestro Servicio de Desarrollo de Aplicaciones
