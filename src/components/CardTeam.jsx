@@ -6,7 +6,7 @@ function CardTeam({ imageUrl, name, position, description, links }) {
   return (
     <div
       // Se eliminó el style={{ width: "77.5rem" }} para permitir que la tarjeta sea responsiva dentro del carrusel.
-      className="card d-block bg-black border-1 rounded-5 text-white text-start shadow-md p-3 card-services w-100" // Añadido w-100 para ocupar el ancho del contenedor del carrusel
+      className="card d-block bg-black border-1 rounded-5 text-white text-start shadow-md p-3 card-team w-100" // Añadido w-100 para ocupar el ancho del contenedor del carrusel
     >
       <div className="d-flex justify-content-start align-items-center">
         <Image

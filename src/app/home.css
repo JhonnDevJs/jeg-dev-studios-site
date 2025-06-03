@@ -22,7 +22,7 @@
   min-height: 100dvh;
 }
 
-.card-services {
+.card-team, .card-services{
   background: rgba(24, 24, 24, 0.603);
   /* Fondo semitransparente */
   backdrop-filter: blur(40px);
@@ -32,6 +32,8 @@
   border-radius: 1rem;
   border: 1px solid rgba(255, 255, 255, 0.144);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
+}
+.card-services {
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
 .card-services:hover {
