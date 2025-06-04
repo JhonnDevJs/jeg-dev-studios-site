@@ -1,13 +1,13 @@
 export const metadata = {
   title: "Sobre Nosotros | JEG Dev Studios",
   description:
-    "Conoce la historia, misión, visión y valores de JEG Dev Studios. Transformamos ideas en experiencias digitales inolvidables.",
+    "Descubre quiénes somos en JEG Dev Studios: nuestra historia, misión, visión, valores, equipo y los servicios que ofrecemos en desarrollo web, apps y videojuegos.",
   keywords:
-    "sobre nosotros, quiénes somos, historia, misión, visión, valores, JEG Dev Studios, desarrollo digital",
+    "sobre nosotros, quiénes somos, historia JEG Dev Studios, misión JEG Dev Studios, visión JEG Dev Studios, valores empresariales, equipo de desarrollo, desarrollo web, aplicaciones móviles, desarrollo de videojuegos, soluciones digitales, estudio de desarrollo, tecnología creativa, JEG Dev Studios México",
   openGraph: {
     title: "Sobre Nosotros | JEG Dev Studios",
     description:
-      "Conoce la historia, misión, visión y valores de JEG Dev Studios.",
+      "Conoce a JEG Dev Studios: nuestra historia, misión, visión, valores, equipo y servicios de desarrollo digital a medida.",
     url: "https://www.jegdevstudios.com/about",
     siteName: "JEG Dev Studios",
     images: [
@@ -15,13 +15,14 @@ export const metadata = {
         url: "/img-SEO/metabackground.webp",
         width: 1200,
         height: 630,
-        alt: "Sobre Nosotros JEG Dev Studios",
+        alt: "Equipo y misión de JEG Dev Studios",
       },
     ],
     locale: "es_MX",
     type: "website",
   },
 };
+
 
 import AboutClient from "./AboutClient";
 

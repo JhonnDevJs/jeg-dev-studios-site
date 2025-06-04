@@ -1,13 +1,13 @@
 export const metadata = {
-  title: "Contacto | JEG Dev Studios",
+  title: "Contáctanos | JEG Dev Studios",
   description:
-    "Contáctanos para consultas, soporte o información sobre nuestros servicios de desarrollo web, software, apps y videojuegos.",
+    "¿Tienes preguntas o necesitas un proyecto digital? Ponte en contacto con JEG Dev Studios. Resolvemos tus dudas y te asesoramos para impulsar tu negocio.",
   keywords:
-    "contacto, soporte, consultas, JEG Dev Studios, desarrollo web, desarrollo de software, desarrollo de apps, desarrollo de videojuegos",
+    "contacto JEG Dev Studios, contactar desarrollador web, asesoría desarrollo web, presupuesto desarrollo, contacto agencia digital, soporte técnico, formulario de contacto",
   openGraph: {
-    title: "Contacto | JEG Dev Studios",
+    title: "Contáctanos | JEG Dev Studios",
     description:
-      "Contáctanos para consultas, soporte o información sobre nuestros servicios.",
+      "Comunícate con nosotros para recibir asesoría personalizada sobre desarrollo web, software o soporte.",
     url: "https://www.jegdevstudios.com/contact",
     siteName: "JEG Dev Studios",
     images: [
@@ -15,13 +15,14 @@ export const metadata = {
         url: "/img-SEO/metabackground.webp",
         width: 1200,
         height: 630,
-        alt: "Contacto JEG Dev Studios",
+        alt: "Formulario de Contacto JEG Dev Studios",
       },
     ],
     locale: "es_MX",
     type: "website",
   },
 };
+
 
 import ContactClient from "./ContactClient";
 

@@ -8,134 +8,109 @@ export default function AboutClient() {
       <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5">
         <h1 className="text-white">Sobre Nosotros</h1>
         <p className="text-white">
-          Transformando ideas en experiencias digitales inolvidables
+          Transformamos ideas en soluciones digitales innovadoras y memorables
         </p>
       </section>
+
       <section className="d-flex flex-column w-100 p-xl-5 p-3">
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Nuestra Historia</h2>
           <p className="text-white">
-            JEG Dev Studios nació de la pasión por la tecnología y la
-            creatividad. Fundada por Jhonatan Espinal García en 2024, la misión
-            es transformar ideas en experiencias digitales inolvidables. Estamos
-            en nuestros humildes comienzos, creciendo y evolucionado, con el
-            propósito de convertirnos en un equipo de desarrolladores y
-            diseñadores dedicados a ofrecer soluciones innovadoras en el
-            desarrollo de videojuegos, páginas web, aplicaciones de escritorio y
-            móviles.
+            JEG Dev Studios fue fundada en mayo de 2024 por Jhonatan Espinal García, quien más adelante se unió con Jose Leonardo González, Fernanda Briseño y Ricardo Ubaldo González como cofundadores. Nuestro objetivo es transformar ideas en experiencias digitales inolvidables a través de soluciones tecnológicas personalizadas. Nos encontramos en una etapa de crecimiento continuo, con el firme propósito de convertirnos en un referente en el desarrollo web, aplicaciones móviles y software empresarial.
           </p>
         </article>
+
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Misión y Visión</h2>
           <p className="text-white">
-            <strong>Misión:</strong> En JEG Dev Studios, nuestra misión es
-            impulsar la innovación tecnológica creando productos digitales que
-            superen las expectativas de nuestros clientes. Nos esforzamos por
-            ofrecer calidad, creatividad y un servicio excepcional en cada
-            proyecto.
+            <strong>Misión:</strong> Crear soluciones digitales que superen las expectativas de nuestros clientes mediante innovación, calidad y un enfoque centrado en la experiencia de usuario.
           </p>
           <p className="text-white">
-            <strong>Visión:</strong> Nuestra visión es ser reconocidos como
-            líderes en el sector del desarrollo digital, proporcionando
-            soluciones integrales y creativas que ayuden a nuestros clientes a
-            alcanzar sus objetivos y a destacar en un mercado competitivo.
+            <strong>Visión:</strong> Ser líderes en desarrollo digital a medida, ayudando a marcas y empresas a destacar en un mundo cada vez más conectado.
           </p>
         </article>
+
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Nuestra Ideología</h2>
           <p className="text-white">
             <strong>JEG:</strong> Jumpstart Every Goal - Impulsa cada objetivo
           </p>
           <p className="text-white">
-            Nuestro compromiso es impulsar y alcanzar cada meta tecnológica con
-            excelencia y creatividad. Con una amplia gama de servicios, desde
-            soluciones empresariales hasta entretenimiento interactivo, estamos
-            aquí para transformar tus ideas en realidades innovadoras.
+            Nuestro lema define nuestra esencia: trabajamos para activar e impulsar cada meta de nuestros clientes, utilizando la creatividad y tecnología de vanguardia. Desde herramientas empresariales hasta soluciones móviles personalizadas, convertimos ideas en realidades digitales.
           </p>
         </article>
+
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Nuestros Valores</h2>
           <ul>
             <li className="text-white">
-              <strong>Innovación:</strong> Creemos en la capacidad de la
-              tecnología para cambiar el mundo. Estamos comprometidos a
-              mantenernos a la vanguardia de las tendencias y tecnologías
-              emergentes.
+              <strong>Innovación:</strong> Nos mantenemos a la vanguardia tecnológica para ofrecer soluciones frescas, efectivas y sostenibles.
             </li>
             <li className="text-white">
-              <strong>Calidad:</strong> La excelencia es nuestra norma. Nos
-              aseguramos de que cada producto que entregamos sea de la más alta
-              calidad.
+              <strong>Calidad:</strong> Garantizamos un alto estándar en cada entrega, cuidando los detalles técnicos y visuales.
             </li>
             <li className="text-white">
-              <strong>Compromiso:</strong> Nos dedicamos a cumplir con las
-              necesidades y expectativas de nuestros clientes, trabajando juntos
-              para lograr sus metas.
+              <strong>Compromiso:</strong> Cumplimos con lo prometido, trabajando de la mano con nuestros clientes en cada etapa del desarrollo.
             </li>
             <li className="text-white">
-              <strong>Creatividad:</strong> Fomentamos un entorno donde las
-              ideas innovadoras pueden florecer y transformarse en soluciones
-              efectivas.
+              <strong>Creatividad:</strong> Creamos soluciones únicas, personalizadas y funcionales que generan impacto.
             </li>
           </ul>
         </article>
+
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Nuestro Equipo</h2>
           <p className="text-white">
-            En JEG Dev Studios, contamos con un equipo diverso y talentoso de
-            desarrolladores, diseñadores y estrategas, todos apasionados por la
-            tecnología y el desarrollo digital. Cada miembro del equipo aporta
-            su experiencia y habilidades únicas, trabajando en conjunto para
-            crear productos excepcionales.
+            En JEG Dev Studios contamos con un equipo multidisciplinario de expertos en desarrollo y diseño digital. Nuestra diversidad de talentos nos permite abordar cada proyecto desde diferentes perspectivas y lograr resultados sobresalientes.
           </p>
           <p className="text-white">
-            <strong className="text-white">Jhonatan Espinal García</strong> - Fundador, CEO y
-            Desarrollador
-            <br />
-            Con una visión clara y una pasión por la tecnología, Jhonatan lidera
-            JEG Dev Studios con dedicación y creatividad. Su experiencia en
-            desarrollo de software y su enfoque en la innovación son la base de
-            nuestro éxito.
+            <strong>Jhonatan Espinal García</strong> – Fundador, CEO y Desarrollador<br />
+            Dirige el estudio con visión estratégica y pasión por la innovación digital.
+          </p>
+          <p className="text-white">
+            <strong>Jose Leonardo González</strong> – Cofundador y Desarrollador Backend<br />
+            Responsable de arquitecturas sólidas y eficientes.
+          </p>
+          <p className="text-white">
+            <strong>Fernanda Briseño</strong> – Cofundadora y Diseñadora UX/UI<br />
+            Líder en la creación de interfaces visuales atractivas y usables.
+          </p>
+          <p className="text-white">
+            <strong>Ricardo Ubaldo González</strong> – Cofundador y Desarrollador Frontend<br />
+            Especialista en desarrollo de interfaces modernas, SEO y rendimiento web.
           </p>
         </article>
+
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Nuestros Servicios</h2>
           <ul>
             <li className="text-white">
-              <strong className="text-white">Desarrollo Web:</strong> Diseñamos y desarrollamos sitios
-              web responsivos y funcionales que destacan en el entorno digital.
+              <strong>Desarrollo Web:</strong> Creación de sitios web responsivos, seguros y optimizados para motores de búsqueda.
             </li>
             <li className="text-white">
-              <strong className="text-white">Aplicaciones de Escritorio:</strong> Desarrollamos
-              aplicaciones de escritorio personalizadas que mejoran la
-              productividad y eficiencia de nuestros clientes.
+              <strong>Aplicaciones de Escritorio:</strong> Soluciones a medida para automatizar procesos empresariales y mejorar la productividad.
             </li>
             <li className="text-white">
-              <strong className="text-white">Aplicaciones Móviles:</strong> Creamos aplicaciones
-              móviles intuitivas y funcionales para Android e iOS, diseñadas
-              para ofrecer una excelente experiencia de usuario y satisfacer las
-              necesidades de nuestros clientes.
+              <strong>Aplicaciones Móviles:</strong> Apps funcionales y atractivas para Android e iOS, diseñadas para usuarios exigentes.
             </li>
             <li className="text-white">
-              <strong className="text-white">Desarrollo de Videojuegos:</strong> Creamos experiencias
-              de juego envolventes para diversas plataformas, desde móviles
-              hasta consolas.
+              <strong>Software Empresarial a Medida:</strong> Desarrollo de CRM, sistemas de inventario, herramientas de gestión de personal y soluciones personalizadas.
             </li>
           </ul>
         </article>
+
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Contáctanos</h2>
           <p className="text-white">
-            ¿Listo para llevar tu proyecto al siguiente nivel? Ponte en contacto
-            con nosotros hoy mismo.
+            ¿Estás listo para digitalizar tu negocio o lanzar tu proyecto con éxito? Hablemos y encuentra la solución ideal con nosotros.
           </p>
           <Link
             href="tel:+525512197135"
             className="text-decoration-none text-white fs-5"
             target="_blank"
             rel="noopener noreferrer"
-            title="Enlace a teléfono"
-            aria-label="Enlace a teléfono"
+            title="Llámanos"
+            aria-label="Llámanos"
             tabIndex={0}
           >
             +52 55 1219 7135
@@ -145,20 +120,43 @@ export default function AboutClient() {
             className="text-decoration-none text-white fs-5"
             target="_blank"
             rel="noopener noreferrer"
-            title="Enlace a gmail"
-            aria-label="Enlace a gmail"
+            title="Envíanos un correo"
+            aria-label="Envíanos un correo"
             tabIndex={0}
           >
             jegdevstudioscontact@gmail.com
           </Link>
           <p className="text-white">
-            Síguenos en nuestras redes sociales para estar al tanto de nuestras
-            últimas novedades y proyectos:
+            Síguenos en nuestras redes sociales y conoce nuestros últimos trabajos, ideas y lanzamientos.
           </p>
-          <div className="d-flex justify-content-left align-items-center gap-4">
-            <ButtonsSocial tamaño={{ width: "4rem" }} />
-          </div>
         </article>
+      </section>
+      
+      <section
+        id="cta-contacto"
+        className="bg-transparent text-white py-5 text-center"
+      >
+        <div className="container">
+          <h2 className="display-5 fw-bold mb-4">
+            ¿Listo para dar el siguiente paso digital?
+          </h2>
+          <p className="lead mb-4 mx-auto" style={{ maxWidth: "720px" }}>
+            Es momento de convertir tu idea en una solución tecnológica
+            escalable y atractiva. Agenda tu consulta gratuita o contáctanos
+            directamente.
+          </p>
+          <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
+            <Link href="/contact" className="btn btn-light btn-lg px-4">
+              Solicitar una consulta gratuita
+            </Link>
+            <Link
+              href="/services"
+              className="btn btn-outline-light btn-lg px-4"
+            >
+              Ver nuestros paquetes
+            </Link>
+          </div>
+        </div>
       </section>
     </>
   );

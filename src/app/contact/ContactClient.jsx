@@ -3,7 +3,37 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
+import FAQ from "@/components/FAQ";
 import "./contactClient.css";
+
+
+
+const faqs = [
+  {
+    question: "¿En cuánto tiempo responden los mensajes?",
+    answer: "Solemos responder en menos de 24 horas hábiles",
+  },
+  {
+    question: "¿Puedo solicitar un presupuesto personalizado?",
+    answer:
+      "Sí, completa el formulario y cuéntanos tu idea. Te contactaremos con una propuesta adaptada.",
+  },
+  {
+    question: "¿Incluye mantenimiento o soporte?",
+    answer:
+      "Depende del paquete contratado. Algunos incluyen mantenimiento básico por un tiempo limitado. También ofrecemos planes de soporte y mantenimiento personalizados para proyectos a largo plazo.",
+  },
+  {
+    question: "¿Cuáles son las formas de pago disponibles?",
+    answer:
+      "Trabajamos con transferencias bancarias, pagos vía PayPal y otros métodos digitales. Te indicamos los pasos según tu ubicación.",
+  },
+  {
+    question: "¿Cuál es el proceso para contratar soporte?",
+    answer:
+      "Dependiendo del caso puedes contratarlo a través de nuestro portal web, enviando un mensaje por WhatsApp a nuestro equipo de soporte, llenando este formulario seleccionando la opción de soporte o enviando un correo electrónico.",
+  },
+];
 
 export default function ContactClient() {
   const [loading, setLoading] = useState(false); // Nuevo estado
@@ -58,8 +88,14 @@ export default function ContactClient() {
 
   return (
     <>
-      <section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0 m-0">
-        <h2 className="display-1 text-center text-white">Contacto</h2>
+      <section className="__image-background-sections d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
+        <h2 className="display-1 text-center text-white mt-5">
+          Contáctanos
+        </h2>
+        <p className="fs-5 text-center text-white">
+          Escríbenos para recibir asesoría personalizada, resolver dudas o
+          solicitar un presupuesto.
+        </p>
       </section>
       <section className="d-flex flex-md-row flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 gap-5">
         <aside className="d-flex flex-column justify-content-center align-items-center w-100 h-100 gap-4">
@@ -144,7 +180,10 @@ export default function ContactClient() {
               {loading ? (
                 <div className="d-flex align-items-center">
                   <strong role="status">Enviando...</strong>
-                  <div className="spinner-border ms-auto" aria-hidden="true"></div>
+                  <div
+                    className="spinner-border ms-auto"
+                    aria-hidden="true"
+                  ></div>
                 </div>
               ) : (
                 "Enviar"
@@ -153,12 +192,23 @@ export default function ContactClient() {
           </form>
         </article>
       </section>
+      <FAQ faqs={faqs} />
       {showModal && (
         <div className="custom-modal-backdrop">
           <div className="custom-modal-content rounded-4 bg-black text-white text-center p-4">
             <div className="mb-4">
-              <div className="fs-3 fw-bold">Tu mensaje ha sido enviado<br />exitosamente.</div>
-              <div className="fs-5 mt-2">Nos comunicaremos<br />contigo a la brevedad.<br />:)</div>
+              <div className="fs-3 fw-bold">
+                Tu mensaje ha sido enviado
+                <br />
+                exitosamente.
+              </div>
+              <div className="fs-5 mt-2">
+                Nos comunicaremos
+                <br />
+                contigo a la brevedad.
+                <br />
+                :)
+              </div>
             </div>
             <button
               className="btn-services"

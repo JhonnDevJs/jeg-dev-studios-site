@@ -20,9 +20,9 @@ export const metadata = {
   metadataBase: new URL("https://www.jegdevstudios.com"),
   title: "JEG Dev Studios | Desarrollamos tu sitio web profesional",
   description:
-    "JEG Dev Studios: Desarrollo de software, web y apps. Soluciones digitales personalizadas para impulsar tu negocio online.",
+    "Desarrollo de sitios web, software y apps móviles en México. En JEG Dev Studios ofrecemos soluciones digitales personalizadas para negocios y emprendedores.",
   keywords:
-    "JEG Dev Studios, desarrollo web, desarrollo de software, desarrollo de videojuegos, desarrollo de aplicaciones móviles, diseño web, UX/UI, páginas web personalizadas, aplicaciones de escritorio, tiendas online, e-commerce, landing pages, portafolio web, blogs, soluciones digitales, startups de software, startups de méxico, empresa de desarrollo de software, creación de páginas web, programador web, programador freelance, web developer, desarrollador web independiente, hacer sitio web, crear mi sitio web, crear tu página web, desarrollo de sitios web responsivos, desarrollo de sitios web corporativos, desarrollo de sitios web para empresas, empresas creadoras de software, tecnología creativa, presencia online, servicios digitales, plataformas móviles, innovación tecnológica, empresas desarrolladoras de software, programadores de software, desarrollo de software personalizado, programadores de aplicaciones, software personalizado, contratar desarrolladores, Creadores de software,it services, system integrators, erp software,outsourcing strategy, strategic sourcing, offshore software development, outsourcing companies, global sourcing, application outsourcing services, enterprise application portfolio management, dev studios, jegstudio",
+    "desarrollo web profesional, desarrollo web personalizado, empresa desarrollo web, servicios de desarrollo web, desarrollo de software a medida, aplicaciones móviles para empresas, diseño de páginas web profesionales, diseño responsivo, desarrollo de sitios web responsivos, consultoria TI, empresa de desarrollo web, creación de páginas web, desarrollador web freelance, soluciones digitales para empresas, consultor tecnológico, dev studios, jegstudio",
   robots: "index, follow",
   authors: [{ name: "JEG Dev Studios" }],
   applicationName: "JEG Dev Studios",
