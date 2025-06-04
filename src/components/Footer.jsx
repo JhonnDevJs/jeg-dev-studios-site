@@ -79,10 +79,10 @@ function Footer() {
         </article>
         <article className="d-flex flex-column justify-content-center align-items-center h-100">
           <Link
-            href="/Politica-de-privacidad"
+            href="/aviso-de-privacidad"
             className="text-decoration-none text-white fs-4"
           >
-            Política de privacidad
+            Aviso de privacidad
           </Link>
         </article>
         <article className="d-flex flex-column justify-content-center align-items-center h-100">

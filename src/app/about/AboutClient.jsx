@@ -6,8 +6,8 @@ export default function AboutClient() {
   return (
     <>
       <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5">
-        <h1 className="text-white">Sobre Nosotros</h1>
-        <p className="text-white">
+        <h1 className="text-white text-center">Sobre Nosotros</h1>
+        <p className="text-white text-center">
           Transformamos ideas en soluciones digitales innovadoras y memorables
         </p>
       </section>
