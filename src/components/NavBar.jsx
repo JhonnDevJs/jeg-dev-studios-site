@@ -63,7 +63,7 @@ function NavBar() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/services"
+                    href="/servicios"
                     className={`nav-link text-white nav-efecto${
                       pathname === "/services" ? " active" : ""
                     }`}
@@ -83,7 +83,7 @@ function NavBar() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/about"
+                    href="/sobre-nosotros"
                     className={`nav-link text-white nav-efecto${
                       pathname === "/about" ? " active" : ""
                     }`}
@@ -103,7 +103,7 @@ function NavBar() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/contact"
+                    href="/contacto"
                     className={`nav-link text-white nav-efecto${
                       pathname === "/contact" ? " active" : ""
                     }`}

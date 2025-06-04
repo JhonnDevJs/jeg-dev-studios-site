@@ -7,7 +7,7 @@ export const metadata = {
   openGraph: {
     title: "Servicios de Desarrollo Web | JEG Dev Studios",
     description: "Descubre nuestros servicios de desarrollo web",
-    url: "https://www.jegdevstudios.com/services/desarrollo-web/",
+    url: "https://www.jegdevstudios.com/services/desarrollo-web",
     siteName: "JEG Dev Studios",
     images: [
       {

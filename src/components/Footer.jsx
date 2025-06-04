@@ -73,7 +73,7 @@ function Footer() {
           </div>
         </article>
         <article className="d-flex flex-column justify-content-center align-items-center h-100">
-          <Link href="/about" className="text-decoration-none text-white fs-4">
+          <Link href="/sobre-nosotros" className="text-decoration-none text-white fs-4">
             ¿Quiénes somos?
           </Link>
         </article>

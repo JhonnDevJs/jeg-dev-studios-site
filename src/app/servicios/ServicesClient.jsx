@@ -64,7 +64,7 @@ export default function ServicesClient() {
             <CardServices
               title="Desarrollo de sitios web"
               description="Desde la estructura visual hasta la funcionalidad interactiva, cada detalle es diseñado para optimizar la navegación y comunicar eficazmente el mensaje de una marca."
-              url="/services/desarrollo-web"
+              url="/servicios/desarrollo-web"
               items={[
                 "Diseño Responsivo",
                 "SEO Optimizado",
@@ -75,7 +75,7 @@ export default function ServicesClient() {
             <CardServices
               title="Desarrollo de aplicaciones"
               description="Implementamos lenguajes como Kotlin, React Native, PHP (Laravel) para garantizar compatibilidad, rendimiento y mantenimiento simplificado, asegurando escalabilidad y eficiencia."
-              url="/services/desarrollo-movil"
+              url="/servicios/desarrollo-movil"
               items={[
                 "Código Modular y Escalable",
                 "Optimización de Algoritmos",
@@ -86,7 +86,7 @@ export default function ServicesClient() {
             <CardServices
               title="Desarrollo de software"
               description="Implementamos estructuras limpias y reutilizables en lenguajes como React Native y Java para garantizar estabilidad y crecimiento a largo plazo."
-              url="/services/desarrollo-software"
+              url="/servicios/desarrollo-software"
               items={[
                 "Clean Code",
                 "Optimización del Rendimiento",
@@ -112,11 +112,11 @@ export default function ServicesClient() {
             directamente.
           </p>
           <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
-            <Link href="/contact" className="btn btn-light btn-lg px-4">
+            <Link href="/contacto" className="btn btn-light btn-lg px-4">
               Solicitar una consulta gratuita
             </Link>
             <Link
-              href="/services"
+              href="/servicios"
               className="btn btn-outline-light btn-lg px-4"
             >
               Ver nuestros paquetes
