@@ -81,7 +81,7 @@ export default function PrivacyPolicy() {
           >
             jegdevstudioscontact@gmail.com
           </Link>
-          <p className="text-white">Con el asunto: <em>"Negativa a fines secundarios"</em></p>
+          <p className="text-white">Con el asunto: <em>&quot;Negativa a fines secundarios&quot;</em></p>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
@@ -102,7 +102,7 @@ export default function PrivacyPolicy() {
             <li className="text-white">La oposición al uso de sus datos para fines específicos</li>
           </ul>
           <p className="text-white">Para ejercer cualquiera de estos derechos, envíe un correo electrónico con el asunto:</p>
-          <p className="text-white"><em>"Ejercicio de derechos ARCO"</em></p>
+          <p className="text-white"><em>&quot;Ejercicio de derechos ARCO&quot;</em></p>
           <p className="text-white">A la dirección: </p>
           <Link
             href="mailto:jegdevstudioscontact@gmail.com"
@@ -125,7 +125,7 @@ export default function PrivacyPolicy() {
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Revocación del consentimiento</h2>
           <p className="text-white">
-            Usted puede revocar su consentimiento para el uso de sus datos personales en cualquier momento, enviando un correo con el asunto: <em>"Revocación de consentimiento"</em> a:
+            Usted puede revocar su consentimiento para el uso de sus datos personales en cualquier momento, enviando un correo con el asunto: <em>&quot;Revocación de consentimiento&quot;</em> a:
           </p>
           <Link
             href="mailto:jegdevstudioscontact@gmail.com"

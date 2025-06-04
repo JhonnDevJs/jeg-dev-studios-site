@@ -40,10 +40,10 @@ export default function TermsAndConditions() {
           <h2 className="text-white">I. Introducción</h2>
           <p className="text-white">
             Al ingresar y utilizar este portal de Internet, cuyo nombre de dominio es{" "}
-            <Link href="https://www.jegdevstudios.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline">
-              https://www.jegdevstudios.com
-            </Link>, propiedad de JEG Dev Studios (en adelante "JEG" o "la empresa"), el usuario está aceptando los presentes Términos y Condiciones de Uso, y declara expresamente su aceptación mediante medios electrónicos, en cumplimiento con el artículo 1803 del Código Civil Federal.
-          </p>
+              <Link href="https://www.jegdevstudios.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline">
+                https://www.jegdevstudios.com
+              </Link>, propiedad de JEG Dev Studios (en adelante "JEG" o "la empresa"), el usuario está aceptando los presentes Términos y Condiciones de Uso, y declara expresamente su aceptación mediante medios electrónicos, en cumplimiento con el artículo 1803 del Código Civil Federal.
+            </p>
           <p className="text-white">
             Si el usuario no acepta total y completamente estos términos, deberá abstenerse de utilizar el sitio web y sus servicios. El uso del sitio constituye una aceptación plena e incondicional del presente acuerdo.
           </p>
