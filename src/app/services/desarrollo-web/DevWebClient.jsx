@@ -58,7 +58,7 @@ export default function DevWebClient() {
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0 m-0">
         <h2 className="display-1 text-center text-white">
-          Nustros servicos de desarrollo web
+          Nuestros servicios de desarrollo web
         </h2>
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
