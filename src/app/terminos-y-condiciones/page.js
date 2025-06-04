@@ -42,8 +42,8 @@ export default function TermsAndConditions() {
             Al ingresar y utilizar este portal de Internet, cuyo nombre de dominio es{" "}
               <Link href="https://www.jegdevstudios.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline">
                 https://www.jegdevstudios.com
-              </Link>, propiedad de JEG Dev Studios (en adelante "JEG" o "la empresa"), el usuario está aceptando los presentes Términos y Condiciones de Uso, y declara expresamente su aceptación mediante medios electrónicos, en cumplimiento con el artículo 1803 del Código Civil Federal.
-            </p>
+              </Link>, propiedad de JEG Dev Studios (en adelante &quot;JEG&quot; o &quot;la empresa&quot;), el usuario está aceptando los presentes Términos y Condiciones de Uso, y declara expresamente su aceptación mediante medios electrónicos, en cumplimiento con el artículo 1803 del Código Civil Federal.
+          </p>
           <p className="text-white">
             Si el usuario no acepta total y completamente estos términos, deberá abstenerse de utilizar el sitio web y sus servicios. El uso del sitio constituye una aceptación plena e incondicional del presente acuerdo.
           </p>
@@ -145,7 +145,7 @@ export default function TermsAndConditions() {
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">X. Limitación de Responsabilidad</h2>
           <p className="text-white">
-            JEG no garantiza que el sitio esté libre de errores o interrupciones. El sitio y sus servicios se ofrecen "tal cual" y "según disponibilidad".
+            JEG no garantiza que el sitio esté libre de errores o interrupciones. El sitio y sus servicios se ofrecen &quot;tal cual&quot; y &quot;según disponibilidad&quot;.
           </p>
           <p className="text-white">
             JEG no será responsable por daños directos o indirectos derivados del uso o imposibilidad de uso del sitio o los servicios.
