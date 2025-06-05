@@ -1,9 +1,9 @@
 export const metadata = {
   title: "Servicios de Desarrollo Web y Software | JEG Dev Studios",
   description:
-    "Explora nuestros paquetes de servicios personalizados en desarrollo web, aplicaciones móviles y software de escritorio. Calidad, innovación y soluciones digitales a medida para tu negocio.",
+    "Servicios de desarrollo web, apps móviles y software a medida. Soluciones digitales para negocios, tiendas online y landing pages profesionales.",
   keywords:
-    "servicios JEG Dev Studios, desarrollo web profesional, paquetes de desarrollo web, aplicaciones móviles, desarrollo de software, diseño responsivo, soluciones digitales, landing page, páginas corporativas, tiendas online, apps móviles, software personalizado, estudio de desarrollo, agencia de tecnología",
+    "JEG Dev Studios, desarrollo web México, diseño de sitios web, landing pages, tiendas online, aplicaciones móviles, apps personalizadas, software a medida, soluciones digitales, servicios de desarrollo, estudio de desarrollo web, desarrollo de software México, agencia de diseño web",
   openGraph: {
     title: "Servicios de Desarrollo Web y Software | JEG Dev Studios",
     description:

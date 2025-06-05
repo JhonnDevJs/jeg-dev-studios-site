@@ -22,7 +22,7 @@ export const metadata = {
   description:
     "Desarrollo de sitios web, software y apps móviles en México. Soluciones digitales personalizadas para negocios y emprendedores.",
   keywords:
-    "desarrollo web profesional, desarrollo web personalizado, empresa desarrollo web, servicios de desarrollo web, desarrollo de software a medida, aplicaciones móviles para empresas, diseño de páginas web profesionales, diseño responsivo, desarrollo de sitios web responsivos, consultoria TI, empresa de desarrollo web, creación de páginas web, desarrollador web freelance, soluciones digitales para empresas, consultor tecnológico, dev studios, jegstudio",
+    "desarrollo web profesional, desarrollo web personalizado, empresa desarrollo web, servicios de desarrollo web, desarrollo de software a medida, aplicaciones móviles para empresas, diseño de páginas web profesionales, agencia de diseño de sitios web, desarrollo de sitios web responsivos, consultoria TI, empresa de desarrollo web en méxico, creación de páginas web, desarrollador web freelance, soluciones digitales para empresas, agencia de desarrollo web, dev studios, jegstudio",
   robots: "index, follow",
   authors: [{ name: "JEG Dev Studios" }],
   applicationName: "JEG Dev Studios",

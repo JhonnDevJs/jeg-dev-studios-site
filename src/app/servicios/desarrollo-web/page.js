@@ -1,9 +1,9 @@
 export const metadata = {
   title: "Servicios de Desarrollo Web | JEG Dev Studios",
   description:
-    "Descubre nuestros servicios de desarrollo web. Soluciones digitales a medida para tu negocio con las mejores tecnologías actuales.",
+    "Contrata servicios de desarrollo web profesionales: sitios empresariales, e-commerce y landing pages con diseño moderno y funcional.",
   keywords:
-    "servicios desarrollo web, creacion de sitios web, creacion de landing pages, creacion de e-commerce, adquiere tu sitio web empresarial, soluciones digitales, JEG Dev Studios",
+    "contratar desarrollo web, crear sitio web profesional, diseño de páginas web, creación de landing pages, creación de tiendas en línea, desarrollo web en México, soluciones digitales personalizadas, sitio web empresarial, servicios de desarrollo web, JEG Dev Studios",
   alternates: {
     canonical: "https://www.jegdevstudios.com/servicios/desarrollo-web",
   },

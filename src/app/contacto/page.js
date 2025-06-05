@@ -1,13 +1,13 @@
 export const metadata = {
   title: "Contáctanos | JEG Dev Studios",
   description:
-    "¿Tienes preguntas o necesitas un proyecto digital? Ponte en contacto con JEG Dev Studios. Resolvemos tus dudas y te asesoramos para impulsar tu negocio.",
+    "Solicita tu presupuesto o asesoría digital. Contáctanos hoy y comencemos a desarrollar tu página web, app o software a medida.",
   keywords:
-    "contacto JEG Dev Studios, contactar desarrollador web, asesoría desarrollo web, presupuesto desarrollo, contacto agencia digital, soporte técnico, formulario de contacto",
+    "contacto JEG Dev Studios, contratar desarrollador web, agencia de desarrollo en México, presupuesto desarrollo web, formulario de contacto, asesoría digital, contacto agencia digital, soporte técnico, desarrollador freelance México",
   openGraph: {
     title: "Contáctanos | JEG Dev Studios",
     description:
-      "Comunícate con nosotros para recibir asesoría personalizada sobre desarrollo web, software o soporte.",
+      "¿Listo para impulsar tu negocio? Contáctanos y obtén asesoría para crear tu sitio web, app o solución digital personalizada.",
     url: "https://www.jegdevstudios.com/contacto",
     siteName: "JEG Dev Studios",
     images: [
