@@ -18,7 +18,9 @@
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
   height: 4.5rem;
 }
-
+.navbar-nav {
+  overflow: hidden;
+}
 /* Hamburguesa blanca */
 .navbar-toggler-icon {
   filter: brightness(0) invert(1);
@@ -50,6 +52,14 @@
 .nav-efecto.active {
   transform: scale(1.15);
   color: #1171FD !important;
+}
+
+@media (max-width: 991px) {
+  .nav-efecto:hover,
+  .nav-efecto:focus,
+  .nav-efecto.active {
+    transform: none !important;
+  }
 }
 
 .gradient-border {

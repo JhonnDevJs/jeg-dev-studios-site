@@ -13,13 +13,13 @@ export default function Home() {
       <section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground">
         <article
           className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0"
-          style={{ maxWidth: "46rem" }}
+          style={{ maxWidth: "47rem" }}
         >
           <div className="container p-0 m-0">
-            <h2 className="display-4 h1 text-light text-shadow">
+            <h2 className="display-5 text-light text-shadow">
               Desarrollo Web, Software y Apps en México – JEG Dev Studios
             </h2>
-            <p className="fs-1 text-light text-shadow text-brack w-100 w-xl-50">
+            <p className="fs-xl-1 fs-5 text-light text-shadow text-brack">
               Creamos sitios web profesionales, sistemas empresariales y apps móviles alineadas a los objetivos de tu negocio.
             </p>
           </div>
@@ -66,7 +66,7 @@ export default function Home() {
                 <FaGlobe />
               </div>
               <div>
-                <h5 className="fw-bold">Mejora tu presencia en línea</h5>
+                <h3 className="h5 fw-bold">Mejora tu presencia en línea</h3>
                 <p className="mb-0">
                   Diseños atractivos que comunican tu propuesta de valor desde
                   el primer clic.
@@ -79,7 +79,7 @@ export default function Home() {
                 <FaChartLine />
               </div>
               <div>
-                <h5 className="fw-bold">Aumenta tu alcance</h5>
+                <h3 className="h5 fw-bold">Aumenta tu alcance</h3>
                 <p className="mb-0">
                   Sitios responsivos y optimizados para buscadores que generan
                   tráfico de calidad.
@@ -92,7 +92,7 @@ export default function Home() {
                 <FaLock />
               </div>
               <div>
-                <h5 className="fw-bold">Procesos seguros y escalables</h5>
+                <h3 className="h5 fw-bold">Procesos seguros y escalables</h3>
                 <p className="mb-0">
                   Arquitectura moderna con buenas prácticas de seguridad y
                   crecimiento.
@@ -105,7 +105,7 @@ export default function Home() {
                 <FaHeadset />
               </div>
               <div>
-                <h5 className="fw-bold">Soporte personalizado</h5>
+                <h3 className="h5 fw-bold">Soporte personalizado</h3>
                 <p className="mb-0">
                   Acompañamiento profesional antes, durante y después del
                   desarrollo.
@@ -158,8 +158,8 @@ export default function Home() {
           </ul>
         </article>
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-start text-center w-100 gap-3 p-xl-5 p-3">
-        <h2 className="display-1 text-white">¿Por qué elegirnos?</h2>
+      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3">
+        <h2 className="display-5 text-center text-white">¿Por qué elegirnos?</h2>
         <p className="fs-4 text-center text-white p-0">
           Servicio 100% mexicano, pensado para el mundo. Creamos sitios web con calidad profesional para clientes en México y cualquier parte del mundo.
         </p>
