@@ -1,51 +1,75 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+
   <!-- Página principal -->
   <url>
-    <loc>https://jegdevstudios.com/</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.jegdevstudios.com/</loc>
+    <lastmod>2025-06-04</lastmod>
     <priority>1.0</priority>
   </url>
-  <!-- Página "Sobre Nosotros" -->
+  <!-- Página "Servicios" -->
   <url>
-    <loc>https://jegdevstudios.com/services</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.jegdevstudios.com/servicios</loc>
+    <lastmod>2025-06-04</lastmod>
     <priority>0.9</priority>
   </url>
-  <!-- Página de "Servicios" -->
+  <!-- Página "Servicios desarrollo web" -->
   <url>
-    <loc>https://jegdevstudios.com/about</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.jegdevstudios.com/servicios/desarrollo-web</loc>
+    <lastmod>2025-06-04</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <!-- Página "Servicios desarrollo de aplicaciones móviles" -->
+  <url>
+    <loc>https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones</loc>
+    <lastmod>2025-06-04</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <!-- Página "Servicios desarrollo de software empresarial" -->
+  <url>
+    <loc>https://www.jegdevstudios.com/servicios/desarrollo-software</loc>
+    <lastmod>2025-06-04</lastmod>
+    <priority>0.9</priority>
+  </url>
+  <!-- Página de "Sobre nosotros" -->
+  <url>
+    <loc>https://www.jegdevstudios.com/sobre-nosotros</loc>
+    <lastmod>2025-06-04</lastmod>
     <priority>0.7</priority>
   </url>
   <!-- Página de "Contacto" -->
   <url>
-    <loc>https://jegdevstudios.com/contact</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.jegdevstudios.com/contacto</loc>
+    <lastmod>2025-06-04</lastmod>
     <priority>0.8</priority>
   </url>
   <!-- Página de "Saber más WebDev" -->
   <url>
-    <loc>https://jegdevstudios.com/saber-mas/web-dev</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.jegdevstudios.com/saber-mas/web-dev</loc>
+    <lastmod>2025-06-04</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más SoftDev" -->
   <url>
-    <loc>https://jegdevstudios.com/saber-mas/soft-dev</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.jegdevstudios.com/saber-mas/soft-dev</loc>
+    <lastmod>2025-06-04</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más AppDev" -->
   <url>
-    <loc>https://jegdevstudios.com/saber-mas/app-dev</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.jegdevstudios.com/saber-mas/app-dev</loc>
+    <lastmod>2025-06-04</lastmod>
     <priority>0.6</priority>
   </url>
-  <!-- Página de "Saber más GamesDev" -->
+  <!-- Página de "Términos y condiciones" -->
   <url>
-    <loc>https://jegdevstudios.com/saber-mas/games-dev</loc>
-    <lastmod>2025-04-30</lastmod>
+    <loc>https://www.jegdevstudios.com/terminos-y-condiciones</loc>
+    <lastmod>2025-06-04</lastmod>
+    <priority>0.6</priority>
+  </url>
+  <!-- Página de "Aviso de privacidad" -->
+  <url>
+    <loc>https://www.jegdevstudios.com/aviso-de-privacidad</loc>
+    <lastmod>2025-06-04</lastmod>
     <priority>0.6</priority>
   </url>
 </urlset>

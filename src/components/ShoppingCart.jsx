@@ -48,9 +48,9 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
     <>
       {!isCartVisible && (
         <button
-          className="position-absolute bottom-0 end-0 btn btn-light border-2 rounded-circle z-3"
+          className="btn btn-light border-2 rounded-circle z-3"
           id="carrito"
-          style={{ width: "4rem", height: "4rem", right: "1rem", bottom: "1rem" }}
+          style={{ width: "4rem", height: "4rem", position: "fixed", right: "2rem", bottom: "8rem" }}
           onClick={toggleCartVisibility}
         >
           <Image
