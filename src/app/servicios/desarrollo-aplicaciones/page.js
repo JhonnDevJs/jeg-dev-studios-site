@@ -1,9 +1,8 @@
 export const metadata = {
-  title: "Servicios de Desarrollo Web | JEG Dev Studios",
+  title: "Servicios de Desarrollo de Aplicaciones Móviles | JEG Dev Studios",
   description:
-    "Contrata servicios de desarrollo web profesionales: sitios empresariales, e-commerce y landing pages con diseño moderno y funcional.",
-  keywords:
-    "contratar desarrollo de aplicaciones, crear aplicación profesional, diseño de aplicaciones, creación de apps, creación de aplicaciones de tiendas, desarrollo de aplicaciones en México, soluciones digitales personalizadas, aplicación empresarial, servicios de desarrollo de apps, JEG Dev Studios",
+    "Contrata servicios de desarrollo de aplicaciones móviles personalizadas: desde apps sencillas hasta soluciones móviles robustas para iOS y Android.",
+  keywords: "desarrollo de aplicaciones móviles, crear app móvil, contratar desarrollo de aplicaciones, diseño de apps personalizadas, apps Android y iOS, creación de aplicaciones profesionales, desarrollo de aplicaciones en México, soluciones digitales personalizadas, aplicación empresarial, JEG Dev Studios",
   alternates: {
     canonical: "https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones",
   },

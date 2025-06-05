@@ -64,7 +64,7 @@ export default function DevAppClient() {
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
         <p className="lead w-100 px-3 px-md-5">
-          En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya sea que estés comenzando con una landing page o necesites un sitio más robusto, tenemos la solución perfecta para ti.
+          En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya sea que estés iniciando con una app sencilla o necesites una aplicación móvil completa y escalable, tenemos la solución perfecta para ti.
         </p>
         <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
           <CardProduct
