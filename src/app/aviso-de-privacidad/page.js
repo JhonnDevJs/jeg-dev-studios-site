@@ -23,6 +23,9 @@ export const metadata = {
     locale: "es_MX",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.jegdevstudios.com/aviso-de-privacidad",
+  },
 };
 
 export default function PrivacyPolicy() {

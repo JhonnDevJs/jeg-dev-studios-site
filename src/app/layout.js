@@ -20,7 +20,7 @@ export const metadata = {
   metadataBase: new URL("https://www.jegdevstudios.com"),
   title: "JEG Dev Studios | Desarrollamos tu sitio web profesional",
   description:
-    "Desarrollo de sitios web, software y apps móviles en México. En JEG Dev Studios ofrecemos soluciones digitales personalizadas para negocios y emprendedores.",
+    "Desarrollo de sitios web, software y apps móviles en México. Soluciones digitales personalizadas para negocios y emprendedores.",
   keywords:
     "desarrollo web profesional, desarrollo web personalizado, empresa desarrollo web, servicios de desarrollo web, desarrollo de software a medida, aplicaciones móviles para empresas, diseño de páginas web profesionales, diseño responsivo, desarrollo de sitios web responsivos, consultoria TI, empresa de desarrollo web, creación de páginas web, desarrollador web freelance, soluciones digitales para empresas, consultor tecnológico, dev studios, jegstudio",
   robots: "index, follow",

@@ -4,6 +4,9 @@ export const metadata = {
     "Descubre nuestros servicios de desarrollo web. Soluciones digitales a medida para tu negocio con las mejores tecnologías actuales.",
   keywords:
     "servicios desarrollo web, creacion de sitios web, creacion de landing pages, creacion de e-commerce, adquiere tu sitio web empresarial, soluciones digitales, JEG Dev Studios",
+  alternates: {
+    canonical: "https://www.jegdevstudios.com/servicios/desarrollo-web",
+  },
   openGraph: {
     title: "Servicios de Desarrollo Web | JEG Dev Studios",
     description: "Descubre nuestros servicios de desarrollo web",

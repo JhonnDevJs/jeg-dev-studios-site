@@ -21,6 +21,9 @@ export const metadata = {
     locale: "es_MX",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.jegdevstudios.com/saber-mas/app-dev",
+  },
 };
 
 function AppDev() {

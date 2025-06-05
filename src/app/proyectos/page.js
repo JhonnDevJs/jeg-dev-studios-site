@@ -8,7 +8,7 @@ export const metadata = {
     title: "Proyectos | JEG Dev Studios",
     description:
       "Explora nuestros mejores proyectos desarrollados por JEG Dev Studios.",
-    url: "https://www.jegdevstudios.com/proyects",
+    url: "https://www.jegdevstudios.com/proyectos",
     siteName: "JEG Dev Studios",
     images: [
       {
@@ -20,6 +20,9 @@ export const metadata = {
     ],
     locale: "es_MX",
     type: "website",
+  },
+  alternates: {
+    canonical: "https://www.jegdevstudios.com/proyectos",
   },
 };
 

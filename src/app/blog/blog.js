@@ -21,6 +21,9 @@ export const metadata = {
     locale: "es_MX",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.jegdevstudios.com/blog",
+  },
 };
 
 import BlogClient from "./BlogClient";

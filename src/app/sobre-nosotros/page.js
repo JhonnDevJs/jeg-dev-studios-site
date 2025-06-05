@@ -8,7 +8,7 @@ export const metadata = {
     title: "Sobre Nosotros | JEG Dev Studios",
     description:
       "Conoce a JEG Dev Studios: nuestra historia, misión, visión, valores, equipo y servicios de desarrollo digital a medida.",
-    url: "https://www.jegdevstudios.com/about",
+    url: "https://www.jegdevstudios.com/sobre-nosotros",
     siteName: "JEG Dev Studios",
     images: [
       {
@@ -21,8 +21,10 @@ export const metadata = {
     locale: "es_MX",
     type: "website",
   },
+  alternates: {
+    canonical: "https://www.jegdevstudios.com/sobre-nosotros",
+  },
 };
-
 
 import AboutClient from "./AboutClient";
 
