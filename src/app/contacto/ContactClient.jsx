@@ -89,9 +89,7 @@ export default function ContactClient() {
   return (
     <>
       <section className="__image-background-sections d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
-        <h2 className="display-1 text-center text-white mt-5">
-          Contáctanos
-        </h2>
+        <h2 className="display-1 text-center text-white mt-5">Contáctanos</h2>
         <p className="fs-5 text-center text-white">
           Escríbenos para recibir asesoría personalizada, resolver dudas o
           solicitar un presupuesto.
@@ -157,14 +155,17 @@ export default function ContactClient() {
               <option value="" disabled>
                 Selecciona un tipo
               </option>
-              <option value="services" className="text-black">
-                Servicios
+              <option value="servicios" className="text-black">
+                Consulta de servicios
               </option>
-              <option value="support" className="text-black">
+              <option value="Cotización" className="text-black">
+                Cotización
+              </option>
+              <option value="soporte" className="text-black">
                 Soporte
               </option>
               <option value="general" className="text-black">
-                General
+                General (Cualquier otra consulta)
               </option>
             </select>
             <textarea

@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import ButtonsSocial from "@/components/ButtonsSocial";
+import CTA from "@/components/CTA";
 
 export default function AboutClient() {
   return (
@@ -172,33 +172,7 @@ export default function AboutClient() {
           </p>
         </article>
       </section>
-
-      <section
-        id="cta-contacto"
-        className="bg-transparent text-white py-5 text-center"
-      >
-        <div className="container">
-          <h2 className="display-5 fw-bold mb-4">
-            ¿Listo para dar el siguiente paso digital?
-          </h2>
-          <p className="lead mb-4 mx-auto" style={{ maxWidth: "720px" }}>
-            Es momento de convertir tu idea en una solución tecnológica
-            escalable y atractiva. Agenda tu consulta gratuita o contáctanos
-            directamente.
-          </p>
-          <div className="d-flex flex-column flex-md-row justify-content-center gap-3">
-            <Link href="/contacto" className="btn btn-light btn-lg px-4">
-              Solicitar una consulta gratuita
-            </Link>
-            <Link
-              href="/servicios"
-              className="btn btn-outline-light btn-lg px-4"
-            >
-              Ver nuestros paquetes
-            </Link>
-          </div>
-        </div>
-      </section>
+      <CTA />
     </>
   );
 }

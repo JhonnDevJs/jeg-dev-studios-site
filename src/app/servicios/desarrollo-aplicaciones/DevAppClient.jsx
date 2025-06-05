@@ -5,7 +5,7 @@ import CardProduct from "@/components/CardProduct";
 import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
 
-export default function DevWebClient() {
+export default function DevAppClient() {
   const [cartItems, setCartItems] = useState(() => {
     if (typeof window !== "undefined") {
       const storedCart = localStorage.getItem("cartItems");
@@ -59,7 +59,7 @@ export default function DevWebClient() {
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0 m-0">
         <h2 className="display-1 text-center text-white">
-          Nuestros servicios de desarrollo web
+          Nuestros servicios de desarrollo de aplicaciones
         </h2>
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
@@ -68,62 +68,64 @@ export default function DevWebClient() {
         </p>
         <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
           <CardProduct
-            dataPrice={5799}
-            title="Paquete Básico"
-            price="5799"
+            dataPrice={18999}
+            title="App de Inicio"
+            price="18999"
             moneda="MXN"
             items={[
-              "1 año de Hosting y dominio (con hostinger)",
-              "Certificado SSL",
-              "Email corporativo",
-              "Diseño responsivo (optimizado para móviles)",
-              "Cambios en el diseño: 2 a nivel de sección)",
-              "4 Secciones dentro del layout/landing page",
-              "Integración de botón de WhatsApp",
-              "Implementación básica de SEO",
-              "Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js",
-              "Tiempo de entrega: 7 a 10 días hábiles",
+              "App nativa sencilla para Android o iOS (1 plataforma).",
+              "Diseño responsivo y minimalista.",
+              "Hasta 3 pantallas principales (Home, Servicios, Contacto).",
+              "Sin base de datos ni backend complejo.",
+              "Publicación en tienda (Google Play o App Store incluida).",
+              "Manual básico de uso y entrega de APK. ",
             ]}
             onAdd={handleAddToCart}
           />
           <CardProduct
-            dataPrice={17299}
-            title="Paquete Plus"
-            price="17299"
+            dataPrice={37999}
+            title="App Dual Básica"
+            price="37999"
             moneda="MXN"
             items={[
-              "1 año de Hosting y dominio (a elegir Hostinger ó Dondominio)",
-              "Certificado SSL",
-              "Email corporativo",
-              "Diseño responsivo (optimizado para móviles)",
-              " Cambios en el diseño: 4 (a nivel de sección)",
-              "4 Secciones dentro del layout/landing page",
-              "Integración básica de redes sociales (Botón de WhatsApp, Facebook)",
-              "Implementación básica de SEO",
-              "1 Mantenimiento gratuito a los 6 meses",
-              "Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel)",
-              "Tiempo de entrega: 10 a 15 días hábiles.",
+              "App para Android e iOS (React Native o Kotlin Multiplatform).",
+              "Hasta 6 pantallas dinámicas (login, inicio, catálogo, detalles, contacto, perfil).",
+              "Integración con base de datos remota y backend en Java.",
+              "Sistema básico de autenticación y almacenamiento de datos.",
+              "Publicación en ambas tiendas.",
+              "Diseño adaptado y personalizado con tu identidad visual.",
             ]}
             onAdd={handleAddToCart}
           />
           <CardProduct
-            dataPrice={28799}
-            title="Paquete Pro"
-            price="28799"
+            dataPrice={75999}
+            title="App Funcional Pro"
+            price="75999"
             moneda="MXN"
             items={[
-              "1 año de Hosting y dominio (con dondominio)",
-              "Certificado SSL",
-              "Email corporativo",
-              "Diseño responsivo (optimizado para móviles)",
-              "Cambios en el diseño: 8 (a nivel de sección)",
-              "Hasta 10 landing pages/layouts",
-              "4 Secciones dentro del layout/landing page",
-              "Integración completa de redes sociales (Facebook, Instagram, X (Twitter), WhatsApp).",
-              "Implementación básica de SEO",
-              "2 días Mantenimiento gratuitos 1 cada 6 meses",
-              "Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel) ó Node js",
-              "Tiempo de entrega: 15 a 30 días hábiles.",
+              "App híbrida o nativa para Android e iOS.",
+              "Módulos personalizados (usuarios, productos, pedidos, etc.).",
+              "Backend Java con APIs seguras y escalables.",
+              "Diseño UI/UX profesional (componentes animados, navegación fluida).",
+              "Sistema de notificaciones push.",
+              "Base de datos relacional conectada al backend.",
+              "Panel de administración web opcional.",
+            ]}
+            onAdd={handleAddToCart}
+          />
+          <CardProduct
+            dataPrice={134999}
+            title="App a Medida Premium"
+            price="134999"
+            moneda="MXN"
+            items={[
+              "App personalizada desde cero (multiplataforma).",
+              "Arquitectura avanzada y optimizada.",
+              "Funcionalidades complejas (geolocalización, pagos, cámara, multimedia, etc.).",
+              "Backend modular con Java (APIs RESTful seguras).",
+              "Panel de control con estadísticas y gestión remota.",
+              "Mantenimiento técnico por 3 meses incluido.",
+              "Asesoría y soporte para estrategias de publicación y escalabilidad.",
             ]}
             onAdd={handleAddToCart}
           />
