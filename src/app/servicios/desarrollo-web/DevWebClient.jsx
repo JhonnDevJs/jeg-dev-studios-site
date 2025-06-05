@@ -20,26 +20,119 @@ export default function DevWebClient() {
     }
   }, [cartItems]);
 
+  // Datos de los productos para el evento ViewContent
+  const products = [
+    { id: 'paquete_basico', name: 'Paquete Básico', price: 5799, currency: 'MXN' },
+    { id: 'paquete_plus', name: 'Paquete Plus', price: 17299, currency: 'MXN' },
+    { id: 'paquete_pro', name: 'Paquete Pro', price: 28799, currency: 'MXN' },
+  ];
+
+  useEffect(() => {
+    // Evento ViewContent de Facebook Pixel al cargar la página de productos
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq('track', 'ViewContent', {
+        content_type: 'product_group',
+        content_ids: products.map(p => p.id),
+        content_name: 'Paquetes de Desarrollo Web',
+        contents: products.map(p => ({
+          id: p.id,
+          quantity: 1, // Asumimos que se muestra 1 de cada uno
+          item_price: p.price
+        })),
+        currency: 'MXN', // Moneda general para el grupo
+      });
+    }
+  }, []); // Se ejecuta solo una vez al montar el componente
+
   const handleAddToCart = ({ title, moneda, dataPrice }) => {
-    setCartItems((prevItems) => [
-      ...prevItems,
-      { title, moneda, dataPrice: parseFloat(dataPrice) },
-    ]);
+    const productData = { title, moneda, dataPrice: parseFloat(dataPrice) };
+    const productId = title.toLowerCase().replace(/\s+/g, '_'); // ej: paquete_basico
+
+    setCartItems((prevItems) => [...prevItems, productData]);
+
+    // Evento AddToCart de Facebook Pixel
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq('track', 'AddToCart', {
+        content_name: productData.title,
+        content_ids: [productId],
+        content_type: 'product',
+        value: productData.dataPrice,
+        currency: productData.moneda,
+        contents: [{
+          id: productId,
+          quantity: 1,
+          item_price: productData.dataPrice
+        }],
+      });
+    }
   };
 
   const handleRemoveProduct = (index) => {
     setCartItems((prevItems) => prevItems.filter((_, i) => i !== index));
   };
 
-  const [orderNumber, setOrderNumber] = useState("");
+  const [orderNumber, setOrderNumber] = useState(() => {
+    // Generar un número de orden inicial si es necesario, o dejarlo vacío.
+    // Se generará uno nuevo al abrir el formulario si está vacío.
+    return "";
+  });
   const [isFormVisible, setIsFormVisible] = useState(false);
 
-  const openOrderForm = () => setIsFormVisible(true);
+  const openOrderForm = () => {
+    setIsFormVisible(true);
+    // Se asume que orderNumber se establece a través de setOrderNumber
+    // (por ejemplo, desde ShoppingCart o después de una interacción con el backend)
+
+    // Evento InitiateCheckout de Facebook Pixel
+    if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
+      const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
+      const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
+      const content_ids = cartItems.map(item => item.title.toLowerCase().replace(/\s+/g, '_'));
+      const contents = cartItems.map(item => ({
+        id: item.title.toLowerCase().replace(/\s+/g, '_'),
+        quantity: 1,
+        item_price: item.dataPrice
+      }));
+
+      window.fbq('track', 'InitiateCheckout', {
+        contents: contents,
+        content_ids: content_ids,
+        currency: currency,
+        num_items: cartItems.length,
+        value: totalValue,
+        order_id: orderNumber, // Se usa el orderNumber del estado.
+                               // Si está vacío, se enviará vacío. Es opcional para InitiateCheckout.
+      });
+    }
+  };
   const closeOrderForm = () => setIsFormVisible(false);
 
   const handleSubmitOrder = (submittedOrderData) => {
+    // Evento Purchase de Facebook Pixel
+    if (typeof window !== "undefined" && window.fbq && cartItems.length > 0 && orderNumber) {
+      const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
+      const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
+      const content_ids = cartItems.map(item => item.title.toLowerCase().replace(/\s+/g, '_'));
+      const contents = cartItems.map(item => ({
+        id: item.title.toLowerCase().replace(/\s+/g, '_'),
+        quantity: 1,
+        item_price: item.dataPrice
+      }));
+
+      window.fbq('track', 'Purchase', {
+        contents: contents,
+        content_ids: content_ids,
+        content_type: 'product', // Para Purchase, a menudo se especifica 'product'
+        currency: currency,
+        num_items: cartItems.length,
+        value: totalValue,
+        order_id: orderNumber,
+      });
+    }
+
     setCartItems([]);
-    // Puedes resetear orderNumber aquí si lo necesitas
+    setOrderNumber(""); // Resetea el número de orden después de la compra
+    closeOrderForm(); // Cierra el formulario después de enviar
   };
   return (
     <>
