@@ -191,7 +191,7 @@ export default function AboutClient() {
               Solicitar una consulta gratuita
             </Link>
             <Link
-              href="/services"
+              href="/servicios"
               className="btn btn-outline-light btn-lg px-4"
             >
               Ver nuestros paquetes

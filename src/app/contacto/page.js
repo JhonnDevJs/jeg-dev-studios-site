@@ -8,7 +8,7 @@ export const metadata = {
     title: "Contáctanos | JEG Dev Studios",
     description:
       "Comunícate con nosotros para recibir asesoría personalizada sobre desarrollo web, software o soporte.",
-    url: "https://www.jegdevstudios.com/contact",
+    url: "https://www.jegdevstudios.com/contacto",
     siteName: "JEG Dev Studios",
     images: [
       {

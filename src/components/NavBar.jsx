@@ -15,7 +15,8 @@ function NavBar() {
           {/* Logo y Nombre */}
           <Link
             href="/"
-            className="navbar-brand d-flex text-white justify-content-center align-items-center text-center p-0 gap-2" style={{ position: "fixed", top: "0rem", left: "3rem"}}
+            className="navbar-brand d-flex text-white justify-content-center align-items-center text-center p-0 gap-2"
+            style={{ position: "fixed", top: "0rem", left: "3rem" }}
           >
             <Image
               src={iconLogo}
@@ -65,7 +66,7 @@ function NavBar() {
                   <Link
                     href="/servicios"
                     className={`nav-link text-white nav-efecto${
-                      pathname === "/services" ? " active" : ""
+                      pathname === "/servicios" ? " active" : ""
                     }`}
                   >
                     Servicios
@@ -73,9 +74,9 @@ function NavBar() {
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/proyects"
+                    href="/proyectos"
                     className={`nav-link d-none text-white nav-efecto${
-                      pathname === "/proyects" ? " active" : ""
+                      pathname === "/proyectos" ? " active" : ""
                     }`}
                   >
                     Proyectos
@@ -85,7 +86,7 @@ function NavBar() {
                   <Link
                     href="/sobre-nosotros"
                     className={`nav-link text-white nav-efecto${
-                      pathname === "/about" ? " active" : ""
+                      pathname === "/sobre-nosotros" ? " active" : ""
                     }`}
                   >
                     Sobre Nosotros
@@ -105,7 +106,7 @@ function NavBar() {
                   <Link
                     href="/contacto"
                     className={`nav-link text-white nav-efecto${
-                      pathname === "/contact" ? " active" : ""
+                      pathname === "/contacto" ? " active" : ""
                     }`}
                   >
                     Contacto
