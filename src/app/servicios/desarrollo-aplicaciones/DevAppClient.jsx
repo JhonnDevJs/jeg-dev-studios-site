@@ -6,19 +6,20 @@ import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
 
 export default function DevAppClient() {
-  const [cartItems, setCartItems] = useState(() => {
+  // 1. Inicializa cartItems como un array vacío.
+  // Esto asegura que el renderizado del servidor y el renderizado inicial del cliente sean consistentes.
+  const [cartItems, setCartItems] = useState([]);
+
+  // 2. Usa useEffect para cargar desde localStorage DESPUÉS de que el componente se haya montado en el cliente.
+  useEffect(() => {
+    // Este código solo se ejecuta en el cliente, después del renderizado inicial.
     if (typeof window !== "undefined") {
       const storedCart = localStorage.getItem("cartItems");
-      return storedCart ? JSON.parse(storedCart) : [];
+      if (storedCart) {
+        setCartItems(JSON.parse(storedCart));
+      }
     }
-    return [];
-  });
-
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      localStorage.setItem("cartItems", JSON.stringify(cartItems));
-    }
-  }, [cartItems]);
+  }, []); // El array de dependencias vacío asegura que se ejecute una vez después del montaje inicial del cliente.
 
   // Datos de los productos para el evento ViewContent
   const products = [
@@ -27,6 +28,15 @@ export default function DevAppClient() {
     { id: 'app_funcional_pro', name: 'App Funcional Pro', price: 75999, currency: 'MXN' },
     { id: 'app_a_medida_premium', name: 'App a Medida Premium', price: 134999, currency: 'MXN' },
   ];
+
+  // 3. El useEffect existente para guardar en localStorage está bien,
+  // pero es buena práctica verificar también `typeof window` si existe la posibilidad
+  // de que se ejecute durante SSR.
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      localStorage.setItem("cartItems", JSON.stringify(cartItems));
+    }
+  }, [cartItems]);
 
   useEffect(() => {
     // Evento ViewContent de Facebook Pixel al cargar la página de productos
