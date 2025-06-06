@@ -44,22 +44,21 @@ export default function DevWebClient() {
     }
   }, []); // Se ejecuta solo una vez al montar el componente
 
-  const handleAddToCart = ({ title, moneda, dataPrice }) => {
-    const productData = { title, moneda, dataPrice: parseFloat(dataPrice) };
-    const productId = title.toLowerCase().replace(/\s+/g, '_'); // ej: paquete_basico
-
+  const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
+    const productData = { idProduct, title, moneda, dataPrice: parseFloat(dataPrice) };
+    // productId ahora es directamente idProduct
     setCartItems((prevItems) => [...prevItems, productData]);
 
     // Evento AddToCart de Facebook Pixel
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq('track', 'AddToCart', {
         content_name: productData.title,
-        content_ids: [productId],
+        content_ids: [productData.idProduct],
         content_type: 'product',
         value: productData.dataPrice,
         currency: productData.moneda,
         contents: [{
-          id: productId,
+          id: productData.idProduct,
           quantity: 1,
           item_price: productData.dataPrice
         }],
@@ -87,9 +86,9 @@ export default function DevWebClient() {
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
       const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
       const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.title.toLowerCase().replace(/\s+/g, '_'));
+      const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
       const contents = cartItems.map(item => ({
-        id: item.title.toLowerCase().replace(/\s+/g, '_'),
+        id: item.idProduct, // Usar item.idProduct
         quantity: 1,
         item_price: item.dataPrice
       }));
@@ -112,9 +111,9 @@ export default function DevWebClient() {
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0 && orderNumber) {
       const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
       const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.title.toLowerCase().replace(/\s+/g, '_'));
+      const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
       const contents = cartItems.map(item => ({
-        id: item.title.toLowerCase().replace(/\s+/g, '_'),
+        id: item.idProduct, // Usar item.idProduct
         quantity: 1,
         item_price: item.dataPrice
       }));
@@ -161,6 +160,7 @@ export default function DevWebClient() {
         </p>
         <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
           <CardProduct
+            idProduct="paquete_basico"
             dataPrice={5799}
             title="Paquete Básico"
             price="5799"
@@ -180,6 +180,7 @@ export default function DevWebClient() {
             onAdd={handleAddToCart}
           />
           <CardProduct
+            idProduct={"paquete_plus"}
             dataPrice={17299}
             title="Paquete Plus"
             price="17299"
@@ -200,6 +201,7 @@ export default function DevWebClient() {
             onAdd={handleAddToCart}
           />
           <CardProduct
+            idProduct={"paquete_pro"}
             dataPrice={28799}
             title="Paquete Pro"
             price="28799"

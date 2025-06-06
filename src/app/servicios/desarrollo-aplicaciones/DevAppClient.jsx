@@ -45,22 +45,21 @@ export default function DevAppClient() {
     }
   }, []); // Se ejecuta solo una vez al montar el componente
 
-  const handleAddToCart = ({ title, moneda, dataPrice }) => {
-    const productData = { title, moneda, dataPrice: parseFloat(dataPrice) };
-    const productId = title.toLowerCase().replace(/\s+/g, '_'); // ej: app_de_inicio
-
+  const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
+    const productData = { idProduct, title, moneda, dataPrice: parseFloat(dataPrice) };
+    // productId ahora es directamente idProduct
     setCartItems((prevItems) => [...prevItems, productData]);
 
     // Evento AddToCart de Facebook Pixel
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq('track', 'AddToCart', {
         content_name: productData.title,
-        content_ids: [productId],
+        content_ids: [productData.idProduct],
         content_type: 'product',
         value: productData.dataPrice,
         currency: productData.moneda,
         contents: [{
-          id: productId,
+          id: productData.idProduct,
           quantity: 1,
           item_price: productData.dataPrice
         }],
@@ -88,9 +87,9 @@ export default function DevAppClient() {
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
       const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
       const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.title.toLowerCase().replace(/\s+/g, '_'));
+      const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
       const contents = cartItems.map(item => ({
-        id: item.title.toLowerCase().replace(/\s+/g, '_'),
+        id: item.idProduct, // Usar item.idProduct
         quantity: 1,
         item_price: item.dataPrice
       }));
@@ -113,9 +112,9 @@ export default function DevAppClient() {
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0 && orderNumber) {
       const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
       const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.title.toLowerCase().replace(/\s+/g, '_'));
+      const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
       const contents = cartItems.map(item => ({
-        id: item.title.toLowerCase().replace(/\s+/g, '_'),
+        id: item.idProduct, // Usar item.idProduct
         quantity: 1,
         item_price: item.dataPrice
       }));
@@ -162,6 +161,7 @@ export default function DevAppClient() {
         </p>
         <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
           <CardProduct
+            idProduct={"app_de_inicio"}
             dataPrice={18999}
             title="App de Inicio"
             price="18999"
@@ -177,6 +177,7 @@ export default function DevAppClient() {
             onAdd={handleAddToCart}
           />
           <CardProduct
+            idProduct={"app_dual_basica"}
             dataPrice={37999}
             title="App Dual Básica"
             price="37999"
@@ -192,6 +193,7 @@ export default function DevAppClient() {
             onAdd={handleAddToCart}
           />
           <CardProduct
+            idProduct={"app_funcional_pro"}
             dataPrice={75999}
             title="App Funcional Pro"
             price="75999"
@@ -208,6 +210,7 @@ export default function DevAppClient() {
             onAdd={handleAddToCart}
           />
           <CardProduct
+            idProduct={"app_a_medida_premium"}
             dataPrice={134999}
             title="App a Medida Premium"
             price="134999"

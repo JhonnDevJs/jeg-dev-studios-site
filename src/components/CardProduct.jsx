@@ -2,6 +2,7 @@
 import PropTypes from "prop-types";
 
 function CardProduct({
+  idProduct,
   dataPrice,
   title,
   price,
@@ -10,13 +11,14 @@ function CardProduct({
   onAdd,
 }) {
   const handleAddToCart = () => {
-    onAdd({ title, moneda, dataPrice });
+    onAdd({ idProduct, title, moneda, dataPrice });
   };
 
   return (
     <li
+      id={idProduct}
       className="card d-block bg-transparent border-1 rounded-5 text-white text-start shadow-md p-0 card-services"
-      style={{ width: "25.6rem"}}
+      style={{ width: "25.6rem" }}
       data-price={dataPrice}
     >
       <div className="card-body d-flex flex-column">
@@ -36,7 +38,10 @@ function CardProduct({
       <div className="card-footer d-flex justify-content-center align-items-center">
         <ul className="list-group list-group-flush w-100">
           {items.map((item, idx) => (
-            <li key={idx} className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100">
+            <li
+              key={idx}
+              className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100"
+            >
               <p className="fs-5 m-0">
                 <span className="icon-check-list fs-5 me-2"></span>
                 {item}
@@ -51,6 +56,7 @@ function CardProduct({
 
 // Validación de props
 CardProduct.propTypes = {
+  idProduct: PropTypes.string.isRequired,
   dataPrice: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,

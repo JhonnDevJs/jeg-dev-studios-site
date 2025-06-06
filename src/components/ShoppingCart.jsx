@@ -140,6 +140,7 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
 ShoppingCart.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
+      idProduct: PropTypes.string, // Añadido para reflejar la estructura actual
       title: PropTypes.string,
       moneda: PropTypes.string,
       dataPrice: PropTypes.number,
