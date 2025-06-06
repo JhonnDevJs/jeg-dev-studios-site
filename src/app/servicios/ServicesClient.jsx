@@ -97,13 +97,13 @@ export default function ServicesClient() {
             />
             <CardServices
               title="Desarrollo de software"
-              description="Implementamos estructuras limpias y reutilizables en lenguajes como React Native y Java para garantizar estabilidad y crecimiento a largo plazo."
+              description="Implementamos estructuras limpias y reutilizables en lenguajes como React Native y Java para garantizar la estabilidad y facilidad de crecimiento a largo plazo de tu proyecto."
               url="/servicios/desarrollo-software"
               buttonLabel="Conoce nuestro desarrollo de software"
               items={[
                 "Clean Code",
                 "Optimización del Rendimiento",
-                "Seguridad a Nivel Backend y DevSecOps",
+                "Seguridad a Nivel DevSecOps",
                 "Optimización para Dispositivos Móviles",
               ]}
             />
