@@ -4,6 +4,7 @@ import ShoppingCart from "@/components/ShoppingCart";
 import CardProduct from "@/components/CardProduct";
 import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
+import "./DevAppClient.css";
 
 export default function DevAppClient() {
   // 1. Inicializa cartItems como un array vacío.

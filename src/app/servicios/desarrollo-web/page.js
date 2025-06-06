@@ -26,7 +26,6 @@ export const metadata = {
 };
 
 import DevWebClient from "./DevWebClient";
-import "./DevWebClient.css";
 
 export default function DevWebPage() {
   return <DevWebClient />;

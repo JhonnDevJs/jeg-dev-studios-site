@@ -25,7 +25,6 @@ export const metadata = {
 };
 
 import DevAppClient from "./DevAppClient";
-import "./DevAppClient.css";
 
 export default function DevWebPage() {
   return <DevAppClient />;
