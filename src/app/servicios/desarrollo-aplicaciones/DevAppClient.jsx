@@ -161,7 +161,7 @@ export default function DevAppClient() {
         onOpenOrderForm={openOrderForm}
         setOrderNumber={setOrderNumber}
       />
-      <section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0 m-0">
+      <section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
         <h2 className="display-1 text-center text-white">
           Nuestros servicios de desarrollo de aplicaciones
         </h2>

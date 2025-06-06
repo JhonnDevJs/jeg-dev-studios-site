@@ -8,6 +8,15 @@
   width: 100%;
   height: 50dvh;
 }
+@media (max-width: 768px) {
+  .__image-background-sections {
+    background-size: cover;
+    background-position: center center;
+    background-attachment: scroll;
+    height: 40dvh;
+    padding-top: 4.5rem;
+  }
+}
 
 .custom-form {
   position: relative;
