@@ -40,127 +40,186 @@ export default function TermsAndConditions() {
 
       <section className="d-flex flex-column w-100 p-xl-5 p-3">
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">I. Introducción</h2>
+          <h2 className="text-white">I. INTRODUCCIÓN</h2>
           <p className="text-white">
             Al ingresar y utilizar este portal de Internet, cuyo nombre de dominio es{" "}
-              <Link href="https://www.jegdevstudios.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline">
-                https://www.jegdevstudios.com
-              </Link>, propiedad de JEG Dev Studios (en adelante &quot;JEG&quot; o &quot;la empresa&quot;), el usuario está aceptando los presentes Términos y Condiciones de Uso, y declara expresamente su aceptación mediante medios electrónicos, en cumplimiento con el artículo 1803 del Código Civil Federal.
-          </p>
-          <p className="text-white">
-            Si el usuario no acepta total y completamente estos términos, deberá abstenerse de utilizar el sitio web y sus servicios. El uso del sitio constituye una aceptación plena e incondicional del presente acuerdo.
-          </p>
-          <p className="text-white">
-            JEG se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Es responsabilidad del usuario revisar periódicamente esta sección.
-          </p>
-        </article>
-
-        <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">II. Convenio</h2>
-          <p className="text-white">
-            Convenio de adhesión para el uso del sitio web{" "}
             <Link href="https://www.jegdevstudios.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline">
               https://www.jegdevstudios.com
-            </Link>, celebrado entre JEG y el usuario, quien accede voluntariamente y se sujeta a lo dispuesto en este documento.
+            </Link>, propiedad de JEG Dev Studios (en adelante, &quot;JEG&quot; o &quot;la empresa&quot;), el usuario acepta los presentes Términos y Condiciones de Uso. Esta aceptación se realiza mediante medios electrónicos, en cumplimiento con el artículo 1803 del Código Civil Federal.
+          </p>
+          <p className="text-white">
+            Si el usuario no acepta total y completamente los términos aquí contenidos, deberá abstenerse de utilizar el sitio y los servicios ofrecidos. El uso del sitio implica aceptación plena e incondicional de este acuerdo.
+          </p>
+          <p className="text-white">
+            JEG se reserva el derecho de modificar estos términos y condiciones en cualquier momento. Es responsabilidad del usuario revisarlos periódicamente.
           </p>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">III. Licencia</h2>
+          <h2 className="text-white">II. CONVENIO</h2>
           <p className="text-white">
-            JEG otorga al usuario una licencia no exclusiva, revocable y no transferible para utilizar el sitio y los servicios ofrecidos, conforme a estos términos. El usuario puede imprimir y/o copiar información del sitio únicamente para uso personal y no comercial.
-          </p>
-          <p className="text-white">
-            La reproducción, distribución o modificación de cualquier contenido sin autorización expresa por escrito de JEG está estrictamente prohibida.
+            Convenio de adhesión para el uso del sitio web celebrado entre JEG y el usuario, quien accede de forma voluntaria y se sujeta a las disposiciones aquí establecidas.
           </p>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">IV. Uso del Sitio</h2>
+          <h2 className="text-white">III. LICENCIA</h2>
+          <p className="text-white">
+            JEG otorga al usuario una licencia no exclusiva, revocable y no transferible para utilizar el sitio y los servicios conforme a estos términos.
+          </p>
+          <p className="text-white">
+            El usuario puede imprimir y/o copiar información del sitio únicamente para uso personal y no comercial.
+          </p>
+          <p className="text-white">
+            Queda prohibida la reproducción, distribución o modificación de cualquier contenido sin autorización expresa y por escrito.
+          </p>
+        </article>
+
+        <article className="d-flex flex-column w-100 p-0 m-0">
+          <h2 className="text-white">IV. USO DEL SITIO</h2>
           <ul>
             <li className="text-white">
-              <strong>Contenido e información:</strong> Toda la información del sitio es generada por JEG o sus proveedores y puede cambiar sin previo aviso.
+              <strong>Contenido e información:</strong> Sujeto a cambios sin previo aviso.
             </li>
             <li className="text-white">
-              <strong>Opiniones de terceros:</strong> JEG no se responsabiliza por opiniones o consejos de terceros. Verifique con profesionales si necesita certeza técnica o legal.
+              <strong>Opiniones de terceros:</strong> JEG no se responsabiliza por comentarios, consejos o publicaciones de terceros.
             </li>
             <li className="text-white">
-              <strong>Derecho a bloquear contenido:</strong> JEG puede eliminar contenido ofensivo, ilegal o que infrinja derechos de terceros.
+              <strong>Contenido bloqueado:</strong> JEG puede eliminar o bloquear contenido ofensivo, ilegal o que infrinja derechos.
             </li>
             <li className="text-white">
-              <strong>Contenido de terceros:</strong> JEG no tiene control editorial sobre dicho contenido; el usuario acepta los riesgos al confiar en él.
+              <strong>Confianza en terceros:</strong> El usuario asume el riesgo de confiar en contenido externo.
             </li>
           </ul>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">V. Formatos y Datos Personales</h2>
+          <h2 className="text-white">V. FORMATOS Y DATOS PERSONALES</h2>
           <p className="text-white">
-            El usuario garantiza la veracidad de los datos personales proporcionados al utilizar servicios de contacto o formularios. Al enviarlos, autoriza a JEG a utilizarlos con fines operativos y contractuales conforme a la legislación vigente y al aviso de privacidad.
+            El usuario garantiza la veracidad de los datos personales proporcionados en formularios o servicios.
+          </p>
+          <p className="text-white">
+            El envío de datos autoriza a JEG a utilizarlos con fines operativos y contractuales, conforme a la legislación vigente y al aviso de privacidad.
           </p>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">VI. Propiedad Intelectual</h2>
+          <h2 className="text-white">VI. PROPIEDAD INTELECTUAL</h2>
           <p className="text-white">
-            Todos los elementos del sitio (logotipos, textos, imágenes, software, etc.) son propiedad de JEG o sus respectivos autores, protegidos por la Ley Federal del Derecho de Autor y tratados internacionales.
+            Todos los elementos del sitio, incluyendo logotipos, textos, imágenes, diseños y código, son propiedad de JEG o de sus respectivos autores.
           </p>
           <p className="text-white">
-            Se prohíbe copiar, modificar o usar cualquier contenido con fines comerciales sin autorización escrita.
+            Está prohibido copiar, modificar o utilizar cualquier contenido con fines comerciales sin autorización previa.
           </p>
           <p className="text-white">
-            El envío de ideas, sugerencias o recursos por parte del usuario otorga a JEG una licencia mundial, perpetua, gratuita y no exclusiva para su uso y modificación.
+            El envío de ideas o materiales por parte del usuario otorga a JEG una licencia mundial, gratuita, no exclusiva y perpetua para su uso, reproducción y distribución.
           </p>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">VII. Servicios de Desarrollo</h2>
+          <h2 className="text-white">VII. SERVICIOS DE DESARROLLO</h2>
+          <p className="text-white">
+            Al contratar servicios de desarrollo web, software o aplicaciones móviles, el usuario acepta lo siguiente:
+          </p>
           <ul>
-            <li className="text-white">El cliente deberá pagar al menos el 50% del costo total del proyecto de forma anticipada para iniciar el desarrollo.</li>
-            <li className="text-white">El cliente se compromete a entregar el material necesario (logotipos, textos, imágenes, etc.) en un plazo no mayor a 2 semanas desde la firma del contrato.</li>
-            <li className="text-white">El tiempo de desarrollo inicia una vez recibido todo el material solicitado.</li>
-            <li className="text-white">Cualquier cambio o adición implicará modificaciones en tiempo y costo del proyecto.</li>
-            <li className="text-white">El desarrollo se validará mediante un test final presentado por videollamada u otro medio acordado.</li>
-            <li className="text-white">El pago final se realiza tras la validación y conformidad del cliente.</li>
-            <li className="text-white">El costo de servicios como hosting y dominio está incluido solo si lo especifica el paquete contratado.</li>
-            <li className="text-white">No habrá reembolsos si el cliente decide no continuar con el proyecto tras iniciar el desarrollo.</li>
-            <li className="text-white">Al entregar el material requerido, se firmará un documento anexo que certifique dicha entrega y el inicio formal del desarrollo.</li>
+            <li className="text-white">El cliente deberá pagar al menos el 50% del costo total del proyecto de forma anticipada.</li>
+            <li className="text-white">
+              Se compromete a entregar el material necesario (logos, textos, imágenes, etc.) en un plazo máximo de 2 semanas desde la firma del contrato.
+            </li>
+            <li className="text-white">El tiempo de desarrollo inicia una vez entregado todo el material requerido.</li>
+            <li className="text-white">Cambios o adiciones posteriores implican ajuste de tiempo y costo.</li>
+            <li className="text-white">El desarrollo será sometido a un test final validado por videollamada u otro medio acordado.</li>
+            <li className="text-white">El pago final se realiza después de la validación del cliente.</li>
+            <li className="text-white">El precio puede incluir servicios como dominio, hosting o base de datos solo si se indica explícitamente en la promoción o paquete contratado.</li>
+            <li className="text-white">Si el cliente decide no continuar con el proyecto después del inicio del desarrollo, no se realizarán reembolsos.</li>
+            <li className="text-white">Al entregar el material, se firmará un documento anexo que certifica la entrega completa y el inicio formal del desarrollo.</li>
           </ul>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">VIII. Publicidad y Enlaces Externos</h2>
+          <h2 className="text-white">VIII. PUBLICIDAD Y ENLACES EXTERNOS</h2>
           <p className="text-white">
-            JEG puede mostrar publicidad o enlaces a sitios de terceros. Estos no forman parte del contenido de JEG ni implican su respaldo. El uso de estos recursos es bajo la responsabilidad del usuario.
+            JEG puede incluir publicidad o enlaces externos. Estos no implican respaldo. El uso de dichos recursos queda bajo la responsabilidad del usuario.
           </p>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">IX. Autorización para Uso en Portafolio</h2>
+          <h2 className="text-white">IX. AUTORIZACIÓN PARA USO EN PORTAFOLIO</h2>
           <p className="text-white">
-            Al contratar los servicios de JEG Dev Studios, el cliente autoriza expresamente que JEG, sus fundadores y colaboradores puedan declarar públicamente su participación en el proyecto. Esto incluye mostrar el proyecto en portafolios profesionales y redes sociales.
+            Al contratar los servicios de JEG, el cliente autoriza expresamente a:
           </p>
           <p className="text-white">
-            Esta autorización no permite divulgar información confidencial. JEG se compromete a proteger la integridad y seguridad del proyecto.
-          </p>
-        </article>
-
-        <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">X. Limitación de Responsabilidad</h2>
-          <p className="text-white">
-            JEG no garantiza que el sitio esté libre de errores o interrupciones. El sitio y sus servicios se ofrecen &quot;tal cual&quot; y &quot;según disponibilidad&quot;.
+            Incluir el proyecto en portafolios de la empresa, colaboradores y canales promocionales.
           </p>
           <p className="text-white">
-            JEG no será responsable por daños directos o indirectos derivados del uso o imposibilidad de uso del sitio o los servicios.
+            Esta autorización no incluye la divulgación de información confidencial o estratégica.
+          </p>
+          <p className="text-white">
+            JEG se compromete a usar el contenido de forma ética, respetuosa y conforme a la legislación vigente.
           </p>
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">XI. Contacto y Reclamaciones</h2>
+          <h2 className="text-white">X. NUEVO SERVICIO: LANDING PAGE DE $2,999 MXN</h2>
           <p className="text-white">
-            Para dudas o notificaciones sobre propiedad intelectual, uso indebido del sitio o servicios, puede contactar a:
+            Este servicio incluye:
+          </p>
+          <ul>
+            <li className="text-white">
+              🌐 Dominio personalizado gratis por 1 año
+            </li>
+            <li className="text-white">
+              ☁️ Hosting gratuito mediante Google Sites
+            </li>
+            <li className="text-white">
+              📱 Diseño responsivo
+            </li>
+            <li className="text-white">
+              🔍 Posicionamiento inicial en Google (SEO básico)
+            </li>
+            <li className="text-white">
+              🛠️ Diseño adaptado a la marca del cliente
+            </li>
+          </ul>
+          <h3 className="text-white mt-3">Proceso del servicio:</h3>
+          <ul>
+            <li className="text-white">
+              El cliente elige hasta 5 secciones de una lista predeterminada.
+            </li>
+            <li className="text-white">
+              Se crea el diseño adaptado a su marca personal o negocio.
+            </li>
+            <li className="text-white">
+              El cliente aprueba el diseño.
+            </li>
+            <li className="text-white">
+              JEG lo publica y configura el dominio y hosting.
+            </li>
+          </ul>
+          <p className="text-white">
+            Este servicio no incluye backend personalizado, mantenimiento posterior ni servicios adicionales no especificados.
+          </p>
+        </article>
+
+        <article className="d-flex flex-column w-100 p-0 m-0">
+          <h2 className="text-white">XI. LIMITACIÓN DE RESPONSABILIDAD</h2>
+          <p className="text-white">
+            JEG no garantiza que el sitio esté libre de errores o interrupciones.
+          </p>
+          <p className="text-white">
+            Los servicios y el sitio se ofrecen &quot;tal cual&quot; y &quot;según disponibilidad&quot;.
+          </p>
+          <p className="text-white">
+            JEG no se responsabiliza por daños derivados del uso del sitio o servicios contratados.
+          </p>
+        </article>
+
+        <article className="d-flex flex-column w-100 p-0 m-0">
+          <h2 className="text-white">XII. CONTACTO Y RECLAMACIONES</h2>
+          <p className="text-white">
+            Para dudas o notificaciones relacionadas con propiedad intelectual, uso indebido del sitio o los servicios ofrecidos:
             <br />
-            <strong>Email:</strong>{" "}
+            📧 <strong>Email:</strong>{" "}
             <Link href="mailto:jegdevstudioscontact@gmail.com" className="text-white text-decoration-underline">
               jegdevstudioscontact@gmail.com
             </Link>
@@ -168,9 +227,12 @@ export default function TermsAndConditions() {
         </article>
 
         <article className="d-flex flex-column w-100 p-0 m-0">
-          <h2 className="text-white">XII. Ley Aplicable y Jurisdicción</h2>
+          <h2 className="text-white">XIII. LEY APLICABLE Y JURISDICCIÓN</h2>
           <p className="text-white">
-            Este acuerdo se rige por las leyes aplicables en los Estados Unidos Mexicanos. En caso de controversia, las partes se someten a la jurisdicción de los tribunales de [tu ciudad o estado], renunciando a cualquier otra jurisdicción que pudiera corresponder.
+            Este acuerdo se rige por las leyes aplicables en los Estados Unidos Mexicanos.
+          </p>
+          <p className="text-white">
+            En caso de controversia, ambas partes se someten a la jurisdicción de los tribunales competentes en el Estado de la Ciudad de México, renunciando a cualquier otro fuero.
           </p>
         </article>
       </section>
