@@ -19,9 +19,10 @@ export default function DevSoftClient() {
   }, []);
 
   const products = [
-    { id: 'paquete_basico', name: 'Paquete Básico', price: 5799, currency: 'MXN' },
-    { id: 'paquete_plus', name: 'Paquete Plus', price: 17299, currency: 'MXN' },
-    { id: 'paquete_pro', name: 'Paquete Pro', price: 28799, currency: 'MXN' },
+    { id: 'solucion_basica', name: 'Solución Básica', price: 9499, currency: 'MXN' },
+    { id: 'solucion_estandar', name: 'Solución Estándar', price: 18999, currency: 'MXN' },
+    { id: 'solucion_avanzada', name: 'Solución Avanzada', price: 34499, currency: 'MXN' },
+    { id: 'solucion_profesional', name: 'Solución Profesional', price: 66899, currency: 'MXN' },
   ];
 
   useEffect(() => {
@@ -35,7 +36,7 @@ export default function DevSoftClient() {
       window.fbq('track', 'ViewContent', {
         content_type: 'product_group',
         content_ids: products.map(p => p.id),
-        content_name: 'Paquetes de Desarrollo Web',
+        content_name: 'Soluciones de Desarrollo de Software',
         contents: products.map(p => ({
           id: p.id,
           quantity: 1,
@@ -150,7 +151,7 @@ export default function DevSoftClient() {
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
         <p className="lead w-100 px-3 px-md-5">
-          En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya sea que estés comenzando con una landing page o necesites un sitio más robusto, tenemos la solución perfecta para ti.
+          En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya sea que estés comenzando con un sistema de inventarios o necesites un software más robusto, tenemos la solución perfecta para ti.
         </p>
         <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
           <CardProduct
@@ -171,7 +172,7 @@ export default function DevSoftClient() {
           />
           <CardProduct
             idProduct={"solucion_estandar"}
-            dataPrice={18999}
+            dataPrice={17299}
             title="Solución Estándar"
             price="17299"
             moneda="MXN"
