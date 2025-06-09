@@ -27,6 +27,7 @@ export const metadata = {
 };
 
 import ContactClient from "./ContactClient";
+import "./contactClient.css";
 
 export default function ContactPage() {
   return <ContactClient />;

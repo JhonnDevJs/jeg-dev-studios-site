@@ -20,9 +20,6 @@ const geistMono = Geist_Mono({
 const servicePageBackgrounds = {
   "/": "/fondos/backgraund.webp",
   "/servicios": "/fondos/Nuestros_Servicios.webp",
-  "/servicios/desarrollo-web": "/fondos/backgroundSections.webp",
-  "/servicios/desarrollo-software": "/fondos/backgroundSections.webp",
-  "/servicios/desarrollo-aplicaciones": "/fondos/backgroundSections.webp",
   "/sobre-nosotros": "/fondos/Sobre_Nosotros.webp",
   "/contacto": "/fondos/Comunicate_con_Nosotros.webp",
 };
