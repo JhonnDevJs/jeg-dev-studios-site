@@ -4,6 +4,10 @@ import ShoppingCart from "@/components/ShoppingCart";
 import CardProduct from "@/components/CardProduct";
 import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
+import imgAppProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
+import imgAppProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
+import imgAppProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
+import imgAppProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import "./DevAppClient.css";
 
 export default function DevAppClient() {
@@ -157,7 +161,7 @@ export default function DevAppClient() {
             title="App de Inicio"
             price="18999"
             moneda="MXN"
-            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
+            imageUrl={imgAppProduct1}
             items={[
               "App nativa sencilla para Android o iOS (1 plataforma).",
               "Diseño responsivo y minimalista.",
@@ -174,7 +178,7 @@ export default function DevAppClient() {
             title="App Dual Básica"
             price="37999"
             moneda="MXN"
-            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
+            imageUrl={imgAppProduct2}
             items={[
               "App para Android e iOS (React Native o Kotlin Multiplatform).",
               "Hasta 6 pantallas dinámicas (login, inicio, catálogo, detalles, contacto, perfil).",
@@ -191,7 +195,7 @@ export default function DevAppClient() {
             title="App Funcional Pro"
             price="75999"
             moneda="MXN"
-            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
+            imageUrl={imgAppProduct3}
             items={[
               "App híbrida o nativa para Android e iOS.",
               "Módulos personalizados (usuarios, productos, pedidos, etc.).",
@@ -209,7 +213,7 @@ export default function DevAppClient() {
             title="App a Medida Premium"
             price="134999"
             moneda="MXN"
-            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
+            imageUrl={imgAppProduct4}
             items={[
               "App personalizada desde cero (multiplataforma).",
               "Arquitectura avanzada y optimizada.",

@@ -4,6 +4,10 @@ import ShoppingCart from "@/components/ShoppingCart";
 import CardProduct from "@/components/CardProduct";
 import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
+import imgSoftProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
+import imgSoftProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
+import imgSoftProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
+import imgSoftProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import "./DevSoftClient.css";
 
 export default function DevSoftClient() {
@@ -160,7 +164,7 @@ export default function DevSoftClient() {
             title="Solución Básica"
             price="9499"
             moneda="MXN"
-            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
+            imageUrl={imgSoftProduct1}
             items={[
               "1 módulo funcional (ventas, citas, inventario, etc.).",
               "Interfaz gráfica simple y amigable. ",
@@ -177,7 +181,7 @@ export default function DevSoftClient() {
             title="Solución Estándar"
             price="17299"
             moneda="MXN"
-            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
+            imageUrl={imgSoftProduct2}
             items={[
               "Hasta 3 módulos integrados (ej. ventas, productos, clientes).",
               "Sistema multiusuario con login y control de acceso.",
@@ -194,7 +198,7 @@ export default function DevSoftClient() {
             title="Solución Avanzada"
             price="34499"
             moneda="MXN"
-            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
+            imageUrl={imgSoftProduct3}
             items={[
               "Hasta 6 módulos personalizados (ventas, compras, almacén, clientes, empleados, reportes).",
               "Diseño visual adaptado a tu identidad corporativa.",
@@ -212,7 +216,7 @@ export default function DevSoftClient() {
             title="Solución Profesional"
             price="66899"
             moneda="MXN"
-            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
+            imageUrl={imgSoftProduct4}
             items={[
               "Módulos ilimitados según flujo de trabajo personalizado.",
               "Desarrollo basado en análisis detallado de procesos.",
