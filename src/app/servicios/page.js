@@ -27,6 +27,7 @@ export const metadata = {
 };
 
 import ServicesClient from "./ServicesClient";
+import "./ServicesClient.css"
 
 export default function ServicesPage() {
   return <ServicesClient />;
