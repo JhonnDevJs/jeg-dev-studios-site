@@ -24,7 +24,7 @@ export default function DevSoftClient() {
 
   const products = [
     { id: 'solucion_basica', name: 'Solución Básica', price: 9499, currency: 'MXN' },
-    { id: 'solucion_estandar', name: 'Solución Estándar', price: 18999, currency: 'MXN' },
+    { id: 'solucion_estandar', name: 'Solución Estándar', price: 17299, currency: 'MXN' },
     { id: 'solucion_avanzada', name: 'Solución Avanzada', price: 34499, currency: 'MXN' },
     { id: 'solucion_profesional', name: 'Solución Profesional', price: 66899, currency: 'MXN' },
   ];
