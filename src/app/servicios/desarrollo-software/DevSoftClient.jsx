@@ -12,6 +12,9 @@ import "./DevSoftClient.css";
 
 export default function DevSoftClient() {
   const [cartItems, setCartItems] = useState([]);
+  const [orderNumber, setOrderNumber] = useState("");
+  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [isGeneratingOrder, setIsGeneratingOrder] = useState(false); // Estado para la carga
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -28,24 +31,28 @@ export default function DevSoftClient() {
       name: "Solución Básica",
       price: 9499,
       currency: "MXN",
+      imageSrc: imgSoftProduct1.src,
     },
     {
       id: "solucion_estandar",
       name: "Solución Estándar",
       price: 17299,
       currency: "MXN",
+      imageSrc: imgSoftProduct2.src,
     },
     {
       id: "solucion_avanzada",
       name: "Solución Avanzada",
       price: 34499,
       currency: "MXN",
+      imageSrc: imgSoftProduct3.src,
     },
     {
       id: "solucion_profesional",
       name: "Solución Profesional",
       price: 66899,
       currency: "MXN",
+      imageSrc: imgSoftProduct4.src,
     },
   ];
 
@@ -65,13 +72,17 @@ export default function DevSoftClient() {
           id: p.id,
           quantity: 1,
           item_price: p.price,
+          image_url: p.imageSrc, // Añadido image_url
         })),
         currency: "MXN",
       });
     }
   }, []);
 
-  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice }) => {
+  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
+    setIsFormVisible(true); // Mostrar el formulario inmediatamente
+    setIsGeneratingOrder(true); // Indicar que estamos generando la orden/cotización
+
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "Lead", {
         content_name: title,
@@ -79,9 +90,11 @@ export default function DevSoftClient() {
         content_type: "custom_quote",
         value: dataPrice,
         currency: moneda,
+        image_url: imageSrc, // Añadido image_url
       });
     }
 
+    let generatedOrderNumber = "";
     try {
       const response = await fetch(
         "https://jegdevstudios.onrender.com/generate-order-number"
@@ -89,36 +102,59 @@ export default function DevSoftClient() {
       const data = await response.json();
 
       if (response.ok) {
+        generatedOrderNumber = data.orderNumber;
         setOrderNumber(data.orderNumber);
       } else {
         alert("Hubo un error al generar el número de cotización. Por favor, inténtelo de nuevo.");
+        setIsGeneratingOrder(false);
         return;
       }
     } catch (error) {
       console.error("Error al solicitar el número de cotización:", error);
       alert("Hubo un error al solicitar el número de cotización. Por favor, inténtelo de nuevo.");
+      setIsGeneratingOrder(false);
       return;
     }
 
-    setCartItems([
-      {
-        idProduct,
-        title,
-        moneda,
-        dataPrice: parseFloat(dataPrice),
-      },
-    ]);
-    setIsFormVisible(true);
+    const quoteItem = {
+      idProduct,
+      title,
+      moneda,
+      dataPrice: parseFloat(dataPrice),
+      imageSrc, // Añadido imageSrc
+    };
+    setCartItems([quoteItem]); // Para cotizaciones, usualmente se reemplaza el carrito
+    setIsGeneratingOrder(false); // Finaliza la carga
+
+    // Disparar InitiateCheckout para cotizaciones también, si aplica
+    if (typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
+        window.fbq("track", "InitiateCheckout", {
+            contents: [{ id: quoteItem.idProduct, quantity: 1, item_price: quoteItem.dataPrice, image_url: quoteItem.imageSrc }],
+            content_ids: [quoteItem.idProduct],
+            currency: quoteItem.moneda,
+            num_items: 1,
+            value: quoteItem.dataPrice,
+            order_id: generatedOrderNumber,
+        });
+    }
   };
 
-  const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
+  const handleAddToCart = ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
+    // Asumiendo que en DevSoftClient todos los productos son cotizables
+    // y no hay un flujo de "añadir al carrito" directo.
+    // Si lo hubiera, se implementaría aquí.
+    console.warn("handleAddToCart llamado en DevSoftClient, pero todos los productos parecen ser cotizables. Considera usar handleQuoteRequest.");
+    // Opcionalmente, podrías llamar a handleQuoteRequest aquí si esa es la intención:
+    // handleQuoteRequest({ idProduct, title, moneda, dataPrice });
+
+    // Si realmente necesitas añadir al carrito sin el flujo de cotización para algunos productos:
     const productData = {
       idProduct,
       title,
       moneda,
       dataPrice: parseFloat(dataPrice),
+      imageSrc, // Añadido imageSrc
     };
-
     setCartItems((prevItems) => [...prevItems, productData]);
 
     if (typeof window !== "undefined" && window.fbq) {
@@ -133,6 +169,7 @@ export default function DevSoftClient() {
             id: productData.idProduct,
             quantity: 1,
             item_price: productData.dataPrice,
+            image_url: productData.imageSrc, // Añadido image_url
           },
         ],
       });
@@ -143,38 +180,76 @@ export default function DevSoftClient() {
     setCartItems((prevItems) => prevItems.filter((_, i) => i !== index));
   };
 
-  const [orderNumber, setOrderNumber] = useState(() => {
-    return "";
-  });
-  const [isFormVisible, setIsFormVisible] = useState(false);
+  const openOrderForm = async () => {
+    if (isGeneratingOrder && isFormVisible) {
+      console.log("La apertura del formulario o generación de orden ya está en progreso.");
+      return;
+    }
 
-  const openOrderForm = () => {
-    setIsFormVisible(true);
+    setIsFormVisible(true); // Mostrar el contenedor del formulario inmediatamente
+
+    let tempOrderNumber = orderNumber;
+
+    if (!tempOrderNumber && cartItems.length > 0) {
+      setIsGeneratingOrder(true);
+      try {
+        const response = await fetch(
+          "https://jegdevstudios.onrender.com/generate-order-number"
+        );
+        const data = await response.json();
+
+        if (response.ok) {
+          tempOrderNumber = data.orderNumber;
+          setOrderNumber(data.orderNumber);
+        } else {
+          alert("Hubo un error al generar el número de orden para el checkout. Por favor, inténtelo de nuevo.");
+          setIsGeneratingOrder(false);
+          return;
+        }
+      } catch (error) {
+        console.error("Error al solicitar el número de orden para el checkout:", error);
+        alert("Hubo un error al solicitar el número de orden para el checkout. Por favor, inténtelo de nuevo.");
+        setIsGeneratingOrder(false);
+        return;
+      }
+      setIsGeneratingOrder(false);
+    }
 
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
-      const totalValue = cartItems.reduce(
-        (sum, item) => sum + item.dataPrice,
-        0
-      );
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
-      const content_ids = cartItems.map((item) => item.idProduct);
-      const contents = cartItems.map((item) => ({
-        id: item.idProduct,
-        quantity: 1,
-        item_price: item.dataPrice,
-      }));
+      if (tempOrderNumber) {
+        const totalValue = cartItems.reduce(
+          (sum, item) => sum + item.dataPrice,
+          0
+        );
+        const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
+        const content_ids = cartItems.map((item) => item.idProduct);
+        const contents = cartItems.map((item) => ({
+          id: item.idProduct,
+          quantity: 1,
+          item_price: item.dataPrice,
+          image_url: item.imageSrc, // Añadido image_url
+        }));
 
-      window.fbq("track", "InitiateCheckout", {
-        contents: contents,
-        content_ids: content_ids,
-        currency: currency,
-        num_items: cartItems.length,
-        value: totalValue,
-        order_id: orderNumber,
-      });
+        window.fbq("track", "InitiateCheckout", {
+          contents: contents,
+          content_ids: content_ids,
+          currency: currency,
+          num_items: cartItems.length,
+          value: totalValue,
+          order_id: tempOrderNumber,
+        });
+      } else {
+        console.warn("InitiateCheckout omitido: No se pudo obtener un número de orden válido para el checkout.");
+      }
     }
   };
-  const closeOrderForm = () => setIsFormVisible(false);
+
+  const closeOrderForm = () => {
+    setIsFormVisible(false);
+    if (isGeneratingOrder) {
+        setIsGeneratingOrder(false);
+    }
+  };
 
   const handleSubmitOrder = (submittedOrderData) => {
     if (
@@ -193,12 +268,15 @@ export default function DevSoftClient() {
         id: item.idProduct,
         quantity: 1,
         item_price: item.dataPrice,
+        image_url: item.imageSrc, // Añadido image_url
       }));
+
+      const isQuotePurchase = cartItems.length === 1 && products.some(p => p.id === cartItems[0].idProduct);
 
       window.fbq("track", "Purchase", {
         contents: contents,
         content_ids: content_ids,
-        content_type: "product",
+        content_type: isQuotePurchase ? "custom_quote" : "product",
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
@@ -218,13 +296,14 @@ export default function DevSoftClient() {
           onSubmit={handleSubmitOrder}
           orderNumber={orderNumber}
           items={cartItems}
+          isLoading={isGeneratingOrder} // Pasar el estado de carga
         />
       )}
       <ShoppingCart
         items={cartItems}
         onRemove={handleRemoveProduct}
         onOpenOrderForm={openOrderForm}
-        setOrderNumber={setOrderNumber}
+        // setOrderNumber={setOrderNumber} // Ya no se pasa directamente
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
         <h2 className="display-1 text-center text-white">
@@ -254,7 +333,7 @@ export default function DevSoftClient() {
               "Manual básico de usuario.",
               "Instalación en un equipo.",
             ]}
-            onQuote={handleQuoteRequest}
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgSoftProduct1.src })}
           />
           <CardPacksProduct
             idProduct={"solucion_estandar"}
@@ -271,7 +350,7 @@ export default function DevSoftClient() {
               "Exportación de reportes a PDF/Excel.",
               "Instalación en hasta 3 dispositivos.",
             ]}
-            onQuote={handleQuoteRequest}
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgSoftProduct2.src })}
           />
           <CardPacksProduct
             idProduct={"solucion_avanzada"}
@@ -289,7 +368,7 @@ export default function DevSoftClient() {
               "Instalación en red local o servidor.",
               "Capacitación inicial para tu equipo.",
             ]}
-            onQuote={handleQuoteRequest}
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgSoftProduct3.src })}
           />
           <CardPacksProduct
             idProduct={"solucion_profesional"}
@@ -308,7 +387,7 @@ export default function DevSoftClient() {
               "Capacitación y documentación completa.",
               "Soporte técnico durante el primer mes incluido.",
             ]}
-            onQuote={handleQuoteRequest}
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgSoftProduct4.src })}
           />
         </ul>
       </section>

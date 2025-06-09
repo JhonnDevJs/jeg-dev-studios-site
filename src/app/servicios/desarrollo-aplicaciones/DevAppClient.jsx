@@ -12,6 +12,9 @@ import "./DevAppClient.css";
 
 export default function DevAppClient() {
   const [cartItems, setCartItems] = useState([]);
+  const [orderNumber, setOrderNumber] = useState("");
+  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [isGeneratingOrder, setIsGeneratingOrder] = useState(false); // Estado para la carga
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -27,24 +30,28 @@ export default function DevAppClient() {
       name: "App de Inicio",
       price: 18999,
       currency: "MXN",
+      imageSrc: imgAppProduct1.src,
     },
     {
       id: "app_dual_basica",
       name: "App Dual Básica",
       price: 37999,
       currency: "MXN",
+      imageSrc: imgAppProduct2.src,
     },
     {
       id: "app_funcional_pro",
       name: "App Funcional Pro",
       price: 75999,
       currency: "MXN",
+      imageSrc: imgAppProduct3.src,
     },
     {
       id: "app_a_medida_premium",
       name: "App a Medida Premium",
       price: 134999,
       currency: "MXN",
+      imageSrc: imgAppProduct4.src,
     },
   ];
 
@@ -64,13 +71,16 @@ export default function DevAppClient() {
           id: p.id,
           quantity: 1,
           item_price: p.price,
+          image_url: p.imageSrc, // Añadido image_url
         })),
         currency: "MXN",
       });
     }
   }, []);
-  
-  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice }) => {
+
+  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
+    setIsFormVisible(true); // Mostrar el formulario inmediatamente
+    setIsGeneratingOrder(true); // Indicar que estamos generando la orden/cotización
 
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "Lead", {
@@ -79,9 +89,11 @@ export default function DevAppClient() {
         content_type: "custom_quote",
         value: dataPrice,
         currency: moneda,
+        image_url: imageSrc, // Añadido image_url
       });
     }
 
+    let generatedOrderNumber = "";
     try {
       const response = await fetch(
         "https://jegdevstudios.onrender.com/generate-order-number"
@@ -89,35 +101,64 @@ export default function DevAppClient() {
       const data = await response.json();
 
       if (response.ok) {
+        generatedOrderNumber = data.orderNumber;
         setOrderNumber(data.orderNumber);
       } else {
         alert("Hubo un error al generar el número de cotización. Por favor, inténtelo de nuevo.");
+        setIsGeneratingOrder(false);
+        // Considerar si cerrar el formulario o permitir que el usuario lo cierre manualmente
+        // setIsFormVisible(false); // Podrías descomentar esto si prefieres cerrar el form en error
         return;
       }
     } catch (error) {
       console.error("Error al solicitar el número de cotización:", error);
       alert("Hubo un error al solicitar el número de cotización. Por favor, inténtelo de nuevo.");
+      setIsGeneratingOrder(false);
+      // setIsFormVisible(false); // Podrías descomentar esto si prefieres cerrar el form en error
       return;
     }
 
-    setCartItems([
-      {
-        idProduct,
-        title,
-        moneda,
-        dataPrice: parseFloat(dataPrice),
-      },
-    ]);
-    setIsFormVisible(true);
+    const quoteItem = {
+      idProduct,
+      title,
+      moneda,
+      dataPrice: parseFloat(dataPrice),
+      imageSrc, // Añadido imageSrc
+    };
+    setCartItems([quoteItem]); // Para cotizaciones, usualmente se reemplaza el carrito
+    setIsGeneratingOrder(false); // Finaliza la carga
+
+    // Disparar InitiateCheckout para cotizaciones también, si aplica
+    if (typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
+        window.fbq("track", "InitiateCheckout", {
+            contents: [{ id: quoteItem.idProduct, quantity: 1, item_price: quoteItem.dataPrice, image_url: quoteItem.imageSrc }],
+            content_ids: [quoteItem.idProduct],
+            currency: quoteItem.moneda,
+            num_items: 1,
+            value: quoteItem.dataPrice,
+            order_id: generatedOrderNumber,
+        });
+    }
   };
 
 
-  const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
+  const handleAddToCart = ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
+    // En este componente, parece que todos los productos son "cotizables"
+    // Si hubiera productos que se añaden directamente sin cotización, aquí iría esa lógica.
+    // Por ahora, asumimos que handleAddToCart no se usa o redirige a handleQuoteRequest si es necesario.
+    // Si tienes productos que se añaden directamente al carrito sin ser cotización,
+    // deberías implementar esa lógica aquí de forma similar a DevWebClient.jsx
+    console.warn("handleAddToCart llamado en DevAppClient, pero todos los productos parecen ser cotizables. Considera usar handleQuoteRequest.");
+    // Opcionalmente, podrías llamar a handleQuoteRequest aquí si esa es la intención:
+    // handleQuoteRequest({ idProduct, title, moneda, dataPrice });
+
+    // Si realmente necesitas añadir al carrito sin el flujo de cotización para algunos productos:
     const productData = {
       idProduct,
       title,
       moneda,
       dataPrice: parseFloat(dataPrice),
+      imageSrc, // Añadido imageSrc
     };
     setCartItems((prevItems) => [...prevItems, productData]);
 
@@ -133,6 +174,7 @@ export default function DevAppClient() {
             id: productData.idProduct,
             quantity: 1,
             item_price: productData.dataPrice,
+            image_url: productData.imageSrc, // Añadido image_url
           },
         ],
       });
@@ -143,44 +185,88 @@ export default function DevAppClient() {
     setCartItems((prevItems) => prevItems.filter((_, i) => i !== index));
   };
 
-  const [orderNumber, setOrderNumber] = useState(() => {
-    return "";
-  });
-  const [isFormVisible, setIsFormVisible] = useState(false);
+  const openOrderForm = async () => {
+    // Prevenir múltiples ejecuciones si ya se está procesando
+    if (isGeneratingOrder && isFormVisible) {
+      console.log("La apertura del formulario o generación de orden ya está en progreso.");
+      return;
+    }
 
-  const openOrderForm = () => {
-    setIsFormVisible(true);
+    setIsFormVisible(true); // Mostrar el contenedor del formulario inmediatamente
+
+    let tempOrderNumber = orderNumber; // Usar una variable temporal para la lógica de esta ejecución
+
+    // Si no hay orderNumber (porque no vino de una cotización directa) Y hay items en el carrito
+    // (esto sería si handleAddToCart se usara para añadir items antes de abrir el form)
+    if (!tempOrderNumber && cartItems.length > 0) {
+      setIsGeneratingOrder(true); // Indicar que estamos generando la orden
+      try {
+        const response = await fetch(
+          "https://jegdevstudios.onrender.com/generate-order-number"
+        );
+        const data = await response.json();
+
+        if (response.ok) {
+          tempOrderNumber = data.orderNumber;
+          setOrderNumber(data.orderNumber); // Actualizar el estado para el evento Purchase y futuros checkouts
+        } else {
+          alert("Hubo un error al generar el número de orden para el checkout. Por favor, inténtelo de nuevo.");
+          setIsGeneratingOrder(false);
+          return; // Detener procesamiento adicional para InitiateCheckout si la generación falló
+        }
+      } catch (error) {
+        console.error("Error al solicitar el número de orden para el checkout:", error);
+        alert("Hubo un error al solicitar el número de orden para el checkout. Por favor, inténtelo de nuevo.");
+        setIsGeneratingOrder(false);
+        return; // Detener procesamiento adicional
+      }
+      setIsGeneratingOrder(false); // Intento de generación finalizado
+    }
+
+    // Disparar InitiateCheckout solo si tenemos artículos en el carrito y un número de orden válido
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
-      const totalValue = cartItems.reduce(
-        (sum, item) => sum + item.dataPrice,
-        0
-      );
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
-      const content_ids = cartItems.map((item) => item.idProduct);
-      const contents = cartItems.map((item) => ({
-        id: item.idProduct,
-        quantity: 1,
-        item_price: item.dataPrice,
-      }));
+      if (tempOrderNumber) { // tempOrderNumber tendrá el valor correcto aquí
+        const totalValue = cartItems.reduce(
+          (sum, item) => sum + item.dataPrice,
+          0
+        );
+        const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
+        const content_ids = cartItems.map((item) => item.idProduct);
+        const contents = cartItems.map((item) => ({
+          id: item.idProduct,
+          quantity: 1,
+          item_price: item.dataPrice,
+          image_url: item.imageSrc, // Añadido image_url
+        }));
 
-      window.fbq("track", "InitiateCheckout", {
-        contents: contents,
-        content_ids: content_ids,
-        currency: currency,
-        num_items: cartItems.length,
-        value: totalValue,
-        order_id: orderNumber,
-      });
+        window.fbq("track", "InitiateCheckout", {
+          contents: contents,
+          content_ids: content_ids,
+          currency: currency,
+          num_items: cartItems.length,
+          value: totalValue,
+          order_id: tempOrderNumber,
+        });
+      } else {
+        console.warn("InitiateCheckout omitido: No se pudo obtener un número de orden válido para el checkout.");
+      }
     }
   };
-  const closeOrderForm = () => setIsFormVisible(false);
+
+  const closeOrderForm = () => {
+    setIsFormVisible(false);
+    // Si el formulario se cierra mientras se generaba una orden, resetear el estado de carga.
+    if (isGeneratingOrder) {
+        setIsGeneratingOrder(false);
+    }
+  };
 
   const handleSubmitOrder = (submittedOrderData) => {
     if (
       typeof window !== "undefined" &&
       window.fbq &&
       cartItems.length > 0 &&
-      orderNumber
+      orderNumber // Asegurarse que orderNumber (del estado) esté disponible
     ) {
       const totalValue = cartItems.reduce(
         (sum, item) => sum + item.dataPrice,
@@ -192,12 +278,17 @@ export default function DevAppClient() {
         id: item.idProduct,
         quantity: 1,
         item_price: item.dataPrice,
+        image_url: item.imageSrc, // Añadido image_url
       }));
+
+      // Determinar content_type para Purchase
+      // Si el carrito tiene 1 item y es el resultado de una cotización, marcar como 'custom_quote'
+      const isQuotePurchase = cartItems.length === 1 && products.some(p => p.id === cartItems[0].idProduct);
 
       window.fbq("track", "Purchase", {
         contents: contents,
         content_ids: content_ids,
-        content_type: "product",
+        content_type: isQuotePurchase ? "custom_quote" : "product",
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
@@ -206,8 +297,8 @@ export default function DevAppClient() {
     }
 
     setCartItems([]);
-    setOrderNumber("");
-    closeOrderForm();
+    setOrderNumber(""); // Limpiar el número de orden después de la compra
+    closeOrderForm(); // Cierra el formulario
   };
   return (
     <>
@@ -217,13 +308,14 @@ export default function DevAppClient() {
           onSubmit={handleSubmitOrder}
           orderNumber={orderNumber}
           items={cartItems}
+          isLoading={isGeneratingOrder} // Pasar el estado de carga
         />
       )}
       <ShoppingCart
         items={cartItems}
         onRemove={handleRemoveProduct}
         onOpenOrderForm={openOrderForm}
-        setOrderNumber={setOrderNumber}
+        // setOrderNumber={setOrderNumber} // Ya no se pasa directamente
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
         <h2 className="display-1 text-center text-white">
@@ -253,7 +345,7 @@ export default function DevAppClient() {
               "Publicación en tienda (Google Play o App Store incluida).",
               "Manual básico de uso y entrega de APK. ",
             ]}
-            onQuote={handleQuoteRequest} 
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgAppProduct1.src })}
           />
           <CardPacksProduct
             idProduct={"app_dual_basica"}
@@ -270,7 +362,7 @@ export default function DevAppClient() {
               "Publicación en ambas tiendas.",
               "Diseño adaptado y personalizado con tu identidad visual.",
             ]}
-            onQuote={handleQuoteRequest} 
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgAppProduct2.src })}
           />
           <CardPacksProduct
             idProduct={"app_funcional_pro"}
@@ -288,7 +380,7 @@ export default function DevAppClient() {
               "Base de datos relacional conectada al backend.",
               "Panel de administración web opcional.",
             ]}
-            onQuote={handleQuoteRequest}
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgAppProduct3.src })}
           />
           <CardPacksProduct
             idProduct={"app_a_medida_premium"}
@@ -306,7 +398,7 @@ export default function DevAppClient() {
               "Mantenimiento técnico por 3 meses incluido.",
               "Asesoría y soporte para estrategias de publicación y escalabilidad.",
             ]}
-            onQuote={handleQuoteRequest} 
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgAppProduct4.src })}
           />
         </ul>
       </section>

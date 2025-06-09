@@ -12,6 +12,9 @@ import "./DevWebClient.css";
 
 export default function DevWebClient() {
   const [cartItems, setCartItems] = useState([]);
+  const [orderNumber, setOrderNumber] = useState("");
+  const [isFormVisible, setIsFormVisible] = useState(false);
+  const [isGeneratingOrder, setIsGeneratingOrder] = useState(false); // Estado para la carga
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -28,9 +31,25 @@ export default function DevWebClient() {
       name: "Paquete Básico",
       price: 5799,
       currency: "MXN",
+      imageSrc: imgWebProduct1.src,
     },
-    { id: "paquete_plus", name: "Paquete Plus", price: 17299, currency: "MXN" },
-    { id: "paquete_pro", name: "Paquete Pro", price: 28799, currency: "MXN" },
+    {
+      id: "paquete_plus",
+      name: "Paquete Plus",
+      price: 17299,
+      currency: "MXN",
+      imageSrc: imgWebProduct2.src,
+    },
+    {
+      id: "paquete_pro",
+      name: "Paquete Pro",
+      price: 28799,
+      currency: "MXN",
+      imageSrc: imgWebProduct3.src,
+    },
+    // Nota: "landing-page-profesional" no está en este array `products`.
+    // Su imagen se rastreará en AddToCart, pero no en el ViewContent inicial del grupo de productos.
+    // Si deseas incluirlo en el ViewContent del grupo, deberías añadirlo aquí también.
   ];
 
   useEffect(() => {
@@ -49,6 +68,7 @@ export default function DevWebClient() {
           id: p.id,
           quantity: 1,
           item_price: p.price,
+          image_url: p.imageSrc, // Añadido image_url
         })),
         currency: "MXN",
       });
@@ -56,7 +76,10 @@ export default function DevWebClient() {
   }, []);
 
   // Nuevo handler para cotizaciones personalizadas
-  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice }) => {
+  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
+    setIsFormVisible(true); // Mostrar el formulario inmediatamente
+    setIsGeneratingOrder(true); // Indicar que estamos generando la orden/cotización
+
     // Dispara evento de Pixel
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "Lead", {
@@ -65,9 +88,11 @@ export default function DevWebClient() {
         content_type: "custom_quote",
         value: dataPrice,
         currency: moneda,
+        image_url: imageSrc, // Añadido image_url
       });
     }
 
+    let generatedOrderNumber = "";
     // Generar número de orden/cotización
     try {
       const response = await fetch(
@@ -76,14 +101,20 @@ export default function DevWebClient() {
       const data = await response.json();
 
       if (response.ok) {
+        generatedOrderNumber = data.orderNumber;
         setOrderNumber(data.orderNumber);
       } else {
         alert("Hubo un error al generar el número de cotización. Por favor, inténtelo de nuevo.");
+        setIsGeneratingOrder(false);
+        // Considerar si cerrar el formulario o permitir que el usuario lo cierre manualmente
+        // setIsFormVisible(false);
         return;
       }
     } catch (error) {
       console.error("Error al solicitar el número de cotización:", error);
       alert("Hubo un error al solicitar el número de cotización. Por favor, inténtelo de nuevo.");
+      setIsGeneratingOrder(false);
+      // setIsFormVisible(false);
       return;
     }
 
@@ -93,17 +124,31 @@ export default function DevWebClient() {
         title,
         moneda,
         dataPrice: parseFloat(dataPrice),
+        imageSrc, // Añadido imageSrc
       },
     ]);
-    setIsFormVisible(true);
-  };
+    setIsGeneratingOrder(false); // Finaliza la carga
 
-  const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
+    // Disparar InitiateCheckout para cotizaciones también, si aplica
+    if (typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
+        const item = { idProduct, title, moneda, dataPrice: parseFloat(dataPrice), imageSrc };
+        window.fbq("track", "InitiateCheckout", {
+            contents: [{ id: item.idProduct, quantity: 1, item_price: item.dataPrice, image_url: item.imageSrc }],
+            content_ids: [item.idProduct],
+            currency: item.moneda,
+            num_items: 1,
+            value: item.dataPrice,
+            order_id: generatedOrderNumber,
+        });
+    }
+  };
+  const handleAddToCart = ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
     const productData = {
       idProduct,
       title,
       moneda,
       dataPrice: parseFloat(dataPrice),
+      imageSrc, // Añadido imageSrc
     };
 
     setCartItems((prevItems) => [...prevItems, productData]);
@@ -120,6 +165,7 @@ export default function DevWebClient() {
             id: productData.idProduct,
             quantity: 1,
             item_price: productData.dataPrice,
+            image_url: productData.imageSrc, // Añadido image_url
           },
         ],
       });
@@ -130,44 +176,84 @@ export default function DevWebClient() {
     setCartItems((prevItems) => prevItems.filter((_, i) => i !== index));
   };
 
-  const [orderNumber, setOrderNumber] = useState(() => {
-    return "";
-  });
-  const [isFormVisible, setIsFormVisible] = useState(false);
+  const openOrderForm = async () => {
+    if (isGeneratingOrder && isFormVisible) {
+      console.log("La apertura del formulario o generación de orden ya está en progreso.");
+      return;
+    }
 
-  const openOrderForm = () => {
-    setIsFormVisible(true);
+    setIsFormVisible(true); // Mostrar el contenedor del formulario inmediatamente
+
+    let tempOrderNumber = orderNumber;
+
+    if (!tempOrderNumber && cartItems.length > 0) {
+      setIsGeneratingOrder(true);
+      try {
+        const response = await fetch(
+          "https://jegdevstudios.onrender.com/generate-order-number"
+        );
+        const data = await response.json();
+
+        if (response.ok) {
+          tempOrderNumber = data.orderNumber;
+          setOrderNumber(data.orderNumber);
+        } else {
+          alert("Hubo un error al generar el número de orden para el checkout. Por favor, inténtelo de nuevo.");
+          setIsGeneratingOrder(false);
+          return;
+        }
+      } catch (error) {
+        console.error("Error al solicitar el número de orden para el checkout:", error);
+        alert("Hubo un error al solicitar el número de orden para el checkout. Por favor, inténtelo de nuevo.");
+        setIsGeneratingOrder(false);
+        return;
+      }
+      setIsGeneratingOrder(false);
+    }
+
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
-      const totalValue = cartItems.reduce(
-        (sum, item) => sum + item.dataPrice,
-        0
-      );
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
-      const content_ids = cartItems.map((item) => item.idProduct); // Usar item.idProduct
-      const contents = cartItems.map((item) => ({
-        id: item.idProduct,
-        quantity: 1,
-        item_price: item.dataPrice,
-      }));
+      if (tempOrderNumber) {
+        const totalValue = cartItems.reduce(
+          (sum, item) => sum + item.dataPrice,
+          0
+        );
+        const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
+        const content_ids = cartItems.map((item) => item.idProduct);
+        const contents = cartItems.map((item) => ({
+          id: item.idProduct,
+          quantity: 1,
+          item_price: item.dataPrice,
+          image_url: item.imageSrc, // Añadido image_url
+        }));
 
-      window.fbq("track", "InitiateCheckout", {
-        contents: contents,
-        content_ids: content_ids,
-        currency: currency,
-        num_items: cartItems.length,
-        value: totalValue,
-        order_id: orderNumber,
-      });
+        window.fbq("track", "InitiateCheckout", {
+          contents: contents,
+          content_ids: content_ids,
+          currency: currency,
+          num_items: cartItems.length,
+          value: totalValue,
+          order_id: tempOrderNumber,
+        });
+      } else {
+        console.warn("InitiateCheckout omitido: No se pudo obtener un número de orden válido para el checkout.");
+      }
     }
   };
-  const closeOrderForm = () => setIsFormVisible(false);
+
+  const closeOrderForm = () => {
+    setIsFormVisible(false);
+    // Si el formulario se cierra mientras se generaba una orden, resetear el estado de carga.
+    if (isGeneratingOrder) {
+        setIsGeneratingOrder(false);
+    }
+  };
 
   const handleSubmitOrder = (submittedOrderData) => {
     if (
       typeof window !== "undefined" &&
       window.fbq &&
       cartItems.length > 0 &&
-      orderNumber
+      orderNumber // Asegurarse que orderNumber (del estado) esté disponible
     ) {
       const totalValue = cartItems.reduce(
         (sum, item) => sum + item.dataPrice,
@@ -179,12 +265,13 @@ export default function DevWebClient() {
         id: item.idProduct,
         quantity: 1,
         item_price: item.dataPrice,
+        image_url: item.imageSrc, // Añadido image_url
       }));
 
       window.fbq("track", "Purchase", {
         contents: contents,
         content_ids: content_ids,
-        content_type: "product",
+        content_type: "product", // o "custom_quote" si es relevante diferenciar
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
@@ -193,9 +280,10 @@ export default function DevWebClient() {
     }
 
     setCartItems([]);
-    setOrderNumber("");
-    closeOrderForm();
+    setOrderNumber(""); // Limpiar el número de orden después de la compra
+    closeOrderForm(); // Cierra el formulario
   };
+
   return (
     <>
       {isFormVisible && (
@@ -204,13 +292,14 @@ export default function DevWebClient() {
           onSubmit={handleSubmitOrder}
           orderNumber={orderNumber}
           items={cartItems}
+          isLoading={isGeneratingOrder} // Pasar el estado de carga
         />
       )}
       <ShoppingCart
         items={cartItems}
         onRemove={handleRemoveProduct}
         onOpenOrderForm={openOrderForm}
-        setOrderNumber={setOrderNumber}
+        // setOrderNumber={setOrderNumber} // setOrderNumber ya no se pasa directamente aquí
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
         <h2 className="display-1 text-center text-white">
@@ -242,8 +331,8 @@ export default function DevWebClient() {
               "Diseño adaptado a la marca del cliente",
               "Escoge 5 secciones para tu página",
             ]}
-            onAdd={handleAddToCart}
-          /> {/* CardProduct sigue usando onAdd para añadir al carrito */}
+            onAdd={(details) => handleAddToCart({ ...details, imageSrc: imgWebProduct1.src })}
+          />
         </ul>
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
@@ -272,7 +361,7 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js",
               "Tiempo de entrega: 7 a 10 días hábiles",
             ]}
-            onQuote={handleQuoteRequest}
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgWebProduct1.src })}
           />
           <CardPacksProduct
             idProduct={"paquete_plus"}
@@ -294,7 +383,7 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel)",
               "Tiempo de entrega: 10 a 15 días hábiles.",
             ]}
-            onQuote={handleQuoteRequest}
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgWebProduct2.src })}
           />
           <CardPacksProduct
             idProduct={"paquete_pro"}
@@ -317,7 +406,7 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel) ó Node js",
               "Tiempo de entrega: 15 a 30 días hábiles.",
             ]}
-            onQuote={handleQuoteRequest}
+            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgWebProduct3.src })}
           />
         </ul>
       </section>

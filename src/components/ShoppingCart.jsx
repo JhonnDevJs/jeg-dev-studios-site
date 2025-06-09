@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Image from "next/image";
 import imgIconCart from "@/assets/icons/carrito.png";
 
-function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
+function ShoppingCart({ items, onRemove, onOpenOrderForm }) {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -24,24 +24,6 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
 
   const closeCart = () => {
     setIsCartVisible(false);
-  };
-
-  const createNumberOrder = async () => {
-    try {
-      const response = await fetch(
-        "https://jegdevstudios.onrender.com/generate-order-number"
-      );
-      const data = await response.json();
-
-      if (response.ok) {
-        setOrderNumber(data.orderNumber);
-      } else {
-        alert("Hubo un error al generar el número de orden");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Hubo un error al solicitar el número de orden.");
-    }
   };
 
   return (
@@ -125,8 +107,7 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
             className="btn btn-dark"
             onClick={() => {
               closeCart(); // Cerrar el carrito
-              createNumberOrder(); // Crear número de orden
-              onOpenOrderForm(); // Abrir el formulario
+              onOpenOrderForm(); // Abrir el formulario (el padre generará el número de orden)
             }}
           >
             Realizar pedido
@@ -148,7 +129,6 @@ ShoppingCart.propTypes = {
   ).isRequired,
   onRemove: PropTypes.func.isRequired,
   onOpenOrderForm: PropTypes.func.isRequired,
-  setOrderNumber: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

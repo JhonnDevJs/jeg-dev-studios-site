@@ -7,7 +7,7 @@ export const metadata = {
     canonical: "https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones",
   },
   openGraph: {
-    title: "Servicios de Desarrollo Web | JEG Dev Studios",
+    title: "Servicios de Desarrollo de Aplicaciones Móviles | JEG Dev Studios",
     description: "Descubre nuestros servicios de desarrollo web",
     url: "https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones",
     siteName: "JEG Dev Studios",
