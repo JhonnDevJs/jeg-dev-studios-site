@@ -1,5 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
-import { headers } from 'next/headers';
+import { headers } from "next/headers";
 import "./globals.css";
 import Script from "next/script";
 import NavBar from "@/components/NavBar.jsx";
@@ -18,11 +18,11 @@ const geistMono = Geist_Mono({
 });
 
 const servicePageBackgrounds = {
-  '/': '/fondos/backgraund.webp',
-  '/servicios/desarrollo-web': '/fondos/backgroundSections.webp',
-  '/servicios/desarrollo-software': '/fondos/backgroundSections.webp',
-  '/servicios/desarrollo-aplicaciones': '/fondos/backgroundSections.webp',
-  '/contacto': '/fondos/backgroundSections.webp'
+  "/": "/fondos/backgraund.webp",
+  "/servicios/desarrollo-web": "/fondos/backgroundSections.webp",
+  "/servicios/desarrollo-software": "/fondos/backgroundSections.webp",
+  "/servicios/desarrollo-aplicaciones": "/fondos/backgroundSections.webp",
+  "/contacto": "/fondos/backgroundSections.webp",
 };
 
 export const metadata = {
@@ -118,8 +118,10 @@ export const viewport = {
 
 export const themeColor = "#000000";
 
-export default function RootLayout({ children }) {
-  const pathname = headers().get('next-url') || '';
+export default async function RootLayout({ children }) {
+  const headersList = await headers();
+  const pathname = headersList.get("next-url") || "";
+  const facebookPixelId = "466277362702541";
 
   let imageToPreload = null;
 
@@ -140,13 +142,13 @@ export default function RootLayout({ children }) {
             type="image/webp"
           />
         )}
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
-      >
-        {/* Facebook Pixel */}
         <Script
-          id="facebook-pixel"
+          id="fb-pixel-script"
+          strategy="afterInteractive"
+          src="https://connect.facebook.net/en_US/fbevents.js"
+        />
+        <Script
+          id="fb-pixel-init"
           strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: `
@@ -158,16 +160,23 @@ export default function RootLayout({ children }) {
               t.src=v;s=b.getElementsByTagName(e)[0];
               s.parentNode.insertBefore(t,s)}(window, document,'script',
               'https://connect.facebook.net/en_US/fbevents.js');
-              fbq('init', '466277362702541');
+              fbq('init', '${facebookPixelId}');
               fbq('track', 'PageView');
             `,
           }}
         />
-        <noscript
-          dangerouslySetInnerHTML={{
-            __html: `<img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=466277362702541&ev=PageView&noscript=1" />`,
-          }}
-        />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${facebookPixelId}&ev=PageView&noscript=1`}
+          />
+        </noscript>
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
+      >
         {/* Bootstrap JS */}
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
