@@ -1,4 +1,10 @@
 /** @type {import('next').NextConfig} */
-const nextConfig = {};
+const nextConfig = {
+  swcMinify: true,
+  experimental: {
+    legacyBrowsers: false,
+    browsersListForSwc: true,
+  },
+};
 
-export default nextConfig;
+module.exports = nextConfig;
