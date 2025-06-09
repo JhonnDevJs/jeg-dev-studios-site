@@ -160,6 +160,7 @@ export default function DevSoftClient() {
             title="Solución Básica"
             price="9499"
             moneda="MXN"
+            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
             items={[
               "1 módulo funcional (ventas, citas, inventario, etc.).",
               "Interfaz gráfica simple y amigable. ",
@@ -176,6 +177,7 @@ export default function DevSoftClient() {
             title="Solución Estándar"
             price="17299"
             moneda="MXN"
+            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
             items={[
               "Hasta 3 módulos integrados (ej. ventas, productos, clientes).",
               "Sistema multiusuario con login y control de acceso.",
@@ -192,6 +194,7 @@ export default function DevSoftClient() {
             title="Solución Avanzada"
             price="34499"
             moneda="MXN"
+            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
             items={[
               "Hasta 6 módulos personalizados (ventas, compras, almacén, clientes, empleados, reportes).",
               "Diseño visual adaptado a tu identidad corporativa.",
@@ -209,6 +212,7 @@ export default function DevSoftClient() {
             title="Solución Profesional"
             price="66899"
             moneda="MXN"
+            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
             items={[
               "Módulos ilimitados según flujo de trabajo personalizado.",
               "Desarrollo basado en análisis detallado de procesos.",

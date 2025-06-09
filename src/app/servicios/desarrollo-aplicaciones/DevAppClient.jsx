@@ -7,22 +7,16 @@ import CTAProducts from "@/components/CTAProducts";
 import "./DevAppClient.css";
 
 export default function DevAppClient() {
-  // 1. Inicializa cartItems como un array vacío.
-  // Esto asegura que el renderizado del servidor y el renderizado inicial del cliente sean consistentes.
   const [cartItems, setCartItems] = useState([]);
 
-  // 2. Usa useEffect para cargar desde localStorage DESPUÉS de que el componente se haya montado en el cliente.
   useEffect(() => {
-    // Este código solo se ejecuta en el cliente, después del renderizado inicial.
     if (typeof window !== "undefined") {
       const storedCart = localStorage.getItem("cartItems");
       if (storedCart) {
         setCartItems(JSON.parse(storedCart));
       }
     }
-  }, []); // El array de dependencias vacío asegura que se ejecute una vez después del montaje inicial del cliente.
-
-  // Datos de los productos para el evento ViewContent
+  }, []);
   const products = [
     { id: 'app_de_inicio', name: 'App de Inicio', price: 18999, currency: 'MXN' },
     { id: 'app_dual_basica', name: 'App Dual Básica', price: 37999, currency: 'MXN' },
@@ -30,9 +24,6 @@ export default function DevAppClient() {
     { id: 'app_a_medida_premium', name: 'App a Medida Premium', price: 134999, currency: 'MXN' },
   ];
 
-  // 3. El useEffect existente para guardar en localStorage está bien,
-  // pero es buena práctica verificar también `typeof window` si existe la posibilidad
-  // de que se ejecute durante SSR.
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -40,7 +31,6 @@ export default function DevAppClient() {
   }, [cartItems]);
 
   useEffect(() => {
-    // Evento ViewContent de Facebook Pixel al cargar la página de productos
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq('track', 'ViewContent', {
         content_type: 'product_group',
@@ -48,20 +38,18 @@ export default function DevAppClient() {
         content_name: 'Paquetes de Desarrollo de Aplicaciones',
         contents: products.map(p => ({
           id: p.id,
-          quantity: 1, // Asumimos que se muestra 1 de cada uno
+          quantity: 1,
           item_price: p.price
         })),
-        currency: 'MXN', // Moneda general para el grupo
+        currency: 'MXN',
       });
     }
-  }, []); // Se ejecuta solo una vez al montar el componente
+  }, []);
 
   const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
     const productData = { idProduct, title, moneda, dataPrice: parseFloat(dataPrice) };
-    // productId ahora es directamente idProduct
     setCartItems((prevItems) => [...prevItems, productData]);
 
-    // Evento AddToCart de Facebook Pixel
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq('track', 'AddToCart', {
         content_name: productData.title,
@@ -83,24 +71,18 @@ export default function DevAppClient() {
   };
 
   const [orderNumber, setOrderNumber] = useState(() => {
-    // Generar un número de orden inicial si es necesario, o dejarlo vacío.
-    // Se generará uno nuevo al abrir el formulario si está vacío.
     return "";
   });
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const openOrderForm = () => {
     setIsFormVisible(true);
-    // Se asume que orderNumber se establece a través de setOrderNumber
-    // (por ejemplo, desde ShoppingCart o después de una interacción con el backend)
-
-    // Evento InitiateCheckout de Facebook Pixel
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
       const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
       const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
+      const content_ids = cartItems.map(item => item.idProduct);
       const contents = cartItems.map(item => ({
-        id: item.idProduct, // Usar item.idProduct
+        id: item.idProduct,
         quantity: 1,
         item_price: item.dataPrice
       }));
@@ -111,21 +93,19 @@ export default function DevAppClient() {
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
-        order_id: orderNumber, // Se usa el orderNumber del estado.
-                               // Si está vacío, se enviará vacío. Es opcional para InitiateCheckout.
+        order_id: orderNumber,
       });
     }
   };
   const closeOrderForm = () => setIsFormVisible(false);
 
   const handleSubmitOrder = (submittedOrderData) => {
-    // Evento Purchase de Facebook Pixel
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0 && orderNumber) {
       const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
       const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
+      const content_ids = cartItems.map(item => item.idProduct);
       const contents = cartItems.map(item => ({
-        id: item.idProduct, // Usar item.idProduct
+        id: item.idProduct,
         quantity: 1,
         item_price: item.dataPrice
       }));
@@ -133,7 +113,7 @@ export default function DevAppClient() {
       window.fbq('track', 'Purchase', {
         contents: contents,
         content_ids: content_ids,
-        content_type: 'product', // Para Purchase, a menudo se especifica 'product'
+        content_type: 'product',
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
@@ -142,8 +122,8 @@ export default function DevAppClient() {
     }
 
     setCartItems([]);
-    setOrderNumber(""); // Resetea el número de orden después de la compra
-    closeOrderForm(); // Cierra el formulario después de enviar
+    setOrderNumber("");
+    closeOrderForm();
   };
   return (
     <>
@@ -177,6 +157,7 @@ export default function DevAppClient() {
             title="App de Inicio"
             price="18999"
             moneda="MXN"
+            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
             items={[
               "App nativa sencilla para Android o iOS (1 plataforma).",
               "Diseño responsivo y minimalista.",
@@ -193,6 +174,7 @@ export default function DevAppClient() {
             title="App Dual Básica"
             price="37999"
             moneda="MXN"
+            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
             items={[
               "App para Android e iOS (React Native o Kotlin Multiplatform).",
               "Hasta 6 pantallas dinámicas (login, inicio, catálogo, detalles, contacto, perfil).",
@@ -209,6 +191,7 @@ export default function DevAppClient() {
             title="App Funcional Pro"
             price="75999"
             moneda="MXN"
+            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
             items={[
               "App híbrida o nativa para Android e iOS.",
               "Módulos personalizados (usuarios, productos, pedidos, etc.).",
@@ -226,6 +209,7 @@ export default function DevAppClient() {
             title="App a Medida Premium"
             price="134999"
             moneda="MXN"
+            imageUrl="https://www.jegdevstudios.com/images/software/solucion_basica.jpg"
             items={[
               "App personalizada desde cero (multiplataforma).",
               "Arquitectura avanzada y optimizada.",

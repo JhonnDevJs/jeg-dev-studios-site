@@ -4,35 +4,29 @@ import ShoppingCart from "@/components/ShoppingCart";
 import CardProduct from "@/components/CardProduct";
 import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
+import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
+import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
+import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import "./DevWebClient.css";
 
 export default function DevWebClient() {
-  // 1. Inicializa cartItems como un array vacío.
-  // Esto asegura que el renderizado del servidor y el renderizado inicial del cliente sean consistentes.
   const [cartItems, setCartItems] = useState([]);
 
-  // 2. Usa useEffect para cargar desde localStorage DESPUÉS de que el componente se haya montado en el cliente.
   useEffect(() => {
-    // Este código solo se ejecuta en el cliente, después del renderizado inicial.
     if (typeof window !== "undefined") {
       const storedCart = localStorage.getItem("cartItems");
       if (storedCart) {
         setCartItems(JSON.parse(storedCart));
       }
     }
-  }, []); // El array de dependencias vacío asegura que se ejecute una vez después del montaje inicial del cliente.
+  }, []);
 
-  // Datos de los productos para el evento ViewContent
   const products = [
     { id: 'paquete_basico', name: 'Paquete Básico', price: 5799, currency: 'MXN' },
     { id: 'paquete_plus', name: 'Paquete Plus', price: 17299, currency: 'MXN' },
     { id: 'paquete_pro', name: 'Paquete Pro', price: 28799, currency: 'MXN' },
   ];
 
-  // 3. El useEffect existente para guardar en localStorage está bien,
-  // pero es buena práctica verificar también `typeof window` si existe la posibilidad
-  // de que se ejecute durante SSR (aunque con `cartItems` en la dependencia,
-  // se ejecutará principalmente en el lado del cliente después de las actualizaciones).
   useEffect(() => {
     if (typeof window !== "undefined") {
       localStorage.setItem("cartItems", JSON.stringify(cartItems));
@@ -40,7 +34,6 @@ export default function DevWebClient() {
   }, [cartItems]);
 
   useEffect(() => {
-    // Evento ViewContent de Facebook Pixel al cargar la página de productos
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq('track', 'ViewContent', {
         content_type: 'product_group',
@@ -48,20 +41,19 @@ export default function DevWebClient() {
         content_name: 'Paquetes de Desarrollo Web',
         contents: products.map(p => ({
           id: p.id,
-          quantity: 1, // Asumimos que se muestra 1 de cada uno
+          quantity: 1,
           item_price: p.price
         })),
-        currency: 'MXN', // Moneda general para el grupo
+        currency: 'MXN',
       });
     }
-  }, []); // Se ejecuta solo una vez al montar el componente
+  }, []);
 
   const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
     const productData = { idProduct, title, moneda, dataPrice: parseFloat(dataPrice) };
-    // productId ahora es directamente idProduct
+
     setCartItems((prevItems) => [...prevItems, productData]);
 
-    // Evento AddToCart de Facebook Pixel
     if (typeof window !== "undefined" && window.fbq) {
       window.fbq('track', 'AddToCart', {
         content_name: productData.title,
@@ -83,24 +75,18 @@ export default function DevWebClient() {
   };
 
   const [orderNumber, setOrderNumber] = useState(() => {
-    // Generar un número de orden inicial si es necesario, o dejarlo vacío.
-    // Se generará uno nuevo al abrir el formulario si está vacío.
     return "";
   });
   const [isFormVisible, setIsFormVisible] = useState(false);
 
   const openOrderForm = () => {
     setIsFormVisible(true);
-    // Se asume que orderNumber se establece a través de setOrderNumber
-    // (por ejemplo, desde ShoppingCart o después de una interacción con el backend)
-
-    // Evento InitiateCheckout de Facebook Pixel
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
       const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
       const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
       const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
       const contents = cartItems.map(item => ({
-        id: item.idProduct, // Usar item.idProduct
+        id: item.idProduct,
         quantity: 1,
         item_price: item.dataPrice
       }));
@@ -111,21 +97,19 @@ export default function DevWebClient() {
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
-        order_id: orderNumber, // Se usa el orderNumber del estado.
-                               // Si está vacío, se enviará vacío. Es opcional para InitiateCheckout.
+        order_id: orderNumber,
       });
     }
   };
   const closeOrderForm = () => setIsFormVisible(false);
 
   const handleSubmitOrder = (submittedOrderData) => {
-    // Evento Purchase de Facebook Pixel
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0 && orderNumber) {
       const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
       const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
+      const content_ids = cartItems.map(item => item.idProduct);
       const contents = cartItems.map(item => ({
-        id: item.idProduct, // Usar item.idProduct
+        id: item.idProduct,
         quantity: 1,
         item_price: item.dataPrice
       }));
@@ -133,7 +117,7 @@ export default function DevWebClient() {
       window.fbq('track', 'Purchase', {
         contents: contents,
         content_ids: content_ids,
-        content_type: 'product', // Para Purchase, a menudo se especifica 'product'
+        content_type: 'product',
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
@@ -142,8 +126,8 @@ export default function DevWebClient() {
     }
 
     setCartItems([]);
-    setOrderNumber(""); // Resetea el número de orden después de la compra
-    closeOrderForm(); // Cierra el formulario después de enviar
+    setOrderNumber("");
+    closeOrderForm();
   };
   return (
     <>
@@ -177,6 +161,7 @@ export default function DevWebClient() {
             title="Paquete Básico"
             price="5799"
             moneda="MXN"
+            imageUrl={imgWebProduct1}
             items={[
               "1 año de Hosting y dominio (con hostinger)",
               "Certificado SSL",
@@ -197,6 +182,7 @@ export default function DevWebClient() {
             title="Paquete Plus"
             price="17299"
             moneda="MXN"
+            imageUrl={imgWebProduct2}
             items={[
               "1 año de Hosting y dominio (a elegir Hostinger ó Dondominio)",
               "Certificado SSL",
@@ -218,6 +204,7 @@ export default function DevWebClient() {
             title="Paquete Pro"
             price="28799"
             moneda="MXN"
+            imageUrl={imgWebProduct3}
             items={[
               "1 año de Hosting y dominio (con dondominio)",
               "Certificado SSL",

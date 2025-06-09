@@ -9,10 +9,14 @@ function CardProduct({
   moneda,
   items = [],
   onAdd,
+  imageUrl, // Nuevo prop para la URL de la imagen del producto
 }) {
   const handleAddToCart = () => {
     onAdd({ idProduct, title, moneda, dataPrice });
   };
+
+  // Generar una descripción a partir de la lista de items (características)
+  const descriptionText = items.join(". ") + ".";
 
   return (
     <li
@@ -25,8 +29,8 @@ function CardProduct({
     >
       {/* Microdatos para el ID del producto (importante para Facebook) */}
       <meta itemProp="productID" content={idProduct} />
-      {/* Podrías añadir una imagen si la tuvieras para el producto */}
-      {/* <meta itemProp="image" content="URL_DE_LA_IMAGEN_DEL_PRODUCTO" /> */}
+      {imageUrl && <meta itemProp="image" content={imageUrl} />}
+      {descriptionText && <meta itemProp="description" content={descriptionText} />}
 
       <div className="card-body d-flex flex-column">
         <h3 itemProp="name" className="h2 fw-bolder card-title text-center">{title}</h3>
@@ -79,6 +83,7 @@ CardProduct.propTypes = {
   moneda: PropTypes.string.isRequired,
   items: PropTypes.arrayOf(PropTypes.string).isRequired,
   onAdd: PropTypes.func.isRequired,
+  imageUrl: PropTypes.string, // Es opcional, pero Google lo marca como crítico si falta
 };
 
 export default CardProduct;
