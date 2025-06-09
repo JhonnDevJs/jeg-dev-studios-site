@@ -27,6 +27,7 @@ export const metadata = {
 };
 
 import AboutClient from "./AboutClient";
+import "./AboutClient.css"
 
 export default function AboutUs() {
   return <AboutClient />;

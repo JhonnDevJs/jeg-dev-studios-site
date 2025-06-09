@@ -89,6 +89,8 @@ export default function ContactClient() {
   return (
     <>
       <section className="__image-background-sections d-flex flex-column justify-content-center align-items-center w-100">
+      </section>
+      <section className="d-flex flex-column justify-content-center align-items-center w-100">
         <h2 className="display-1 text-center text-white mt-5">Contáctanos</h2>
         <p className="fs-5 text-center text-white">
           Escríbenos para recibir asesoría personalizada, resolver dudas o
