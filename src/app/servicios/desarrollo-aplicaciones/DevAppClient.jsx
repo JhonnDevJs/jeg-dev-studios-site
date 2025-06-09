@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect } from "react";
 import ShoppingCart from "@/components/ShoppingCart";
-import CardProduct from "@/components/CardProduct";
+import CardPacksProduct from "@/components/CardPacksProduct";
 import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
 import imgAppProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
@@ -22,10 +22,30 @@ export default function DevAppClient() {
     }
   }, []);
   const products = [
-    { id: 'app_de_inicio', name: 'App de Inicio', price: 18999, currency: 'MXN' },
-    { id: 'app_dual_basica', name: 'App Dual Básica', price: 37999, currency: 'MXN' },
-    { id: 'app_funcional_pro', name: 'App Funcional Pro', price: 75999, currency: 'MXN' },
-    { id: 'app_a_medida_premium', name: 'App a Medida Premium', price: 134999, currency: 'MXN' },
+    {
+      id: "app_de_inicio",
+      name: "App de Inicio",
+      price: 18999,
+      currency: "MXN",
+    },
+    {
+      id: "app_dual_basica",
+      name: "App Dual Básica",
+      price: 37999,
+      currency: "MXN",
+    },
+    {
+      id: "app_funcional_pro",
+      name: "App Funcional Pro",
+      price: 75999,
+      currency: "MXN",
+    },
+    {
+      id: "app_a_medida_premium",
+      name: "App a Medida Premium",
+      price: 134999,
+      currency: "MXN",
+    },
   ];
 
   useEffect(() => {
@@ -36,36 +56,85 @@ export default function DevAppClient() {
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.fbq) {
-      window.fbq('track', 'ViewContent', {
-        content_type: 'product_group',
-        content_ids: products.map(p => p.id),
-        content_name: 'Paquetes de Desarrollo de Aplicaciones',
-        contents: products.map(p => ({
+      window.fbq("track", "ViewContent", {
+        content_type: "product_group",
+        content_ids: products.map((p) => p.id),
+        content_name: "Paquetes de Desarrollo de Aplicaciones",
+        contents: products.map((p) => ({
           id: p.id,
           quantity: 1,
-          item_price: p.price
+          item_price: p.price,
         })),
-        currency: 'MXN',
+        currency: "MXN",
       });
     }
   }, []);
+  
+  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice }) => {
+
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", {
+        content_name: title,
+        content_ids: [idProduct],
+        content_type: "custom_quote",
+        value: dataPrice,
+        currency: moneda,
+      });
+    }
+
+    try {
+      const response = await fetch(
+        "https://jegdevstudios.onrender.com/generate-order-number"
+      );
+      const data = await response.json();
+
+      if (response.ok) {
+        setOrderNumber(data.orderNumber);
+      } else {
+        alert("Hubo un error al generar el número de cotización. Por favor, inténtelo de nuevo.");
+        return;
+      }
+    } catch (error) {
+      console.error("Error al solicitar el número de cotización:", error);
+      alert("Hubo un error al solicitar el número de cotización. Por favor, inténtelo de nuevo.");
+      return;
+    }
+
+    setCartItems([
+      {
+        idProduct,
+        title,
+        moneda,
+        dataPrice: parseFloat(dataPrice),
+      },
+    ]);
+    setIsFormVisible(true);
+  };
+
 
   const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
-    const productData = { idProduct, title, moneda, dataPrice: parseFloat(dataPrice) };
+    const productData = {
+      idProduct,
+      title,
+      moneda,
+      dataPrice: parseFloat(dataPrice),
+    };
     setCartItems((prevItems) => [...prevItems, productData]);
 
     if (typeof window !== "undefined" && window.fbq) {
-      window.fbq('track', 'AddToCart', {
+      window.fbq("track", "AddToCart", {
         content_name: productData.title,
         content_ids: [productData.idProduct],
-        content_type: 'product',
+        content_type: "product",
         value: productData.dataPrice,
         currency: productData.moneda,
-        contents: [{
-          id: productData.idProduct,
-          quantity: 1,
-          item_price: productData.dataPrice
-        }],
+        contents: [
+          {
+            id: productData.idProduct,
+            quantity: 1,
+            item_price: productData.dataPrice,
+          },
+        ],
       });
     }
   };
@@ -82,16 +151,19 @@ export default function DevAppClient() {
   const openOrderForm = () => {
     setIsFormVisible(true);
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
-      const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.idProduct);
-      const contents = cartItems.map(item => ({
+      const totalValue = cartItems.reduce(
+        (sum, item) => sum + item.dataPrice,
+        0
+      );
+      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
+      const content_ids = cartItems.map((item) => item.idProduct);
+      const contents = cartItems.map((item) => ({
         id: item.idProduct,
         quantity: 1,
-        item_price: item.dataPrice
+        item_price: item.dataPrice,
       }));
 
-      window.fbq('track', 'InitiateCheckout', {
+      window.fbq("track", "InitiateCheckout", {
         contents: contents,
         content_ids: content_ids,
         currency: currency,
@@ -104,20 +176,28 @@ export default function DevAppClient() {
   const closeOrderForm = () => setIsFormVisible(false);
 
   const handleSubmitOrder = (submittedOrderData) => {
-    if (typeof window !== "undefined" && window.fbq && cartItems.length > 0 && orderNumber) {
-      const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.idProduct);
-      const contents = cartItems.map(item => ({
+    if (
+      typeof window !== "undefined" &&
+      window.fbq &&
+      cartItems.length > 0 &&
+      orderNumber
+    ) {
+      const totalValue = cartItems.reduce(
+        (sum, item) => sum + item.dataPrice,
+        0
+      );
+      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
+      const content_ids = cartItems.map((item) => item.idProduct);
+      const contents = cartItems.map((item) => ({
         id: item.idProduct,
         quantity: 1,
-        item_price: item.dataPrice
+        item_price: item.dataPrice,
       }));
 
-      window.fbq('track', 'Purchase', {
+      window.fbq("track", "Purchase", {
         contents: contents,
         content_ids: content_ids,
-        content_type: 'product',
+        content_type: "product",
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
@@ -152,10 +232,13 @@ export default function DevAppClient() {
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
         <p className="lead w-100 px-3 px-md-5">
-          En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya sea que estés iniciando con una app sencilla o necesites una aplicación móvil completa y escalable, tenemos la solución perfecta para ti.
+          En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y
+          presupuesto. Ya sea que estés iniciando con una app sencilla o
+          necesites una aplicación móvil completa y escalable, tenemos la
+          solución perfecta para ti.
         </p>
         <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
-          <CardProduct
+          <CardPacksProduct
             idProduct={"app_de_inicio"}
             dataPrice={18999}
             title="App de Inicio"
@@ -170,9 +253,9 @@ export default function DevAppClient() {
               "Publicación en tienda (Google Play o App Store incluida).",
               "Manual básico de uso y entrega de APK. ",
             ]}
-            onAdd={handleAddToCart}
+            onQuote={handleQuoteRequest} 
           />
-          <CardProduct
+          <CardPacksProduct
             idProduct={"app_dual_basica"}
             dataPrice={37999}
             title="App Dual Básica"
@@ -187,9 +270,9 @@ export default function DevAppClient() {
               "Publicación en ambas tiendas.",
               "Diseño adaptado y personalizado con tu identidad visual.",
             ]}
-            onAdd={handleAddToCart}
+            onQuote={handleQuoteRequest} 
           />
-          <CardProduct
+          <CardPacksProduct
             idProduct={"app_funcional_pro"}
             dataPrice={75999}
             title="App Funcional Pro"
@@ -205,9 +288,9 @@ export default function DevAppClient() {
               "Base de datos relacional conectada al backend.",
               "Panel de administración web opcional.",
             ]}
-            onAdd={handleAddToCart}
+            onQuote={handleQuoteRequest}
           />
-          <CardProduct
+          <CardPacksProduct
             idProduct={"app_a_medida_premium"}
             dataPrice={134999}
             title="App a Medida Premium"
@@ -223,7 +306,7 @@ export default function DevAppClient() {
               "Mantenimiento técnico por 3 meses incluido.",
               "Asesoría y soporte para estrategias de publicación y escalabilidad.",
             ]}
-            onAdd={handleAddToCart}
+            onQuote={handleQuoteRequest} 
           />
         </ul>
       </section>

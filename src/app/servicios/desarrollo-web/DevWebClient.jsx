@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import ShoppingCart from "@/components/ShoppingCart";
 import CardProduct from "@/components/CardProduct";
+import CardPacksProduct from "@/components/CardPacksProduct";
 import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
 import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
@@ -22,9 +23,14 @@ export default function DevWebClient() {
   }, []);
 
   const products = [
-    { id: 'paquete_basico', name: 'Paquete Básico', price: 5799, currency: 'MXN' },
-    { id: 'paquete_plus', name: 'Paquete Plus', price: 17299, currency: 'MXN' },
-    { id: 'paquete_pro', name: 'Paquete Pro', price: 28799, currency: 'MXN' },
+    {
+      id: "paquete_basico",
+      name: "Paquete Básico",
+      price: 5799,
+      currency: "MXN",
+    },
+    { id: "paquete_plus", name: "Paquete Plus", price: 17299, currency: "MXN" },
+    { id: "paquete_pro", name: "Paquete Pro", price: 28799, currency: "MXN" },
   ];
 
   useEffect(() => {
@@ -35,37 +41,87 @@ export default function DevWebClient() {
 
   useEffect(() => {
     if (typeof window !== "undefined" && window.fbq) {
-      window.fbq('track', 'ViewContent', {
-        content_type: 'product_group',
-        content_ids: products.map(p => p.id),
-        content_name: 'Paquetes de Desarrollo Web',
-        contents: products.map(p => ({
+      window.fbq("track", "ViewContent", {
+        content_type: "product_group",
+        content_ids: products.map((p) => p.id),
+        content_name: "Paquetes de Desarrollo Web",
+        contents: products.map((p) => ({
           id: p.id,
           quantity: 1,
-          item_price: p.price
+          item_price: p.price,
         })),
-        currency: 'MXN',
+        currency: "MXN",
       });
     }
   }, []);
 
+  // Nuevo handler para cotizaciones personalizadas
+  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice }) => {
+    // Dispara evento de Pixel
+    if (typeof window !== "undefined" && window.fbq) {
+      window.fbq("track", "Lead", {
+        content_name: title,
+        content_ids: [idProduct],
+        content_type: "custom_quote",
+        value: dataPrice,
+        currency: moneda,
+      });
+    }
+
+    // Generar número de orden/cotización
+    try {
+      const response = await fetch(
+        "https://jegdevstudios.onrender.com/generate-order-number"
+      );
+      const data = await response.json();
+
+      if (response.ok) {
+        setOrderNumber(data.orderNumber);
+      } else {
+        alert("Hubo un error al generar el número de cotización. Por favor, inténtelo de nuevo.");
+        return;
+      }
+    } catch (error) {
+      console.error("Error al solicitar el número de cotización:", error);
+      alert("Hubo un error al solicitar el número de cotización. Por favor, inténtelo de nuevo.");
+      return;
+    }
+
+    setCartItems([
+      {
+        idProduct,
+        title,
+        moneda,
+        dataPrice: parseFloat(dataPrice),
+      },
+    ]);
+    setIsFormVisible(true);
+  };
+
   const handleAddToCart = ({ idProduct, title, moneda, dataPrice }) => {
-    const productData = { idProduct, title, moneda, dataPrice: parseFloat(dataPrice) };
+    const productData = {
+      idProduct,
+      title,
+      moneda,
+      dataPrice: parseFloat(dataPrice),
+    };
 
     setCartItems((prevItems) => [...prevItems, productData]);
 
     if (typeof window !== "undefined" && window.fbq) {
-      window.fbq('track', 'AddToCart', {
+      window.fbq("track", "AddToCart", {
         content_name: productData.title,
         content_ids: [productData.idProduct],
-        content_type: 'product',
+        content_type: "product",
         value: productData.dataPrice,
         currency: productData.moneda,
-        contents: [{
-          id: productData.idProduct,
-          quantity: 1,
-          item_price: productData.dataPrice
-        }],
+        contents: [
+          {
+            id: productData.idProduct,
+            quantity: 1,
+            item_price: productData.dataPrice,
+          },
+        ],
       });
     }
   };
@@ -82,16 +138,19 @@ export default function DevWebClient() {
   const openOrderForm = () => {
     setIsFormVisible(true);
     if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
-      const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.idProduct); // Usar item.idProduct
-      const contents = cartItems.map(item => ({
+      const totalValue = cartItems.reduce(
+        (sum, item) => sum + item.dataPrice,
+        0
+      );
+      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
+      const content_ids = cartItems.map((item) => item.idProduct); // Usar item.idProduct
+      const contents = cartItems.map((item) => ({
         id: item.idProduct,
         quantity: 1,
-        item_price: item.dataPrice
+        item_price: item.dataPrice,
       }));
 
-      window.fbq('track', 'InitiateCheckout', {
+      window.fbq("track", "InitiateCheckout", {
         contents: contents,
         content_ids: content_ids,
         currency: currency,
@@ -104,20 +163,28 @@ export default function DevWebClient() {
   const closeOrderForm = () => setIsFormVisible(false);
 
   const handleSubmitOrder = (submittedOrderData) => {
-    if (typeof window !== "undefined" && window.fbq && cartItems.length > 0 && orderNumber) {
-      const totalValue = cartItems.reduce((sum, item) => sum + item.dataPrice, 0);
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : 'MXN';
-      const content_ids = cartItems.map(item => item.idProduct);
-      const contents = cartItems.map(item => ({
+    if (
+      typeof window !== "undefined" &&
+      window.fbq &&
+      cartItems.length > 0 &&
+      orderNumber
+    ) {
+      const totalValue = cartItems.reduce(
+        (sum, item) => sum + item.dataPrice,
+        0
+      );
+      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
+      const content_ids = cartItems.map((item) => item.idProduct);
+      const contents = cartItems.map((item) => ({
         id: item.idProduct,
         quantity: 1,
-        item_price: item.dataPrice
+        item_price: item.dataPrice,
       }));
 
-      window.fbq('track', 'Purchase', {
+      window.fbq("track", "Purchase", {
         contents: contents,
         content_ids: content_ids,
-        content_type: 'product',
+        content_type: "product",
         currency: currency,
         num_items: cartItems.length,
         value: totalValue,
@@ -151,11 +218,42 @@ export default function DevWebClient() {
         </h2>
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+        <h3>
+          ¿Necesitas un sitio web especifico y secillo pero profesional para tu
+          negocio?
+        </h3>
         <p className="lead w-100 px-3 px-md-5">
-          En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya sea que estés comenzando con una landing page o necesites un sitio más robusto, tenemos la solución perfecta para ti.
+          En JEG Dev Studios tenemos la solución perfecta para ti. Adquiere tu
+          sitio web personalizado y profesional en solo un par de clicks.
         </p>
         <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
           <CardProduct
+            idProduct="landing-page-profesional"
+            dataPrice={2999}
+            title="Landing Page Profesional"
+            price="2999"
+            moneda="MXN"
+            imageUrl={imgWebProduct1}
+            items={[
+              "Dominio personalizado incluido (1 año)",
+              "Hosting gratuito mediante Google Sites",
+              "Diseño responsivo",
+              "Posicionamiento inicial en Google (SEO básico)",
+              "Diseño adaptado a la marca del cliente",
+              "Escoge 5 secciones para tu página",
+            ]}
+            onAdd={handleAddToCart}
+          /> {/* CardProduct sigue usando onAdd para añadir al carrito */}
+        </ul>
+      </section>
+      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+        <p className="lead w-100 px-3 px-md-5">
+          En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y
+          presupuesto. Ya sea que estés comenzando con una landing page o
+          necesites un sitio más robusto, tenemos la solución perfecta para ti.
+        </p>
+        <ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
+          <CardPacksProduct
             idProduct="paquete_basico"
             dataPrice={5799}
             title="Paquete Básico"
@@ -174,9 +272,9 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js",
               "Tiempo de entrega: 7 a 10 días hábiles",
             ]}
-            onAdd={handleAddToCart}
+            onQuote={handleQuoteRequest}
           />
-          <CardProduct
+          <CardPacksProduct
             idProduct={"paquete_plus"}
             dataPrice={17299}
             title="Paquete Plus"
@@ -196,9 +294,9 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel)",
               "Tiempo de entrega: 10 a 15 días hábiles.",
             ]}
-            onAdd={handleAddToCart}
+            onQuote={handleQuoteRequest}
           />
-          <CardProduct
+          <CardPacksProduct
             idProduct={"paquete_pro"}
             dataPrice={28799}
             title="Paquete Pro"
@@ -219,7 +317,7 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel) ó Node js",
               "Tiempo de entrega: 15 a 30 días hábiles.",
             ]}
-            onAdd={handleAddToCart}
+            onQuote={handleQuoteRequest}
           />
         </ul>
       </section>

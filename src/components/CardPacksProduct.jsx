@@ -1,18 +1,18 @@
 "use client"
 import PropTypes from "prop-types";
 
-function CardProduct({
+function CardPacksProduct({
   idProduct,
   dataPrice,
   title,
   price,
   moneda,
   items = [],
-  onAdd,
+  onQuote,
   imageUrl, // Nuevo prop para la URL de la imagen del producto
 }) {
-  const handleAddToCart = () => {
-    onAdd({ idProduct, title, moneda, dataPrice });
+  const handleQuoteRequest = () => {
+    onQuote({ idProduct, title, moneda, dataPrice });
   };
 
   // Generar una descripción a partir de la lista de items (características)
@@ -30,14 +30,10 @@ function CardProduct({
       {/* Microdatos para el ID del producto (importante para Facebook) */}
       <meta itemProp="productID" content={idProduct} />
       {imageUrl && <meta itemProp="image" content={imageUrl} />}
-      {descriptionText && (
-        <meta itemProp="description" content={descriptionText} />
-      )}
+      {descriptionText && <meta itemProp="description" content={descriptionText} />}
 
       <div className="card-body d-flex flex-column">
-        <h3 itemProp="name" className="h2 fw-bolder card-title text-center">
-          {title}
-        </h3>
+        <h3 itemProp="name" className="h2 fw-bolder card-title text-center">{title}</h3>
         {/* Contenedor para la oferta del producto (precio, moneda, disponibilidad) */}
         <div itemProp="offers" itemScope itemType="http://schema.org/Offer">
           <meta itemProp="priceCurrency" content={moneda} />
@@ -46,7 +42,7 @@ function CardProduct({
           <link itemProp="availability" href="http://schema.org/InStock" />
 
           <div className="d-flex justify-content-evenly align-items-center">
-            <p className="text-lit fw-lighter">Costo: </p>
+            <p className="text-lit fw-lighter">Desde: </p>
             <p className="h1 fw-bolder">
               <span className="fw-lighter">$</span>
               {price} {/* Este es el precio formateado para mostrar */}
@@ -54,8 +50,8 @@ function CardProduct({
             </p>
           </div>
         </div>
-        <button className="btn-services" onClick={handleAddToCart}>
-          <span className="fw-bolder">Agregar al carrito</span>
+        <button className="btn-services" onClick={handleQuoteRequest}>
+          <span className="fw-bolder">Cotizar mi proyecto</span>
         </button>
       </div>
       <div className="card-footer d-flex justify-content-center align-items-center">
@@ -79,15 +75,15 @@ function CardProduct({
 }
 
 // Validación de props
-CardProduct.propTypes = {
+CardPacksProduct.propTypes = {
   idProduct: PropTypes.string.isRequired,
   dataPrice: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   moneda: PropTypes.string.isRequired,
-  items: PropTypes.arrayOf(PropTypes.string).isRequired,
-  onAdd: PropTypes.func.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired, // Mantener si es correcto
+  onQuote: PropTypes.func.isRequired, // Cambiado de onAdd a onQuote
   imageUrl: PropTypes.string, // Es opcional, pero Google lo marca como crítico si falta
 };
 
-export default CardProduct;
+export default CardPacksProduct;
