@@ -5,7 +5,7 @@ import CTA from "@/components/CTA";
 export default function AboutClient() {
   return (
     <>
-      <section className="__image-background-sections d-flex flex-column justify-content-center align-items-center w-100">
+      <section className="__image-background-About d-flex flex-column justify-content-center align-items-center w-100">
       </section>
       <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3">
         <h2 className="h1 text-white text-center">Sobre Nosotros</h2>

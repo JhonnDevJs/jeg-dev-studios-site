@@ -1,4 +1,4 @@
-.__image-background-sections {
+.__image-background-contact{
   background-image: url("/fondos/Comunicate_con_Nosotros.webp");
   background-size: 100% 50vh;
   background-position: start center;
@@ -8,7 +8,7 @@
   height: 50dvh;
 }
 @media (max-width: 768px) {
-  .__image-background-sections {
+  .__image-background-contact {
     background-size: 100% 30vh;
     background-position: start center;
     background-attachment: scroll;
