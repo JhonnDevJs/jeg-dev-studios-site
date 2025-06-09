@@ -1,4 +1,5 @@
 import { Geist, Geist_Mono } from "next/font/google";
+import { headers } from 'next/headers';
 import "./globals.css";
 import Script from "next/script";
 import NavBar from "@/components/NavBar.jsx";
@@ -15,6 +16,14 @@ const geistMono = Geist_Mono({
   variable: "--font-geist-mono",
   subsets: ["latin"],
 });
+
+const servicePageBackgrounds = {
+  '/': '/fondos/backgraund.webp',
+  '/servicios/desarrollo-web': '/fondos/backgroundSections.webp',
+  '/servicios/desarrollo-software': '/fondos/backgroundSections.webp',
+  '/servicios/desarrollo-aplicaciones': '/fondos/backgroundSections.webp',
+  '/contacto': '/fondos/backgroundSections.webp'
+};
 
 export const metadata = {
   metadataBase: new URL("https://www.jegdevstudios.com"),
@@ -110,15 +119,27 @@ export const viewport = {
 export const themeColor = "#000000";
 
 export default function RootLayout({ children }) {
+  const pathname = headers().get('next-url') || '';
+
+  let imageToPreload = null;
+
+  for (const pathPrefix in servicePageBackgrounds) {
+    if (pathname.startsWith(pathPrefix)) {
+      imageToPreload = servicePageBackgrounds[pathPrefix];
+      break;
+    }
+  }
   return (
     <html lang="es">
       <head>
-        <link
-          rel="preload"
-          as="image"
-          href="/fondos/backgraund.webp"
-          type="image/webp"
-        />
+        {imageToPreload && (
+          <link
+            rel="preload"
+            href={imageToPreload}
+            as="image"
+            type="image/webp"
+          />
+        )}
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
