@@ -164,20 +164,7 @@ export default async function RootLayout({ children }) {
               fbq('track', 'PageView');
             `,
           }}
-        />
-        <noscript>
-          <img
-            height="1"
-            width="1"
-            style={{ display: "none" }}
-            src={`https://www.facebook.com/tr?id=${facebookPixelId}&ev=PageView&noscript=1`}
-          />
-        </noscript>
-      </head>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
-      >
-        {/* Bootstrap JS */}
+        />{/* Bootstrap JS */}
         <Script
           src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
           strategy="afterInteractive"
@@ -287,6 +274,18 @@ export default async function RootLayout({ children }) {
             }),
           }}
         />
+        <noscript>
+          <img
+            height="1"
+            width="1"
+            style={{ display: "none" }}
+            src={`https://www.facebook.com/tr?id=${facebookPixelId}&ev=PageView&noscript=1`}
+          />
+        </noscript>
+      </head>
+      <body
+        className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
+      >
         <NavBar />
         <main className="container-fluid d-flex flex-column min-vh-100 p-0 m-0">
           {children}
