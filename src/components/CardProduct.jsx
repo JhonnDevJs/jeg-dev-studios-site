@@ -24,7 +24,7 @@ function CardProduct({
       itemType="http://schema.org/Product" // Especifica que el ítem es un Producto.
       id={idProduct}
       className="card d-block bg-transparent border-1 rounded-5 text-white text-start shadow-md p-0 card-services"
-      style={{ width: "25.6rem" }}
+      style={{ width: "22rem" }}
       data-price={dataPrice}
     >
       {/* Microdatos para el ID del producto (importante para Facebook) */}

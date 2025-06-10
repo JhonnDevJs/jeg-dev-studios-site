@@ -5,7 +5,7 @@ function CardServices({ title, description, url, buttonLabel, items = [] }) {
   return (
     <li
       className="card d-block bg-transparent border-1 rounded-5 text-white text-start shadow-md p-0 card-services"
-      style={{ width: "27.6rem"}}
+      style={{ width: "22rem"}}
     >
       <div className="card-body d-flex flex-column">
         <h3 className="h2 fw-bolder card-title text-start">{title}</h3>
