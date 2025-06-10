@@ -6,8 +6,6 @@ import CardServices from "@/components/CardServices";
 import TeamCarousel from "@/components/TeamCarousel";
 import CTA from "@/components/CTA";
 import "./home.css";
-import CardSmallList from "@/components/CardSmallList";
-import CardNestedLists from "@/components/CardNestedLists";
 
 export default function Home() {
   return (

@@ -11,6 +11,7 @@ import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-mues
 import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import "./DevWebClient.css";
+import CardsProcess from "@/components/CardsProcess";
 
 export default function DevWebClient() {
   const [cartItems, setCartItems] = useState([]);
@@ -78,7 +79,13 @@ export default function DevWebClient() {
   }, []);
 
   // Nuevo handler para cotizaciones personalizadas
-  const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
+  const handleQuoteRequest = async ({
+    idProduct,
+    title,
+    moneda,
+    dataPrice,
+    imageSrc,
+  }) => {
     setIsFormVisible(true); // Mostrar el formulario inmediatamente
     setIsGeneratingOrder(true); // Indicar que estamos generando la orden/cotización
 
@@ -106,7 +113,9 @@ export default function DevWebClient() {
         generatedOrderNumber = data.orderNumber;
         setOrderNumber(data.orderNumber);
       } else {
-        alert("Hubo un error al generar el número de cotización. Por favor, inténtelo de nuevo.");
+        alert(
+          "Hubo un error al generar el número de cotización. Por favor, inténtelo de nuevo."
+        );
         setIsGeneratingOrder(false);
         // Considerar si cerrar el formulario o permitir que el usuario lo cierre manualmente
         // setIsFormVisible(false);
@@ -114,7 +123,9 @@ export default function DevWebClient() {
       }
     } catch (error) {
       console.error("Error al solicitar el número de cotización:", error);
-      alert("Hubo un error al solicitar el número de cotización. Por favor, inténtelo de nuevo.");
+      alert(
+        "Hubo un error al solicitar el número de cotización. Por favor, inténtelo de nuevo."
+      );
       setIsGeneratingOrder(false);
       // setIsFormVisible(false);
       return;
@@ -133,18 +144,37 @@ export default function DevWebClient() {
 
     // Disparar InitiateCheckout para cotizaciones también, si aplica
     if (typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
-        const item = { idProduct, title, moneda, dataPrice: parseFloat(dataPrice), imageSrc };
-        window.fbq("track", "InitiateCheckout", {
-            contents: [{ id: item.idProduct, quantity: 1, item_price: item.dataPrice, image_url: item.imageSrc }],
-            content_ids: [item.idProduct],
-            currency: item.moneda,
-            num_items: 1,
-            value: item.dataPrice,
-            order_id: generatedOrderNumber,
-        });
+      const item = {
+        idProduct,
+        title,
+        moneda,
+        dataPrice: parseFloat(dataPrice),
+        imageSrc,
+      };
+      window.fbq("track", "InitiateCheckout", {
+        contents: [
+          {
+            id: item.idProduct,
+            quantity: 1,
+            item_price: item.dataPrice,
+            image_url: item.imageSrc,
+          },
+        ],
+        content_ids: [item.idProduct],
+        currency: item.moneda,
+        num_items: 1,
+        value: item.dataPrice,
+        order_id: generatedOrderNumber,
+      });
     }
   };
-  const handleAddToCart = ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
+  const handleAddToCart = ({
+    idProduct,
+    title,
+    moneda,
+    dataPrice,
+    imageSrc,
+  }) => {
     const productData = {
       idProduct,
       title,
@@ -180,7 +210,9 @@ export default function DevWebClient() {
 
   const openOrderForm = async () => {
     if (isGeneratingOrder && isFormVisible) {
-      console.log("La apertura del formulario o generación de orden ya está en progreso.");
+      console.log(
+        "La apertura del formulario o generación de orden ya está en progreso."
+      );
       return;
     }
 
@@ -200,13 +232,20 @@ export default function DevWebClient() {
           tempOrderNumber = data.orderNumber;
           setOrderNumber(data.orderNumber);
         } else {
-          alert("Hubo un error al generar el número de orden para el checkout. Por favor, inténtelo de nuevo.");
+          alert(
+            "Hubo un error al generar el número de orden para el checkout. Por favor, inténtelo de nuevo."
+          );
           setIsGeneratingOrder(false);
           return;
         }
       } catch (error) {
-        console.error("Error al solicitar el número de orden para el checkout:", error);
-        alert("Hubo un error al solicitar el número de orden para el checkout. Por favor, inténtelo de nuevo.");
+        console.error(
+          "Error al solicitar el número de orden para el checkout:",
+          error
+        );
+        alert(
+          "Hubo un error al solicitar el número de orden para el checkout. Por favor, inténtelo de nuevo."
+        );
         setIsGeneratingOrder(false);
         return;
       }
@@ -237,7 +276,9 @@ export default function DevWebClient() {
           order_id: tempOrderNumber,
         });
       } else {
-        console.warn("InitiateCheckout omitido: No se pudo obtener un número de orden válido para el checkout.");
+        console.warn(
+          "InitiateCheckout omitido: No se pudo obtener un número de orden válido para el checkout."
+        );
       }
     }
   };
@@ -246,7 +287,7 @@ export default function DevWebClient() {
     setIsFormVisible(false);
     // Si el formulario se cierra mientras se generaba una orden, resetear el estado de carga.
     if (isGeneratingOrder) {
-        setIsGeneratingOrder(false);
+      setIsGeneratingOrder(false);
     }
   };
 
@@ -333,7 +374,9 @@ export default function DevWebClient() {
               "Diseño adaptado a la marca del cliente",
               "Escoge 5 secciones para tu página",
             ]}
-            onAdd={(details) => handleAddToCart({ ...details, imageSrc: imgWebProduct1.src })}
+            onAdd={(details) =>
+              handleAddToCart({ ...details, imageSrc: imgWebProduct1.src })
+            }
           />
         </ul>
       </section>
@@ -363,7 +406,9 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js",
               "Tiempo de entrega: 7 a 10 días hábiles",
             ]}
-            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgWebProduct1.src })}
+            onQuote={(details) =>
+              handleQuoteRequest({ ...details, imageSrc: imgWebProduct1.src })
+            }
           />
           <CardPacksProduct
             idProduct={"paquete_plus"}
@@ -385,7 +430,9 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel)",
               "Tiempo de entrega: 10 a 15 días hábiles.",
             ]}
-            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgWebProduct2.src })}
+            onQuote={(details) =>
+              handleQuoteRequest({ ...details, imageSrc: imgWebProduct2.src })
+            }
           />
           <CardPacksProduct
             idProduct={"paquete_pro"}
@@ -408,7 +455,9 @@ export default function DevWebClient() {
               "Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel) ó Node js",
               "Tiempo de entrega: 15 a 30 días hábiles.",
             ]}
-            onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgWebProduct3.src })}
+            onQuote={(details) =>
+              handleQuoteRequest({ ...details, imageSrc: imgWebProduct3.src })
+            }
           />
         </ul>
       </section>
@@ -463,6 +512,44 @@ export default function DevWebClient() {
           ]}
         />
       </section>
+      <section className=" col-9 container-fluid bg-transparent text-center text-white py-5">
+        <div className="row justify-content-center g-4">
+          <div className="col-10 col-md-6 col-lg-4 d-flex justify-content-center">
+            <CardsProcess
+              number="1"
+              titulo="Paquete Básico"
+              list={[
+                "Duración estimada: 7 - 10 días hábiles",
+                "Tecnologías: Figma, HTML, CSS, JS, Node.js",
+                "Entregas por Sprint: 1-2 entregas",
+              ]}
+            />
+          </div>
+          <div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <CardsProcess
+              number="2"
+              titulo="Paquete Plus"
+              list={[
+                "Duración estimada: 10 - 15 días hábiles",
+                "Tecnologías: Figma, HTML, Bootstrap, JS, Php (Laravel)",
+                "Entregas por Sprint: 1-2 entregas",
+              ]}
+            />
+          </div>
+          <div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+            <CardsProcess
+              number="3"
+              titulo="Paquete Pro"
+              list={[
+                "Duración estimada: 15 - 30 días hábiles",
+                "Tecnologías: Figma, Next.js, Tailwind CSS, Php (Laravel) o Node.js",
+                "Entregas por Sprint: 3-5 entregas",
+              ]}
+            />
+          </div>
+        </div>
+      </section>
+
       <CTAProducts />
     </>
   );
