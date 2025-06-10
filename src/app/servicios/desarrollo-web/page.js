@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Servicios de Desarrollo Web | JEG Dev Studios",
+  title: "Servicios de Desarrollo de Sitios Web | JEG Dev Studios",
   description:
     "Contrata servicios de desarrollo web profesionales: sitios empresariales, e-commerce y landing pages con diseño moderno y funcional.",
   keywords:
@@ -8,7 +8,7 @@ export const metadata = {
     canonical: "https://www.jegdevstudios.com/servicios/desarrollo-web",
   },
   openGraph: {
-    title: "Servicios de Desarrollo Web | JEG Dev Studios",
+    title: "Servicios de Desarrollo de Sitios Web | JEG Dev Studios",
     description: "Descubre nuestros servicios de desarrollo web",
     url: "https://www.jegdevstudios.com/servicios/desarrollo-web",
     siteName: "JEG Dev Studios",

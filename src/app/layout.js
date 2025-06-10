@@ -26,7 +26,7 @@ const servicePageBackgrounds = {
 
 export const metadata = {
   metadataBase: new URL("https://www.jegdevstudios.com"),
-  title: "JEG Dev Studios | Desarrollamos tu sitio web profesional",
+  title: "JEG Dev Studios | Agencia de desarrollo web",
   description:
     "Desarrollo de sitios web, software y apps móviles en México. Soluciones digitales personalizadas para negocios y emprendedores.",
   keywords:
@@ -45,7 +45,7 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "JEG Dev Studios | Programación y Desarrollo Web, Apps y Videojuegos",
+      "JEG Dev Studios | Agencia de desarrollo web",
     description:
       "En JEG Dev Studios transformamos ideas en experiencias digitales inolvidables. Especializados en desarrollo web, videojuegos, aplicaciones móviles y de escritorio, ofrecemos soluciones personalizadas y creativas para impulsar tu presencia en línea y alcanzar tus objetivos tecnológicos.",
     url: "https://www.jegdevstudios.com/",
