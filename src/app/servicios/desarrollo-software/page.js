@@ -1,5 +1,5 @@
 export const metadata = {
-  title: "Servicios de Desarrollo de Software Empresarial | JEG Dev Studios",
+  title: "Servicios de Desarrollo de Software Personalizado | JEG Dev Studios",
   description:
     "Creación de software empresarial a medida — Desarrollo de software adaptado a cada cliente Enfoque personalizado para mejorar procesos",
   keywords:
@@ -8,7 +8,7 @@ export const metadata = {
     canonical: "https://www.jegdevstudios.com/servicios/desarrollo-software",
   },
   openGraph: {
-    title: "Servicios de Desarrollo de Software Empresarial | JEG Dev Studios",
+    title: "Servicios de Desarrollo de Software Personalizado | JEG Dev Studios",
     description: "Descubre nuestros servicios de desarrollo software empresarial",
     url: "https://www.jegdevstudios.com/servicios/desarrollo-software",
     siteName: "JEG Dev Studios",
