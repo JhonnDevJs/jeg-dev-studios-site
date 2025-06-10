@@ -135,13 +135,3 @@
   z-index: 2;
 }
 
-/* Oculta la barra y flecha en pantallas pequeñas */
-@media (max-width: 650px) {
-  .card-body {
-    width: 100% !important;
-  }
-
-  .vertical-bar-arrow {
-    display: none !important;
-  }
-}
