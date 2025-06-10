@@ -3,7 +3,7 @@ import { useState } from "react";
 import CardServices from "@/components/CardServices";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
-import "./services.css";
+import "./ServicesClient.css";
 
 const faqs = [
   {
@@ -57,7 +57,7 @@ export default function ServicesClient() {
 
   return (
     <>
-      <section className="__image-background-services d-flex flex-column justify-content-center align-items-center w-100">
+      <section className="__image-background-servicios d-flex flex-column justify-content-center align-items-center w-100">
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 mt-5 gap-3">
         <h2 className="text-center text-white fw-bold mt-3">
