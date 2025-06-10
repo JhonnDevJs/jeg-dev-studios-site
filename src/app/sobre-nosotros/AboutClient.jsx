@@ -1,6 +1,7 @@
 "use client";
 import Link from "next/link";
 import CTA from "@/components/CTA";
+import "./AboutClient.css";
 
 export default function AboutClient() {
   return (
