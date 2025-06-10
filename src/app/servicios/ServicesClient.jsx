@@ -77,7 +77,7 @@ export default function ServicesClient() {
               title="Desarrollo de sitios web"
               description="Desde la estructura visual hasta la funcionalidad interactiva, cada detalle es diseñado para optimizar la navegación y comunicar eficazmente el mensaje de una marca."
               url="/servicios/desarrollo-web"
-              buttonLabel="Ver desarrollo web en detalle"
+              buttonLabel="Obtener servicios"
               items={[
                 "Diseño Responsivo",
                 "SEO Optimizado",
@@ -89,7 +89,7 @@ export default function ServicesClient() {
               title="Desarrollo de aplicaciones"
               description="Implementamos lenguajes como Kotlin, React Native, PHP (Laravel) para garantizar compatibilidad, rendimiento y mantenimiento simplificado, asegurando escalabilidad y eficiencia."
               url="/servicios/desarrollo-aplicaciones"
-              buttonLabel="Explorar desarrollo de apps móviles"
+              buttonLabel="Obtener servicios"
               items={[
                 "Código Modular y Escalable",
                 "Optimización de Algoritmos",
@@ -101,7 +101,7 @@ export default function ServicesClient() {
               title="Desarrollo de software"
               description="Implementamos estructuras limpias y reutilizables en lenguajes como React Native y Java para garantizar la estabilidad y facilidad de crecimiento a largo plazo de tu proyecto."
               url="/servicios/desarrollo-software"
-              buttonLabel="Conoce nuestro desarrollo de software"
+              buttonLabel="Obtener servicios"
               items={[
                 "Clean Code",
                 "Optimización del Rendimiento",

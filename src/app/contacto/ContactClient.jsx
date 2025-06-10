@@ -94,7 +94,7 @@ export default function ContactClient() {
         <h2 className="display-1 text-center text-white mt-5">Contáctanos</h2>
         <p className="fs-5 text-center text-white">
           Escríbenos para recibir asesoría personalizada, resolver dudas o
-          solicitar un presupuesto.
+          solicitar la cotización de tu proyecto.
         </p>
       </section>
       <section className="d-flex flex-md-row flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 gap-5">
