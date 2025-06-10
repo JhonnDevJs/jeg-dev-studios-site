@@ -109,6 +109,7 @@ export const viewport = {
 export const themeColor = "#000000";
 
 export default function RootLayout({ children }) {
+  
   return (
     <html lang="es">
       <head>

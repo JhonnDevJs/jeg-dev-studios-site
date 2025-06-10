@@ -11,6 +11,8 @@ import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
 import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
 import CardServices from "@/components/CardServices";
 import CardTeam from "@/components/CardTeam";
+import CardSmallList from "@/components/CardSmallList";
+import CardNestedLists from "@/components/CardNestedLists";
 
 export default function Home() {
   return (
@@ -166,7 +168,7 @@ export default function Home() {
             <p className="fs-2 m-0">
               💡 Soluciones personalizadas a tu negocio
             </p>
-          </li>
+          </li> 
           <li className="card shadow-sm p-3 text-center">
             <p className="fs-2 m-0">🤝 Acompañamiento y soporte</p>
           </li>
@@ -198,7 +200,57 @@ export default function Home() {
           </Link>
         </div>
         <p>Solicita tu consulta gratis ahora</p>
+        <CardSmallList
+          titulo="Descubrimiento y Planificación Inicial"
+          subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
+          list={[
+            " Reunión inicial contigo para entender tu negocio y el propósito del sitio.",
+            " Definimos las funcionalidades clave, el diseño deseado y objetivos de cada sección.",
+            " Elegimos el paquete de desarrollo más adecuado (Básico, Plus o Pro).",
+            " Creamos un Product Backlog, que es la lista de todo lo que tu sitio debe incluir.",
+          ]}
+          lastText="Tecnologías: Según el paquete, usamos stacks modernos como Figma, HTML, JavaScript, Tailwind, Next.js, Bootstrap, Node.js o Java."
+        />
+        <CardNestedLists
+          titulo=" Ciclos de Desarrollo Iterativos (Sprints)"
+          subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
+          list={[
+            {
+              text: "a. Sprint Planning",
+              sublist: [
+                "Planificamos qué secciones o funcionalidades vamos a trabajar (por ejemplo, sección de contacto, página de inicio, integración de WhatsApp).",
+                "Nos aseguramos de que las tareas estén alineadas a tus prioridades y al paquete que adquiriste.",
+              ],
+            },
+            {
+              text: "b. Desarrollo y Actualizaciones",
+              sublist: [
+                " Nuestro equipo trabaja en el desarrollo del contenido acordado.",
+                " Usamos frameworks modernos para garantizar velocidad, seguridad y escalabilidad.",
+                " Durante el Sprint, mantenemos comunicación constante contigo para resolver dudas o validar avances.",
+              ],
+            },
+            {
+              text: "c. Entrega Parcial y Feedback",
+              sublist: [
+                " Al final de cada Sprint, te mostramos un avance funcional real del sitio (por videollamada o enlace privado).",
+                " Tú nos das tu feedback y podemos ajustar detalles antes del siguiente Sprint.",
+              ],
+            },
+          ]}
+        />
+        <CardSmallList
+          titulo=" Revisión Final y Entrega del Proyecto"
+          subtitulo="Una vez terminado el número de Sprints necesarios (dependiendo del paquete elegido), realizamos lo siguiente:"
+          list={[
+            " Una demostración final del sitio completo.",
+            " Una revisión conjunta para asegurarnos de que todo está correcto.",
+            " Ajustes finales y optimización.",
+            " Publicación en tu dominio con certificado SSL, email corporativo y conexión a redes sociales (según el paquete).",
+          ]}
+        />
       </section>
     </>
   );
+  
 }
