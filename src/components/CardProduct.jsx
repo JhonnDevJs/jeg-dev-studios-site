@@ -1,58 +1,93 @@
+"use client"
 import PropTypes from "prop-types";
-import Image from "next/image";
 
 function CardProduct({
+  idProduct,
   dataPrice,
   title,
-  text,
   price,
   moneda,
-  imageUrl,
+  items = [],
   onAdd,
+  imageUrl, // Nuevo prop para la URL de la imagen del producto
 }) {
   const handleAddToCart = () => {
-    onAdd({ title, moneda, dataPrice });
+    onAdd({ idProduct, title, moneda, dataPrice });
   };
 
+  // Generar una descripción a partir de la lista de items (características)
+  const descriptionText = items.join(". ") + ".";
+
   return (
-    <div className="card d-block w-100" data-price={dataPrice}>
-      <div style={{ width: "100%", aspectRatio: "16 / 9", overflow: "hidden" }}>
-        <Image
-          src={imageUrl}
-          className="card-img-top"
-          alt={title}
-          loading="lazy"
-          width={1080}
-          height={607}
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
-      </div>
-      <div className="card-body">
-        <h5 className="card-title text-center">{title}</h5>
-        <p className="card-text">{text}</p>
-        <div className="d-flex flex-column">
-          <p className="card-text">
-            {price}
-            <span> {moneda}</span>
-          </p>
-          <button className="btn btn-dark" onClick={handleAddToCart}>
-            Añadir +
-          </button>
+    <li
+      itemScope // Indica que este elemento describe un ítem.
+      itemType="http://schema.org/Product" // Especifica que el ítem es un Producto.
+      id={idProduct}
+      className="card d-block bg-transparent border-1 rounded-5 text-white text-start shadow-md p-0 card-services"
+      style={{ width: "22rem" }}
+      data-price={dataPrice}
+    >
+      {/* Microdatos para el ID del producto (importante para Facebook) */}
+      <meta itemProp="productID" content={idProduct} />
+      {imageUrl && <meta itemProp="image" content={imageUrl} />}
+      {descriptionText && (
+        <meta itemProp="description" content={descriptionText} />
+      )}
+
+      <div className="card-body d-flex flex-column">
+        <h3 itemProp="name" className="h2 fw-bolder card-title text-center">
+          {title}
+        </h3>
+        {/* Contenedor para la oferta del producto (precio, moneda, disponibilidad) */}
+        <div itemProp="offers" itemScope itemType="http://schema.org/Offer">
+          <meta itemProp="priceCurrency" content={moneda} />
+          <meta itemProp="price" content={dataPrice.toString()} />
+          {/* Para servicios, "InStock" o "AvailableForOrder" suelen ser apropiados */}
+          <link itemProp="availability" href="http://schema.org/InStock" />
+
+          <div className="d-flex justify-content-evenly align-items-center">
+            <p className="text-lit fw-lighter">Costo: </p>
+            <p className="h1 fw-bolder">
+              <span className="fw-lighter">$</span>
+              {price} {/* Este es el precio formateado para mostrar */}
+              <span> {moneda}</span>
+            </p>
+          </div>
         </div>
+        <button className="btn-services" onClick={handleAddToCart}>
+          <span className="fw-bolder">Agregar al carrito</span>
+        </button>
       </div>
-    </div>
+      <div className="card-footer d-flex justify-content-center align-items-center">
+        {/* Podrías añadir una descripción del producto aquí con itemProp="description" */}
+        <ul className="list-group list-group-flush w-100">
+          {items.map((item, idx) => (
+            <li
+              key={idx}
+              className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100"
+            >
+              <p className="fs-5 m-0">
+                <span className="icon-check-list fs-5 me-2"></span>
+                {item}
+              </p>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </li>
   );
 }
 
 // Validación de props
 CardProduct.propTypes = {
+  idProduct: PropTypes.string.isRequired,
   dataPrice: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired,
-  text: PropTypes.string.isRequired,
   price: PropTypes.string.isRequired,
   moneda: PropTypes.string.isRequired,
-  imageUrl: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string).isRequired,
   onAdd: PropTypes.func.isRequired,
+  imageUrl: PropTypes.string, // Es opcional, pero Google lo marca como crítico si falta
 };
 
 export default CardProduct;

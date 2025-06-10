@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import Image from "next/image";
 import imgIconCart from "@/assets/icons/carrito.png";
 
-function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
+function ShoppingCart({ items, onRemove, onOpenOrderForm }) {
   const [isCartVisible, setIsCartVisible] = useState(false);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -26,31 +26,13 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
     setIsCartVisible(false);
   };
 
-  const createNumberOrder = async () => {
-    try {
-      const response = await fetch(
-        "https://jegdevstudios.onrender.com/generate-order-number"
-      );
-      const data = await response.json();
-
-      if (response.ok) {
-        setOrderNumber(data.orderNumber);
-      } else {
-        alert("Hubo un error al generar el número de orden");
-      }
-    } catch (error) {
-      console.error(error);
-      alert("Hubo un error al solicitar el número de orden.");
-    }
-  };
-
   return (
     <>
       {!isCartVisible && (
         <button
-          className="position-absolute bottom-0 end-0 btn btn-light border-2 rounded-circle z-3"
+          className="btn btn-light border-2 rounded-circle z-3"
           id="carrito"
-          style={{ width: "4rem", height: "4rem", right: "1rem", bottom: "1rem" }}
+          style={{ width: "4rem", height: "4rem", position: "fixed", right: "2rem", bottom: "8rem" }}
           onClick={toggleCartVisibility}
         >
           <Image
@@ -125,8 +107,7 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
             className="btn btn-dark"
             onClick={() => {
               closeCart(); // Cerrar el carrito
-              createNumberOrder(); // Crear número de orden
-              onOpenOrderForm(); // Abrir el formulario
+              onOpenOrderForm(); // Abrir el formulario (el padre generará el número de orden)
             }}
           >
             Realizar pedido
@@ -140,6 +121,7 @@ function ShoppingCart({ items, onRemove, onOpenOrderForm, setOrderNumber }) {
 ShoppingCart.propTypes = {
   items: PropTypes.arrayOf(
     PropTypes.shape({
+      idProduct: PropTypes.string, // Añadido para reflejar la estructura actual
       title: PropTypes.string,
       moneda: PropTypes.string,
       dataPrice: PropTypes.number,
@@ -147,7 +129,6 @@ ShoppingCart.propTypes = {
   ).isRequired,
   onRemove: PropTypes.func.isRequired,
   onOpenOrderForm: PropTypes.func.isRequired,
-  setOrderNumber: PropTypes.func.isRequired,
 };
 
 export default ShoppingCart;

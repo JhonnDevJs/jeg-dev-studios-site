@@ -1,35 +1,41 @@
-import Image from "next/image";
 import PropTypes from "prop-types";
+import Link from "next/link";
 
-function CardServices({ imageUrl, title, url }) {
+function CardServices({ title, description, url, buttonLabel, items = [] }) {
   return (
-    <li className="card d-block p-0" style={{ width: "18rem" }}>
-      <div style={{ width: "100%", aspectRatio: "1 / 1", overflow: "hidden" }}>
-        <Image
-          src={imageUrl}
-          className="card-img-top"
-          alt="imagen de la tarjeta"
-          loading="lazy"
-          width={1024}
-          height={1024}
-          style={{ width: "100%", height: "100%", objectFit: "cover" }}
-        />
+    <li
+      className="card d-block bg-transparent border-1 rounded-5 text-white text-start shadow-md p-0 card-services"
+      style={{ width: "22rem"}}
+    >
+      <div className="card-body d-flex flex-column">
+        <h3 className="h2 fw-bolder card-title text-start">{title}</h3>
+        <p className="fs-5 text-start">{description}</p>
+        <Link href={url} className="btn-services">
+          <span className="fw-bolder">{buttonLabel}</span>
+        </Link>
       </div>
-      <div className="card-body d-flex flex-column ">
-        <h3 className="h5 card-title text-center">{title}</h3>
-        <a href={url} className="btn btn-dark">
-          ver más
-        </a>
+      <div className="card-footer d-flex justify-content-center align-items-center">
+        <ul className="list-group list-group-flush w-100">
+          {items.map((item, idx) => (
+            <li key={idx} className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100">
+              <p className="fs-5 m-0">
+                <span className="icon-check-list fs-5 me-2"></span>
+                {item}
+              </p>
+            </li>
+          ))}
+        </ul>
       </div>
     </li>
   );
 }
 
 CardServices.propTypes = {
-  imageUrl: PropTypes.oneOfType([PropTypes.string, PropTypes.object])
-    .isRequired,
   title: PropTypes.string.isRequired,
+  description: PropTypes.string,
   url: PropTypes.string.isRequired,
+  buttonLabel: PropTypes.string.isRequired,
+  items: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default CardServices;
