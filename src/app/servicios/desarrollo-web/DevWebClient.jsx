@@ -7,6 +7,7 @@ import OrderForm from "@/components/OrderForm";
 import CTAProducts from "@/components/CTAProducts";
 import CardSmallList from "@/components/CardSmallList";
 import CardNestedLists from "@/components/CardNestedLists";
+import SectionProcess from "@/components/SectionProcess";
 import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
@@ -412,6 +413,7 @@ export default function DevWebClient() {
           />
         </ul>
       </section>
+      <SectionProcess />
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
         <CardSmallList
           titulo="Descubrimiento y Planificación Inicial"
@@ -424,6 +426,8 @@ export default function DevWebClient() {
           ]}
           lastText="Tecnologías: Según el paquete, usamos stacks modernos como Figma, HTML, JavaScript, Tailwind, Next.js, Bootstrap, Node.js, PHP (Laravel) o Java."
         />
+      </section>
+      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
         <CardNestedLists
           titulo=" Ciclos de Desarrollo Iterativos (Sprints)"
           subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
@@ -452,6 +456,8 @@ export default function DevWebClient() {
             },
           ]}
         />
+      </section>  
+      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
         <CardSmallList
           titulo=" Revisión Final y Entrega del Proyecto"
           subtitulo="Una vez terminado el número de Sprints necesarios (dependiendo del paquete elegido), realizamos lo siguiente:"

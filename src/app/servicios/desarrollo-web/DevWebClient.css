@@ -85,3 +85,61 @@
     display: none !important;
   }
 }
+
+.section-process-waves {
+  height: 100dvh;
+}
+.section-process-waves::before,
+.section-process-waves::after {
+  content: ""; /* Necesario para que los pseudo-elementos se muestren */
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  
+  /* Tamaño base de los círculos */
+  width: 200px; 
+  height: 200px;
+  
+  border-radius: 50%; /* Para hacerlos circulares */
+  border: 2px solid rgba(255, 255, 255, 0.15); /* Color y grosor de la línea (blanco semitransparente) */
+  
+  opacity: 0; /* Inician invisibles */
+  
+  /* Aplicamos la animación */
+  /* El transform: translate(-50%, -50%) se maneja dentro de la animación para centrar correctamente durante el escalado */
+  animation: waveEffect 5s infinite linear;
+  
+  z-index: 0; /* Para que estén detrás del contenido del article (que tiene z-index: 1) */
+}
+
+/* Hacemos que la segunda onda (::after) comience con un retraso para un efecto más dinámico */
+.section-process-waves::after {
+  animation-delay: -2.5s; /* La mitad de la duración de la animación */
+}
+
+.process-waves-container {
+  width: 50%;
+}
+
+@media (max-width: 440px) {
+  .process-waves-container {
+    width: 100%;
+  }
+}
+@keyframes waveEffect {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1); /* Inicia pequeño y centrado */
+    opacity: 0;
+  }
+  20% { /* Aparece gradualmente */
+    opacity: 0.7;
+  }
+  70% { /* Se expande y empieza a desvanecerse */
+    transform: translate(-50%, -50%) scale(2.5); /* Escala hasta 2.5 veces su tamaño base (500px) */
+    opacity: 0.3;
+  }
+  100% { /* Termina grande y completamente transparente */
+    transform: translate(-50%, -50%) scale(3.5); /* Escala hasta 3.5 veces su tamaño base (700px) */
+    opacity: 0;
+  }
+}
