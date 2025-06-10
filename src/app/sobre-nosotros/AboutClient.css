@@ -1,14 +1,14 @@
 .__image-background-About {
   background-image: url("/fondos/Sobre_Nosotros.webp");
-  background-size: 100% 50vh;
+  background-size: 100% 40vh;
   background-position: start center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: 50dvh;
+  height: 40dvh;
 }
 @media (max-width: 768px) {
-  .__image-background-About {
+  .__image-background-servicios {
     background-size: 100% 30vh;
     background-position: start center;
     background-attachment: scroll;
