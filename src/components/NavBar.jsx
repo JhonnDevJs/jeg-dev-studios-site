@@ -95,7 +95,7 @@ function NavBar() {
                 <li className="nav-item">
                   <Link
                     href="/blog"
-                    className={`nav-link d-none text-white nav-efecto${
+                    className={`nav-link text-white nav-efecto${
                       pathname === "/blog" ? " active" : ""
                     }`}
                   >
