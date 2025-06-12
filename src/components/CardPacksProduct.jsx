@@ -29,7 +29,7 @@ function CardPacksProduct({
     >
       {/* Microdatos para el ID del producto (importante para Facebook) */}
       <meta itemProp="productID" content={idProduct} />
-      {imageUrl && <meta itemProp="image" content={imageUrl} />}
+      {imageUrl && <link itemProp="image" href={imageUrl} />}
       {descriptionText && <meta itemProp="description" content={descriptionText} />}
 
       <div className="card-body d-flex flex-column">

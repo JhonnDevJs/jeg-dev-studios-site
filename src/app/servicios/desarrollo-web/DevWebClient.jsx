@@ -366,7 +366,7 @@ export default function DevWebClient() {
             title="Landing Page Profesional"
             price="2999"
             moneda="MXN"
-            imageUrl={imgWebProduct1}
+            imageUrl={imgWebProduct1.src}
             items={[
               "Dominio personalizado incluido (1 año)",
               "Hosting gratuito mediante Google Sites",
@@ -394,7 +394,7 @@ export default function DevWebClient() {
             title="Paquete Básico"
             price="5799"
             moneda="MXN"
-            imageUrl={imgWebProduct1}
+            imageUrl={imgWebProduct1.src}
             items={[
               "1 año de Hosting y dominio (con hostinger)",
               "Certificado SSL",
@@ -417,7 +417,7 @@ export default function DevWebClient() {
             title="Paquete Plus"
             price="17299"
             moneda="MXN"
-            imageUrl={imgWebProduct2}
+            imageUrl={imgWebProduct2.src}
             items={[
               "1 año de Hosting y dominio (a elegir Hostinger ó Dondominio)",
               "Certificado SSL",
@@ -441,7 +441,7 @@ export default function DevWebClient() {
             title="Paquete Pro"
             price="28799"
             moneda="MXN"
-            imageUrl={imgWebProduct3}
+            imageUrl={imgWebProduct3.src}
             items={[
               "1 año de Hosting y dominio (con dondominio)",
               "Certificado SSL",

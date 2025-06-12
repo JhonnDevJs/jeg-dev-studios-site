@@ -336,7 +336,7 @@ export default function DevAppClient() {
             title="App de Inicio"
             price="18999"
             moneda="MXN"
-            imageUrl={imgAppProduct1}
+            imageUrl={imgAppProduct1.src}
             items={[
               "App nativa sencilla para Android o iOS (1 plataforma).",
               "Diseño responsivo y minimalista.",
@@ -353,7 +353,7 @@ export default function DevAppClient() {
             title="App Dual Básica"
             price="37999"
             moneda="MXN"
-            imageUrl={imgAppProduct2}
+            imageUrl={imgAppProduct2.src}
             items={[
               "App para Android e iOS (React Native o Kotlin Multiplatform).",
               "Hasta 6 pantallas dinámicas (login, inicio, catálogo, detalles, contacto, perfil).",
@@ -370,7 +370,7 @@ export default function DevAppClient() {
             title="App Funcional Pro"
             price="75999"
             moneda="MXN"
-            imageUrl={imgAppProduct3}
+            imageUrl={imgAppProduct3.src}
             items={[
               "App híbrida o nativa para Android e iOS.",
               "Módulos personalizados (usuarios, productos, pedidos, etc.).",
@@ -388,7 +388,7 @@ export default function DevAppClient() {
             title="App a Medida Premium"
             price="134999"
             moneda="MXN"
-            imageUrl={imgAppProduct4}
+            imageUrl={imgAppProduct4.src}
             items={[
               "App personalizada desde cero (multiplataforma).",
               "Arquitectura avanzada y optimizada.",
