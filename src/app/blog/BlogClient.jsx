@@ -5,7 +5,7 @@ export default function BlogClient({ posts }) {
 	if (!posts || !Array.isArray(posts)) {
 		return (
 			<div className="container pt-5 pb-5 text-white text-center">
-				<h1 className="display-4 fw-bold mb-4">Blog</h1>
+				<h2 className="display-4 fw-bold mb-4">Blog</h2>
 				<p className="lead">No se pudieron cargar las entradas del blog en este momento. Por favor, inténtalo de nuevo más tarde.</p>
 			</div>
 		);
@@ -14,7 +14,7 @@ export default function BlogClient({ posts }) {
 	if (posts.length === 0) {
 		return (
 			<div className="container pt-5 pb-5 text-white text-center">
-				<h1 className="display-4 fw-bold mb-4">Blog</h1>
+				<h2 className="display-4 fw-bold mb-4">Blog</h2>
 				<p className="lead">No hay entradas para mostrar.</p>
 			</div>
 		);
@@ -26,7 +26,7 @@ export default function BlogClient({ posts }) {
 	return (
 		<section className="container pt-5 pb-5">
 			<h1 className="display-4 fw-bold pt-5 mb-4 text-center text-white">
-				Aprende más con nuestro blog de JEG Dev Studios
+				Conoce y aprende más con el blog de JEG Dev Studios
 			</h1>
 			<p className="lead text-center text-white mb-5"> {/* Aumenté el mb para más separación */}
 				Aprende más y obten tips sobre desarrollo de sitios web, aplicaciones,
@@ -52,7 +52,7 @@ export default function BlogClient({ posts }) {
 					{/* Asumimos que text-bg-article maneja el color del texto para que sea legible */}
 					<div className={`card-img-overlay d-flex flex-column justify-content-end p-md-5 p-4 ${!firstPost.imageUrl ? 'position-relative' : ''}`}> {/* text-white como fallback y ajuste si no hay imagen */}
 						<div style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', padding: '1.5rem', borderRadius: '0.3rem' }}> {/* Fondo semitransparente para mejorar legibilidad */}
-							<h3 className="card-title display-5 fw-bold text-white">{firstPost.title}</h3>
+							<h2 className="card-title display-5 fw-bold text-white">{firstPost.title}</h2>
 							<div
 								className="card-text lead mb-2 d-none d-md-block text-white" /* Ocultar en pantallas pequeñas, texto un poco más tenue */
 								dangerouslySetInnerHTML={{

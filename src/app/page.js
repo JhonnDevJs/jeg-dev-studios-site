@@ -1,5 +1,3 @@
-"use client";
-import React from "react";
 import { FaGlobe, FaChartLine, FaLock, FaHeadset } from "react-icons/fa";
 import Link from "next/link";
 import CardServices from "@/components/CardServices";
@@ -16,7 +14,7 @@ export default function Home() {
           style={{ maxWidth: "47rem" }}
         >
           <div className="container p-0 m-0">
-            <h2 className="display-5 text-light text-shadow">
+            <h2 className="h1 text-white text-shadow">
               Desarrollo Web, Software y Apps en México – JEG Dev Studios
             </h2>
             <p className="fs-xl-1 fs-5 text-light text-shadow text-brack">
