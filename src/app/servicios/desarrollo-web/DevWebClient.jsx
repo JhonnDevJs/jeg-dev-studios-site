@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { useFacebookPixelInitializer } from "@/hooks/useFacebookPixelInitializer";
 import ShoppingCart from "@/components/ShoppingCart";
 import CardProduct from "@/components/CardProduct";
 import CardPacksProduct from "@/components/CardPacksProduct";
@@ -15,6 +16,7 @@ import "./DevWebClient.css";
 import CardsProcess from "@/components/CardsProcess";
 
 export default function DevWebClient() {
+  const isPixelReady = useFacebookPixelInitializer();
   const [cartItems, setCartItems] = useState([]);
   const [orderNumber, setOrderNumber] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -29,7 +31,7 @@ export default function DevWebClient() {
     }
   }, []);
 
-  const products = [
+  const products = useMemo(() => [
     {
       id: "paquete_basico",
       name: "Paquete Básico",
@@ -54,7 +56,7 @@ export default function DevWebClient() {
     // Nota: "landing-page-profesional" no está en este array `products`.
     // Su imagen se rastreará en AddToCart, pero no en el ViewContent inicial del grupo de productos.
     // Si deseas incluirlo en el ViewContent del grupo, deberías añadirlo aquí también.
-  ];
+  ], []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -63,7 +65,7 @@ export default function DevWebClient() {
   }, [cartItems]);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && window.fbq) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq && products.length > 0) {
       window.fbq("track", "ViewContent", {
         content_type: "product_group",
         content_ids: products.map((p) => p.id),
@@ -72,12 +74,12 @@ export default function DevWebClient() {
           id: p.id,
           quantity: 1,
           item_price: p.price,
-          image_url: p.imageSrc, // Añadido image_url
+          image_url: p.imageSrc,
         })),
         currency: "MXN",
       });
     }
-  }, []);
+  }, [isPixelReady, products]);
 
   // Nuevo handler para cotizaciones personalizadas
   const handleQuoteRequest = async ({
@@ -91,7 +93,7 @@ export default function DevWebClient() {
     setIsGeneratingOrder(true); // Indicar que estamos generando la orden/cotización
 
     // Dispara evento de Pixel
-    if (typeof window !== "undefined" && window.fbq) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "Lead", {
         content_name: title,
         content_ids: [idProduct],
@@ -144,7 +146,7 @@ export default function DevWebClient() {
     setIsGeneratingOrder(false); // Finaliza la carga
 
     // Disparar InitiateCheckout para cotizaciones también, si aplica
-    if (typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
       const item = {
         idProduct,
         title,
@@ -186,7 +188,7 @@ export default function DevWebClient() {
 
     setCartItems((prevItems) => [...prevItems, productData]);
 
-    if (typeof window !== "undefined" && window.fbq) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "AddToCart", {
         content_name: productData.title,
         content_ids: [productData.idProduct],
@@ -253,7 +255,7 @@ export default function DevWebClient() {
       setIsGeneratingOrder(false);
     }
 
-    if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
       if (tempOrderNumber) {
         const totalValue = cartItems.reduce(
           (sum, item) => sum + item.dataPrice,
@@ -294,6 +296,7 @@ export default function DevWebClient() {
 
   const handleSubmitOrder = (submittedOrderData) => {
     if (
+      isPixelReady &&
       typeof window !== "undefined" &&
       window.fbq &&
       cartItems.length > 0 &&

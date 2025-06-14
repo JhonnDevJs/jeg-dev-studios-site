@@ -1,5 +1,6 @@
 "use client";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useMemo } from "react";
+import { useFacebookPixelInitializer } from "@/hooks/useFacebookPixelInitializer";
 import ShoppingCart from "@/components/ShoppingCart";
 import CardPacksProduct from "@/components/CardPacksProduct";
 import OrderForm from "@/components/OrderForm";
@@ -11,6 +12,7 @@ import imgSoftProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-mue
 import "./DevSoftClient.css";
 
 export default function DevSoftClient() {
+  const isPixelReady = useFacebookPixelInitializer();
   const [cartItems, setCartItems] = useState([]);
   const [orderNumber, setOrderNumber] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
@@ -25,7 +27,7 @@ export default function DevSoftClient() {
     }
   }, []);
 
-  const products = [
+  const products = useMemo(() => [
     {
       id: "solucion_basica",
       name: "Solución Básica",
@@ -54,7 +56,7 @@ export default function DevSoftClient() {
       currency: "MXN",
       imageSrc: imgSoftProduct4.src,
     },
-  ];
+  ], []);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -63,7 +65,7 @@ export default function DevSoftClient() {
   }, [cartItems]);
 
   useEffect(() => {
-    if (typeof window !== "undefined" && window.fbq) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq && products.length > 0) {
       window.fbq("track", "ViewContent", {
         content_type: "product_group",
         content_ids: products.map((p) => p.id),
@@ -77,13 +79,13 @@ export default function DevSoftClient() {
         currency: "MXN",
       });
     }
-  }, []);
+  }, [isPixelReady, products]);
 
   const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
     setIsFormVisible(true); // Mostrar el formulario inmediatamente
     setIsGeneratingOrder(true); // Indicar que estamos generando la orden/cotización
 
-    if (typeof window !== "undefined" && window.fbq) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "Lead", {
         content_name: title,
         content_ids: [idProduct],
@@ -127,7 +129,7 @@ export default function DevSoftClient() {
     setIsGeneratingOrder(false); // Finaliza la carga
 
     // Disparar InitiateCheckout para cotizaciones también, si aplica
-    if (typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
         window.fbq("track", "InitiateCheckout", {
             contents: [{ id: quoteItem.idProduct, quantity: 1, item_price: quoteItem.dataPrice, image_url: quoteItem.imageSrc }],
             content_ids: [quoteItem.idProduct],
@@ -157,7 +159,7 @@ export default function DevSoftClient() {
     };
     setCartItems((prevItems) => [...prevItems, productData]);
 
-    if (typeof window !== "undefined" && window.fbq) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq) {
       window.fbq("track", "AddToCart", {
         content_name: productData.title,
         content_ids: [productData.idProduct],
@@ -215,7 +217,7 @@ export default function DevSoftClient() {
       setIsGeneratingOrder(false);
     }
 
-    if (typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
+    if (isPixelReady && typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
       if (tempOrderNumber) {
         const totalValue = cartItems.reduce(
           (sum, item) => sum + item.dataPrice,
@@ -253,6 +255,7 @@ export default function DevSoftClient() {
 
   const handleSubmitOrder = (submittedOrderData) => {
     if (
+      isPixelReady &&
       typeof window !== "undefined" &&
       window.fbq &&
       cartItems.length > 0 &&
