@@ -26,8 +26,12 @@
     "tailwindcss": "^4.1.8"
   },
   "browserslist": [
-    "defaults",
-    "not IE 11",
-    "not dead"
+    "last 2 Chrome versions",
+    "last 2 Firefox versions",
+    "last 2 Safari versions",
+    "last 2 Edge versions",
+    "Firefox ESR",
+    "not dead",
+    "not IE 11"
   ]
 }
