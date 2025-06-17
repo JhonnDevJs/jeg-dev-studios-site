@@ -80,3 +80,32 @@
   background: rgb(255, 255, 255); /* Fondo más opaco */
   color: black;
 }
+
+.featured-blog-section .blog-post-summary p {
+  margin-bottom: 0;
+}
+
+/* d:\Documents\Cursos\jeg-dev-studios-site\src\components\BlogSection.css */
+
+.side-post-image-container {
+  position: relative; /* Esencial para que next/image con layout="fill" funcione correctamente */
+  aspect-ratio: 16/9; /* Mantiene la proporción de la imagen */
+  width: 100%;         /* En móviles (flex-column), ocupa todo el ancho de la tarjeta */
+  flex-shrink: 0;     /* Evita que la imagen se encoja en la disposición flex-row */
+}
+
+@media (min-width: 768px) { /* md breakpoint de Bootstrap (para flex-md-row) */
+  .side-post-image-container {
+    width: 270px; /* Ancho fijo para la imagen en escritorio. Ajusta según necesites. */
+                  /* La altura se derivará del aspect-ratio (200px * 9/16 = 112.5px) */
+  }
+}
+
+/* Opcional: asegurar que el resumen no empuje el botón si el contenido es muy corto */
+/* y flex-grow-1 está presente en el contenedor del resumen */
+.blog-post-summary {
+  min-height: 3.6em; /* Asegura un mínimo de espacio si el contenido es muy corto, */
+                     /* ayudando a mt-auto en el botón si el resumen es el único elemento flexible. */
+                     /* Esto es opcional y depende de cómo se vea con contenido muy corto. */
+}
+

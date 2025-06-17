@@ -5,9 +5,26 @@ import Link from "next/link";
 import CardServices from "@/components/CardServices";
 import TeamCarousel from "@/components/TeamCarousel";
 import CTA from "@/components/CTA";
+import BlogSection from '@/components/BlogSection';
+import { getBlogPosts } from '@/lib/fetchRSS';
 import "./home.css";
 
-export default function Home() {
+export const revalidate = 3600;
+
+export default async function Home() {
+	let postsToShow = [];
+  try {
+    const allPosts = await getBlogPosts();
+    // Asegúrate de que allPosts es un array y toma los primeros 4
+    if (Array.isArray(allPosts)) {
+      postsToShow = allPosts.slice(0, 4);
+    } else {
+      console.error("fetchBlogPosts no devolvió un array:");
+    }
+  } catch (error) {
+    console.error("Error al obtener los posts del blog:", error);
+  }
+
   return (
 		<>
 			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground">
@@ -361,6 +378,7 @@ export default function Home() {
 				</div>
 			</section>
 			<CTA />
+			<BlogSection posts={postsToShow}/>
 		</>
 	);
   

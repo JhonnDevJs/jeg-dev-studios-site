@@ -50,9 +50,9 @@ export default function BlogClient({ posts }) {
 					)}
 					{/* card-img-overlay necesita que la imagen esté presente o podría no verse como esperas */}
 					{/* Asumimos que text-bg-article maneja el color del texto para que sea legible */}
-					<div className={`card-img-overlay d-flex flex-column justify-content-end p-md-5 p-4 ${!firstPost.imageUrl ? 'position-relative' : ''}`}> {/* text-white como fallback y ajuste si no hay imagen */}
-						<div style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', padding: '1.5rem', borderRadius: '0.3rem' }}> {/* Fondo semitransparente para mejorar legibilidad */}
-							<h2 className="card-title display-5 fw-bold text-white">{firstPost.title}</h2>
+					<div className={`card-img-overlay d-flex flex-column justify-content-end p-3 p-md-5 ${!firstPost.imageUrl ? 'position-relative' : ''}`}> {/* Padding de overlay ajustado */}
+						<div className="d-flex flex-column p-2 p-md-3" style={{ backgroundColor: 'rgba(0, 0, 0, 0.6)', borderRadius: '0.3rem' }}> {/* Contenedor de texto flex y padding ajustado */}
+							<h2 className="card-title fs-5 fs-sm-4 fs-md-1 fw-bold text-white">{firstPost.title}</h2> {/* Tamaño de fuente responsivo */}
 							<div
 								className="card-text lead mb-2 d-none d-md-block text-white" /* Ocultar en pantallas pequeñas, texto un poco más tenue */
 								dangerouslySetInnerHTML={{
@@ -69,7 +69,7 @@ export default function BlogClient({ posts }) {
 								href={firstPost.link}
 								target="_blank"
 								rel="noopener noreferrer"
-								className="btn btn-light btn-lg mt-auto" // Botón claro para contraste
+								className="btn btn-light btn-xl-lg btn-sm mt-auto" // Botón claro para contraste
 							>
 								Leer artículo completo →
 							</a>
