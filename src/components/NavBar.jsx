@@ -20,13 +20,12 @@ function NavBar() {
           >
             <Image
               src={iconLogo}
-              alt="Logo"
+              alt="Logo JEG Dev Studios"
               width={70}
               height={70}
               className="d-inline-block align-text-top rounded-circle"
               loading="lazy"
             />
-            <h1 className="d-none">JEG Dev Studios</h1>
           </Link>
 
           {/* Botón Hamburguesa para móviles */}
