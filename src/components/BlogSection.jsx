@@ -19,7 +19,7 @@ export default function BlogSection({ posts }) {
 	const cardThemeClasses = "bg-transparent text-white";
 
 	return (
-		<section className="container py-5 featured-blog-section">
+		<section className="container-fluid p-xl-5 p-2 featured-blog-section">
 			<h2 className="display-5 fw-bold mb-5 text-center text-white">
 				{" "}
 				{/* Asumiendo texto blanco para el título de sección */}
@@ -64,12 +64,24 @@ export default function BlogSection({ posts }) {
 										day: "numeric",
 									})}
 								</p>
+								{mainPost.categories && mainPost.categories.length > 0 && (
+									<div className="mb-2">
+										{mainPost.categories.map((category, catIndex) => (
+											<span
+												key={catIndex}
+												className="badge bg-secondary me-1 mb-1"
+											>
+												{category}
+											</span>
+										))}
+									</div>
+								)}
 								<div
 									className="card-text mb-3 flex-grow-1"
 									dangerouslySetInnerHTML={{
 										__html: mainPost.contentSnippet || mainPost.content || "",
 									}}
-									style={{ maxHeight: "120px", overflow: "hidden" }}
+									style={{ maxHeight: "6rem", overflow: "hidden" }}
 								/>
 								<Link
 									href={mainPost.link}
@@ -93,6 +105,7 @@ export default function BlogSection({ posts }) {
 					<div className="col-lg-7">
 						{sidePosts.map((post, index) => (
 							<article
+								key={post.id || post.link} // <--- AÑADIR KEY AQUÍ
 								className={`d-flex flex-column flex-md-row shadow-lg ${cardThemeClasses} ${
 									index === sidePosts.length - 1 ? "mb-0" : "mb-4"
 								}`}
@@ -125,15 +138,28 @@ export default function BlogSection({ posts }) {
 											year: "numeric",
 										})}
 									</p>
+									{post.categories && post.categories.length > 0 && (
+										<div className="mb-1">
+											{post.categories.map((category, catIndex) => (
+												<span
+													key={catIndex}
+													// Usamos un badge más pequeño para los side posts
+													className="badge rounded-pill bg-secondary text-white me-1 mb-1" // Ajusta color y estilo
+												>
+													{category}
+												</span>
+											))}
+										</div>
+									)}
 									<div
 										className="small mb-2 blog-post-summary" // Quitado flex-grow-1
 										dangerouslySetInnerHTML={{
 											__html: post.contentSnippet || post.content || "",
 										}}
 										style={{
-											maxHeight: "2.4em", // Reducido a aprox. 2 líneas
+											maxHeight: "3.6em", // Aumentado a aprox. 3 líneas
 											overflow: "hidden",
-											lineHeight: "1.2em",
+											lineHeight: "1.2em", // Mantenemos para consistencia de altura de línea
 										}}
 									/>
 									<Link

@@ -27,26 +27,18 @@ export const metadata = {
 };
 
 import BlogClient from './BlogClient';
-import { getBlogPosts } from '@/lib/fetchRSS'; // Asegúrate que la ruta sea correcta
+import { getBlogPosts } from '@/lib/fetchRSS';
 
 export const revalidate = 3600;
 
-async function BlogPage() {
-  let posts = [];
+export default async function BlogPage() {
+  let allBlogPosts = [];
 
   try {
-    const fetchedPosts = await getBlogPosts();
-    if (Array.isArray(fetchedPosts)) {
-      posts = fetchedPosts;
-    } else {
-      console.error("getBlogPosts no devolvió un array. Recibido:", fetchedPosts);
-    }
+    allBlogPosts = await getBlogPosts();
   } catch (error) {
-    //console.log('Posts para BlogClient (desde page.js):', JSON.stringify(posts, null, 2));
-    console.error("Error al obtener las entradas del blog:", error);
+    console.error("Error al obtener los posts para la página del blog:", error);
   }
 
-  return <BlogClient posts={posts} />;
+  return <BlogClient posts={allBlogPosts} />;
 }
-
-export default BlogPage;

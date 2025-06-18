@@ -1,23 +1,16 @@
 // next.config.mjs
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+  reactStrictMode: true, // o cualquier otra configuración que ya tengas
   images: {
     remotePatterns: [
       {
         protocol: 'https',
-        hostname: 'bp.blogspot.com',
-        // puedes añadir port y pathname si son específicos
-      },
-      {
-        protocol: 'http', // Si algunas imágenes son http
-        hostname: 'bp.blogspot.com',
-      },
-      {
-        protocol: 'https',
         hostname: 'blogger.googleusercontent.com',
+        port: '', // Generalmente vacío para puertos estándar (80 para http, 443 para https)
+        pathname: '/img/b/R29vZ2xl/**', // Ajusta el pathname según sea necesario, '**' es un comodín
       },
-      // Añade más dominios si es necesario
     ],
   },
 };

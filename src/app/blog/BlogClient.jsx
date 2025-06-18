@@ -58,12 +58,24 @@ export default function BlogClient({ posts }) {
 								dangerouslySetInnerHTML={{
 									__html: firstPost.contentSnippet || firstPost.content || "",
 								}}
-								style={{ maxHeight: '100px', overflow: 'hidden' }} // Limitar altura del snippet
+								// Aumentamos la altura máxima para el snippet del post destacado.
+								style={{ maxHeight: '150px', overflow: 'hidden' }}
 							/>
 							<p className="card-text mb-3 text-white">
 								<small>
 									Publicado el {new Date(firstPost.pubDate).toLocaleDateString("es-ES", { year: 'numeric', month: 'long', day: 'numeric' })}
 								</small>
+							</p>
+							<p className="card-text mb-2 d-none d-md-block">
+								{firstPost.categories && firstPost.categories.length > 0 && (
+									firstPost.categories.map((category, catIndex) => (
+										<span
+											key={catIndex}
+											className="badge bg-light text-dark me-2 mb-1" // Badge claro para contraste en overlay oscuro
+										>
+											{category}
+										</span>
+									)))}
 							</p>
 							<a
 								href={firstPost.link}
@@ -84,7 +96,7 @@ export default function BlogClient({ posts }) {
 					{firstPost && <hr className="my-5 border-secondary" />} {/* Separador si hay post destacado y posts restantes */}
 					<div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
 						{remainingPosts.map((post) => (
-							<article key={post.link || post.guid || post.title} className="col d-flex"> {/* d-flex para que todas las cards en una fila tengan la misma altura si es necesario */}
+							<article key={post.id || post.link} className="col d-flex"> {/* Priorizar post.id si está disponible y es único */}
 								<div
 									className="card h-100 bg-transparent text-white shadow-lg d-flex flex-column" // d-flex y flex-column para estructura interna
 									style={{ maxWidth: "28rem", margin: '0 auto' }} // Centrar cards si la columna es más ancha
@@ -105,10 +117,25 @@ export default function BlogClient({ posts }) {
 										<p className="card-text text-white-75 small mb-2"> {/* texto un poco más tenue */}
 											{new Date(post.pubDate).toLocaleDateString("es-ES", { day: 'numeric', month: 'short', year: 'numeric' })}
 										</p>
+										{post.categories && post.categories.length > 0 && (
+											<div className="mb-2">
+												{post.categories.map((category, catIndex) => (
+													<span
+														key={catIndex}
+														className="badge bg-secondary me-1 mb-1" // Puedes usar otro color si prefieres
+													>
+														{category}
+													</span>
+												))}
+											</div>
+										)}
+
 										<div
 											className="card-text mb-3 blog-post-summary flex-grow-1" // flex-grow-1 para que ocupe espacio disponible
 											dangerouslySetInnerHTML={{
-												__html: post.contentSnippet || post.content || "",
+												// Usamos contentSnippet si está disponible, sino content.
+												// Asegúrate que estos campos tengan datos desde tu fetchRSS.js
+												__html: post.contentSnippet || post.content || "No hay extracto disponible.",
 											}}
 										/>
 										<a
