@@ -1,4 +1,5 @@
-'use client'
+'use client';
+import { useEffect, useState } from 'react';
 
 import { jsxDEV as _jsxDEV, Fragment as _Fragment } from "react/jsx-dev-runtime";
 import { FaGlobe, FaChartLine, FaLock, FaHeadset, FaHandshake, FaFire, FaSearch, FaChartBar, FaAssistiveListeningSystems } from "react-icons/fa";
@@ -11,6 +12,8 @@ import BlogSection from '@/components/BlogSection';
 import "./home.css";
 
 export default function HomeClient({ posts: postsToShow }) {
+	const [mounted, setMounted] = useState(false);
+	useEffect(() => setMounted(true), []);
   return (
 		<>
 			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground">
@@ -364,7 +367,7 @@ export default function HomeClient({ posts: postsToShow }) {
 				</div>
 			</section>
 			<CTA />
-			<BlogSection posts={postsToShow}/>
+			{mounted && <BlogSection posts={postsToShow} />}
 		</>
 	);
 }

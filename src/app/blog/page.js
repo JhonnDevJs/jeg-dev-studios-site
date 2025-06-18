@@ -26,6 +26,7 @@ export const metadata = {
   },
 };
 
+import ClientOnly from '@/components/ClientOnly';
 import BlogClient from './BlogClient';
 import { getBlogPosts } from '@/lib/fetchRSS';
 
@@ -40,5 +41,9 @@ export default async function BlogPage() {
     console.error("Error al obtener los posts para la página del blog:", error);
   }
 
-  return <BlogClient posts={allBlogPosts} />;
+  return (
+    <ClientOnly>
+      <BlogClient posts={allBlogPosts} />
+    </ClientOnly>
+  );
 }

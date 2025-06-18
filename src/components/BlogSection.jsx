@@ -1,5 +1,14 @@
+'use client'
 import Image from "next/image"
 import Link from "next/link";
+
+function cleanHTML(html) {
+  if (!html || typeof html !== 'string') return '';
+  return html
+    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')  // Elimina <script>
+    .replace(/on\w+="[^"]*"/gi, '')                    // Elimina eventos inline como onclick=""
+    .replace(/javascript:/gi, '');                     // Elimina javascript: en href
+}
 
 export default function BlogSection({ posts }) {
 	if (!posts || !Array.isArray(posts) || posts.length === 0) {
@@ -79,7 +88,7 @@ export default function BlogSection({ posts }) {
 								<div
 									className="card-text mb-3 flex-grow-1"
 									dangerouslySetInnerHTML={{
-										__html: mainPost.contentSnippet || mainPost.content || "",
+										__html: cleanHTML(mainPost.contentSnippet || mainPost.content || ""),
 									}}
 									style={{ maxHeight: "6rem", overflow: "hidden" }}
 								/>
@@ -152,14 +161,14 @@ export default function BlogSection({ posts }) {
 										</div>
 									)}
 									<div
-										className="small mb-2 blog-post-summary" // Quitado flex-grow-1
+										className="small mb-2 blog-post-summary"
 										dangerouslySetInnerHTML={{
-											__html: post.contentSnippet || post.content || "",
+											__html: cleanHTML(post.contentSnippet || post.content || ""),
 										}}
 										style={{
-											maxHeight: "3.6em", // Aumentado a aprox. 3 líneas
+											maxHeight: "3.6em",
 											overflow: "hidden",
-											lineHeight: "1.2em", // Mantenemos para consistencia de altura de línea
+											lineHeight: "1.2em",
 										}}
 									/>
 									<Link

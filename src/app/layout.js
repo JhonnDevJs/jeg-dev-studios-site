@@ -255,8 +255,8 @@ export default async function RootLayout({ children }) {
           {children}
           <BtnWhats />
         </main>
-        <BootstrapClient />
         <Footer />
+        <BootstrapClient />
       </body>
     </html>
   );

@@ -14,8 +14,6 @@ const FEED_URL = process.env.BLOG_FEED_URL || 'https://jegdevstudios.blogspot.co
  */
 function extractImageUrl(htmlContent) {
   if (!htmlContent) return null;
-  // Esta regex busca la primera etiqueta <img> y captura el valor de su atributo src.
-  // Podría necesitar ajustes si la estructura del HTML de tu feed es diferente.
   const imgTagMatch = htmlContent.match(/<img[^>]+src="([^">]+)"/);
   return imgTagMatch ? imgTagMatch[1] : null;
 }
