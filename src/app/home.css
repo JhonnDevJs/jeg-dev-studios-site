@@ -88,7 +88,7 @@
 /* d:\Documents\Cursos\jeg-dev-studios-site\src\components\BlogSection.css */
 
 .side-post-image-container {
-  position: relative; /* Esencial para que next/image con layout="fill" funcione correctamente */
+  position: relative; /* Esencial para que next/image con fill={true} funcione correctamente */
   aspect-ratio: 16/9; /* Mantiene la proporción de la imagen */
   width: 100%;         /* En móviles (flex-column), ocupa todo el ancho de la tarjeta */
   flex-shrink: 0;     /* Evita que la imagen se encoja en la disposición flex-row */

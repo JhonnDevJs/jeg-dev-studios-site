@@ -6,7 +6,7 @@ import Richi from "@/assets/img/img/team/ricardo.webp";
 
 export default function TeamCarousel() {
   return (
-    <div id="carouselExampleCaptions" className="carousel slid px-5">
+    <div id="carouselExampleCaptions" className="carousel slide px-5">
       <div className="carousel-indicators">
         <button
           type="button"

@@ -5,7 +5,8 @@ import Script from "next/script";
 import NavBar from "@/components/NavBar.jsx";
 import BtnWhats from "@/components/WhatsAppButton.jsx";
 import Footer from "@/components/Footer.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
+import 'bootstrap/dist/css/bootstrap.min.css';
+import BootstrapClient from '@/components/BootstrapClient.js'; 
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -254,11 +255,8 @@ export default async function RootLayout({ children }) {
           {children}
           <BtnWhats />
         </main>
+        <BootstrapClient />
         <Footer />
-        {/* Bootstrap JS */}
-        <Script
-          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-        />
       </body>
     </html>
   );
