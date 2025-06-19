@@ -308,21 +308,21 @@ export default function HomeClient({ posts: postsToShow }) {
 						style={{ maxWidth: "600px" }}
 					>
 						<li className="d-flex align-items-start mb-3">
-							<FaHandshake className="me-2 mt-1" />
+							<FaHandshake className="me-3 mt-1 fs-3 text-white" />
 							<span>
 								Estamos comprometidos con la innovación y la creatividad en cada
 								proyecto.
 							</span>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<FaAssistiveListeningSystems className="me-2 mt-1" />
+							<FaAssistiveListeningSystems className="me-3 mt-1 fs-3 text-white" />
 							<span>
 								Escuchamos a nuestros clientes para construir soluciones que
 								realmente funcionen.
 							</span>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<FaFire className="me-2 mt-1" />
+							<FaFire className="me-3 mt-1 fs-3 text-white" />
 							<span>
 								Tenemos pasión por la tecnología y el desarrollo de soluciones
 								reales y efectivas.
@@ -346,18 +346,18 @@ export default function HomeClient({ posts: postsToShow }) {
 						style={{ maxWidth: "600px" }}
 					>
 						<li className="d-flex align-items-start mb-3">
-							<FaSearch className="me-2 mt-1" />
+							<FaSearch className="me-3 mt-1 fs-3 text-white" />
 							<span>Diseños y desarrollos 100% optimizados para SEO.</span>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<FaChartLine className="me-2 mt-1" />
+							<FaChartLine className="me-3 mt-1 fs-3 text-white" />
 							<span>
 								Estrategias para maximizar tu visibilidad en buscadores y atraer
 								tráfico de calidad.
 							</span>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<FaChartBar className="me-2 mt-1" />
+							<FaChartBar className="me-3 mt-1 fs-3 text-white" />
 							<span>
 								Análisis continuo y seguimiento para mejorar tu posicionamiento
 								digital.

@@ -39,7 +39,7 @@ export default function BlogSection({ posts }) {
 				{/* Entrada Principal (Izquierda) */}
 				{mainPost && (
 					<div className="col-lg-5">
-						<article className={`card h-100 shadow-lg ${cardThemeClasses}`}>
+						<article className={`card shadow-lg ${cardThemeClasses}`}>
 							{mainPost.imageUrl && (
 								<div
 									style={{
