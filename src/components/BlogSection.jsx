@@ -28,7 +28,7 @@ export default function BlogSection({ posts }) {
 	const cardThemeClasses = "bg-transparent text-white";
 
 	return (
-		<section className="container-fluid p-xl-5 p-2 featured-blog-section">
+		<section className="container-fluid p-3 p-lg-4 p-xl-5 featured-blog-section">
 			<h2 className="display-5 fw-bold mb-5 text-center text-white">
 				{" "}
 				{/* Asumiendo texto blanco para el título de sección */}
