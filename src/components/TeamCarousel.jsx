@@ -67,7 +67,7 @@ export default function TeamCarousel() {
         <div className="carousel-item">
           <CardTeam
             imageUrl={ferPhoto}
-            name="Fernando Briseño"
+            name="Fernanda Briseño"
             position="Co-Fundadora y Diseñadora web"
             description="Soy Fernanda Briseño, Diseñadora UX/UI. Mejoro mis habilidades en experiencia de usuario e interfaces, creando diseños funcionales gracias a mi conocimiento en desarrollo web."
             links={[
