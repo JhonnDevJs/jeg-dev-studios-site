@@ -2,7 +2,7 @@ import Link from "next/link";
 
 function Footer() {
   return (
-    <footer className="d-flex flex-column justify-content-center align-items-center bg-black text-white w-100 p-3">
+    <footer className="d-flex flex-column justify-content-center align-items-center bg-black text-white w-100 p-3" role="contentinfo">
       <div className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-3">
         <article className="d-flex flex-column justify-content-center align-items-center gap-3">
           <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-center">

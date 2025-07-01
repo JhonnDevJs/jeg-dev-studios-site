@@ -10,7 +10,7 @@ function NavBar() {
 
   return (
     <header className="shadow-sm">
-      <nav className="navbar navbar-expand-lg align-items-center fixed-top w-100 header-nav">
+      <nav className="navbar navbar-expand-lg align-items-center fixed-top w-100 header-nav" aria-label="Navegación principal">
         <div className="container-fluid d-flex align-items-center">
           {/* Logo y Nombre */}
           <Link

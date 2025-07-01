@@ -521,9 +521,9 @@ export default function DevWebClient() {
           ]}
         />
       </section>
-      <section className=" col-9 container-fluid bg-transparent text-center text-white py-5">
+      <section className="container-fluid bg-transparent text-center text-white py-5">
         <div className="row justify-content-center g-4">
-          <div className="col-10 col-md-6 col-lg-4 d-flex justify-content-center">
+          <div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
             <CardsProcess
               number="1"
               titulo="Paquete Básico"

@@ -89,7 +89,7 @@ function CardNestedLists({ titulo, subtitulo, list, lastText }) {
                 className="d-flex flex-column align-items-start mb-4 text-white"
                 key={idx}
               >
-                <div className="d-flex align-items-center">
+                <div className="d-flex align-items-start text-start">
                   <span
                     style={{
                       display: "inline-flex",
@@ -112,7 +112,7 @@ function CardNestedLists({ titulo, subtitulo, list, lastText }) {
                       />
                     </svg>
                   </span>
-                  {item.text}
+                  <h4>{item.text}</h4>
                 </div>
                 <ul
                   style={{
@@ -127,7 +127,7 @@ function CardNestedLists({ titulo, subtitulo, list, lastText }) {
                       key={subIdx}
                       style={{ color: "#fff", marginBottom: "0.5rem" }}
                     >
-                      {sub}
+                      <p>{sub}</p>
                     </li>
                   ))}
                 </ul>

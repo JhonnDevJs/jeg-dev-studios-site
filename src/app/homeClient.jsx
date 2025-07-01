@@ -9,6 +9,8 @@ import CardServices from "@/components/CardServices";
 import TeamCarousel from "@/components/TeamCarousel";
 import CTA from "@/components/CTA";
 import BlogSection from '@/components/BlogSection';
+import CardsProcess from '@/components/CardsProcess';
+import CardNestedLists from '@/components/CardNestedLists';
 import "./home.css";
 
 export default function HomeClient({ posts: postsToShow }) {
@@ -23,8 +25,7 @@ export default function HomeClient({ posts: postsToShow }) {
 				>
 					<div className="container p-0 m-0">
 						<h1 className="text-white text-shadow">
-							Tu negocio merece una presencia digital que impulse ventas y
-							crecimiento
+							Empresa de Desarrollo Web en México: Soluciones Digitales para tu Negocio
 						</h1>
 						<p className="fs-xl-1 fs-5 text-light text-shadow text-brack">
 							En JEG Dev Studios creamos sitios web, software y apps móviles a
@@ -134,10 +135,11 @@ export default function HomeClient({ posts: postsToShow }) {
 							url="/servicios/desarrollo-web"
 							buttonLabel="Obtener servicios"
 							items={[
-								"Diseño Responsivo",
-								"SEO Optimizado",
-								"Seguridad y Rendimiento",
-								"Experiencia Intuitiva",
+								"Páginas Web Profesionales",
+								"Ecommerce y Tiendas en Línea",
+								"Aplicaciones Web",
+								"Diseño UX/UI y Branding Digital",
+								"Hosting, Dominios y Mantenimiento Web",
 							]}
 						/>
 						<CardServices
@@ -169,7 +171,7 @@ export default function HomeClient({ posts: postsToShow }) {
 			</section>
 			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3">
 				<h2 className="display-5 text-center text-white">
-					¿Por qué elegirnos?
+					¿Por qué elegirnos como tu empresa de desarrollo web?
 				</h2>
 				<p className="fs-4 text-center text-white p-0">
 					Servicio 100% mexicano, pensado para el mundo. Creamos sitios web con
@@ -185,16 +187,25 @@ export default function HomeClient({ posts: postsToShow }) {
 						<p className="fs-2 m-0">Soluciones personalizadas a tu negocio</p>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+						<h3 className="fs-2 m-0">Desarrollo 100% Personalizado</h3>
+					</li>
+					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">+5 años de experiencia combinada</p>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Acompañamiento y soporte 24/7</p>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+						<h3 className="fs-2 m-0">Soporte Local y Atención en Español</h3>
+					</li>
+					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Diseño 100% adaptado a móviles</p>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Compromiso y responsabilidad</p>
+					</li>
+					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+						<h3 className="fs-2 m-0">Optimización SEO y alto rendimiento</h3>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Entrega puntual garantizada</p>
@@ -207,49 +218,44 @@ export default function HomeClient({ posts: postsToShow }) {
 					</li>
 				</ul>
 			</section>
-			<section className="bg-transparent text-white py-5">
-				<div className="container text-center">
-					<h2 className="mb-4">¿Cómo trabajamos contigo?</h2>
-					<div className="d-flex flex-wrap justify-content-center gap-4">
-						{[
-							{
-								step: "1. Evaluamos",
-								desc: "Analizamos tus necesidades y objetivos.",
-							},
-							{
-								step: "2. Definimos",
-								desc: "Creamos un plan personalizado y claro.",
-							},
-							{
-								step: "3. Ejecutamos",
-								desc: "Desarrollamos con calidad y comunicación constante.",
-							},
-							{
-								step: "4. Medimos",
-								desc: "Revisamos resultados y optimizamos para ti.",
-							},
-						].map(({ step, desc }) => (
-							<div
-								key={step}
-								className="card bg-transparent text-white p-3 rounded-4 border shadow-sm"
-								style={{ maxWidth: "12rem" }}
-							>
-								<h3 className="h5">{step}</h3>
-								<p>{desc}</p>
-							</div>
-						))}
-					</div>
-				</div>
-			</section>
-			<section
-				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 mt-5"
-				style={{ minHeight: "553px" }}
-			>
-				<h2 className="text-center text-white">
-					Somos un equipo experto en SEO, diseño, desarrollo web, software y
-					apps móviles.
-				</h2>
-				<TeamCarousel />
+			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+				<CardNestedLists
+					titulo="Cómo trabajamos tu sitio web"
+					subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
+					list={[
+						{
+							text: "Evaluamos tu negocio",
+							sublist: [
+								"Analizamos tus necesidades y objetivos.",
+							],
+						},
+						{
+							text: "Definimos objetivos digitales",
+							sublist: [
+								"Creamos un plan personalizado y claro.",
+							],
+						},
+						{
+							text: "Elegimos el paquete de desarrollo más adecuado (Básico, Plus o Pro).",
+							sublist: [
+								"Desarrollamos con calidad y comunicación constante.",
+							],
+						},
+						{
+							text: "Diseñamos y desarrollamos.",
+							sublist: [
+								" Al final de cada Sprint, te mostramos un avance funcional real del sitio (por videollamada o enlace privado).",
+								" Tú nos das tu feedback y podemos ajustar detalles antes del siguiente Sprint.",
+							],
+						},,
+						{
+							text: "Medimos resultados y optimizamos",
+							sublist: [
+								"Revisamos resultados y optimizamos para ti.",
+							],
+						},
+					]}
+				/>
 			</section>
 			<section className="bg-transparent text-white py-5 text-center px-3 px-md-5">
 				<div className="container" style={{ maxWidth: "900px" }}>
@@ -294,6 +300,16 @@ export default function HomeClient({ posts: postsToShow }) {
 					</ul>
 				</div>
 			</section>
+			<section
+				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 mt-5"
+				style={{ minHeight: "553px" }}
+			>
+				<h2 className="text-center text-white">
+					Somos un equipo experto en SEO, diseño, desarrollo web, software y
+					apps móviles.
+				</h2>
+				<TeamCarousel />
+			</section>
 			<section className="bg-transparent text-white py-5 text-center px-3 px-md-5">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="display-6 fw-bold mb-4">
@@ -308,25 +324,31 @@ export default function HomeClient({ posts: postsToShow }) {
 						style={{ maxWidth: "600px" }}
 					>
 						<li className="d-flex align-items-start mb-3">
-							<FaHandshake className="me-3 mt-1 fs-3 text-white" />
-							<span>
+							<div className="me-3 mt-1 fs-3 text-white" >
+								<FaHandshake/>
+							</div>
+							<p>
 								Estamos comprometidos con la innovación y la creatividad en cada
 								proyecto.
-							</span>
+							</p>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<FaAssistiveListeningSystems className="me-3 mt-1 fs-3 text-white" />
-							<span>
+							<div className="me-3 mt-1 fs-3 text-white">
+								<FaAssistiveListeningSystems />
+							</div>
+							<p>
 								Escuchamos a nuestros clientes para construir soluciones que
 								realmente funcionen.
-							</span>
+							</p>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<FaFire className="me-3 mt-1 fs-3 text-white" />
-							<span>
+							<div className="me-3 mt-1 fs-3 text-white">
+								<FaFire />
+							</div>
+							<p>
 								Tenemos pasión por la tecnología y el desarrollo de soluciones
 								reales y efectivas.
-							</span>
+							</p>
 						</li>
 					</ul>
 				</div>
@@ -346,28 +368,102 @@ export default function HomeClient({ posts: postsToShow }) {
 						style={{ maxWidth: "600px" }}
 					>
 						<li className="d-flex align-items-start mb-3">
-							<FaSearch className="me-3 mt-1 fs-3 text-white" />
-							<span>Diseños y desarrollos 100% optimizados para SEO.</span>
+							<div className="me-3 mt-1 fs-3 text-white">
+								<FaSearch />
+							</div>
+							<p>Diseños y desarrollos 100% optimizados para SEO.</p>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<FaChartLine className="me-3 mt-1 fs-3 text-white" />
-							<span>
+							<div className="me-3 mt-1 fs-3 text-white">
+								<FaChartLine />
+							</div>
+							<p>
 								Estrategias para maximizar tu visibilidad en buscadores y atraer
 								tráfico de calidad.
-							</span>
+							</p>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<FaChartBar className="me-3 mt-1 fs-3 text-white" />
-							<span>
+							<div className="me-3 mt-1 fs-3 text-white">
+								<FaChartBar />
+							</div>
+							<p>
 								Análisis continuo y seguimiento para mejorar tu posicionamiento
 								digital.
-							</span>
+							</p>
 						</li>
 					</ul>
 				</div>
 			</section>
-			<CTA />
+			<section className="container py-5" id="web-pricing">
+				<div className="text-center mb-5">
+					<h2 className="fw-bold text-white">¿Cuánto cuesta una página web en México?</h2>
+					<p className="text-white">Conoce los paquetes y qué influye en su precio</p>
+				</div>
+
+				<div className="row">
+					{/* Paquetes según el tipo de negocio */}
+					<div className="col-md-6 mb-4">
+						<h3 className="h5 fw-semibold text-center text-white">Paquetes según el tipo de negocio</h3>
+						<ul className="list-group list-group-flush bg-transparent">
+							<li className="list-group-item bg-transparent text-white">Landing page para emprendedores</li>
+							<li className="list-group-item bg-transparent text-white">Sitio web corporativo</li>
+							<li className="list-group-item bg-transparent text-white">Tienda en línea con pasarela de pagos</li>
+							<li className="list-group-item bg-transparent text-white">Plataformas personalizadas o portales web</li>
+						</ul>
+					</div>
+
+					{/* Factores que determinan el precio */}
+					<div className="col-md-6 mb-4">
+						<h3 className="h5 fw-semibold text-center text-white">Factores que determinan el precio</h3>
+						<ul className="list-group list-group-flush bg-transparent">
+							<li className="list-group-item bg-transparent text-white">Cantidad de secciones o páginas</li>
+							<li className="list-group-item bg-transparent text-white">Diseño personalizado vs plantilla</li>
+							<li className="list-group-item bg-transparent text-white">Funciones específicas (formularios, reservas, etc.)</li>
+							<li className="list-group-item bg-transparent text-white">Integraciones externas (WhatsApp, pagos, CRM...)</li>
+							<li className="list-group-item bg-transparent text-white">Optimización SEO y velocidad</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			<section className="container-fluid bg-transparent text-center text-white py-5">
+				<div className="row justify-content-center g-4">
+					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+						<CardsProcess
+							number="1"
+							titulo="Paquete Básico"
+							list={[
+								"Duración estimada: 7 - 10 días hábiles",
+								"Tecnologías: Figma, HTML, CSS, JS, Node.js",
+								"Entregas por Sprint: 1-2 entregas",
+							]}
+						/>
+					</div>
+					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+						<CardsProcess
+							number="2"
+							titulo="Paquete Plus"
+							list={[
+								"Duración estimada: 10 - 15 días hábiles",
+								"Tecnologías: Figma, HTML, Bootstrap, JS, Php (Laravel)",
+								"Entregas por Sprint: 1-2 entregas",
+							]}
+						/>
+					</div>
+					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
+						<CardsProcess
+							number="3"
+							titulo="Paquete Pro"
+							list={[
+								"Duración estimada: 15 - 30 días hábiles",
+								"Tecnologías: Figma, Next.js, Tailwind CSS, Php (Laravel) o Node.js",
+								"Entregas por Sprint: 3-5 entregas",
+							]}
+						/>
+					</div>
+				</div>
+			</section>
 			{mounted && <BlogSection posts={postsToShow} />}
+			<CTA />
 		</>
 	);
 }

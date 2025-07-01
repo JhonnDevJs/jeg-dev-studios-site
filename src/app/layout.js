@@ -27,9 +27,9 @@ const servicePageBackgrounds = {
 
 export const metadata = {
   metadataBase: new URL("https://www.jegdevstudios.com"),
-  title: "JEG Dev Studios | Agencia de desarrollo web Profesional, Software y Apps en México",
+  title: "JEG Dev Studios | Agencia de Desarrollo Web en México y Software Empresarial",
   description:
-    "En JEG Dev Studios diseñamos sitios web, software y apps móviles a medida que impulsan tu negocio en México y el mundo con tecnología innovadora y soporte experto.",
+    "Empresa de desarrollo web en México que crea sitios web profesionales, tiendas en línea y software personalizado. Nuestro equipo de desarrolladores web en CDMX combina diseño responsivo, SEO y tecnología a medida para ayudarte a lograr resultados reales.",
   keywords:
     "desarrollo web profesional, diseño web responsivo, desarrollo de apps móviles, software empresarial, agencia desarrollo web México, dev studios, jegstudio",
   robots: "index, follow",
@@ -46,9 +46,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "JEG Dev Studios | Agencia de desarrollo web",
+      "Empresa de Desarrollo Web en México | JEG Dev Studios - Sitios, PYMES y Software a Medida",
     description:
-      "Transformamos tus ideas en sitios web, software y apps que impulsan tu negocio en México y más allá.",
+      "Empresa de desarrollo web en México que crea sitios web profesionales, tiendas en línea y software personalizado. Nuestro equipo de desarrolladores web en CDMX combina diseño responsivo, SEO y tecnología a medida para ayudarte a lograr resultados reales.",
     url: "https://www.jegdevstudios.com/",
     siteName: "JEG Dev Studios",
     images: [
@@ -251,7 +251,7 @@ export default async function RootLayout({ children }) {
         className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
       >
         <NavBar />
-        <main className="container-fluid d-flex flex-column min-vh-100 p-0 m-0">
+        <main className="container-fluid d-flex flex-column min-vh-100 p-0 m-0" role="main">
           {children}
           <BtnWhats />
         </main>

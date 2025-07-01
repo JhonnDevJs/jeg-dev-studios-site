@@ -109,3 +109,9 @@
                      /* Esto es opcional y depende de cómo se vea con contenido muy corto. */
 }
 
+/* Oculta la barra y flecha en pantallas pequeñas */
+@media (max-width: 650px) {
+  .vertical-bar-arrow {
+    display: none !important;
+  }
+}
