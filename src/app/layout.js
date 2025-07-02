@@ -202,44 +202,153 @@ export default async function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "FAQPage",
               mainEntity: [
+                // Desarrollo Web
                 {
                   "@type": "Question",
                   name: "¿Qué incluye el servicio de desarrollo web de JEG Dev Studios?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Incluye la creación de sitios web modernos, funcionales y personalizados según tus necesidades, utilizando tecnologías avanzadas como HTML, CSS, JavaScript, React, Tailwind CSS, Astro, Node.js y Express.",
+                    text: "Incluye la creación de sitios web personalizados, responsivos y adaptados a tu marca, utilizando tecnologías modernas como HTML, CSS, JavaScript, Node.js o Laravel.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "¿Ofrecen sitios web responsivos?",
+                  name: "¿Ofrecen dominio y hosting incluido?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Sí, todos nuestros paquetes incluyen diseño responsivo, adaptado a dispositivos móviles, tabletas y computadoras.",
+                    text: "Sí, nuestros paquetes incluyen 1 año de dominio personalizado y hosting web, ya sea mediante Hostinger, DonDominio o Google Sites, según el paquete contratado.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "¿Qué tecnologías utilizan en el desarrollo web?",
+                  name: "¿Qué tecnologías usan para crear sitios web?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Utilizamos tecnologías modernas como React, Tailwind CSS, Astro, Node.js y Express para desarrollar sitios web rápidos, escalables y eficientes.",
+                    text: "Dependiendo del paquete, utilizamos HTML, CSS, JavaScript, Bootstrap, Node.js o PHP (Laravel) para el desarrollo del frontend y backend.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "¿Qué diferencia hay entre sus paquetes de servicios?",
+                  name: "¿Puedo solicitar cambios en el diseño del sitio web?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Cada paquete varía según el número de páginas, el nivel de personalización, integración de funcionalidades (como formularios avanzados, galerías multimedia, blog, SEO, etc.), y tecnologías aplicadas.",
+                    text: "Sí, cada paquete incluye un número específico de cambios permitidos a nivel de secciones del diseño web.",
                   },
                 },
                 {
                   "@type": "Question",
-                  name: "¿Qué tan rápido pueden entregar un sitio web?",
+                  name: "¿Incluyen optimización SEO en los sitios web?",
                   acceptedAnswer: {
                     "@type": "Answer",
-                    text: "Dependiendo del paquete elegido, el tiempo de entrega puede variar entre 1 a 4 semanas.",
+                    text: "Sí, todos nuestros paquetes incluyen implementación básica de SEO para mejorar tu visibilidad en buscadores como Google.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Cuánto tiempo tarda en entregarse un sitio web?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "La entrega depende del paquete. Desde 7 hasta 30 días hábiles, dependiendo de la complejidad y funcionalidades requeridas.",
+                  },
+                },
+
+                // Desarrollo de Aplicaciones Móviles
+                {
+                  "@type": "Question",
+                  name: "¿Qué tipo de aplicaciones móviles desarrollan?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Creamos apps nativas, híbridas y multiplataforma para Android y iOS, según los requerimientos del cliente y el paquete contratado.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Publican las apps en la Play Store o App Store?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sí, la publicación en Google Play o App Store está incluida en todos nuestros paquetes de desarrollo de apps móviles.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Qué tecnologías utilizan para las apps móviles?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Trabajamos con tecnologías como React Native, Kotlin Multiplatform, Java para backend, y bases de datos remotas según el nivel del proyecto.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Incluyen base de datos o backend en las apps móviles?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sí, los paquetes intermedios y avanzados incluyen conexión con bases de datos remotas, backend en Java y funcionalidades como login o almacenamiento.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Incluyen diseño UI/UX personalizado?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sí, todos nuestros planes ofrecen un diseño responsivo y adaptado a tu marca. Los paquetes más avanzados incluyen navegación fluida y componentes animados.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Pueden desarrollar apps con funcionalidades avanzadas?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sí, como parte del paquete Premium podemos integrar funcionalidades complejas como pagos, geolocalización, cámara, push notifications y paneles administrativos web.",
+                  },
+                },
+
+                // Software Empresarial
+                {
+                  "@type": "Question",
+                  name: "¿Qué tipo de software empresarial desarrollan?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Desarrollamos soluciones personalizadas como sistemas de ventas, inventarios, citas, empleados y más, adaptados a las necesidades de tu negocio.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿El software incluye instalación y soporte?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sí, todos los paquetes incluyen instalación en uno o más equipos. El paquete Profesional también ofrece soporte técnico durante el primer mes.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Qué tipo de base de datos utilizan?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Utilizamos bases de datos locales (como SQLite) o en red/nube según el paquete, con estructuras seguras y eficientes para tu operación diaria.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Incluyen funcionalidades como reportes o gráficas?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sí, los paquetes más avanzados incluyen paneles de estadísticas, gráficas, exportación de reportes a Excel/PDF, y herramientas de gestión.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿El software puede ser multiusuario?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sí, nuestros planes intermedios y avanzados permiten múltiples usuarios con acceso por roles, login y permisos configurables.",
+                  },
+                },
+                {
+                  "@type": "Question",
+                  name: "¿Ofrecen soluciones con integración a sistemas externos?",
+                  acceptedAnswer: {
+                    "@type": "Answer",
+                    text: "Sí, en el paquete Profesional podemos integrar tu software con CRMs, facturación electrónica u otros sistemas empresariales según tus procesos.",
                   },
                 },
               ],
