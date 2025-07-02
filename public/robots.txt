@@ -1,3 +1,3 @@
 user-agent: *
-Disallow: /Proyects
-Sitemap: https://jegdevstudios.com/sitemap.xml
+Disallow: https://www.jegdevstudios.com/proyectos
+Sitemap: https://www.jegdevstudios.com/sitemap.xml
