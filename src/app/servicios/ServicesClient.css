@@ -77,3 +77,10 @@
 .accordion span {
   font-size: 1.2rem;
 }
+
+/* Oculta la barra y flecha en pantallas pequeñas */
+@media (max-width: 650px) {
+  .vertical-bar-arrow {
+    display: none !important;
+  }
+}
