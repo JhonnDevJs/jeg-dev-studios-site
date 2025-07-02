@@ -247,7 +247,7 @@ export default function HomeClient({ posts: postsToShow }) {
 								" Al final de cada Sprint, te mostramos un avance funcional real del sitio (por videollamada o enlace privado).",
 								" Tú nos das tu feedback y podemos ajustar detalles antes del siguiente Sprint.",
 							],
-						},,
+						},
 						{
 							text: "Medimos resultados y optimizamos",
 							sublist: [
