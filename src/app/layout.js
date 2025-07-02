@@ -246,6 +246,98 @@ export default async function RootLayout({ children }) {
             }),
           }}
         />
+        <Script
+          id="structured-data-breadcrumbs"
+          type="application/ld+json"
+          strategy="afterInteractive"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify({
+              "@context": "https://schema.org",
+              "@type": "BreadcrumbList",
+              "itemListElement": [
+                {
+                  "@type": "ListItem",
+                  position: 1,
+                  name: "Inicio",
+                  item: "https://www.jegdevstudios.com/"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 2,
+                  name: "Servicios",
+                  item: "https://www.jegdevstudios.com/servicios"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 3,
+                  name: "Desarrollo Web",
+                  item: "https://www.jegdevstudios.com/servicios/desarrollo-web"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 4,
+                  name: "Aplicaciones Móviles",
+                  item: "https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 5,
+                  name: "Software Empresarial",
+                  item: "https://www.jegdevstudios.com/servicios/desarrollo-software"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 6,
+                  name: "Sobre Nosotros",
+                  item: "https://www.jegdevstudios.com/sobre-nosotros"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 7,
+                  name: "Blog",
+                  item: "https://www.jegdevstudios.com/blog"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 8,
+                  name: "Contacto",
+                  item: "https://www.jegdevstudios.com/contacto"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 9,
+                  name: "Saber más WebDev",
+                  item: "https://www.jegdevstudios.com/saber-mas/web-dev"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 10,
+                  name: "Saber más SoftDev",
+                  item: "https://www.jegdevstudios.com/saber-mas/soft-dev"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 11,
+                  name: "Saber más AppDev",
+                  item: "https://www.jegdevstudios.com/saber-mas/app-dev"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 12,
+                  name: "Términos y Condiciones",
+                  item: "https://www.jegdevstudios.com/terminos-y-condiciones"
+                },
+                {
+                  "@type": "ListItem",
+                  position: 13,
+                  name: "Aviso de Privacidad",
+                  item: "https://www.jegdevstudios.com/aviso-de-privacidad"
+                }
+              ]
+            })
+          }}
+        />
+
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
