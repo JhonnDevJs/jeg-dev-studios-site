@@ -1,19 +1,18 @@
 .__image-background-servicios {
   background-image: url("/fondos/Nuestros_Servicios.webp");
-  background-size: 100% 40vh;
+  background-size: 100% auto;
   background-position: start center;
   background-repeat: no-repeat;
   background-attachment: fixed;
   width: 100%;
-  height: 40dvh;
+  height: 55dvh;
 }
 @media (max-width: 768px) {
   .__image-background-servicios {
-    background-size: 100% 30vh;
-    background-position: start center;
+    background-size: 100% auto;
     background-attachment: scroll;
-    height: 30dvh;
-    padding-top: 4.5rem;
+    height: 20dvh;
+    margin-top: 4.5rem;
   }
 }
 
