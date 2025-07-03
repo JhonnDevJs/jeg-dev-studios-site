@@ -27,9 +27,9 @@ const servicePageBackgrounds = {
 
 export const metadata = {
   metadataBase: new URL("https://www.jegdevstudios.com"),
-  title: "JEG Dev Studios | Agencia de Desarrollo Web en México y Software Empresarial",
+  title: "JEG Dev Studios | Agencia de desarrollo web, apps y software en México",
   description:
-    "Empresa de desarrollo web en México que crea sitios web profesionales, tiendas en línea y software personalizado. Nuestro equipo de desarrolladores web en CDMX combina diseño responsivo, SEO y tecnología a medida para ayudarte a lograr resultados reales.",
+    "Empresa de desarrollo web en México con servicios digitales personalizados: landing pages, apps multiplataforma y software seguro para empresas modernas.",
   keywords:
     "desarrollo web profesional, diseño web responsivo, desarrollo de apps móviles, software empresarial, agencia desarrollo web México, dev studios, jegstudio",
   robots: "index, follow",
@@ -46,9 +46,9 @@ export const metadata = {
   },
   openGraph: {
     title:
-      "Empresa de Desarrollo Web en México | JEG Dev Studios - Sitios, PYMES y Software a Medida",
+      "JEG Dev Studios | Sitios web, PYMES, apps y Software a Medida",
     description:
-      "Empresa de desarrollo web en México que crea sitios web profesionales, tiendas en línea y software personalizado. Nuestro equipo de desarrolladores web en CDMX combina diseño responsivo, SEO y tecnología a medida para ayudarte a lograr resultados reales.",
+      "Empresa de desarrollo web en México especializada en soluciones digitales: páginas web, aplicaciones móviles y software a medida para negocios exigentes.",
     url: "https://www.jegdevstudios.com/",
     siteName: "JEG Dev Studios",
     images: [
