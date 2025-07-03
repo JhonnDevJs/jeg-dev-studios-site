@@ -1,13 +1,13 @@
 export const metadata = {
-  title: "Blog | JEG Dev Studios",
+  title: "Blog de Desarrollo Web, Apps y SEO | JEG Dev Studios",
   description:
-    "Lee artículos, novedades y tutoriales sobre desarrollo web, software, aplicaciones, diseño UX/UI y SEO de JEG Dev Studios.",
+    "Explora nuestro blog con tips de desarrollo web, apps y SEO para emprendedores y negocios que buscan crecer en el mundo digital.",
   keywords:
     "blog, artículos, novedades, tutoriales, desarrollo web, software, apps, diseño, SEO, UX/UI, JEG Dev Studios",
   openGraph: {
     title: "Blog | JEG Dev Studios",
     description:
-      "Lee artículos, novedades y tutoriales sobre desarrollo web, software, aplicaciones, diseño UX/UI y SEO de JEG Dev Studios.",
+      "Aprende sobre desarrollo web, apps y software. Consejos de UX, SEO y tecnología para potenciar tu negocio digital.",
     url: "https://www.jegdevstudios.com/blog",
     siteName: "JEG Dev Studios",
     images: [

@@ -130,3 +130,6 @@
   background: rgb(255, 255, 255); /* Fondo más opaco */
   color: black;
 }
+.accordion span {
+  font-size: 1.2rem;
+}
