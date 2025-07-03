@@ -27,7 +27,7 @@ const servicePageBackgrounds = {
 
 export const metadata = {
   metadataBase: new URL("https://www.jegdevstudios.com"),
-  title: "JEG Dev Studios | Agencia de desarrollo web, apps y software en México",
+  title: "JEG Dev Studios | Agencia de desarrollo web, apps y software",
   description:
     "Empresa de desarrollo web en México con servicios digitales personalizados: landing pages, apps multiplataforma y software seguro para empresas modernas.",
   keywords:
