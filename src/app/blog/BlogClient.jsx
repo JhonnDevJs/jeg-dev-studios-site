@@ -40,6 +40,7 @@ const faqs = [
 
 
 // ...existing imports y faqs...
+// ...imports y faqs...
 
 export default function BlogClient({ posts }) {
   const [mounted, setMounted] = useState(false);
@@ -69,7 +70,25 @@ export default function BlogClient({ posts }) {
 
   if (!mounted) return null;
 
-  // Filtrado de posts por título, categoría o contenido
+  // --- CATEGORÍAS POPULARES Y PALABRAS CLAVE ---
+  const categoriasPopulares = [
+    { key: "Desarrollo Web", label: "Desarrollo Web" },
+    { key: "Aplicaciones Móviles", label: "Aplicaciones Móviles" },
+    { key: "Software Empresarial", label: "Software Empresarial" },
+    { key: "Diseño UX/UI", label: "Diseño UX/UI" },
+    { key: "SEO y Marketing Digital", label: "SEO y Marketing Digital" },
+    { key: "Emprendimiento y Negocios", label: "Emprendimiento y Negocios" },
+  ];
+  const categoriaKeywords = {
+    "Desarrollo Web": ["desarrollo web", "web"],
+    "Aplicaciones Móviles": ["aplicaciones móviles", "apps", "móviles", "mobile"],
+    "Software Empresarial": ["software empresarial", "software", "empresarial"],
+    "Diseño UX/UI": ["diseño ux/ui", "ux", "ui", "diseño", "ux ui"],
+    "SEO y Marketing Digital": ["seo", "marketing digital", "marketing"],
+    "Emprendimiento y Negocios": ["emprendimiento", "negocios", "empresa", "emprendedor"],
+  };
+
+  // --- FILTRO GENERAL ---
   const filteredPosts = posts.filter(post => {
     const searchLower = search.toLowerCase();
     const titleMatch = post.title?.toLowerCase().includes(searchLower);
@@ -83,16 +102,45 @@ export default function BlogClient({ posts }) {
     return titleMatch || categoryMatch || contentMatch;
   });
 
-  // Secciones y categorías populares
-  const categoriasPopulares = [
-    { key: "Desarrollo Web", label: "Desarrollo Web" },
-    { key: "Aplicaciones Móviles", label: "Aplicaciones Móviles" },
-    { key: "Software Empresarial", label: "Software Empresarial" },
-    { key: "Diseño UX/UI", label: "Diseño UX/UI" },
-    { key: "SEO y Marketing Digital", label: "SEO y Marketing Digital" },
-    { key: "Emprendimiento y Negocios", label: "Emprendimiento y Negocios" },
-  ];
-  // Helper para renderizar cards
+  // --- FILTRO POR CATEGORÍA POPULAR ---
+  const postsPorCategoria = (categoria) => {
+    const keywords = categoriaKeywords[categoria] || [categoria];
+    return filteredPosts.filter(post =>
+      (post.categories && post.categories.some(cat =>
+        keywords.some(keyword =>
+          cat.toLowerCase().includes(keyword)
+        )
+      )) ||
+      keywords.some(keyword =>
+        post.title?.toLowerCase().includes(keyword)
+      )
+    );
+  };
+
+  // --- ¿EL TÉRMINO DE BÚSQUEDA COINCIDE CON UNA CATEGORÍA POPULAR? ---
+  const searchLower = search.trim().toLowerCase();
+  const categoriaCoincidente = categoriasPopulares.find(cat =>
+    cat.key.toLowerCase() === searchLower ||
+    cat.label.toLowerCase() === searchLower ||
+    (categoriaKeywords[cat.key] && categoriaKeywords[cat.key].some(keyword => keyword === searchLower))
+  );
+
+  // --- POST PRINCIPAL Y SIGUIENTES ---
+  const firstPost = filteredPosts[0];
+  const nextThreePosts = filteredPosts.slice(1, 4);
+
+  // --- CONSEJOS Y TENDENCIAS ---
+  const consejosPosts = filteredPosts.filter(post =>
+    post.categories?.some(cat =>
+      ["tendencias", "consejos", "tips", "digital"].some(keyword =>
+        cat.toLowerCase().includes(keyword)
+      )
+    ) ||
+    post.title?.toLowerCase().includes("tendencia") ||
+    post.title?.toLowerCase().includes("consejo")
+  );
+
+  // --- COMPONENTE DE CARDS ---
   function BlogCards({ posts }) {
     return (
       <div className="row row-cols-1 row-cols-md-2 row-cols-xl-3 g-4">
@@ -137,49 +185,7 @@ export default function BlogClient({ posts }) {
     );
   }
 
-  // Últimos artículos
-  const firstPost = filteredPosts[0];
-  const nextThreePosts = filteredPosts.slice(1, 4);
-
-  // Palabras clave para cada categoría popular
-  const categoriaKeywords = {
-    "Desarrollo Web": ["desarrollo web", "web"],
-    "Aplicaciones Móviles": ["aplicaciones móviles", "apps", "móviles", "mobile"],
-    "Software Empresarial": ["software empresarial", "software", "empresarial"],
-    "Diseño UX/UI": ["diseño ux/ui", "ux", "ui", "diseño"],
-    "SEO y Marketing Digital": ["seo", "marketing digital", "marketing"],
-    "Emprendimiento y Negocios": ["emprendimiento", "negocios", "empresa", "emprendedor"],
-  };
-  // Posts por categoría popular (ahora usando palabras clave)
-  const postsPorCategoria = (categoria) => {
-  const keywords = categoriaKeywords[categoria] || [categoria];
-  return filteredPosts.filter(post =>
-    // Coincidencia en categorías
-    (post.categories && post.categories.some(cat =>
-      keywords.some(keyword =>
-        cat.toLowerCase().includes(keyword)
-      )
-    )) ||
-    // Coincidencia en el título
-    keywords.some(keyword =>
-      post.title?.toLowerCase().includes(keyword)
-    )
-  );
-};
-
-  // Consejos y tendencias digitales
-  const consejosPosts = filteredPosts.filter(post =>
-    post.categories?.some(cat =>
-      ["tendencias", "consejos", "tips", "digital"].some(keyword =>
-        cat.toLowerCase().includes(keyword)
-      )
-    ) ||
-    post.title?.toLowerCase().includes("tendencia") ||
-    post.title?.toLowerCase().includes("consejo")
-  );
-
-  const hayResultadosPopulares = categoriasPopulares.some(cat => postsPorCategoria(cat.key).length > 0);
-
+  // --- RENDER ---
   return (
     <>
       <section className="container pt-5 pb-5">
@@ -245,25 +251,47 @@ export default function BlogClient({ posts }) {
             </div>
           </article>
         )}
-        {nextThreePosts.length > 0 && <BlogCards posts={nextThreePosts} />}
 
-        {/* Categorías populares */}
-        <h2 className="text-center text-white mt-5 mb-3">Categorías populares</h2>
-        <p className="text-center text-white mb-4">Explora artículos destacados por categoría.</p>
-        {hayResultadosPopulares ? (
-          categoriasPopulares.map(cat => {
-            const postsCat = postsPorCategoria(cat.key);
-            if (postsCat.length === 0) return null;
-            return (
-              <div key={cat.key} className="mb-5">
-                <h3 className="text-white">{cat.label}</h3>
-                <p className="text-white mb-3">Artículos sobre {cat.label.toLowerCase()}.</p>
-                <BlogCards posts={postsCat} />
-              </div>
-            );
-          })
-        ) : (
-          <p className="text-white text-center">No hay resultados para tu búsqueda en las categorías populares.</p>
+        {/* Si hay búsqueda y coincide con una categoría popular, mostrar esa sección */}
+        {searchLower && categoriaCoincidente && (
+          <>
+            <h2 className="text-white mt-5 mb-3">{categoriaCoincidente.label}</h2>
+            <p className="text-white mb-4">Artículos sobre {categoriaCoincidente.label.toLowerCase()}.</p>
+            {postsPorCategoria(categoriaCoincidente.key).length > 0
+              ? <BlogCards posts={postsPorCategoria(categoriaCoincidente.key)} />
+              : <p className="text-white">No hay artículos en esta categoría.</p>
+            }
+          </>
+        )}
+
+        {/* Si hay búsqueda y NO coincide con una categoría popular, mostrar resultados por popularidad */}
+        {searchLower && !categoriaCoincidente && (
+          <>
+            <h2 className="text-white mt-5 mb-3">Resultados</h2>
+            {filteredPosts.length > 0
+              ? <BlogCards posts={filteredPosts} />
+              : <p className="text-white">No hay artículos que coincidan con tu búsqueda.</p>
+            }
+          </>
+        )}
+
+        {/* Si NO hay búsqueda, mostrar todas las categorías populares */}
+        {!searchLower && (
+          <>
+            <h2 className="text-center text-white mt-5 mb-3">Categorías populares</h2>
+            <p className="text-center text-white mb-4">Explora artículos destacados por categoría.</p>
+            {categoriasPopulares.map(cat => {
+              const postsCat = postsPorCategoria(cat.key);
+              if (postsCat.length === 0) return null;
+              return (
+                <div key={cat.key} className="mb-5">
+                  <h3 className="text-white">{cat.label}</h3>
+                  <p className="text-white mb-3">Artículos sobre {cat.label.toLowerCase()}.</p>
+                  <BlogCards posts={postsCat} />
+                </div>
+              );
+            })}
+          </>
         )}
 
         {/* Consejos y tendencias digitales */}
