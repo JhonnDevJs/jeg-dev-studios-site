@@ -309,9 +309,9 @@ export default function DevSoftClient() {
         // setOrderNumber={setOrderNumber} // Ya no se pasa directamente
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
-        <h2 className="display-1 text-center text-white">
+        <h1 className="display-1 text-center text-white">
           Nuestros servicios de Software Empresarial
-        </h2>
+        </h1>
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
         <p className="lead w-100 px-3 px-md-5">

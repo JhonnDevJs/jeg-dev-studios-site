@@ -53,7 +53,7 @@ export default function BlogClient({ posts }) {
   if (!posts || !Array.isArray(posts)) {
     return (
       <div className="container pt-5 pb-5 text-white text-center">
-        <h2 className="display-4 fw-bold mb-4">Blog de desarrollo web, apps y tecnología</h2>
+        <h1 className="display-4 fw-bold mb-4">Blog de desarrollo web, apps y tecnología</h1>
         <p className="lead">No se pudieron cargar las entradas del blog en este momento. Por favor, inténtalo de nuevo más tarde.</p>
       </div>
     );
@@ -62,7 +62,7 @@ export default function BlogClient({ posts }) {
   if (posts.length === 0) {
     return (
       <div className="container pt-5 pb-5 text-white text-center">
-        <h2 className="display-4 fw-bold mb-4">Blog de desarrollo web, apps y tecnología</h2>
+        <h1 className="display-4 fw-bold mb-4">Blog de desarrollo web, apps y tecnología</h1>
         <p className="lead">No hay entradas para mostrar.</p>
       </div>
     );

@@ -91,7 +91,7 @@ export default function ContactClient() {
       <section className="__image-background-contact d-flex flex-column justify-content-center align-items-center w-100">
       </section>
       <section className="d-flex flex-column justify-content-center align-items-center w-100">
-        <h2 className="display-1 text-center text-white mt-5">Contáctanos</h2>
+        <h1 className="display-1 text-center text-white mt-5">Contáctanos</h1>
         <p className="fs-5 text-center text-white">
           Escríbenos para recibir asesoría personalizada, resolver dudas o
           solicitar la cotización de tu proyecto.

@@ -349,15 +349,15 @@ export default function DevWebClient() {
         // setOrderNumber={setOrderNumber} // setOrderNumber ya no se pasa directamente aquí
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
-        <h2 className="display-1 text-center text-white">
+        <h1 className="display-1 text-center text-white">
           Nuestros servicios de desarrollo web
-        </h2>
+        </h1>
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
-        <h3>
+        <h2>
           ¿Necesitas un sitio web especifico y secillo pero profesional para tu
           negocio?
-        </h3>
+        </h2>
         <p className="lead w-100 px-3 px-md-5">
           En JEG Dev Studios tenemos la solución perfecta para ti. Adquiere tu
           sitio web personalizado y profesional en solo un par de clicks.
