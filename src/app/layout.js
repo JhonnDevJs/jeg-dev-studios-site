@@ -31,7 +31,7 @@ export const metadata = {
   description:
     "Empresa de desarrollo web en México con servicios digitales personalizados: landing pages, apps multiplataforma y software seguro para empresas modernas.",
   keywords:
-    "desarrollo web profesional, diseño web responsivo, desarrollo de apps móviles, software empresarial, agencia desarrollo web México, dev studios, jegstudio",
+    "agencia desarrollo web México, empresa desarrollo web México, desarrolladores web México, desarrollo web profesional, servicios desarrollo digital, desarrollo software México, aplicaciones móviles México, diseño web responsivo, soluciones digitales México, dev studios, devstudios, jegstudio",
   robots: "index, follow",
   authors: [{ name: "JEG Dev Studios" }],
   applicationName: "JEG Dev Studios",

@@ -3,7 +3,7 @@ export const metadata = {
   description:
     "Consultoría y desarrollo digital para empresas en México: creamos sitios web, apps móviles y software empresarial con soluciones modernas y escalables.",
   keywords:
-    "JEG Dev Studios, desarrollo web México, diseño de sitios web, landing pages, tiendas online, aplicaciones móviles, apps personalizadas, software a medida, soluciones digitales, servicios de desarrollo, estudio de desarrollo web, desarrollo de software México, agencia de diseño web",
+    "servicios desarrollo web México, desarrollo aplicaciones móviles México, software empresarial México, agencia desarrollo digital México, desarrollo web profesional, soluciones digitales empresariales, desarrollo software a medida, apps móviles profesionales, diseño web responsivo, desarrollo tecnológico México",
   openGraph: {
     title: "Desarrollo Digital para Empresas en México | JEG Dev Studios",
     description:

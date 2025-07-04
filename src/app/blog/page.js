@@ -3,7 +3,7 @@ export const metadata = {
   description:
     "Explora nuestro blog con tips de desarrollo web, apps y SEO para emprendedores y negocios que buscan crecer en el mundo digital.",
   keywords:
-    "blog, artículos, novedades, tutoriales, desarrollo web, software, apps, diseño, SEO, UX/UI, JEG Dev Studios",
+    "blog desarrollo web México, noticias desarrollo digital, tendencias apps móviles, software empresarial México, consejos desarrollo web, tutoriales programación, innovación tecnológica México, recursos desarrollo software, diseño web, marketing digital México, tips SEO",
   openGraph: {
     title: "Blog | JEG Dev Studios",
     description:
