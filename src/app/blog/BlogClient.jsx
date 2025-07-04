@@ -92,7 +92,6 @@ export default function BlogClient({ posts }) {
     { key: "SEO y Marketing Digital", label: "SEO y Marketing Digital" },
     { key: "Emprendimiento y Negocios", label: "Emprendimiento y Negocios" },
   ];
-
   // Helper para renderizar cards
   function BlogCards({ posts }) {
     return (
@@ -142,13 +141,31 @@ export default function BlogClient({ posts }) {
   const firstPost = filteredPosts[0];
   const nextThreePosts = filteredPosts.slice(1, 4);
 
-  // Posts por categoría popular
-  const postsPorCategoria = (categoria) =>
-    filteredPosts.filter(post =>
-      post.categories?.some(cat =>
-        cat.toLowerCase().includes(categoria.toLowerCase())
+  // Palabras clave para cada categoría popular
+  const categoriaKeywords = {
+    "Desarrollo Web": ["desarrollo web", "web"],
+    "Aplicaciones Móviles": ["aplicaciones móviles", "apps", "móviles", "mobile"],
+    "Software Empresarial": ["software empresarial", "software", "empresarial"],
+    "Diseño UX/UI": ["diseño ux/ui", "ux", "ui", "diseño"],
+    "SEO y Marketing Digital": ["seo", "marketing digital", "marketing"],
+    "Emprendimiento y Negocios": ["emprendimiento", "negocios", "empresa", "emprendedor"],
+  };
+  // Posts por categoría popular (ahora usando palabras clave)
+  const postsPorCategoria = (categoria) => {
+  const keywords = categoriaKeywords[categoria] || [categoria];
+  return filteredPosts.filter(post =>
+    // Coincidencia en categorías
+    (post.categories && post.categories.some(cat =>
+      keywords.some(keyword =>
+        cat.toLowerCase().includes(keyword)
       )
-    );
+    )) ||
+    // Coincidencia en el título
+    keywords.some(keyword =>
+      post.title?.toLowerCase().includes(keyword)
+    )
+  );
+};
 
   // Consejos y tendencias digitales
   const consejosPosts = filteredPosts.filter(post =>
@@ -160,6 +177,8 @@ export default function BlogClient({ posts }) {
     post.title?.toLowerCase().includes("tendencia") ||
     post.title?.toLowerCase().includes("consejo")
   );
+
+  const hayResultadosPopulares = categoriasPopulares.some(cat => postsPorCategoria(cat.key).length > 0);
 
   return (
     <>
@@ -231,17 +250,21 @@ export default function BlogClient({ posts }) {
         {/* Categorías populares */}
         <h2 className="text-center text-white mt-5 mb-3">Categorías populares</h2>
         <p className="text-center text-white mb-4">Explora artículos destacados por categoría.</p>
-        {categoriasPopulares.map(cat => {
-          const postsCat = postsPorCategoria(cat.key);
-          if (postsCat.length === 0) return null;
-          return (
-            <div key={cat.key} className="mb-5">
-              <h3 className="text-white">{cat.label}</h3>
-              <p className="text-white mb-3">Artículos sobre {cat.label.toLowerCase()}.</p>
-              <BlogCards posts={postsCat} />
-            </div>
-          );
-        })}
+        {hayResultadosPopulares ? (
+          categoriasPopulares.map(cat => {
+            const postsCat = postsPorCategoria(cat.key);
+            if (postsCat.length === 0) return null;
+            return (
+              <div key={cat.key} className="mb-5">
+                <h3 className="text-white">{cat.label}</h3>
+                <p className="text-white mb-3">Artículos sobre {cat.label.toLowerCase()}.</p>
+                <BlogCards posts={postsCat} />
+              </div>
+            );
+          })
+        ) : (
+          <p className="text-white text-center">No hay resultados para tu búsqueda en las categorías populares.</p>
+        )}
 
         {/* Consejos y tendencias digitales */}
         <h2 className="text-white mt-5 mb-3">Consejos y tendencias digitales</h2>

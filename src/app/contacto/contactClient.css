@@ -8,7 +8,7 @@
   height: 55dvh;
 }
 @media (max-width: 768px) {
-  .__image-background-servicios {
+  .__image-background-contact {
     background-size: 100% auto;
     background-attachment: scroll;
     height: 20dvh;
