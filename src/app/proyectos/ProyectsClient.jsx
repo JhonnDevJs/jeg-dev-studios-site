@@ -102,6 +102,7 @@ function ProyectsClient() {
                         <img
                           src={project.img}
                           alt={`imagen del proyecto ${project.title}`}
+                          title={`imagen del proyecto ${project.title}`}
                           loading="lazy"
                         />
                       )}

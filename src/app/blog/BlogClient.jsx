@@ -153,6 +153,7 @@ export default function BlogClient({ posts }) {
                     className="card-img-top"
                     src={post.imageUrl}
                     alt={`Imagen para ${post.title}`}
+                    title={`Imagen para ${post.title}`}
                     layout="fill"
                     objectFit="cover"
                   />
@@ -219,6 +220,7 @@ export default function BlogClient({ posts }) {
                 <Image
                   src={firstPost.imageUrl}
                   alt={`Imagen destacada para ${firstPost.title}`}
+                  title={`Imagen destacada para ${firstPost.title}`}
                   className="card-img"
                   layout="fill"
                   objectFit="cover"

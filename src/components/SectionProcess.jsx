@@ -1,5 +1,4 @@
 import Image from "next/image";
-import LineGradient from "@/assets/icons/line-gradient.svg";
 
 export default function SectionProcess() {
   return (
@@ -11,8 +10,9 @@ export default function SectionProcess() {
         </h2>
         <h3 className="text-white text-center">(Basado en Scrum)</h3>
         <Image
-          src={LineGradient}
+          src="/icons/line-gradient.svg"
           alt="Line gradient"
+          title="Line gradient"
           width={311}
           height={8}
         />

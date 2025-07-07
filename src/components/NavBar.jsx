@@ -21,6 +21,7 @@ function NavBar() {
             <Image
               src={iconLogo}
               alt="Logo JEG Dev Studios"
+              title="JEG Dev Studios Logo Home"
               width={70}
               height={70}
               className="d-inline-block align-text-top rounded-circle"

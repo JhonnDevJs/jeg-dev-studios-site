@@ -51,6 +51,7 @@ export default function BlogSection({ posts }) {
 									<Image
 										src={mainPost.imageUrl}
 										alt={`Imagen para ${mainPost.title}`}
+										title={`Imagen para ${mainPost.title}`}
 										layout="fill"
 										objectFit="cover"
 										className="card-img-top"
@@ -127,6 +128,7 @@ export default function BlogSection({ posts }) {
 										<Image
 											src={post.imageUrl}
 											alt={`Imagen para ${post.title}`}
+											title={`Imagen para ${post.title}`}
 											layout="fill"
 											objectFit="cover"
 										/>

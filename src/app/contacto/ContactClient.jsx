@@ -104,6 +104,7 @@ export default function ContactClient() {
             width={164}
             height={164}
             alt="Logo JEG Dev Studios"
+            title="Logo JEG Dev Studios"
           ></Image>
           <p className="fs-3 text-center text-white">
             Estamos aquí para ayudarte. Escríbenos y nuestro equipo te

@@ -13,6 +13,7 @@ function CardTeam({ imageUrl, name, position, description, links }) {
           src={imageUrl}
           className="card-img-top img-fluid rounded-circle"
           alt={`Foto de ${name}`}
+          title={`Foto de ${name}`}
           loading="lazy"
           width={44}
           height={44}

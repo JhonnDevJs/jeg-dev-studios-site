@@ -17,6 +17,7 @@ function ButtonsSocial({ tamaño }) {
           className="img-fluid w-100"
           src={iconFace}
           alt="icono de Facebook"
+          title="icono de Facebook"
           width={48}
           height={48}
           loading="lazy"
@@ -33,6 +34,7 @@ function ButtonsSocial({ tamaño }) {
           className="img-fluid w-100"
           src={iconWhats}
           alt="icono de WhatsApp"
+          title="icono de WhatsApp"
           width={48}
           height={48}
           loading="lazy"
