@@ -447,6 +447,8 @@ export default async function RootLayout({ children }) {
           }}
         />
 
+        <meta name="twitter:site" content="@jegdevstudios" />
+        <meta name="twitter:creator" content="@jegdevstudios" />
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
