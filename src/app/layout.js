@@ -64,7 +64,7 @@ export const metadata = {
   },
   icons: {
     icon: [
-      { url: "/icons-SEO/favicon.ico" },
+      { url: "/favicon.ico" },
       { url: "/icons-SEO/favicon.svg", type: "image/svg+xml" },
       {
         url: "/icons-SEO/favicon-32x32.png",
