@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { useFacebookPixelInitializer } from "@/hooks/useFacebookPixelInitializer";
 import ShoppingCart from "@/components/ShoppingCart";
 import CardPacksProduct from "@/components/CardPacksProduct";
 import OrderForm from "@/components/OrderForm";
@@ -12,11 +11,10 @@ import imgSoftProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-mue
 import "./DevSoftClient.css";
 
 export default function DevSoftClient() {
-  const isPixelReady = useFacebookPixelInitializer();
   const [cartItems, setCartItems] = useState([]);
   const [orderNumber, setOrderNumber] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
-  const [isGeneratingOrder, setIsGeneratingOrder] = useState(false); // Estado para la carga
+  const [isGeneratingOrder, setIsGeneratingOrder] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -34,6 +32,7 @@ export default function DevSoftClient() {
       price: 9499,
       currency: "MXN",
       imageSrc: imgSoftProduct1.src,
+      description: "1 módulo funcional (ventas, citas, inventario, etc.). Interfaz gráfica simple y amigable. Software de escritorio o app web local. Base de datos local (ej. SQLite). Manual básico de usuario. Instalación en un equipo.",
     },
     {
       id: "solucion_estandar",
@@ -41,6 +40,7 @@ export default function DevSoftClient() {
       price: 17299,
       currency: "MXN",
       imageSrc: imgSoftProduct2.src,
+      description: "Hasta 3 módulos integrados (ej. ventas, productos, clientes). Sistema multiusuario con login y control de acceso. Interfaz responsiva (web o escritorio). Base de datos local o en red. Exportación de reportes a PDF/Excel. Instalación en hasta 3 dispositivos.",
     },
     {
       id: "solucion_avanzada",
@@ -48,6 +48,7 @@ export default function DevSoftClient() {
       price: 34499,
       currency: "MXN",
       imageSrc: imgSoftProduct3.src,
+      description: "Hasta 6 módulos personalizados (ventas, compras, almacén, clientes, empleados, reportes). Diseño visual adaptado a tu identidad corporativa. Base de datos en red o en la nube. Panel de control y estadísticas con gráficas. Acceso por roles y permisos. Instalación en red local o servidor. Capacitación inicial para tu equipo.",
     },
     {
       id: "solucion_profesional",
@@ -55,8 +56,25 @@ export default function DevSoftClient() {
       price: 66899,
       currency: "MXN",
       imageSrc: imgSoftProduct4.src,
+      description: "Módulos ilimitados según flujo de trabajo personalizado. Desarrollo basado en análisis detallado de procesos. Interfaz avanzada y adaptable (modo oscuro, responsiva, accesible). Control de usuarios y auditoría de acciones. Integraciones externas (facturación electrónica, CRMs, etc.). Seguridad avanzada (respaldos automáticos, cifrado de datos). Capacitación y documentación completa. Soporte técnico durante el primer mes incluido.",
     },
   ], []);
+
+  // Fragmento enriquecido para SEO
+  const productSchema = products.map(product => ({
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.name,
+    "image": product.imageSrc,
+    "description": product.description,
+    "sku": product.id,
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": product.currency,
+      "price": product.price,
+      "availability": "https://schema.org/InStock"
+    }
+  }));
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -64,37 +82,11 @@ export default function DevSoftClient() {
     }
   }, [cartItems]);
 
-  useEffect(() => {
-    if (isPixelReady && typeof window !== "undefined" && window.fbq && products.length > 0) {
-      window.fbq("track", "ViewContent", {
-        content_type: "product_group",
-        content_ids: products.map((p) => p.id),
-        content_name: "Soluciones de Desarrollo de Software",
-        contents: products.map((p) => ({
-          id: p.id,
-          quantity: 1,
-          item_price: p.price,
-          image_url: p.imageSrc, // Añadido image_url
-        })),
-        currency: "MXN",
-      });
-    }
-  }, [isPixelReady, products]);
+  // --- LIMPIEZA: Elimina todo lo de Facebook Pixel ---
 
   const handleQuoteRequest = async ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
-    setIsFormVisible(true); // Mostrar el formulario inmediatamente
-    setIsGeneratingOrder(true); // Indicar que estamos generando la orden/cotización
-
-    if (isPixelReady && typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead", {
-        content_name: title,
-        content_ids: [idProduct],
-        content_type: "custom_quote",
-        value: dataPrice,
-        currency: moneda,
-        image_url: imageSrc, // Añadido image_url
-      });
-    }
+    setIsFormVisible(true);
+    setIsGeneratingOrder(true);
 
     let generatedOrderNumber = "";
     try {
@@ -123,59 +115,21 @@ export default function DevSoftClient() {
       title,
       moneda,
       dataPrice: parseFloat(dataPrice),
-      imageSrc, // Añadido imageSrc
+      imageSrc,
     };
-    setCartItems([quoteItem]); // Para cotizaciones, usualmente se reemplaza el carrito
-    setIsGeneratingOrder(false); // Finaliza la carga
-
-    // Disparar InitiateCheckout para cotizaciones también, si aplica
-    if (isPixelReady && typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
-        window.fbq("track", "InitiateCheckout", {
-            contents: [{ id: quoteItem.idProduct, quantity: 1, item_price: quoteItem.dataPrice, image_url: quoteItem.imageSrc }],
-            content_ids: [quoteItem.idProduct],
-            currency: quoteItem.moneda,
-            num_items: 1,
-            value: quoteItem.dataPrice,
-            order_id: generatedOrderNumber,
-        });
-    }
+    setCartItems([quoteItem]);
+    setIsGeneratingOrder(false);
   };
 
   const handleAddToCart = ({ idProduct, title, moneda, dataPrice, imageSrc }) => {
-    // Asumiendo que en DevSoftClient todos los productos son cotizables
-    // y no hay un flujo de "añadir al carrito" directo.
-    // Si lo hubiera, se implementaría aquí.
-    console.warn("handleAddToCart llamado en DevSoftClient, pero todos los productos parecen ser cotizables. Considera usar handleQuoteRequest.");
-    // Opcionalmente, podrías llamar a handleQuoteRequest aquí si esa es la intención:
-    // handleQuoteRequest({ idProduct, title, moneda, dataPrice });
-
-    // Si realmente necesitas añadir al carrito sin el flujo de cotización para algunos productos:
     const productData = {
       idProduct,
       title,
       moneda,
       dataPrice: parseFloat(dataPrice),
-      imageSrc, // Añadido imageSrc
+      imageSrc,
     };
     setCartItems((prevItems) => [...prevItems, productData]);
-
-    if (isPixelReady && typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "AddToCart", {
-        content_name: productData.title,
-        content_ids: [productData.idProduct],
-        content_type: "product",
-        value: productData.dataPrice,
-        currency: productData.moneda,
-        contents: [
-          {
-            id: productData.idProduct,
-            quantity: 1,
-            item_price: productData.dataPrice,
-            image_url: productData.imageSrc, // Añadido image_url
-          },
-        ],
-      });
-    }
   };
 
   const handleRemoveProduct = (index) => {
@@ -188,7 +142,7 @@ export default function DevSoftClient() {
       return;
     }
 
-    setIsFormVisible(true); // Mostrar el contenedor del formulario inmediatamente
+    setIsFormVisible(true);
 
     let tempOrderNumber = orderNumber;
 
@@ -216,97 +170,40 @@ export default function DevSoftClient() {
       }
       setIsGeneratingOrder(false);
     }
-
-    if (isPixelReady && typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
-      if (tempOrderNumber) {
-        const totalValue = cartItems.reduce(
-          (sum, item) => sum + item.dataPrice,
-          0
-        );
-        const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
-        const content_ids = cartItems.map((item) => item.idProduct);
-        const contents = cartItems.map((item) => ({
-          id: item.idProduct,
-          quantity: 1,
-          item_price: item.dataPrice,
-          image_url: item.imageSrc, // Añadido image_url
-        }));
-
-        window.fbq("track", "InitiateCheckout", {
-          contents: contents,
-          content_ids: content_ids,
-          currency: currency,
-          num_items: cartItems.length,
-          value: totalValue,
-          order_id: tempOrderNumber,
-        });
-      } else {
-        console.warn("InitiateCheckout omitido: No se pudo obtener un número de orden válido para el checkout.");
-      }
-    }
   };
 
   const closeOrderForm = () => {
     setIsFormVisible(false);
     if (isGeneratingOrder) {
-        setIsGeneratingOrder(false);
+      setIsGeneratingOrder(false);
     }
   };
 
   const handleSubmitOrder = (submittedOrderData) => {
-    if (
-      isPixelReady &&
-      typeof window !== "undefined" &&
-      window.fbq &&
-      cartItems.length > 0 &&
-      orderNumber
-    ) {
-      const totalValue = cartItems.reduce(
-        (sum, item) => sum + item.dataPrice,
-        0
-      );
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
-      const content_ids = cartItems.map((item) => item.idProduct);
-      const contents = cartItems.map((item) => ({
-        id: item.idProduct,
-        quantity: 1,
-        item_price: item.dataPrice,
-        image_url: item.imageSrc, // Añadido image_url
-      }));
-
-      const isQuotePurchase = cartItems.length === 1 && products.some(p => p.id === cartItems[0].idProduct);
-
-      window.fbq("track", "Purchase", {
-        contents: contents,
-        content_ids: content_ids,
-        content_type: isQuotePurchase ? "custom_quote" : "product",
-        currency: currency,
-        num_items: cartItems.length,
-        value: totalValue,
-        order_id: orderNumber,
-      });
-    }
-
     setCartItems([]);
     setOrderNumber("");
     closeOrderForm();
   };
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       {isFormVisible && (
         <OrderForm
           onClose={closeOrderForm}
           onSubmit={handleSubmitOrder}
           orderNumber={orderNumber}
           items={cartItems}
-          isLoading={isGeneratingOrder} // Pasar el estado de carga
+          isLoading={isGeneratingOrder}
         />
       )}
       <ShoppingCart
         items={cartItems}
         onRemove={handleRemoveProduct}
         onOpenOrderForm={openOrderForm}
-        // setOrderNumber={setOrderNumber} // Ya no se pasa directamente
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
         <h1 className="display-1 text-center text-white">

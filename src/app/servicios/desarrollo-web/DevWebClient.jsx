@@ -1,6 +1,5 @@
 "use client";
 import { useState, useEffect, useMemo } from "react";
-import { useFacebookPixelInitializer } from "@/hooks/useFacebookPixelInitializer";
 import ShoppingCart from "@/components/ShoppingCart";
 import CardProduct from "@/components/CardProduct";
 import CardPacksProduct from "@/components/CardPacksProduct";
@@ -16,11 +15,10 @@ import "./DevWebClient.css";
 import CardsProcess from "@/components/CardsProcess";
 
 export default function DevWebClient() {
-  const isPixelReady = useFacebookPixelInitializer();
   const [cartItems, setCartItems] = useState([]);
   const [orderNumber, setOrderNumber] = useState("");
   const [isFormVisible, setIsFormVisible] = useState(false);
-  const [isGeneratingOrder, setIsGeneratingOrder] = useState(false); // Estado para la carga
+  const [isGeneratingOrder, setIsGeneratingOrder] = useState(false);
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -38,6 +36,7 @@ export default function DevWebClient() {
       price: 5799,
       currency: "MXN",
       imageSrc: imgWebProduct1.src,
+      description: "1 año de Hosting y dominio (con hostinger). Certificado SSL. Email corporativo. Diseño responsivo (optimizado para móviles). Cambios en el diseño: 2 a nivel de sección. 4 Secciones dentro del layout/landing page. Integración de botón de WhatsApp. Implementación básica de SEO. Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js. Tiempo de entrega: 7 a 10 días hábiles.",
     },
     {
       id: "paquete_plus",
@@ -45,6 +44,7 @@ export default function DevWebClient() {
       price: 17299,
       currency: "MXN",
       imageSrc: imgWebProduct2.src,
+      description: "1 año de Hosting y dominio (a elegir Hostinger ó Dondominio). Certificado SSL. Email corporativo. Diseño responsivo (optimizado para móviles). Cambios en el diseño: 4 (a nivel de sección). 4 Secciones dentro del layout/landing page. Integración básica de redes sociales (Botón de WhatsApp, Facebook). Implementación básica de SEO. 1 Mantenimiento gratuito a los 6 meses. Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel). Tiempo de entrega: 10 a 15 días hábiles.",
     },
     {
       id: "paquete_pro",
@@ -52,11 +52,25 @@ export default function DevWebClient() {
       price: 28799,
       currency: "MXN",
       imageSrc: imgWebProduct3.src,
+      description: "1 año de Hosting y dominio (con dondominio). Certificado SSL. Email corporativo. Diseño responsivo (optimizado para móviles). Cambios en el diseño: 8 (a nivel de sección). Hasta 10 landing pages/layouts. 4 Secciones dentro del layout/landing page. Integración completa de redes sociales (Facebook, Instagram, X (Twitter), WhatsApp). Implementación básica de SEO. 2 días Mantenimiento gratuitos 1 cada 6 meses. Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel) ó Node js. Tiempo de entrega: 15 a 30 días hábiles.",
     },
-    // Nota: "landing-page-profesional" no está en este array `products`.
-    // Su imagen se rastreará en AddToCart, pero no en el ViewContent inicial del grupo de productos.
-    // Si deseas incluirlo en el ViewContent del grupo, deberías añadirlo aquí también.
   ], []);
+
+  // Fragmento enriquecido para SEO
+  const productSchema = products.map(product => ({
+    "@context": "https://schema.org/",
+    "@type": "Product",
+    "name": product.name,
+    "image": product.imageSrc,
+    "description": product.description,
+    "sku": product.id,
+    "offers": {
+      "@type": "Offer",
+      "priceCurrency": product.currency,
+      "price": product.price,
+      "availability": "https://schema.org/InStock"
+    }
+  }));
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -64,24 +78,8 @@ export default function DevWebClient() {
     }
   }, [cartItems]);
 
-  useEffect(() => {
-    if (isPixelReady && typeof window !== "undefined" && window.fbq && products.length > 0) {
-      window.fbq("track", "ViewContent", {
-        content_type: "product_group",
-        content_ids: products.map((p) => p.id),
-        content_name: "Paquetes de Desarrollo Web",
-        contents: products.map((p) => ({
-          id: p.id,
-          quantity: 1,
-          item_price: p.price,
-          image_url: p.imageSrc,
-        })),
-        currency: "MXN",
-      });
-    }
-  }, [isPixelReady, products]);
+  // --- LIMPIEZA: Elimina todo lo de Facebook Pixel ---
 
-  // Nuevo handler para cotizaciones personalizadas
   const handleQuoteRequest = async ({
     idProduct,
     title,
@@ -89,23 +87,10 @@ export default function DevWebClient() {
     dataPrice,
     imageSrc,
   }) => {
-    setIsFormVisible(true); // Mostrar el formulario inmediatamente
-    setIsGeneratingOrder(true); // Indicar que estamos generando la orden/cotización
-
-    // Dispara evento de Pixel
-    if (isPixelReady && typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "Lead", {
-        content_name: title,
-        content_ids: [idProduct],
-        content_type: "custom_quote",
-        value: dataPrice,
-        currency: moneda,
-        image_url: imageSrc, // Añadido image_url
-      });
-    }
+    setIsFormVisible(true);
+    setIsGeneratingOrder(true);
 
     let generatedOrderNumber = "";
-    // Generar número de orden/cotización
     try {
       const response = await fetch(
         "https://jegdevstudios.onrender.com/generate-order-number"
@@ -120,8 +105,6 @@ export default function DevWebClient() {
           "Hubo un error al generar el número de cotización. Por favor, inténtelo de nuevo."
         );
         setIsGeneratingOrder(false);
-        // Considerar si cerrar el formulario o permitir que el usuario lo cierre manualmente
-        // setIsFormVisible(false);
         return;
       }
     } catch (error) {
@@ -130,7 +113,6 @@ export default function DevWebClient() {
         "Hubo un error al solicitar el número de cotización. Por favor, inténtelo de nuevo."
       );
       setIsGeneratingOrder(false);
-      // setIsFormVisible(false);
       return;
     }
 
@@ -140,37 +122,12 @@ export default function DevWebClient() {
         title,
         moneda,
         dataPrice: parseFloat(dataPrice),
-        imageSrc, // Añadido imageSrc
+        imageSrc,
       },
     ]);
-    setIsGeneratingOrder(false); // Finaliza la carga
-
-    // Disparar InitiateCheckout para cotizaciones también, si aplica
-    if (isPixelReady && typeof window !== "undefined" && window.fbq && generatedOrderNumber) {
-      const item = {
-        idProduct,
-        title,
-        moneda,
-        dataPrice: parseFloat(dataPrice),
-        imageSrc,
-      };
-      window.fbq("track", "InitiateCheckout", {
-        contents: [
-          {
-            id: item.idProduct,
-            quantity: 1,
-            item_price: item.dataPrice,
-            image_url: item.imageSrc,
-          },
-        ],
-        content_ids: [item.idProduct],
-        currency: item.moneda,
-        num_items: 1,
-        value: item.dataPrice,
-        order_id: generatedOrderNumber,
-      });
-    }
+    setIsGeneratingOrder(false);
   };
+
   const handleAddToCart = ({
     idProduct,
     title,
@@ -183,28 +140,10 @@ export default function DevWebClient() {
       title,
       moneda,
       dataPrice: parseFloat(dataPrice),
-      imageSrc, // Añadido imageSrc
+      imageSrc,
     };
 
     setCartItems((prevItems) => [...prevItems, productData]);
-
-    if (isPixelReady && typeof window !== "undefined" && window.fbq) {
-      window.fbq("track", "AddToCart", {
-        content_name: productData.title,
-        content_ids: [productData.idProduct],
-        content_type: "product",
-        value: productData.dataPrice,
-        currency: productData.moneda,
-        contents: [
-          {
-            id: productData.idProduct,
-            quantity: 1,
-            item_price: productData.dataPrice,
-            image_url: productData.imageSrc, // Añadido image_url
-          },
-        ],
-      });
-    }
   };
 
   const handleRemoveProduct = (index) => {
@@ -219,7 +158,7 @@ export default function DevWebClient() {
       return;
     }
 
-    setIsFormVisible(true); // Mostrar el contenedor del formulario inmediatamente
+    setIsFormVisible(true);
 
     let tempOrderNumber = orderNumber;
 
@@ -254,99 +193,40 @@ export default function DevWebClient() {
       }
       setIsGeneratingOrder(false);
     }
-
-    if (isPixelReady && typeof window !== "undefined" && window.fbq && cartItems.length > 0) {
-      if (tempOrderNumber) {
-        const totalValue = cartItems.reduce(
-          (sum, item) => sum + item.dataPrice,
-          0
-        );
-        const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
-        const content_ids = cartItems.map((item) => item.idProduct);
-        const contents = cartItems.map((item) => ({
-          id: item.idProduct,
-          quantity: 1,
-          item_price: item.dataPrice,
-          image_url: item.imageSrc, // Añadido image_url
-        }));
-
-        window.fbq("track", "InitiateCheckout", {
-          contents: contents,
-          content_ids: content_ids,
-          currency: currency,
-          num_items: cartItems.length,
-          value: totalValue,
-          order_id: tempOrderNumber,
-        });
-      } else {
-        console.warn(
-          "InitiateCheckout omitido: No se pudo obtener un número de orden válido para el checkout."
-        );
-      }
-    }
   };
 
   const closeOrderForm = () => {
     setIsFormVisible(false);
-    // Si el formulario se cierra mientras se generaba una orden, resetear el estado de carga.
     if (isGeneratingOrder) {
       setIsGeneratingOrder(false);
     }
   };
 
   const handleSubmitOrder = (submittedOrderData) => {
-    if (
-      isPixelReady &&
-      typeof window !== "undefined" &&
-      window.fbq &&
-      cartItems.length > 0 &&
-      orderNumber // Asegurarse que orderNumber (del estado) esté disponible
-    ) {
-      const totalValue = cartItems.reduce(
-        (sum, item) => sum + item.dataPrice,
-        0
-      );
-      const currency = cartItems.length > 0 ? cartItems[0].moneda : "MXN";
-      const content_ids = cartItems.map((item) => item.idProduct);
-      const contents = cartItems.map((item) => ({
-        id: item.idProduct,
-        quantity: 1,
-        item_price: item.dataPrice,
-        image_url: item.imageSrc, // Añadido image_url
-      }));
-
-      window.fbq("track", "Purchase", {
-        contents: contents,
-        content_ids: content_ids,
-        content_type: "product", // o "custom_quote" si es relevante diferenciar
-        currency: currency,
-        num_items: cartItems.length,
-        value: totalValue,
-        order_id: orderNumber,
-      });
-    }
-
     setCartItems([]);
-    setOrderNumber(""); // Limpiar el número de orden después de la compra
-    closeOrderForm(); // Cierra el formulario
+    setOrderNumber("");
+    closeOrderForm();
   };
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+      />
       {isFormVisible && (
         <OrderForm
           onClose={closeOrderForm}
           onSubmit={handleSubmitOrder}
           orderNumber={orderNumber}
           items={cartItems}
-          isLoading={isGeneratingOrder} // Pasar el estado de carga
+          isLoading={isGeneratingOrder}
         />
       )}
       <ShoppingCart
         items={cartItems}
         onRemove={handleRemoveProduct}
         onOpenOrderForm={openOrderForm}
-        // setOrderNumber={setOrderNumber} // setOrderNumber ya no se pasa directamente aquí
       />
       <section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
         <h1 className="display-1 text-center text-white">
