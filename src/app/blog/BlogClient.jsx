@@ -53,7 +53,7 @@ export default function BlogClient({ posts }) {
   if (!posts || !Array.isArray(posts)) {
     return (
       <div className="container pt-5 pb-5 text-white text-center">
-        <h1 className="display-4 fw-bold mb-4">Blog de desarrollo web, apps y tecnología</h1>
+        <h1 className="display-4 fw-bold mb-4">Blog de Tecnologías para empresas y emprendedores</h1>
         <p className="lead">No se pudieron cargar las entradas del blog en este momento. Por favor, inténtalo de nuevo más tarde.</p>
       </div>
     );
@@ -62,7 +62,7 @@ export default function BlogClient({ posts }) {
   if (posts.length === 0) {
     return (
       <div className="container pt-5 pb-5 text-white text-center">
-        <h1 className="display-4 fw-bold mb-4">Blog de desarrollo web, apps y tecnología</h1>
+        <h1 className="display-4 fw-bold mb-4">Blog de Tecnologías para empresas y emprendedores</h1>
         <p className="lead">No hay entradas para mostrar.</p>
       </div>
     );
@@ -191,10 +191,10 @@ export default function BlogClient({ posts }) {
     <>
       <section className="container pt-5 pb-5">
         <h1 className="display-4 fw-bold pt-5 mb-4 text-center text-white">
-          Blog de desarrollo web, apps, software empresarial y tecnología
+          Blog de Tecnologías para empresas y emprendedores
         </h1>
         <p className="lead text-center text-white mb-5">
-          Explora ideas, consejos prácticos y tendencias tecnológicas que transforman negocios. Aprende sobre desarrollo digital, diseño UX/UI, SEO, software personalizado y más, con contenido pensado para emprendedores y empresas en México.
+          Aprende sobre desarrollo web, apps móviles, software, tecnología, descubre sobre eventos tech y transformación digital en nuestro blog de tecnologías con enfoque práctico y actual.
         </p>
 
         {/* Buscador */}

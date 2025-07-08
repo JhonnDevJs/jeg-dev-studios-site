@@ -1,13 +1,17 @@
+import ClientOnly from '@/components/ClientOnly';
+import BlogClient from './BlogClient';
+import { getBlogPosts } from '@/lib/fetchRSS';
+
 export const metadata = {
-  title: "Blog de Desarrollo Web, Apps y SEO | JEG Dev Studios",
+  title: "Blog de Tecnologías | JEG Dev Studios",
   description:
-    "Explora nuestro blog con tips de desarrollo web, apps y SEO para emprendedores y negocios que buscan crecer en el mundo digital.",
+    "Descubre artículos sobre desarrollo web, apps móviles, software empresarial y tecnología en el blog de JEG Dev Studios.",
   keywords:
-    "blog desarrollo web México, noticias desarrollo digital, tendencias apps móviles, software empresarial México, consejos desarrollo web, tutoriales programación, innovación tecnológica México, recursos desarrollo software, diseño web, marketing digital México, tips SEO",
+    "blog de tecnologías, desarrollo web, software, apps móviles, SEO, eventos tech y tendencias digitales",
   openGraph: {
-    title: "Blog | JEG Dev Studios",
+    title: "Blog de Tecnologías | JEG Dev Studios",
     description:
-      "Aprende sobre desarrollo web, apps y software. Consejos de UX, SEO y tecnología para potenciar tu negocio digital.",
+      "Explora ideas, consejos y tendencias tecnológicas para empresas y emprendedores mexicanos.",
     url: "https://www.jegdevstudios.com/blog",
     siteName: "JEG Dev Studios",
     images: [
@@ -26,10 +30,6 @@ export const metadata = {
   },
 };
 
-import ClientOnly from '@/components/ClientOnly';
-import BlogClient from './BlogClient';
-import { getBlogPosts } from '@/lib/fetchRSS';
-
 export const revalidate = 3600;
 
 export default async function BlogPage() {
@@ -41,9 +41,42 @@ export default async function BlogPage() {
     console.error("Error al obtener los posts para la página del blog:", error);
   }
 
+  // Si hay posts, genera el schema para el primero
+  const firstPost = allBlogPosts[0];
+  const blogPostingSchema = firstPost
+    ? {
+        "@context": "https://schema.org",
+        "@type": "BlogPosting",
+        "headline": firstPost.title,
+        "description": firstPost.contentSnippet?.replace(/"/g, ''),
+        "url": firstPost.link,
+        "datePublished": new Date(firstPost.pubDate).toISOString(),
+        "author": {
+          "@type": "Organization",
+          "name": "JEG Dev Studios"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "JEG Dev Studios",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://www.jegdevstudios.com/icons-SEO/favicon-96x96.png"
+          }
+        }
+      }
+    : null;
+
   return (
-    <ClientOnly>
-      <BlogClient posts={allBlogPosts} />
-    </ClientOnly>
+    <>
+      {blogPostingSchema && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(blogPostingSchema) }}
+        />
+      )}
+      <ClientOnly>
+        <BlogClient posts={allBlogPosts} />
+      </ClientOnly>
+    </>
   );
 }
