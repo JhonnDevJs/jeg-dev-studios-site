@@ -20,7 +20,7 @@ export default function AboutClient() {
           <h2 className="text-white">Nuestra Historia</h2>
           <p className="text-white">
             JEG Dev Studios fue fundada en mayo de 2024 por Jhonatan Espinal
-            García, quien más adelante se unió con Jose Leonardo González,
+            Garcia, quien más adelante se unió con Jose Leonardo González,
             Fernanda Briseño y Ricardo Ubaldo González como cofundadores.
             Nuestro objetivo es transformar ideas en experiencias digitales
             inolvidables a través de soluciones tecnológicas personalizadas. Nos
@@ -91,7 +91,7 @@ export default function AboutClient() {
             perspectivas y lograr resultados sobresalientes.
           </p>
           <p className="text-white">
-            <strong>Jhonatan Espinal García</strong> – Fundador, CEO y
+            <strong>Jhonatan Espinal Garcia</strong> – Fundador, CEO y
             Desarrollador
             <br />
             Dirige el estudio con visión estratégica y pasión por la innovación

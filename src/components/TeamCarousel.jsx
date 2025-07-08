@@ -44,7 +44,7 @@ export default function TeamCarousel() {
             imageUrl={jhonPhoto}
             name="Jhonatan Espinal"
             position="CEO Fundador y Desarrollador"
-            description="Soy Jhonatan Espinal García, desde niño me apasiona la tecnología, desde los microcircuitos hasta la programación. En 2024 fundé JEG Dev Studios, donde creamos soluciones digitales innovadoras como apps, sitios web y videojuegos."
+            description="Soy Jhonatan Espinal, desde niño me apasiona la tecnología, desde los microcircuitos hasta la programación. En 2024 fundé JEG Dev Studios, donde creamos soluciones digitales innovadoras como apps, sitios web y videojuegos."
             links={[
               {
                 url: "https://www.linkedin.com/in/JhonEG",
