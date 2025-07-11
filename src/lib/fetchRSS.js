@@ -5,7 +5,7 @@ import Parser from 'rss-parser';
 const parser = new Parser();
 // Es una buena práctica usar variables de entorno para URLs configurables.
 // Puedes definir BLOG_FEED_URL en tu archivo .env.local
-const FEED_URL = process.env.BLOG_FEED_URL || 'https://jegdevstudios.blogspot.com/feeds/posts/default?alt=rss';
+const FEED_URL = process.env.BLOG_FEED_URL || 'https://blog.jegdevstudios.com/feeds/posts/default?alt=rss';
 
 /**
  * Extrae la URL de la primera imagen del contenido HTML de un post.
