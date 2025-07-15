@@ -11,6 +11,7 @@ import CTA from "@/components/CTA";
 import BlogSection from '@/components/BlogSection';
 import CardsProcess from '@/components/CardsProcess';
 import CardNestedLists from '@/components/CardNestedLists';
+import CardSmallList from '@/components/CardSmallList';
 import "./home.css";
 
 export default function HomeClient({ posts: postsToShow }) {
@@ -127,6 +128,9 @@ export default function HomeClient({ posts: postsToShow }) {
 			</section>
 			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<h2>Nuestros Servicios</h2>
+				<p className="text-white fs-5 mb-4">
+					Nuestros servicios no se limitan al desarrollo técnico. Como parte de nuestras soluciones digitales, también <strong>ofrecemos servicios</strong> relacionados como asesoría, branding, UX/UI y soporte post-lanzamiento, buscando superar a las mejores <strong>agencias de diseño</strong> y desarrollo del país.
+				</p>
 				<article className="d-flex justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 						<CardServices
@@ -168,6 +172,20 @@ export default function HomeClient({ posts: postsToShow }) {
 						/>
 					</ul>
 				</article>
+			</section>
+			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+				<CardSmallList
+					titulo="¿Qué podemos hacer por tu negocio?"
+					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
+					list={[
+						"Desarrollo y diseño de páginas web enfocados en tu propuesta de valor",
+						"Estrategias de marketing digital integradas desde el primer Sprint",
+						"Posicionamiento SEO optimizado en estructura, contenido y velocidad",
+						"Servicios relacionados como integración con CRMs, pasarelas y analítica",
+						"Acompañamiento estratégico para cumplir tu objetivo comercial",
+					]}
+					lastText="Nuestro objetivo siempre sera entregarles la mejor experiencia de desarrollo a nuestros clientes."
+				/>
 			</section>
 			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3">
 				<h2 className="display-5 text-center text-white">
@@ -218,6 +236,20 @@ export default function HomeClient({ posts: postsToShow }) {
 					</li>
 				</ul>
 			</section>
+			<section className="bg-dark text-white py-5 text-center px-3 px-md-5">
+				<div className="container" style={{ maxWidth: "900px" }}>
+					<h2 className="display-6 fw-bold mb-4">Más que una agencia digital común</h2>
+					<p className="fs-5 mb-4">
+						A diferencia de muchas agencias de diseño o agencias de desarrollo que solo ofrecen servicios técnicos, en JEG Dev Studios alineamos cada solución con el <strong>objetivo comercial</strong> de nuestros clientes.
+					</p>
+					<p className="fs-5 mb-3">
+						Como <strong>empresa de desarrollo web</strong> con enfoque estratégico, creamos soluciones que combinan <strong>diseño de páginas web</strong>, experiencia de usuario, programación moderna y <strong>estrategias de marketing digital</strong> para lograr resultados reales.
+					</p>
+					<p className="fs-5">
+						Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, estás en el lugar correcto.
+					</p>
+				</div>
+			</section>
 			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CardNestedLists
 					titulo="Cómo trabajamos tu sitio web"
@@ -256,49 +288,24 @@ export default function HomeClient({ posts: postsToShow }) {
 						},
 					]}
 				/>
+				<p className="fs-5 text-white mt-3">
+					Nuestro enfoque nos permite trabajar como las <strong>agencias de desarrollo</strong> más ágiles, entregando valor tangible y medible en cada fase.
+				</p>
 			</section>
-			<section className="bg-transparent text-white py-5 text-center px-3 px-md-5">
-				<div className="container" style={{ maxWidth: "900px" }}>
-					<h2 className="display-6 fw-bold mb-4">
-						Más que desarrollo, valor añadido
-					</h2>
-					<p className="fs-5 mb-4">
-						En JEG Dev Studios no solo entregamos soluciones, sino que te
+			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+				<CardSmallList
+					titulo="Más que desarrollo, valor añadido"
+					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
+					list={[
+						"Capacitación para el uso de tu nuevo sistema o sitio web",
+						"Integración con herramientas de marketing digital y CRM",
+						"Actualizaciones tecnológicas continuas para mantener tu proyecto vigente",
+						"Consultoría estratégica para impulsar el crecimiento digital de tu negocio",
+					]}
+					lastText="En JEG Dev Studios no solo entregamos soluciones, sino que te
 						acompañamos en todo el camino para que aproveches al máximo tu
-						inversión tecnológica.
-					</p>
-					<ul
-						className="list-unstyled fs-5 text-start mx-auto"
-						style={{ maxWidth: "700px" }}
-					>
-						<li className="d-flex align-items-start mb-3">
-							<span className="icon-check-list fs-5 me-2 mt-1"></span>
-							<span>
-								Capacitación para el uso de tu nuevo sistema o sitio web
-							</span>
-						</li>
-						<li className="d-flex align-items-start mb-3">
-							<span className="icon-check-list fs-5 me-2 mt-1"></span>
-							<span>
-								Integración con herramientas de marketing digital y CRM
-							</span>
-						</li>
-						<li className="d-flex align-items-start mb-3">
-							<span className="icon-check-list fs-5 me-2 mt-1"></span>
-							<span>
-								Actualizaciones tecnológicas continuas para mantener tu proyecto
-								vigente
-							</span>
-						</li>
-						<li className="d-flex align-items-start mb-3">
-							<span className="icon-check-list fs-5 me-2 mt-1"></span>
-							<span>
-								Consultoría estratégica para impulsar el crecimiento digital de
-								tu negocio
-							</span>
-						</li>
-					</ul>
-				</div>
+						inversión tecnológica."
+				/>
 			</section>
 			<section
 				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 mt-5"
