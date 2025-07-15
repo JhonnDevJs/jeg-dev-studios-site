@@ -3,35 +3,34 @@ import Link from "next/link";
 function Footer() {
   return (
     <footer className="d-flex flex-column justify-content-center align-items-center bg-black text-white w-100 p-3" role="contentinfo">
+      <p className="fs-5 text-white text-center mt-5">
+        Ya sea que estés comparando <strong>agencias de diseño</strong> o buscando una <strong>agencia digital</strong> que entienda las necesidades de tu negocio, en JEG Dev Studios encontrarás una empresa que combina creatividad, tecnología y estrategia.
+      </p>
       <div className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-3">
+        <article className="d-flex flex-column justify-content-center align-items-center h-100">
+          <Link href="/sobre-nosotros" className="text-decoration-none text-white fs-4">
+            ¿Quiénes somos?
+          </Link>
+        </article>
+        <article className="d-flex flex-column justify-content-center align-items-center h-100">
+          <Link
+            href="/aviso-de-privacidad"
+            className="text-decoration-none text-white fs-4"
+          >
+            Aviso de privacidad
+          </Link>
+        </article>
+        <article className="d-flex flex-column justify-content-center align-items-center h-100">
+          <Link
+            href="/terminos-y-condiciones"
+            className="text-decoration-none text-white fs-4"
+          >
+            Términos y condiciones
+          </Link>
+        </article>
         <article className="d-flex flex-column justify-content-center align-items-center gap-3">
-          <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-center">
-            <h2>Contactanos</h2>
-            <Link
-              href="tel:+525512197135"
-              className="text-decoration-none text-white fs-5"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Enlace a teléfono"
-              aria-label="Enlace a teléfono"
-              tabIndex={0}
-            >
-              +52 55 1219 7135
-            </Link>
-            <Link
-              href="mailto:jegdevstudioscontact@gmail.com"
-              className="text-decoration-none text-white fs-5"
-              target="_blank"
-              rel="noopener noreferrer"
-              title="Enlace a gmail"
-              aria-label="Enlace a gmail"
-              tabIndex={0}
-            >
-              jegdevstudioscontact@gmail.com
-            </Link>
-          </div>
-          <div className="d-flex flex-column justify-content-center align-items-xl-start align-items-center w-100 h-100">
-            <h2>Siguenos</h2>
+          <section className="d-flex flex-xl-row flex-column justify-content-center align-items-xl-start align-items-center w-100 h-100 gap-2">
+            <h2 className="text-white fs-4">Siguenos</h2>
             <div className="d-flex justify-content-center align-items-center gap-3">
               <Link
                 className="d-flex fs-2 text-decoration-none icon-facebook __icons-color"
@@ -70,32 +69,11 @@ function Footer() {
                 tabIndex={0}
               ></Link>
             </div>
-          </div>
-        </article>
-        <article className="d-flex flex-column justify-content-center align-items-center h-100">
-          <Link href="/sobre-nosotros" className="text-decoration-none text-white fs-4">
-            ¿Quiénes somos?
-          </Link>
-        </article>
-        <article className="d-flex flex-column justify-content-center align-items-center h-100">
-          <Link
-            href="/aviso-de-privacidad"
-            className="text-decoration-none text-white fs-4"
-          >
-            Aviso de privacidad
-          </Link>
-        </article>
-        <article className="d-flex flex-column justify-content-center align-items-center h-100">
-          <Link
-            href="/terminos-y-condiciones"
-            className="text-decoration-none text-white fs-4"
-          >
-            Términos y condiciones
-          </Link>
+          </section>
         </article>
       </div>
       <p className="d-flex justify-content-center align-items-center text-center w-100 mb-0 mt-3">
-        &copy; {new Date().getFullYear()} JEG Dev Studios. Todos los derechos
+        &copy; {new Date().getFullYear()} JEG Dev Studios.<br/>Todos los derechos
         reservados.
       </p>
     </footer>

@@ -17,6 +17,9 @@ function NavBar() {
             href="/"
             className="navbar-brand d-flex text-white justify-content-center align-items-center text-center p-0 gap-2"
             style={{ position: "fixed", top: "0rem", left: "3rem" }}
+            aria-label="Logo JEG Dev Studios"
+            title="Logo JEG Dev Studios"
+            tabIndex={0}
           >
             <Image
               src={iconLogo}
@@ -58,6 +61,9 @@ function NavBar() {
                     className={`nav-link text-white nav-efecto${
                       pathname === "/" ? " active" : ""
                     }`}
+                    aria-current="page"
+                    title="Página de inicio del sitio web de jeg dev studios"
+                    tabIndex={0}
                   >
                     Home
                   </Link>
@@ -68,6 +74,9 @@ function NavBar() {
                     className={`nav-link text-white nav-efecto${
                       pathname === "/servicios" ? " active" : ""
                     }`}
+                    aria-current="page"
+                    title="Página de nuestros servicios"
+                    tabIndex={0}
                   >
                     Servicios
                   </Link>
@@ -78,6 +87,8 @@ function NavBar() {
                     className={`nav-link d-none text-white nav-efecto${
                       pathname === "/proyectos" ? " active" : ""
                     }`}
+                    aria-hidden="true"
+                    title="Página de nuestros proyectos"
                   >
                     Proyectos
                   </Link>
@@ -88,16 +99,22 @@ function NavBar() {
                     className={`nav-link text-white nav-efecto${
                       pathname === "/sobre-nosotros" ? " active" : ""
                     }`}
+                    aria-current="page"
+                    title="Página sobre nosotros y la empresa jeg dev studios"
+                    tabIndex={0}
                   >
                     Sobre Nosotros
                   </Link>
                 </li>
                 <li className="nav-item">
                   <Link
-                    href="/blog"
+                    href="https://blog.jegdevstudios.com/"
                     className={`nav-link text-white nav-efecto${
-                      pathname === "/blog" ? " active" : ""
+                      pathname === "https://blog.jegdevstudios.com/" ? " active" : ""
                     }`}
+                    aria-current="page"
+                    title="Página del blog de tecnología de jeg dev studios"
+                    tabIndex={0}
                   >
                     Blog
                   </Link>
@@ -108,6 +125,9 @@ function NavBar() {
                     className={`nav-link text-white nav-efecto${
                       pathname === "/contacto" ? " active" : ""
                     }`}
+                    aria-current="page"
+                    title="Página de contacto de jeg dev studios"
+                    tabIndex={0}
                   >
                     Contacto
                   </Link>
