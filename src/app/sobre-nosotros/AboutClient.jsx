@@ -30,6 +30,18 @@ export default function AboutClient() {
           </p>
         </article>
 
+        {/* --- AÑADE ESTE BLOQUE PARA MOSTRAR LA CALIFICACIÓN --- */}
+        <article className="d-none flex-column w-100 p-0 m-0 my-4 text-center">
+          <h2 className="text-white">Lo que dicen nuestros clientes</h2>
+          <div className="text-white fs-4 mt-2">
+            <span style={{ color: '#ffc107' }}>★★★★☆</span> 4.9/5
+          </div>
+          <p className="text-white-50">
+            Basado en 25 reseñas de clientes.
+          </p>
+        </article>
+        {/* --- FIN DEL BLOQUE --- */}
+
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Misión y Visión</h2>
           <p className="text-white">

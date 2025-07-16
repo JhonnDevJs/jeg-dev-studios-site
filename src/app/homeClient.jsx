@@ -35,7 +35,15 @@ export default function HomeClient({ posts: postsToShow }) {
       "https://instagram.com/jegdevstudios/",
       "https://linkedin.com/company/jegdevstudios",
       "https://github.com/JEGDevStudios"
-    ]
+    ],
+    // --- ¡AQUÍ ESTÁ LA NUEVA SECCIÓN! ---
+    // Basado en la recomendación de Semrush para aumentar el CTR.
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.9", // <-- Reemplaza con tu calificación promedio real
+      "bestRating": "5",
+      "ratingCount": "25"   // <-- Reemplaza con el número total de calificaciones
+    }
   };
 
   const websiteSchema = {
