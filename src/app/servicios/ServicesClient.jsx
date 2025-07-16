@@ -5,6 +5,7 @@ import CardServices from "@/components/CardServices";
 import CardNestedLists from "@/components/CardNestedLists";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
+import StructuredData from "@/components/StructuredData"; // Importar el nuevo componente
 import "./ServicesClient.css";
 
 const faqs = [
@@ -56,9 +57,25 @@ export default function ServicesClient() {
   const toggle = (index) => {
     setOpenIndex(openIndex === index ? null : index);
   };
+  
+  // Schema ESPECÍFICO para esta página de servicios
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({ // Usa las FAQs de ESTA PÁGINA
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
 
   return (
     <>
+      {/* Este componente solo renderiza el schema de FAQ aquí, no en otras páginas */}
+      <StructuredData data={faqSchema} />
       <section className="__image-background-servicios d-flex flex-column justify-content-center align-items-center w-100">
       </section>
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 mt-5 gap-3">

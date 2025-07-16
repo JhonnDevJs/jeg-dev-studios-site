@@ -1,6 +1,7 @@
 'use client'
 import Image from "next/image"
 import Link from "next/link";
+import StructuredData from "./StructuredData";
 
 function cleanHTML(html) {
   if (!html || typeof html !== 'string') return '';
@@ -25,6 +26,31 @@ export default function BlogSection({ posts }) {
 	const mainPost = posts[0];
 	const sidePosts = posts.slice(1, 4);
 
+	const blogPostingSchema = (post) => ({
+		"@context": "https://schema.org",
+		"@type": "BlogPosting",
+		"mainEntityOfPage": {
+			"@type": "WebPage",
+			"@id": post.link
+		},
+		"headline": post.title,
+		"image": post.imageUrl,
+		"datePublished": new Date(post.pubDate).toISOString(),
+		"author": {
+			"@type": "Organization",
+			"name": "JEG Dev Studios"
+		},
+		"publisher": {
+			"@type": "Organization",
+			"name": "JEG Dev Studios",
+			"logo": {
+				"@type": "ImageObject",
+				"url": "https://www.jegdevstudios.com/logo-bg-transparent.webp" // URL al logo
+			}
+		},
+		"description": post.contentSnippet || post.content.substring(0, 150)
+	});
+
 	const cardThemeClasses = "bg-transparent text-white";
 
 	return (
@@ -39,6 +65,7 @@ export default function BlogSection({ posts }) {
 				{/* Entrada Principal (Izquierda) */}
 				{mainPost && (
 					<div className="col-lg-5">
+						<StructuredData data={blogPostingSchema(mainPost)} />
 						<article className={`card shadow-lg ${cardThemeClasses}`}>
 							{mainPost.imageUrl && (
 								<div

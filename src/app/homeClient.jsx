@@ -13,12 +13,46 @@ import CardsProcess from '@/components/CardsProcess';
 import CardNestedLists from '@/components/CardNestedLists';
 import CardSmallList from '@/components/CardSmallList';
 import "./home.css";
+import StructuredData from '@/components/StructuredData';
 
 export default function HomeClient({ posts: postsToShow }) {
 	const [mounted, setMounted] = useState(false);
 	useEffect(() => setMounted(true), []);
+
+  const organizationSchema = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    "name": "JEG Dev Studios",
+    "url": "https://www.jegdevstudios.com/", // Cambia a tu URL de producción
+    "logo": "https://www.jegdevstudios.com/logo-bg-transparent.webp", // URL completa a tu logo
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "telephone": "+52-55-1219-7135",
+      "contactType": "Customer Service"
+    },
+    "sameAs": [
+      "https://www.facebook.com/JEGDevStudios",
+      "https://instagram.com/jegdevstudios/",
+      "https://linkedin.com/company/jegdevstudios",
+      "https://github.com/JEGDevStudios"
+    ]
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "url": "https://www.jegdevstudios.com/", // Cambia a tu URL de producción
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.jegdevstudios.com/search?q={search_term_string}", // Si tienes una página de búsqueda
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
 		<>
+      <StructuredData data={organizationSchema} />
+      <StructuredData data={websiteSchema} />
 			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground">
 				<article
 					className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0"
