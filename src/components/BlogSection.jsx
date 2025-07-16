@@ -102,6 +102,9 @@ export default function BlogSection({ posts }) {
 											? "btn-outline-light" // Cambiado a outline-light
 											: "btn-primary"
 									} mt-auto align-self-start`}
+									aria-label={`Leer artículo completo sobre ${mainPost.title}`}
+									title={`Leer artículo completo sobre ${mainPost.title}`}
+									tabIndex={0}
 								>
 									Leer artículo completo →
 								</Link>
@@ -182,6 +185,9 @@ export default function BlogSection({ posts }) {
 												? "btn-outline-light"
 												: "btn-outline-primary"
 										} mt-auto align-self-start`}
+										aria-label={`Leer más sobre ${post.title}`}
+										title={`Leer más sobre ${post.title}`}
+										tabIndex={0}
 									>
 										Leer más →
 									</Link>

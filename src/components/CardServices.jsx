@@ -10,7 +10,7 @@ function CardServices({ title, description, url, buttonLabel, items = [] }) {
       <div className="card-body d-flex flex-column">
         <h3 className="h2 fw-bolder card-title text-start">{title}</h3>
         <p className="fs-5 text-start">{description}</p>
-        <Link href={url} className="btn-services">
+        <Link href={url} className="btn-services" role="button" aria-label={buttonLabel} title={buttonLabel} tabIndex={0}>
           <span className="fw-bolder">{buttonLabel}</span>
         </Link>
       </div>

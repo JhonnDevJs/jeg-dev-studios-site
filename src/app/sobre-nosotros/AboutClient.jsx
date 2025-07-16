@@ -148,12 +148,12 @@ export default function AboutClient() {
             éxito? Hablemos y encuentra la solución ideal con nosotros.
           </p>
           <Link
-            href="tel:+525512197135"
+            href="https://wa.me/5215512197135"
             className="text-decoration-none text-white fs-5"
             target="_blank"
             rel="noopener noreferrer"
-            title="Llámanos"
-            aria-label="Llámanos"
+            title="Llámanos al +52 55 1219 7135 vía whatsapp"
+            aria-label="Llámanos al +52 55 1219 7135 vía whatsapp"
             tabIndex={0}
           >
             +52 55 1219 7135
@@ -163,8 +163,8 @@ export default function AboutClient() {
             className="text-decoration-none text-white fs-5"
             target="_blank"
             rel="noopener noreferrer"
-            title="Envíanos un correo"
-            aria-label="Envíanos un correo"
+            title="Envíanos un correo a jegdevstudioscontact@gmail.com"
+            aria-label="Envíanos un correo a jegdevstudioscontact@gmail.com"
             tabIndex={0}
           >
             jegdevstudioscontact@gmail.com

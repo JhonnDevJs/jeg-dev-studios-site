@@ -113,12 +113,22 @@ export default function ContactClient() {
           <Link
             href="mailto:jegdevstudioscontact@gmail.com"
             className="fs-4 text-center text-white"
+            tabIndex={0}
+            aria-label="Envíar un mensaje por correo electrónico a jegdevstudioscontact@gmail.com"
+            title="Envíar un mensaje por correo electrónico a jegdevstudioscontact@gmail.com"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             jegdevstudioscontact@gmail.com
           </Link>
           <Link
-            href="tel:+52 1 5512197135"
+            href="https://wa.me/5215512197135"
             className="fs-4 text-center text-white"
+            tabIndex={0}
+            aria-label="Envíar un mensaje por WhatsApp +52 55-1219-7135"
+            title="Envíar un mensaje por WhatsApp +52 55-1219-7135"
+            target="_blank"
+            rel="noopener noreferrer"
           >
             55-1219-7135
           </Link>

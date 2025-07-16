@@ -8,7 +8,7 @@ function Footer() {
       </p>
       <div className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-3">
         <article className="d-flex flex-column justify-content-center align-items-center h-100">
-          <Link href="/sobre-nosotros" className="text-decoration-none text-white fs-4">
+          <Link href="/sobre-nosotros" className="text-decoration-none text-white fs-4" tabIndex={0} title="Página sobre nosotros y la empresa jeg dev studios" aria-label="Página sobre nosotros y la empresa jeg dev studios" aria-labelledby="sobre-nosotros">
             ¿Quiénes somos?
           </Link>
         </article>
@@ -16,6 +16,10 @@ function Footer() {
           <Link
             href="/aviso-de-privacidad"
             className="text-decoration-none text-white fs-4"
+            tabIndex={0}
+            title="Aviso de privacidad de jeg dev studios"
+            aria-label="Aviso de privacidad de jeg dev studios"
+            aria-labelledby="aviso-de-privacidad"
           >
             Aviso de privacidad
           </Link>
@@ -24,6 +28,10 @@ function Footer() {
           <Link
             href="/terminos-y-condiciones"
             className="text-decoration-none text-white fs-4"
+            tabIndex={0}
+            title="Términos y condiciones de jeg dev studios"
+            aria-label="Términos y condiciones de jeg dev studios"
+            aria-labelledby="terminos-y-condiciones"
           >
             Términos y condiciones
           </Link>
@@ -39,6 +47,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 title="Enlace a página de facebook"
                 aria-label="Enlace a página de facebook"
+                aria-labelledby="facebook"
                 tabIndex={0}
               ></Link>
               <Link
@@ -48,6 +57,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 title="Enlace a página de Instagram"
                 aria-label="Enlace a página de Instagram"
+                aria-labelledby="instagram"
                 tabIndex={0}
               ></Link>
               <Link
@@ -57,6 +67,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 title="Enlace a página de linkedin"
                 aria-label="Enlace a página de linkedin"
+                aria-labelledby="linkedin"
                 tabIndex={0}
               ></Link>
               <Link
@@ -66,6 +77,7 @@ function Footer() {
                 rel="noopener noreferrer"
                 title="Enlace a página de github"
                 aria-label="Enlace a página de github"
+                aria-labelledby="github"
                 tabIndex={0}
               ></Link>
             </div>

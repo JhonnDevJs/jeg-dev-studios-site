@@ -235,7 +235,7 @@ export default function ServicesClient() {
                   <li>✔ SEO básico</li>
                   <li>✔ Hasta 5 secciones</li>
                 </ul>
-                <Link href="/saber-mas/web-dev" className="btn btn-outline-light mt-3">Ver más</Link>
+                <Link href="/saber-mas/web-dev" className="btn btn-outline-light mt-3" tabIndex={0} aria-label="Ver más sobre desarrollo web" title="Ver más sobre desarrollo web">Ver más</Link>
               </div>
             </div>
           </div>
@@ -256,7 +256,7 @@ export default function ServicesClient() {
                   <li>✔ Publicación en tienda</li>
                   <li>✔ Diseño limpio y funcional</li>
                 </ul>
-                <Link href="/saber-mas/app-dev" className="btn btn-outline-light mt-3">Ver más</Link>
+                <Link href="/saber-mas/app-dev" className="btn btn-outline-light mt-3" tabIndex={0} aria-label="Ver más sobre desarrollo de aplicaciones" title="Ver más sobre desarrollo de aplicaciones">Ver más</Link>
               </div>
             </div>
           </div>
@@ -277,7 +277,7 @@ export default function ServicesClient() {
                   <li>✔ Manual de usuario</li>
                   <li>✔ Instalación incluida</li>
                 </ul>
-                <Link href="/saber-mas/soft-dev" className="btn btn-outline-light mt-3">Ver más</Link>
+                <Link href="/saber-mas/soft-dev" className="btn btn-outline-light mt-3" tabIndex={0} aria-label="Ver más sobre desarrollo de software empresarial" title="Ver más">Ver más</Link>
               </div>
             </div>
           </div>

@@ -19,6 +19,9 @@ export default function CTA() {
             href="/contacto"
             aria-label="Enlace a página de contacto"
             className="btn btn-light btn-lg px-4"
+            role="button"
+            title="Enlace a página de contacto"
+            tabIndex={0}
           >
             Solicitar una consulta gratuita
           </Link>
@@ -26,6 +29,9 @@ export default function CTA() {
             href="/servicios"
             aria-label="Enlace a página de servicios"
             className="btn btn-outline-light btn-lg px-4"
+            role="button"
+            title="Enlace a página de servicios"
+            tabIndex={0}
           >
             Ver nuestros servicios
           </Link>

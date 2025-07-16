@@ -81,6 +81,9 @@ export default function PrivacyPolicy() {
             className="text-white text-decoration-underline"
             target="_blank"
             rel="noopener noreferrer"
+            tabIndex={0}
+            title="Envía un correo a jegdevstudioscontact@gmail.com"
+            aria-label="Envía un correo a jegdevstudioscontact@gmail.com"
           >
             jegdevstudioscontact@gmail.com
           </Link>
@@ -112,6 +115,9 @@ export default function PrivacyPolicy() {
             className="text-white text-decoration-underline"
             target="_blank"
             rel="noopener noreferrer"
+            tabIndex={0}
+            title="Envía un correo a jegdevstudioscontact@gmail.com"
+            aria-label="Envía un correo a jegdevstudioscontact@gmail.com"
           >
             jegdevstudioscontact@gmail.com
           </Link>
@@ -135,6 +141,9 @@ export default function PrivacyPolicy() {
             className="text-white text-decoration-underline"
             target="_blank"
             rel="noopener noreferrer"
+            tabIndex={0}
+            title="Envía un correo a jegdevstudioscontact@gmail.com"
+            aria-label="Envía un correo a jegdevstudioscontact@gmail.com"
           >
             jegdevstudioscontact@gmail.com
           </Link>
@@ -167,6 +176,8 @@ export default function PrivacyPolicy() {
             className="text-white text-decoration-underline"
             target="_blank"
             rel="noopener noreferrer"
+            tabIndex={0}
+            title="Visitar nuestra página de aviso de privacidad"
           >
             www.jegdevstudios.com/aviso-de-privacidad
           </Link>

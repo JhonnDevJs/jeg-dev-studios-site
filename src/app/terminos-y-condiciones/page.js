@@ -43,8 +43,8 @@ export default function TermsAndConditions() {
           <h2 className="text-white">I. INTRODUCCIÓN</h2>
           <p className="text-white">
             Al ingresar y utilizar este portal de Internet, cuyo nombre de dominio es{" "}
-            <Link href="https://www.jegdevstudios.com" target="_blank" rel="noopener noreferrer" className="text-white text-decoration-underline">
-              https://www.jegdevstudios.com
+            <Link href="https://www.jegdevstudios.com" target="_blank" className="text-white text-decoration-underline" title="link del sitio web de dominio jegdevstudios.com" aria-label="link del sitio web de dominio jegdevstudios.com">
+              www.jegdevstudios.com
             </Link>, propiedad de JEG Dev Studios (en adelante, &quot;JEG&quot; o &quot;la empresa&quot;), el usuario acepta los presentes Términos y Condiciones de Uso. Esta aceptación se realiza mediante medios electrónicos, en cumplimiento con el artículo 1803 del Código Civil Federal.
           </p>
           <p className="text-white">
@@ -220,7 +220,7 @@ export default function TermsAndConditions() {
             Para dudas o notificaciones relacionadas con propiedad intelectual, uso indebido del sitio o los servicios ofrecidos:
             <br />
             📧 <strong>Email:</strong>{" "}
-            <Link href="mailto:jegdevstudioscontact@gmail.com" className="text-white text-decoration-underline">
+            <Link href="mailto:jegdevstudioscontact@gmail.com" className="text-white text-decoration-underline" tabIndex={0} title="correo de contacto" aria-label="correo de contacto" >
               jegdevstudioscontact@gmail.com
             </Link>
           </p>

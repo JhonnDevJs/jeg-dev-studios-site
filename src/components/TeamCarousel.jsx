@@ -48,17 +48,17 @@ export default function TeamCarousel() {
             links={[
               {
                 url: "https://www.linkedin.com/in/JhonEG",
-                title: "LinkedIn",
+                title: "LinkedIn de Jhonatan Espinal Garcia",
                 icon: "icon-linkedin-no-bg",
               },
               {
                 url: "https://github.com/JhonEG-17",
-                title: "GitHub",
+                title: "GitHub de Jhonatan Espinal Garcia",
                 icon: "icon-github",
               },
               {
                 url: "https://jhoneg-17.github.io/JhonDev/",
-                title: "Portafolio web de Jhonatan",
+                title: "Portafolio web de Jhonatan Espinal Garcia",
                 icon: "icon-link",
               },
             ]}
@@ -73,12 +73,12 @@ export default function TeamCarousel() {
             links={[
               {
                 url: "https://www.linkedin.com/in/fernanda-brise%C3%B1o-64b310342/",
-                title: "LinkedIn de Fernanda",
+                title: "LinkedIn de Fernanda Briseño",
                 icon: "icon-linkedin-no-bg",
               },
               {
                 url: "https://www.behance.net/karlabriseo1",
-                title: "Behance de Fernanda",
+                title: "Behance de Fernanda Briseño",
                 icon: "icon-behance",
               },
             ]}
@@ -93,7 +93,7 @@ export default function TeamCarousel() {
             links={[
               {
                 url: "https://www.linkedin.com/in/jose-leonardo-gonzalez-valadez-860b012b4/",
-                title: "LinkedIn",
+                title: "LinkedIn de Leonardo González",
                 icon: "icon-linkedin-no-bg",
               }
             ]}
@@ -108,7 +108,7 @@ export default function TeamCarousel() {
             links={[
               {
                 url: "https://www.linkedin.com/in/ricardo-ubaldo-gonz%C3%A1lez-4522a5291/",
-                title: "LinkedIn",
+                title: "LinkedIn de Ricardo Ubaldo",
                 icon: "icon-linkedin-no-bg",
               }
             ]}

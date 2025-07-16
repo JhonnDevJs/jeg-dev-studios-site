@@ -63,6 +63,7 @@ function NavBar() {
                     }`}
                     aria-current="page"
                     title="Página de inicio del sitio web de jeg dev studios"
+                    aria-label="Página de inicio del sitio web de jeg dev studios"
                     tabIndex={0}
                   >
                     Home
@@ -76,6 +77,7 @@ function NavBar() {
                     }`}
                     aria-current="page"
                     title="Página de nuestros servicios"
+                    aria-label="Página de nuestros servicios"
                     tabIndex={0}
                   >
                     Servicios
@@ -88,7 +90,8 @@ function NavBar() {
                       pathname === "/proyectos" ? " active" : ""
                     }`}
                     aria-hidden="true"
-                    title="Página de nuestros proyectos"
+                    title="Página de nuestros servicios"
+                    aria-label="Página de nuestros proyectos"
                   >
                     Proyectos
                   </Link>
@@ -101,6 +104,7 @@ function NavBar() {
                     }`}
                     aria-current="page"
                     title="Página sobre nosotros y la empresa jeg dev studios"
+                    aria-label="Página sobre nosotros y la empresa jeg dev studios"
                     tabIndex={0}
                   >
                     Sobre Nosotros
@@ -114,6 +118,7 @@ function NavBar() {
                     }`}
                     aria-current="page"
                     title="Página del blog de tecnología de jeg dev studios"
+                    aria-label="Página del blog de tecnología de jeg dev studios"
                     tabIndex={0}
                   >
                     Blog
@@ -127,6 +132,7 @@ function NavBar() {
                     }`}
                     aria-current="page"
                     title="Página de contacto de jeg dev studios"
+                    aria-label="Página de contacto de jeg dev studios"
                     tabIndex={0}
                   >
                     Contacto

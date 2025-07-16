@@ -13,6 +13,8 @@ export default function CTAProducts() {
           className="btn btn-light btn-lg px-4 py-2"
           role="button"
           aria-label="Enlace a página de contacto"
+          title="Enlace a página de contacto"
+          tabIndex={0}
         >
           Solicita una cotización personalizada
         </Link>
