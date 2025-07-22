@@ -3,7 +3,7 @@ import { useEffect, useState } from 'react';
 
 import { jsxDEV as _jsxDEV, Fragment as _Fragment } from "react/jsx-dev-runtime";
 import { FaGlobe, FaChartLine, FaLock, FaHeadset, FaHandshake, FaFire, FaSearch, FaChartBar, FaAssistiveListeningSystems } from "react-icons/fa";
-
+import Image from "next/image";
 import Link from "next/link";
 import CardServices from "@/components/CardServices";
 import TeamCarousel from "@/components/TeamCarousel";
@@ -12,55 +12,110 @@ import BlogSection from '@/components/BlogSection';
 import CardsProcess from '@/components/CardsProcess';
 import CardNestedLists from '@/components/CardNestedLists';
 import CardSmallList from '@/components/CardSmallList';
+import StructuredData from "@/components/StructuredData";
+import AsideAgenciaDigital from "@/assets/img/img/home/agencia-digital.webp";
 import "./home.css";
-import StructuredData from '@/components/StructuredData';
+
+const faqsHome = [
+  // Desarrollo Web
+  {
+    question: "¿Qué incluye el servicio de desarrollo web de JEG Dev Studios?",
+    answer: "Incluye la creación de sitios web personalizados, responsivos y adaptados a tu marca, utilizando tecnologías modernas como HTML, CSS, JavaScript, Node.js o Laravel.",
+  },
+  {
+    question: "¿Ofrecen dominio y hosting incluido?",
+    answer: "Sí, nuestros paquetes incluyen 1 año de dominio personalizado y hosting web, ya sea mediante Hostinger, DonDominio o Google Sites, según el paquete contratado.",
+  },
+  {
+    question: "¿Qué tecnologías usan para crear sitios web?",
+    answer: "Dependiendo del paquete, utilizamos HTML, CSS, JavaScript, Bootstrap, Node.js o PHP (Laravel) para el desarrollo del frontend y backend.",
+  },
+  {
+    question: "¿Puedo solicitar cambios en el diseño del sitio web?",
+    answer: "Sí, cada paquete incluye un número específico de cambios permitidos a nivel de secciones del diseño web.",
+  },
+  {
+    question: "¿Incluyen optimización SEO en los sitios web?",
+    answer: "Sí, todos nuestros paquetes incluyen implementación básica de SEO para mejorar tu visibilidad en buscadores como Google.",
+  },
+  {
+    question: "¿Cuánto tiempo tarda en entregarse un sitio web?",
+    answer: "La entrega depende del paquete. Desde 7 hasta 30 días hábiles, dependiendo de la complejidad y funcionalidades requeridas.",
+  },
+
+  // Desarrollo de Aplicaciones Móviles
+  {
+    question: "¿Qué tipo de aplicaciones móviles desarrollan?",
+    answer: "Creamos apps nativas, híbridas y multiplataforma para Android y iOS, según los requerimientos del cliente y el paquete contratado.",
+  },
+  {
+    question: "¿Publican las apps en la Play Store o App Store?",
+    answer: "Sí, la publicación en Google Play o App Store está incluida en todos nuestros paquetes de desarrollo de apps móviles.",
+  },
+  {
+    question: "¿Qué tecnologías utilizan para las apps móviles?",
+    answer: "Trabajamos con tecnologías como React Native, Kotlin Multiplatform, Java para backend, y bases de datos remotas según el nivel del proyecto.",
+  },
+  {
+    question: "¿Incluyen base de datos o backend en las apps móviles?",
+    answer: "Sí, los paquetes intermedios y avanzados incluyen conexión con bases de datos remotas, backend en Java y funcionalidades como login o almacenamiento.",
+  },
+  {
+    question: "¿Incluyen diseño UI/UX personalizado?",
+    answer: "Sí, todos nuestros planes ofrecen un diseño responsivo y adaptado a tu marca. Los paquetes más avanzados incluyen navegación fluida y componentes animados.",
+  },
+  {
+    question: "¿Pueden desarrollar apps con funcionalidades avanzadas?",
+    answer: "Sí, como parte del paquete Premium podemos integrar funcionalidades complejas como pagos, geolocalización, cámara, push notifications y paneles administrativos web.",
+  },
+
+  // Software Empresarial
+  {
+    question: "¿Qué tipo de software empresarial desarrollan?",
+    answer: "Desarrollamos soluciones personalizadas como sistemas de ventas, inventarios, citas, empleados y más, adaptados a las necesidades de tu negocio.",
+  },
+  {
+    question: "¿El software incluye instalación y soporte?",
+    answer: "Sí, todos los paquetes incluyen instalación en uno o más equipos. El paquete Profesional también ofrece soporte técnico durante el primer mes.",
+  },
+  {
+    question: "¿Qué tipo de base de datos utilizan?",
+    answer: "Utilizamos bases de datos locales (como SQLite) o en red/nube según el paquete, con estructuras seguras y eficientes para tu operación diaria.",
+  },
+  {
+    question: "¿Incluyen funcionalidades como reportes o gráficas?",
+    answer: "Sí, los paquetes más avanzados incluyen paneles de estadísticas, gráficas, exportación de reportes a Excel/PDF, y herramientas de gestión.",
+  },
+  {
+    question: "¿El software puede ser multiusuario?",
+    answer: "Sí, nuestros planes intermedios y avanzados permiten múltiples usuarios con acceso por roles, login y permisos configurables.",
+  },
+  {
+    question: "¿Ofrecen soluciones con integración a sistemas externos?",
+    answer: "Sí, en el paquete Profesional podemos integrar tu software con CRMs, facturación electrónica u otros sistemas empresariales según tus procesos.",
+  },
+];
 
 export default function HomeClient({ posts: postsToShow }) {
 	const [mounted, setMounted] = useState(false);
 	useEffect(() => setMounted(true), []);
 
-  const organizationSchema = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "JEG Dev Studios",
-    "url": "https://www.jegdevstudios.com/", // Cambia a tu URL de producción
-    "logo": "https://www.jegdevstudios.com/logo-bg-transparent.webp", // URL completa a tu logo
-    "contactPoint": {
-      "@type": "ContactPoint",
-      "telephone": "+52-55-1219-7135",
-      "contactType": "Customer Service"
-    },
-    "sameAs": [
-      "https://www.facebook.com/JEGDevStudios",
-      "https://instagram.com/jegdevstudios/",
-      "https://linkedin.com/company/jegdevstudios",
-      "https://github.com/JEGDevStudios"
-    ],
-    // --- ¡AQUÍ ESTÁ LA NUEVA SECCIÓN! ---
-    // Basado en la recomendación de Semrush para aumentar el CTR.
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9", // <-- Reemplaza con tu calificación promedio real
-      "bestRating": "5",
-      "ratingCount": "25"   // <-- Reemplaza con el número total de calificaciones
-    }
-  };
-
-  const websiteSchema = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": "https://www.jegdevstudios.com/", // Cambia a tu URL de producción
-    "potentialAction": {
-      "@type": "SearchAction",
-      "target": "https://www.jegdevstudios.com/search?q={search_term_string}", // Si tienes una página de búsqueda
-      "query-input": "required name=search_term_string"
-    }
-  };
+	const faqSchemaHome = {
+		"@context": "https://schema.org",
+		"@type": "FAQPage",
+		"mainEntity": faqsHome.map(faq => ({
+			"@type": "Question",
+			"name": faq.question,
+			"acceptedAnswer": {
+				"@type": "Answer",
+				"text": faq.answer
+			}
+		}))
+	};
 
   return (
 		<>
-      <StructuredData data={organizationSchema} />
-      <StructuredData data={websiteSchema} />
+			<StructuredData data={faqSchemaHome} />
 			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground">
 				<article
 					className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0"
@@ -278,18 +333,32 @@ export default function HomeClient({ posts: postsToShow }) {
 					</li>
 				</ul>
 			</section>
-			<section className="bg-dark text-white py-5 text-center px-3 px-md-5">
-				<div className="container" style={{ maxWidth: "900px" }}>
-					<h2 className="display-6 fw-bold mb-4">Más que una agencia digital común</h2>
-					<p className="fs-5 mb-4">
-						A diferencia de muchas agencias de diseño o agencias de desarrollo que solo ofrecen servicios técnicos, en JEG Dev Studios alineamos cada solución con el <strong>objetivo comercial</strong> de nuestros clientes.
-					</p>
-					<p className="fs-5 mb-3">
-						Como <strong>empresa de desarrollo web</strong> con enfoque estratégico, creamos soluciones que combinan <strong>diseño de páginas web</strong>, experiencia de usuario, programación moderna y <strong>estrategias de marketing digital</strong> para lograr resultados reales.
-					</p>
-					<p className="fs-5">
-						Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, estás en el lugar correcto.
-					</p>
+			<section className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100" style={{ minHeight: "100vh", position: "relative" }}>
+				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-center w-100 h-100 position-relative">
+					{/* Imagen */}
+					<div className="agencia-img-container-full position-relative flex-shrink-0">
+						<Image
+							loading="lazy"
+							src={AsideAgenciaDigital}
+							alt="Agencia digital JEG Dev Studios"
+							fill
+							style={{ objectFit: "cover" }}
+							className="w-100 h-100"
+						/>
+					</div>
+					{/* Texto */}
+					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-md-start text-white p-4 flex-grow-1 position-relative">
+						<h2 className="display-6 fw-bold mb-4">Más que una agencia digital común</h2>
+						<p className="fs-5 mb-4">
+							A diferencia de muchas agencias de diseño o agencias de desarrollo que solo ofrecen servicios técnicos, en JEG Dev Studios alineamos cada solución con el <strong>objetivo comercial</strong> de nuestros clientes.
+						</p>
+						<p className="fs-5 mb-3">
+							Como <strong>empresa de desarrollo web</strong> con enfoque estratégico, creamos soluciones que combinan <strong>diseño de páginas web</strong>, experiencia de usuario, programación moderna y <strong>estrategias de marketing digital</strong> para lograr resultados reales.
+						</p>
+						<p className="fs-5">
+							Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, estás en el lugar correcto.
+						</p>
+					</div>
 				</div>
 			</section>
 			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
@@ -349,16 +418,6 @@ export default function HomeClient({ posts: postsToShow }) {
 						inversión tecnológica."
 				/>
 			</section>
-			<section
-				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 mt-5"
-				style={{ minHeight: "553px" }}
-			>
-				<h2 className="text-center text-white">
-					Somos un equipo experto en SEO, diseño, desarrollo web, software y
-					apps móviles.
-				</h2>
-				<TeamCarousel />
-			</section>
 			<section className="bg-transparent text-white py-5 text-center px-3 px-md-5">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="display-6 fw-bold mb-4">
@@ -402,7 +461,16 @@ export default function HomeClient({ posts: postsToShow }) {
 					</ul>
 				</div>
 			</section>
-
+			<section
+				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 mt-5"
+				style={{ minHeight: "553px" }}
+			>
+				<h2 className="text-center text-white">
+					Somos un equipo experto en SEO, diseño, desarrollo web, software y
+					apps móviles.
+				</h2>
+				<TeamCarousel />
+			</section>
 			<section className="bg-transparent text-white py-5 text-center px-3 px-md-5">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="display-6 fw-bold mb-4">

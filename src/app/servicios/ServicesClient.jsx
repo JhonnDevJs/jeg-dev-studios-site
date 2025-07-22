@@ -75,6 +75,7 @@ export default function ServicesClient() {
   return (
     <>
       {/* Este componente solo renderiza el schema de FAQ aquí, no en otras páginas */}
+      
       <StructuredData data={faqSchema} />
       <section className="__image-background-servicios d-flex flex-column justify-content-center align-items-center w-100">
       </section>
