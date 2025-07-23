@@ -14,6 +14,7 @@ import CardNestedLists from '@/components/CardNestedLists';
 import CardSmallList from '@/components/CardSmallList';
 import StructuredData from "@/components/StructuredData";
 import AsideAgenciaDigital from "@/assets/img/img/home/agencia-digital.webp";
+import TeamGroup from "@/assets/img/img/home/team-group.webp";
 import "./home.css";
 
 const faqsHome = [
@@ -116,7 +117,7 @@ export default function HomeClient({ posts: postsToShow }) {
   return (
 		<>
 			<StructuredData data={faqSchemaHome} />
-			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground">
+			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground bg-fixed-cover">
 				<article
 					className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0"
 					style={{ maxWidth: "47rem" }}
@@ -279,6 +280,7 @@ export default function HomeClient({ posts: postsToShow }) {
 							src={AsideAgenciaDigital}
 							alt="Agencia digital JEG Dev Studios"
 							fill
+							sizes="(max-width: 767px) 100vw, 600px"
 							style={{ objectFit: "cover" }}
 							className="w-100 h-100"
 						/>
@@ -418,51 +420,66 @@ export default function HomeClient({ posts: postsToShow }) {
 						inversión tecnológica."
 				/>
 			</section>
-			<section className="bg-transparent text-white py-5 text-center px-3 px-md-5">
-				<div className="container" style={{ maxWidth: "900px" }}>
-					<h2 className="display-6 fw-bold mb-4">
-						Un equipo humano detrás de la tecnología
-					</h2>
-					<p className="fs-5 mb-4">
-						En JEG Dev Studios creemos que la tecnología es para las personas.
-						Por eso:
-					</p>
-					<ul
-						className="list-unstyled fs-5 text-start mx-auto"
-						style={{ maxWidth: "600px" }}
-					>
-						<li className="d-flex align-items-start mb-3">
-							<div className="me-3 mt-1 fs-3 text-white" >
-								<FaHandshake/>
-							</div>
-							<p>
-								Estamos comprometidos con la innovación y la creatividad en cada
-								proyecto.
-							</p>
-						</li>
-						<li className="d-flex align-items-start mb-3">
-							<div className="me-3 mt-1 fs-3 text-white">
-								<FaAssistiveListeningSystems />
-							</div>
-							<p>
-								Escuchamos a nuestros clientes para construir soluciones que
-								realmente funcionen.
-							</p>
-						</li>
-						<li className="d-flex align-items-start mb-3">
-							<div className="me-3 mt-1 fs-3 text-white">
-								<FaFire />
-							</div>
-							<p>
-								Tenemos pasión por la tecnología y el desarrollo de soluciones
-								reales y efectivas.
-							</p>
-						</li>
-					</ul>
+			<section className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100" style={{ minHeight: "100vh", position: "relative" }}>
+				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-center w-100 h-100 position-relative">
+					{/* Texto */}
+					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-xl-5 p-3 flex-grow-1 position-relative">
+						<h2 className="display-6 fw-bold mb-4">
+							Un equipo humano detrás de la tecnología
+						</h2>
+						<p className="fs-5 mb-4">
+							En JEG Dev Studios creemos que la tecnología es para las personas.
+							Por eso:
+						</p>
+						<ul
+							className="d-flex flex-column jstify-content-start list-unstyled fs-5 text-start"
+							
+						>
+							<li className="d-flex align-items-start mb-3">
+								<div className="me-3 mt-1 fs-3 text-white" >
+									<FaHandshake/>
+								</div>
+								<p>
+									Estamos comprometidos con la innovación y la creatividad en cada
+									proyecto.
+								</p>
+							</li>
+							<li className="d-flex align-items-start mb-3">
+								<div className="me-3 mt-1 fs-3 text-white">
+									<FaAssistiveListeningSystems />
+								</div>
+								<p>
+									Escuchamos a nuestros clientes para construir soluciones que
+									realmente funcionen.
+								</p>
+							</li>
+							<li className="d-flex align-items-start mb-3">
+								<div className="me-3 mt-1 fs-3 text-white">
+									<FaFire />
+								</div>
+								<p>
+									Tenemos pasión por la tecnología y el desarrollo de soluciones
+									reales y efectivas.
+								</p>
+							</li>
+						</ul>
+					</div>
+					{/* Imagen */}
+					<div className="agencia-img-container-full position-relative flex-shrink-0">
+						<Image
+							loading="lazy"
+							src={TeamGroup}
+							alt="Imagen del equipo de JEG Dev Studios"
+							fill
+							sizes="(max-width: 767px) 100vw, 600px"
+							style={{ objectFit: "cover" }}
+							className="w-100 h-100"
+						/>
+					</div>
 				</div>
 			</section>
 			<section
-				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 mt-5"
+				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 m-0"
 				style={{ minHeight: "553px" }}
 			>
 				<h2 className="text-center text-white">
@@ -511,7 +528,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					</ul>
 				</div>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center w-100 py-5 __bg-image-pricing" id="web-pricing">
+			<section className="d-flex flex-column justify-content-center align-items-center w-100 py-5 __bg-image-pricing bg-fixed-cover" id="web-pricing">
 				<div className="text-center mb-5">
 					<h2 className="fw-bold text-white">¿Cuánto cuesta una página web en México?</h2>
 					<p className="text-white">Conoce los paquetes y qué influye en su precio</p>

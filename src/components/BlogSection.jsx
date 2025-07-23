@@ -79,8 +79,9 @@ export default function BlogSection({ posts }) {
 										src={mainPost.imageUrl}
 										alt={`Imagen para ${mainPost.title}`}
 										title={`Imagen para ${mainPost.title}`}
-										layout="fill"
-										objectFit="cover"
+										fill
+										sizes="(max-width: 991px) 100vw, 42vw"
+										style={{ objectFit: 'cover' }}
 										className="card-img-top"
 									/>
 								</div>
@@ -159,8 +160,9 @@ export default function BlogSection({ posts }) {
 											src={post.imageUrl}
 											alt={`Imagen para ${post.title}`}
 											title={`Imagen para ${post.title}`}
-											layout="fill"
-											objectFit="cover"
+											fill
+											sizes="(max-width: 767px) 100vw, 270px"
+											style={{ objectFit: 'cover' }}
 										/>
 									</div>
 								)}

@@ -1,21 +1,22 @@
 /* home.css */
 
-/* Puedes ajustar los colores y el grosor */
-
-.__imageBackground {
-  background-image: url("/fondos/backgraund.webp");
+/* B. Clase de utilidad para fondos con efecto parallax */
+.bg-fixed-cover {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed;
+  background-attachment: fixed; /* Efecto parallax por defecto */
 }
 
+/* A. Mejora de rendimiento: Desactivar parallax en móviles */
 @media (max-width: 768px) {
-  .__imageBackground {
-    background-size: cover;
-    background-position: center center;
-    background-attachment: scroll;
+  .bg-fixed-cover {
+    background-attachment: scroll; /* Desactiva el efecto para mejor rendimiento */
   }
+}
+ 
+.__imageBackground {
+  background-image: url("/fondos/backgraund.webp");
 }
 
 .__section-team {
@@ -191,9 +192,5 @@
 
 .__bg-image-pricing {
   background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("/fondos/bg-pricings.webp");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
   min-height: 100vh;
 }
