@@ -270,6 +270,34 @@ export default function HomeClient({ posts: postsToShow }) {
 					</ul>
 				</article>
 			</section>
+			<section className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100" style={{ minHeight: "100vh", position: "relative" }}>
+				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-center w-100 h-100 position-relative">
+					{/* Imagen */}
+					<div className="agencia-img-container-full position-relative flex-shrink-0">
+						<Image
+							loading="lazy"
+							src={AsideAgenciaDigital}
+							alt="Agencia digital JEG Dev Studios"
+							fill
+							style={{ objectFit: "cover" }}
+							className="w-100 h-100"
+						/>
+					</div>
+					{/* Texto */}
+					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-4 flex-grow-1 position-relative">
+						<h2 className="display-6 fw-bold mb-4 text-center">Más que una agencia digital común</h2>
+						<p className="fs-5 fs-md-4 mb-4">
+							A diferencia de muchas agencias de diseño o agencias de desarrollo que solo ofrecen servicios técnicos, en JEG Dev Studios alineamos cada solución con el <strong>objetivo comercial</strong> de nuestros clientes.
+						</p>
+						<p className="fs-5 fs-md-4 mb-3">
+							Como <strong>empresa de desarrollo web</strong> con enfoque estratégico, creamos soluciones que combinan <strong>diseño de páginas web</strong>, experiencia de usuario, programación moderna y <strong>estrategias de marketing digital</strong> para lograr resultados reales.
+						</p>
+						<p className="fs-5 fs-md-4">
+							Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, estás en el lugar correcto.
+						</p>
+					</div>
+				</div>
+			</section>
 			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CardSmallList
 					titulo="¿Qué podemos hacer por tu negocio?"
@@ -332,34 +360,6 @@ export default function HomeClient({ posts: postsToShow }) {
 						<p className="fs-2 m-0">Garantía de satisfacción</p>
 					</li>
 				</ul>
-			</section>
-			<section className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100" style={{ minHeight: "100vh", position: "relative" }}>
-				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-center w-100 h-100 position-relative">
-					{/* Imagen */}
-					<div className="agencia-img-container-full position-relative flex-shrink-0">
-						<Image
-							loading="lazy"
-							src={AsideAgenciaDigital}
-							alt="Agencia digital JEG Dev Studios"
-							fill
-							style={{ objectFit: "cover" }}
-							className="w-100 h-100"
-						/>
-					</div>
-					{/* Texto */}
-					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-md-start text-white p-4 flex-grow-1 position-relative">
-						<h2 className="display-6 fw-bold mb-4">Más que una agencia digital común</h2>
-						<p className="fs-5 mb-4">
-							A diferencia de muchas agencias de diseño o agencias de desarrollo que solo ofrecen servicios técnicos, en JEG Dev Studios alineamos cada solución con el <strong>objetivo comercial</strong> de nuestros clientes.
-						</p>
-						<p className="fs-5 mb-3">
-							Como <strong>empresa de desarrollo web</strong> con enfoque estratégico, creamos soluciones que combinan <strong>diseño de páginas web</strong>, experiencia de usuario, programación moderna y <strong>estrategias de marketing digital</strong> para lograr resultados reales.
-						</p>
-						<p className="fs-5">
-							Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, estás en el lugar correcto.
-						</p>
-					</div>
-				</div>
 			</section>
 			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CardNestedLists
@@ -511,33 +511,33 @@ export default function HomeClient({ posts: postsToShow }) {
 					</ul>
 				</div>
 			</section>
-			<section className="container py-5" id="web-pricing">
+			<section className="d-flex flex-column justify-content-center align-items-center w-100 py-5 __bg-image-pricing" id="web-pricing">
 				<div className="text-center mb-5">
 					<h2 className="fw-bold text-white">¿Cuánto cuesta una página web en México?</h2>
 					<p className="text-white">Conoce los paquetes y qué influye en su precio</p>
 				</div>
 
-				<div className="row">
+				<div className="row w-100 p-xl-5 p-1">
 					{/* Paquetes según el tipo de negocio */}
 					<div className="col-md-6 mb-4">
 						<h3 className="h5 fw-semibold text-center text-white">Paquetes según el tipo de negocio</h3>
 						<ul className="list-group list-group-flush bg-transparent">
-							<li className="list-group-item bg-transparent text-white">Landing page para emprendedores</li>
-							<li className="list-group-item bg-transparent text-white">Sitio web corporativo</li>
-							<li className="list-group-item bg-transparent text-white">Tienda en línea con pasarela de pagos</li>
-							<li className="list-group-item bg-transparent text-white">Plataformas personalizadas o portales web</li>
+							<li className="list-group-item bg-transparent text-white"><p>Landing page para emprendedores</p></li>
+							<li className="list-group-item bg-transparent text-white"><p>Sitio web corporativo</p></li>
+							<li className="list-group-item bg-transparent text-white"><p>Tienda en línea con pasarela de pagos</p></li>
+							<li className="list-group-item bg-transparent text-white"><p>Plataformas personalizadas o portales web</p></li>
 						</ul>
 					</div>
 
 					{/* Factores que determinan el precio */}
 					<div className="col-md-6 mb-4">
-						<h3 className="h5 fw-semibold text-center text-white">Factores que determinan el precio</h3>
+						<h3 className="h5 fw-semibold text-center text-white shadow-lg">Factores que determinan el precio</h3>
 						<ul className="list-group list-group-flush bg-transparent">
-							<li className="list-group-item bg-transparent text-white">Cantidad de secciones o páginas</li>
-							<li className="list-group-item bg-transparent text-white">Diseño personalizado vs plantilla</li>
-							<li className="list-group-item bg-transparent text-white">Funciones específicas (formularios, reservas, etc.)</li>
-							<li className="list-group-item bg-transparent text-white">Integraciones externas (WhatsApp, pagos, CRM...)</li>
-							<li className="list-group-item bg-transparent text-white">Optimización SEO y velocidad</li>
+							<li className="list-group-item bg-transparent text-white"><p>Cantidad de secciones o páginas</p></li>
+							<li className="list-group-item bg-transparent text-white"><p>Diseño personalizado vs plantilla</p></li>
+							<li className="list-group-item bg-transparent text-white"><p>Funciones específicas (formularios, reservas, etc.)</p></li>
+							<li className="list-group-item bg-transparent text-white"><p>Integraciones externas (WhatsApp, pagos, CRM...)</p></li>
+							<li className="list-group-item bg-transparent text-white"><p>Optimización SEO y velocidad</p></li>
 						</ul>
 					</div>
 				</div>

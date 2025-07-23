@@ -188,3 +188,12 @@
     padding: 2rem 1rem;
   }
 }
+
+.__bg-image-pricing {
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)), url("/fondos/bg-pricings.webp");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  min-height: 100vh;
+}
