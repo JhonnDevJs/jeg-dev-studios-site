@@ -1,4 +1,6 @@
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+  xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
   <!-- Página principal -->
   <url>
@@ -36,7 +38,7 @@
     <lastmod>2025-07-16</lastmod>
     <priority>0.7</priority>
   </url>
-  <!-- Página de "Contacto" -->
+  <!-- Página de "Blog" -->
   <url>
     <loc>https://blog.jegdevstudios.com/</loc>
     <lastmod>2025-07-16</lastmod>
@@ -80,7 +82,39 @@
   </url>
   <!-- Entradas del Blog -->
   <url>
-    <loc>https://blog.jegdevstudios.com/2025/07/congreso-america-digital-mexico-2026-transformacion-digital.html</loc>
+    <loc>https://blog.jegdevstudios.com/2025/07/por-que-necesitas-una-pagina-web-en.html</loc>
+    <lastmod>2025-07-23T15:00:00Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/newsletter-jorge-sanchez-escribir-codigo-aliado.html</loc>
+    <lastmod>2025-07-22T16:00:00Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/como-integrar-google-maps-en-tu-landing.html</loc>
+    <lastmod>2025-07-22T00:30:00Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/06/herramientas-gratuitas-emprendedores.html</loc>
+    <lastmod>2025-07-19T15:30:00Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://blog.jegdevstudios.com/2025/07/tendencias-empresariales-ia-2025-automatizacion-seguridad.html</loc>
+    <lastmod>2025-07-18T15:30:00Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/como-usar-whatsapp-business-para-captar.html</loc>
+    <lastmod>2025-07-17T22:13:00Z</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>
+      https://blog.jegdevstudios.com/2025/07/congreso-america-digital-mexico-2026-transformacion-digital.html</loc>
     <lastmod>2025-07-16T16:32:51Z</lastmod>
     <priority>0.8</priority>
   </url>
@@ -110,12 +144,14 @@
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://blog.jegdevstudios.com/2025/07/digital-leaders-summit-mexico-2025-valle-de-bravo-ecommerce.html</loc>
+    <loc>
+      https://blog.jegdevstudios.com/2025/07/digital-leaders-summit-mexico-2025-valle-de-bravo-ecommerce.html</loc>
     <lastmod>2025-07-14T18:13:04Z</lastmod>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://blog.jegdevstudios.com/2025/07/user-conference-mexico-2025-transformacion-digital.html</loc>
+    <loc>
+      https://blog.jegdevstudios.com/2025/07/user-conference-mexico-2025-transformacion-digital.html</loc>
     <lastmod>2025-07-14T18:13:34Z</lastmod>
     <priority>0.8</priority>
   </url>
