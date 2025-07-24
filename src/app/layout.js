@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
 import "./globals.css";
+import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 import NavBar from "@/components/NavBar.jsx";
 import BtnWhats from "@/components/WhatsAppButton.jsx";
@@ -321,19 +322,6 @@ export default async function RootLayout({ children }) {
         />
         <meta name="twitter:site" content="@jegdevstudios" />
         <meta name="twitter:creator" content="@jegdevstudios" />
-        {/* Google tag (gtag.js) */}
-        <Script
-          strategy="worker"
-          src="https://www.googletagmanager.com/gtag/js?id=G-XR060PKRRT"
-        />
-        <Script id="google-analytics" strategy="worker">
-          {`
-            window.dataLayer = window.dataLayer || [];
-            function gtag(){dataLayer.push(arguments);}
-            gtag('js', new Date());
-            gtag('config', 'G-XR060PKRRT');
-          `}
-        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
@@ -345,6 +333,7 @@ export default async function RootLayout({ children }) {
         </main>
         <Footer />
         <BootstrapClient />
+        <GoogleAnalytics gaId="G-XR060PKRRT" />
       </body>
     </html>
   );

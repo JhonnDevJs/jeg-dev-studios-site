@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "15.4.3",
     "bootstrap": "^5.3.7",
     "next": "15.4.3",
     "prop-types": "^15.8.1",
