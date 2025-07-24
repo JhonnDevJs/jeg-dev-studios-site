@@ -203,6 +203,7 @@ export default async function RootLayout({ children }) {
         <Script
           id="structured-data-localbusiness"
           type="application/ld+json"
+          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org/",
@@ -322,10 +323,10 @@ export default async function RootLayout({ children }) {
         <meta name="twitter:creator" content="@jegdevstudios" />
         {/* Google tag (gtag.js) */}
         <Script
-          strategy="afterInteractive"
+          strategy="worker"
           src="https://www.googletagmanager.com/gtag/js?id=G-XR060PKRRT"
         />
-        <Script id="google-analytics" strategy="afterInteractive">
+        <Script id="google-analytics" strategy="worker">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
