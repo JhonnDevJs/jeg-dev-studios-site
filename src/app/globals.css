@@ -1,10 +1,14 @@
 @import "../assets/icons/icon-fonts/style.css";
 
 * {
-  font-family: "ABeeZee", sans-serif;
   font-weight: 400;
   font-style: normal;
   box-sizing: border-box;
+}
+
+body {
+  /* Usa la variable de la fuente principal (Geist Sans) */
+  font-family: var(--font-geist-sans);
 }
 
 .__icons-color::before {
@@ -134,4 +138,3 @@
   right: 2rem;
   z-index: 2;
 }
-
