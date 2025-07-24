@@ -324,14 +324,14 @@ export default async function RootLayout({ children }) {
         {/* Google tag (gtag.js) */}
         <Script
           strategy="worker"
-          src="https://www.googletagmanager.com/gtag/js?id=G-GGGVR1CW2X"
+          src="https://www.googletagmanager.com/gtag/js?id=G-XR060PKRRT"
         />
         <Script id="google-analytics" strategy="worker">
           {`
             window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
-            gtag('config', 'G-GGGVR1CW2X');
+            gtag('config', 'G-XR060PKRRT');
           `}
         </Script>
       </head>
