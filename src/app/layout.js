@@ -106,7 +106,6 @@ export const metadata = {
     "geo.region": "MX",
     "geo.placename": "Ciudad de México, México",
     "geo.position": "19.4326;-99.1332",
-    language: "es-MX",
     "msapplication-TileImage": "/icons-SEO/mstile-150x150.png",
     "msapplication-TileColor": "#000000",
   },
@@ -132,7 +131,7 @@ export default async function RootLayout({ children }) {
     }
   }
   return (
-    <html lang="es">
+    <html lang="es-MX">
       <head>
         {imageToPreload && (
           <link
@@ -153,8 +152,8 @@ export default async function RootLayout({ children }) {
               "@type": "Organization",
               name: "JEG Dev Studios",
               url: "https://www.jegdevstudios.com/",
-              logo: "https://www.jegdevstudios.com/logo-bg-transparent.webp",
-              image: "https://www.jegdevstudios.com/logo.webp",
+              logo: "https://www.jegdevstudios.com/icons-SEO/logo.webp",
+              image: "https://www.jegdevstudios.com/img-SEO/metabackground.webp",
               email: "jegdevstudios@outlook.com",
               telephone: "+52 1 5512197135",
               address: {
@@ -238,84 +237,12 @@ export default async function RootLayout({ children }) {
               "@context": "https://schema.org",
               "@type": "BreadcrumbList",
               "itemListElement": [
-                {
-                  "@type": "ListItem",
-                  position: 1,
-                  name: "Inicio",
-                  item: "https://www.jegdevstudios.com/"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 2,
-                  name: "Servicios",
-                  item: "https://www.jegdevstudios.com/servicios"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 3,
-                  name: "Desarrollo Web",
-                  item: "https://www.jegdevstudios.com/servicios/desarrollo-web"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 4,
-                  name: "Aplicaciones Móviles",
-                  item: "https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 5,
-                  name: "Software Empresarial",
-                  item: "https://www.jegdevstudios.com/servicios/desarrollo-software"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 6,
-                  name: "Sobre Nosotros",
-                  item: "https://www.jegdevstudios.com/sobre-nosotros"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 7,
-                  name: "Blog",
-                  item: "https://www.jegdevstudios.com/blog"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 8,
-                  name: "Contacto",
-                  item: "https://www.jegdevstudios.com/contacto"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 9,
-                  name: "Saber más WebDev",
-                  item: "https://www.jegdevstudios.com/saber-mas/web-dev"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 10,
-                  name: "Saber más SoftDev",
-                  item: "https://www.jegdevstudios.com/saber-mas/soft-dev"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 11,
-                  name: "Saber más AppDev",
-                  item: "https://www.jegdevstudios.com/saber-mas/app-dev"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 12,
-                  name: "Términos y Condiciones",
-                  item: "https://www.jegdevstudios.com/terminos-y-condiciones"
-                },
-                {
-                  "@type": "ListItem",
-                  position: 13,
-                  name: "Aviso de Privacidad",
-                  item: "https://www.jegdevstudios.com/aviso-de-privacidad"
-                }
+                 {
+                    "@type": "ListItem",
+                    position: 1,
+                    name: "Inicio",
+                    item: "https://www.jegdevstudios.com/"
+                  }
               ]
             })
           }}
