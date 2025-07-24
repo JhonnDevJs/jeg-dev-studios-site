@@ -318,9 +318,21 @@ export default async function RootLayout({ children }) {
             })
           }}
         />
-
         <meta name="twitter:site" content="@jegdevstudios" />
         <meta name="twitter:creator" content="@jegdevstudios" />
+        {/* Google tag (gtag.js) */}
+        <Script
+          strategy="afterInteractive"
+          src="https://www.googletagmanager.com/gtag/js?id=G-XR060PKRRT"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-XR060PKRRT');
+          `}
+        </Script>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
