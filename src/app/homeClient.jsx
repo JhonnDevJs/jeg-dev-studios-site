@@ -420,10 +420,10 @@ export default function HomeClient({ posts: postsToShow }) {
 						inversión tecnológica."
 				/>
 			</section>
-			<section className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100" style={{ minHeight: "100vh", position: "relative" }}>
-				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-center w-100 h-100 position-relative">
+			<section className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100" style={{ minHeight: "100vh", position: "relative"}}>
+				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-evenly w-100 h-100 position-relative" style={{ maxWidth: "1200px" }}>
 					{/* Texto */}
-					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-xl-5 p-3 flex-grow-1 position-relative">
+					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-xl-5 pe-xl-0 p-3 flex-grow-1 position-relative">
 						<h2 className="display-6 fw-bold mb-4">
 							Un equipo humano detrás de la tecnología
 						</h2>
@@ -432,8 +432,8 @@ export default function HomeClient({ posts: postsToShow }) {
 							Por eso:
 						</p>
 						<ul
-							className="d-flex flex-column jstify-content-start list-unstyled fs-5 text-start"
-							
+							className="d-flex flex-column justify-content-start list-unstyled fs-5 text-start"
+
 						>
 							<li className="d-flex align-items-start mb-3">
 								<div className="me-3 mt-1 fs-3 text-white" >
