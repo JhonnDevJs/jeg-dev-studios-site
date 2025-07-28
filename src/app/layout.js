@@ -249,6 +249,7 @@ export default async function RootLayout({ children }) {
         />
         <meta name="twitter:site" content="@jegdevstudios" />
         <meta name="twitter:creator" content="@jegdevstudios" />
+        <meta name="google-adsense-account" content="ca-pub-8211604143881682"></meta>
       </head>
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
