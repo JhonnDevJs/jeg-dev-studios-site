@@ -3,6 +3,8 @@ import { useState, useEffect, useMemo } from "react";
 import ShoppingCart from "@/components/ShoppingCart";
 import CardPacksProduct from "@/components/CardPacksProduct";
 import OrderForm from "@/components/OrderForm";
+import CardSmallList from "@/components/CardSmallList";
+import SectionProcess from "@/components/SectionProcess";
 import CTAProducts from "@/components/CTAProducts";
 import imgSoftProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
@@ -290,6 +292,28 @@ export default function DevSoftClient() {
             onQuote={(details) => handleQuoteRequest({ ...details, imageSrc: imgSoftProduct4.src })}
           />
         </ul>
+      </section>
+      <SectionProcess title={"Nuestro Proceso de Desarrollo de Software"} text={"En JEG Dev Studios seguimos una metodología clara y estructurada para asegurarnos de que tu software cumpla con tus objetivos y funcione correctamente desde el día uno."}/>
+      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+        <CardSmallList
+          titulo="Proceso"
+          subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
+          list={[
+            "  Diagnóstico y Consultoría: Nos reunimos contigo para comprender tu negocio, tus procesos y los problemas que deseas resolver. Identificamos puntos críticos y definimos los módulos necesarios.",
+            " Propuesta y Cotización: Con base en el diagnóstico, elaboramos una propuesta con el paquete adecuado, el tiempo estimado de desarrollo y el costo total, incluyendo una cronología por fases.",
+            " Diseño y Prototipado: Creamos los primeros bocetos del sistema (interfaces, navegación, funciones clave) y los validamos contigo para asegurar que se ajusten a tus necesidades.",
+            " Desarrollo por Fases: Desarrollamos el software por etapas. Cada módulo se construye, prueba y presenta individualmente para permitir revisiones rápidas. Utilizamos tecnologías como Python, C#, Java, Node.js, Electron, y React, según el proyecto.",
+            " Pruebas y Revisión Final: Antes de la entrega, hacemos pruebas internas y contigo para asegurar que todo funcione como debe. Se hacen ajustes finales según tus observaciones.",
+            " Entrega y Capacitación: Instalamos el sistema en tus equipos o servidores y capacitamos a tu personal para que puedan utilizarlo sin problemas..",
+            " Soporte y Mantenimiento: Ofrecemos soporte técnico posterior a la entrega durante el tiempo establecido en el contrato. También puedes contratar mantenimiento mensual o por demanda.",
+          ]}
+          lastText="Tecnologías: Según el paquete, usamos stacks modernos como Figma, HTML, JavaScript, Tailwind, Next.js, Bootstrap, Node.js, PHP (Laravel) o Java."
+        />
+      </section>
+      <section className="d-flex flex-column justify-content-center align-items-center text-center w-100 p-xl-5 p-3 gap-3">
+        <h2 className="text-white">Compromiso con la exelencia</h2>
+        <p className="text-white fs-4">Cada línea de código que escribimos en JEG Dev Studios refleja nuestro compromiso con la calidad, la funcionalidad y la innovación. Nos enfocamos en que tu software sea útil, estable, seguro y fácil de usar. No desarrollamos software genérico: desarrollamos soluciones que resuelven problemas reales.</p>
+        <p className="text-white fs-4">Tu empresa merece una herramienta que trabaje por ella. Nosotros la creamos</p>
       </section>
       <CTAProducts />
     </>
