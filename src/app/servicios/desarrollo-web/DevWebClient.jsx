@@ -345,7 +345,7 @@ export default function DevWebClient() {
           />
         </ul>
       </section>
-      <SectionProcess />
+      <SectionProcess title={"Nuestro Proceso de Desarrollo Web"} text={"En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum, que nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes a nuestros clientes. Nuestro objetivo es que formes parte activa del desarrollo de tu sitio web, asegurando que el resultado final supere tus expectativas."} />
       <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
         <CardSmallList
           titulo="Descubrimiento y Planificación Inicial"
