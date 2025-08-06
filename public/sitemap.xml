@@ -5,85 +5,117 @@
   <!-- Página principal -->
   <url>
     <loc>https://www.jegdevstudios.com/</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>1.0</priority>
   </url>
   <!-- Página "Servicios" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo web" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-web</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo de aplicaciones móviles" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo de software empresarial" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-software</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página de "Sobre nosotros" -->
   <url>
     <loc>https://www.jegdevstudios.com/sobre-nosotros</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.7</priority>
   </url>
   <!-- Página de "Blog" -->
   <url>
     <loc>https://blog.jegdevstudios.com/</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página de "Contacto" -->
   <url>
     <loc>https://www.jegdevstudios.com/contacto</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.8</priority>
   </url>
   <!-- Página de "Saber más WebDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/web-dev</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más SoftDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/soft-dev</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más AppDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/app-dev</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Términos y condiciones" -->
   <url>
     <loc>https://www.jegdevstudios.com/terminos-y-condiciones</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Aviso de privacidad" -->
   <url>
     <loc>https://www.jegdevstudios.com/aviso-de-privacidad</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Entradas del Blog -->
   <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/expo-technology-cdmx-2025.html</loc>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/css-inteligente-coherencia-figma.html</loc>
+    <lastmod>2025-08-05T16:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/litio-mexico-mineria-sustentable.html</loc>
+    <lastmod>2025-08-05T15:30:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/codigo-semantico-mejora-seo.html</loc>
+    <lastmod>2025-08-05T15:14:56Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/08/codigo-semantico-mejora-seo.html</loc>
+    <lastmod>2025-08-01T14:30:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/detras-del-codigo-como-caio-medeiros.html</loc>
+    <lastmod>2025-07-30T14:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/que-hacer-si-tu-sitio-web-no-recibe.html</loc>
+    <lastmod>2025-07-29T16:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/que-es-figma-diseno.html</loc>
+    <lastmod>2025-07-29T16:29:59Z</lastmod>
+  </url>
+  <url>
     <loc>https://blog.jegdevstudios.com/2025/07/tendencias-en-diseno-web-para-negocios.html</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-06T16:00:00Z</lastmod>
   </url>
   <url>
     <loc>
@@ -118,19 +150,19 @@
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/congreso-america-digital-mexico-2026-transformacion-digital.html</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-07-16T16:32:51Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/google-sites-para-emprendedores.html</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-07-16T16:32:31Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/seoplus-2025-congreso-seo-profesional-alicante.html</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-07-16T16:31:41Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/secciones-efectivas-landing-page-clientes.html</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-07-16T16:31:21Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/seoday-2025-evento-global-seo.html</loc>
@@ -204,7 +236,7 @@
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/seo-basico-para-landing-pages-como.html</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-07-16T16:24:09Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/colores-tipografias-y-jerarquia-visual.html</loc>
