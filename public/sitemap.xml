@@ -5,226 +5,250 @@
   <!-- Página principal -->
   <url>
     <loc>https://www.jegdevstudios.com/</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>1.0</priority>
   </url>
   <!-- Página "Servicios" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo web" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-web</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo de aplicaciones móviles" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo de software empresarial" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-software</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página de "Sobre nosotros" -->
   <url>
     <loc>https://www.jegdevstudios.com/sobre-nosotros</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.7</priority>
   </url>
   <!-- Página de "Blog" -->
   <url>
     <loc>https://blog.jegdevstudios.com/</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.9</priority>
   </url>
   <!-- Página de "Contacto" -->
   <url>
     <loc>https://www.jegdevstudios.com/contacto</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.8</priority>
   </url>
   <!-- Página de "Saber más WebDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/web-dev</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más SoftDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/soft-dev</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más AppDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/app-dev</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Términos y condiciones" -->
   <url>
     <loc>https://www.jegdevstudios.com/terminos-y-condiciones</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Aviso de privacidad" -->
   <url>
     <loc>https://www.jegdevstudios.com/aviso-de-privacidad</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
     <priority>0.6</priority>
   </url>
   <!-- Entradas del Blog -->
   <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/laravel-live-denmark.html</loc>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/07/destacar-en-google-detalle.html</loc>
+    <lastmod>2025-08-17T16:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/08/que-es-una-landing-page-y-por-que.html</loc>
+    <lastmod>2025-08-17T10:00:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/08/landing-estetica-profesional-exclusividad.html</loc>
+    <lastmod>2025-08-16T00:30:00Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/08/nasa-spaceapps-guerrero.html</loc>
+    <lastmod>2025-08-15T15:50:35Z</lastmod>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/08/etica-inteligencia-ia.html</loc>
+    <lastmod>2025-08-17T21:36:14Z</lastmod>
+  </url>
+  <url>
     <loc>https://blog.jegdevstudios.com/2025/08/ia-en-diseno-web-mas-que-una-tendencia.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:00:00Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/contar-historias-visuales-web.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:36:54Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/que-es-la-arquitectura-web-y-por-que.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:37:04Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/el-seo-empieza-en-el-diseno.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:37:23Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/expo-technology-cdmx-2025.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:37:43Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/css-inteligente-coherencia-figma.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:38:03Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/litio-mexico-mineria-sustentable.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:38:13Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/de-diseno-visual-estructura-funcional.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:38:26Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/codigo-semantico-mejora-seo.html</loc>
-    <lastmod>2025-08-13T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:38:37Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/codigo-semantico-mejora-seo.html</loc>
-    <lastmod>2025-08-12T23:34:45Z</lastmod>
+    <lastmod>2025-08-17T21:38:56Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/detras-del-codigo-como-caio-medeiros.html</loc>
-    <lastmod>2025-07-30T14:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:39:09Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/que-hacer-si-tu-sitio-web-no-recibe.html</loc>
-    <lastmod>2025-07-29T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:40:10Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/que-es-figma-diseno.html</loc>
-    <lastmod>2025-07-29T16:29:59Z</lastmod>
+    <lastmod>2025-08-17T21:40:23Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/tendencias-en-diseno-web-para-negocios.html</loc>
-    <lastmod>2025-07-28T00:30:00Z</lastmod>
+    <lastmod>2025-08-17T21:40:36Z</lastmod>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/06/automatiza-tu-negocio-integraciones-landing-page.html</loc>
-    <lastmod>2025-07-25T15:30:00Z</lastmod>
+    <lastmod>2025-08-17T21:40:48Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/por-que-necesitas-una-pagina-web-en.html</loc>
-    <lastmod>2025-07-23T19:10:02Z</lastmod>
+    <lastmod>2025-08-17T21:40:59Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/newsletter-jorge-sanchez-escribir-codigo-aliado.html</loc>
-    <lastmod>2025-07-22T16:00:00Z</lastmod>
+    <lastmod>2025-08-17T21:41:13Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/como-integrar-google-maps-en-tu-landing.html</loc>
-    <lastmod>2025-07-24T15:24:02Z</lastmod>
+    <lastmod>2025-08-17T21:41:25Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/herramientas-gratuitas-emprendedores.html</loc>
-    <lastmod>2025-07-19T15:30:00Z</lastmod>
+    <lastmod>2025-08-17T21:41:35Z</lastmod>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/tendencias-empresariales-ia-2025-automatizacion-seguridad.html</loc>
-    <lastmod>2025-07-18T15:30:00Z</lastmod>
+    <lastmod>2025-08-17T21:41:51Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/como-usar-whatsapp-business-para-captar.html</loc>
-    <lastmod>2025-07-17T22:13:00Z</lastmod>
+    <lastmod>2025-08-17T21:42:06Z</lastmod>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/congreso-america-digital-mexico-2026-transformacion-digital.html</loc>
-    <lastmod>2025-07-16T16:32:51Z</lastmod>
+    <lastmod>2025-08-17T21:42:23Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/google-sites-para-emprendedores.html</loc>
-    <lastmod>2025-07-16T16:32:31Z</lastmod>
+    <lastmod>2025-08-17T21:42:31Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/seoplus-2025-congreso-seo-profesional-alicante.html</loc>
-    <lastmod>2025-07-16T16:31:41Z</lastmod>
+    <lastmod>2025-08-17T21:42:45Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/secciones-efectivas-landing-page-clientes.html</loc>
-    <lastmod>2025-07-16T16:31:21Z</lastmod>
+    <lastmod>2025-08-17T21:42:57Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/seoday-2025-evento-global-seo.html</loc>
-    <lastmod>2025-07-14T18:11:03Z</lastmod>
+    <lastmod>2025-08-17T21:43:05Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/7-beneficios-de-tener-una-landing-page.html</loc>
-    <lastmod>2025-07-14T18:11:23Z</lastmod>
+    <lastmod>2025-08-17T21:43:16Z</lastmod>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/digital-leaders-summit-mexico-2025-valle-de-bravo-ecommerce.html</loc>
-    <lastmod>2025-07-14T18:13:04Z</lastmod>
+    <lastmod>2025-08-17T21:43:28Z</lastmod>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/user-conference-mexico-2025-transformacion-digital.html</loc>
-    <lastmod>2025-07-14T18:13:34Z</lastmod>
+    <lastmod>2025-08-17T21:43:38Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/diseno-uxui-basico-para-emprendedores.html</loc>
-    <lastmod>2025-07-14T18:14:34Z</lastmod>
+    <lastmod>2025-08-17T21:43:50Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/landing-page-optimizadas-para-google-y-clientes.html</loc>
-    <lastmod>2025-07-14T18:15:00Z</lastmod>
+    <lastmod>2025-08-17T21:44:00Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/por-que-tener-solo-redes-sociales-no-es.html</loc>
-    <lastmod>2025-07-14T18:15:26Z</lastmod>
+    <lastmod>2025-08-17T21:44:12Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/5-errores-que-cometen-los-emprendedores.html</loc>
-    <lastmod>2025-07-14T18:15:36Z</lastmod>
+    <lastmod>2025-08-17T21:44:24Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/landing-page-para-negocios.html</loc>
-    <lastmod>2025-07-14T18:15:55Z</lastmod>
+    <lastmod>2025-08-17T21:44:42Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/tendencias-en-paginas-web-para-negocios.html</loc>
-    <lastmod>2025-07-14T18:16:17Z</lastmod>
+    <lastmod>2025-08-17T21:44:54Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/integraciones-simples-automatizar-negocio.html</loc>
@@ -232,58 +256,58 @@
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/que-todo-emprendedor-debe-tener-una.html</loc>
-    <lastmod>2025-07-14T18:18:48Z</lastmod>
+    <lastmod>2025-08-17T21:45:05Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/como-usar-google-maps-y-whatsapp-para.html</loc>
-    <lastmod>2025-07-09T19:27:31Z</lastmod>
+    <lastmod>2025-08-17T21:45:21Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/top-5-herramientas-gratuitas-presencia-online.html</loc>
-    <lastmod>2025-07-14T18:19:26Z</lastmod>
+    <lastmod>2025-08-17T21:45:48Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/google-sites-ventajas-y-desventajas_23.html</loc>
-    <lastmod>2025-07-14T18:20:15Z</lastmod>
+    <lastmod>2025-08-17T21:46:12Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/titulos-descripciones-y-contenido-para.html</loc>
-    <lastmod>2025-07-14T18:20:49Z</lastmod>
+    <lastmod>2025-08-17T21:46:28Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/posicionamiento-web-negocio-local.html</loc>
-    <lastmod>2025-07-14T18:21:08Z</lastmod>
+    <lastmod>2025-08-17T21:46:43Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/seo-basico-para-landing-pages-como.html</loc>
-    <lastmod>2025-07-16T16:24:09Z</lastmod>
+    <lastmod>2025-08-17T21:47:06Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/colores-tipografias-y-jerarquia-visual.html</loc>
-    <lastmod>2025-07-14T18:23:43Z</lastmod>
+    <lastmod>2025-08-17T21:47:27Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/por-que-tu-negocio-necesita-una-web.html</loc>
-    <lastmod>2025-07-14T18:23:57Z</lastmod>
+    <lastmod>2025-08-17T21:47:41Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/elementos-clave-landing-page-efectiva.html</loc>
-    <lastmod>2025-07-14T18:24:18Z</lastmod>
+    <lastmod>2025-08-17T21:47:54Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/un-buen-diseno-uxui-puede-ayudarte.html</loc>
-    <lastmod>2025-07-14T18:24:29Z</lastmod>
+    <lastmod>2025-08-17T21:48:07Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/errores-comunes-al-crear-tu-primera.html</loc>
-    <lastmod>2025-07-14T18:24:57Z</lastmod>
+    <lastmod>2025-08-17T21:48:18Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/landing-page-vs-sitio-completo.html</loc>
-    <lastmod>2025-07-14T18:25:07Z</lastmod>
+    <lastmod>2025-08-17T21:48:35Z</lastmod>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/que-es-una-landing-page-necesita-tu-negocio.html</loc>
-    <lastmod>2025-07-14T18:25:22Z</lastmod>
+    <lastmod>2025-08-17T21:48:46Z</lastmod>
   </url>
 </urlset>
