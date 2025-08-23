@@ -1,0 +1,31 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "npm: install",
+      "type": "npm",
+      "script": "install",
+      "detail": "Instala las dependencias del proyecto"
+    },
+    {
+      "label": "npm: dev",
+      "type": "npm",
+      "script": "dev",
+      "detail": "Ejecuta el servidor de desarrollo",
+      "isBackground": true,
+      "problemMatcher": []
+    },
+    {
+      "label": "Iniciar al abrir proyecto",
+      "dependsOn": [
+        "npm: install",
+        "npm: dev"
+      ],
+      "dependsOrder": "sequence",
+      "runOptions": {
+        "runOn": "folderOpen"
+      },
+      "command": "echo 'Ejecutando tareas de inicio...'"
+    }
+  ]
+}
