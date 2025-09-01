@@ -252,7 +252,7 @@ export default async function RootLayout({ children }) {
         <meta name="google-adsense-account" content="ca-pub-8211604143881682"></meta>
       </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased gradiant-effect`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
         <NavBar />
         <main className="container-fluid d-flex flex-column min-vh-100 p-0 m-0" role="main">

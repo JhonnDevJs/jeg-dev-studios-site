@@ -8,14 +8,14 @@ export default function AboutClient() {
     <>
       <section className="__image-background-About d-flex flex-column justify-content-center align-items-center w-100">
       </section>
-      <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3">
+      <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 gradient-effect-y">
         <h2 className="h1 text-white text-center">Sobre Nosotros</h2>
         <p className="text-white text-center">
           Transformamos ideas en soluciones digitales innovadoras y memorables
         </p>
       </section>
 
-      <section className="d-flex flex-column w-100 p-xl-5 p-3">
+      <section className="d-flex flex-column w-100 p-xl-5 p-3 gradient-effect-x">
         <article className="d-flex flex-column w-100 p-0 m-0">
           <h2 className="text-white">Nuestra Historia</h2>
           <p className="text-white">

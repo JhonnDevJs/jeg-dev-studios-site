@@ -31,7 +31,7 @@ export const metadata = {
 export default function TermsAndConditions() {
   return (
     <>
-      <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5">
+      <section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5 gradient-effect-y">
         <h1 className="text-white">Términos y Condiciones de Uso</h1>
         <p className="text-white text-center">
           Consulta los lineamientos legales y condiciones para el uso de los servicios y sitio web de JEG Dev Studios.

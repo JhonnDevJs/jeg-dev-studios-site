@@ -79,7 +79,7 @@ export default function ServicesClient() {
       <StructuredData data={faqSchema} />
       <section className="__image-background-servicios d-flex flex-column justify-content-center align-items-center w-100">
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 mt-5 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 gap-3 gradient-effect-x">
         <h1 className="text-center text-white fw-bold mt-3">
           Soluciones de desarrollo digital: sitios web, apps móviles y software empresarial en México
         </h1>
@@ -90,7 +90,7 @@ export default function ServicesClient() {
           JEG Dev Studios: tu agencia de desarrollo digital profesional
         </p>
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
         <h2 className="text-center text-white">
           Explora nuestros servicios
         </h2>
@@ -135,7 +135,7 @@ export default function ServicesClient() {
           </ul>
         </article>
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
         <CardNestedLists
           titulo="¿Qué ofrecemos en desarrollo web personalizado?"
           subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
@@ -168,7 +168,7 @@ export default function ServicesClient() {
           ]}
         />
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
         <CardNestedLists
           titulo="Desarrollo de aplicaciones móviles Android/iOS"
           subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
@@ -200,7 +200,7 @@ export default function ServicesClient() {
           ]}
         />
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
         <CardNestedLists
           titulo="Soluciones de software empresarial"
           subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
@@ -232,13 +232,13 @@ export default function ServicesClient() {
           ]}
         />
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center w-100 p-xl-5 p-3 text-white text-center">
+      <section className="d-flex flex-column justify-content-center w-100 p-xl-5 p-3 text-white text-center gradient-effect-y">
         <h2 className="fw-bold mb-4">Comparativa de paquetes y precios</h2>
         <p className="mb-5 fs-5">Paquetes creados para ajustarse a tu necesidad y presupuesto</p>
 
         <article className="row justify-content-center g-4">
           <div className="col-md-4">
-            <div className="card h-100 bg-transparent text-white shadow rounded-4"
+            <div className="card bg-transparent h-100 text-white shadow rounded-4"
               style={{
                 border: "2px solid #7b2cbf",
                 boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
@@ -259,7 +259,7 @@ export default function ServicesClient() {
           </div>
 
           <div className="col-md-4">
-            <div className="card h-100 bg-transparent text-white shadow rounded-4"
+            <div className="card bg-transparent h-100 text-white shadow rounded-4"
               style={{
                 border: "2px solid #7b2cbf",
                 boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
@@ -280,7 +280,7 @@ export default function ServicesClient() {
           </div>
 
           <div className="col-md-4">
-            <div className="card h-100 bg-transparent text-white shadow rounded-4"
+            <div className="card bg-transparent h-100 text-white shadow rounded-4"
               style={{
                 border: "2px solid #7b2cbf",
                 boxShadow: "0 4px 10px rgba(0, 0, 0, 0.3)",
@@ -301,7 +301,7 @@ export default function ServicesClient() {
           </div>
         </article>
       </section>
-			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-x">
 				<h2 className="display-5 text-center text-white">
 					Beneficios de elegir JEG Dev Studios
 				</h2>
@@ -337,12 +337,10 @@ export default function ServicesClient() {
 						<p className="fs-2 m-0">Soluciones a medida para web, apps y software empresarial</p>
 					</li>
 				</ul>
-			</section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pt-xl-0 gap-3">
         <p className="text-white text-center mt-4">
           ¿Tienes dudas sobre cuál servicio es el ideal para ti? Contáctanos y te ayudamos a tomar la mejor decisión.
-        </p>  
-      </section>
+        </p> 
+			</section>
       <FAQ faqs={faqs} />
       <CTA />
     </>

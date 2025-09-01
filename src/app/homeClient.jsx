@@ -117,7 +117,7 @@ export default function HomeClient({ posts: postsToShow }) {
   return (
 		<>
 			<StructuredData data={faqSchemaHome} />
-			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground bg-fixed-cover">
+			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground bg-fixed-cover ">
 				<article
 					className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0"
 					style={{ maxWidth: "47rem" }}
@@ -157,7 +157,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					</div>
 				</article>
 			</section>
-			<section id="beneficios" className="bg-transparent text-white py-5">
+			<section id="beneficios" className="text-white py-5 gradient-effect-x ">
 				<div className="container text-center">
 					<h2 className="display-5 fw-bold mb-4">
 						Más que servicios, te ofrecemos resultados tangibles
@@ -224,7 +224,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					</div>
 				</div>
 			</section>
-			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y ">
 				<h2>Nuestros Servicios</h2>
 				<p className="text-white fs-5 mb-4">
 					Nuestros servicios no se limitan al desarrollo técnico. Como parte de nuestras soluciones digitales, también <strong>ofrecemos servicios</strong> relacionados como asesoría, branding, UX/UI y soporte post-lanzamiento, buscando superar a las mejores <strong>agencias de diseño</strong> y desarrollo del país.
@@ -300,7 +300,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					</div>
 				</div>
 			</section>
-			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="¿Qué podemos hacer por tu negocio?"
 					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
@@ -314,7 +314,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					lastText="Nuestro objetivo siempre sera entregarles la mejor experiencia de desarrollo a nuestros clientes."
 				/>
 			</section>
-			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-y">
 				<h2 className="display-5 text-center text-white">
 					¿Por qué elegirnos como tu empresa de desarrollo web?
 				</h2>
@@ -363,7 +363,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					</li>
 				</ul>
 			</section>
-			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardNestedLists
 					titulo="Cómo trabajamos tu sitio web"
 					subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
@@ -405,7 +405,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					Nuestro enfoque nos permite trabajar como las <strong>agencias de desarrollo</strong> más ágiles, entregando valor tangible y medible en cada fase.
 				</p>
 			</section>
-			<section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardSmallList
 					titulo="Más que desarrollo, valor añadido"
 					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
@@ -488,7 +488,7 @@ export default function HomeClient({ posts: postsToShow }) {
 				</h2>
 				<TeamCarousel />
 			</section>
-			<section className="bg-transparent text-white py-5 text-center px-3 px-md-5">
+			<section className=" text-white py-5 text-center px-3 px-md-5 gradient-effect-x">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="display-6 fw-bold mb-4">
 						Optimización para crecer en buscadores
@@ -559,7 +559,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					</div>
 				</div>
 			</section>
-			<section className="container-fluid bg-transparent text-center text-white py-5">
+			<section className="container-fluid text-center text-white py-5 gradient-effect-y">
 				<div className="row justify-content-center g-4">
 					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
 						<CardsProcess

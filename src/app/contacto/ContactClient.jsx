@@ -90,14 +90,14 @@ export default function ContactClient() {
     <>
       <section className="__image-background-contact d-flex flex-column justify-content-center align-items-center w-100">
       </section>
-      <section className="d-flex flex-column justify-content-center align-items-center w-100">
+      <section className="d-flex flex-column justify-content-center align-items-center w-100 gradient-effect-x">
         <h1 className="display-1 text-center text-white mt-5">Contáctanos</h1>
         <p className="fs-5 text-center text-white">
           Escríbenos para recibir asesoría personalizada, resolver dudas o
           solicitar la cotización de tu proyecto.
         </p>
       </section>
-      <section className="d-flex flex-md-row flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 gap-5">
+      <section className="d-flex flex-md-row flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 gap-5 gradient-effect-y">
         <aside className="d-flex flex-column justify-content-center align-items-center w-100 h-100 gap-4">
           <Image
             src={iconLogo}

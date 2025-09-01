@@ -210,7 +210,7 @@ export default function DevAppClient() {
           Nuestros servicios de desarrollo de aplicaciones
         </h1>
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
         <p className="lead w-100 px-3 px-md-5">
           En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y
           presupuesto. Ya sea que estés iniciando con una app sencilla o

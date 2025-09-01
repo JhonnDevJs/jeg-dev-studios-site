@@ -212,7 +212,7 @@ export default function DevSoftClient() {
           Nuestros servicios de Software Empresarial
         </h1>
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
         <p className="lead w-100 px-3 px-md-5">
           En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y
           presupuesto. Ya sea que estés comenzando con un sistema de inventarios
@@ -294,7 +294,7 @@ export default function DevSoftClient() {
         </ul>
       </section>
       <SectionProcess title={"Nuestro Proceso de Desarrollo de Software"} text={"En JEG Dev Studios seguimos una metodología clara y estructurada para asegurarnos de que tu software cumpla con tus objetivos y funcione correctamente desde el día uno."}/>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
         <CardSmallList
           titulo="Proceso"
           subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
@@ -310,7 +310,7 @@ export default function DevSoftClient() {
           lastText="Tecnologías: Según el paquete, usamos stacks modernos como Figma, HTML, JavaScript, Tailwind, Next.js, Bootstrap, Node.js, PHP (Laravel) o Java."
         />
       </section>
-      <section className="d-flex flex-column justify-content-center align-items-center text-center w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
         <h2 className="text-white">Compromiso con la exelencia</h2>
         <p className="text-white fs-4">Cada línea de código que escribimos en JEG Dev Studios refleja nuestro compromiso con la calidad, la funcionalidad y la innovación. Nos enfocamos en que tu software sea útil, estable, seguro y fácil de usar. No desarrollamos software genérico: desarrollamos soluciones que resuelven problemas reales.</p>
         <p className="text-white fs-4">Tu empresa merece una herramienta que trabaje por ella. Nosotros la creamos</p>

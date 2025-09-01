@@ -233,7 +233,7 @@ export default function DevWebClient() {
           Nuestros servicios de desarrollo web
         </h1>
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
         <h2>
           ¿Necesitas un sitio web especifico y secillo pero profesional para tu
           negocio?
@@ -264,7 +264,7 @@ export default function DevWebClient() {
           />
         </ul>
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
         <p className="lead w-100 px-3 px-md-5">
           En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y
           presupuesto. Ya sea que estés comenzando con una landing page o
@@ -346,7 +346,7 @@ export default function DevWebClient() {
         </ul>
       </section>
       <SectionProcess title={"Nuestro Proceso de Desarrollo Web"} text={"En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum, que nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes a nuestros clientes. Nuestro objetivo es que formes parte activa del desarrollo de tu sitio web, asegurando que el resultado final supere tus expectativas."} />
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
         <CardSmallList
           titulo="Descubrimiento y Planificación Inicial"
           subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
@@ -359,7 +359,7 @@ export default function DevWebClient() {
           lastText="Tecnologías: Según el paquete, usamos stacks modernos como Figma, HTML, JavaScript, Tailwind, Next.js, Bootstrap, Node.js, PHP (Laravel) o Java."
         />
       </section>
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
         <CardNestedLists
           titulo=" Ciclos de Desarrollo Iterativos (Sprints)"
           subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
@@ -389,7 +389,7 @@ export default function DevWebClient() {
           ]}
         />
       </section>  
-      <section className="d-flex flex-column bg-transparent justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+      <section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
         <CardSmallList
           titulo=" Revisión Final y Entrega del Proyecto"
           subtitulo="Una vez terminado el número de Sprints necesarios (dependiendo del paquete elegido), realizamos lo siguiente:"
@@ -401,7 +401,7 @@ export default function DevWebClient() {
           ]}
         />
       </section>
-      <section className="container-fluid bg-transparent text-center text-white py-5">
+      <section className="container-fluid text-center text-white py-5 gradient-effect-x">
         <div className="row justify-content-center g-4">
           <div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
             <CardsProcess

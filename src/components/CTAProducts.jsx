@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function CTAProducts() {
   return (
     <section>
-      <article className="text-white rounded-4 p-4 text-center mt-5 w-100">
+      <article className="text-white p-4 pt-5 text-center w-100 gradient-effect-y">
         <h2 className="mb-3">¿Ninguno de estos paquetes se ajusta a lo que necesitas?</h2>
         <p className="lead mb-4">
           No te preocupes, en JEG Dev Studios desarrollamos soluciones 100% personalizadas. Cuéntanos tu idea y te ayudaremos a crear un proyecto a tu medida, con todo lo que realmente necesitas y nada que no.
