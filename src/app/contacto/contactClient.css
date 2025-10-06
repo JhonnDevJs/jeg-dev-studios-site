@@ -1,5 +1,5 @@
-.__image-background-contact{
-  background-image: url("/fondos/Comunicate_con_Nosotros.webp");
+.__image-background-contact {
+  background-image: url("/fondos/Contacto.webp");
   background-size: 100% auto;
   background-position: start center;
   background-repeat: no-repeat;
@@ -7,6 +7,7 @@
   width: 100%;
   height: 55dvh;
 }
+
 @media (max-width: 768px) {
   .__image-background-contact {
     background-size: 100% auto;
@@ -73,8 +74,11 @@
 
 .custom-modal-backdrop {
   position: fixed;
-  top: 0; left: 0; right: 0; bottom: 0;
-  background: rgba(0,0,0,0.7);
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.7);
   z-index: 2;
   display: flex;
   align-items: center;
@@ -92,8 +96,10 @@
 .btn-services {
   position: relative;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo transparente */
-  border-radius: 20px; /* 🔁 Este valor modifica el redondeado */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Fondo transparente */
+  border-radius: 20px;
+  /* 🔁 Este valor modifica el redondeado */
   color: white;
   text-decoration: none;
   text-align: center;
@@ -108,10 +114,11 @@
   right: -2px;
   bottom: -2px;
   background: linear-gradient(90deg, #7b00ff, #ff00cc);
-  border-radius: 22px; /* Debe ser igual o mayor al de `.card` */
+  border-radius: 22px;
+  /* Debe ser igual o mayor al de `.card` */
   z-index: -1;
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: destination-out;
@@ -119,16 +126,19 @@
 }
 
 .btn-services:hover {
-  background: rgb(255, 255, 255); /* Fondo más opaco */
+  background: rgb(255, 255, 255);
+  /* Fondo más opaco */
   color: black;
 }
 
 /* Active (al presionar): efecto de "pulso" */
 .btn-services:active {
   transform: scale(1.05);
-  background: rgb(255, 255, 255); /* Fondo más opaco */
+  background: rgb(255, 255, 255);
+  /* Fondo más opaco */
   color: black;
 }
+
 .accordion span {
   font-size: 1.2rem;
 }

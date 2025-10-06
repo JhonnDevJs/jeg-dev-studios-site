@@ -55,7 +55,7 @@ function CardProduct({
           </div>
         </div>
         <button className="btn-services" onClick={handleAddToCart}>
-          <span className="fw-bolder">Agregar al carrito</span>
+          <span className="fw-bolder">Contratar servicio</span>
         </button>
       </div>
       <div className="card-footer d-flex justify-content-center align-items-center">
