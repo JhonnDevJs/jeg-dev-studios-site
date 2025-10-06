@@ -16,7 +16,7 @@ function NavBar() {
           <Link
             href="/"
             className="navbar-brand d-flex text-white justify-content-center align-items-center text-center p-0 gap-2"
-            style={{ position: "fixed", top: "0rem", left: "3rem" }}
+            style={{ position: "fixed", top: "0rem", left: "1rem" }}
             aria-label="Logo JEG Dev Studios"
             title="Logo JEG Dev Studios"
             tabIndex={0}
@@ -34,7 +34,7 @@ function NavBar() {
 
           {/* Botón Hamburguesa para móviles */}
           <button
-            className="navbar-toggler bg-transparent text-white border-0 ms-auto"
+            className="navbar-toggler bg-black text-white border-0 ms-auto"
             type="button"
             data-bs-toggle="collapse"
             data-bs-target="#navbarNav"

@@ -86,7 +86,15 @@ export default function ContactClient() {
 
 	return (
 		<>
-			<section className="__image-background-contact d-flex flex-column justify-content-center align-items-center w-100"></section>
+			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
+				<Image
+					src="/fondos/Contacto.webp"
+					alt="Conatcta con nosotros - JEG Dev Studios"
+					width={1920}
+					height={1080}
+					style={{ width: "100%", height: "auto" }}
+				/>
+			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center w-100 gradient-effect-x">
 				<h1 className="display-1 text-center text-white mt-5">Contáctanos</h1>
 				<p className="fs-5 text-center text-white">

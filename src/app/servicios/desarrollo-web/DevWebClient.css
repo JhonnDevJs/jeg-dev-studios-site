@@ -1,20 +1,11 @@
 .__image-background-sections {
-  background-image: url("/fondos/Web.webp");
-  background-size: 100% auto;
-  background-position: start center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* Contenedor para la imagen de cabecera */
+  background-color: #000;
   width: 100%;
-  height: 55dvh;
-}
-
-@media (max-width: 768px) {
-  .__image-background-sections {
-    background-size: 100% auto;
-    background-attachment: scroll;
-    height: 20dvh;
-    margin-top: 4.5rem;
-  }
+  /* La altura será automática basada en la imagen */
+  height: auto;
+  /* Eliminamos el padding que pueda tener por defecto para que la imagen ocupe todo */
+  padding: 0;
 }
 
 .card-services {
@@ -29,6 +20,7 @@
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 .card-services:hover {
   transform: scale(1.05);
 }
@@ -37,8 +29,10 @@
 .btn-services {
   position: relative;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo transparente */
-  border-radius: 20px; /* 🔁 Este valor modifica el redondeado */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Fondo transparente */
+  border-radius: 20px;
+  /* 🔁 Este valor modifica el redondeado */
   color: white;
   text-decoration: none;
   text-align: center;
@@ -53,10 +47,11 @@
   right: -2px;
   bottom: -2px;
   background: linear-gradient(90deg, #7b00ff, #ff00cc);
-  border-radius: 22px; /* Debe ser igual o mayor al de `.card` */
+  border-radius: 22px;
+  /* Debe ser igual o mayor al de `.card` */
   z-index: -1;
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: destination-out;
@@ -64,14 +59,16 @@
 }
 
 .btn-services:hover {
-  background: rgb(255, 255, 255); /* Fondo más opaco */
+  background: rgb(255, 255, 255);
+  /* Fondo más opaco */
   color: black;
 }
 
 /* Active (al presionar): efecto de "pulso" */
 .btn-services:active {
   transform: scale(1.05);
-  background: rgb(255, 255, 255); /* Fondo más opaco */
+  background: rgb(255, 255, 255);
+  /* Fondo más opaco */
   color: black;
 }
 
@@ -89,32 +86,39 @@
 .section-process-waves {
   height: 100dvh;
 }
+
 .section-process-waves::before,
 .section-process-waves::after {
-  content: ""; /* Necesario para que los pseudo-elementos se muestren */
+  content: "";
+  /* Necesario para que los pseudo-elementos se muestren */
   position: absolute;
   left: 50%;
   top: 50%;
-  
+
   /* Tamaño base de los círculos */
-  width: 200px; 
+  width: 200px;
   height: 200px;
-  
-  border-radius: 50%; /* Para hacerlos circulares */
-  border: 2px solid rgba(255, 255, 255, 0.15); /* Color y grosor de la línea (blanco semitransparente) */
-  
-  opacity: 0; /* Inician invisibles */
-  
+
+  border-radius: 50%;
+  /* Para hacerlos circulares */
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  /* Color y grosor de la línea (blanco semitransparente) */
+
+  opacity: 0;
+  /* Inician invisibles */
+
   /* Aplicamos la animación */
   /* El transform: translate(-50%, -50%) se maneja dentro de la animación para centrar correctamente durante el escalado */
   animation: waveEffect 5s infinite linear;
-  
-  z-index: 0; /* Para que estén detrás del contenido del article (que tiene z-index: 1) */
+
+  z-index: 0;
+  /* Para que estén detrás del contenido del article (que tiene z-index: 1) */
 }
 
 /* Hacemos que la segunda onda (::after) comience con un retraso para un efecto más dinámico */
 .section-process-waves::after {
-  animation-delay: -2.5s; /* La mitad de la duración de la animación */
+  animation-delay: -2.5s;
+  /* La mitad de la duración de la animación */
 }
 
 .process-waves-container {
@@ -126,20 +130,30 @@
     width: 100%;
   }
 }
+
 @keyframes waveEffect {
   0% {
-    transform: translate(-50%, -50%) scale(0.1); /* Inicia pequeño y centrado */
+    transform: translate(-50%, -50%) scale(0.1);
+    /* Inicia pequeño y centrado */
     opacity: 0;
   }
-  20% { /* Aparece gradualmente */
+
+  20% {
+    /* Aparece gradualmente */
     opacity: 0.7;
   }
-  70% { /* Se expande y empieza a desvanecerse */
-    transform: translate(-50%, -50%) scale(2.5); /* Escala hasta 2.5 veces su tamaño base (500px) */
+
+  70% {
+    /* Se expande y empieza a desvanecerse */
+    transform: translate(-50%, -50%) scale(2.5);
+    /* Escala hasta 2.5 veces su tamaño base (500px) */
     opacity: 0.3;
   }
-  100% { /* Termina grande y completamente transparente */
-    transform: translate(-50%, -50%) scale(3.5); /* Escala hasta 3.5 veces su tamaño base (700px) */
+
+  100% {
+    /* Termina grande y completamente transparente */
+    transform: translate(-50%, -50%) scale(3.5);
+    /* Escala hasta 3.5 veces su tamaño base (700px) */
     opacity: 0;
   }
 }

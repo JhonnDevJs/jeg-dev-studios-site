@@ -1,19 +1,11 @@
 .__image-background-sections {
-  background-image: url("/fondos/Software.webp");
-  background-size: 100% auto;
-  background-position: start center;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+  /* Contenedor para la imagen de cabecera */
+  background-color: #000;
   width: 100%;
-  height: 55dvh;
-}
-@media (max-width: 768px) {
-  .__image-background-sections {
-    background-size: 100% auto;
-    background-attachment: scroll;
-    height: 20dvh;
-    margin-top: 4.5rem;
-  }
+  /* La altura será automática basada en la imagen */
+  height: auto;
+  /* Eliminamos el padding que pueda tener por defecto para que la imagen ocupe todo */
+  padding: 0;
 }
 
 .card-services {

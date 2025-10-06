@@ -7,102 +7,130 @@ import CardSmallList from "@/components/CardSmallList";
 import FAQ from "@/components/FAQ";
 import CTA from "@/components/CTA";
 import StructuredData from "@/components/StructuredData"; // Importar el nuevo componente
+import Image from "next/image";
 import "./ServicesClient.css";
 
 const faqs = [
-	  // --- Actuales ---
-  {
-    question: "¿Cómo contrato un servicio con ustedes?",
-    answer: "Es muy fácil: elige el tipo de proyecto que necesitas (página web, aplicación móvil o software empresarial), revisa nuestros paquetes y contáctanos. Agendamos una videollamada para conocer tu idea y te enviamos una propuesta clara y detallada."
-  },
-  {
-    question: "¿Debo pagar todo de una vez?",
-    answer: "No. Trabajamos por etapas: se paga un mínimo del 50% al iniciar y el resto cuando el proyecto esté finalizado y aprobado por ti. Esta modalidad aplica para cualquiera de nuestros servicios."
-  },
-  {
-    question: "¿Incluye mantenimiento o soporte?",
-    answer: "Depende del paquete contratado. Algunos incluyen mantenimiento básico por un tiempo limitado. También ofrecemos planes de soporte y mantenimiento personalizados para proyectos a largo plazo."
-  },
-  {
-    question: "¿Qué necesito para comenzar un proyecto?",
-    answer: "Solo necesitas tener claro tu objetivo y entregarnos los datos básicos de tu marca: nombre, logotipo, colores y una idea general de lo que deseas lograr. Nosotros te acompañamos en cada paso del proceso."
-  },
-  {
-    question: "¿Qué tecnologías utilizan?",
-    answer: "Trabajamos con tecnologías modernas y adaptadas a cada tipo de desarrollo: HTML, CSS, JavaScript, React, Next.js, Node.js, Laravel, Kotlin, Java, Unity, Flutter, entre otras. Elegimos lo más adecuado según tu proyecto."
-  },
-  {
-    question: "¿Qué sucede si quiero cancelar el proyecto?",
-    answer: "Puedes hacerlo, pero aplicamos una política de 0 devoluciones del pago inicial, ya que se ha invertido tiempo y recursos en el desarrollo. Esta condición está estipulada en el contrato desde el inicio."
-  },
-  {
-    question: "¿Puedo ampliar o escalar mi proyecto más adelante?",
-    answer: "¡Por supuesto! Todos nuestros desarrollos están pensados para crecer. Si inicias con algo básico, puedes agregar nuevas funcionalidades, secciones o módulos en cualquier momento."
-  },
-  {
-    question: "¿Trabajan con contratos y garantías?",
-    answer: "Sí. Todos nuestros proyectos están respaldados por un contrato claro y justo. Además, firmamos un documento que confirma que nos entregaste todo lo necesario para iniciar el desarrollo."
-  },
+	// --- Actuales ---
+	{
+		question: "¿Cómo contrato un servicio con ustedes?",
+		answer:
+			"Es muy fácil: elige el tipo de proyecto que necesitas (página web, aplicación móvil o software empresarial), revisa nuestros paquetes y contáctanos. Agendamos una videollamada para conocer tu idea y te enviamos una propuesta clara y detallada.",
+	},
+	{
+		question: "¿Debo pagar todo de una vez?",
+		answer:
+			"No. Trabajamos por etapas: se paga un mínimo del 50% al iniciar y el resto cuando el proyecto esté finalizado y aprobado por ti. Esta modalidad aplica para cualquiera de nuestros servicios.",
+	},
+	{
+		question: "¿Incluye mantenimiento o soporte?",
+		answer:
+			"Depende del paquete contratado. Algunos incluyen mantenimiento básico por un tiempo limitado. También ofrecemos planes de soporte y mantenimiento personalizados para proyectos a largo plazo.",
+	},
+	{
+		question: "¿Qué necesito para comenzar un proyecto?",
+		answer:
+			"Solo necesitas tener claro tu objetivo y entregarnos los datos básicos de tu marca: nombre, logotipo, colores y una idea general de lo que deseas lograr. Nosotros te acompañamos en cada paso del proceso.",
+	},
+	{
+		question: "¿Qué tecnologías utilizan?",
+		answer:
+			"Trabajamos con tecnologías modernas y adaptadas a cada tipo de desarrollo: HTML, CSS, JavaScript, React, Next.js, Node.js, Laravel, Kotlin, Java, Unity, Flutter, entre otras. Elegimos lo más adecuado según tu proyecto.",
+	},
+	{
+		question: "¿Qué sucede si quiero cancelar el proyecto?",
+		answer:
+			"Puedes hacerlo, pero aplicamos una política de 0 devoluciones del pago inicial, ya que se ha invertido tiempo y recursos en el desarrollo. Esta condición está estipulada en el contrato desde el inicio.",
+	},
+	{
+		question: "¿Puedo ampliar o escalar mi proyecto más adelante?",
+		answer:
+			"¡Por supuesto! Todos nuestros desarrollos están pensados para crecer. Si inicias con algo básico, puedes agregar nuevas funcionalidades, secciones o módulos en cualquier momento.",
+	},
+	{
+		question: "¿Trabajan con contratos y garantías?",
+		answer:
+			"Sí. Todos nuestros proyectos están respaldados por un contrato claro y justo. Además, firmamos un documento que confirma que nos entregaste todo lo necesario para iniciar el desarrollo.",
+	},
 
-  // --- Nuevas para SEO ---
-  {
-    question: "¿Cuánto tiempo tardan en verse resultados de posicionamiento SEO?",
-    answer: "Los resultados dependen del estado actual de tu sitio, la competencia y las estrategias aplicadas. En promedio, los avances son visibles entre 3 y 6 meses con nuestros servicios de posicionamiento SEO en México."
-  },
-  {
-    question: "¿Cuál es la diferencia entre SEO local y SEO web?",
-    answer: "El SEO local está enfocado en negocios que buscan aparecer en Google Maps o búsquedas cercanas, mientras que el SEO web está orientado a alcanzar visibilidad a nivel nacional o global. Ambos forman parte de nuestros servicios de posicionamiento SEO profesional."
-  },
-  {
-    question: "¿Qué incluye una auditoría SEO?",
-    answer: "Nuestra auditoría SEO revisa aspectos técnicos, contenidos, enlaces y usabilidad de tu sitio web. Identificamos oportunidades de mejora y creamos un plan de posicionamiento SEO y estrategias de marketing digital para tu negocio."
-  },
+	// --- Nuevas para SEO ---
+	{
+		question:
+			"¿Cuánto tiempo tardan en verse resultados de posicionamiento SEO?",
+		answer:
+			"Los resultados dependen del estado actual de tu sitio, la competencia y las estrategias aplicadas. En promedio, los avances son visibles entre 3 y 6 meses con nuestros servicios de posicionamiento SEO en México.",
+	},
+	{
+		question: "¿Cuál es la diferencia entre SEO local y SEO web?",
+		answer:
+			"El SEO local está enfocado en negocios que buscan aparecer en Google Maps o búsquedas cercanas, mientras que el SEO web está orientado a alcanzar visibilidad a nivel nacional o global. Ambos forman parte de nuestros servicios de posicionamiento SEO profesional.",
+	},
+	{
+		question: "¿Qué incluye una auditoría SEO?",
+		answer:
+			"Nuestra auditoría SEO revisa aspectos técnicos, contenidos, enlaces y usabilidad de tu sitio web. Identificamos oportunidades de mejora y creamos un plan de posicionamiento SEO y estrategias de marketing digital para tu negocio.",
+	},
 
-  // --- Nuevas para Diseño Gráfico ---
-  {
-    question: "¿Qué incluye un servicio de diseño gráfico?",
-    answer: "Nuestros servicios abarcan logotipos, branding, UX/UI para web, apps y software, diseño editorial, publicidad digital, invitaciones y menús digitales, además de edición fotográfica. Creamos soluciones creativas que fortalecen tu marca."
-  },
-  {
-    question: "¿Me entregan los archivos editables de los diseños?",
-    answer: "Sí. Entregamos archivos editables en formatos profesionales como AI, PSD o Figma, además de versiones listas para impresión o uso digital."
-  },
-  {
-    question: "¿Puedo solicitar un portafolio o catálogo de servicios de diseño gráfico?",
-    answer: "Por supuesto. Puedes solicitarlo en cualquier momento y también contamos con ejemplos de nuestro trabajo en el sitio web para que conozcas la calidad de nuestros servicios de diseño gráfico."
-  },
-  {
-    question: "¿Ofrecen diseño UX/UI para páginas web, apps y software?",
-    answer: "Sí. Diseñamos interfaces modernas, funcionales y centradas en el usuario para web, aplicaciones móviles y software, garantizando experiencias digitales intuitivas y efectivas."
-  },
+	// --- Nuevas para Diseño Gráfico ---
+	{
+		question: "¿Qué incluye un servicio de diseño gráfico?",
+		answer:
+			"Nuestros servicios abarcan logotipos, branding, UX/UI para web, apps y software, diseño editorial, publicidad digital, invitaciones y menús digitales, además de edición fotográfica. Creamos soluciones creativas que fortalecen tu marca.",
+	},
+	{
+		question: "¿Me entregan los archivos editables de los diseños?",
+		answer:
+			"Sí. Entregamos archivos editables en formatos profesionales como AI, PSD o Figma, además de versiones listas para impresión o uso digital.",
+	},
+	{
+		question:
+			"¿Puedo solicitar un portafolio o catálogo de servicios de diseño gráfico?",
+		answer:
+			"Por supuesto. Puedes solicitarlo en cualquier momento y también contamos con ejemplos de nuestro trabajo en el sitio web para que conozcas la calidad de nuestros servicios de diseño gráfico.",
+	},
+	{
+		question: "¿Ofrecen diseño UX/UI para páginas web, apps y software?",
+		answer:
+			"Sí. Diseñamos interfaces modernas, funcionales y centradas en el usuario para web, aplicaciones móviles y software, garantizando experiencias digitales intuitivas y efectivas.",
+	},
 
-  // --- Nuevas para Desarrollo ---
-  {
-    question: "¿Cuál es el tiempo promedio de entrega de un sitio web, app o software?",
-    answer: "Depende del tipo de proyecto: una landing page puede tomar 7–10 días, una aplicación móvil 2–4 semanas y un software empresarial hasta 30 días o más según la complejidad."
-  },
-  {
-    question: "¿Mis proyectos incluyen optimización SEO desde el inicio?",
-    answer: "Sí, todos los sitios web incluyen optimización SEO básica desde el diseño y desarrollo. También ofrecemos planes de SEO avanzado y estrategias de marketing digital personalizadas."
-  },
-  {
-    question: "¿Ofrecen publicación de apps en Google Play y App Store?",
-    answer: "Sí, la publicación en tiendas oficiales está incluida en nuestros paquetes de aplicaciones móviles, cumpliendo con todos los requisitos técnicos y de diseño."
-  },
+	// --- Nuevas para Desarrollo ---
+	{
+		question:
+			"¿Cuál es el tiempo promedio de entrega de un sitio web, app o software?",
+		answer:
+			"Depende del tipo de proyecto: una landing page puede tomar 7–10 días, una aplicación móvil 2–4 semanas y un software empresarial hasta 30 días o más según la complejidad.",
+	},
+	{
+		question: "¿Mis proyectos incluyen optimización SEO desde el inicio?",
+		answer:
+			"Sí, todos los sitios web incluyen optimización SEO básica desde el diseño y desarrollo. También ofrecemos planes de SEO avanzado y estrategias de marketing digital personalizadas.",
+	},
+	{
+		question: "¿Ofrecen publicación de apps en Google Play y App Store?",
+		answer:
+			"Sí, la publicación en tiendas oficiales está incluida en nuestros paquetes de aplicaciones móviles, cumpliendo con todos los requisitos técnicos y de diseño.",
+	},
 
-  // --- Nuevas Comerciales ---
-  {
-    question: "¿Puedo contratar varios servicios juntos (web + SEO + diseño gráfico)?",
-    answer: "Sí. Ofrecemos soluciones integrales que combinan desarrollo web, posicionamiento SEO y diseño gráfico en un solo paquete, optimizando tu inversión y resultados."
-  },
-  {
-    question: "¿Trabajan solo en México o también con clientes internacionales?",
-    answer: "Aunque estamos en México, trabajamos con clientes en Latinoamérica y otras partes del mundo. Todos nuestros servicios se adaptan a modalidad remota y seguimos estándares profesionales globales."
-  },
-  {
-    question: "¿Qué beneficios obtengo al contratar desarrollo web, SEO y diseño gráfico con JEG Dev Studios?",
-    answer: "Obtienes soluciones integrales: sitios web modernos, apps y software a medida, posicionamiento SEO efectivo y diseños gráficos profesionales que fortalecen tu identidad visual, aumentando visibilidad, tráfico y conversiones."
-  },
+	// --- Nuevas Comerciales ---
+	{
+		question:
+			"¿Puedo contratar varios servicios juntos (web + SEO + diseño gráfico)?",
+		answer:
+			"Sí. Ofrecemos soluciones integrales que combinan desarrollo web, posicionamiento SEO y diseño gráfico en un solo paquete, optimizando tu inversión y resultados.",
+	},
+	{
+		question:
+			"¿Trabajan solo en México o también con clientes internacionales?",
+		answer:
+			"Aunque estamos en México, trabajamos con clientes en Latinoamérica y otras partes del mundo. Todos nuestros servicios se adaptan a modalidad remota y seguimos estándares profesionales globales.",
+	},
+	{
+		question:
+			"¿Qué beneficios obtengo al contratar desarrollo web, SEO y diseño gráfico con JEG Dev Studios?",
+		answer:
+			"Obtienes soluciones integrales: sitios web modernos, apps y software a medida, posicionamiento SEO efectivo y diseños gráficos profesionales que fortalecen tu identidad visual, aumentando visibilidad, tráfico y conversiones.",
+	},
 ];
 
 export default function ServicesClient() {
@@ -132,7 +160,15 @@ export default function ServicesClient() {
 			{/* Este componente solo renderiza el schema de FAQ aquí, no en otras páginas */}
 
 			<StructuredData data={faqSchema} />
-			<section className="__image-background-servicios d-flex flex-column justify-content-center align-items-center w-100"></section>
+			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
+				<Image
+					src="/fondos/Servicios.webp"
+					alt="Nuestros servicios en JEG Dev Studios"
+					width={1920}
+					height={1080}
+					style={{ width: "100%", height: "auto" }}
+				/>
+			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 gap-3 gradient-effect-x">
 				<h1 className="text-center text-white fw-bold mt-3">
 					Soluciones de desarrollo digital: sitios web, apps móviles y software
@@ -452,20 +488,27 @@ export default function ServicesClient() {
 					]}
 					lastText="Si buscas la mejor agencia de SEO en México para tu empresa, en JEG Dev Studios encontrarás un aliado estratégico para alcanzar tus metas digitales."
 				/>
-        <h2 className="display-5 text-center text-white">
-          Solicita tu Auditoría SEO Incluida en cualquier paquete de desarrollo web o por separado
-        </h2>
-        <p className="fs-4 text-white text-center mt-4">
-          Antes de comenzar, realizamos una auditoría inicial de tu sitio web para identificar oportunidades de crecimiento o de mejora en posicionamiento SEO y estrategias de marketing digital.
-        </p>
-        <p className="fs-4 text-white text-center mt-4">Comienza hoy y descubre cómo nuestros servicios de posicionamiento SEO en México pueden ayudarte a crecer.</p>
+				<h2 className="display-5 text-center text-white">
+					Solicita tu Auditoría SEO Incluida en cualquier paquete de desarrollo
+					web o por separado
+				</h2>
+				<p className="fs-4 text-white text-center mt-4">
+					Antes de comenzar, realizamos una auditoría inicial de tu sitio web
+					para identificar oportunidades de crecimiento o de mejora en
+					posicionamiento SEO y estrategias de marketing digital.
+				</p>
+				<p className="fs-4 text-white text-center mt-4">
+					Comienza hoy y descubre cómo nuestros servicios de posicionamiento SEO
+					en México pueden ayudarte a crecer.
+				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-x">
 				<h2 className="display-5 text-center text-white">
 					Servicios de Diseño Gráfico y Digital en México
 				</h2>
 				<p className="fs-4 text-center text-white p-0">
-					Tu marca merece un diseño único: logotipos, branding, UX/UI, editorial y más.
+					Tu marca merece un diseño único: logotipos, branding, UX/UI, editorial
+					y más.
 				</p>
 				<CardNestedLists
 					titulo="En JEG Dev Studios ofrecemos servicios de diseño gráfico que ayudan a marcas, negocios y emprendedores a destacar en un mercado cada vez más competitivo."
@@ -473,9 +516,7 @@ export default function ServicesClient() {
 					list={[
 						{
 							text: "Logotipos y Branding",
-							sublist: [
-								"Identidad sólida y profesional."
-              ],
+							sublist: ["Identidad sólida y profesional."],
 						},
 						{
 							text: "Diseño UX/UI para Web, Apps y Software",
@@ -485,30 +526,30 @@ export default function ServicesClient() {
 						},
 						{
 							text: "Diseño Editorial",
-							sublist: [
-								"Catálogos, revistas, manuales de identidad y más."
-							],
+							sublist: ["Catálogos, revistas, manuales de identidad y más."],
 						},
 						{
 							text: "Publicidad Digital",
 							sublist: [
-								"Menús, invitaciones y materiales promocionales creativos."
+								"Menús, invitaciones y materiales promocionales creativos.",
 							],
 						},
 						{
 							text: "Edición Fotográfica y Contenido Visua",
-							sublist: [
-								"Para reforzar tu comunicación."
-							],
+							sublist: ["Para reforzar tu comunicación."],
 						},
 					]}
 				/>
-        <p className="fs-4 text-center text-white p-0">
-          Somos una de las mejores agencias de diseño gráfico en México, con sede en CDMX, listos para convertir tus ideas en realidades visuales impactantes.
-        </p>
-        <p className="fs-4 text-center text-white p-0">
-          Ya sea que busques un estudio de diseño gráfico para un proyecto puntual o una agencia que te acompañe a largo plazo, en JEG Dev Studios encontrarás un equipo creativo y estratégico.
-        </p>
+				<p className="fs-4 text-center text-white p-0">
+					Somos una de las mejores agencias de diseño gráfico en México, con
+					sede en CDMX, listos para convertir tus ideas en realidades visuales
+					impactantes.
+				</p>
+				<p className="fs-4 text-center text-white p-0">
+					Ya sea que busques un estudio de diseño gráfico para un proyecto
+					puntual o una agencia que te acompañe a largo plazo, en JEG Dev
+					Studios encontrarás un equipo creativo y estratégico.
+				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-y">
 				<h2 className="display-5 text-center text-white">

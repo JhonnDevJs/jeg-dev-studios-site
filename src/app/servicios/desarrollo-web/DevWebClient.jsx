@@ -6,6 +6,7 @@ import CTAProducts from "@/components/CTAProducts";
 import CardSmallList from "@/components/CardSmallList";
 import CardNestedLists from "@/components/CardNestedLists";
 import SectionProcess from "@/components/SectionProcess";
+import Image from "next/image";
 import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
@@ -77,7 +78,14 @@ export default function DevWebClient() {
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
 			/>
-			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
+			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
+				<Image
+					src="/fondos/Web.webp"
+					alt="Conoce nuestros servicios de desarrollo web en JEG Dev Studios"
+					width={1920}
+					height={1080}
+					style={{ width: "100%", height: "auto" }}
+				/>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<h1 className="display-1 text-center text-white">

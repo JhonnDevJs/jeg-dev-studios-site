@@ -9,6 +9,7 @@
 body {
   /* Usa la variable de la fuente principal (Geist Sans) */
   font-family: var(--font-geist-sans);
+  background-color: #000;
 }
 
 .__icons-color::before {

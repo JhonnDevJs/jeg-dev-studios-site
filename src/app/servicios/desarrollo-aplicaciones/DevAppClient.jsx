@@ -2,6 +2,7 @@
 import { useMemo } from "react";
 import CardPacksProduct from "@/components/CardPacksProduct";
 import CTAProducts from "@/components/CTAProducts";
+import Image from "next/image";
 import imgAppProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
@@ -81,7 +82,14 @@ export default function DevAppClient() {
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
 			/>
-			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100">
+			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
+				<Image
+					src="/fondos/Apps.webp"
+					alt="Conoce nuestros servicios de desarrollo de aplicaciones móviles de JEG Dev Studios"
+					width={1920}
+					height={1080}
+					style={{ width: "100%", height: "auto" }}
+				/>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<h1 className="display-1 text-center text-white">
