@@ -86,12 +86,13 @@ function NavBar() {
                 <li className="nav-item">
                   <Link
                     href="/proyectos"
-                    className={`nav-link d-none text-white nav-efecto${
+                    className={`nav-link text-white nav-efecto${
                       pathname === "/proyectos" ? " active" : ""
                     }`}
-                    aria-hidden="true"
-                    title="Página de nuestros servicios"
+                    aria-current="page"
+                    title="Página de nuestros proyectos"
                     aria-label="Página de nuestros proyectos"
+                    tabIndex={0}
                   >
                     Proyectos
                   </Link>

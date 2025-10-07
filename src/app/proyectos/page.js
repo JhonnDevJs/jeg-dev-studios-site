@@ -26,8 +26,8 @@ export const metadata = {
   },
 };
 
-import ProyectsClient from "./ProyectsClient";
+import ProjectsClient from "./ProjectsClient";
 
 export default function ProyectsPage() {
-  return <ProyectsClient />;
+  return <ProjectsClient />;
 }

@@ -1,0 +1,159 @@
+.card {
+  overflow: hidden;
+}
+
+.projects-hero {
+  height: 60vh;
+  min-height: 400px;
+  background-size: cover;
+  background-position: center;
+}
+
+.project-card-img {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.project-card-img-web {
+  aspect-ratio: 16 / 9;
+}
+
+/* Estilos para el contenedor de la navegación */
+.project-nav-pills {
+  position: relative;
+  /* Habilitamos el scroll horizontal y quitamos el vertical */
+  overflow-x: auto;
+  overflow-y: hidden;
+  /* Evitamos que los elementos se partan en varias líneas */
+  white-space: nowrap;
+  /* Mejoramos el scroll en iOS */
+  -webkit-overflow-scrolling: touch;
+  /* Ocultamos la barra de scroll para un look más limpio */
+  -ms-overflow-style: none;
+  /* IE and Edge */
+  scrollbar-width: none;
+  /* Firefox */
+  flex-wrap: nowrap;
+}
+
+.project-nav-pills::-webkit-scrollbar {
+  display: none;
+  /* Webkit (Chrome, Safari) */
+}
+
+/* El indicador activo que se deslizará */
+.project-nav-pills .active-indicator {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: linear-gradient(90deg, #7b00ff, #ff00cc);
+  border-radius: 20px;
+  z-index: 0;
+  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* Ajustes a los botones de navegación */
+.project-nav-pills .nav-link {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.4);
+  border: 2px solid transparent;
+  /* Borde transparente para mantener el tamaño */
+  transition: color 0.3s ease, background-color 0.3s ease;
+  border-radius: 20px;
+}
+
+/* Botón inactivo */
+.project-nav-pills .nav-link:not(.active) {
+  background-color: transparent;
+  border-color: transparent;
+  /* Quitamos el borde blanco inicial */
+}
+
+/* Hover para botones inactivos */
+.project-nav-pills .nav-link:not(.active):hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Botón activo (el texto) */
+.project-nav-pills .nav-link.active {
+  color: #fff;
+  background-color: transparent;
+  /* El fondo lo da el indicador */
+}
+
+.card-body {
+  background: transparent;
+  z-index: 2;
+}
+
+.card {
+  background: rgba(24, 24, 24, 0.603);
+  /* Fondo semitransparente */
+  backdrop-filter: blur(40px);
+  /* Aplica el blur */
+  -webkit-backdrop-filter: blur(20px);
+  /* Soporte Safari */
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.144);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
+}
+
+.card {
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.btn-primary {
+  position: relative;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Fondo transparente */
+  border-radius: 20px;
+  /* 🔁 Este valor modifica el redondeado */
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  z-index: 1;
+}
+
+.btn-primary::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #7b00ff, #ff00cc);
+  border-radius: 22px;
+  /* Debe ser igual o mayor al de `.card` */
+  z-index: -1;
+  mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  padding: 2px;
+}
+
+.btn-primary:hover {
+  background: rgb(255, 255, 255);
+  /* Fondo más opaco */
+  color: black;
+}
+
+/* Active (al presionar): efecto de "pulso" */
+.btn-primary:active {
+  transform: scale(1.05);
+  background: rgb(255, 255, 255);
+  /* Fondo más opaco */
+  color: black;
+}
