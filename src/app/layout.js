@@ -1,13 +1,13 @@
 import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
-import "./globals.css";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
 import NavBar from "@/components/NavBar.jsx";
 import BtnWhats from "@/components/WhatsAppButton.jsx";
 import Footer from "@/components/Footer.jsx";
-import "bootstrap/dist/css/bootstrap.min.css";
 import BootstrapClient from "@/components/BootstrapClient.js";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./globals.css";
 
 const geistSans = Geist({
 	variable: "--font-geist-sans",
