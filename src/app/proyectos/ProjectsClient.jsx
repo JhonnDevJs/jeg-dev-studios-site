@@ -25,8 +25,8 @@ function ProjectsClient() {
 			{
 				imgSrc:
 					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/CalculFisc.webp",
-				alt: "Sitio Web para Agencia Creativa",
-				title: "Sitio Web para Agencia Creativa",
+				alt: "App Web CalCulFisc una herramienta de calculo de ISR",
+				title: "App Web CalCulFisc herramienta de calculo de ISR",
 				description:
 					"Un sitio web dinámico y atractivo para una agencia creativa, destacando su trabajo y servicios.",
 				link: "https://calculfisc-web.vercel.app/",
@@ -91,8 +91,8 @@ function ProjectsClient() {
 			{
 				imgSrc:
 					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/CalculFisc.webp",
-				alt: "Sitio Web para Agencia Creativa",
-				title: "Sitio Web para Agencia Creativa",
+				alt: "App Web CalCulFisc una herramienta de calculo de ISR",
+				title: "App Web CalCulFisc herramienta de calculo de ISR",
 				description:
 					"Un sitio web dinámico y atractivo para una agencia creativa, destacando su trabajo y servicios.",
 				link: "https://calculfisc-web.vercel.app/",
