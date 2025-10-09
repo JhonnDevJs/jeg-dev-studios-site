@@ -2,6 +2,7 @@
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
+import DesignProjectCard from "@/components/DesignProjectCard";
 import "./Projects.css";
 
 function ProjectsClient() {
@@ -12,9 +13,9 @@ function ProjectsClient() {
 	const categories = [
 		{ id: "web", title: "Desarrollo Web" },
 		{ id: "mobile", title: "Aplicaciones Móviles" },
-		// { id: "software", title: "Software" },
+		{ id: "software", title: "Software" },
 		{ id: "design", title: "Diseño" },
-		// { id: "seo", title: "SEO" },
+		{ id: "seo", title: "SEO" },
 	];
 
 	// Nota: He reestructurado tus proyectos. Ahora cada categoría tiene su propia lista.
@@ -28,7 +29,7 @@ function ProjectsClient() {
 				alt: "App Web CalCulFisc una herramienta de calculo de ISR",
 				title: "App Web CalCulFisc herramienta de calculo de ISR",
 				description:
-					"Un sitio web dinámico y atractivo para una agencia creativa, destacando su trabajo y servicios.",
+					"Un sitio web dinámico y atractivo para una App Web CalCulFisc herramienta de calculo de ISR.",
 				link: "https://calculfisc-web.vercel.app/",
 			},
 			{
@@ -58,44 +59,23 @@ function ProjectsClient() {
 				alt: "App Web CalCulFisc una herramienta de calculo de ISR",
 				title: "App Web CalCulFisc herramienta de calculo de ISR",
 				description:
-					"Un sitio web dinámico y atractivo para una agencia creativa, destacando su trabajo y servicios.",
+					"Un sitio web dinámico y atractivo para una App Web CalCulFisc herramienta de calculo de ISR.",
 				link: "https://calculfisc-web.vercel.app/",
 			},
 		],
-		software: [
-			// TODO: Reemplazar con proyectos de Software
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/liverpool-shope-clone.webp",
-				alt: "Plataforma de E-commerce",
-				title: "Plataforma de E-commerce",
-				description:
-					"Una plataforma de comercio electrónico completa para una tienda de moda, con una experiencia de compra fluida.",
-				link: "https://liverpool-shop-clone.vercel.app/",
-			},
-		],
-		seo: [
-			// TODO: Reemplazar con proyectos de SEO
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/CalculFisc.webp",
-				alt: "Sitio Web para Agencia Creativa",
-				title: "Sitio Web para Agencia Creativa",
-				description:
-					"Un sitio web dinámico y atractivo para una agencia creativa, destacando su trabajo y servicios.",
-				link: "https://calculfisc-web.vercel.app/",
-			},
-		],
+		software: [],
+		seo: [],
 		design: [
-			
 			{
 				imgSrc:
 					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/CalculFisc.webp",
 				alt: "App Web CalCulFisc una herramienta de calculo de ISR",
-				title: "App Web CalCulFisc herramienta de calculo de ISR",
+				title: "Diseño UI/UX para App de Música",
 				description:
-					"Un sitio web dinámico y atractivo para una agencia creativa, destacando su trabajo y servicios.",
+					"Un sitio web dinámico y atractivo para una App Web CalCulFisc herramienta de calculo de ISR.",
 				link: "https://calculfisc-web.vercel.app/",
+				// Este proyecto no tiene vista previa de Figma, por lo que el botón no aparecerá.
+				figmaEmbedUrl: null,
 			},
 			{
 				imgSrc:
@@ -105,6 +85,8 @@ function ProjectsClient() {
 				description:
 					"Una plataforma de comercio electrónico de recerva de boletos de autobus, con una experiencia de compra fluida.",
 				link: "https://vivabus-web.com/",
+				// Este proyecto no tiene vista previa de Figma, por lo que el botón no aparecerá.
+				figmaEmbedUrl: null,
 			},
 			{
 				imgSrc:
@@ -114,6 +96,19 @@ function ProjectsClient() {
 				description:
 					"Clon funcional de una popular tienda departamental, enfocado en la experiencia de usuario y el catálogo de productos.",
 				link: "https://liverpool-shop-clone.vercel.app/",
+				// Este proyecto no tiene vista previa de Figma, por lo que el botón no aparecerá.
+				figmaEmbedUrl: null,
+			},
+			{
+				imgSrc:
+					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/liverpool-shope-clone.webp",
+				alt: "Clon de tienda E-commerce",
+				title: "Clon de tienda E-commerce Liverpool",
+				description:
+					"Clon funcional de una popular tienda departamental, enfocado en la experiencia de usuario y el catálogo de productos.",
+				link: "https://liverpool-shop-clone.vercel.app/",
+				// Este proyecto no tiene vista previa de Figma, por lo que el botón no aparecerá.
+				figmaEmbedUrl: "https://embed.figma.com/proto/8mEnaZfHI4afM7yW0yNud7/MusicApp?node-id=117-585&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=36%3A3&embed-host=share",
 			},
 		],
 	};
@@ -187,12 +182,19 @@ function ProjectsClient() {
 				<article className="container">
 					<div className="row g-4">
 						{activeProjects.length > 0 ? (
-							activeProjects.map((project, index) => (
-								<ProjectCard
-									key={`${activeCategory}-${index}`}
-									project={project}
-								/>
-							))
+							activeProjects.map((project, index) =>
+								activeCategory === "design" ? (
+									<DesignProjectCard
+										key={`${activeCategory}-${index}`}
+										project={project}
+									/>
+								) : (
+									<ProjectCard
+										key={`${activeCategory}-${index}`}
+										project={project}
+									/>
+								)
+							)
 						) : (
 							<div className="col-12">
 								<p className="fs-5 text-white-50">
