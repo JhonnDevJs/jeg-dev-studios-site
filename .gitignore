@@ -1,6 +1,6 @@
 # Environment files
 .env
-.env.*    # opcional, si usas .env.development, etc.
+.env.*
 
 # Node modules
 node_modules/
