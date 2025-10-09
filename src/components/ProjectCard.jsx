@@ -8,8 +8,8 @@ function ProjectCard({ project }) {
 				<div className="project-card-img-web position-relative">
 					<Image
 						loading="lazy"
-						src={project.imgSrc}
-						alt={project.alt}
+						src={project.image}
+						alt={project.title}
 						fill
 						sizes="(max-width: 576px) 100vw, (max-width: 992px) 50vw, 33vw"
 						style={{ objectFit: "cover" }}

@@ -13,10 +13,16 @@ const nextConfig = {
       },
       {
         protocol: 'https',
-        hostname: 'jhoneg-17.github.io',
+        hostname: 'drive.google.com',
         port: '',
         pathname: '/**',
       },
+      {
+        protocol: 'https',
+        hostname: 'https://embed.figma.com/',
+        port: '',
+        pathname: '/**',
+      }
     ],
   },
 };

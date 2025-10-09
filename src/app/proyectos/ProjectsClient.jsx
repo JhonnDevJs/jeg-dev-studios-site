@@ -3,9 +3,66 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import ProjectCard from "@/components/ProjectCard";
 import DesignProjectCard from "@/components/DesignProjectCard";
+import { storage, db } from "@/lib/firebase";
+import { getDownloadURL, ref } from "firebase/storage";
+import { collection, getDocs } from "firebase/firestore";
 import "./Projects.css";
 
 function ProjectsClient() {
+	const [projectsByCategory, setProjectsByCategory] = useState({});
+	const [loading, setLoading] = useState(true);
+
+	useEffect(() => {
+		const fetchProjects = async () => {
+			setLoading(true);
+			try {
+				// 1. Obtener los datos de los proyectos desde Firestore
+				const querySnapshot = await getDocs(collection(db, "projects"));
+				const projectsData = querySnapshot.docs.map((doc) => ({
+					id: doc.id,
+					...doc.data(),
+				}));
+
+				// 2. Asignar la URL de la imagen directamente desde los datos de Firestore
+				const projectsWithCorrectedImages = projectsData.map((project) => {
+					let imageUrl = project.image || "/placeholder.png";
+
+					// Si la imagen es de Google Drive, la transformamos a un enlace directo.
+					if (imageUrl.includes("drive.google.com/file/d/")) {
+						try {
+							const fileId = imageUrl.split("/d/")[1].split("/")[0];
+							imageUrl = `https://drive.google.com/uc?export=view&id=${fileId}`;
+						} catch (e) {
+							console.error("Could not parse Google Drive URL:", project.image);
+							imageUrl = "/placeholder.png"; // Volvemos al placeholder si falla
+						}
+					}
+
+					return { ...project, image: imageUrl }; // Sobrescribimos la propiedad 'image'
+				});
+
+				// 3. Agrupar proyectos por categoría
+				const groupedProjects = projectsWithCorrectedImages.reduce(
+					(acc, project) => {
+						const category = project.category || "web"; // Categoría por defecto
+						if (!acc[category]) acc[category] = [];
+						acc[category].push(project);
+						return acc;
+					},
+					{}
+				);
+
+				setProjectsByCategory(groupedProjects);
+			} catch (error) {
+				console.error("Error fetching projects data: ", error);
+			} finally {
+				setLoading(false);
+			}
+		};
+
+		fetchProjects();
+	}, []);
+
 	const [activeCategory, setActiveCategory] = useState("web");
 	const navRef = useRef(null);
 	const [indicatorStyle, setIndicatorStyle] = useState({});
@@ -17,101 +74,6 @@ function ProjectsClient() {
 		{ id: "design", title: "Diseño" },
 		{ id: "seo", title: "SEO" },
 	];
-
-	// Nota: He reestructurado tus proyectos. Ahora cada categoría tiene su propia lista.
-	// Por ahora, he copiado los proyectos web en las otras categorías como ejemplo.
-	// Deberás reemplazarlos con los proyectos correctos para cada una.
-	const projectsByCategory = {
-		web: [
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/CalculFisc.webp",
-				alt: "App Web CalCulFisc una herramienta de calculo de ISR",
-				title: "App Web CalCulFisc herramienta de calculo de ISR",
-				description:
-					"Un sitio web dinámico y atractivo para una App Web CalCulFisc herramienta de calculo de ISR.",
-				link: "https://calculfisc-web.vercel.app/",
-			},
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/vivabus-proyecto-portafolio.webp",
-				alt: "Plataforma de E-commerce Vivabus",
-				title: "Plataforma de E-commerce Vivabus",
-				description:
-					"Una plataforma de comercio electrónico de recerva de boletos de autobus, con una experiencia de compra fluida.",
-				link: "https://vivabus-web.com/",
-			},
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/liverpool-shope-clone.webp",
-				alt: "Clon de tienda E-commerce",
-				title: "Clon de tienda E-commerce Liverpool",
-				description:
-					"Clon funcional de una popular tienda departamental, enfocado en la experiencia de usuario y el catálogo de productos.",
-				link: "https://liverpool-shop-clone.vercel.app/",
-			},
-		],
-		mobile: [
-			// TODO: Reemplazar con proyectos de Apps Móviles
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/CalculFisc.webp",
-				alt: "App Web CalCulFisc una herramienta de calculo de ISR",
-				title: "App Web CalCulFisc herramienta de calculo de ISR",
-				description:
-					"Un sitio web dinámico y atractivo para una App Web CalCulFisc herramienta de calculo de ISR.",
-				link: "https://calculfisc-web.vercel.app/",
-			},
-		],
-		software: [],
-		seo: [],
-		design: [
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/CalculFisc.webp",
-				alt: "App Web CalCulFisc una herramienta de calculo de ISR",
-				title: "Diseño UI/UX para App de Música",
-				description:
-					"Un sitio web dinámico y atractivo para una App Web CalCulFisc herramienta de calculo de ISR.",
-				link: "https://calculfisc-web.vercel.app/",
-				// Este proyecto no tiene vista previa de Figma, por lo que el botón no aparecerá.
-				figmaEmbedUrl: null,
-			},
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/vivabus-proyecto-portafolio.webp",
-				alt: "Plataforma de E-commerce Vivabus",
-				title: "Plataforma de E-commerce Vivabus",
-				description:
-					"Una plataforma de comercio electrónico de recerva de boletos de autobus, con una experiencia de compra fluida.",
-				link: "https://vivabus-web.com/",
-				// Este proyecto no tiene vista previa de Figma, por lo que el botón no aparecerá.
-				figmaEmbedUrl: null,
-			},
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/liverpool-shope-clone.webp",
-				alt: "Clon de tienda E-commerce",
-				title: "Clon de tienda E-commerce Liverpool",
-				description:
-					"Clon funcional de una popular tienda departamental, enfocado en la experiencia de usuario y el catálogo de productos.",
-				link: "https://liverpool-shop-clone.vercel.app/",
-				// Este proyecto no tiene vista previa de Figma, por lo que el botón no aparecerá.
-				figmaEmbedUrl: null,
-			},
-			{
-				imgSrc:
-					"https://jhoneg-17.github.io/JhonDev/src/assets/img/proyects/proyects-img/liverpool-shope-clone.webp",
-				alt: "Clon de tienda E-commerce",
-				title: "Clon de tienda E-commerce Liverpool",
-				description:
-					"Clon funcional de una popular tienda departamental, enfocado en la experiencia de usuario y el catálogo de productos.",
-				link: "https://liverpool-shop-clone.vercel.app/",
-				// Este proyecto no tiene vista previa de Figma, por lo que el botón no aparecerá.
-				figmaEmbedUrl: "https://embed.figma.com/proto/8mEnaZfHI4afM7yW0yNud7/MusicApp?node-id=117-585&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=36%3A3&embed-host=share",
-			},
-		],
-	};
 
 	const activeProjects = projectsByCategory[activeCategory] || [];
 
@@ -178,33 +140,33 @@ function ProjectsClient() {
 			</section>
 
 			{/* Sección de Proyectos Activos */}
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
-				<article className="container">
-					<div className="row g-4">
-						{activeProjects.length > 0 ? (
-							activeProjects.map((project, index) =>
-								activeCategory === "design" ? (
-									<DesignProjectCard
-										key={`${activeCategory}-${index}`}
-										project={project}
-									/>
-								) : (
-									<ProjectCard
-										key={`${activeCategory}-${index}`}
-										project={project}
-									/>
+			{loading ? (
+				<p className="fs-5 text-white-50 text-center">
+					Cargando los proyectos disponibles..
+				</p>
+			) : (
+				<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+					<article className="container">
+						<div className="row g-4">
+							{activeProjects.length > 0 ? (
+								activeProjects.map((project, index) =>
+									activeCategory === "design" ? (
+										<DesignProjectCard key={project.id} project={project} />
+									) : (
+										<ProjectCard key={project.id} project={project} />
+									)
 								)
-							)
-						) : (
-							<div className="col-12">
-								<p className="fs-5 text-white-50">
-									Próximamente tendremos proyectos en esta categoría.
-								</p>
-							</div>
-						)}
-					</div>
-				</article>
-			</section>
+							) : (
+								<div className="col-12">
+									<p className="fs-5 text-white-50">
+										Próximamente tendremos proyectos en esta categoría.
+									</p>
+								</div>
+							)}
+						</div>
+					</article>
+				</section>
+			)}
 		</>
 	);
 }
