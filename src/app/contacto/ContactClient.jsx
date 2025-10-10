@@ -3,7 +3,7 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
-import FAQ from "@/components/FAQ";
+import FAQ from "@/components/Seo/FAQ";
 import "./contactClient.css";
 
 const faqs = [

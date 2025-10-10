@@ -1,9 +1,9 @@
 "use client";
 import { useMemo } from "react";
-import CardPacksProduct from "@/components/CardPacksProduct";
-import CardSmallList from "@/components/CardSmallList";
+import CardPacksProduct from "@/components/Cards/CardPacksProduct";
+import CardSmallList from "@/components/Cards/CardSmallList";
 import SectionProcess from "@/components/SectionProcess";
-import CTAProducts from "@/components/CTAProducts";
+import CTAProducts from "@/components/Cta/CTAProducts";
 import Image from "next/image";
 import imgSoftProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";

@@ -1,14 +1,14 @@
-'use client'
-import Image from "next/image"
+"use client";
+import Image from "next/image";
 import Link from "next/link";
-import StructuredData from "./StructuredData";
+import StructuredData from "../Seo/StructuredData";
 
 function cleanHTML(html) {
-  if (!html || typeof html !== 'string') return '';
-  return html
-    .replace(/<script[^>]*>[\s\S]*?<\/script>/gi, '')  // Elimina <script>
-    .replace(/on\w+="[^"]*"/gi, '')                    // Elimina eventos inline como onclick=""
-    .replace(/javascript:/gi, '');                     // Elimina javascript: en href
+	if (!html || typeof html !== "string") return "";
+	return html
+		.replace(/<script[^>]*>[\s\S]*?<\/script>/gi, "") // Elimina <script>
+		.replace(/on\w+="[^"]*"/gi, "") // Elimina eventos inline como onclick=""
+		.replace(/javascript:/gi, ""); // Elimina javascript: en href
 }
 
 export default function BlogSection({ posts }) {
@@ -29,26 +29,26 @@ export default function BlogSection({ posts }) {
 	const blogPostingSchema = (post) => ({
 		"@context": "https://schema.org",
 		"@type": "BlogPosting",
-		"mainEntityOfPage": {
+		mainEntityOfPage: {
 			"@type": "WebPage",
-			"@id": post.link
+			"@id": post.link,
 		},
-		"headline": post.title,
-		"image": post.imageUrl,
-		"datePublished": new Date(post.pubDate).toISOString(),
-		"author": {
+		headline: post.title,
+		image: post.imageUrl,
+		datePublished: new Date(post.pubDate).toISOString(),
+		author: {
 			"@type": "Organization",
-			"name": "JEG Dev Studios"
+			name: "JEG Dev Studios",
 		},
-		"publisher": {
+		publisher: {
 			"@type": "Organization",
-			"name": "JEG Dev Studios",
-			"logo": {
+			name: "JEG Dev Studios",
+			logo: {
 				"@type": "ImageObject",
-				"url": "https://www.jegdevstudios.com/logo-bg-transparent.webp" // URL al logo
-			}
+				url: "https://www.jegdevstudios.com/logo-bg-transparent.webp", // URL al logo
+			},
 		},
-		"description": post.contentSnippet || post.content.substring(0, 150)
+		description: post.contentSnippet || post.content.substring(0, 150),
 	});
 
 	const cardThemeClasses = "bg-transparent text-white";
@@ -81,7 +81,7 @@ export default function BlogSection({ posts }) {
 										title={`Imagen para ${mainPost.title}`}
 										fill
 										sizes="(max-width: 991px) 100vw, 42vw"
-										style={{ objectFit: 'cover' }}
+										style={{ objectFit: "cover" }}
 										className="card-img-top"
 									/>
 								</div>
@@ -117,7 +117,9 @@ export default function BlogSection({ posts }) {
 								<div
 									className="card-text mb-3 flex-grow-1"
 									dangerouslySetInnerHTML={{
-										__html: cleanHTML(mainPost.contentSnippet || mainPost.content || ""),
+										__html: cleanHTML(
+											mainPost.contentSnippet || mainPost.content || ""
+										),
 									}}
 									style={{ maxHeight: "6rem", overflow: "hidden" }}
 								/>
@@ -162,7 +164,7 @@ export default function BlogSection({ posts }) {
 											title={`Imagen para ${post.title}`}
 											fill
 											sizes="(max-width: 767px) 100vw, 270px"
-											style={{ objectFit: 'cover' }}
+											style={{ objectFit: "cover" }}
 										/>
 									</div>
 								)}
@@ -197,7 +199,9 @@ export default function BlogSection({ posts }) {
 									<div
 										className="small mb-2 blog-post-summary"
 										dangerouslySetInnerHTML={{
-											__html: cleanHTML(post.contentSnippet || post.content || ""),
+											__html: cleanHTML(
+												post.contentSnippet || post.content || ""
+											),
 										}}
 										style={{
 											maxHeight: "3.6em",

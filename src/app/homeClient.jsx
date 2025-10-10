@@ -1,100 +1,136 @@
-'use client';
-import { useEffect, useState } from 'react';
+"use client";
+import { useEffect, useState } from "react";
 
-import { jsxDEV as _jsxDEV, Fragment as _Fragment } from "react/jsx-dev-runtime";
-import { FaGlobe, FaChartLine, FaLock, FaHeadset, FaHandshake, FaFire, FaSearch, FaChartBar, FaAssistiveListeningSystems } from "react-icons/fa";
+import {
+	jsxDEV as _jsxDEV,
+	Fragment as _Fragment,
+} from "react/jsx-dev-runtime";
+import {
+	FaGlobe,
+	FaChartLine,
+	FaLock,
+	FaHeadset,
+	FaHandshake,
+	FaFire,
+	FaSearch,
+	FaChartBar,
+	FaAssistiveListeningSystems,
+} from "react-icons/fa";
 import Image from "next/image";
 import Link from "next/link";
-import CardServices from "@/components/CardServices";
-import TeamCarousel from "@/components/TeamCarousel";
-import CTA from "@/components/CTA";
-import BlogSection from '@/components/BlogSection';
-import CardsProcess from '@/components/CardsProcess';
-import CardNestedLists from '@/components/CardNestedLists';
-import CardSmallList from '@/components/CardSmallList';
-import StructuredData from "@/components/StructuredData";
+import CardServices from "@/components/Cards/CardServices";
+import TeamCarousel from "@/components/Carousel/Slider";
+import CTA from "@/components/Cta/CTA";
+import BlogSection from "@/components/Blog/BlogSection";
+import CardsProcess from "@/components/Cards/CardsProcess";
+import CardTeam from "@/components/Cards/CardTeam";
+import CardNestedLists from "@/components/Cards/CardNestedLists";
+import CardSmallList from "@/components/Cards/CardSmallList";
+import StructuredData from "@/components/Seo/StructuredData";
 import AsideAgenciaDigital from "@/assets/img/img/home/agencia-digital.webp";
 import TeamGroup from "@/assets/img/img/home/team-group.webp";
+import ferPhoto from "@/assets/img/img/team/fer-briseño.webp";
+import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
+import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
+import Richi from "@/assets/img/img/team/ricardo.webp";
 import "./home.css";
 
 const faqsHome = [
-  // Desarrollo Web
-  {
-    question: "¿Qué incluye el servicio de desarrollo web de JEG Dev Studios?",
-    answer: "Incluye la creación de sitios web personalizados, responsivos y adaptados a tu marca, utilizando tecnologías modernas como HTML, CSS, JavaScript, Node.js o Laravel.",
-  },
-  {
-    question: "¿Ofrecen dominio y hosting incluido?",
-    answer: "Sí, nuestros paquetes incluyen 1 año de dominio personalizado y hosting web, ya sea mediante Hostinger, DonDominio o Google Sites, según el paquete contratado.",
-  },
-  {
-    question: "¿Qué tecnologías usan para crear sitios web?",
-    answer: "Dependiendo del paquete, utilizamos HTML, CSS, JavaScript, Bootstrap, Node.js o PHP (Laravel) para el desarrollo del frontend y backend.",
-  },
-  {
-    question: "¿Puedo solicitar cambios en el diseño del sitio web?",
-    answer: "Sí, cada paquete incluye un número específico de cambios permitidos a nivel de secciones del diseño web.",
-  },
-  {
-    question: "¿Incluyen optimización SEO en los sitios web?",
-    answer: "Sí, todos nuestros paquetes incluyen implementación básica de SEO para mejorar tu visibilidad en buscadores como Google.",
-  },
-  {
-    question: "¿Cuánto tiempo tarda en entregarse un sitio web?",
-    answer: "La entrega depende del paquete. Desde 7 hasta 30 días hábiles, dependiendo de la complejidad y funcionalidades requeridas.",
-  },
+	// Desarrollo Web
+	{
+		question: "¿Qué incluye el servicio de desarrollo web de JEG Dev Studios?",
+		answer:
+			"Incluye la creación de sitios web personalizados, responsivos y adaptados a tu marca, utilizando tecnologías modernas como HTML, CSS, JavaScript, Node.js o Laravel.",
+	},
+	{
+		question: "¿Ofrecen dominio y hosting incluido?",
+		answer:
+			"Sí, nuestros paquetes incluyen 1 año de dominio personalizado y hosting web, ya sea mediante Hostinger, DonDominio o Google Sites, según el paquete contratado.",
+	},
+	{
+		question: "¿Qué tecnologías usan para crear sitios web?",
+		answer:
+			"Dependiendo del paquete, utilizamos HTML, CSS, JavaScript, Bootstrap, Node.js o PHP (Laravel) para el desarrollo del frontend y backend.",
+	},
+	{
+		question: "¿Puedo solicitar cambios en el diseño del sitio web?",
+		answer:
+			"Sí, cada paquete incluye un número específico de cambios permitidos a nivel de secciones del diseño web.",
+	},
+	{
+		question: "¿Incluyen optimización SEO en los sitios web?",
+		answer:
+			"Sí, todos nuestros paquetes incluyen implementación básica de SEO para mejorar tu visibilidad en buscadores como Google.",
+	},
+	{
+		question: "¿Cuánto tiempo tarda en entregarse un sitio web?",
+		answer:
+			"La entrega depende del paquete. Desde 7 hasta 30 días hábiles, dependiendo de la complejidad y funcionalidades requeridas.",
+	},
 
-  // Desarrollo de Aplicaciones Móviles
-  {
-    question: "¿Qué tipo de aplicaciones móviles desarrollan?",
-    answer: "Creamos apps nativas, híbridas y multiplataforma para Android y iOS, según los requerimientos del cliente y el paquete contratado.",
-  },
-  {
-    question: "¿Publican las apps en la Play Store o App Store?",
-    answer: "Sí, la publicación en Google Play o App Store está incluida en todos nuestros paquetes de desarrollo de apps móviles.",
-  },
-  {
-    question: "¿Qué tecnologías utilizan para las apps móviles?",
-    answer: "Trabajamos con tecnologías como React Native, Kotlin Multiplatform, Java para backend, y bases de datos remotas según el nivel del proyecto.",
-  },
-  {
-    question: "¿Incluyen base de datos o backend en las apps móviles?",
-    answer: "Sí, los paquetes intermedios y avanzados incluyen conexión con bases de datos remotas, backend en Java y funcionalidades como login o almacenamiento.",
-  },
-  {
-    question: "¿Incluyen diseño UI/UX personalizado?",
-    answer: "Sí, todos nuestros planes ofrecen un diseño responsivo y adaptado a tu marca. Los paquetes más avanzados incluyen navegación fluida y componentes animados.",
-  },
-  {
-    question: "¿Pueden desarrollar apps con funcionalidades avanzadas?",
-    answer: "Sí, como parte del paquete Premium podemos integrar funcionalidades complejas como pagos, geolocalización, cámara, push notifications y paneles administrativos web.",
-  },
+	// Desarrollo de Aplicaciones Móviles
+	{
+		question: "¿Qué tipo de aplicaciones móviles desarrollan?",
+		answer:
+			"Creamos apps nativas, híbridas y multiplataforma para Android y iOS, según los requerimientos del cliente y el paquete contratado.",
+	},
+	{
+		question: "¿Publican las apps en la Play Store o App Store?",
+		answer:
+			"Sí, la publicación en Google Play o App Store está incluida en todos nuestros paquetes de desarrollo de apps móviles.",
+	},
+	{
+		question: "¿Qué tecnologías utilizan para las apps móviles?",
+		answer:
+			"Trabajamos con tecnologías como React Native, Kotlin Multiplatform, Java para backend, y bases de datos remotas según el nivel del proyecto.",
+	},
+	{
+		question: "¿Incluyen base de datos o backend en las apps móviles?",
+		answer:
+			"Sí, los paquetes intermedios y avanzados incluyen conexión con bases de datos remotas, backend en Java y funcionalidades como login o almacenamiento.",
+	},
+	{
+		question: "¿Incluyen diseño UI/UX personalizado?",
+		answer:
+			"Sí, todos nuestros planes ofrecen un diseño responsivo y adaptado a tu marca. Los paquetes más avanzados incluyen navegación fluida y componentes animados.",
+	},
+	{
+		question: "¿Pueden desarrollar apps con funcionalidades avanzadas?",
+		answer:
+			"Sí, como parte del paquete Premium podemos integrar funcionalidades complejas como pagos, geolocalización, cámara, push notifications y paneles administrativos web.",
+	},
 
-  // Software Empresarial
-  {
-    question: "¿Qué tipo de software empresarial desarrollan?",
-    answer: "Desarrollamos soluciones personalizadas como sistemas de ventas, inventarios, citas, empleados y más, adaptados a las necesidades de tu negocio.",
-  },
-  {
-    question: "¿El software incluye instalación y soporte?",
-    answer: "Sí, todos los paquetes incluyen instalación en uno o más equipos. El paquete Profesional también ofrece soporte técnico durante el primer mes.",
-  },
-  {
-    question: "¿Qué tipo de base de datos utilizan?",
-    answer: "Utilizamos bases de datos locales (como SQLite) o en red/nube según el paquete, con estructuras seguras y eficientes para tu operación diaria.",
-  },
-  {
-    question: "¿Incluyen funcionalidades como reportes o gráficas?",
-    answer: "Sí, los paquetes más avanzados incluyen paneles de estadísticas, gráficas, exportación de reportes a Excel/PDF, y herramientas de gestión.",
-  },
-  {
-    question: "¿El software puede ser multiusuario?",
-    answer: "Sí, nuestros planes intermedios y avanzados permiten múltiples usuarios con acceso por roles, login y permisos configurables.",
-  },
-  {
-    question: "¿Ofrecen soluciones con integración a sistemas externos?",
-    answer: "Sí, en el paquete Profesional podemos integrar tu software con CRMs, facturación electrónica u otros sistemas empresariales según tus procesos.",
-  },
+	// Software Empresarial
+	{
+		question: "¿Qué tipo de software empresarial desarrollan?",
+		answer:
+			"Desarrollamos soluciones personalizadas como sistemas de ventas, inventarios, citas, empleados y más, adaptados a las necesidades de tu negocio.",
+	},
+	{
+		question: "¿El software incluye instalación y soporte?",
+		answer:
+			"Sí, todos los paquetes incluyen instalación en uno o más equipos. El paquete Profesional también ofrece soporte técnico durante el primer mes.",
+	},
+	{
+		question: "¿Qué tipo de base de datos utilizan?",
+		answer:
+			"Utilizamos bases de datos locales (como SQLite) o en red/nube según el paquete, con estructuras seguras y eficientes para tu operación diaria.",
+	},
+	{
+		question: "¿Incluyen funcionalidades como reportes o gráficas?",
+		answer:
+			"Sí, los paquetes más avanzados incluyen paneles de estadísticas, gráficas, exportación de reportes a Excel/PDF, y herramientas de gestión.",
+	},
+	{
+		question: "¿El software puede ser multiusuario?",
+		answer:
+			"Sí, nuestros planes intermedios y avanzados permiten múltiples usuarios con acceso por roles, login y permisos configurables.",
+	},
+	{
+		question: "¿Ofrecen soluciones con integración a sistemas externos?",
+		answer:
+			"Sí, en el paquete Profesional podemos integrar tu software con CRMs, facturación electrónica u otros sistemas empresariales según tus procesos.",
+	},
 ];
 
 export default function HomeClient({ posts: postsToShow }) {
@@ -104,17 +140,121 @@ export default function HomeClient({ posts: postsToShow }) {
 	const faqSchemaHome = {
 		"@context": "https://schema.org",
 		"@type": "FAQPage",
-		"mainEntity": faqsHome.map(faq => ({
+		mainEntity: faqsHome.map((faq) => ({
 			"@type": "Question",
-			"name": faq.question,
-			"acceptedAnswer": {
+			name: faq.question,
+			acceptedAnswer: {
 				"@type": "Answer",
-				"text": faq.answer
-			}
-		}))
+				text: faq.answer,
+			},
+		})),
 	};
 
-  return (
+	const teamData = [
+		{
+			name: "Jhonatan Espinal",
+			position: "CEO Fundador y Desarrollador",
+			description:
+				"Como fundador de JEG Dev Studios, transformo ideas complejas en soluciones digitales de alto rendimiento. Me especializo en desarrollo full-stack con React y Next.js, y en la optimización SEO técnica para garantizar que cada proyecto alcance su máxima visibilidad y resultados de negocio.",
+			links: [
+				{
+					url: "https://www.linkedin.com/in/JhonEG",
+					title: "LinkedIn de Jhonatan Espinal Garcia",
+					icon: "icon-linkedin-no-bg",
+				},
+				{
+					url: "https://github.com/JhonEG-17",
+					title: "GitHub de Jhonatan Espinal Garcia",
+					icon: "icon-github",
+				},
+				{
+					url: "https://jhoneg-17.github.io/JhonDev/",
+					title: "Portafolio web de Jhonatan Espinal Garcia",
+					icon: "icon-link",
+				},
+			],
+			imageUrl: jhonPhoto,
+		},
+		{
+			name: "Fernanda Briseño",
+			position: "Co-Fundadora y Diseñadora web",
+			description:
+				"Soy Fernanda Briseño, Diseñadora UX/UI. Mejoro mis habilidades en experiencia de usuario e interfaces, creando diseños funcionales gracias a mi conocimiento en desarrollo web.",
+			links: [
+				{
+					url: "https://www.linkedin.com/in/fernanda-brise%C3%B1o-64b310342/",
+					title: "LinkedIn de Fernanda Briseño",
+					icon: "icon-linkedin-no-bg",
+				},
+				{
+					url: "https://www.behance.net/karlabriseo1",
+					title: "Behance de Fernanda Briseño",
+					icon: "icon-behance",
+				},
+			],
+			imageUrl: ferPhoto,
+		},
+		{
+			name: "Leonardo González",
+			position: "Co-Fundador y Desarrollador.",
+			description:
+				"Soy un programador versátil con conocimientos en diversos lenguajes de programación. Me especializo en el desarrollo frontend, creando interfaces de usuario atractivas y funcionales. Mi pasión por la tecnología me impulsa a seguir aprendiendo y mejorando constantemente. Me estaco por mi gran capacidad de realizar analisis para la resolución efectiva de los problemas.",
+			links: [
+				{
+					url: "https://www.linkedin.com/in/jose-leonardo-gonzalez-valadez-860b012b4/",
+					title: "LinkedIn de Leonardo González",
+					icon: "icon-linkedin-no-bg",
+				},
+			],
+			imageUrl: leoPhoto,
+		},
+		{
+			name: "Ricardo Ubaldo",
+			position: "Co-Fundador y Desarrollador.",
+			description:
+				"Desarrollador Frontend experto en maquetación web. Con amplia experiencia en frameworks como Bootstrap, convierte diseños en interfaces de usuario pixel-perfect, responsivas y altamente optimizadas para todos los dispositivos.",
+			links: [
+				{
+					url: "https://www.linkedin.com/in/ricardo-ubaldo-gonz%C3%A1lez-4522a5291/",
+					title: "LinkedIn de Ricardo Ubaldo",
+					icon: "icon-linkedin-no-bg",
+				},
+			],
+			imageUrl: Richi,
+		},
+	];
+
+	const cardsProcess = [
+		{
+			number: "1",
+			title: "Paquete Básico",
+			list: [
+				"Duración estimada: 7 - 10 días hábiles",
+				"Tecnologías: Figma, HTML, CSS, JS, Node.js",
+				"Entregas por Sprint: 1-2 entregas",
+			],
+		},
+		{
+			number: "2",
+			title: "Paquete Plus",
+			list: [
+				"Duración estimada: 10 - 15 días hábiles",
+				"Tecnologías: Figma, HTML, Bootstrap, JS, Php (Laravel)",
+				"Entregas por Sprint: 1-2 entregas",
+			],
+		},
+		{
+			number: "3",
+			title: "Paquete Pro",
+			list: [
+				"Duración estimada: 15 - 30 días hábiles",
+				"Tecnologías: Figma, Next.js, Tailwind CSS, Php (Laravel) o Node.js",
+				"Entregas por Sprint: 3-5 entregas",
+			],
+		},
+	];
+
+	return (
 		<>
 			<StructuredData data={faqSchemaHome} />
 			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground bg-fixed-cover ">
@@ -124,7 +264,8 @@ export default function HomeClient({ posts: postsToShow }) {
 				>
 					<div className="container p-0 m-0">
 						<h1 className="text-white text-shadow">
-							Empresa de Desarrollo Web en México: Soluciones Digitales para tu Negocio
+							Empresa de Desarrollo Web en México: Soluciones Digitales para tu
+							Negocio
 						</h1>
 						<p className="fs-xl-1 fs-5 text-light text-shadow text-brack">
 							En JEG Dev Studios creamos sitios web, software y apps móviles a
@@ -227,7 +368,11 @@ export default function HomeClient({ posts: postsToShow }) {
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y ">
 				<h2>Nuestros Servicios</h2>
 				<p className="text-white fs-5 mb-4">
-					Nuestros servicios no se limitan al desarrollo técnico. Como parte de nuestras soluciones digitales, también <strong>ofrecemos servicios</strong> relacionados como asesoría, branding, UX/UI y soporte post-lanzamiento, buscando superar a las mejores <strong>agencias de diseño</strong> y desarrollo del país.
+					Nuestros servicios no se limitan al desarrollo técnico. Como parte de
+					nuestras soluciones digitales, también{" "}
+					<strong>ofrecemos servicios</strong> relacionados como asesoría,
+					branding, UX/UI y soporte post-lanzamiento, buscando superar a las
+					mejores <strong>agencias de diseño</strong> y desarrollo del país.
 				</p>
 				<article className="d-flex justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
@@ -271,7 +416,10 @@ export default function HomeClient({ posts: postsToShow }) {
 					</ul>
 				</article>
 			</section>
-			<section className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100" style={{ minHeight: "100vh", position: "relative" }}>
+			<section
+				className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100"
+				style={{ minHeight: "100vh", position: "relative" }}
+			>
 				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-center w-100 h-100 position-relative">
 					{/* Imagen */}
 					<div className="agencia-img-container-full position-relative flex-shrink-0">
@@ -287,15 +435,27 @@ export default function HomeClient({ posts: postsToShow }) {
 					</div>
 					{/* Texto */}
 					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-4 flex-grow-1 position-relative">
-						<h2 className="display-6 fw-bold mb-4 text-center">Más que una agencia digital común</h2>
+						<h2 className="display-6 fw-bold mb-4 text-center">
+							Más que una agencia digital común
+						</h2>
 						<p className="fs-5 fs-md-4 mb-4">
-							A diferencia de muchas agencias de diseño o agencias de desarrollo que solo ofrecen servicios técnicos, en JEG Dev Studios alineamos cada solución con el <strong>objetivo comercial</strong> de nuestros clientes.
+							A diferencia de muchas agencias de diseño o agencias de desarrollo
+							que solo ofrecen servicios técnicos, en JEG Dev Studios alineamos
+							cada solución con el <strong>objetivo comercial</strong> de
+							nuestros clientes.
 						</p>
 						<p className="fs-5 fs-md-4 mb-3">
-							Como <strong>empresa de desarrollo web</strong> con enfoque estratégico, creamos soluciones que combinan <strong>diseño de páginas web</strong>, experiencia de usuario, programación moderna y <strong>estrategias de marketing digital</strong> para lograr resultados reales.
+							Como <strong>empresa de desarrollo web</strong> con enfoque
+							estratégico, creamos soluciones que combinan{" "}
+							<strong>diseño de páginas web</strong>, experiencia de usuario,
+							programación moderna y{" "}
+							<strong>estrategias de marketing digital</strong> para lograr
+							resultados reales.
 						</p>
 						<p className="fs-5 fs-md-4">
-							Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, estás en el lugar correcto.
+							Si estás buscando una <strong>agencia de diseño web</strong> que
+							entienda tu negocio y no solo escriba código, estás en el lugar
+							correcto.
 						</p>
 					</div>
 				</div>
@@ -370,21 +530,15 @@ export default function HomeClient({ posts: postsToShow }) {
 					list={[
 						{
 							text: "Evaluamos tu negocio",
-							sublist: [
-								"Analizamos tus necesidades y objetivos.",
-							],
+							sublist: ["Analizamos tus necesidades y objetivos."],
 						},
 						{
 							text: "Definimos objetivos digitales",
-							sublist: [
-								"Creamos un plan personalizado y claro.",
-							],
+							sublist: ["Creamos un plan personalizado y claro."],
 						},
 						{
 							text: "Elegimos el paquete de desarrollo más adecuado (Básico, Plus o Pro).",
-							sublist: [
-								"Desarrollamos con calidad y comunicación constante.",
-							],
+							sublist: ["Desarrollamos con calidad y comunicación constante."],
 						},
 						{
 							text: "Diseñamos y desarrollamos.",
@@ -395,14 +549,14 @@ export default function HomeClient({ posts: postsToShow }) {
 						},
 						{
 							text: "Medimos resultados y optimizamos",
-							sublist: [
-								"Revisamos resultados y optimizamos para ti.",
-							],
+							sublist: ["Revisamos resultados y optimizamos para ti."],
 						},
 					]}
 				/>
 				<p className="fs-5 text-white mt-3">
-					Nuestro enfoque nos permite trabajar como las <strong>agencias de desarrollo</strong> más ágiles, entregando valor tangible y medible en cada fase.
+					Nuestro enfoque nos permite trabajar como las{" "}
+					<strong>agencias de desarrollo</strong> más ágiles, entregando valor
+					tangible y medible en cada fase.
 				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
@@ -420,8 +574,14 @@ export default function HomeClient({ posts: postsToShow }) {
 						inversión tecnológica."
 				/>
 			</section>
-			<section className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100" style={{ minHeight: "100vh", position: "relative"}}>
-				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-evenly w-100 h-100 position-relative" style={{ maxWidth: "1200px" }}>
+			<section
+				className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100"
+				style={{ minHeight: "100vh", position: "relative" }}
+			>
+				<div
+					className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-evenly w-100 h-100 position-relative"
+					style={{ maxWidth: "1200px" }}
+				>
 					{/* Texto */}
 					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-xl-5 pe-xl-0 p-3 flex-grow-1 position-relative">
 						<h2 className="display-6 fw-bold mb-4">
@@ -431,17 +591,14 @@ export default function HomeClient({ posts: postsToShow }) {
 							En JEG Dev Studios creemos que la tecnología es para las personas.
 							Por eso:
 						</p>
-						<ul
-							className="d-flex flex-column justify-content-start list-unstyled fs-5 text-start"
-
-						>
+						<ul className="d-flex flex-column justify-content-start list-unstyled fs-5 text-start">
 							<li className="d-flex align-items-start mb-3">
-								<div className="me-3 mt-1 fs-3 text-white" >
-									<FaHandshake/>
+								<div className="me-3 mt-1 fs-3 text-white">
+									<FaHandshake />
 								</div>
 								<p>
-									Estamos comprometidos con la innovación y la creatividad en cada
-									proyecto.
+									Estamos comprometidos con la innovación y la creatividad en
+									cada proyecto.
 								</p>
 							</li>
 							<li className="d-flex align-items-start mb-3">
@@ -486,7 +643,18 @@ export default function HomeClient({ posts: postsToShow }) {
 					Somos un equipo experto en SEO, diseño, desarrollo web, software y
 					apps móviles.
 				</h2>
-				<TeamCarousel />
+				<TeamCarousel>
+					{teamData.map((teamItem, index) => (
+						<CardTeam
+							key={index}
+							imageUrl={teamItem.imageUrl}
+							name={teamItem.name}
+							position={teamItem.position}
+							description={teamItem.description}
+							links={teamItem.links}
+						/>
+					))}
+				</TeamCarousel>
 			</section>
 			<section className=" text-white py-5 text-center px-3 px-md-5 gradient-effect-x">
 				<div className="container" style={{ maxWidth: "900px" }}>
@@ -528,72 +696,80 @@ export default function HomeClient({ posts: postsToShow }) {
 					</ul>
 				</div>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center w-100 py-5 __bg-image-pricing bg-fixed-cover" id="web-pricing">
+			<section
+				className="d-flex flex-column justify-content-center align-items-center w-100 py-5 __bg-image-pricing bg-fixed-cover"
+				id="web-pricing"
+			>
 				<div className="text-center mb-5">
-					<h2 className="fw-bold text-white">¿Cuánto cuesta una página web en México?</h2>
-					<p className="text-white">Conoce los paquetes y qué influye en su precio</p>
+					<h2 className="fw-bold text-white">
+						¿Cuánto cuesta una página web en México?
+					</h2>
+					<p className="text-white">
+						Conoce los paquetes y qué influye en su precio
+					</p>
 				</div>
 
 				<div className="row w-100 p-xl-5 p-1">
 					{/* Paquetes según el tipo de negocio */}
 					<div className="col-md-6 mb-4">
-						<h3 className="h5 fw-semibold text-center text-white">Paquetes según el tipo de negocio</h3>
+						<h3 className="h5 fw-semibold text-center text-white">
+							Paquetes según el tipo de negocio
+						</h3>
 						<ul className="list-group list-group-flush bg-transparent">
-							<li className="list-group-item bg-transparent text-white"><p>Landing page para emprendedores</p></li>
-							<li className="list-group-item bg-transparent text-white"><p>Sitio web corporativo</p></li>
-							<li className="list-group-item bg-transparent text-white"><p>Tienda en línea con pasarela de pagos</p></li>
-							<li className="list-group-item bg-transparent text-white"><p>Plataformas personalizadas o portales web</p></li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Landing page para emprendedores</p>
+							</li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Sitio web corporativo</p>
+							</li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Tienda en línea con pasarela de pagos</p>
+							</li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Plataformas personalizadas o portales web</p>
+							</li>
 						</ul>
 					</div>
 
 					{/* Factores que determinan el precio */}
 					<div className="col-md-6 mb-4">
-						<h3 className="h5 fw-semibold text-center text-white shadow-lg">Factores que determinan el precio</h3>
+						<h3 className="h5 fw-semibold text-center text-white shadow-lg">
+							Factores que determinan el precio
+						</h3>
 						<ul className="list-group list-group-flush bg-transparent">
-							<li className="list-group-item bg-transparent text-white"><p>Cantidad de secciones o páginas</p></li>
-							<li className="list-group-item bg-transparent text-white"><p>Diseño personalizado vs plantilla</p></li>
-							<li className="list-group-item bg-transparent text-white"><p>Funciones específicas (formularios, reservas, etc.)</p></li>
-							<li className="list-group-item bg-transparent text-white"><p>Integraciones externas (WhatsApp, pagos, CRM...)</p></li>
-							<li className="list-group-item bg-transparent text-white"><p>Optimización SEO y velocidad</p></li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Cantidad de secciones o páginas</p>
+							</li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Diseño personalizado vs plantilla</p>
+							</li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Funciones específicas (formularios, reservas, etc.)</p>
+							</li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Integraciones externas (WhatsApp, pagos, CRM...)</p>
+							</li>
+							<li className="list-group-item bg-transparent text-white">
+								<p>Optimización SEO y velocidad</p>
+							</li>
 						</ul>
 					</div>
 				</div>
 			</section>
 			<section className="container-fluid text-center text-white py-5 gradient-effect-y">
 				<div className="row justify-content-center g-4">
-					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-						<CardsProcess
-							number="1"
-							titulo="Paquete Básico"
-							list={[
-								"Duración estimada: 7 - 10 días hábiles",
-								"Tecnologías: Figma, HTML, CSS, JS, Node.js",
-								"Entregas por Sprint: 1-2 entregas",
-							]}
-						/>
-					</div>
-					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-						<CardsProcess
-							number="2"
-							titulo="Paquete Plus"
-							list={[
-								"Duración estimada: 10 - 15 días hábiles",
-								"Tecnologías: Figma, HTML, Bootstrap, JS, Php (Laravel)",
-								"Entregas por Sprint: 1-2 entregas",
-							]}
-						/>
-					</div>
-					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-						<CardsProcess
-							number="3"
-							titulo="Paquete Pro"
-							list={[
-								"Duración estimada: 15 - 30 días hábiles",
-								"Tecnologías: Figma, Next.js, Tailwind CSS, Php (Laravel) o Node.js",
-								"Entregas por Sprint: 3-5 entregas",
-							]}
-						/>
-					</div>
+					{cardsProcess.map((card, index) => (
+						<div
+							key={index}
+							className="col-12 col-md-6 col-lg-4 d-flex justify-content-center"
+						>
+							<CardsProcess
+								number={card.number}
+								titulo={card.title}
+								list={card.list}
+							/>
+						</div>
+					))}
 				</div>
 			</section>
 			{mounted && <BlogSection posts={postsToShow} />}

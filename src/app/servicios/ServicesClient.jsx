@@ -1,12 +1,12 @@
 "use client";
 import { useState } from "react";
 import Link from "next/link";
-import CardServices from "@/components/CardServices";
-import CardNestedLists from "@/components/CardNestedLists";
-import CardSmallList from "@/components/CardSmallList";
-import FAQ from "@/components/FAQ";
-import CTA from "@/components/CTA";
-import StructuredData from "@/components/StructuredData"; // Importar el nuevo componente
+import CardServices from "@/components/Cards/CardServices";
+import CardNestedLists from "@/components/Cards/CardNestedLists";
+import CardSmallList from "@/components/Cards/CardSmallList";
+import FAQ from "@/components/Seo/FAQ";
+import CTA from "@/components/Cta/CTA";
+import StructuredData from "@/components/Seo/StructuredData"; // Importar el nuevo componente
 import Image from "next/image";
 import "./ServicesClient.css";
 

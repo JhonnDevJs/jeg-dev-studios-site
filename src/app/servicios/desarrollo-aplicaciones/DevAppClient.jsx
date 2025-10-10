@@ -1,7 +1,7 @@
 "use client";
 import { useMemo } from "react";
-import CardPacksProduct from "@/components/CardPacksProduct";
-import CTAProducts from "@/components/CTAProducts";
+import CardPacksProduct from "@/components/Cards/CardPacksProduct";
+import CTAProducts from "@/components/Cta/CTAProducts";
 import Image from "next/image";
 import imgAppProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";

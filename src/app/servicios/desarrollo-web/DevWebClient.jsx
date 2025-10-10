@@ -1,17 +1,17 @@
 "use client";
 import { useMemo } from "react";
-import CardProduct from "@/components/CardProduct";
-import CardPacksProduct from "@/components/CardPacksProduct";
-import CTAProducts from "@/components/CTAProducts";
-import CardSmallList from "@/components/CardSmallList";
-import CardNestedLists from "@/components/CardNestedLists";
+import CardProduct from "@/components/Cards/CardProduct";
+import CardPacksProduct from "@/components/Cards/CardPacksProduct";
+import CTAProducts from "@/components/Cta/CTAProducts";
+import CardSmallList from "@/components/Cards/CardSmallList";
+import CardNestedLists from "@/components/Cards/CardNestedLists";
+import CardsProcess from "@/components/Cards/CardsProcess";
 import SectionProcess from "@/components/SectionProcess";
 import Image from "next/image";
 import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import "./DevWebClient.css";
-import CardsProcess from "@/components/CardsProcess";
 
 export default function DevWebClient() {
 	const products = useMemo(

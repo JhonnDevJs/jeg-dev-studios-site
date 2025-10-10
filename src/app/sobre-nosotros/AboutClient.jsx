@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import CTA from "@/components/CTA";
+import CTA from "@/components/Cta/CTA";
 import Image from "next/image";
 import "./AboutClient.css";
 

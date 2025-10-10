@@ -1,8 +1,8 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
-import ProjectCard from "@/components/ProjectCard";
-import DesignProjectCard from "@/components/DesignProjectCard";
+import ProjectCard from "@/components/Cards/ProjectCard";
+import DesignProjectCard from "@/components/Cards/DesignProjectCard";
 import { storage, db } from "@/lib/firebase";
 import { getDownloadURL, ref } from "firebase/storage";
 import { collection, getDocs } from "firebase/firestore";

@@ -1,2 +1,28 @@
-user-agent: *
+# Reglas explícitas para crawlers
+User-agent: Google-Extended
+Allow: /
+Disallow: /_next/
+
+User-agent: GPTBot
+Allow: /
+Disallow: /_next/
+
+User-agent: ClaudeBot
+Allow: /
+Disallow: /_next/
+
+User-agent: PerplexityBot
+Allow: /
+Disallow: /_next/
+
+User-agent: Googlebot
+Allow: /
+Disallow: /_next/
+
+# Regla general para todos los demás bots no listados
+User-agent: *
+Allow: /
+Disallow: /_next/
+
+# Ubicación del Sitemap
 Sitemap: https://www.jegdevstudios.com/sitemap.xml

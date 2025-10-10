@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import iconLogo from "../assets/img/logo/logo-bg-transparent.webp";
+import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
 import { usePathname } from "next/navigation";
 
 function NavBar() {

@@ -2,10 +2,10 @@ import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import Script from "next/script";
-import NavBar from "@/components/NavBar.jsx";
-import BtnWhats from "@/components/WhatsAppButton.jsx";
-import Footer from "@/components/Footer.jsx";
-import BootstrapClient from "@/components/BootstrapClient.js";
+import NavBar from "@/components/Layout/NavBar.jsx";
+import BtnWhats from "@/components/Buttons/WhatsAppButton.jsx";
+import Footer from "@/components/Layout/Footer.jsx";
+import BootstrapClient from "@/lib/BootstrapClient.js";
 import "bootstrap/dist/css/bootstrap.min.css";
 import "./globals.css";
 
