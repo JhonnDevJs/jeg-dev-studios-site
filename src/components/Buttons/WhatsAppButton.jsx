@@ -3,7 +3,7 @@ import Link from "next/link";
 export default function BtnWhats() {
   return (
     <Link
-      href="https://wa.me/5215512197135"
+      href="https://wa.me/message/IFBW3ARPBITWA1"
       target="_blank"
       rel="noopener noreferrer"
       className="btn-whatsapp btn btn-success rounded-circle border-0 text-white text-center p-3"
