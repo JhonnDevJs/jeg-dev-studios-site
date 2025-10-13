@@ -17,9 +17,9 @@ export default function AboutClient() {
 				/>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 gradient-effect-y">
-				<h2 className="h1 text-white text-center">Sobre Nosotros</h2>
+				<h1 className="h1 text-white text-center">Acerca de JEG Dev Studios</h1>
 				<p className="text-white text-center">
-					Transformamos ideas en soluciones digitales innovadoras y memorables
+					Transformando ideas en soluciones digitales innovadoras y memorables.
 				</p>
 			</section>
 
