@@ -264,10 +264,15 @@ export default function HomeClient({ posts: postsToShow }) {
 				>
 					<div className="container p-0 m-0">
 						<h1 className="text-white text-shadow">
-							Agencia de Desarrollo Web y Software en México: Soluciones a Medida
+							Agencia de Desarrollo Web y Software en México: Soluciones a
+							Medida
 						</h1>
 						<p className="fs-xl-1 fs-5 text-light text-shadow text-brack">
-							En JEG Dev Studios, como <strong>agencia de desarrollo web</strong> y <strong>software líder</strong>, creamos sitios, aplicaciones móviles y software a medida que conectan con tus clientes y transforman tus ideas en resultados reales.
+							En JEG Dev Studios, como{" "}
+							<strong>agencia de desarrollo web</strong> y{" "}
+							<strong>software líder</strong>, creamos sitios, aplicaciones
+							móviles y software a medida que conectan con tus clientes y
+							transforman tus ideas en resultados reales.
 						</p>
 					</div>
 					<div className="d-flex flex-column bg-transparent align-items-xl-start align-items-center justify-content-start w-100 gap-3">
@@ -301,7 +306,12 @@ export default function HomeClient({ posts: postsToShow }) {
 						Más que servicios, creamos soluciones integrales
 					</h2>
 					<p className="lead mb-5 mx-auto" style={{ maxWidth: "800px" }}>
-						En JEG Dev Studios, esta <strong>empresa de desarrollo de software</strong> se enfoca en ofrecer soluciones digitales personalizadas que impulsan tu negocio. Desde un <strong>diseño y desarrollo web profesional</strong> hasta software a medida, cada proyecto que creamos está alineado con tus metas y diseñado para lograr un impacto medible.
+						En JEG Dev Studios, esta{" "}
+						<strong>empresa de desarrollo de software</strong> se enfoca en
+						ofrecer soluciones digitales personalizadas que impulsan tu negocio.
+						Desde un <strong>diseño y desarrollo web profesional</strong> hasta
+						software a medida, cada proyecto que creamos está alineado con tus
+						metas y diseñado para lograr un impacto medible.
 					</p>
 
 					<div className="row text-start justify-content-center">
@@ -362,10 +372,16 @@ export default function HomeClient({ posts: postsToShow }) {
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y ">
 				<h2>Nuestros Servicios de Desarrollo Web y Software</h2>
 				<p className="text-white fs-5 mb-4">
-					Nuestros servicios van más allá del desarrollo técnico. Te ofrecemos soluciones digitales completas que realmente impulsan tu negocio.
+					Nuestros servicios van más allá del desarrollo técnico. Te ofrecemos
+					soluciones digitales completas que realmente impulsan tu negocio.
 				</p>
 				<p className="text-white fs-5 mb-4">
-					Incluimos asesoría estratégica, <strong>desarrollo de aplicaciones móviles</strong>, branding, <strong>diseño UX/UI</strong>, estrategias de <strong>marketing digital</strong> y <strong>soporte post-lanzamiento</strong>, buscando superar a las mejores <strong>agencias de diseño web</strong> del país.
+					Incluimos asesoría estratégica,{" "}
+					<strong>desarrollo de aplicaciones móviles</strong>, branding,{" "}
+					<strong>diseño UX/UI</strong>, estrategias de{" "}
+					<strong>marketing digital</strong> y{" "}
+					<strong>soporte post-lanzamiento</strong>, buscando superar a las
+					mejores <strong>agencias de diseño web</strong> del país.
 				</p>
 				<article className="d-flex justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
@@ -432,10 +448,19 @@ export default function HomeClient({ posts: postsToShow }) {
 							Más que una Agencia de Desarrollo Web común
 						</h2>
 						<p className="fs-5 fs-md-4 mb-4">
-							A diferencia de muchas agencias, en JEG Dev Studios alineamos cada solución con el objetivo comercial de nuestros clientes. Somos una <strong>empresa de desarrollo web</strong>. Creamos soluciones que logran resultados reales. Para lograrlo, combinamos un <strong>diseño de páginas web</strong> impactante, una gran experiencia de usuario y un potente <strong>posicionamiento SEO</strong>.Todo respaldado por programación moderna y <strong>marketing digital</strong>.
+							A diferencia de muchas agencias, en JEG Dev Studios alineamos cada
+							solución con el objetivo comercial de nuestros clientes. Somos una{" "}
+							<strong>empresa de desarrollo web</strong>. Creamos soluciones que
+							logran resultados reales. Para lograrlo, combinamos un{" "}
+							<strong>diseño de páginas web</strong> impactante, una gran
+							experiencia de usuario y un potente{" "}
+							<strong>posicionamiento SEO</strong>.Todo respaldado por
+							programación moderna y <strong>marketing digital</strong>.
 						</p>
 						<p className="fs-5 fs-md-4">
-							Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, esta es la empresa correcta.
+							Si estás buscando una <strong>agencia de diseño web</strong> que
+							entienda tu negocio y no solo escriba código, esta es la empresa
+							correcta.
 						</p>
 					</div>
 				</div>
@@ -459,7 +484,11 @@ export default function HomeClient({ posts: postsToShow }) {
 					¿Por qué elegirnos como tu empresa de desarrollo web en México?
 				</h2>
 				<p className="fs-4 text-center text-white p-0">
-					Somos una agencia de desarrollo de software 100% mexicana, pensada para el mundo. Creamos sitios web con calidad profesional para clientes en México y en todo el mundo. Nos diferenciamos por nuestra tecnología innovadora y nuestro compromiso con la entrega puntual. Además, te ofrecemos atención personalizada en cada proyecto.
+					Somos una agencia de desarrollo de software 100% mexicana, pensada
+					para el mundo. Creamos sitios web con calidad profesional para
+					clientes en México y en todo el mundo. Nos diferenciamos por nuestra
+					tecnología innovadora y nuestro compromiso con la entrega puntual.
+					Además, te ofrecemos atención personalizada en cada proyecto.
 				</p>
 				<ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
@@ -496,7 +525,9 @@ export default function HomeClient({ posts: postsToShow }) {
 						<p className="fs-2 m-0">Compromiso y responsabilidad</p>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
-						<h3 className="fs-2 m-0">Optimización y Posicionamiento SEO de alto rendimiento</h3>
+						<h3 className="fs-2 m-0">
+							Optimización y Posicionamiento SEO de alto rendimiento
+						</h3>
 					</li>
 				</ul>
 			</section>
@@ -537,6 +568,23 @@ export default function HomeClient({ posts: postsToShow }) {
 				/>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<div className="video-responsive-container">
+					<iframe
+						className="video-responsive-iframe"
+						src="https://www.youtube.com/embed/60pib_g34CA?si=bDdRfBVO6nFRqdFl&controls=0&showinfo=0&rel=0"
+						title="Video de presentación de JEG Dev Studios"
+						allow=""
+						referrerPolicy="strict-origin-when-cross-origin"
+						allowFullScreen
+						loading="lazy"
+					></iframe>
+				</div>
+				<p className="text-white mt-3">
+					Conoce más sobre nuestra forma de trabajo y cómo podemos ayudarte a
+					crecer.
+				</p>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Más que desarrollo, valor añadido"
 					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
@@ -552,7 +600,7 @@ export default function HomeClient({ posts: postsToShow }) {
 				/>
 			</section>
 			<section
-				className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center bg-black w-100"
+				className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center w-100 gradient-effect-y"
 				style={{ minHeight: "100vh", position: "relative" }}
 			>
 				<div
