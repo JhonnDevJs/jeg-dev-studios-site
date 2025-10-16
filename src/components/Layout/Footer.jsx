@@ -4,7 +4,7 @@ function Footer() {
   return (
     <footer className="d-flex flex-column justify-content-center align-items-center bg-black text-white w-100 p-3" role="contentinfo">
       <p className="fs-5 text-white text-center mt-5">
-        Ya sea que estés comparando <strong>agencias de diseño</strong> o buscando una <strong>agencia digital</strong> que entienda las necesidades de tu negocio, en JEG Dev Studios encontrarás una empresa que combina creatividad, tecnología y estrategia.
+        Ya sea que estés comparando <strong>agencias de diseño</strong> o buscando una <strong>agencia de desarrollo web</strong> que entienda las necesidades de tu negocio, en JEG Dev Studios encontrarás una empresa que combina creatividad, tecnología y estrategia.
       </p>
       <div className="d-flex flex-xl-row flex-column justify-content-center align-items-center w-100 gap-xl-5 gap-3">
         <article className="d-flex flex-column justify-content-center align-items-center h-100">

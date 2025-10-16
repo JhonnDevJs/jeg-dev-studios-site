@@ -264,13 +264,10 @@ export default function HomeClient({ posts: postsToShow }) {
 				>
 					<div className="container p-0 m-0">
 						<h1 className="text-white text-shadow">
-							Empresa de Desarrollo Web en México: Soluciones Digitales para tu
-							Negocio
+							Agencia de Desarrollo Web y Software en México: Soluciones a Medida
 						</h1>
 						<p className="fs-xl-1 fs-5 text-light text-shadow text-brack">
-							En JEG Dev Studios creamos sitios web, software y apps móviles a
-							medida, que conectan con tus clientes y transforman tus ideas en
-							resultados reales.
+							En JEG Dev Studios, como <strong>agencia de desarrollo web</strong> y <strong>software líder</strong>, creamos sitios, aplicaciones móviles y software a medida que conectan con tus clientes y transforman tus ideas en resultados reales.
 						</p>
 					</div>
 					<div className="d-flex flex-column bg-transparent align-items-xl-start align-items-center justify-content-start w-100 gap-3">
@@ -301,13 +298,10 @@ export default function HomeClient({ posts: postsToShow }) {
 			<section id="beneficios" className="text-white py-5 gradient-effect-x ">
 				<div className="container text-center">
 					<h2 className="display-5 fw-bold mb-4">
-						Más que servicios, te ofrecemos resultados tangibles
+						Más que servicios, creamos soluciones integrales
 					</h2>
 					<p className="lead mb-5 mx-auto" style={{ maxWidth: "800px" }}>
-						En JEG Dev Studios nos enfocamos en ofrecer soluciones digitales
-						personalizadas que impulsan tu negocio. Desde diseño web profesional
-						hasta desarrollo de software a medida, cada proyecto que creamos
-						está alineado con tus metas y diseñado para lograr impacto.
+						En JEG Dev Studios, esta <strong>empresa de desarrollo de software</strong> se enfoca en ofrecer soluciones digitales personalizadas que impulsan tu negocio. Desde un <strong>diseño y desarrollo web profesional</strong> hasta software a medida, cada proyecto que creamos está alineado con tus metas y diseñado para lograr un impacto medible.
 					</p>
 
 					<div className="row text-start justify-content-center">
@@ -366,13 +360,9 @@ export default function HomeClient({ posts: postsToShow }) {
 				</div>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y ">
-				<h2>Nuestros Servicios</h2>
+				<h2>Nuestros Servicios de Desarrollo Web y Software</h2>
 				<p className="text-white fs-5 mb-4">
-					Nuestros servicios no se limitan al desarrollo técnico. Como parte de
-					nuestras soluciones digitales, también{" "}
-					<strong>ofrecemos servicios</strong> relacionados como asesoría,
-					branding, UX/UI y soporte post-lanzamiento, buscando superar a las
-					mejores <strong>agencias de diseño</strong> y desarrollo del país.
+					Nuestros servicios no se limitan a lo técnico. Como parte de nuestras soluciones, ofrecemos <strong>desarrollo de aplicaciones móviles</strong>, branding, UX/UI y estrategias de <strong>marketing digital</strong> y soporte post-lanzamiento, buscando superar a las mejores <strong>agencias de diseño web</strong> del país.
 				</p>
 				<article className="d-flex justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
@@ -382,7 +372,7 @@ export default function HomeClient({ posts: postsToShow }) {
 							url="/servicios/desarrollo-web"
 							buttonLabel="Obtener servicios"
 							items={[
-								"Páginas Web Profesionales",
+								"Desarrollo Web Profesional",
 								"Ecommerce y Tiendas en Línea",
 								"Aplicaciones Web",
 								"Diseño UX/UI y Branding Digital",
@@ -436,26 +426,13 @@ export default function HomeClient({ posts: postsToShow }) {
 					{/* Texto */}
 					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-4 flex-grow-1 position-relative">
 						<h2 className="display-6 fw-bold mb-4 text-center">
-							Más que una agencia digital común
+							Más que una Agencia de Desarrollo Web común
 						</h2>
 						<p className="fs-5 fs-md-4 mb-4">
-							A diferencia de muchas agencias de diseño o agencias de desarrollo
-							que solo ofrecen servicios técnicos, en JEG Dev Studios alineamos
-							cada solución con el <strong>objetivo comercial</strong> de
-							nuestros clientes.
-						</p>
-						<p className="fs-5 fs-md-4 mb-3">
-							Como <strong>empresa de desarrollo web</strong> con enfoque
-							estratégico, creamos soluciones que combinan{" "}
-							<strong>diseño de páginas web</strong>, experiencia de usuario,
-							programación moderna y{" "}
-							<strong>estrategias de marketing digital</strong> para lograr
-							resultados reales.
+							A diferencia de muchas agencias, en JEG Dev Studios alineamos cada solución con el objetivo comercial de nuestros clientes. Como <strong>empresa de desarrollo web</strong> con enfoque estratégico, creamos soluciones que combinan un excelente <strong>diseño de páginas web</strong>, experiencia de usuario y un potente <strong>posicionamiento SEO</strong> para lograr resultados reales.
 						</p>
 						<p className="fs-5 fs-md-4">
-							Si estás buscando una <strong>agencia de diseño web</strong> que
-							entienda tu negocio y no solo escriba código, estás en el lugar
-							correcto.
+							Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, esta es la empresa correcta.
 						</p>
 					</div>
 				</div>
@@ -476,13 +453,10 @@ export default function HomeClient({ posts: postsToShow }) {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-y">
 				<h2 className="display-5 text-center text-white">
-					¿Por qué elegirnos como tu empresa de desarrollo web?
+					¿Por qué elegirnos como tu empresa de desarrollo web en México?
 				</h2>
 				<p className="fs-4 text-center text-white p-0">
-					Servicio 100% mexicano, pensado para el mundo. Creamos sitios web con
-					calidad profesional para clientes en México y cualquier parte del
-					mundo. Nos diferenciamos por nuestra tecnología innovadora, compromiso
-					con la entrega puntual y atención personalizada en cada proyecto.
+					Somos una agencia de desarrollo de software 100% mexicana, pensada para el mundo. Creamos sitios web con calidad profesional para clientes en México y cualquier parte del mundo. Nos diferenciamos por nuestra tecnología innovadora, compromiso con la entrega puntual y atención personalizada en cada proyecto.
 				</p>
 				<ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
@@ -504,13 +478,7 @@ export default function HomeClient({ posts: postsToShow }) {
 						<h3 className="fs-2 m-0">Soporte Local y Atención en Español</h3>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">Diseño 100% adaptado a móviles</p>
-					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">Compromiso y responsabilidad</p>
-					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
-						<h3 className="fs-2 m-0">Optimización SEO y alto rendimiento</h3>
+						<p className="fs-2 m-0">Garantía de satisfacción</p>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Entrega puntual garantizada</p>
@@ -519,14 +487,25 @@ export default function HomeClient({ posts: postsToShow }) {
 						<p className="fs-2 m-0">Comunicación transparente</p>
 					</li>
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">Garantía de satisfacción</p>
+						<p className="fs-2 m-0">Diseño 100% adaptado a móviles</p>
+					</li>
+					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+						<p className="fs-2 m-0">Compromiso y responsabilidad</p>
+					</li>
+					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+						<h3 className="fs-2 m-0">Optimización y Posicionamiento SEO de alto rendimiento</h3>
 					</li>
 				</ul>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+				<h2 className="fs-5 text-white mt-3">
+					Nuestro enfoque nos permite trabajar como las{" "}
+					<strong>agencias de desarrollo</strong> más ágiles, entregando valor
+					tangible y medible en cada fase.
+				</h2>
 				<CardNestedLists
 					titulo="Cómo trabajamos tu sitio web"
-					subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
+					subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web."
 					list={[
 						{
 							text: "Evaluamos tu negocio",
@@ -553,11 +532,6 @@ export default function HomeClient({ posts: postsToShow }) {
 						},
 					]}
 				/>
-				<p className="fs-5 text-white mt-3">
-					Nuestro enfoque nos permite trabajar como las{" "}
-					<strong>agencias de desarrollo</strong> más ágiles, entregando valor
-					tangible y medible en cada fase.
-				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardSmallList
