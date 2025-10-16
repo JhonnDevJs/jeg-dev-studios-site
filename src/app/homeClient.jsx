@@ -139,7 +139,7 @@ const faqs = [
 	{
 		question: "¿Ofrecen un servicio de diseño web en México enfocado en empresas locales?",
 		answer:
-			"Sí. Nuestro servicio de diseño está 100% especializado en el mercado mexicano. Entendemos las tendencias locales para crear sitios web que realmente conectan con tu audiencia y cumplen tus objetivos comerciales aquí en el país.",
+			"Sí. Nuestro servicio de diseño está 100% especializado en el mercado mexicano. Entendemos las tendencias locales para crear sitios web que realmente conectan con tu audiencia, por lo que si buscas diseño web en México, somos tu mejor opción.",
 	},
 	{
 		question: "¿Cómo adaptan los servicios que ofrecen a cada proyecto?",
