@@ -362,13 +362,16 @@ export default function HomeClient({ posts: postsToShow }) {
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y ">
 				<h2>Nuestros Servicios de Desarrollo Web y Software</h2>
 				<p className="text-white fs-5 mb-4">
-					Nuestros servicios no se limitan a lo técnico. Como parte de nuestras soluciones, ofrecemos <strong>desarrollo de aplicaciones móviles</strong>, branding, UX/UI y estrategias de <strong>marketing digital</strong> y soporte post-lanzamiento, buscando superar a las mejores <strong>agencias de diseño web</strong> del país.
+					Nuestros servicios van más allá del desarrollo técnico. Te ofrecemos soluciones digitales completas que realmente impulsan tu negocio.
+				</p>
+				<p className="text-white fs-5 mb-4">
+					Incluimos asesoría estratégica, <strong>desarrollo de aplicaciones móviles</strong>, branding, <strong>diseño UX/UI</strong>, estrategias de <strong>marketing digital</strong> y <strong>soporte post-lanzamiento</strong>, buscando superar a las mejores <strong>agencias de diseño web</strong> del país.
 				</p>
 				<article className="d-flex justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 						<CardServices
 							title="Desarrollo de sitios web"
-							description="Desde la estructura visual hasta la funcionalidad interactiva, cada detalle es diseñado para optimizar la navegación y comunicar eficazmente el mensaje de una marca."
+							description="Diseñamos cada detalle, desde lo visual hasta lo interactivo. Nuestro objetivo es optimizar la navegación y comunicar tu mensaje de forma clara y eficaz."
 							url="/servicios/desarrollo-web"
 							buttonLabel="Obtener servicios"
 							items={[
@@ -381,7 +384,7 @@ export default function HomeClient({ posts: postsToShow }) {
 						/>
 						<CardServices
 							title="Desarrollo de aplicaciones"
-							description="Implementamos lenguajes como Kotlin, React Native, PHP (Laravel) para garantizar compatibilidad, rendimiento y mantenimiento simplificado, asegurando escalabilidad y eficiencia."
+							description="Usamos lenguajes como Kotlin, React Native y PHP (Laravel). Esto nos permite garantizar compatibilidad, rendimiento y un mantenimiento sencillo. Así, aseguramos la escalabilidad y eficiencia de tu proyecto."
 							url="/servicios/desarrollo-aplicaciones"
 							buttonLabel="Obtener servicios"
 							items={[
@@ -429,7 +432,7 @@ export default function HomeClient({ posts: postsToShow }) {
 							Más que una Agencia de Desarrollo Web común
 						</h2>
 						<p className="fs-5 fs-md-4 mb-4">
-							A diferencia de muchas agencias, en JEG Dev Studios alineamos cada solución con el objetivo comercial de nuestros clientes. Como <strong>empresa de desarrollo web</strong> con enfoque estratégico, creamos soluciones que combinan un excelente <strong>diseño de páginas web</strong>, experiencia de usuario y un potente <strong>posicionamiento SEO</strong> para lograr resultados reales.
+							A diferencia de muchas agencias, en JEG Dev Studios alineamos cada solución con el objetivo comercial de nuestros clientes. Somos una <strong>empresa de desarrollo web</strong>. Creamos soluciones que logran resultados reales. Para lograrlo, combinamos un <strong>diseño de páginas web</strong> impactante, una gran experiencia de usuario y un potente <strong>posicionamiento SEO</strong>.Todo respaldado por programación moderna y <strong>marketing digital</strong>.
 						</p>
 						<p className="fs-5 fs-md-4">
 							Si estás buscando una <strong>agencia de diseño web</strong> que entienda tu negocio y no solo escriba código, esta es la empresa correcta.
@@ -456,7 +459,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					¿Por qué elegirnos como tu empresa de desarrollo web en México?
 				</h2>
 				<p className="fs-4 text-center text-white p-0">
-					Somos una agencia de desarrollo de software 100% mexicana, pensada para el mundo. Creamos sitios web con calidad profesional para clientes en México y cualquier parte del mundo. Nos diferenciamos por nuestra tecnología innovadora, compromiso con la entrega puntual y atención personalizada en cada proyecto.
+					Somos una agencia de desarrollo de software 100% mexicana, pensada para el mundo. Creamos sitios web con calidad profesional para clientes en México y en todo el mundo. Nos diferenciamos por nuestra tecnología innovadora y nuestro compromiso con la entrega puntual. Además, te ofrecemos atención personalizada en cada proyecto.
 				</p>
 				<ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
 					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
