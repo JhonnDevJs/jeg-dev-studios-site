@@ -26,6 +26,7 @@ import CardsProcess from "@/components/Cards/CardsProcess";
 import CardTeam from "@/components/Cards/CardTeam";
 import CardNestedLists from "@/components/Cards/CardNestedLists";
 import CardSmallList from "@/components/Cards/CardSmallList";
+import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 import AsideAgenciaDigital from "@/assets/img/img/home/agencia-digital.webp";
 import TeamGroup from "@/assets/img/img/home/team-group.webp";
@@ -130,6 +131,25 @@ const faqsHome = [
 		question: "¿Ofrecen soluciones con integración a sistemas externos?",
 		answer:
 			"Sí, en el paquete Profesional podemos integrar tu software con CRMs, facturación electrónica u otros sistemas empresariales según tus procesos.",
+	},
+];
+
+const faqs = [
+	// --- Actuales ---
+	{
+		question: "¿Ofrecen un servicio de diseño web en México enfocado en empresas locales?",
+		answer:
+			"Sí. Nuestro servicio de diseño está 100% especializado en el mercado mexicano. Entendemos las tendencias locales para crear sitios web que realmente conectan con tu audiencia y cumplen tus objetivos comerciales aquí en el país.",
+	},
+	{
+		question: "¿Cómo adaptan los servicios que ofrecen a cada proyecto?",
+		answer:
+			"No creemos en soluciones genéricas. Los servicios que ofrecen la mayoría de las agencias son estandarizados; nosotros, en cambio, comenzamos por entender a fondo cada necesidad del cliente. A partir de ahí, diseñamos una estrategia y una solución tecnológica completamente a medida.",
+	},
+	{
+		question: "¿Qué los diferencia de otra agencia digital?",
+		answer:
+			"Somos una agencia digital con un ADN profundamente técnico. No solo creamos diseños atractivos; construimos sitios web optimizados desde el código para los motores de búsqueda como Google. Nuestro enfoque garantiza no solo belleza, sino también visibilidad y rendimiento técnico superior.",
 	},
 ];
 
@@ -584,6 +604,10 @@ export default function HomeClient({ posts: postsToShow }) {
 					crecer.
 				</p>
 			</section>
+			<FAQ
+				faqs={faqs}
+				subtitle="Resuelve tus dudas sobre nuestros paquetes, tecnologías, tiempos de entrega y más."
+			/>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Más que desarrollo, valor añadido"

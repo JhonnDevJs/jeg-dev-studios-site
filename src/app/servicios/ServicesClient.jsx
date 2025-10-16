@@ -609,7 +609,10 @@ export default function ServicesClient() {
 					te ayudamos a tomar la mejor decisión.
 				</p>
 			</section>
-			<FAQ faqs={faqs} />
+			<FAQ
+				faqs={faqs}
+				subtitle="Resuelve tus dudas sobre nuestros paquetes, tecnologías, tiempos de entrega y más."
+			/>
 			<CTA />
 		</>
 	);
