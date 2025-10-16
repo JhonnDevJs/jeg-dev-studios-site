@@ -127,7 +127,7 @@ function CardNestedLists({ titulo, subtitulo, list, lastText }) {
                       key={subIdx}
                       style={{ color: "#fff", marginBottom: "0.5rem" }}
                     >
-                      <p>{sub}</p>
+                      <p className="text-start">{sub}</p>
                     </li>
                   ))}
                 </ul>

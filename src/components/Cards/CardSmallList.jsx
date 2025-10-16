@@ -87,7 +87,7 @@
             >
               {list.map((item, idx) => (
                 <li
-                  className="d-flex align-items-center mb-4 text-white text-lg-start text-center"
+                  className="d-flex align-items-center mb-4 text-white text-lg-start text-start"
                   key={idx}
                 >
                   <span

@@ -8,8 +8,8 @@ function CardServices({ title, description, url, buttonLabel, items = [] }) {
       style={{ width: "22rem"}}
     >
       <div className="card-body d-flex flex-column">
-        <h3 className="h2 fw-bolder card-title text-start">{title}</h3>
-        <p className="fs-5 text-start">{description}</p>
+        <h3 className="h2 fw-bolder card-title text-center">{title}</h3>
+        <p className="fs-5 text-center">{description}</p>
         <Link href={url} className="btn-services" role="button" aria-label={buttonLabel} title={buttonLabel} tabIndex={0}>
           <span className="fw-bolder">{buttonLabel}</span>
         </Link>
