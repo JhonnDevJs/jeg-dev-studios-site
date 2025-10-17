@@ -1,18 +1,19 @@
 @font-face {
   font-family: 'icomoon';
-  src:  url('fonts/icomoon.eot?i04vkm');
-  src:  url('fonts/icomoon.eot?i04vkm#iefix') format('embedded-opentype'),
-    url('fonts/icomoon.ttf?i04vkm') format('truetype'),
-    url('fonts/icomoon.woff?i04vkm') format('woff'),
-    url('fonts/icomoon.svg?i04vkm#icomoon') format('svg');
+  src:  url('fonts/icomoon.eot?4gh1l1');
+  src:  url('fonts/icomoon.eot?4gh1l1#iefix') format('embedded-opentype'),
+    url('fonts/icomoon.ttf?4gh1l1') format('truetype'),
+    url('fonts/icomoon.woff?4gh1l1') format('woff'),
+    url('fonts/icomoon.svg?4gh1l1#icomoon') format('svg');
   font-weight: normal;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'icomoon' !important;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -81,7 +82,7 @@
   content: "\e934";
   color: #1877f2;
 }
-.icon-git1:before {
+.icon-git11:before {
   content: "\e935";
   color: #f05032;
 }
@@ -90,7 +91,7 @@
 }
 .icon-gmail:before {
   content: "\e937";
-  color: #ffffff;
+  color: #d14836;
 }
 .icon-googlepay:before {
   content: "\e938";
@@ -141,10 +142,6 @@
 .icon-node-dot-js:before {
   content: "\e944";
   color: #393;
-}
-.icon-paypal:before {
-  content: "\e945";
-  color: #00457c;
 }
 .icon-php:before {
   content: "\e94e";
@@ -362,7 +359,7 @@
   margin-left: -1em;
   color: rgb(71, 136, 199);
 }
-.icon-git:before {
+.icon-git1:before {
   content: "\e926";
   color: #f4511e;
 }
@@ -424,7 +421,6 @@
 }
 .icon-check-list:before {
   content: "\e954";
-  color: rgb(255, 255, 255);
 }
 .icon-american-express .path1:before {
   content: "\e920";
@@ -496,4 +492,43 @@
 }
 .icon-linkedin-no-bg:before {
   content: "\eaca";
+}
+.icon-bubble:before {
+  content: "\e96b";
+}
+.icon-youtube:before {
+  content: "\ea9d";
+}
+.icon-wordpress:before {
+  content: "\eab4";
+}
+.icon-tux:before {
+  content: "\eabd";
+}
+.icon-android:before {
+  content: "\eac0";
+}
+.icon-windows8:before {
+  content: "\eac2";
+}
+.icon-skype:before {
+  content: "\eac5";
+}
+.icon-reddit:before {
+  content: "\eac6";
+}
+.icon-pinterest:before {
+  content: "\ead1";
+}
+.icon-paypal:before {
+  content: "\ead8";
+}
+.icon-chrome:before {
+  content: "\ead9";
+}
+.icon-safari:before {
+  content: "\eadd";
+}
+.icon-git:before {
+  content: "\eae7";
 }
