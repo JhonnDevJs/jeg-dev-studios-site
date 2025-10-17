@@ -1,0 +1,9 @@
+.__image-background-sections {
+  /* Contenedor para la imagen de cabecera */
+  background-color: #000;
+  width: 100%;
+  /* La altura será automática basada en la imagen */
+  height: auto;
+  /* Eliminamos el padding que pueda tener por defecto para que la imagen ocupe todo */
+  padding: 0;
+}
