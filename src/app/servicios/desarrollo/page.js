@@ -1,14 +1,14 @@
 export const metadata = {
-  title: "Soluciones Digitales: Web, SEO y Diseño | JEG Dev Studios",
+  title: "Servicios de Desarrollo Digital para Empresas | JEG Dev Studios México",
   description:
-    "Tu agencia de desarrollo digital. Ofrecemos soluciones integrales en desarrollo web, software, posicionamiento SEO y branding para transformar tu negocio.",
+    "Consultoría y desarrollo digital para empresas en México: sitios web, apps móviles y software empresarial con soluciones modernas y escalables.",
   keywords:
     "servicios desarrollo web México, desarrollo aplicaciones móviles México, software empresarial México, agencia desarrollo digital México, desarrollo web profesional, soluciones digitales empresariales, desarrollo software a medida, apps móviles profesionales, diseño web responsivo, desarrollo tecnológico México",
   openGraph: {
-    title: "JEG Dev Studios: Soluciones Digitales en Desarrollo Web, SEO y Diseño",
+    title: "Desarrollo Digital para Empresas en México | JEG Dev Studios",
     description:
-      "Tu agencia de desarrollo digital. Ofrecemos soluciones integrales en desarrollo web, software, posicionamiento SEO y branding para transformar tu negocio.",
-    url: "https://www.jegdevstudios.com/servicios",
+      "Creamos soluciones digitales para empresas: sitios web profesionales, apps móviles y software a medida. Asesoría experta y desarrollo escalable en México.",
+    url: "https://www.jegdevstudios.com/servicios/desarrollo/",
     siteName: "JEG Dev Studios",
     images: [
       {
@@ -22,12 +22,12 @@ export const metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://www.jegdevstudios.com/servicios",
+    canonical: "https://www.jegdevstudios.com/servicios/desarrollo/",
   },
 };
 
-import ServicesClient from "./ServicesClient";
+import DesarrolloClient from "./DesarrolloClient";
 
 export default function ServicesPage() {
-  return <ServicesClient />;
+  return <DesarrolloClient />;
 }
