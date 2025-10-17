@@ -198,7 +198,7 @@ export default function DesarrolloClient() {
 					]}
 				/>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="Nuestro Proceso: Calidad, Agilidad y Transparencia"
 					subtitulo="Creemos en un desarrollo inteligente. Nuestro proceso se basa en la metodología ágil (Sprints), lo que te permite ver avances funcionales cada dos semanas. Escribimos código limpio, aplicamos prácticas de seguridad (DevSecOps) y construimos arquitecturas escalables para que tu inversión tecnológica crezca contigo."

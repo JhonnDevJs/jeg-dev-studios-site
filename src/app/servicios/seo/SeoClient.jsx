@@ -1,6 +1,7 @@
 "use client";
 import Image from "next/image";
 import StructuredData from "@/components/Seo/StructuredData";
+import CardSmallList from "@/components/Cards/CardSmallList";
 import CardNestedLists from "@/components/Cards/CardNestedLists";
 import CardServices from "@/components/Cards/CardServices";
 import FAQ from "@/components/Seo/FAQ";

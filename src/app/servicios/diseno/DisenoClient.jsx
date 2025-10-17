@@ -157,7 +157,7 @@ export default function DisenoClient() {
 					Studios encontrarás un equipo creativo y estratégico.
 				</p>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="Nuestro Proceso Creativo: Estrategia, Diseño y Resultado"
 					subtitulo="Nuestro proceso de diseño está pensado para entregar resultados, no solo archivos. Comenzamos con una fase de investigación para entender a fondo tu marca y tu audiencia. Luego, pasamos a la conceptualización y el diseño, trabajando contigo a través de revisión para asegurar que el resultado final sea perfecto. Finalmente, te entregamos todos los archivos editables y guías de uso para que tengas control total sobre tu nueva identidad visual."
