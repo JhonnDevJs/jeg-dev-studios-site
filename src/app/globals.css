@@ -1,4 +1,3 @@
-
 @import "../assets/icons/icon-fonts/style.css";
 
 * {
@@ -122,4 +121,72 @@ body {
 
 .gradient-effect-y {
   background: radial-gradient(65.69% 90.55% at 100% 0%, rgba(255, 113, 164, 0.5) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(38.25% 50.87% at 0% 0%, rgba(9, 166, 255, 0.35) 0%, rgba(0, 255, 194, 0) 100%), #000;
+}
+
+.card-services {
+  background: rgba(24, 24, 24, 0.603);
+  /* Fondo semitransparente */
+  backdrop-filter: blur(40px);
+  /* Aplica el blur */
+  -webkit-backdrop-filter: blur(20px);
+  /* Soporte Safari */
+  border-radius: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.144);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+.card-services:hover {
+  transform: scale(1.05);
+}
+
+.btn-services {
+  position: relative;
+  padding: 1rem;
+  background-color: rgba(0, 0, 0, 0.4); /* Fondo transparente */
+  border-radius: 20px; /* 🔁 Este valor modifica el redondeado */
+  color: white;
+  text-decoration: none;
+  text-align: center;
+  z-index: 1;
+}
+
+.btn-services::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: linear-gradient(90deg, #7b00ff, #ff00cc);
+  border-radius: 22px; /* Debe ser igual o mayor al de `.card` */
+  z-index: -1;
+  mask: 
+    linear-gradient(#fff 0 0) content-box, 
+    linear-gradient(#fff 0 0);
+  mask-composite: exclude;
+  -webkit-mask-composite: destination-out;
+  padding: 2px;
+}
+
+.btn-services:hover {
+  background: rgb(255, 255, 255); /* Fondo más opaco */
+  color: black;
+}
+
+/* Active (al presionar): efecto de "pulso" */
+.btn-services:active {
+  transform: scale(1.05);
+  background: rgb(255, 255, 255); /* Fondo más opaco */
+  color: black;
+}
+
+.accordion span {
+  font-size: 1.2rem;
+}
+
+/* Oculta la barra y flecha en pantallas pequeñas */
+@media (max-width: 650px) {
+  .vertical-bar-arrow {
+    display: none !important;
+  }
 }

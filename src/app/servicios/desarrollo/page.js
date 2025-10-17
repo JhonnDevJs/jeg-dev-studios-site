@@ -1,14 +1,14 @@
 export const metadata = {
-  title: "Servicios de Desarrollo Digital para Empresas | JEG Dev Studios México",
+  title: "Desarrollo de Software a Medida | JEG Dev Studios México",
   description:
-    "Consultoría y desarrollo digital para empresas en México: sitios web, apps móviles y software empresarial con soluciones modernas y escalables.",
+    "Somos una agencia de desarrollo de software. Creamos soluciones web, apps móviles y sistemas empresariales a medida para optimizar tus procesos y resultados.",
   keywords:
-    "servicios desarrollo web México, desarrollo aplicaciones móviles México, software empresarial México, agencia desarrollo digital México, desarrollo web profesional, soluciones digitales empresariales, desarrollo software a medida, apps móviles profesionales, diseño web responsivo, desarrollo tecnológico México",
+    "Desarrollo de software a medida, Agencia de desarrollo de software",
   openGraph: {
     title: "Desarrollo Digital para Empresas en México | JEG Dev Studios",
     description:
       "Creamos soluciones digitales para empresas: sitios web profesionales, apps móviles y software a medida. Asesoría experta y desarrollo escalable en México.",
-    url: "https://www.jegdevstudios.com/servicios/desarrollo/",
+    url: "https://www.jegdevstudios.com/servicios/desarrollo",
     siteName: "JEG Dev Studios",
     images: [
       {
@@ -22,7 +22,7 @@ export const metadata = {
     type: "website",
   },
   alternates: {
-    canonical: "https://www.jegdevstudios.com/servicios/desarrollo/",
+    canonical: "https://www.jegdevstudios.com/servicios/desarrollo",
   },
 };
 
