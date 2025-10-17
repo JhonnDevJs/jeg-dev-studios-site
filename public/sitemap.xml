@@ -14,50 +14,69 @@
     <loc>https://www.jegdevstudios.com/servicios</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.8</priority> <!-- Reducimos ligeramente para dar más peso a los servicios específicos -->
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.jegdevstudios.com/servicios/desarrollo</loc>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo web" -->
   <url>
-    <loc>https://www.jegdevstudios.com/servicios/desarrollo-web</loc>
+    <loc>https://www.jegdevstudios.com/servicios/desarrollo/web</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority> <!-- Mantenemos alta prioridad, es una página clave de conversión -->
+    <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo de aplicaciones móviles" -->
   <url>
-    <loc>https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones</loc>
+    <loc>https://www.jegdevstudios.com/servicios/desarrollo/apps</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority> <!-- Mantenemos alta prioridad -->
+    <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo de software empresarial" -->
   <url>
-    <loc>https://www.jegdevstudios.com/servicios/desarrollo-software</loc>
+    <loc>https://www.jegdevstudios.com/servicios/desarrollo/software-empresarial</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority> <!-- Mantenemos alta prioridad -->
+    <priority>0.9</priority>
+  </url>
+  <!-- Página "Servicios Seo" -->
+  <url>
+    <loc>https://www.jegdevstudios.com/servicios/seo</loc>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <!-- Página "Servicios Design" -->
+  <url>
+    <loc>https://www.jegdevstudios.com/servicios/diseno</loc>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
   </url>
   <!-- Página de "Sobre nosotros" -->
   <url>
     <loc>https://www.jegdevstudios.com/sobre-nosotros</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.7</priority> <!-- Correcto, es importante pero no tanto como los servicios -->
+    <priority>0.7</priority>
   </url>
   <!-- Página de "Blog" -->
   <url>
     <loc>https://blog.jegdevstudios.com/</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>daily</changefreq>
-    <priority>0.9</priority> <!-- Correcto, el blog es una fuente importante de tráfico y contenido
-    fresco -->
+    <priority>0.9</priority>
   </url>
   <!-- Página de "Contacto" -->
   <url>
     <loc>https://www.jegdevstudios.com/contacto</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.9</priority> <!-- Aumentamos, es una página de conversión directa y muy importante -->
+    <priority>0.9</priority>
   </url>
   <!-- Página de "Saber más WebDev" -->
   <url>
@@ -85,14 +104,14 @@
     <loc>https://www.jegdevstudios.com/terminos-y-condiciones</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.3</priority> <!-- Reducimos, es contenido legal, no prioritario para SEO -->
+    <priority>0.3</priority>
   </url>
   <!-- Página de "Aviso de privacidad" -->
   <url>
     <loc>https://www.jegdevstudios.com/aviso-de-privacidad</loc>
     <lastmod>2025-10-18T21:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
-    <priority>0.3</priority> <!-- Reducimos, es contenido legal, no prioritario para SEO -->
+    <priority>0.3</priority>
   </url>
   <!-- Entradas del Blog -->
   <url>
