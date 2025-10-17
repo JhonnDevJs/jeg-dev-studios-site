@@ -5,348 +5,788 @@
   <!-- Página principal -->
   <url>
     <loc>https://www.jegdevstudios.com/</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Página "Servicios" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority> <!-- Reducimos ligeramente para dar más peso a los servicios específicos -->
   </url>
   <!-- Página "Servicios desarrollo web" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-web</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority> <!-- Mantenemos alta prioridad, es una página clave de conversión -->
   </url>
   <!-- Página "Servicios desarrollo de aplicaciones móviles" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-aplicaciones</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority> <!-- Mantenemos alta prioridad -->
   </url>
   <!-- Página "Servicios desarrollo de software empresarial" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo-software</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority> <!-- Mantenemos alta prioridad -->
   </url>
   <!-- Página de "Sobre nosotros" -->
   <url>
     <loc>https://www.jegdevstudios.com/sobre-nosotros</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.7</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority> <!-- Correcto, es importante pero no tanto como los servicios -->
   </url>
   <!-- Página de "Blog" -->
   <url>
     <loc>https://blog.jegdevstudios.com/</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.9</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>daily</changefreq>
+    <priority>0.9</priority> <!-- Correcto, el blog es una fuente importante de tráfico y contenido
+    fresco -->
   </url>
   <!-- Página de "Contacto" -->
   <url>
     <loc>https://www.jegdevstudios.com/contacto</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.8</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority> <!-- Aumentamos, es una página de conversión directa y muy importante -->
   </url>
   <!-- Página de "Saber más WebDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/web-dev</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más SoftDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/soft-dev</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más AppDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/app-dev</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Términos y condiciones" -->
   <url>
     <loc>https://www.jegdevstudios.com/terminos-y-condiciones</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority> <!-- Reducimos, es contenido legal, no prioritario para SEO -->
   </url>
   <!-- Página de "Aviso de privacidad" -->
   <url>
     <loc>https://www.jegdevstudios.com/aviso-de-privacidad</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
-    <priority>0.6</priority>
+    <lastmod>2025-10-18T21:00:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.3</priority> <!-- Reducimos, es contenido legal, no prioritario para SEO -->
   </url>
   <!-- Entradas del Blog -->
   <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/apis-para-negocios.html</loc>
+    <lastmod>2025-10-17T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/jobs-to-be-done-clientes.html</loc>
+    <lastmod>2025-10-16T14:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/podcast-para-negocios.html</loc>
+    <lastmod>2025-10-14T16:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/anatomia-pagina-producto-convierte.html</loc>
+    <lastmod>2025-10-14T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/roadmap-tecnologico-pymes.html</loc>
+    <lastmod>2025-10-13T16:56:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/net-promoter-score-para-que-sirve.html</loc>
+    <lastmod>2025-10-13T17:05:35Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/guia-seo-local.html</loc>
+    <lastmod>2025-10-13T16:15:15Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/sintomas-necesitas-software-gestion.html</loc>
+    <lastmod>2025-10-13T16:51:55Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/ceo-cfo-cto-significado.html</loc>
+    <lastmod>2025-10-13T16:52:25Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/tipos-de-liderazgo.html</loc>
+    <lastmod>2025-10-13T16:53:03Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/que-es-seo-definicion-herramientas.html</loc>
+    <lastmod>2025-10-13T16:53:28Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/app-movil-vs-web-app-progresiva-pwa-la.html</loc>
+    <lastmod>2025-10-13T16:54:29Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/trucos-google-chrome.html</loc>
+    <lastmod>2025-10-13T16:56:38Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/rediseno-sitio-web-estrategico.html</loc>
+    <lastmod>2025-10-13T16:57:04Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/estrategias-dia-de-muertos.html</loc>
+    <lastmod>2025-10-13T16:53:55Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/10/cumbre-ia-nube-datos-mexico.html</loc>
+    <lastmod>2025-10-13T17:00:50Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/expo-technology-monterrey-2025.html</loc>
+    <lastmod>2025-10-13T17:01:13Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/design-week-mexico-2025.html</loc>
+    <lastmod>2025-10-13T17:01:31Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/eventos-tecnologia-octubre.html</loc>
+    <lastmod>2025-10-13T17:01:57Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/mexico-business-summit-monterrey.html</loc>
+    <lastmod>2025-10-13T17:02:16Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/mexico-tech-week-cdmx-2025-info.html</loc>
+    <lastmod>2025-10-13T17:03:13Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/chatgpt-vs-deepseek-vs-gemini.html</loc>
+    <lastmod>2025-09-30T18:59:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>
+      https://blog.jegdevstudios.com/2025/09/inteligencia-artificial-procesos-internos-empresas.html</loc>
+    <lastmod>2025-09-29T15:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/prompt-engineering-ia.html</loc>
+    <lastmod>2025-09-28T18:01:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/diseno-web-freelancers-negocios-locales.html</loc>
+    <lastmod>2025-09-27T16:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/inai-privacidad-internet.html</loc>
+    <lastmod>2025-09-26T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/diseno-web-inteligente-figma-css-accesibilidad.html</loc>
+    <lastmod>2025-09-25T15:00:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/redes-sociales-menores.html</loc>
+    <lastmod>2025-09-24T15:36:25Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/inteligencia-artificial-pymes.html</loc>
+    <lastmod>2025-09-24T15:10:41Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/escalar-sitio-web.html</loc>
+    <lastmod>2025-09-23T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/diseno-semantico-seo-experiencia.html</loc>
+    <lastmod>2025-09-22T17:46:24Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/necesita-landing-page.html</loc>
+    <lastmod>2025-09-22T01:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/blog-post.html</loc>
+    <lastmod>2025-09-21T01:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/que-es-un-lead.html</loc>
+    <lastmod>2025-09-20T01:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/diagnostico-tecnico-sitios-web-5-pasos.html</loc>
+    <lastmod>2025-09-19T16:23:38Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/aumentar-roi-negocio.html</loc>
+    <lastmod>2025-09-18T23:06:03Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/transformacion-digital-mx.html</loc>
+    <lastmod>2025-09-18T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/tendencias-ti-2026.html</loc>
+    <lastmod>2025-09-17T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/deepseek-inteligencia.html</loc>
+    <lastmod>2025-09-16T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/agentes-chatgpt-negocio.html</loc>
+    <lastmod>2025-09-14T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/automatizacion-procesos-software-personalizado.html</loc>
+    <lastmod>2025-09-19T16:23:07Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/avances-ia-semana.html</loc>
+    <lastmod>2025-09-12T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/impuesto-videojuegos-mx.html</loc>
+    <lastmod>2025-09-19T16:22:52Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/accesibilidad-web-empresas.html</loc>
+    <lastmod>2025-09-11T23:22:05Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/apps-moviles-para-empresas.html</loc>
+    <lastmod>2025-09-11T23:21:45Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/08/documentacion-bilingue.html</loc>
+    <lastmod>2025-09-11T22:00:37Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/contenido-tecnico-convierte.html</loc>
+    <lastmod>2025-09-11T23:21:13Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>
+      https://blog.jegdevstudios.com/2025/09/preparar-sitio-web-ferias-tecnologicas-seo-velocidad.html</loc>
+    <lastmod>2025-09-11T17:12:07Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://blog.jegdevstudios.com/2025/09/mejores-hosting-web.html</loc>
+    <lastmod>2025-09-26T19:41:01Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+  <url>
     <loc>
       https://blog.jegdevstudios.com/2025/08/iadc-spe-managed-pressure-drilling-underbalanced-operations-cdmx.html</loc>
-    <lastmod>2025-09-01T16:24:15Z</lastmod>
+    <lastmod>2025-09-11T17:12:28Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/09/bits-pretzels-2025-festival-emprendedores-munich.html</loc>
-    <lastmod>2025-09-01T17:04:51Z</lastmod>
+    <lastmod>2025-09-11T23:20:20Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/09/apple-event-septiembre-2025.html</loc>
-    <lastmod>2025-09-01T16:27:07Z</lastmod>
+    <lastmod>2025-09-11T21:23:18Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/eventos-tecnologicos-2025.html</loc>
-    <lastmod>2025-09-01T16:27:54Z</lastmod>
+    <lastmod>2025-09-11T23:19:58Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/webs-multiseccion-vs-landing-pages-seo.html</loc>
-    <lastmod>2025-09-01T16:32:45Z</lastmod>
+    <lastmod>2025-09-11T17:13:49Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/atomic-design-como-estructurar-tu-web.html</loc>
-    <lastmod>2025-08-27T15:31:37Z</lastmod>
+    <lastmod>2025-09-11T17:13:58Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/landing-bien-hecha-conversiones.html</loc>
-    <lastmod>2025-08-25T16:00:00Z</lastmod>
+    <lastmod>2025-09-11T17:14:11Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/landing-estetica-profesional-exclusividad.html</loc>
     <lastmod>2025-08-21T15:30:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/accesibilidad-diseno-codigo-sitios-inclusivos.html</loc>
-    <lastmod>2025-08-19T16:00:00Z</lastmod>
+    <lastmod>2025-09-11T17:14:26Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/laravel-live-denmark.html</loc>
-    <lastmod>2025-08-17T21:00:00Z</lastmod>
+    <lastmod>2025-09-11T17:14:37Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/destacar-en-google-detalle.html</loc>
-    <lastmod>2025-08-17T16:00:00Z</lastmod>
+    <lastmod>2025-09-11T17:14:54Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/que-es-una-landing-page-y-por-que.html</loc>
-    <lastmod>2025-08-17T10:00:00Z</lastmod>
+    <lastmod>2025-09-11T17:15:02Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/nasa-spaceapps-guerrero.html</loc>
-    <lastmod>2025-08-15T15:50:35Z</lastmod>
+    <lastmod>2025-09-11T17:15:10Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/etica-inteligencia-ia.html</loc>
-    <lastmod>2025-08-14T19:36:14Z</lastmod>
+    <lastmod>2025-09-11T17:15:18Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/ia-en-diseno-web-mas-que-una-tendencia.html</loc>
-    <lastmod>2025-08-14T19:36:32Z</lastmod>
+    <lastmod>2025-09-11T17:15:25Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/contar-historias-visuales-web.html</loc>
-    <lastmod>2025-08-14T19:36:54Z</lastmod>
+    <lastmod>2025-09-11T17:15:39Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/que-es-la-arquitectura-web-y-por-que.html</loc>
-    <lastmod>2025-08-14T19:37:04Z</lastmod>
+    <lastmod>2025-09-11T17:15:52Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/el-seo-empieza-en-el-diseno.html</loc>
-    <lastmod>2025-08-14T19:37:23Z</lastmod>
+    <lastmod>2025-09-11T17:16:05Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/expo-technology-cdmx-2025.html</loc>
-    <lastmod>2025-08-14T19:37:43Z</lastmod>
+    <lastmod>2025-09-11T17:16:14Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/08/preparar-sitio-web-ferias-tecnologicas-seo-velocidad.html</loc>
-    <lastmod>2025-08-28T18:06:49Z</lastmod>
+    <lastmod>2025-09-11T17:16:21Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/css-inteligente-coherencia-figma.html</loc>
-    <lastmod>2025-08-14T19:38:03Z</lastmod>
+    <lastmod>2025-09-11T17:16:38Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/litio-mexico-mineria-sustentable.html</loc>
-    <lastmod>2025-08-14T19:38:13Z</lastmod>
+    <lastmod>2025-09-11T17:16:47Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/de-diseno-visual-estructura-funcional.html</loc>
-    <lastmod>2025-08-14T19:38:26Z</lastmod>
+    <lastmod>2025-09-11T17:16:56Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
-    <loc>https://blog.jegdevstudios.com/2025/07/codigo-semantico-mejora-seo.html</loc>
-    <lastmod>2025-08-14T19:38:37Z</lastmod>
+    <loc>https://blog.jegdevstudios.com/2025/08/integra-tec-monterrey.html</loc>
+    <lastmod>2025-09-22T17:15:04Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/08/codigo-semantico-mejora-seo.html</loc>
-    <lastmod>2025-08-14T19:38:56Z</lastmod>
+    <lastmod>2025-09-11T17:17:22Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/detras-del-codigo-como-caio-medeiros.html</loc>
-    <lastmod>2025-08-14T19:39:09Z</lastmod>
+    <lastmod>2025-09-11T17:21:46Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/que-hacer-si-tu-sitio-web-no-recibe.html</loc>
-    <lastmod>2025-08-14T19:40:10Z</lastmod>
+    <lastmod>2025-09-11T17:21:52Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/que-es-figma-diseno.html</loc>
     <lastmod>2025-08-14T19:40:23Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/tendencias-en-diseno-web-para-negocios.html</loc>
-    <lastmod>2025-08-14T19:40:36Z</lastmod>
+    <lastmod>2025-09-11T17:23:55Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/06/automatiza-tu-negocio-integraciones-landing-page.html</loc>
-    <lastmod>2025-08-14T19:40:48Z</lastmod>
+    <lastmod>2025-09-11T17:24:07Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/por-que-necesitas-una-pagina-web-en.html</loc>
-    <lastmod>2025-08-14T19:40:59Z</lastmod>
+    <lastmod>2025-09-11T17:24:18Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/newsletter-jorge-sanchez-escribir-codigo-aliado.html</loc>
-    <lastmod>2025-08-14T19:41:13Z</lastmod>
+    <lastmod>2025-09-11T17:24:26Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/como-integrar-google-maps-en-tu-landing.html</loc>
-    <lastmod>2025-08-14T19:41:25Z</lastmod>
+    <lastmod>2025-09-11T17:24:38Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/herramientas-gratuitas-emprendedores.html</loc>
-    <lastmod>2025-08-14T19:41:35Z</lastmod>
+    <lastmod>2025-09-11T17:24:46Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/tendencias-empresariales-ia-2025-automatizacion-seguridad.html</loc>
-    <lastmod>2025-08-14T19:41:51Z</lastmod>
+    <lastmod>2025-09-11T17:24:55Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/como-usar-whatsapp-business-para-captar.html</loc>
-    <lastmod>2025-08-14T19:42:06Z</lastmod>
+    <lastmod>2025-09-11T17:25:17Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/congreso-america-digital-mexico-2026-transformacion-digital.html</loc>
-    <lastmod>2025-08-14T19:42:23Z</lastmod>
+    <lastmod>2025-09-11T17:25:27Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/google-sites-para-emprendedores.html</loc>
-    <lastmod>2025-08-14T19:42:31Z</lastmod>
+    <lastmod>2025-09-11T17:25:34Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/seoplus-2025-congreso-seo-profesional-alicante.html</loc>
-    <lastmod>2025-08-14T19:42:45Z</lastmod>
+    <lastmod>2025-09-11T17:25:44Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/secciones-efectivas-landing-page-clientes.html</loc>
-    <lastmod>2025-08-14T19:42:57Z</lastmod>
+    <lastmod>2025-09-11T17:25:53Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/seoday-2025-evento-global-seo.html</loc>
-    <lastmod>2025-08-14T19:43:05Z</lastmod>
+    <lastmod>2025-09-11T17:26:01Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/7-beneficios-de-tener-una-landing-page.html</loc>
-    <lastmod>2025-08-14T19:43:16Z</lastmod>
+    <lastmod>2025-09-11T17:26:09Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/digital-leaders-summit-mexico-2025-valle-de-bravo-ecommerce.html</loc>
-    <lastmod>2025-08-14T19:43:28Z</lastmod>
+    <lastmod>2025-09-11T17:26:19Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>
       https://blog.jegdevstudios.com/2025/07/user-conference-mexico-2025-transformacion-digital.html</loc>
-    <lastmod>2025-08-14T19:43:38Z</lastmod>
+    <lastmod>2025-09-11T17:26:26Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/diseno-uxui-basico-para-emprendedores.html</loc>
-    <lastmod>2025-08-14T19:43:50Z</lastmod>
+    <lastmod>2025-09-11T17:26:34Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/landing-page-optimizadas-para-google-y-clientes.html</loc>
     <lastmod>2025-08-14T19:44:00Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/por-que-tener-solo-redes-sociales-no-es.html</loc>
     <lastmod>2025-08-14T19:44:12Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/07/5-errores-que-cometen-los-emprendedores.html</loc>
     <lastmod>2025-08-14T19:44:24Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/landing-page-para-negocios.html</loc>
     <lastmod>2025-08-14T19:44:42Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/tendencias-en-paginas-web-para-negocios.html</loc>
     <lastmod>2025-08-14T19:44:54Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/integraciones-simples-automatizar-negocio.html</loc>
     <lastmod>2025-07-14T18:19:07Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/que-todo-emprendedor-debe-tener-una.html</loc>
     <lastmod>2025-08-14T19:45:05Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/como-usar-google-maps-y-whatsapp-para.html</loc>
     <lastmod>2025-08-14T19:45:21Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/top-5-herramientas-gratuitas-presencia-online.html</loc>
     <lastmod>2025-08-14T19:45:48Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/google-sites-ventajas-y-desventajas_23.html</loc>
     <lastmod>2025-08-14T19:46:12Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/titulos-descripciones-y-contenido-para.html</loc>
     <lastmod>2025-08-14T19:46:28Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/posicionamiento-web-negocio-local.html</loc>
     <lastmod>2025-08-14T19:46:43Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/seo-basico-para-landing-pages-como.html</loc>
     <lastmod>2025-08-14T19:47:06Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/colores-tipografias-y-jerarquia-visual.html</loc>
     <lastmod>2025-08-14T19:47:27Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/por-que-tu-negocio-necesita-una-web.html</loc>
     <lastmod>2025-08-14T19:47:41Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/elementos-clave-landing-page-efectiva.html</loc>
     <lastmod>2025-08-14T19:47:54Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/un-buen-diseno-uxui-puede-ayudarte.html</loc>
     <lastmod>2025-08-14T19:48:07Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/errores-comunes-al-crear-tu-primera.html</loc>
     <lastmod>2025-08-14T19:48:18Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/landing-page-vs-sitio-completo.html</loc>
     <lastmod>2025-08-14T19:48:35Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
   <url>
     <loc>https://blog.jegdevstudios.com/2025/06/que-es-una-landing-page-necesita-tu-negocio.html</loc>
-    <lastmod>2025-08-14T19:48:46Z</lastmod>
+    <lastmod>2025-10-13T16:21:44Z</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
   </url>
 </urlset>
