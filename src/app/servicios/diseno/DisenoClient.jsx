@@ -19,7 +19,8 @@ const faqs = [
 			"Si. Al finalizar cada proyecto de diseño, te entregamos un paquete completo con los archivos en formatos vectoriales (AI, SVG), de imagen (PNG, JPG) y, según el caso, el manual de identidad para su correcta aplicación.",
 	},
 	{
-		question: "¿Puedo contratar solo el diseño UX/UI si ya tengo el desarrollo?",
+		question:
+			"¿Puedo contratar solo el diseño UX/UI si ya tengo el desarrollo?",
 		answer:
 			"Ofrecemos nuestros servicios de diseño UX/UI de forma independiente. Podemos crear todas las interfaces y prototipos para que tu equipo de desarrollo pueda implementarlos.",
 	},
@@ -33,7 +34,6 @@ const faqs = [
 export default function DisenoClient() {
 	return (
 		<>
-			
 			<StructuredData data={faqs} />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
@@ -49,13 +49,23 @@ export default function DisenoClient() {
 					Diseño Gráfico y Digital que Conecta y Convierte
 				</h1>
 				<p className="lead text-white text-center">
-					En JEG Dev Studios, creemos que un gran diseño es más que una cara bonita; es una herramienta estratégica. Como agencia de diseño gráfico en México , fusionamos creatividad y funcionalidad para construir marcas memorables y experiencias de usuario que funcionen. Damos vida a tu identidad visual y nos aseguramos de que cada interacción con tu cliente sea impactante.
+					En JEG Dev Studios, creemos que un gran diseño es más que una cara
+					bonita; es una herramienta estratégica. Como agencia de diseño gráfico
+					en México , fusionamos creatividad y funcionalidad para construir
+					marcas memorables y experiencias de usuario que funcionen. Damos vida
+					a tu identidad visual y nos aseguramos de que cada interacción con tu
+					cliente sea impactante.
 				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
-				<h2 className="text-center text-white">Nuestros Servicios de Diseño Gráfico y Digital</h2>
+				<h2 className="text-center text-white">
+					Nuestros Servicios de Diseño Gráfico y Digital
+				</h2>
 				<p className="lead text-white text-center">
-					Desde la creación de un logotipo que define tu esencia hasta el diseño de interfaces que guían a tus usuarios, nuestra área de diseño cubre todo el espectro de la comunicación visual. Explora nuestras especialidades.
+					Desde la creación de un logotipo que define tu esencia hasta el diseño
+					de interfaces que guían a tus usuarios, nuestra área de diseño cubre
+					todo el espectro de la comunicación visual. Explora nuestras
+					especialidades.
 				</p>
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
@@ -97,6 +107,55 @@ export default function DisenoClient() {
 						/>
 					</ul>
 				</article>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-x">
+				<h2 className="display-5 text-center text-white">
+					Servicios de Diseño Gráfico y Digital en México
+				</h2>
+				<p className="fs-4 text-center text-white p-0">
+					Tu marca merece un diseño único: logotipos, branding, UX/UI, editorial
+					y más.
+				</p>
+				<CardNestedLists
+					titulo="En JEG Dev Studios ofrecemos servicios de diseño gráfico que ayudan a marcas, negocios y emprendedores a destacar en un mercado cada vez más competitivo."
+					subtitulo="Nos especializamos en crear experiencias visuales memorables a través de:"
+					list={[
+						{
+							text: "Logotipos y Branding",
+							sublist: ["Identidad sólida y profesional."],
+						},
+						{
+							text: "Diseño UX/UI para Web, Apps y Software",
+							sublist: [
+								"Interfaces modernas, funcionales y centradas en el usuario.",
+							],
+						},
+						{
+							text: "Diseño Editorial",
+							sublist: ["Catálogos, revistas, manuales de identidad y más."],
+						},
+						{
+							text: "Publicidad Digital",
+							sublist: [
+								"Menús, invitaciones y materiales promocionales creativos.",
+							],
+						},
+						{
+							text: "Edición Fotográfica y Contenido Visua",
+							sublist: ["Para reforzar tu comunicación."],
+						},
+					]}
+				/>
+				<p className="fs-4 text-center text-white p-0">
+					Somos una de las mejores agencias de diseño gráfico en México, con
+					sede en CDMX, listos para convertir tus ideas en realidades visuales
+					impactantes.
+				</p>
+				<p className="fs-4 text-center text-white p-0">
+					Ya sea que busques un estudio de diseño gráfico para un proyecto
+					puntual o una agencia que te acompañe a largo plazo, en JEG Dev
+					Studios encontrarás un equipo creativo y estratégico.
+				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardNestedLists

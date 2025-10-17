@@ -103,6 +103,103 @@ export default function DesarrolloClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardNestedLists
+					titulo="¿Qué ofrecemos en desarrollo web personalizado?"
+					subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
+					list={[
+						{
+							text: "Landing pages modernas y optimizadas",
+							sublist: [
+								"Creamos sitios de una sola sección orientados a la conversión, ideales para promocionar servicios o productos específicos.",
+							],
+						},
+						{
+							text: "Sitios empresariales profesionales",
+							sublist: [
+								"Diseños personalizados con navegación clara y estructuras adaptadas a negocios que necesitan presencia sólida en línea.",
+							],
+						},
+						{
+							text: "Diseño responsivo y optimización SEO",
+							sublist: [
+								"Adaptamos cada sitio a todos los dispositivos y aplicamos técnicas básicas de posicionamiento para visibilidad en buscadores.",
+							],
+						},
+						{
+							text: "Tecnologías usadas",
+							sublist: [
+								"Para el desarrollo Frontend de tus sitios utilizamos una variedad de tecnologías como son: HTML, CSS, JAVASCRIPT, REACT, NEXT JS, ANGULAR, BOOTSTRAP CSS Y TAILWIND CSS.",
+								"Para el desarrollo Backend de tus webs utilizamos tecnologías de vanguardia como: Node js y PHP (Laravel)",
+							],
+						},
+					]}
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<CardNestedLists
+					titulo="Desarrollo de aplicaciones móviles Android/iOS"
+					subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
+					list={[
+						{
+							text: "Apps nativas e híbridas",
+							sublist: [
+								"Desarrollo de aplicaciones específicas para iOS o Android, o multiplataforma con tecnologías modernas.",
+							],
+						},
+						{
+							text: "Publicación en tiendas",
+							sublist: [
+								"Subimos tu app a Google Play y/o App Store, cumpliendo con todos los requisitos técnicos y de diseño.",
+							],
+						},
+						{
+							text: "Integración con bases de datos y backends",
+							sublist: [
+								"Conectamos tu app con servidores seguros para almacenar datos, procesar pagos o integrar funcionalidades clave.",
+							],
+						},
+						{
+							text: "Tecnologías utilizadas",
+							sublist: [
+								"React Native, Java, Kotlin, Laravel, Firebase, SQLite.",
+							],
+						},
+					]}
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+				<CardNestedLists
+					titulo="Soluciones de software empresarial"
+					subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
+					list={[
+						{
+							text: "Sistemas a medida según tu flujo de trabajo",
+							sublist: [
+								"Diseñamos software que se adapta a los procesos específicos de tu empresa, mejorando eficiencia y control.",
+							],
+						},
+						{
+							text: "Control de usuarios, reportes, paneles y estadísticas",
+							sublist: [
+								"Funcionalidades avanzadas como permisos por rol, paneles de datos y reportes exportables en PDF/Excel.",
+							],
+						},
+						{
+							text: "Interfaces accesibles y seguras",
+							sublist: [
+								"Aplicaciones responsivas, con buen contraste y enfoque UX, incluyendo cifrado de datos y respaldos.",
+							],
+						},
+						{
+							text: "Integraciones con CRMs o facturación electrónica",
+							sublist: [
+								"Conectamos tu sistema con herramientas como Facturama, Salesforce o Zoho según tus necesidades.",
+							],
+						},
+					]}
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+				<CardNestedLists
 					titulo="Nuestro Proceso: Calidad, Agilidad y Transparencia"
 					subtitulo="Creemos en un desarrollo inteligente. Nuestro proceso se basa en la metodología ágil (Sprints), lo que te permite ver avances funcionales cada dos semanas. Escribimos código limpio, aplicamos prácticas de seguridad (DevSecOps) y construimos arquitecturas escalables para que tu inversión tecnológica crezca contigo."
 					list={[

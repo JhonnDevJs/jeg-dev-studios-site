@@ -96,6 +96,79 @@ export default function SeoClient() {
 					</ul>
 				</article>
 			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-x">
+				<h2 className="display-5 text-center text-white">
+					Optimización y Posicionamiento SEO en México
+				</h2>
+				<p className="fs-4 text-center text-white p-0">
+					En JEG Dev Studios ofrecemos servicios de posicionamiento web SEO
+					diseñados para que tu página aparezca en los primeros resultados de
+					Google y otros buscadores. Nuestro objetivo es impulsar tu objetivo
+					comercial, atraer más clientes y aumentar tu visibilidad digital con
+					estrategias efectivas.
+				</p>
+				<CardNestedLists
+					titulo="Nuestros Servicios de SEO"
+					subtitulo="Trabajamos como una agencia de posicionamiento SEO en México que
+					combina la experiencia técnica con estrategias de marketing digital
+					adaptadas a cada negocio."
+					list={[
+						{
+							text: "SEO Web",
+							sublist: [
+								"Optimización de páginas web para buscadores.",
+								"Servicios de posicionamiento SEO para páginas web con auditoría técnica y mejora del rendimiento.",
+								"Estrategias avanzadas de SEO y SEM para campañas de alto impacto.",
+								"Estrategias avanzadas de SEO y SEM para campañas de alto impacto.",
+								"Optimización para buscadores tradicionales e integración con IA generativa (SEO para la nueva era de la búsqueda).",
+							],
+						},
+						{
+							text: "SEO Local",
+							sublist: [
+								"Posiciona tu negocio en Google Maps y búsquedas locales.",
+								"Estrategias GEO para aparecer cuando tus clientes te busquen cerca.",
+								"Servicios de posicionamiento SEO local en México con enfoque en resultados medibles.",
+							],
+						},
+						{
+							text: "SEO Estratégico y Consultoría",
+							sublist: [
+								"Creación de estrategias personalizadas de marketing digital y posicionamiento SEO.",
+								"Análisis de competencia con herramientas como SEMrush y Ahrefs.",
+								"Reportes mensuales para medir el avance y ROI.",
+							],
+						},
+					]}
+				/>
+			</section>
+
+			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-y">
+				<CardSmallList
+					titulo="¿Por qué elegir JEG Dev Studios como tu agencia SEO en México??"
+					subtitulo=""
+					list={[
+						"Somos más que una agencia, somos una empresa de desarrollo y marketing digital que entiende tu negocio desde la base técnica.",
+						"Contamos con expertos en SEO con experiencia en proyectos en México y Latinoamérica.",
+						"Implementamos técnicas de optimización web, local y avanzada para IA.",
+						"Nos adaptamos a tus necesidades: desde pequeñas empresas locales hasta grandes proyectos digitales",
+					]}
+					lastText="Si buscas la mejor agencia de SEO en México para tu empresa, en JEG Dev Studios encontrarás un aliado estratégico para alcanzar tus metas digitales."
+				/>
+				<h2 className="display-5 text-center text-white">
+					Solicita tu Auditoría SEO Incluida en cualquier paquete de desarrollo
+					web o por separado
+				</h2>
+				<p className="fs-4 text-white text-center mt-4">
+					Antes de comenzar, realizamos una auditoría inicial de tu sitio web
+					para identificar oportunidades de crecimiento o de mejora en
+					posicionamiento SEO y estrategias de marketing digital.
+				</p>
+				<p className="fs-4 text-white text-center mt-4">
+					Comienza hoy y descubre cómo nuestros servicios de posicionamiento SEO
+					en México pueden ayudarte a crecer.
+				</p>
+			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardNestedLists
 					titulo="Nuestra Metodología: Datos, Estrategia y Transparencia"
