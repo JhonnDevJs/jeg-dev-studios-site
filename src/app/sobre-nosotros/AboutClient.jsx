@@ -167,11 +167,11 @@ export default function AboutClient() {
 					</p>
 					<div className="d-flex justify-content-start align-items-center gap-4">
 						<Link
-							href="mailto:jegdevstudioscontact@gmail.com"
+							href="mailto:contacto@jegdevstudios.com"
 							className="fs-1 text-center text-white text-decoration-none"
 							tabIndex={0}
-							aria-label="Envíar un mensaje por correo electrónico a jegdevstudioscontact@gmail.com"
-							title="Envíar un mensaje por correo electrónico a jegdevstudioscontact@gmail.com"
+							aria-label="Envíar un mensaje por correo electrónico a contacto@jegdevstudios.com"
+							title="Envíar un mensaje por correo electrónico a contacto@jegdevstudios.com"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
