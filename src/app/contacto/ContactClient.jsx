@@ -180,7 +180,7 @@ export default function ContactClient() {
 							<option value="consulta" className="text-black">
 								General (Cualquier otra consulta)
 							</option>
-							<option value="contizacion" className="text-black">
+							<option value="cotizacion" className="text-black">
 								Cotización
 							</option>
 							<option value="soporte" className="text-black">
