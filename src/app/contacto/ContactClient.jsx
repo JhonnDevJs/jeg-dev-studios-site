@@ -117,11 +117,11 @@ export default function ContactClient() {
 					</p>
 					<div className="d-flex justify-content-center align-items-center gap-4">
 						<Link
-							href="mailto:jegdevstudioscontact@gmail.com"
+							href="mailto:contacto@jegdevstudios.com"
 							className="fs-1 text-center text-white text-decoration-none"
 							tabIndex={0}
-							aria-label="Envíar un mensaje por correo electrónico a jegdevstudioscontact@gmail.com"
-							title="Envíar un mensaje por correo electrónico a jegdevstudioscontact@gmail.com"
+							aria-label="Envíar un mensaje por correo electrónico a contacto@jegdevstudios.com"
+							title="Envíar un mensaje por correo electrónico a contacto@jegdevstudios.com"
 							target="_blank"
 							rel="noopener noreferrer"
 						>
@@ -175,17 +175,17 @@ export default function ContactClient() {
 							<option value="" disabled>
 								Selecciona un tipo
 							</option>
-							<option value="servicios" className="text-black">
-								Consulta de servicios
+							<option value="consulta" className="text-black">
+								General (Cualquier otra consulta)
 							</option>
-							<option value="Cotización" className="text-black">
+							<option value="contizacion" className="text-black">
 								Cotización
 							</option>
 							<option value="soporte" className="text-black">
 								Soporte
 							</option>
-							<option value="general" className="text-black">
-								General (Cualquier otra consulta)
+							<option value="facturacion" className="text-black">
+								Facturación
 							</option>
 						</select>
 						<textarea
