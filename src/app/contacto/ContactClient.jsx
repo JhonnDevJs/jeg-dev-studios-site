@@ -4,6 +4,7 @@ import Image from "next/image";
 import Link from "next/link";
 import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
 import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
 import "./contactClient.css";
 
 const faqs = [
@@ -86,6 +87,7 @@ export default function ContactClient() {
 
 	return (
 		<>
+			<StructuredData data={faqs} />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Contacto.webp"
