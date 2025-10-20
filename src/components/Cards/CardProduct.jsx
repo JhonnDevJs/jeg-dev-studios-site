@@ -59,21 +59,20 @@ function CardProduct({
         </button>
       </div>
       <div className="card-footer d-flex justify-content-center align-items-center">
-        {/* Podrías añadir una descripción del producto aquí con itemProp="description" */}
-        <ul className="list-group list-group-flush w-100">
-          {items.map((item, idx) => (
-            <li
-              key={idx}
-              className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100"
-            >
-              <p className="fs-5 m-0">
-                <span className="icon-check-list fs-5 me-2"></span>
-                {item}
-              </p>
-            </li>
-          ))}
-        </ul>
-      </div>
+				<ul className="list-group list-group-flush mx-auto">
+					{items.map((item, idx) => (
+						<li
+							key={idx}
+							className={`row align-items-center bg-transparent text-white py-2 ${
+								idx < items.length - 1 ? "border-bottom border-white-50" : ""
+							}`}
+						>
+							<span className="col-auto icon-check-list fs-5 me-2"></span>
+							<p className="col fs-5 m-0">{item}</p>
+						</li>
+					))}
+				</ul>
+			</div>
     </li>
   );
 }
