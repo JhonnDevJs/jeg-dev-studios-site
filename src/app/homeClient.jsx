@@ -137,7 +137,8 @@ const faqsHome = [
 const faqs = [
 	// --- Actuales ---
 	{
-		question: "¿Ofrecen un servicio de diseño web en México enfocado en empresas locales?",
+		question:
+			"¿Ofrecen un servicio de diseño web en México enfocado en empresas locales?",
 		answer:
 			"Sí. Nuestro servicio de diseño está 100% especializado en el mercado mexicano. Entendemos las tendencias locales para crear sitios web que realmente conectan con tu audiencia, por lo que si buscas diseño web en México, somos tu mejor opción.",
 	},
@@ -156,6 +157,48 @@ const faqs = [
 export default function HomeClient({ posts: postsToShow }) {
 	const [mounted, setMounted] = useState(false);
 	useEffect(() => setMounted(true), []);
+
+	const cardServices = [
+		{
+			title: "Desarrollo a Medida: Web, Apps y Software",
+			description:
+				"Construimos el motor digital de tu negocio. Desde sitios web profesionales y tiendas en línea que convierten, hasta aplicaciones móviles que conectan y software a medida que optimiza tus operaciones con código limpio y escalable.",
+			url: "/servicios/desarrollo",
+			buttonLabel: "Ver servicios de desarrollo",
+			items: [
+				"Sitios Web y E-commerce de Alto Rendimiento",
+				"Aplicaciones Móviles (iOS/Android)",
+				"Software Empresarial a Medida",
+				"Arquitectura Escalable y Segura",
+			],
+		},
+		{
+			title: "Posicionamiento SEO Estratégico",
+			description:
+				"Hacemos que tus clientes te encuentren en Google. Aumentamos tu visibilidad con estrategias de posicionamiento SEO, GEO y AIO técnicas, de contenido y locales que atraen tráfico cualificado y generan ventas.",
+			url: "/servicios/seo",
+			buttonLabel: "Explorar servicios de SEO",
+			items: [
+				"Auditoría y Estrategia SEO",
+				"Optimización On-Page y Técnica",
+				"SEO Local para Negocios",
+				"Reportes de Rendimiento",
+			],
+		},
+		{
+			title: "Diseño Gráfico y Digital (UX/UI)",
+			description:
+				"Creamos identidades visuales memorables y experiencias de usuario que funcionan. Desde un logotipo que define tu marca hasta interfaces intuitivas para tus plataformas digitales.",
+			url: "/servicios/diseno",
+			buttonLabel: "Descubrir Soluciones de Diseño",
+			items: [
+				"Branding y Diseño de Logotipos",
+				"Diseño de Interfaces (UX/UI)",
+				"Aplicaciones Web",
+				"Diseño Editorial y Publicitario",
+			],
+		},
+	];
 
 	const faqSchemaHome = {
 		"@context": "https://schema.org",
@@ -390,10 +433,9 @@ export default function HomeClient({ posts: postsToShow }) {
 				</div>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y ">
-				<h2>Nuestros Servicios de Desarrollo Web y Software</h2>
+				<h2>Nuestros Servicios Principales</h2>
 				<p className="text-white fs-5 mb-4">
-					Nuestros servicios van más allá del desarrollo técnico. Te ofrecemos
-					soluciones digitales completas que realmente impulsan tu negocio.
+					Te ofrecemos soluciones digitales integrales, divididas en tres áreas de expertise. Cada servicio está diseñado para funcionar en conjunto, creando una estrategia digital cohesiva y potente para tu negocio.
 				</p>
 				<p className="text-white fs-5 mb-4">
 					Incluimos asesoría estratégica,{" "}
@@ -405,43 +447,16 @@ export default function HomeClient({ posts: postsToShow }) {
 				</p>
 				<article className="d-flex justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
-						<CardServices
-							title="Desarrollo de sitios web"
-							description="Diseñamos cada detalle, desde lo visual hasta lo interactivo. Nuestro objetivo es optimizar la navegación y comunicar tu mensaje de forma clara y eficaz."
-							url="/servicios/desarrollo-web"
-							buttonLabel="Obtener servicios"
-							items={[
-								"Desarrollo Web Profesional",
-								"Ecommerce y Tiendas en Línea",
-								"Aplicaciones Web",
-								"Diseño UX/UI y Branding Digital",
-								"Hosting, Dominios y Mantenimiento Web",
-							]}
-						/>
-						<CardServices
-							title="Desarrollo de aplicaciones"
-							description="Usamos lenguajes como Kotlin, React Native y PHP (Laravel). Esto nos permite garantizar compatibilidad, rendimiento y un mantenimiento sencillo. Así, aseguramos la escalabilidad y eficiencia de tu proyecto."
-							url="/servicios/desarrollo-aplicaciones"
-							buttonLabel="Obtener servicios"
-							items={[
-								"Código Modular y Escalable",
-								"Optimización de Algoritmos",
-								"Interfaces API y Microservicios",
-								"Seguridad y Cifrado Avanzado",
-							]}
-						/>
-						<CardServices
-							title="Desarrollo de software"
-							description="Implementamos estructuras limpias y reutilizables en lenguajes como React Native y Java para garantizar la estabilidad y facilidad de crecimiento a largo plazo de tu proyecto."
-							url="/servicios/desarrollo-software"
-							buttonLabel="Obtener servicios"
-							items={[
-								"Clean Code",
-								"Optimización del Rendimiento",
-								"Seguridad a Nivel DevSecOps",
-								"Optimización para Dispositivos Móviles",
-							]}
-						/>
+						{cardServices.map((card, index) => (
+							<CardServices
+								key={index}
+								title={card.title}
+								description={card.description}
+								buttonLabel={card.buttonLabel}
+								url={card.url}
+								items={card.items}
+							/>
+						))}
 					</ul>
 				</article>
 			</section>
