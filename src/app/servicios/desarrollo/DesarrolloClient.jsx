@@ -64,19 +64,20 @@ export default function DesarrolloClient() {
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 						<CardServices
 							title="Desarrollo Web Profesional"
-							description="Creamos tu presencia en internet. Desde páginas corporativas y blogs hasta complejas tiendas en línea, construimos sitios web rápidos, optimizados para SEO y diseñados para convertir visitantes en clientes."
+							description="Diseñamos cada detalle, desde lo visual hasta lo interactivo. Nuestro objetivo es optimizar la navegación y comunicar tu mensaje de forma clara y eficaz."
 							url="/servicios/desarrollo/web"
 							buttonLabel="Conocer más sobre Desarrollo Web"
 							items={[
-								"Sitios Web Corporativos y Blogs",
-								"Tiendas en Línea (Comercio electrónico)",
-								"Optimización SEO desde el Código",
-								"Diseño Responsivo y Rápido",
+								"Desarrollo Web Profesional",
+								"Ecommerce y Tiendas en Línea",
+								"Aplicaciones Web",
+								"Diseño UX/UI y Branding Digital",
+								"Hosting, Dominios y Mantenimiento Web",
 							]}
 						/>
 						<CardServices
 							title="Desarrollo de Aplicaciones Móviles"
-							description="Conecta con tus usuarios dondequiera que estén. Desarrollamos aplicaciones nativas e híbridas para iOS y Android, enfocadas en una experiencia de usuario impecable y un rendimiento excepcional."
+							description="Usamos lenguajes como Kotlin, React Native y PHP (Laravel). Esto nos permite garantizar compatibilidad, rendimiento y un mantenimiento sencillo. Así, aseguramos la escalabilidad y eficiencia de tu proyecto."
 							url="/servicios/desarrollo/apps"
 							buttonLabel="Explorar Desarrollo de Apps"
 							items={[
