@@ -5,12 +5,12 @@ export const metadata = {
   keywords:
     "contratar desarrollo web, crear sitio web profesional, diseño de páginas web, creación de landing pages, creación de tiendas en línea, desarrollo web en México, soluciones digitales personalizadas, sitio web empresarial, servicios de desarrollo web, JEG Dev Studios",
   alternates: {
-    canonical: "https://www.jegdevstudios.com/servicios/desarrollo-web",
+    canonical: "https://www.jegdevstudios.com/servicios/desarrollo/web",
   },
   openGraph: {
     title: "Servicios de Desarrollo de Sitios Web | JEG Dev Studios",
     description: "Descubre nuestros servicios de desarrollo web",
-    url: "https://www.jegdevstudios.com/servicios/desarrollo-web",
+    url: "https://www.jegdevstudios.com/servicios/desarrollo/web",
     siteName: "JEG Dev Studios",
     images: [
       {
