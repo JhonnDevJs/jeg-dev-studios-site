@@ -53,7 +53,7 @@ export const metadata = {
 		siteName: "JEG Dev Studios",
 		images: [
 			{
-				url: "/img-SEO/metabackground.webp",
+				url: "/img-SEO/og-background-home.webp",
 				width: 1200,
 				height: 630,
 				alt: "JEG Dev Studios",
@@ -153,7 +153,7 @@ export default async function RootLayout({ children }) {
 							url: "https://www.jegdevstudios.com/",
 							logo: "https://www.jegdevstudios.com/icons-SEO/logo.webp",
 							image:
-								"https://www.jegdevstudios.com/img-SEO/metabackground.webp",
+								"https://www.jegdevstudios.com/img-SEO/og-background-home.webp",
 							email: "jegdevstudios@outlook.com",
 							telephone: "+52 1 5512197135",
 							address: {
@@ -211,7 +211,7 @@ export default async function RootLayout({ children }) {
 							"@type": "LocalBusiness",
 							name: "JEG Dev Studios",
 							image:
-								"https://www.jegdevstudios.com/img-SEO/metabackground.webp",
+								"https://www.jegdevstudios.com/img-SEO/og-background-home.webp",
 							url: "https://www.jegdevstudios.com/",
 							telephone: "+52 1 5512197135",
 							priceRange: "$$$",
