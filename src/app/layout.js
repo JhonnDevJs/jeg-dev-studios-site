@@ -62,6 +62,13 @@ export const metadata = {
 		locale: "es_MX",
 		type: "website",
 	},
+	twitter: {
+		card: "summary_large_image",
+		title: "Agencia de Desarrollo Web y Software en México | JEG Dev Studios",
+		description:
+			"Ofrecemos servicios de desarrollo web profesional y software a medida. Somos la agencia en México que impulsa tu negocio con Sprints ágiles, SEO y apps. ¡Cotiza tu proyecto!",
+		images: ["/img-SEO/og-background-home.webp"],
+	},
 	icons: {
 		icon: [
 			{ url: "/favicon.ico" },
@@ -171,7 +178,10 @@ export default async function RootLayout({ children }) {
 							sameAs: [
 								"https://www.facebook.com/JEGDevStudios",
 								"https://instagram.com/jegdevstudios/",
-								"https://linkedin.com/company/jegdevstudios",
+								"https://www.tiktok.com/@jeg.dev.studios",
+								"https://x.com/@jegdevstudios",
+								"https://linkedin.com/@jegdevstudios",
+								"https://www.youtube.com/@jegdevstudios",
 								"https://github.com/JEGDevStudios",
 							],
 							aggregateRating: {
@@ -248,8 +258,6 @@ export default async function RootLayout({ children }) {
 						}),
 					}}
 				/>
-				<meta name="twitter:site" content="@jegdevstudios" />
-				<meta name="twitter:creator" content="@jegdevstudios" />
 				<meta
 					name="google-adsense-account"
 					content="ca-pub-8211604143881682"
