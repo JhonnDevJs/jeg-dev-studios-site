@@ -12,7 +12,7 @@ export const metadata = {
 		siteName: "JEG Dev Studios",
 		images: [
 			{
-				url: "/img-SEO/og-background-home.webp",
+				url: "/img-SEO/og-background-about-us.webp",
 				width: 1200,
 				height: 630,
 				alt: "Equipo y misión de JEG Dev Studios",
