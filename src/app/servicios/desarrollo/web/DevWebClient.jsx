@@ -43,6 +43,24 @@ export default function DevWebClient() {
 				description:
 					"1 año de Hosting y dominio (con dondominio). Certificado SSL. Email corporativo. Diseño responsivo (optimizado para móviles). Cambios en el diseño: 8 (a nivel de sección). Hasta 10 landing pages/layouts. 4 Secciones dentro del layout/landing page. Integración completa de redes sociales (Facebook, Instagram, X (Twitter), WhatsApp). Implementación básica de SEO. 2 días Mantenimiento gratuitos 1 cada 6 meses. Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel) ó Node js. Tiempo de entrega: 15 a 30 días hábiles.",
 			},
+			{
+				id: "landing-page-profesional",
+				name: "Landing Page Profesional",
+				price: 2999,
+				currency: "MXN",
+				imageSrc: imgWebProduct1.src,
+				description:
+					"Dominio personalizado incluido (1 año), Hosting gratuito mediante Google Sites, Diseño responsivo, Posicionamiento inicial en Google (SEO básico), Diseño adaptado a la marca del cliente, Hasta 5 secciones para tu página (landing)",
+			},
+			{
+				id: "mini-sitio",
+				name: "Mini Sitio",
+				price: 3500,
+				currency: "MXN",
+				imageSrc: imgWebProduct1.src,
+				description:
+					"Dominio personalizado incluido (1 año), Hosting gratuito mediante Google Sites, Diseño responsivo, Posicionamiento inicial en Google (SEO básico), Diseño adaptado a la marca del cliente, Hasta 5 paginas (landings), 5 secciones por página (landing)",
+			},
 		],
 		[]
 	);
@@ -167,7 +185,7 @@ export default function DevWebClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<h2>
-					¿Necesitas un sitio web especifico y secillo pero profesional para tu
+					¿Necesitas un sitio web especifico y secillo pero profesional para iniciar en tu
 					negocio?
 				</h2>
 				<p className="lead w-100 px-3 px-md-5">
@@ -191,6 +209,24 @@ export default function DevWebClient() {
 							"Escoge 5 secciones para tu página",
 						]}
 						onAdd={() => handleWhatsAppRedirect("Landing Page Profesional")}
+					/>
+					<CardProduct
+						idProduct="mini-sitio"
+						dataPrice={3500}
+						title="Mini Sitio"
+						price="3500"
+						moneda="MXN"
+						imageUrl={imgWebProduct1.src}
+						items={[
+							"Dominio personalizado incluido (1 año)",
+							"Hosting gratuito mediante Google Sites",
+							"Diseño responsivo",
+							"Posicionamiento inicial en Google (SEO básico)",
+							"Diseño adaptado a la marca del cliente",
+							"Hasta 5 paginas (landings)",
+							"5 secciones por página (landing)",
+						]}
+						onAdd={() => handleWhatsAppRedirect("Mini Sitio")}
 					/>
 				</ul>
 			</section>
