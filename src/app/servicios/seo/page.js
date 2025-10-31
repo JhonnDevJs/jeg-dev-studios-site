@@ -22,7 +22,7 @@ export const metadata = {
 		type: "website",
 	},
 	alternates: {
-		canonical: "https://www.jegdevstudios.com/servicios/seo/",
+		canonical: "https://www.jegdevstudios.com/servicios/seo",
 	},
 };
 
