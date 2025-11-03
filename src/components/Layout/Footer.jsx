@@ -41,7 +41,7 @@ function Footer() {
             <h2 className="text-white fs-4">Siguenos</h2>
             <div className="d-flex justify-content-center align-items-center gap-3">
               <Link
-                className="d-flex fs-2 text-decoration-none icon-facebook __icons-color"
+                className="d-flex fs-2 text-decoration-none"
                 href="https://www.facebook.com/JEGDevStudios"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -49,9 +49,9 @@ function Footer() {
                 aria-label="Enlace a página de facebook de JEG Dev studios"
                 aria-labelledby="facebook"
                 tabIndex={0}
-              ></Link>
+              ><span className="icon-facebook __icons-color"></span></Link>
               <Link
-                className="d-flex fs-2 text-decoration-none icon-instagram __icons-color"
+                className="d-flex fs-2 text-decoration-none"
                 href="https://instagram.com/jegdevstudios/"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -59,9 +59,9 @@ function Footer() {
                 aria-label="Enlace a perfil de Instagram de JEG Dev studios"
                 aria-labelledby="instagram"
                 tabIndex={0}
-              ></Link>
+              ><span className=" icon-instagram __icons-color"></span></Link>
               <Link
-                className="d-flex fs-2 text-decoration-none icon-tiktok __icons-color"
+                className="d-flex fs-2 text-decoration-none"
                 href="https://www.tiktok.com/@jeg.dev.studios"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -69,9 +69,9 @@ function Footer() {
                 aria-label="Enlace a perfil de TikTok de JEG Dev studios"
                 aria-labelledby="TikTok"
                 tabIndex={0}
-              ></Link>
+              ><span className=" icon-tiktok __icons-color"></span></Link>
               <Link
-                className="d-flex fs-2 text-decoration-none icon-youtube __icons-color"
+                className="d-flex fs-2 text-decoration-none"
                 href="https://www.youtube.com/@jegdevstudios"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -79,9 +79,9 @@ function Footer() {
                 aria-label="Enlace a canal de Youtube de JEG Dev studios"
                 aria-labelledby="Youtube"
                 tabIndex={0}
-              ></Link>
+              ><span className=" icon-youtube __icons-color"></span></Link>
               <Link
-                className="d-flex fs-2 text-decoration-none icon-linkedin-no-bg __icons-color"
+                className="d-flex fs-2 text-decoration-none"
                 href="https://linkedin.com/company/jegdevstudios"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -89,9 +89,19 @@ function Footer() {
                 aria-label="Enlace a perfil de linkedin de JEG Dev studios"
                 aria-labelledby="linkedin"
                 tabIndex={0}
-              ></Link>
+              ><span className=" icon-linkedin-no-bg __icons-color"></span></Link>
               <Link
-                className="d-flex fs-2 text-decoration-none icon-github __icons-color"
+                className="d-flex fs-2 text-decoration-none"
+                href="https://x.com/JEGDevStudios"
+                target="_blank"
+                rel="noopener noreferrer"
+                title="Enlace a perfil de github de JEG Dev studios"
+                aria-label="Enlace a perfil de x (twitter) de JEG Dev studios"
+                aria-labelledby="github"
+                tabIndex={0}
+              ><span className=" icon-x __icons-color"></span></Link>
+              <Link
+                className="d-flex fs-2 text-decoration-none"
                 href="https://github.com/JEGDevStudios"
                 target="_blank"
                 rel="noopener noreferrer"
@@ -99,7 +109,7 @@ function Footer() {
                 aria-label="Enlace a perfil de github de JEG Dev studios"
                 aria-labelledby="github"
                 tabIndex={0}
-              ></Link>
+              ><span className=" icon-github __icons-color"></span></Link>
             </div>
           </section>
         </article>

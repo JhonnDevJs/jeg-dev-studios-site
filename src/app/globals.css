@@ -110,8 +110,8 @@ body {
 
 .btn-whatsapp {
   position: fixed;
-  bottom: 2rem;
-  right: 2rem;
+  bottom: 8rem;
+  right: 1rem;
   z-index: 2;
 }
 

@@ -32,8 +32,10 @@ function CardTeam({ imageUrl, name, position, description, links }) {
                   tabIndex={0}
                   title={link.title}
                   aria-label={link.title}
-                  className={`link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover ${link.icon} fs-3 __icons-color`}
-                ></Link>
+                  className={`link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover`}
+                >
+                  <span className={`${link.icon} fs-3 __icons-color`}></span>
+                </Link>
               ))}
             </div>
           </div>
