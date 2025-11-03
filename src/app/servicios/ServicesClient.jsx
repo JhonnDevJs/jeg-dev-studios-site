@@ -38,26 +38,11 @@ export default function ServicesClient() {
 		setOpenIndex(openIndex === index ? null : index);
 	};
 
-	// Schema ESPECÍFICO para esta página de servicios
-	const faqSchema = {
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		mainEntity: faqs.map((faq) => ({
-			// Usa las FAQs de ESTA PÁGINA
-			"@type": "Question",
-			name: faq.question,
-			acceptedAnswer: {
-				"@type": "Answer",
-				text: faq.answer,
-			},
-		})),
-	};
-
 	return (
 		<>
 			{/* Este componente solo renderiza el schema de FAQ aquí, no en otras páginas */}
 
-			<StructuredData data={faqSchema} />
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Servicios.webp"
@@ -72,12 +57,21 @@ export default function ServicesClient() {
 					Soluciones Digitales a Medida: Desarrollo, SEO y Diseño
 				</h1>
 				<p className="lead text-white text-center">
-					En JEG Dev Studios, creamos ecosistemas digitales completos. Desde el desarrollo de software robusto hasta estrategias SEO que te posicionan en Google y diseños que enamoran a tus usuarios. Explora nuestra gama de servicios de desarrollo digital y descubre cómo podemos impulsar tu negocio.
+					En JEG Dev Studios, creamos ecosistemas digitales completos. Desde el
+					desarrollo de software robusto hasta estrategias SEO que te posicionan
+					en Google y diseños que enamoran a tus usuarios. Explora nuestra gama
+					de servicios de desarrollo digital y descubre cómo podemos impulsar tu
+					negocio.
 				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<h2 className="text-center text-white">Nuestras Áreas de Expertise</h2>
-				<p className="lead text-white text-center">Como agencia de desarrollo digital , ofrecemos soluciones integrales en tres pilares fundamentales. Cada servicio está diseñado para funcionar en conjunto, creando una estrategia digital cohesiva y potente.</p>
+				<p className="lead text-white text-center">
+					Como agencia de desarrollo digital , ofrecemos soluciones integrales
+					en tres pilares fundamentales. Cada servicio está diseñado para
+					funcionar en conjunto, creando una estrategia digital cohesiva y
+					potente.
+				</p>
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 						<CardServices

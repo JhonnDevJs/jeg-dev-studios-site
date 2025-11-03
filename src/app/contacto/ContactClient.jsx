@@ -32,6 +32,11 @@ const faqs = [
 		answer:
 			"Dependiendo del caso puedes contratarlo a través de nuestro portal web, enviando un mensaje por WhatsApp a nuestro equipo de soporte, llenando este formulario seleccionando la opción de soporte o enviando un correo electrónico.",
 	},
+	{
+		question: "¿Cuáles son sus redes sociales oficiales?",
+		answer:
+			"Puedes encontrarnos en Facebook, Instagram, TikTok, YouTube, LinkedIn, X (antes Twitter) y GitHub como @JEGDevStudios. ¡Síguenos para no perderte ninguna novedad!",
+	},
 ];
 
 export default function ContactClient() {
@@ -87,7 +92,7 @@ export default function ContactClient() {
 
 	return (
 		<>
-			<StructuredData data={faqs} />
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Contacto.webp"

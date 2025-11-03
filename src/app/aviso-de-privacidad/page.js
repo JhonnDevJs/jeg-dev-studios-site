@@ -1,4 +1,5 @@
 import Link from "next/link";
+import StructuredData from "@/components/Seo/StructuredData";
 
 export const metadata = {
 	title: "Aviso de Privacidad | JEG Dev Studios",
@@ -28,9 +29,33 @@ export const metadata = {
 	},
 };
 
+const faqs = [
+	{
+		question: "¿Qué tipo de información personal recopila JEG Dev Studios?",
+		answer:
+			"Recopilamos datos esenciales para poder ofrecerte nuestros servicios, como tu nombre, correo electrónico, teléfono y detalles sobre tu proyecto. Si requieres factura, también solicitamos datos fiscales como tu RFC.",
+	},
+	{
+		question: "¿Para qué se utilizan mis datos personales?",
+		answer:
+			"Tus datos se usan principalmente para fines operativos: comunicarnos contigo, generar propuestas, formalizar contratos, facturar y darte soporte. Solo usamos tus datos para fines secundarios, como marketing, si nos das tu consentimiento.",
+	},
+	{
+		question: "¿Mis datos personales se comparten con otras empresas?",
+		answer:
+			"No. No compartimos tus datos con terceros sin tu consentimiento, excepto cuando es estrictamente necesario para cumplir con obligaciones legales o contractuales, como con proveedores de facturación o pasarelas de pago.",
+	},
+	{
+		question: "¿Cómo puedo solicitar que eliminen mi información?",
+		answer:
+			"Puedes ejercer tus derechos ARCO (Acceso, Rectificación, Cancelación u Oposición) en cualquier momento. Solo necesitas enviar un correo a contacto@jegdevstudios.com con tu solicitud y nos encargaremos de procesarla.",
+	},
+];
+
 export default function PrivacyPolicy() {
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5 gradient-effect-y">
 				<h1 className="text-white">Aviso de Privacidad</h1>
 				<p className="text-white text-center">
@@ -93,15 +118,15 @@ export default function PrivacyPolicy() {
 						secundarios, puede enviar un correo a:
 					</p>
 					<Link
-						href="mailto:jegdevstudioscontact@gmail.com"
+						href="mailto:contacto@jegdevstudios.com"
 						className="text-white text-decoration-underline"
 						target="_blank"
 						rel="noopener noreferrer"
 						tabIndex={0}
-						title="Envía un correo a jegdevstudioscontact@gmail.com"
-						aria-label="Envía un correo a jegdevstudioscontact@gmail.com"
+						title="Envía un correo a contacto@jegdevstudios.com"
+						aria-label="Envía un correo a contacto@jegdevstudios.com"
 					>
-						jegdevstudioscontact@gmail.com
+						contacto@jegdevstudios.com
 					</Link>
 					<p className="text-white">
 						Con el asunto: <em>&quot;Negativa a fines secundarios&quot;</em>
@@ -148,15 +173,15 @@ export default function PrivacyPolicy() {
 					</p>
 					<p className="text-white">A la dirección: </p>
 					<Link
-						href="mailto:jegdevstudioscontact@gmail.com"
+						href="mailto:contacto@jegdevstudios.com"
 						className="text-white text-decoration-underline"
 						target="_blank"
 						rel="noopener noreferrer"
 						tabIndex={0}
-						title="Envía un correo a jegdevstudioscontact@gmail.com"
-						aria-label="Envía un correo a jegdevstudioscontact@gmail.com"
+						title="Envía un correo a contacto@jegdevstudios.com"
+						aria-label="Envía un correo a contacto@jegdevstudios.com"
 					>
-						jegdevstudioscontact@gmail.com
+						contacto@jegdevstudios.com
 					</Link>
 					<p className="text-white">Incluya:</p>
 					<ul>
@@ -184,15 +209,15 @@ export default function PrivacyPolicy() {
 						<em>&quot;Revocación de consentimiento&quot;</em> a:
 					</p>
 					<Link
-						href="mailto:jegdevstudioscontact@gmail.com"
+						href="mailto:contacto@jegdevstudios.com"
 						className="text-white text-decoration-underline"
 						target="_blank"
 						rel="noopener noreferrer"
 						tabIndex={0}
-						title="Envía un correo a jegdevstudioscontact@gmail.com"
-						aria-label="Envía un correo a jegdevstudioscontact@gmail.com"
+						title="Envía un correo a contacto@jegdevstudios.com"
+						aria-label="Envía un correo a contacto@jegdevstudios.com"
 					>
-						jegdevstudioscontact@gmail.com
+						contacto@jegdevstudios.com
 					</Link>
 					<p className="text-white">
 						Tenga en cuenta que esto podría afectar la prestación de los
@@ -240,7 +265,7 @@ export default function PrivacyPolicy() {
 						www.jegdevstudios.com/aviso-de-privacidad
 					</Link>
 					<p className="text-white mt-2">
-						Última actualización: 27 de mayo de 2025
+						Última actualización: 03 de noviembre de 2025
 					</p>
 				</article>
 			</section>

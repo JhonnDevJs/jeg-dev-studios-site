@@ -3,10 +3,30 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import ProjectCard from "@/components/Cards/ProjectCard";
 import DesignProjectCard from "@/components/Cards/DesignProjectCard";
+import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
 import { storage, db } from "@/lib/firebase";
 import { getDownloadURL, ref } from "firebase/storage";
 import { collection, getDocs } from "firebase/firestore";
 import "./Projects.css";
+
+const faqs = [
+	{
+		question: "¿Los proyectos del portafolio son de clientes reales?",
+		answer:
+			"Sí, la mayoría de los proyectos que mostramos son trabajos realizados para clientes reales. También incluimos algunos proyectos internos que desarrollamos para explorar nuevas tecnologías y demostrar nuestras capacidades.",
+	},
+	{
+		question: "¿Por qué no veo proyectos en algunas categorías?",
+		answer:
+			"Nuestro portafolio está en constante actualización. Si una categoría aparece vacía, significa que estamos preparando los casos de estudio de nuestros proyectos más recientes en esa área. ¡Vuelve pronto para ver las novedades!",
+	},
+	{
+		question: "Me gusta un proyecto, ¿pueden hacer algo similar para mí?",
+		answer:
+			"¡Claro! El portafolio es una excelente referencia para que nos muestres qué estilo o funcionalidades te interesan. Podemos tomarlo como punto de partida para crear una solución 100% personalizada para tu negocio.",
+	},
+];
 
 function ProjectsClient() {
 	const [projectsByCategory, setProjectsByCategory] = useState({});
@@ -94,6 +114,7 @@ function ProjectsClient() {
 
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Proyectos.webp"
@@ -167,6 +188,10 @@ function ProjectsClient() {
 					</article>
 				</section>
 			)}
+			<FAQ
+				faqs={faqs}
+				subtitle="Preguntas frecuentes sobre nuestro portafolio."
+			/>
 		</>
 	);
 }

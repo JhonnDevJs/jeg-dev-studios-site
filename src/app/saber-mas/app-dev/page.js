@@ -1,4 +1,6 @@
 import CTA from "@/components/Cta/CTA";
+import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
 
 export const metadata = {
 	title: "Desarrollo de Aplicaciones | Saber Más | JEG Dev Studios",
@@ -28,9 +30,33 @@ export const metadata = {
 	},
 };
 
+const faqs = [
+	{
+		question: "¿Ofrecen desarrollo de aplicaciones para clientes externos?",
+		answer:
+			"Actualmente, nuestro servicio de desarrollo de aplicaciones está enfocado en proyectos internos de JEG Dev Studios. No estamos tomando proyectos de clientes externos en este momento, pero utilizamos esta área para innovar y prepararnos para futuras ofertas.",
+	},
+	{
+		question: "¿Qué tipo de aplicaciones desarrollan internamente?",
+		answer:
+			"Desarrollamos una variedad de aplicaciones, desde herramientas de productividad hasta aplicaciones móviles para diversas plataformas. Nuestro objetivo es explorar nuevas tecnologías y crear productos de alta calidad que reflejen nuestro compromiso con la innovación.",
+	},
+	{
+		question: "¿Qué tecnologías utilizan para el desarrollo de aplicaciones?",
+		answer:
+			"Usamos un stack tecnológico moderno que incluye Java, Kotlin Multiplatform para desarrollo multiplataforma, y Flutter para la creación de interfaces de usuario ricas y fluidas. Para el backend, confiamos en la robustez de Node.js.",
+	},
+	{
+		question: "¿Cuándo planean ofrecer este servicio al público?",
+		answer:
+			"Aunque no tenemos una fecha definida, estamos constantemente perfeccionando nuestros procesos y habilidades. Anunciaremos en nuestro sitio web y redes sociales cuando el servicio de desarrollo de aplicaciones esté disponible para nuevos clientes.",
+	},
+];
+
 function AppDev() {
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="d-flex flex-column text-white w-100 p-5 m-0 gap-5 gradient-effect-x">
 				<article className="d-flex flex-column pt-5 gap-3">
 					<h1 className="section-title">
@@ -138,6 +164,10 @@ function AppDev() {
 					</p>
 				</article>
 			</section>
+			<FAQ
+				faqs={faqs}
+				subtitle="Resolvemos tus dudas sobre nuestro enfoque en el desarrollo de apps."
+			/>
 			<CTA />
 		</>
 	);

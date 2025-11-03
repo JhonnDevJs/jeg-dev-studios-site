@@ -1,12 +1,33 @@
 "use client";
 import Link from "next/link";
 import CTA from "@/components/Cta/CTA";
+import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
 import Image from "next/image";
 import "./AboutClient.css";
+
+const faqs = [
+	{
+		question: "¿Qué significa 'JEG: Jumpstart Every Goal'?",
+		answer:
+			"Es nuestra filosofía. Significa 'Impulsa Cada Objetivo'. No solo construimos software, sino que actuamos como el catalizador que impulsa las metas de nuestros clientes, convirtiendo sus ideas en realidades digitales funcionales.",
+	},
+	{
+		question: "¿En qué se especializa el equipo fundador?",
+		answer:
+			"Nuestro equipo combina experticia en áreas clave: desarrollo Full-Stack y SEO (Jhonatan), diseño de experiencias de usuario UX/UI (Fernanda), desarrollo Backend robusto (Leonardo) y desarrollo Frontend enfocado en rendimiento (Ricardo). Esta diversidad nos permite ofrecer soluciones integrales.",
+	},
+	{
+		question: "¿Dónde se encuentran ubicados?",
+		answer:
+			"Nuestra sede principal se encuentra en la Ciudad de México (CDMX), pero nuestro modelo de trabajo nos permite colaborar con clientes de todo México y cualquier parte del mundo, adaptándonos a diferentes zonas horarias y necesidades.",
+	},
+];
 
 export default function AboutClient() {
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Nosotros.webp"
@@ -196,6 +217,10 @@ export default function AboutClient() {
 				</article>
 			</section>
 			<CTA />
+			<FAQ
+				faqs={faqs}
+				subtitle="Conoce más sobre nuestra filosofía y equipo."
+			/>
 		</>
 	);
 }

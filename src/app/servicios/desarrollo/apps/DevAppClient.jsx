@@ -2,12 +2,37 @@
 import { useMemo } from "react";
 import CardPacksProduct from "@/components/Cards/CardPacksProduct";
 import CTAProducts from "@/components/Cta/CTAProducts";
+import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
 import Image from "next/image";
 import imgAppProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import "./DevAppClient.css";
+
+const faqs = [
+	{
+		question: "¿Qué es mejor, una app nativa o una multiplataforma?",
+		answer:
+			"Depende de tu objetivo. Una app nativa (un desarrollo para iOS y otro para Android) ofrece el máximo rendimiento. Una app multiplataforma (con React Native o Kotlin Multiplatform) reduce costos y tiempo de desarrollo al usar una base de código compartida, siendo ideal para la mayoría de los proyectos.",
+	},
+	{
+		question: "¿El precio incluye la publicación en las tiendas de apps?",
+		answer:
+			"Sí, todos nuestros paquetes incluyen el proceso completo de preparación y publicación tanto en la Google Play Store (Android) como en la App Store (iOS), asegurando que cumpla con todas las normativas.",
+	},
+	{
+		question: "¿Qué es el 'backend' y por qué lo necesito?",
+		answer:
+			"El backend es el 'cerebro' de tu aplicación. Es un servidor que gestiona los datos, la lógica de negocio y la autenticación de usuarios. Es esencial para apps que necesitan guardar información, tener perfiles de usuario o sincronizar datos entre dispositivos.",
+	},
+	{
+		question: "¿Qué tipo de mantenimiento necesita una app después de ser lanzada?",
+		answer:
+			"Una app requiere mantenimiento para asegurar su compatibilidad con nuevas versiones de iOS y Android, corregir posibles errores y, opcionalmente, añadir nuevas funcionalidades. Ofrecemos planes de mantenimiento para garantizar que tu app siga funcionando perfectamente a largo plazo.",
+	},
+];
 
 export default function DevAppClient() {
 	const products = useMemo(
@@ -78,6 +103,7 @@ export default function DevAppClient() {
 	};
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
@@ -174,6 +200,10 @@ export default function DevAppClient() {
 					/>
 				</ul>
 			</section>
+			<FAQ
+				faqs={faqs}
+				subtitle="Preguntas frecuentes sobre el desarrollo de apps."
+			/>
 			<CTAProducts />
 		</>
 	);

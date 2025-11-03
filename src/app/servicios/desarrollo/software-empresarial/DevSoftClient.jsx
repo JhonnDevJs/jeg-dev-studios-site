@@ -4,12 +4,38 @@ import CardPacksProduct from "@/components/Cards/CardPacksProduct";
 import CardSmallList from "@/components/Cards/CardSmallList";
 import SectionProcess from "@/components/SectionProcess";
 import CTAProducts from "@/components/Cta/CTAProducts";
+import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
 import Image from "next/image";
 import imgSoftProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import "./DevSoftClient.css";
+
+const faqs = [
+	{
+		question:
+			"¿Cuál es la diferencia entre 'Software de escritorio' y 'App web local'?",
+		answer:
+			"El software de escritorio se instala y ejecuta directamente en un ordenador (Windows, macOS). La app web local funciona desde un navegador dentro de tu red interna, sin necesidad de internet, lo que facilita el acceso desde varios dispositivos conectados a la misma red.",
+	},
+	{
+		question: "Si empiezo con una 'Solución Básica', ¿puedo mejorarla después?",
+		answer:
+			"Sí. Todos nuestros desarrollos son modulares y escalables. Puedes empezar con un módulo y, a medida que tu negocio crezca, podemos añadir más funcionalidades, integrar más usuarios o migrar tu sistema a la nube sin problemas.",
+	},
+	{
+		question: "¿Qué significa 'integraciones externas' en la Solución Profesional?",
+		answer:
+			"Significa que podemos conectar tu software con otras herramientas que ya uses, como sistemas de facturación electrónica (SAT), plataformas de pago, CRMs (como Salesforce), o cualquier otra API que necesites para centralizar tus operaciones.",
+	},
+	{
+		question: "¿Ofrecen capacitación y soporte para el software?",
+		answer:
+			"Sí. Los paquetes más avanzados incluyen capacitación inicial para tu equipo. Además, todos los paquetes cuentan con garantía y ofrecemos planes de soporte y mantenimiento post-entrega para asegurar el funcionamiento continuo de tu sistema.",
+	},
+];
 
 export default function DevSoftClient() {
 	const products = useMemo(
@@ -80,6 +106,7 @@ export default function DevSoftClient() {
 	};
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
@@ -214,6 +241,10 @@ export default function DevSoftClient() {
 				</p>
 			</section>
 			<CTAProducts />
+			<FAQ
+				faqs={faqs}
+				subtitle="Resuelve tus dudas sobre nuestras soluciones de software."
+			/>
 		</>
 	);
 }

@@ -1,4 +1,6 @@
 import Link from "next/link";
+import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
 
 export const metadata = {
 	title: "Términos y Condiciones | JEG Dev Studios",
@@ -28,9 +30,35 @@ export const metadata = {
 	},
 };
 
+const faqs = [
+	{
+		question: "¿Qué pasa si no entrego el material para mi proyecto a tiempo?",
+		answer:
+			"El tiempo de desarrollo comienza a contar una vez que nos entregas todo el material necesario (textos, logos, imágenes). Si hay retrasos en la entrega de este material, el cronograma del proyecto se ajustará en consecuencia.",
+	},
+	{
+		question: "¿Puedo cancelar mi proyecto una vez que ha comenzado?",
+		answer:
+			"Puedes decidir no continuar, pero el pago inicial del 50% no es reembolsable, ya que cubre los costos de planificación, diseño y desarrollo inicial en los que incurrimos desde el momento en que se formaliza el proyecto.",
+	},
+	{
+		question:
+			"¿El precio de mi paquete de desarrollo web incluye hosting y dominio para siempre?",
+		answer:
+			"No. Generalmente, los paquetes que incluyen hosting y dominio cubren únicamente el primer año. Después de ese período, la renovación de estos servicios tiene un costo anual que se te notificará con antelación.",
+	},
+	{
+		question:
+			"Si contrato un servicio, ¿pueden usar mi proyecto en su portafolio?",
+		answer:
+			"Sí. Al contratar nuestros servicios, nos autorizas a incluir una muestra de tu proyecto en nuestro portafolio. Nos comprometemos a hacerlo de forma ética y sin revelar información confidencial o estratégica de tu negocio.",
+	},
+];
+
 export default function TermsAndConditions() {
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5 gradient-effect-y">
 				<h1 className="text-white">Términos y Condiciones de Uso</h1>
 				<p className="text-white text-center">
@@ -292,13 +320,13 @@ export default function TermsAndConditions() {
 						<br />
 						📧 <strong>Email:</strong>{" "}
 						<Link
-							href="mailto:jegdevstudioscontact@gmail.com"
+							href="mailto:contacto@jegdevstudios.com"
 							className="text-white text-decoration-underline"
 							tabIndex={0}
 							title="correo de contacto"
 							aria-label="correo de contacto"
 						>
-							jegdevstudioscontact@gmail.com
+							contacto@jegdevstudios.com
 						</Link>
 					</p>
 				</article>
@@ -316,6 +344,11 @@ export default function TermsAndConditions() {
 					</p>
 				</article>
 			</section>
+
+			<FAQ
+				faqs={faqs}
+				subtitle="Conoce más sobre nuestros terminos y condiciones de servicio."
+			/>
 		</>
 	);
 }

@@ -1,3 +1,7 @@
+import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
+import CTA from "@/components/Cta/CTA";
+
 export const metadata = {
 	title: "Desarrollo de Software | Saber Más | JEG Dev Studios",
 	description:
@@ -26,11 +30,35 @@ export const metadata = {
 	},
 };
 
-import CTA from "@/components/Cta/CTA";
+
+const faqs = [
+	{
+		question: "¿El servicio de desarrollo de software está disponible para clientes?",
+		answer:
+			"Por el momento, nuestro desarrollo de software se concentra en proyectos internos y productos propios. Esta estrategia nos permite innovar y perfeccionar nuestras soluciones antes de ofrecerlas al público general.",
+	},
+	{
+		question: "¿Qué tipo de software crean como proyectos propios?",
+		answer:
+			"Creamos diversas soluciones, desde herramientas de gestión hasta aplicaciones especializadas. Nuestro objetivo es construir software robusto, escalable y que ofrezca un valor real a los futuros usuarios.",
+	},
+	{
+		question:
+			"¿Qué tecnologías utilizan para sus proyectos de software interno?",
+		answer:
+			"Utilizamos un conjunto de tecnologías modernas y probadas como Java, PHP con Laravel, React Native para soluciones móviles, y Node.js para backends eficientes. Esto nos garantiza flexibilidad y calidad en cada desarrollo.",
+	},
+	{
+		question: "¿Cómo puedo saber si este servicio estará disponible en el futuro?",
+		answer:
+			"Te recomendamos seguirnos en nuestras redes sociales y visitar nuestro sitio web regularmente. Anunciaremos cualquier actualización sobre la disponibilidad de nuestros servicios de desarrollo de software para clientes.",
+	},
+];
 
 function SoftDev() {
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="d-flex flex-column text-white w-100 p-5 m-0 gap-5 gradient-effect-x">
 				<article className="d-flex flex-column pt-5 gap-3">
 					<h1>Saber Más sobre Nuestro Servicio de Desarrollo de Software</h1>
@@ -74,6 +102,10 @@ function SoftDev() {
 				</article>
 			</section>
 			<CTA />
+			<FAQ
+				faqs={faqs}
+				subtitle="Preguntas frecuentes sobre nuestro desarrollo de software."
+			/>
 		</>
 	);
 }

@@ -36,7 +36,25 @@ import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
 import Richi from "@/assets/img/img/team/ricardo.webp";
 import "./home.css";
 
-const faqsHome = [
+const faqs = [
+	// --- Actuales ---
+	{
+		question:
+			"¿Ofrecen un servicio de diseño web en México enfocado en empresas locales?",
+		answer:
+			"Sí. Nuestro servicio de diseño está 100% especializado en el mercado mexicano. Entendemos las tendencias locales para crear sitios web que realmente conectan con tu audiencia, por lo que si buscas diseño web en México, somos tu mejor opción.",
+	},
+	{
+		question: "¿Cómo adaptan los servicios que ofrecen a cada proyecto?",
+		answer:
+			"No creemos en soluciones genéricas. Los servicios que ofrecen la mayoría de las agencias son estandarizados; nosotros, en cambio, comenzamos por entender a fondo cada necesidad del cliente. A partir de ahí, diseñamos una estrategia y una solución tecnológica completamente a medida.",
+	},
+	{
+		question: "¿Qué los diferencia de otra agencia digital?",
+		answer:
+			"Somos una agencia digital con un ADN profundamente técnico. No solo creamos diseños atractivos; construimos sitios web optimizados desde el código para los motores de búsqueda como Google. Nuestro enfoque garantiza no solo belleza, sino también visibilidad y rendimiento técnico superior.",
+	},
+	
 	// Desarrollo Web
 	{
 		question: "¿Qué incluye el servicio de desarrollo web de JEG Dev Studios?",
@@ -134,26 +152,6 @@ const faqsHome = [
 	},
 ];
 
-const faqs = [
-	// --- Actuales ---
-	{
-		question:
-			"¿Ofrecen un servicio de diseño web en México enfocado en empresas locales?",
-		answer:
-			"Sí. Nuestro servicio de diseño está 100% especializado en el mercado mexicano. Entendemos las tendencias locales para crear sitios web que realmente conectan con tu audiencia, por lo que si buscas diseño web en México, somos tu mejor opción.",
-	},
-	{
-		question: "¿Cómo adaptan los servicios que ofrecen a cada proyecto?",
-		answer:
-			"No creemos en soluciones genéricas. Los servicios que ofrecen la mayoría de las agencias son estandarizados; nosotros, en cambio, comenzamos por entender a fondo cada necesidad del cliente. A partir de ahí, diseñamos una estrategia y una solución tecnológica completamente a medida.",
-	},
-	{
-		question: "¿Qué los diferencia de otra agencia digital?",
-		answer:
-			"Somos una agencia digital con un ADN profundamente técnico. No solo creamos diseños atractivos; construimos sitios web optimizados desde el código para los motores de búsqueda como Google. Nuestro enfoque garantiza no solo belleza, sino también visibilidad y rendimiento técnico superior.",
-	},
-];
-
 export default function HomeClient({ posts: postsToShow }) {
 	const [mounted, setMounted] = useState(false);
 	useEffect(() => setMounted(true), []);
@@ -199,19 +197,6 @@ export default function HomeClient({ posts: postsToShow }) {
 			],
 		},
 	];
-
-	const faqSchemaHome = {
-		"@context": "https://schema.org",
-		"@type": "FAQPage",
-		mainEntity: faqsHome.map((faq) => ({
-			"@type": "Question",
-			name: faq.question,
-			acceptedAnswer: {
-				"@type": "Answer",
-				text: faq.answer,
-			},
-		})),
-	};
 
 	const teamData = [
 		{
@@ -319,7 +304,7 @@ export default function HomeClient({ posts: postsToShow }) {
 
 	return (
 		<>
-			<StructuredData data={faqSchemaHome} />
+			<StructuredData data={faqs} type="FAQPage" />
 			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground bg-fixed-cover ">
 				<article
 					className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0"

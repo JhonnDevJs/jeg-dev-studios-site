@@ -7,11 +7,38 @@ import CardSmallList from "@/components/Cards/CardSmallList";
 import CardNestedLists from "@/components/Cards/CardNestedLists";
 import CardsProcess from "@/components/Cards/CardsProcess";
 import SectionProcess from "@/components/SectionProcess";
+import StructuredData from "@/components/Seo/StructuredData";
+import FAQ from "@/components/Seo/FAQ";
 import Image from "next/image";
 import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import "./DevWebClient.css";
+
+const faqs = [
+	{
+		question:
+			"¿Cuál es la principal diferencia entre el 'Paquete Básico' y la 'Landing Page Profesional'?",
+		answer:
+			"La 'Landing Page Profesional' es ideal para un lanzamiento rápido y está construida sobre Google Sites, lo que simplifica el hosting. El 'Paquete Básico' ofrece una solución más robusta con hosting propio (Hostinger), un backend en Node.js y un email corporativo, dándote más control y profesionalismo.",
+	},
+	{
+		question: "¿El hosting y dominio están incluidos para siempre?",
+		answer:
+			"Incluimos el primer año de hosting y dominio en todos nuestros paquetes. Después del primer año, la renovación tiene un costo anual que te notificaremos con anticipación. Los paquetes de 'Landing Page' y 'Mini Sitio' usan Google Sites, cuyo hosting es gratuito de forma continua.",
+	},
+	{
+		question: "¿Qué significa 'cambios a nivel de sección'?",
+		answer:
+			"Se refiere a ajustes en el contenido, imágenes o estructura de una de las secciones ya existentes en tu página (ej. 'Nosotros', 'Servicios', 'Contacto'). No incluye la creación de una sección completamente nueva, la cual tendría un costo adicional.",
+	},
+	{
+		question:
+			"Si contrato un paquete, ¿puedo agregar más funcionalidades después?",
+		answer:
+			"¡Por supuesto! Todos nuestros desarrollos son escalables. Si en el futuro necesitas añadir una tienda en línea, un blog o cualquier otra funcionalidad, podemos cotizarla e integrarla a tu sitio web existente sin problemas.",
+	},
+];
 
 export default function DevWebClient() {
 	const products = useMemo(
@@ -92,6 +119,7 @@ export default function DevWebClient() {
 
 	return (
 		<>
+			<StructuredData data={faqs} type="FAQPage" />
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
@@ -185,8 +213,8 @@ export default function DevWebClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<h2>
-					¿Necesitas un sitio web especifico y secillo pero profesional para iniciar en tu
-					negocio?
+					¿Necesitas un sitio web especifico y secillo pero profesional para
+					iniciar en tu negocio?
 				</h2>
 				<p className="lead w-100 px-3 px-md-5">
 					En JEG Dev Studios tenemos la solución perfecta para ti. Adquiere tu
@@ -328,8 +356,11 @@ export default function DevWebClient() {
 					</div>
 				</div>
 			</section>
-
 			<CTAProducts />
+			<FAQ
+				faqs={faqs}
+				subtitle="Resuelve tus dudas sobre nuestros paquetes de desarrollo web."
+			/>
 		</>
 	);
 }
