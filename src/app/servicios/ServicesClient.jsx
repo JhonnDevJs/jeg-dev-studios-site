@@ -125,42 +125,42 @@ export default function ServicesClient() {
 					atención personalizada en cada proyecto.
 				</p>
 				<ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">
 							Soporte técnico, escalabilidad y personalización total
 						</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">
 							Diseños profesionales alineados a tu identidad visual
 						</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<h3 className="fs-2 m-0">
 							Entrega rápida, con asesoría estratégica en cada fase
 						</h3>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">
 							Optimización para buscadores (SEO) desde el inicio
 						</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">
 							Procesos claros de desarrollo (Sprint + feedback continuo)
 						</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<h3 className="fs-2 m-0">
 							Tecnología moderna y escalable adaptada a tu negocio
 						</h3>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">
 							Acompañamiento post-entrega: mantenimiento y soporte
 						</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">
 							Soluciones a medida para web, apps y software empresarial
 						</p>

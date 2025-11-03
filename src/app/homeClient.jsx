@@ -54,7 +54,7 @@ const faqs = [
 		answer:
 			"Somos una agencia digital con un ADN profundamente técnico. No solo creamos diseños atractivos; construimos sitios web optimizados desde el código para los motores de búsqueda como Google. Nuestro enfoque garantiza no solo belleza, sino también visibilidad y rendimiento técnico superior.",
 	},
-	
+
 	// Desarrollo Web
 	{
 		question: "¿Qué incluye el servicio de desarrollo web de JEG Dev Studios?",
@@ -420,7 +420,9 @@ export default function HomeClient({ posts: postsToShow }) {
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y ">
 				<h2>Nuestros Servicios Principales</h2>
 				<p className="text-white fs-5 mb-4">
-					Te ofrecemos soluciones digitales integrales, divididas en tres áreas de expertise. Cada servicio está diseñado para funcionar en conjunto, creando una estrategia digital cohesiva y potente para tu negocio.
+					Te ofrecemos soluciones digitales integrales, divididas en tres áreas
+					de expertise. Cada servicio está diseñado para funcionar en conjunto,
+					creando una estrategia digital cohesiva y potente para tu negocio.
 				</p>
 				<p className="text-white fs-5 mb-4">
 					Incluimos asesoría estratégica,{" "}
@@ -451,7 +453,7 @@ export default function HomeClient({ posts: postsToShow }) {
 			>
 				<div className="container-agencia-digital d-flex flex-column flex-md-row align-items-center justify-content-center w-100 h-100 position-relative">
 					{/* Imagen */}
-					<div className="agencia-img-container-full position-relative flex-shrink-0">
+					<div className="agencia-img-container-full position-relative shrink-0">
 						<Image
 							loading="lazy"
 							src={AsideAgenciaDigital}
@@ -463,7 +465,7 @@ export default function HomeClient({ posts: postsToShow }) {
 						/>
 					</div>
 					{/* Texto */}
-					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-4 flex-grow-1 position-relative">
+					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-4 grow position-relative">
 						<h2 className="display-6 fw-bold mb-4 text-center">
 							Más que una Agencia de Desarrollo Web común
 						</h2>
@@ -511,40 +513,40 @@ export default function HomeClient({ posts: postsToShow }) {
 					Además, te ofrecemos atención personalizada en cada proyecto.
 				</p>
 				<ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Profesionalismo</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Soluciones personalizadas a tu negocio</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<h3 className="fs-2 m-0">Desarrollo 100% Personalizado</h3>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">+5 años de experiencia combinada</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Acompañamiento y soporte 24/7</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<h3 className="fs-2 m-0">Soporte Local y Atención en Español</h3>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Garantía de satisfacción</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Entrega puntual garantizada</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Comunicación transparente</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Diseño 100% adaptado a móviles</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<p className="fs-2 m-0">Compromiso y responsabilidad</p>
 					</li>
-					<li className="card bg-transparent text-center text-white border-1 border-white rounded-5 shadow-sm p-3">
+					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
 						<h3 className="fs-2 m-0">
 							Optimización y Posicionamiento SEO de alto rendimiento
 						</h3>
@@ -632,7 +634,7 @@ export default function HomeClient({ posts: postsToShow }) {
 					style={{ maxWidth: "1200px" }}
 				>
 					{/* Texto */}
-					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-xl-5 pe-xl-0 p-3 flex-grow-1 position-relative">
+					<div className="agencia-text-container-full d-flex flex-column justify-content-center align-items-center align-items-xl-start text-white p-xl-5 pe-xl-0 p-3 grow position-relative">
 						<h2 className="display-6 fw-bold mb-4">
 							Un equipo humano detrás de la tecnología
 						</h2>
@@ -671,7 +673,7 @@ export default function HomeClient({ posts: postsToShow }) {
 						</ul>
 					</div>
 					{/* Imagen */}
-					<div className="agencia-img-container-full position-relative flex-shrink-0">
+					<div className="agencia-img-container-full position-relative shrink-0">
 						<Image
 							loading="lazy"
 							src={TeamGroup}

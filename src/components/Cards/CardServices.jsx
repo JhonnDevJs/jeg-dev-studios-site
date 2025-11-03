@@ -4,7 +4,7 @@ import Link from "next/link";
 function CardServices({ title, description, url, buttonLabel, items = [] }) {
 	return (
 		<li
-			className="card d-block bg-transparent border-1 rounded-5 text-white text-start shadow-md p-1 card-services"
+			className="card d-block bg-transparent border rounded-5 text-white text-start shadow-md p-1 card-services"
 			style={{ width: "22rem" }}
 		>
 			<div className="card-body d-flex flex-column">
