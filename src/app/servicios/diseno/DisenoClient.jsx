@@ -96,7 +96,7 @@ export default function DisenoClient() {
 						<CardServices
 							title="Diseño Editorial y Publicitario"
 							description="Llevamos tu marca al formato físico y digital. Diseñamos desde catálogos y revistas hasta material publicitario para redes sociales, asegurando una comunicación visual coherente y profesional en todos tus canales."
-							url="/servicios/diseno/editorial)"
+							url="/servicios/diseno/editorial"
 							buttonLabel="Ver Soluciones Editoriales"
 							items={[
 								"Diseño de Catálogos y Revistas",
