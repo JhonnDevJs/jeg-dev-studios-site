@@ -15,7 +15,7 @@ function CardServices({
 			className="card d-flex flex-column bg-transparent border rounded-5 text-white text-start shadow-md p-1 card-services"
 			style={{ width: "22rem" }}
 		>
-			<div className="card-header">
+			<div className="card-header d-flex flex-column justify-content-evenly flex-grow-1">
 				<h3 className="h2 fw-bolder card-title text-center">{title}</h3>
 				<p className="fs-5 text-center m-0">{description}</p>
 			</div>
