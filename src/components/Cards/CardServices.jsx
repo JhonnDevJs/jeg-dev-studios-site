@@ -1,7 +1,15 @@
 import PropTypes from "prop-types";
 import Link from "next/link";
 
-function CardServices({ title, description, url, buttonLabel, items = [] }) {
+function CardServices({
+	title,
+	description,
+	url,
+	buttonLabel,
+	urlInfo,
+	buttonLabelInfo,
+	items = [],
+}) {
 	return (
 		<li
 			className="card d-block bg-transparent border rounded-5 text-white text-start shadow-md p-1 card-services"
@@ -21,7 +29,7 @@ function CardServices({ title, description, url, buttonLabel, items = [] }) {
 					<span className="fw-bolder">{buttonLabel}</span>
 				</Link>
 			</div>
-			<div className="card-footer d-flex justify-content-center align-items-center">
+			<div className="card-footer d-flex flex-column justify-content-center align-items-center">
 				<ul className="list-group list-group-flush mx-auto">
 					{items.map((item, idx) => (
 						<li
@@ -35,6 +43,18 @@ function CardServices({ title, description, url, buttonLabel, items = [] }) {
 						</li>
 					))}
 				</ul>
+				{urlInfo && buttonLabelInfo && (
+					<Link
+						href={urlInfo}
+						className="btn-services"
+						role="button"
+						aria-label={buttonLabelInfo}
+						title={buttonLabelInfo}
+						tabIndex={0}
+					>
+						Saber más
+					</Link>
+				)}
 			</div>
 		</li>
 	);
@@ -45,6 +65,8 @@ CardServices.propTypes = {
 	description: PropTypes.string,
 	url: PropTypes.string.isRequired,
 	buttonLabel: PropTypes.string.isRequired,
+	urlInfo: PropTypes.string,
+	buttonLabelInfo: PropTypes.string.isRequired,
 	items: PropTypes.arrayOf(PropTypes.string),
 };
 

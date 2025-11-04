@@ -74,6 +74,8 @@ export default function DesarrolloClient() {
 								"Diseño UX/UI y Branding Digital",
 								"Hosting, Dominios y Mantenimiento Web",
 							]}
+							urlInfo={"/saber-mas/web-dev"}
+							buttonLabelInfo={"Conoce más sobre nuestros servicios de desarrollo web"}
 						/>
 						<CardServices
 							title="Desarrollo de Aplicaciones Móviles"
@@ -86,6 +88,8 @@ export default function DesarrolloClient() {
 								"Interfaces de Usuario Intuitivas (UX/UI)",
 								"Integración con Backend y API",
 							]}
+							urlInfo={"/saber-mas/soft-dev"}
+							buttonLabelInfo={"Conoce más sobre nuestros servicios de desarrollo de aplicaciones móviles"}
 						/>
 						<CardServices
 							title="Desarrollo de Software Empresarial"
@@ -98,6 +102,8 @@ export default function DesarrolloClient() {
 								"Paneles de Control y Reportería",
 								"Integración con Sistemas Existentes",
 							]}
+							urlInfo={"/saber-mas/app-dev"}
+							buttonLabelInfo={"Conoce más sobre nuestros servicios de desarrollo de software empresarial"}
 						/>
 					</ul>
 				</article>
