@@ -63,7 +63,7 @@ export default function DesarrolloClient() {
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 						<CardServices
-							title="Desarrollo Web Profesional"
+							title="Desarrollo de Sitios Web Profesionales"
 							description="Diseñamos cada detalle, desde lo visual hasta lo interactivo. Nuestro objetivo es optimizar la navegación y comunicar tu mensaje de forma clara y eficaz."
 							url="/servicios/desarrollo/web"
 							buttonLabel="Conocer más sobre Desarrollo Web"

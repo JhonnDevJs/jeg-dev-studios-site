@@ -12,15 +12,17 @@ function CardServices({
 }) {
 	return (
 		<li
-			className="card d-block bg-transparent border rounded-5 text-white text-start shadow-md p-1 card-services"
+			className="card d-flex flex-column bg-transparent border rounded-5 text-white text-start shadow-md p-1 card-services"
 			style={{ width: "22rem" }}
 		>
-			<div className="card-body d-flex flex-column">
+			<div className="card-header">
 				<h3 className="h2 fw-bolder card-title text-center">{title}</h3>
-				<p className="fs-5 text-center">{description}</p>
+				<p className="fs-5 text-center m-0">{description}</p>
+			</div>
+			<div className="card-body d-flex flex-column justify-content-evenly flex-grow-1 py-2">
 				<Link
 					href={url}
-					className="btn-services"
+					className="btn-services my-auto"
 					role="button"
 					aria-label={buttonLabel}
 					title={buttonLabel}
@@ -28,8 +30,7 @@ function CardServices({
 				>
 					<span className="fw-bolder">{buttonLabel}</span>
 				</Link>
-			</div>
-			<div className="card-footer d-flex flex-column justify-content-center align-items-center">
+				
 				<ul className="list-group list-group-flush mx-auto">
 					{items.map((item, idx) => (
 						<li
@@ -43,18 +44,22 @@ function CardServices({
 						</li>
 					))}
 				</ul>
-				{urlInfo && buttonLabelInfo && (
-					<Link
-						href={urlInfo}
-						className="btn-services"
-						role="button"
-						aria-label={buttonLabelInfo}
-						title={buttonLabelInfo}
-						tabIndex={0}
-					>
-						Saber más
-					</Link>
-				)}
+			</div>
+			<div className="card-footer d-flex flex-column justify-content-center align-items-center">
+				<div className="d-flex justify-content-center align-items-end mt-auto pt-3">
+					{urlInfo && buttonLabelInfo && (
+						<Link
+							href={urlInfo}
+							className="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+							role="button"
+							aria-label={buttonLabelInfo}
+							title={buttonLabelInfo}
+							tabIndex={0}
+						>
+							Saber más
+						</Link>
+					)}
+				</div>
 			</div>
 		</li>
 	);
