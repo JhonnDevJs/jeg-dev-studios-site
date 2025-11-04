@@ -1,4 +1,5 @@
-import React, { useState } from "react";
+"use client";
+import { useState } from "react";
 
 export default function FAQ({ faqs, subtitle }) {
 	const [openIndex, setOpenIndex] = useState(null);
