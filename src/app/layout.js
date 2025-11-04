@@ -30,7 +30,7 @@ export const metadata = {
 	metadataBase: new URL("https://www.jegdevstudios.com"),
 	title: "Agencia de Desarrollo Web y Software en México | JEG Dev Studios",
 	description:
-		"Ofrecemos servicios de desarrollo web profesional y software a medida. Somos la agencia en México que impulsa tu negocio con Sprints ágiles, SEO y apps. ¡Cotiza tu proyecto!",
+		"Somos una agencia en México que ofrece servicios de desarrollo web profesional, software y apps a medida con Sprints ágiles, SEO y diseño a medida. ¡Cotiza ya!",
 	keywords:
 		"agencia desarrollo web méxico, desarrollo web profesional, desarrollo de software a medida, aplicaciones móviles para empresas, soluciones digitales personalizadas",
 	robots: "index, follow",
