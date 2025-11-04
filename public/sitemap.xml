@@ -57,6 +57,13 @@
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
+  <!-- Página "Servicios Design" -->
+  <url>
+    <loc>https://www.jegdevstudios.com/proyectos</loc>
+    <lastmod>2025-11-04T12:39:00Z</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
   <!-- Página de "Sobre nosotros" -->
   <url>
     <loc>https://www.jegdevstudios.com/sobre-nosotros</loc>
