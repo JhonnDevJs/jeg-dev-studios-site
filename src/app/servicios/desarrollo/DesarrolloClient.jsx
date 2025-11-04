@@ -66,7 +66,7 @@ export default function DesarrolloClient() {
 							title="Desarrollo de Sitios Web Profesionales"
 							description="Diseñamos cada detalle, desde lo visual hasta lo interactivo. Nuestro objetivo es optimizar la navegación y comunicar tu mensaje de forma clara y eficaz."
 							url="/servicios/desarrollo/web"
-							buttonLabel="Conocer más sobre Desarrollo Web"
+							buttonLabel="Ver Soluciones de Desarrollo Web"
 							items={[
 								"Desarrollo Web Profesional",
 								"Ecommerce y Tiendas en Línea",
@@ -81,7 +81,7 @@ export default function DesarrolloClient() {
 							title="Desarrollo de Aplicaciones Móviles"
 							description="Usamos lenguajes como Kotlin, React Native y PHP (Laravel). Esto nos permite garantizar compatibilidad, rendimiento y un mantenimiento sencillo. Así, aseguramos la escalabilidad y eficiencia de tu proyecto."
 							url="/servicios/desarrollo/apps"
-							buttonLabel="Explorar Desarrollo de Apps"
+							buttonLabel="Ver Soluciones de Apps"
 							items={[
 								"Aplicaciones Nativas (iOS/Android)",
 								"Desarrollo Multiplataforma Híbrido",
