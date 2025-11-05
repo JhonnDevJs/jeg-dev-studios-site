@@ -28,7 +28,8 @@ const faqs = [
 			"El backend es el 'cerebro' de tu aplicación. Es un servidor que gestiona los datos, la lógica de negocio y la autenticación de usuarios. Es esencial para apps que necesitan guardar información, tener perfiles de usuario o sincronizar datos entre dispositivos.",
 	},
 	{
-		question: "¿Qué tipo de mantenimiento necesita una app después de ser lanzada?",
+		question:
+			"¿Qué tipo de mantenimiento necesita una app después de ser lanzada?",
 		answer:
 			"Una app requiere mantenimiento para asegurar su compatibilidad con nuevas versiones de iOS y Android, corregir posibles errores y, opcionalmente, añadir nuevas funcionalidades. Ofrecemos planes de mantenimiento para garantizar que tu app siga funcionando perfectamente a largo plazo.",
 	},
@@ -103,7 +104,7 @@ export default function DevAppClient() {
 	};
 	return (
 		<>
-			<StructuredData data={faqs} type="FAQPage" />
+			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-apps" />
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}

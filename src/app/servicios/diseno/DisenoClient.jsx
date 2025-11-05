@@ -34,7 +34,7 @@ const faqs = [
 export default function DisenoClient() {
 	return (
 		<>
-			<StructuredData data={faqs} type="FAQPage" />
+			<StructuredData data={faqs} type="FAQPage" idPage="faqs-design" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Servicios.webp"

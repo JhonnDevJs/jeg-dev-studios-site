@@ -304,7 +304,7 @@ export default function HomeClient({ posts: postsToShow }) {
 
 	return (
 		<>
-			<StructuredData data={faqs} type="FAQPage" />
+			<StructuredData data={faqs} type="FAQPage" idPage="faqs-home" />
 			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground bg-fixed-cover ">
 				<article
 					className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0"

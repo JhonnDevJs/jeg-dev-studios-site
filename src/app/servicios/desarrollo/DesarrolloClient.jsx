@@ -8,7 +8,8 @@ import CTA from "@/components/Cta/CTA";
 
 const faqs = [
 	{
-		question: "¿Cuál es la diferencia entre desarrollo a medida y una plantilla?",
+		question:
+			"¿Cuál es la diferencia entre desarrollo a medida y una plantilla?",
 		answer:
 			"Una plantilla te obliga a adaptar tus procesos a una estructura rígida y limitada. El desarrollo a medida es lo contrario: creamos una solución de software que se adapta perfectamente a tu flujo de trabajo, garantizando máxima eficiencia, seguridad y escalabilidad a largo plazo.",
 	},
@@ -23,7 +24,8 @@ const faqs = [
 			"Sí, absolutamente. La escalabilidad es un pilar de nuestro proceso de desarrollo. Construimos todas nuestras soluciones con una arquitectura modular y código limpio, lo que permite agregar nuevas funcionalidades o soportar un mayor número de usuarios en el futuro sin necesidad de reconstruir todo desde cero.",
 	},
 	{
-		question: "¿Qué necesito de mi parte para comenzar un proyecto de desarrollo?",
+		question:
+			"¿Qué necesito de mi parte para comenzar un proyecto de desarrollo?",
 		answer:
 			"Para comenzar, solo necesitamos tener una conversación contigo. El primer paso es una consulta gratuita donde escuchamos tu idea, tus objetivos y los problemas que buscas resolver. Con esa información, definimos un alcance y te presentamos una propuesta estratégica sin compromiso.",
 	},
@@ -32,7 +34,7 @@ const faqs = [
 export default function DesarrolloClient() {
 	return (
 		<>
-			<StructuredData data={faqs} type="FAQPage" />
+			<StructuredData data={faqs} type="FAQPage" idPage="faqs-development" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Servicios.webp"
@@ -56,9 +58,14 @@ export default function DesarrolloClient() {
 				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
-				<h2 className="text-center text-white">Nuestras Especialidades en Desarrollo</h2>
+				<h2 className="text-center text-white">
+					Nuestras Especialidades en Desarrollo
+				</h2>
 				<p className="lead text-white text-center">
-					Cada proyecto digital tiene un objetivo diferente. Por eso, hemos perfeccionado nuestra experiencia en tres áreas clave del desarrollo de software a medida . Elige la solución que mejor se adapta a tu visión.
+					Cada proyecto digital tiene un objetivo diferente. Por eso, hemos
+					perfeccionado nuestra experiencia en tres áreas clave del desarrollo
+					de software a medida . Elige la solución que mejor se adapta a tu
+					visión.
 				</p>
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
@@ -75,7 +82,9 @@ export default function DesarrolloClient() {
 								"Hosting, Dominios y Mantenimiento Web",
 							]}
 							urlInfo={"/saber-mas/web-dev"}
-							buttonLabelInfo={"Conoce más sobre nuestros servicios de desarrollo web"}
+							buttonLabelInfo={
+								"Conoce más sobre nuestros servicios de desarrollo web"
+							}
 						/>
 						<CardServices
 							title="Desarrollo de Aplicaciones Móviles"
@@ -89,7 +98,9 @@ export default function DesarrolloClient() {
 								"Integración con Backend y API",
 							]}
 							urlInfo={"/saber-mas/soft-dev"}
-							buttonLabelInfo={"Conoce más sobre nuestros servicios de desarrollo de aplicaciones móviles"}
+							buttonLabelInfo={
+								"Conoce más sobre nuestros servicios de desarrollo de aplicaciones móviles"
+							}
 						/>
 						<CardServices
 							title="Desarrollo de Software Empresarial"
@@ -103,7 +114,9 @@ export default function DesarrolloClient() {
 								"Integración con Sistemas Existentes",
 							]}
 							urlInfo={"/saber-mas/app-dev"}
-							buttonLabelInfo={"Conoce más sobre nuestros servicios de desarrollo de software empresarial"}
+							buttonLabelInfo={
+								"Conoce más sobre nuestros servicios de desarrollo de software empresarial"
+							}
 						/>
 					</ul>
 				</article>

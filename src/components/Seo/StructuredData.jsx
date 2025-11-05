@@ -2,7 +2,7 @@
 
 import Script from "next/script";
 
-const StructuredData = ({ data, type }) => {
+const StructuredData = ({ data, type, idPage }) => {
 	let schema = data;
 
 	// Si se pasa un array y el tipo es 'FAQPage', construye el schema.
@@ -23,7 +23,7 @@ const StructuredData = ({ data, type }) => {
 	}
 
 	return (
-		<Script id="structured-data" type="application/ld+json">
+		<Script id={`structured-data-${idPage}`} type="application/ld+json">
 			{JSON.stringify(schema)}
 		</Script>
 	);

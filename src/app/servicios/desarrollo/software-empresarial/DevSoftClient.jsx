@@ -26,7 +26,8 @@ const faqs = [
 			"Sí. Todos nuestros desarrollos son modulares y escalables. Puedes empezar con un módulo y, a medida que tu negocio crezca, podemos añadir más funcionalidades, integrar más usuarios o migrar tu sistema a la nube sin problemas.",
 	},
 	{
-		question: "¿Qué significa 'integraciones externas' en la Solución Profesional?",
+		question:
+			"¿Qué significa 'integraciones externas' en la Solución Profesional?",
 		answer:
 			"Significa que podemos conectar tu software con otras herramientas que ya uses, como sistemas de facturación electrónica (SAT), plataformas de pago, CRMs (como Salesforce), o cualquier otra API que necesites para centralizar tus operaciones.",
 	},
@@ -106,7 +107,7 @@ export default function DevSoftClient() {
 	};
 	return (
 		<>
-			<StructuredData data={faqs} type="FAQPage" />
+			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-soft" />
 			<script
 				type="application/ld+json"
 				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}

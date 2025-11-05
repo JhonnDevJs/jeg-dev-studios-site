@@ -31,6 +31,7 @@ import CTA from "@/components/Cta/CTA";
 function WebDev() {
 	return (
 		<>
+		
 			<section className="d-flex flex-column text-white w-100 p-5 m-0 gap-5 gradient-effect-x">
 				<article className="d-flex flex-column pt-5 gap-3">
 					<h1>Saber Más sobre Nuestro Servicio de Desarrollo Web</h1>

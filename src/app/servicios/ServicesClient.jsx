@@ -42,7 +42,7 @@ export default function ServicesClient() {
 		<>
 			{/* Este componente solo renderiza el schema de FAQ aquí, no en otras páginas */}
 
-			<StructuredData data={faqs} type="FAQPage" />
+			<StructuredData data={faqs} type="FAQPage" idPage="faqs-services" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Servicios.webp"
