@@ -36,125 +36,42 @@ import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
 import Richi from "@/assets/img/img/team/ricardo.webp";
 import "./home.css";
 
-const faqs = [
-	// --- Actuales ---
-	{
-		question:
-			"¿Ofrecen un servicio de diseño web en México enfocado en empresas locales?",
-		answer:
-			"Sí. Nuestro servicio de diseño está 100% especializado en el mercado mexicano. Entendemos las tendencias locales para crear sitios web que realmente conectan con tu audiencia, por lo que si buscas diseño web en México, somos tu mejor opción.",
-	},
-	{
-		question: "¿Cómo adaptan los servicios que ofrecen a cada proyecto?",
-		answer:
-			"No creemos en soluciones genéricas. Los servicios que ofrecen la mayoría de las agencias son estandarizados; nosotros, en cambio, comenzamos por entender a fondo cada necesidad del cliente. A partir de ahí, diseñamos una estrategia y una solución tecnológica completamente a medida.",
-	},
-	{
-		question: "¿Qué los diferencia de otra agencia digital?",
-		answer:
-			"Somos una agencia digital con un ADN profundamente técnico. No solo creamos diseños atractivos; construimos sitios web optimizados desde el código para los motores de búsqueda como Google. Nuestro enfoque garantiza no solo belleza, sino también visibilidad y rendimiento técnico superior.",
-	},
-
-	// Desarrollo Web
-	{
-		question: "¿Qué incluye el servicio de desarrollo web de JEG Dev Studios?",
-		answer:
-			"Incluye la creación de sitios web personalizados, responsivos y adaptados a tu marca, utilizando tecnologías modernas como HTML, CSS, JavaScript, Node.js o Laravel.",
-	},
-	{
-		question: "¿Ofrecen dominio y hosting incluido?",
-		answer:
-			"Sí, nuestros paquetes incluyen 1 año de dominio personalizado y hosting web, ya sea mediante Hostinger, DonDominio o Google Sites, según el paquete contratado.",
-	},
-	{
-		question: "¿Qué tecnologías usan para crear sitios web?",
-		answer:
-			"Dependiendo del paquete, utilizamos HTML, CSS, JavaScript, Bootstrap, Node.js o PHP (Laravel) para el desarrollo del frontend y backend.",
-	},
-	{
-		question: "¿Puedo solicitar cambios en el diseño del sitio web?",
-		answer:
-			"Sí, cada paquete incluye un número específico de cambios permitidos a nivel de secciones del diseño web.",
-	},
-	{
-		question: "¿Incluyen optimización SEO en los sitios web?",
-		answer:
-			"Sí, todos nuestros paquetes incluyen implementación básica de SEO para mejorar tu visibilidad en buscadores como Google.",
-	},
-	{
-		question: "¿Cuánto tiempo tarda en entregarse un sitio web?",
-		answer:
-			"La entrega depende del paquete. Desde 7 hasta 30 días hábiles, dependiendo de la complejidad y funcionalidades requeridas.",
-	},
-
-	// Desarrollo de Aplicaciones Móviles
-	{
-		question: "¿Qué tipo de aplicaciones móviles desarrollan?",
-		answer:
-			"Creamos apps nativas, híbridas y multiplataforma para Android y iOS, según los requerimientos del cliente y el paquete contratado.",
-	},
-	{
-		question: "¿Publican las apps en la Play Store o App Store?",
-		answer:
-			"Sí, la publicación en Google Play o App Store está incluida en todos nuestros paquetes de desarrollo de apps móviles.",
-	},
-	{
-		question: "¿Qué tecnologías utilizan para las apps móviles?",
-		answer:
-			"Trabajamos con tecnologías como React Native, Kotlin Multiplatform, Java para backend, y bases de datos remotas según el nivel del proyecto.",
-	},
-	{
-		question: "¿Incluyen base de datos o backend en las apps móviles?",
-		answer:
-			"Sí, los paquetes intermedios y avanzados incluyen conexión con bases de datos remotas, backend en Java y funcionalidades como login o almacenamiento.",
-	},
-	{
-		question: "¿Incluyen diseño UI/UX personalizado?",
-		answer:
-			"Sí, todos nuestros planes ofrecen un diseño responsivo y adaptado a tu marca. Los paquetes más avanzados incluyen navegación fluida y componentes animados.",
-	},
-	{
-		question: "¿Pueden desarrollar apps con funcionalidades avanzadas?",
-		answer:
-			"Sí, como parte del paquete Premium podemos integrar funcionalidades complejas como pagos, geolocalización, cámara, push notifications y paneles administrativos web.",
-	},
-
-	// Software Empresarial
-	{
-		question: "¿Qué tipo de software empresarial desarrollan?",
-		answer:
-			"Desarrollamos soluciones personalizadas como sistemas de ventas, inventarios, citas, empleados y más, adaptados a las necesidades de tu negocio.",
-	},
-	{
-		question: "¿El software incluye instalación y soporte?",
-		answer:
-			"Sí, todos los paquetes incluyen instalación en uno o más equipos. El paquete Profesional también ofrece soporte técnico durante el primer mes.",
-	},
-	{
-		question: "¿Qué tipo de base de datos utilizan?",
-		answer:
-			"Utilizamos bases de datos locales (como SQLite) o en red/nube según el paquete, con estructuras seguras y eficientes para tu operación diaria.",
-	},
-	{
-		question: "¿Incluyen funcionalidades como reportes o gráficas?",
-		answer:
-			"Sí, los paquetes más avanzados incluyen paneles de estadísticas, gráficas, exportación de reportes a Excel/PDF, y herramientas de gestión.",
-	},
-	{
-		question: "¿El software puede ser multiusuario?",
-		answer:
-			"Sí, nuestros planes intermedios y avanzados permiten múltiples usuarios con acceso por roles, login y permisos configurables.",
-	},
-	{
-		question: "¿Ofrecen soluciones con integración a sistemas externos?",
-		answer:
-			"Sí, en el paquete Profesional podemos integrar tu software con CRMs, facturación electrónica u otros sistemas empresariales según tus procesos.",
-	},
-];
-
 export default function HomeClient({ posts: postsToShow }) {
 	const [mounted, setMounted] = useState(false);
 	useEffect(() => setMounted(true), []);
+
+	const faqs = [
+		// --- Actuales ---
+		{
+			question:
+				'¿Qué los diferencia de otra "agencia digital" o "agencia web"?',
+			answer:
+				"Una agencia digital o web  a menudo se enfoca en crear sitios de marketing. Nosotros somos una agencia de desarrollo de software. Eso significa que, además de sitios web, construimos aplicaciones complejas, sistemas de gestión interna (CRMs) y productos digitales robustos que solucionan problemas reales de negocio.",
+		},
+		{
+			question: '¿Su "servicio de diseño web en México" incluye UX/UI?',
+			answer:
+				'Sí. Nuestro servicio de diseño web en México  va más allá de lo visual. Somos una "agencia UX UI en México" dedicada. Nuestro equipo de diseño se asegura de que cada pantalla y botón sean intuitivos, accesibles y estén 100% enfocados en que tus usuarios logren sus objetivos',
+		},
+		{
+			question:
+				'¿Cómo adaptan los "servicios que ofrecen" a la "necesidad del cliente"?',
+			answer:
+				"No estandarizamos los servicios que ofrecemos. Nuestro proceso comienza con un análisis profundo para entender la verdadera necesidad del cliente. Investigamos tus objetivos y tu mercado para proponer una solución tecnológica que esté perfectamente alineada con tu negocio, asegurando que no gastes recursos en funciones innecesarias.",
+		},
+
+		// Desarrollo Web
+		{
+			question: '¿Qué es el "desarrollo web profesional" para ustedes?',
+			answer:
+				"Para nosotros, el desarrollo web profesional significa crear un sitio que funciona en tres niveles. Primero, es rápido y seguro. Segundo, es fácil de usar en móviles y computadoras. Y tercero, está construido desde el código para que Google pueda entenderlo y posicionarlo, lo que llamamos SEO técnico.",
+		},
+		{
+			question: "Trabajo en una startup, ¿su proceso ágil me funciona?",
+			answer:
+				"Absolutamente. De hecho, nuestro proceso está diseñado para startups. Sabemos que necesitas moverte rápido y validar ideas ante inversionistas. Como agencia de sprints, trabajamos en ciclos cortos para entregarte avances funcionales. Esto te permite probar tu producto, conseguir financiamiento y escalar sin desperdiciar tu inversión inicial.",
+		},
+	];
 
 	const cardServices = [
 		{
@@ -606,10 +523,6 @@ export default function HomeClient({ posts: postsToShow }) {
 					crecer.
 				</p>
 			</section>
-			<FAQ
-				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros paquetes, tecnologías, tiempos de entrega y más."
-			/>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Más que desarrollo, valor añadido"
@@ -625,8 +538,63 @@ export default function HomeClient({ posts: postsToShow }) {
 						inversión tecnológica."
 				/>
 			</section>
+			<section className="text-white py-5 text-center px-3 px-md-5 gradient-effect-y">
+				<div className="container" style={{ maxWidth: "1200px" }}>
+					<h2 className="display-6 fw-bold mb-4">
+						Soluciones Tecnológicas Completas: Nuestro Alcance
+					</h2>
+					<p className="fs-5 mb-4">
+						Creemos en las soluciones integrales. Cuando contratas un proyecto
+						con nosotros, no solo obtienes código; obtienes una arquitectura
+						completa pensada para funcionar y crecer.
+					</p>
+					<h3 className="fw-bold mb-4">Arquitectura Full-Stack y Tecnologías Modernas</h3>
+					<p className="fs-5 mb-4">
+						Manejamos tu proyecto de inicio a fin. Desarrollamos tanto el
+						frontend (lo que ves) como el backend y las bases de datos (lo que
+						no ves). Para sitios web, usamos tecnologías de vanguardia como
+						React, Next.js, Node.js y PHP (Laravel). Para aplicaciones móviles,
+						nos especializamos en React Native, Java y Kotlin.
+					</p>
+					<h3 className="fw-bold mb-4">Funcionalidad Avanzada y Sin Límites</h3>
+					<p className="fs-5 mb-4">
+						Tu software debe adaptarse a tu negocio, no al revés. Creamos las
+						características que tu operación requiere, incluyendo:
+					</p>
+					<ul className="fs-5 text-start mx-auto" style={{ maxWidth: "600px" }}>
+						<li className="mb-3">
+							<p>Sistemas multiusuario con diferentes roles y permisos.</p>
+						</li>
+						<li className="mb-3">
+							<p>Paneles de control con reportes y gráficas personalizadas.</p>
+						</li>
+						<li className="mb-3">
+							<p>Integraciones con sistemas externos como CRMs, pasarelas de pago o
+							facturación electrónica.</p>
+						</li>
+					</ul>
+					<h3 className="fw-bold mb-4">Un Servicio de Principio a Fin</h3>
+					<p className="fs-5 mb-4">
+						Nos encargamos de todo el proceso para que no tengas que preocuparte
+						por los detalles técnicos.
+					</p>
+					<ul className="fs-5 text-start mx-auto" style={{ maxWidth: "600px" }}>
+						<li className="mb-3">
+							Gestionamos la publicación de tus apps en la Play Store y App
+							Store.
+						</li>
+						<li className="mb-3">
+							Podemos incluir servicios de dominio, hosting e instalación.
+						</li>
+						<li className="mb-3">
+							Todos nuestros desarrollos web incluyen optimización SEO técnica
+							desde la base.
+						</li>
+					</ul>
+				</div>
+			</section>
 			<section
-				className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center w-100 gradient-effect-y"
+				className="section-agencia-digital-full d-flex flex-column flex-md-row align-items-stretch justify-content-center w-100 gradient-effect-x"
 				style={{ minHeight: "100vh", position: "relative" }}
 			>
 				<div
@@ -687,7 +655,7 @@ export default function HomeClient({ posts: postsToShow }) {
 				</div>
 			</section>
 			<section
-				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 m-0"
+				className="section d-flex flex-column bg-black justify-content-center align-items-center w-100 gap-3 p-xl-5 p-3 m-0 gradient-effect-y"
 				style={{ minHeight: "553px" }}
 			>
 				<h2 className="text-center text-white">
@@ -825,6 +793,10 @@ export default function HomeClient({ posts: postsToShow }) {
 			</section>
 			{mounted && <BlogSection posts={postsToShow} />}
 			<CTA />
+			<FAQ
+				faqs={faqs}
+				subtitle="Resuelve tus dudas sobre nuestros servicios de desarollo, diseño y posicionamiento SEO."
+			/>
 		</>
 	);
 }
