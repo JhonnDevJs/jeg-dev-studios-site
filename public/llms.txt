@@ -1,0 +1,69 @@
+# www.jegdevstudios.com
+> Agencia de desarrollo web, software, SEO y diseño en México. Creamos soluciones digitales a medida para impulsar tu negocio.
+
+## Páginas Principales
+- [Inicio](https://www.jegdevstudios.com/): Agencia de Desarrollo Web y Software en México: Soluciones a Medida.
+- [Sobre Nosotros](https://www.jegdevstudios.com/sobre-nosotros): Conoce al equipo, la misión y la visión de JEG Dev Studios, tu socio tecnológico estratégico.
+- [Portafolio](https://www.jegdevstudios.com/portafolio): Explora nuestros proyectos y casos de éxito en desarrollo web, apps, software y diseño.
+- [Blog](https://blog.jegdevstudios.com/): Artículos y tutoriales sobre desarrollo, SEO y tecnología para negocios.
+- [Contacto](https://www.jegdevstudios.com/contacto): Agenda una consulta gratuita para tu proyecto digital. Página transaccional (BOFU).
+
+## Servicios (Página Pilar Principal)
+- [Soluciones Digitales: Web, SEO y Diseño](https://www.jegdevstudios.com/servicios): Página pilar de servicios. Tu agencia de desarrollo digital. Ofrecemos soluciones integrales en desarrollo web, software, posicionamiento SEO y branding.
+
+### Desarrollo a Medida (Sub-Pilar)
+- [Desarrollo de Software a Medida](https://www.jegdevstudios.com/servicios/desarrollo): Sub-pilar de desarrollo. Creamos soluciones web, apps móviles y sistemas empresariales personalizados.
+  - [Desarrollo Web](https://www.jegdevstudios.com/servicios/desarrollo/web): Página de servicio de desarrollo web. Creación de sitios web rápidos, optimizados para SEO y diseñados para convertir.
+    - [Sitios Web](https://www.jegdevstudios.com/servicios/desarrollo/web/sitios-web): Creación de sitios web corporativos y profesionales a medida.
+    - [Blogs](https://www.jegdevstudios.com/servicios/desarrollo/web/blogs): Desarrollo e integración de blogs optimizados para marketing de contenidos.
+    - [eCommerce](https://www.jegdevstudios.com/servicios/desarrollo/web/ecommerce): Desarrollo de tiendas en línea y plataformas de comercio electrónico.
+    - [Landing Pages](https://www.jegdevstudios.com/servicios/desarrollo/web/landing-pages): Diseño y desarrollo de landing pages de alta conversión.
+    - [Invitaciones Digitales (Desarrollo)](https://www.jegdevstudios.com/servicios/desarrollo/web/invitaciones): Desarrollo de invitaciones web interactivas para eventos.
+    - [Menús Digitales (Desarrollo)](https://www.jegdevstudios.com/servicios/desarrollo/web/menus): Desarrollo de menús digitales con código QR para restaurantes.
+  - [Desarrollo de Apps](https://www.jegdevstudios.com/servicios/desarrollo/apps): Página de servicio de desarrollo de aplicaciones móviles nativas e híbridas para iOS y Android.
+  - [Software Empresarial](https://www.jegdevstudios.com/servicios/desarrollo/software-empresarial): Desarrollo de soluciones de software a medida, CRMs, ERPs y sistemas de gestión.
+
+### Posicionamiento SEO (Sub-Pilar)
+- [Agencia de Posicionamiento SEO en México](https://www.jegdevstudios.com/servicios/seo): Sub-pilar de SEO. Aumentamos tu visibilidad en Google con estrategias web y locales.
+  - [SEO Web](https://www.jegdevstudios.com/servicios/seo/web): Servicio de posicionamiento SEO nacional, auditorías técnicas y link building.
+  - [SEO Local](https://www.jegdevstudios.com/servicios/seo/local): Servicio de SEO local para negocios. Optimización de Google Business Profile y citaciones.
+
+### Diseño Gráfico y Digital (Sub-Pilar)
+- [Servicios de Diseño Gráfico y Digital](https://www.jegdevstudios.com/servicios/diseno): Sub-pilar de diseño. Creamos logotipos, branding y experiencias de usuario (UX/UI).
+  - [Logotipos](https://www.jegdevstudios.com/servicios/diseno/logotipos): Servicio de diseño de logotipos profesionales y memorables.
+  - [Branding](https://www.jegdevstudios.com/servicios/diseno/branding): Creación de identidad de marca completa, incluyendo paleta de colores y tipografía.
+  - [UX/UI Web](https://www.jegdevstudios.com/servicios/diseno/ux-ui/web): Diseño de experiencia de usuario e interfaz para sitios web.
+  - [UX/UI Apps](https://www.jegdevstudios.com/servicios/diseno/ux-ui/apps): Diseño de interfaces y prototipos para aplicaciones móviles.
+  - [UX/UI Software](https://www.jegdevstudios.com/servicios/diseno/ux-ui/software): Diseño UX/UI para software empresarial y plataformas complejas.
+  - [Invitaciones Digitales (Diseño)](https://www.jegdevstudios.com/servicios/diseno/invitaciones): Diseño gráfico para invitaciones digitales estáticas y animadas.
+  - [Menús Digitales (Diseño)](https://www.jegdevstudios.com/servicios/diseno/menus): Diseño gráfico de menús digitales para restaurantes.
+  - [Diseño Editorial](https://www.jegdevstudios.com/servicios/diseno/editorial): Diseño de catálogos, revistas, manuales y reportes.
+  - [Edición Fotográfica](https://www.jegdevstudios.com/servicios/diseno/edicion-fotografica): Servicio de retoque y edición fotográfica profesional.
+  - [Manual de Identidad](https://www.jegdevstudios.com/servicios/diseno/manual-identidad): Creación de manuales de identidad de marca (Brand Guidelines).
+  - [Publicidad](https://www.jegdevstudios.com/servicios/diseno/publicidad): Diseño de banners, anuncios para redes sociales y material promocional.
+
+## Categorías del Portafolio
+- [Proyectos Web](https://www.jegdevstudios.com/portafolio/web): Casos de éxito de nuestros proyectos de desarrollo web.
+- [Proyectos de Apps](https://www.jegdevstudios.com/portafolio/apps): Casos de éxito de nuestras aplicaciones móviles.
+- [Proyectos de Software](https://www.jegdevstudios.com/portafolio/software): Casos de éxito de nuestro software empresarial a medida.
+- [Proyectos de Diseño Gráfico](https://www.jegdevstudios.com/portafolio/diseno-grafico): Muestras de nuestro trabajo en diseño gráfico.
+- [Proyectos de Branding](https://www.jegdevstudios.com/portafolio/branding): Casos de éxito de creación de identidad de marca.
+
+## Legal
+- [Términos y Condiciones](https://www.jegdevstudios.com/legal/terminos-condiciones): Marco legal que rige la contratación de nuestros servicios.
+- [Aviso de Privacidad](https://www.jegdevstudios.com/legal/aviso-privacidad): Cómo protegemos y utilizamos los datos de nuestros visitantes y clientes.
+
+## Artículos Destacados del Blog
+- [¿Por qué necesitas una Página Web?](https://blog.jegdevstudios.com/2025/07/por-que-necesitas-una-pagina-web-en.html): Explica la importancia de tener un sitio web para negocios en 2025.
+- [Qué es una Landing Page y por qué la necesitas](https://blog.jegdevstudios.com/2025/09/necesita-landing-page.html): Define qué es una landing page y su rol en la conversión de clientes.
+- [Mitos y Realidades del Software a Medida](https://blog.jegdevstudios.com/2025/10/mitos-realidades-software-medida.html): Desmitifica los conceptos erróneos sobre el desarrollo de software personalizado.
+- [Desarrollo de Aplicaciones Móviles](https://blog.jegdevstudios.com/2025/09/desarrollo-aplicacion-movil.html): Guía sobre el proceso y beneficios de crear una app móvil para tu empresa.
+- [App Móvil vs Web App vs PWA](https://blog.jegdevstudios.com/2025/10/app-movil-vs-web-app-progresiva-pwa-la.html): Comparativa técnica para ayudar a decidir qué tipo de aplicación desarrollar.
+- [Headless CMS y el Marketing](https://blog.jegdevstudios.com/2025/10/headless-cms-superpoderes-marketing.html): Explica cómo un Headless CMS potencia las estrategias de marketing de contenidos.
+- [Roadmap Tecnológico para PyMEs](https://blog.jegdevstudios.com/2025/10/roadmap-tecnologico-pymes.html): Guía estratégica para que las PyMEs planifiquen sus inversiones en tecnología.
+- [Qué es SEO: Definición y Herramientas](https://blog.jegdevstudios.com/2025/10/que-es-seo-definicion-herramientas.html): Un pilar de contenido que define el SEO y las herramientas clave del sector.
+- [Guía de SEO Local](https://blog.jegdevstudios.com/2025/09/guia-seo-local.html): Pasos prácticos para implementar una estrategia de SEO local para negocios físicos.
+- [Por qué contratar una Agencia de Diseño UX/UI](https://blog.jegdevstudios.com/2025/10/agencia-diseno-ux-ui.html): Detalla los beneficios de un diseño UX/UI profesional para un producto digital.
+- [Jobs to be Done: Conoce a tus Clientes](https://blog.jegdevstudios.com/2025/10/jobs-to-be-done-clientes.html): Explica la metodología 'Jobs to be Done' para entender las necesidades del cliente.
+- [Cómo definir tu Mercado Meta](https://blog.jegdevstudios.com/2025/10/mercado-meta-como-definirlo.html): Guía paso a paso para identificar y definir el mercado meta de un negocio.
+- [Regulación de la IA en México](https://blog.jegdevstudios.com/2025/10/regulacion-ia-mexico.html): Análisis sobre el estado actual de la regulación de la Inteligencia Artificial en México.
