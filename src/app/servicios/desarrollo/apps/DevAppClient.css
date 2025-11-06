@@ -141,3 +141,10 @@
     opacity: 0;
   }
 }
+
+/* Estilos para los botones de navegación de Swiper.
+   Usamos las variables CSS de Swiper para asegurar la visibilidad. */
+.swiper {
+	--swiper-navigation-color: #ffffff; /* Color blanco para las flechas */
+	--swiper-navigation-size: 2rem; /* Tamaño de las flechas */
+}

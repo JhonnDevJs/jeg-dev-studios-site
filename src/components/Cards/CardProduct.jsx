@@ -10,6 +10,9 @@ function CardProduct({
 	items = [],
 	onAdd,
 	imageUrl, // Nuevo prop para la URL de la imagen del producto
+	description, // Prop para la descripción corta
+	isPriceFixed = false, // Prop para definir si el precio es fijo
+	labelBtn = "Contratar servicio", // Prop para el texto del botón
 }) {
 	const handleAddToCart = () => {
 		onAdd({ idProduct, title, moneda, dataPrice });
@@ -38,6 +41,9 @@ function CardProduct({
 				<h3 itemProp="name" className="h2 fw-bolder card-title text-center">
 					{title}
 				</h3>
+				{description && (
+					<p className="card-text text-white-50 text-center">{description}</p>
+				)}
 				{/* Contenedor para la oferta del producto (precio, moneda, disponibilidad) */}
 				<div itemProp="offers" itemScope itemType="http://schema.org/Offer">
 					<meta itemProp="priceCurrency" content={moneda} />
@@ -46,16 +52,20 @@ function CardProduct({
 					<link itemProp="availability" href="http://schema.org/InStock" />
 
 					<div className="d-flex justify-content-evenly align-items-center">
-						<p className="text-lit fw-lighter">Costo: </p>
-						<p className="h1 fw-bolder">
+						<p className="text-lit fw-lighter m-0">
+							{isPriceFixed ? "Precio: " : "Desde: "}
+						</p>
+						<h4 className="fw-bolder">
 							<span className="fw-lighter">$</span>
-							{price} {/* Este es el precio formateado para mostrar */}
+							{price}
+						</h4>
+						<p className="m-0">
 							<span> {moneda}</span>
 						</p>
 					</div>
 				</div>
 				<button className="btn-services" onClick={handleAddToCart}>
-					<span className="fw-bolder">Contratar servicio</span>
+					<span className="fw-bolder">{labelBtn}</span>
 				</button>
 			</div>
 			<div className="card-footer d-flex justify-content-center align-items-center">
@@ -67,8 +77,8 @@ function CardProduct({
 								idx < items.length - 1 ? "border-bottom border-white-50" : ""
 							}`}
 						>
-							<span className="col-auto icon-check-list fs-5 me-2"></span>
-							<p className="col fs-5 m-0">{item}</p>
+							<span className="col-auto icon-check-list fs-6 me-2"></span>
+							<p className="col fs-6 m-0">{item}</p>
 						</li>
 					))}
 				</ul>
@@ -87,6 +97,9 @@ CardProduct.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.string).isRequired,
 	onAdd: PropTypes.func.isRequired,
 	imageUrl: PropTypes.string, // Es opcional, pero Google lo marca como crítico si falta
+	description: PropTypes.string, // La descripción es opcional
+	isPriceFixed: PropTypes.bool,
+	labelBtn: PropTypes.string,
 };
 
 export default CardProduct;

@@ -20,6 +20,7 @@
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
   transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 }
+
 .card-services:hover {
   transform: scale(1.05);
 }
@@ -28,8 +29,10 @@
 .btn-services {
   position: relative;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo transparente */
-  border-radius: 20px; /* 🔁 Este valor modifica el redondeado */
+  background-color: rgba(0, 0, 0, 0.4);
+  /* Fondo transparente */
+  border-radius: 20px;
+  /* 🔁 Este valor modifica el redondeado */
   color: white;
   text-decoration: none;
   text-align: center;
@@ -44,10 +47,11 @@
   right: -2px;
   bottom: -2px;
   background: linear-gradient(90deg, #7b00ff, #ff00cc);
-  border-radius: 22px; /* Debe ser igual o mayor al de `.card` */
+  border-radius: 22px;
+  /* Debe ser igual o mayor al de `.card` */
   z-index: -1;
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
+  mask:
+    linear-gradient(#fff 0 0) content-box,
     linear-gradient(#fff 0 0);
   mask-composite: exclude;
   -webkit-mask-composite: destination-out;
@@ -55,14 +59,16 @@
 }
 
 .btn-services:hover {
-  background: rgb(255, 255, 255); /* Fondo más opaco */
+  background: rgb(255, 255, 255);
+  /* Fondo más opaco */
   color: black;
 }
 
 /* Active (al presionar): efecto de "pulso" */
 .btn-services:active {
   transform: scale(1.05);
-  background: rgb(255, 255, 255); /* Fondo más opaco */
+  background: rgb(255, 255, 255);
+  /* Fondo más opaco */
   color: black;
 }
 
@@ -140,4 +146,13 @@
     /* Escala hasta 3.5 veces su tamaño base (700px) */
     opacity: 0;
   }
+}
+
+/* Estilos para los botones de navegación de Swiper.
+   Usamos las variables CSS de Swiper para asegurar la visibilidad. */
+.swiper {
+  --swiper-navigation-color: #ffffff;
+  /* Color blanco para las flechas */
+  --swiper-navigation-size: 2rem;
+  /* Tamaño de las flechas */
 }

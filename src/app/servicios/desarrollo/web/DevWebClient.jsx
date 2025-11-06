@@ -1,5 +1,7 @@
 "use client";
 import { useMemo } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
 import CardProduct from "@/components/Cards/CardProduct";
 import CardPacksProduct from "@/components/Cards/CardPacksProduct";
 import CTAProducts from "@/components/Cta/CTAProducts";
@@ -13,30 +15,33 @@ import Image from "next/image";
 import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
+
+import "swiper/css";
+import "swiper/css/navigation";
 import "./DevWebClient.css";
 
 const faqs = [
 	{
 		question:
-			"¿Cuál es la principal diferencia entre el 'Paquete Básico' y la 'Landing Page Profesional'?",
+			"¿Cuál es la diferencia entre el 'Mini Sitio' y el 'Sitio Ignite'?",
 		answer:
-			"La 'Landing Page Profesional' es ideal para un lanzamiento rápido y está construida sobre Google Sites, lo que simplifica el hosting. El 'Paquete Básico' ofrece una solución más robusta con hosting propio (Hostinger), un backend en Node.js y un email corporativo, dándote más control y profesionalismo.",
+			'El "Mini Sitio" es una solución de arranque rápido construida en Google Sites, ideal para validar una idea. El "Sitio Ignite" es un desarrollo web profesional en Next.js (React), diseñado para una velocidad superior (+90 en performance) y con un CMS para que puedas autoadministrarlo.',
 	},
 	{
-		question: "¿El hosting y dominio están incluidos para siempre?",
+		question: "¿Por qué elegir Next.js en lugar de WordPress como otras agencias de sitios web?",
 		answer:
-			"Incluimos el primer año de hosting y dominio en todos nuestros paquetes. Después del primer año, la renovación tiene un costo anual que te notificaremos con anticipación. Los paquetes de 'Landing Page' y 'Mini Sitio' usan Google Sites, cuyo hosting es gratuito de forma continua.",
+			"Velocidad y Seguridad. Mientras WordPress es lento y vulnerable a plugins, Next.js es una tecnología moderna que crea sitios ultra-rápidos (mejorando tu SEO) y mucho más seguros. Ofrecemos una tecnología de élite a un precio competitivo.",
 	},
 	{
-		question: "¿Qué significa 'cambios a nivel de sección'?",
+		question: '¿Qué significa "performance +90 garantizado"?',
 		answer:
-			"Se refiere a ajustes en el contenido, imágenes o estructura de una de las secciones ya existentes en tu página (ej. 'Nosotros', 'Servicios', 'Contacto'). No incluye la creación de una sección completamente nueva, la cual tendría un costo adicional.",
+			'Significa que tu sitio web cargará increíblemente rápido. Usamos herramientas como Google PageSpeed Insights para medir el rendimiento, y garantizamos que tu sitio "Ignite" (o superior) obtendrá una puntuación de más de 90/100, algo crucial para el SEO y la experiencia del usuario.',
 	},
 	{
 		question:
 			"Si contrato un paquete, ¿puedo agregar más funcionalidades después?",
 		answer:
-			"¡Por supuesto! Todos nuestros desarrollos son escalables. Si en el futuro necesitas añadir una tienda en línea, un blog o cualquier otra funcionalidad, podemos cotizarla e integrarla a tu sitio web existente sin problemas.",
+			'¡Absolutamente! Esa es la belleza de Next.js. A diferencia de las plantillas rígidas, nuestros paquetes "Ignite", "Accelerate" y "Ultimate" están construidos con una arquitectura modular, lo que nos permite añadir nuevas secciones o funciones fácilmente a medida que tu negocio crece.',
 	},
 ];
 
@@ -44,49 +49,140 @@ export default function DevWebClient() {
 	const products = useMemo(
 		() => [
 			{
-				id: "paquete_basico",
-				name: "Paquete Básico",
+				id: "paquete_1_basico",
+				type: "pack",
+				name: "Paquete 1: Básico",
 				price: 5799,
+				labelBtn: "Cotizar paquete",
 				currency: "MXN",
+				description:
+					"La solución perfecta para startups y pequeños negocios que buscan una presencia online profesional y funcional sin una gran inversión inicial.",
 				imageSrc: imgWebProduct1.src,
-				description:
-					"1 año de Hosting y dominio (con hostinger). Certificado SSL. Email corporativo. Diseño responsivo (optimizado para móviles). Cambios en el diseño: 2 a nivel de sección. 4 Secciones dentro del layout/landing page. Integración de botón de WhatsApp. Implementación básica de SEO. Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js. Tiempo de entrega: 7 a 10 días hábiles.",
+				items: [
+					"1 año de Hosting y dominio (con hostinger)",
+					"Certificado SSL",
+					"Email corporativo",
+					"Diseño responsivo (optimizado para móviles)",
+					"Cambios en el diseño: 2 a nivel de sección",
+					"4 Secciones dentro del layout/landing page",
+					"Integración de botón de WhatsApp",
+					"Implementación básica de SEO",
+					"Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js",
+					"Tiempo de entrega: 7 a 10 días hábiles",
+				],
 			},
 			{
-				id: "paquete_plus",
-				name: "Paquete Plus",
-				price: 17299,
+				id: "paquete_2_sitio_ignite",
+				type: "pack",
+				name: "Paquete 2: SITIO IGNITE",
+				price: 17999,
+				isPriceFixed: false,
 				currency: "MXN",
+				labelBtn: "Cotizar Proyecto Ignite",
+				description:
+					"Para PyMEs que necesitan un sitio corporativo profesional y ultra-rápido.",
+				imageSrc: imgWebProduct1.src,
+				items: [
+					"Desarrollo en Next.js (React)",
+					"Performance +90 Garantizado (Core Web Vitals)",
+					"De 1 a 5 Secciones (Páginas Reales)",
+					"Diseño UI/UX Personalizado (Figma)",
+					"CMS Autoadministrable (Headless)",
+					"Hosting + Dominio (1 Año GRATIS)",
+					"Certificado SSL",
+					"Formulario de Contacto + Botón de WhatsApp",
+					"SEO Técnico Básico",
+					"3 Rondas de Revisión",
+					"Tiempo de entrega: 3 Semanas",
+				],
+			},
+			{
+				id: "paquete_3_sitio_accelerate",
+				type: "pack",
+				name: "Paquete 3: SITIO ACCELERATE",
+				price: 29999,
+				isPriceFixed: false,
+				labelBtn: "Cotizar Proyecto Accelerate",
+				currency: "MXN",
+				description:
+					"Para Negocios en crecimiento que necesitan SEO y más funciones",
 				imageSrc: imgWebProduct2.src,
-				description:
-					"1 año de Hosting y dominio (a elegir Hostinger ó Dondominio). Certificado SSL. Email corporativo. Diseño responsivo (optimizado para móviles). Cambios en el diseño: 4 (a nivel de sección). 4 Secciones dentro del layout/landing page. Integración básica de redes sociales (Botón de WhatsApp, Facebook). Implementación básica de SEO. 1 Mantenimiento gratuito a los 6 meses. Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel). Tiempo de entrega: 10 a 15 días hábiles.",
+				items: [
+					'Todo en "Ignite" MÁS:',
+					"De 6 a 10 Secciones (Páginas Reales)",
+					"Estrategia y SEO On-Page (Avanzado)",
+					"Blog Autoadministrable",
+					"Formularios Avanzados (con integraciones)",
+					"Configuración de Correos Corporativos (Hasta 10)",
+					"Mantenimiento y Soporte (6 Meses GRATIS)",
+					"Manual de Uso y Capacitación",
+					"4 Rondas de Revisión",
+					"Tiempo de entrega: 4-5 Semanas",
+				],
 			},
 			{
-				id: "paquete_pro",
-				name: "Paquete Pro",
-				price: 28799,
+				id: "paquete_4_sitio_ultimate",
+				type: "pack",
+				name: "Paquete 4: SITIO ULTIMATE",
+				price: 49999,
+				isPriceFixed: false,
+				labelBtn: "Cotizar Proyecto Ultimate",
 				currency: "MXN",
-				imageSrc: imgWebProduct3.src,
 				description:
-					"1 año de Hosting y dominio (con dondominio). Certificado SSL. Email corporativo. Diseño responsivo (optimizado para móviles). Cambios en el diseño: 8 (a nivel de sección). Hasta 10 landing pages/layouts. 4 Secciones dentro del layout/landing page. Integración completa de redes sociales (Facebook, Instagram, X (Twitter), WhatsApp). Implementación básica de SEO. 2 días Mantenimiento gratuitos 1 cada 6 meses. Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel) ó Node js. Tiempo de entrega: 15 a 30 días hábiles.",
+					'Para quién: Empresas establecidas que necesitan una "máquina" de crecimiento.',
+				imageSrc: imgWebProduct3.src,
+				items: [
+					'Todo en "Accelerate" MÁS:',
+					"De 11 a 15 Secciones (Páginas Reales)",
+					"Automatizaciones (CRM, Email Marketing)",
+					"Mantenimiento y Soporte (1 Año GRATIS)",
+					"Servicio de Seguridad 365",
+					"Configuración de Correos Corporativos (Hasta 20)",
+					"Imágenes y Videos de Stock Premium",
+					"5 Rondas de Revisión",
+					"Tiempo de entrega: 5-6 Semanas",
+				],
 			},
 			{
 				id: "landing-page-profesional",
+				type: "product",
 				name: "Landing Page Profesional",
 				price: 2999,
 				currency: "MXN",
-				imageSrc: imgWebProduct1.src,
+				labelBtn: "Contratar ahora",
+				isPriceFixed: true,
 				description:
-					"Dominio personalizado incluido (1 año), Hosting gratuito mediante Google Sites, Diseño responsivo, Posicionamiento inicial en Google (SEO básico), Diseño adaptado a la marca del cliente, Hasta 5 secciones para tu página (landing)",
+					"Lanza tu idea o promociona un servicio específico rápidamente. Una página de aterrizaje optimizada para la conversión, construida sobre una plataforma fiable.",
+				imageSrc: imgWebProduct1.src,
+				items: [
+					"Dominio personalizado incluido (1 año)",
+					"Hosting gratuito mediante Google Sites",
+					"Diseño responsivo",
+					"Posicionamiento inicial en Google (SEO básico)",
+					"Diseño adaptado a la marca del cliente",
+					"Hasta 5 secciones para tu página (landing)",
+				],
 			},
 			{
 				id: "mini-sitio",
+				type: "product",
 				name: "Mini Sitio",
 				price: 3500,
 				currency: "MXN",
-				imageSrc: imgWebProduct1.src,
+				labelBtn: "Contratar ahora",
+				isPriceFixed: true,
 				description:
-					"Dominio personalizado incluido (1 año), Hosting gratuito mediante Google Sites, Diseño responsivo, Posicionamiento inicial en Google (SEO básico), Diseño adaptado a la marca del cliente, Hasta 5 paginas (landings), 5 secciones por página (landing)",
+					"Expande tu presencia digital con un sitio multipágina sencillo pero profesional. Perfecto para mostrar diferentes servicios o áreas de tu negocio.",
+				imageSrc: imgWebProduct1.src,
+				items: [
+					"Dominio personalizado incluido (1 año)",
+					"Hosting gratuito mediante Google Sites",
+					"Diseño responsivo",
+					"Posicionamiento inicial en Google (SEO básico)",
+					"Diseño adaptado a la marca del cliente",
+					"Hasta 5 paginas (landings)",
+					"5 secciones por página (landing)",
+				],
 			},
 		],
 		[]
@@ -98,7 +194,7 @@ export default function DevWebClient() {
 		"@type": "Product",
 		name: product.name,
 		image: product.imageSrc,
-		description: product.description,
+		description: product.items.join(". "),
 		sku: product.id,
 		offers: {
 			"@type": "Offer",
@@ -135,144 +231,83 @@ export default function DevWebClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<h1 className="display-1 text-center text-white">
-					Desarrollo de Páginas Web: Paquetes y Soluciones a Medida
+					Desarrollo de Páginas Web Profesionales en Next.js
 				</h1>
 				<p className="lead w-100 px-3 px-md-5">
-					En JEG Dev Studios, nos especializamos en el desarrollo de páginas web
-					que convierten. Te ofrecemos paquetes adaptados a tus necesidades y
-					presupuesto. Ya sea que estés comenzando con una landing page o
-					necesites un sitio más robusto, tenemos la solución profesional para
-					ti.
+					En JEG Dev Studios, redefinimos el desarrollo de páginas web. No somos
+					otra de las agencias de sitios web que te cobra $20,000 por una
+					plantilla de WordPress lenta. Nosotros ofrecemos desarrollo web
+					profesional sobre Next.js (React): la tecnología que garantiza un
+					performance de +90 y una velocidad superior. Compara nuestros paquetes
+					y descubre por qué una base tecnológica sólida es tu mejor ventaja
+					competitiva.
 				</p>
-				<h2>¿Qué Incluye Nuestro Servicio de Desarrollo de Páginas Web?</h2>
-				<p className="lead w-100 px-3 px-md-5">
-					Nuestro servicio va más allá de un simple diseño. Entendemos que el
-					desarrollo de páginas web es la base de tu estrategia digital. Por
-					eso, cada proyecto que entregamos está enfocado en tres pilares: un
-					diseño atractivo que captura a tu cliente, un código limpio optimizado
-					para SEO, y una arquitectura escalable que crece con tu negocio. Todos
-					nuestros paquetes, desde el Básico hasta el Pro, están diseñados con
-					esta filosofía.
-				</p>
-			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
-				<h2 className="text-center text-white mb-xl-5 ">
-					Paquetes de Desarrollo Web
-				</h2>
-				<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
-					<CardPacksProduct
-						idProduct="paquete_basico"
-						dataPrice={5799}
-						title="Paquete Básico"
-						price="5799"
-						moneda="MXN"
-						imageUrl={imgWebProduct1.src}
-						items={[
-							"1 año de Hosting y dominio (con hostinger)",
-							"Certificado SSL",
-							"Email corporativo",
-							"Diseño responsivo (optimizado para móviles)",
-							"Cambios en el diseño: 2 a nivel de sección)",
-							"4 Secciones dentro del layout/landing page",
-							"Integración de botón de WhatsApp",
-							"Implementación básica de SEO",
-							"Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js",
-							"Tiempo de entrega: 7 a 10 días hábiles",
-						]}
-						onQuote={() => handleWhatsAppRedirect("Paquete Básico")}
-					/>
-					<CardPacksProduct
-						idProduct={"paquete_plus"}
-						dataPrice={17299}
-						title="Paquete Plus"
-						price="17299"
-						moneda="MXN"
-						imageUrl={imgWebProduct2.src}
-						items={[
-							"1 año de Hosting y dominio (a elegir Hostinger ó Dondominio)",
-							"Certificado SSL",
-							"Email corporativo",
-							"Diseño responsivo (optimizado para móviles)",
-							" Cambios en el diseño: 4 (a nivel de sección)",
-							"4 Secciones dentro del layout/landing page",
-							"Integración básica de redes sociales (Botón de WhatsApp, Facebook)",
-							"Implementación básica de SEO",
-							"1 Mantenimiento gratuito a los 6 meses",
-							"Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel)",
-							"Tiempo de entrega: 10 a 15 días hábiles.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("Paquete Plus")}
-					/>
-					<CardPacksProduct
-						idProduct={"paquete_pro"}
-						dataPrice={28799}
-						title="Paquete Pro"
-						price="28799"
-						moneda="MXN"
-						imageUrl={imgWebProduct3.src}
-						items={[
-							"1 año de Hosting y dominio (con dondominio)",
-							"Certificado SSL",
-							"Email corporativo",
-							"Diseño responsivo (optimizado para móviles)",
-							"Cambios en el diseño: 8 (a nivel de sección)",
-							"Hasta 10 landing pages/layouts",
-							"4 Secciones dentro del layout/landing page",
-							"Integración completa de redes sociales (Facebook, Instagram, X (Twitter), WhatsApp).",
-							"Implementación básica de SEO",
-							"2 días Mantenimiento gratuitos 1 cada 6 meses",
-							"Stack tecnológico: Frontend: HTML, Bootstrap CSS, JAVASCRIPT Backend: PHP (Laravel) ó Node js",
-							"Tiempo de entrega: 15 a 30 días hábiles.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("Paquete Pro")}
-					/>
-				</ul>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
-				<h2>Soluciones Web Rápidas y Profesionales</h2>
+				<h2 className="text-center text-white">
+					Paquetes y Soluciones Web a tu Medida
+				</h2>
 				<p className="lead w-100 px-3 px-md-5">
-					¿Necesitas un sitio web especifico y secillo pero profesional para
-					iniciar en tu negocio? En JEG Dev Studios tenemos la solución perfecta
-					para ti. Adquiere tu sitio web personalizado y profesional en solo un
-					par de clicks.
+					Desde un sitio robusto con tecnología de punta hasta una landing page
+					profesional para arrancar. Desliza para explorar la solución perfecta
+					para tu negocio.
 				</p>
-				<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
-					<CardProduct
-						idProduct="landing-page-profesional"
-						dataPrice={2999}
-						title="Landing Page Profesional"
-						price="2999"
-						moneda="MXN"
-						imageUrl={imgWebProduct1.src}
-						items={[
-							"Dominio personalizado incluido (1 año)",
-							"Hosting gratuito mediante Google Sites",
-							"Diseño responsivo",
-							"Posicionamiento inicial en Google (SEO básico)",
-							"Diseño adaptado a la marca del cliente",
-							"Escoge 5 secciones para tu página",
-						]}
-						onAdd={() => handleWhatsAppRedirect("Landing Page Profesional")}
-					/>
-					<CardProduct
-						idProduct="mini-sitio"
-						dataPrice={3500}
-						title="Mini Sitio"
-						price="3500"
-						moneda="MXN"
-						imageUrl={imgWebProduct1.src}
-						items={[
-							"Dominio personalizado incluido (1 año)",
-							"Hosting gratuito mediante Google Sites",
-							"Diseño responsivo",
-							"Posicionamiento inicial en Google (SEO básico)",
-							"Diseño adaptado a la marca del cliente",
-							"Hasta 5 paginas (landings)",
-							"5 secciones por página (landing)",
-						]}
-						onAdd={() => handleWhatsAppRedirect("Mini Sitio")}
-					/>
-				</ul>
+				<Swiper
+					className="w-100 py-5"
+					modules={[Navigation, Autoplay]}
+					navigation={true}
+					spaceBetween={30}
+					centeredSlides={true}
+					loop={true}
+					autoplay={{
+						delay: 3000,
+						disableOnInteraction: false,
+					}}
+					breakpoints={{
+						320: { slidesPerView: 1 },
+						480: { slidesPerView: 1 },
+						640: { slidesPerView: 1 },
+						768: { slidesPerView: 2 },
+						1024: { slidesPerView: 3 },
+					}}
+				>
+					{products.map((product) => (
+						<SwiperSlide
+							key={product.id}
+							className="d-flex justify-content-center"
+						>
+							{product.type === "pack" ? (
+								<CardPacksProduct
+									idProduct={product.id}
+									dataPrice={product.price}
+									title={product.name}
+									price={product.price}
+									moneda={product.currency}
+									imageUrl={product.imageSrc}
+									description={product.description}
+									items={product.items}
+									isPriceFixed={product.isPriceFixed}
+									labelBtn={product.labelBtn}
+									onQuote={() => handleWhatsAppRedirect(product.name)}
+								/>
+							) : (
+								<CardProduct
+									idProduct={product.id}
+									dataPrice={product.price}
+									title={product.name}
+									price={product.price}
+									moneda={product.currency}
+									imageUrl={product.imageSrc}
+									description={product.description}
+									items={product.items}
+									isPriceFixed={product.isPriceFixed}
+									labelBtn={product.labelBtn}
+									onAdd={() => handleWhatsAppRedirect(product.name)}
+								/>
+							)}
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</section>
 			<SectionProcess
 				title={"Nuestro Proceso de Desarrollo de Páginas Web"}

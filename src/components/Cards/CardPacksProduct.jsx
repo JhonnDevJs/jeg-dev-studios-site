@@ -10,6 +10,9 @@ function CardPacksProduct({
 	items = [],
 	onQuote,
 	imageUrl, // Nuevo prop para la URL de la imagen del producto
+	description, // Prop para la descripción corta
+	isPriceFixed = false, // Prop para definir si el precio es fijo
+	labelBtn = "Cotizar mi proyecto", // Prop para el texto del botón
 }) {
 	const handleQuoteRequest = () => {
 		onQuote({ idProduct, title, moneda, dataPrice });
@@ -35,9 +38,12 @@ function CardPacksProduct({
 			)}
 
 			<div className="card-body d-flex flex-column">
-				<h3 itemProp="name" className="h2 fw-bolder card-title text-center">
+				<h3 itemProp="name" className="fw-bolder card-title text-center">
 					{title}
 				</h3>
+				{description && (
+					<p className="card-text text-white-50 text-center">{description}</p>
+				)}
 				{/* Contenedor para la oferta del producto (precio, moneda, disponibilidad) */}
 				<div itemProp="offers" itemScope itemType="http://schema.org/Offer">
 					<meta itemProp="priceCurrency" content={moneda} />
@@ -46,16 +52,20 @@ function CardPacksProduct({
 					<link itemProp="availability" href="http://schema.org/InStock" />
 
 					<div className="d-flex justify-content-evenly align-items-center">
-						<p className="text-lit fw-lighter">Desde: </p>
-						<p className="h1 fw-bolder">
+						<p className="text-lit fw-lighter m-0">
+							{isPriceFixed ? "Precio: " : "Desde: "}
+						</p>
+						<h4 className="fw-bolder">
 							<span className="fw-lighter">$</span>
-							{price} {/* Este es el precio formateado para mostrar */}
+							{price}
+						</h4>
+						<p className="m-0">
 							<span> {moneda}</span>
 						</p>
 					</div>
 				</div>
 				<button className="btn-services" onClick={handleQuoteRequest}>
-					<span className="fw-bolder">Cotizar mi proyecto</span>
+					<span className="fw-bolder">{labelBtn}</span>
 				</button>
 			</div>
 			<div className="card-footer d-flex justify-content-center align-items-center">
@@ -66,10 +76,8 @@ function CardPacksProduct({
 							key={idx}
 							className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100"
 						>
-							<p className="fs-5 m-0">
-								<span className="icon-check-list fs-5 me-2"></span>
-								{item}
-							</p>
+							<span className="icon-check-list fs-6 me-2"></span>
+							<p className="fs-6 m-0">{item}</p>
 						</li>
 					))}
 				</ul>
@@ -88,6 +96,9 @@ CardPacksProduct.propTypes = {
 	items: PropTypes.arrayOf(PropTypes.string).isRequired, // Mantener si es correcto
 	onQuote: PropTypes.func.isRequired, // Cambiado de onAdd a onQuote
 	imageUrl: PropTypes.string, // Es opcional, pero Google lo marca como crítico si falta
+	description: PropTypes.string,
+	isPriceFixed: PropTypes.bool,
+	labelBtn: PropTypes.string,
 };
 
 export default CardPacksProduct;

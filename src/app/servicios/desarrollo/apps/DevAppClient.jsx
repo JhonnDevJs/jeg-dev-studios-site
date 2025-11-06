@@ -1,5 +1,7 @@
 "use client";
 import { useMemo } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
 import CardPacksProduct from "@/components/Cards/CardPacksProduct";
 import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
@@ -9,6 +11,8 @@ import imgAppProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-mues
 import imgAppProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
+import "swiper/css";
+import "swiper/css/navigation";
 import "./DevAppClient.css";
 
 const faqs = [
@@ -44,8 +48,18 @@ export default function DevAppClient() {
 				price: 18999,
 				currency: "MXN",
 				imageSrc: imgAppProduct1.src,
+				isPriceFixed: false,
+				labelBtn: "Cotizar app",
 				description:
-					"App nativa sencilla para Android o iOS (1 plataforma). Diseño responsivo y minimalista. Hasta 3 pantallas principales (Home, Servicios, Contacto). Sin base de datos ni backend complejo. Publicación en tienda (Google Play o App Store incluida). Manual básico de uso y entrega de APK.",
+					"La forma más rápida de lanzar tu idea en una plataforma móvil.",
+				items: [
+					"App nativa sencilla para Android o iOS (1 plataforma).",
+					"Diseño responsivo y minimalista.",
+					"Hasta 3 pantallas principales (Home, Servicios, Contacto).",
+					"Sin base de datos ni backend complejo.",
+					"Publicación en tienda (Google Play o App Store incluida).",
+					"Manual básico de uso y entrega de APK.",
+				],
 			},
 			{
 				id: "app_dual_basica",
@@ -53,8 +67,18 @@ export default function DevAppClient() {
 				price: 37999,
 				currency: "MXN",
 				imageSrc: imgAppProduct2.src,
+				isPriceFixed: false,
+				labelBtn: "Cotizar app",
 				description:
-					"App para Android e iOS (React Native o Kotlin Multiplatform). Hasta 6 pantallas dinámicas (login, inicio, catálogo, detalles, contacto, perfil). Integración con base de datos remota y backend en Java. Sistema básico de autenticación y almacenamiento de datos. Publicación en ambas tiendas. Diseño adaptado y personalizado con tu identidad visual.",
+					"Llega a todos los usuarios con una app funcional para Android y iOS.",
+				items: [
+					"App para Android e iOS (React Native o Kotlin Multiplatform).",
+					"Hasta 6 pantallas dinámicas (login, inicio, catálogo, detalles, contacto, perfil).",
+					"Integración con base de datos remota y backend en Java.",
+					"Sistema básico de autenticación y almacenamiento de datos.",
+					"Publicación en ambas tiendas.",
+					"Diseño adaptado y personalizado con tu identidad visual.",
+				],
 			},
 			{
 				id: "app_funcional_pro",
@@ -62,8 +86,19 @@ export default function DevAppClient() {
 				price: 75999,
 				currency: "MXN",
 				imageSrc: imgAppProduct3.src,
+				isPriceFixed: false,
+				labelBtn: "Cotizar app",
 				description:
-					"App híbrida o nativa para Android e iOS. Módulos personalizados (usuarios, productos, pedidos, etc.). Backend Java con APIs seguras y escalables. Diseño UI/UX profesional (componentes animados, navegación fluida). Sistema de notificaciones push. Base de datos relacional conectada al backend. Panel de administración web opcional.",
+					"Una aplicación completa con funcionalidades avanzadas y backend robusto.",
+				items: [
+					"App híbrida o nativa para Android e iOS.",
+					"Módulos personalizados (usuarios, productos, pedidos, etc.).",
+					"Backend Java con APIs seguras y escalables.",
+					"Diseño UI/UX profesional (componentes animados, navegación fluida).",
+					"Sistema de notificaciones push.",
+					"Base de datos relacional conectada al backend.",
+					"Panel de administración web opcional.",
+				],
 			},
 			{
 				id: "app_a_medida_premium",
@@ -71,8 +106,19 @@ export default function DevAppClient() {
 				price: 134999,
 				currency: "MXN",
 				imageSrc: imgAppProduct4.src,
+				isPriceFixed: false,
+				labelBtn: "Cotizar app",
 				description:
-					"App personalizada desde cero (multiplataforma). Arquitectura avanzada y optimizada. Funcionalidades complejas (geolocalización, pagos, cámara, multimedia, etc.). Backend modular con Java (APIs RESTful seguras). Panel de control con estadísticas y gestión remota. Mantenimiento técnico por 3 meses incluido. Asesoría y soporte para estrategias de publicación y escalabilidad.",
+					"La solución definitiva para proyectos complejos que requieren un desarrollo a medida.",
+				items: [
+					"App personalizada desde cero (multiplataforma).",
+					"Arquitectura avanzada y optimizada.",
+					"Funcionalidades complejas (geolocalización, pagos, cámara, multimedia, etc.).",
+					"Backend modular con Java (APIs RESTful seguras).",
+					"Panel de control con estadísticas y gestión remota.",
+					"Mantenimiento técnico por 3 meses incluido.",
+					"Asesoría y soporte para estrategias de publicación y escalabilidad.",
+				],
 			},
 		],
 		[]
@@ -128,78 +174,46 @@ export default function DevAppClient() {
 					necesites una aplicación móvil completa y escalable, tenemos la
 					solución perfecta para ti.
 				</p>
-				<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
-					<CardPacksProduct
-						idProduct={"app_de_inicio"}
-						dataPrice={18999}
-						title="App de Inicio"
-						price="18999"
-						moneda="MXN"
-						imageUrl={imgAppProduct1.src}
-						items={[
-							"App nativa sencilla para Android o iOS (1 plataforma).",
-							"Diseño responsivo y minimalista.",
-							"Hasta 3 pantallas principales (Home, Servicios, Contacto).",
-							"Sin base de datos ni backend complejo.",
-							"Publicación en tienda (Google Play o App Store incluida).",
-							"Manual básico de uso y entrega de APK. ",
-						]}
-						onQuote={() => handleWhatsAppRedirect("App de Inicio")}
-					/>
-					<CardPacksProduct
-						idProduct={"app_dual_basica"}
-						dataPrice={37999}
-						title="App Dual Básica"
-						price="37999"
-						moneda="MXN"
-						imageUrl={imgAppProduct2.src}
-						items={[
-							"App para Android e iOS (React Native o Kotlin Multiplatform).",
-							"Hasta 6 pantallas dinámicas (login, inicio, catálogo, detalles, contacto, perfil).",
-							"Integración con base de datos remota y backend en Java.",
-							"Sistema básico de autenticación y almacenamiento de datos.",
-							"Publicación en ambas tiendas.",
-							"Diseño adaptado y personalizado con tu identidad visual.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("App Dual Básica")}
-					/>
-					<CardPacksProduct
-						idProduct={"app_funcional_pro"}
-						dataPrice={75999}
-						title="App Funcional Pro"
-						price="75999"
-						moneda="MXN"
-						imageUrl={imgAppProduct3.src}
-						items={[
-							"App híbrida o nativa para Android e iOS.",
-							"Módulos personalizados (usuarios, productos, pedidos, etc.).",
-							"Backend Java con APIs seguras y escalables.",
-							"Diseño UI/UX profesional (componentes animados, navegación fluida).",
-							"Sistema de notificaciones push.",
-							"Base de datos relacional conectada al backend.",
-							"Panel de administración web opcional.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("App Funcional Pro")}
-					/>
-					<CardPacksProduct
-						idProduct={"app_a_medida_premium"}
-						dataPrice={134999}
-						title="App a Medida Premium"
-						price="134999"
-						moneda="MXN"
-						imageUrl={imgAppProduct4.src}
-						items={[
-							"App personalizada desde cero (multiplataforma).",
-							"Arquitectura avanzada y optimizada.",
-							"Funcionalidades complejas (geolocalización, pagos, cámara, multimedia, etc.).",
-							"Backend modular con Java (APIs RESTful seguras).",
-							"Panel de control con estadísticas y gestión remota.",
-							"Mantenimiento técnico por 3 meses incluido.",
-							"Asesoría y soporte para estrategias de publicación y escalabilidad.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("App a Medida Premium")}
-					/>
-				</ul>
+				<Swiper
+					className="w-100 py-5"
+					modules={[Navigation, Autoplay]}
+					navigation={true}
+					spaceBetween={30}
+					centeredSlides={true}
+					loop={true}
+					autoplay={{
+						delay: 3000,
+						disableOnInteraction: false,
+					}}
+					breakpoints={{
+						320: { slidesPerView: 1 },
+						480: { slidesPerView: 1 },
+						640: { slidesPerView: 1 },
+						768: { slidesPerView: 2 },
+						1024: { slidesPerView: 3 },
+					}}
+				>
+					{products.map((product) => (
+						<SwiperSlide
+							key={product.id}
+							className="d-flex justify-content-center"
+						>
+							<CardPacksProduct
+								idProduct={product.id}
+								dataPrice={product.price}
+								title={product.name}
+								price={product.price}
+								moneda={product.currency}
+								imageUrl={product.imageSrc}
+								description={product.description}
+								items={product.items}
+								isPriceFixed={product.isPriceFixed}
+								labelBtn={product.labelBtn}
+								onQuote={() => handleWhatsAppRedirect(product.name)}
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</section>
 			<FAQ
 				faqs={faqs}

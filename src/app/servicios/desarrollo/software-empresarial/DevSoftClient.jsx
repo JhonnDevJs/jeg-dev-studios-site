@@ -1,5 +1,7 @@
 "use client";
 import { useMemo } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Autoplay } from "swiper/modules";
 import CardPacksProduct from "@/components/Cards/CardPacksProduct";
 import CardSmallList from "@/components/Cards/CardSmallList";
 import CardNestedLists from "@/components/Cards/CardNestedLists";
@@ -12,6 +14,8 @@ import imgSoftProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-mue
 import imgSoftProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
+import "swiper/css";
+import "swiper/css/navigation";
 import "./DevSoftClient.css";
 
 const faqs = [
@@ -54,8 +58,18 @@ export default function DevSoftClient() {
 				price: 9499,
 				currency: "MXN",
 				imageSrc: imgSoftProduct1.src,
+				isPriceFixed: false,
+				labelBtn: "Cotizar solución",
 				description:
-					"1 módulo funcional (ventas, citas, inventario, etc.). Interfaz gráfica simple y amigable. Software de escritorio o app web local. Base de datos local (ej. SQLite). Manual básico de usuario. Instalación en un equipo.",
+					"Ideal para digitalizar una operación clave de tu negocio.",
+				items: [
+					"1 módulo funcional (ventas, citas, inventario, etc.).",
+					"Interfaz gráfica simple y amigable.",
+					"Software de escritorio o app web local.",
+					"Base de datos local (ej. SQLite).",
+					"Manual básico de usuario.",
+					"Instalación en un equipo.",
+				],
 			},
 			{
 				id: "solucion_estandar",
@@ -63,8 +77,17 @@ export default function DevSoftClient() {
 				price: 17299,
 				currency: "MXN",
 				imageSrc: imgSoftProduct2.src,
-				description:
-					"Hasta 3 módulos integrados (ej. ventas, productos, clientes). Sistema multiusuario con login y control de acceso. Interfaz responsiva (web o escritorio). Base de datos local o en red. Exportación de reportes a PDF/Excel. Instalación en hasta 3 dispositivos.",
+				isPriceFixed: false,
+				labelBtn: "Cotizar solución",
+				description: "Perfecto para centralizar varias áreas de tu empresa.",
+				items: [
+					"Hasta 3 módulos integrados (ej. ventas, productos, clientes).",
+					"Sistema multiusuario con login y control de acceso.",
+					"Interfaz responsiva (web o escritorio).",
+					"Base de datos local o en red.",
+					"Exportación de reportes a PDF/Excel.",
+					"Instalación en hasta 3 dispositivos.",
+				],
 			},
 			{
 				id: "solucion_avanzada",
@@ -72,8 +95,19 @@ export default function DevSoftClient() {
 				price: 34499,
 				currency: "MXN",
 				imageSrc: imgSoftProduct3.src,
+				isPriceFixed: false,
+				labelBtn: "Cotizar solución",
 				description:
-					"Hasta 6 módulos personalizados (ventas, compras, almacén, clientes, empleados, reportes). Diseño visual adaptado a tu identidad corporativa. Base de datos en red o en la nube. Panel de control y estadísticas con gráficas. Acceso por roles y permisos. Instalación en red local o servidor. Capacitación inicial para tu equipo.",
+					"Una solución robusta para un control total y análisis de datos.",
+				items: [
+					"Hasta 6 módulos personalizados (ventas, compras, almacén, clientes, empleados, reportes).",
+					"Diseño visual adaptado a tu identidad corporativa.",
+					"Base de datos en red o en la nube.",
+					"Panel de control y estadísticas con gráficas.",
+					"Acceso por roles y permisos.",
+					"Instalación en red local o servidor.",
+					"Capacitación inicial para tu equipo.",
+				],
 			},
 			{
 				id: "solucion_profesional",
@@ -81,8 +115,20 @@ export default function DevSoftClient() {
 				price: 66899,
 				currency: "MXN",
 				imageSrc: imgSoftProduct4.src,
+				isPriceFixed: false,
+				labelBtn: "Cotizar solución",
 				description:
-					"Módulos ilimitados según flujo de trabajo personalizado. Desarrollo basado en análisis detallado de procesos. Interfaz avanzada y adaptable (modo oscuro, responsiva, accesible). Control de usuarios y auditoría de acciones. Integraciones externas (facturación electrónica, CRMs, etc.). Seguridad avanzada (respaldos automáticos, cifrado de datos). Capacitación y documentación completa. Soporte técnico durante el primer mes incluido.",
+					"El sistema definitivo para automatizar, integrar y escalar tu operación.",
+				items: [
+					"Módulos ilimitados según flujo de trabajo personalizado.",
+					"Desarrollo basado en análisis detallado de procesos.",
+					"Interfaz avanzada y adaptable (modo oscuro, responsiva, accesible).",
+					"Control de usuarios y auditoría de acciones.",
+					"Integraciones externas (facturación electrónica, CRMs, etc.).",
+					"Seguridad avanzada (respaldos automáticos, cifrado de datos).",
+					"Capacitación y documentación completa.",
+					"Soporte técnico durante el primer mes incluido.",
+				],
 			},
 		],
 		[]
@@ -179,79 +225,46 @@ export default function DevSoftClient() {
 					sea que estés comenzando con un sistema de inventarios o necesites un
 					software más robusto, tenemos la solución perfecta para ti.
 				</p>
-				<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
-					<CardPacksProduct
-						idProduct="solucion_basica"
-						dataPrice={9499}
-						title="Solución Básica"
-						price="9499"
-						moneda="MXN"
-						imageUrl={imgSoftProduct1.src}
-						items={[
-							"1 módulo funcional (ventas, citas, inventario, etc.).",
-							"Interfaz gráfica simple y amigable. ",
-							"Software de escritorio o app web local.",
-							"Base de datos local (ej. SQLite).",
-							"Manual básico de usuario.",
-							"Instalación en un equipo.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("Solución Básica")}
-					/>
-					<CardPacksProduct
-						idProduct={"solucion_estandar"}
-						dataPrice={17299}
-						title="Solución Estándar"
-						price="17299"
-						moneda="MXN"
-						imageUrl={imgSoftProduct2.src}
-						items={[
-							"Hasta 3 módulos integrados (ej. ventas, productos, clientes).",
-							"Sistema multiusuario con login y control de acceso.",
-							"Interfaz responsiva (web o escritorio).",
-							"Base de datos local o en red.",
-							"Exportación de reportes a PDF/Excel.",
-							"Instalación en hasta 3 dispositivos.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("Solución Estándar")}
-					/>
-					<CardPacksProduct
-						idProduct={"solucion_avanzada"}
-						dataPrice={34499}
-						title="Solución Avanzada"
-						price="34499"
-						moneda="MXN"
-						imageUrl={imgSoftProduct3.src}
-						items={[
-							"Hasta 6 módulos personalizados (ventas, compras, almacén, clientes, empleados, reportes).",
-							"Diseño visual adaptado a tu identidad corporativa.",
-							"Base de datos en red o en la nube.",
-							"Panel de control y estadísticas con gráficas.",
-							"Acceso por roles y permisos.",
-							"Instalación en red local o servidor.",
-							"Capacitación inicial para tu equipo.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("Solución Avanzada")}
-					/>
-					<CardPacksProduct
-						idProduct={"solucion_profesional"}
-						dataPrice={66899}
-						title="Solución Profesional"
-						price="66899"
-						moneda="MXN"
-						imageUrl={imgSoftProduct4.src}
-						items={[
-							"Módulos ilimitados según flujo de trabajo personalizado.",
-							"Desarrollo basado en análisis detallado de procesos.",
-							"Interfaz avanzada y adaptable (modo oscuro, responsiva, accesible).",
-							"Control de usuarios y auditoría de acciones.",
-							"Integraciones externas (facturación electrónica, CRMs, etc.).",
-							"Seguridad avanzada (respaldos automáticos, cifrado de datos).",
-							"Capacitación y documentación completa.",
-							"Soporte técnico durante el primer mes incluido.",
-						]}
-						onQuote={() => handleWhatsAppRedirect("Solución Profesional")}
-					/>
-				</ul>
+				<Swiper
+					className="w-100 py-5"
+					modules={[Navigation, Autoplay]}
+					navigation={true}
+					spaceBetween={30}
+					centeredSlides={true}
+					loop={true}
+					autoplay={{
+						delay: 3000,
+						disableOnInteraction: false,
+					}}
+					breakpoints={{
+						320: { slidesPerView: 1 },
+						480: { slidesPerView: 1 },
+						640: { slidesPerView: 1 },
+						768: { slidesPerView: 2 },
+						1024: { slidesPerView: 3 },
+					}}
+				>
+					{products.map((product) => (
+						<SwiperSlide
+							key={product.id}
+							className="d-flex justify-content-center"
+						>
+							<CardPacksProduct
+								idProduct={product.id}
+								dataPrice={product.price}
+								title={product.name}
+								price={product.price}
+								moneda={product.currency}
+								imageUrl={product.imageSrc}
+								description={product.description}
+								items={product.items}
+								isPriceFixed={product.isPriceFixed}
+								labelBtn={product.labelBtn}
+								onQuote={() => handleWhatsAppRedirect(product.name)}
+							/>
+						</SwiperSlide>
+					))}
+				</Swiper>
 			</section>
 			<SectionProcess
 				title={"Nuestro Proceso de Desarrollo de Software"}
