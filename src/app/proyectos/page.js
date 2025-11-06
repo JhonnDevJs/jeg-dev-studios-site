@@ -1,5 +1,5 @@
 export const metadata = {
-	title: "Proyectos | JEG Dev Studios",
+	title: "Conoce nuestro portafolio de Proyectos | JEG Dev Studios",
 	description:
 		"Explora nuestros mejores proyectos web, móviles, de escritorio y videojuegos desarrollados por JEG Dev Studios.",
 	keywords:

@@ -1,5 +1,5 @@
 export const metadata = {
-	title: "Agencia de SEO en México | Posicionamiento Web y GEO | JEG Dev Studios",
+	title: "Posicionamiento SEO Web y GEO en México | JEG Dev Studios",
 	description:
 		"Somos una agencia de SEO en México. Ofrecemos servicios de SEO Web, Local y GEO (Optimización IA) para atraer más clientes a tu negocio. ¡Solicita tu auditoría!",
 	keywords:

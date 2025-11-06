@@ -176,7 +176,7 @@ export default function DevSoftClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<h1 className="display-1 text-center text-white">
-					Desarrollo de Software Empresarial en México
+					Tu Empresa de Desarrollo de Software Empresarial en México
 				</h1>
 				<p className="lead w-100 px-3 px-md-5">
 					En JEG Dev Studios somos una empresa de desarrollo de software en

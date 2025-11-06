@@ -1,7 +1,7 @@
 export const metadata = {
-	title: "Desarrollo de Páginas Web en México | Paquetes | JEG Dev Studios",
+	title: "Desarrollo de Páginas Web en México | JEG Dev Studio",
 	description:
-		"Servicios de desarrollo de páginas web en Next.js. Olvida WordPress. Somos una de las agencias de sitios web que ofrece paquetes con performance +90 garantizado.",
+		"Servicios de desarrollo de páginas web en Next.js. Olvida WordPress. Somos la agencia de sitios web que ofrece paquetes con performance +90 garantizado.",
 	keywords:
 		"contratar desarrollo web, crear sitio web profesional, diseño de páginas web, creación de landing pages, creación de tiendas en línea, desarrollo web en México, soluciones digitales personalizadas, sitio web empresarial, servicios de desarrollo web, JEG Dev Studios",
 	alternates: {

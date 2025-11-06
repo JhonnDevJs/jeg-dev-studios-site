@@ -1,5 +1,5 @@
 export const metadata = {
-	title: "Empresa de Desarrollo de Software en México | JEG Dev Studios",
+	title: "Desarrollo de Software en México | JEG Dev Studios",
 	description:
 		"Somos una empresa de desarrollo de software en México. Ofrecemos un servicio de software a medida: CRMs, ERPs y sistemas empresariales. Cotiza tu proyecto.",
 	keywords:
