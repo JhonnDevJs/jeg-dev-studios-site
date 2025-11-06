@@ -138,15 +138,27 @@ export default function DevWebClient() {
 					Desarrollo de Páginas Web: Paquetes y Soluciones a Medida
 				</h1>
 				<p className="lead w-100 px-3 px-md-5">
-					En JEG Dev Studios, nos especializamos en el desarrollo de páginas web que convierten. Te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya sea que estés comenzando con una landing page o necesites un sitio más robusto, tenemos la solución profesional para ti.
+					En JEG Dev Studios, nos especializamos en el desarrollo de páginas web
+					que convierten. Te ofrecemos paquetes adaptados a tus necesidades y
+					presupuesto. Ya sea que estés comenzando con una landing page o
+					necesites un sitio más robusto, tenemos la solución profesional para
+					ti.
 				</p>
 				<h2>¿Qué Incluye Nuestro Servicio de Desarrollo de Páginas Web?</h2>
 				<p className="lead w-100 px-3 px-md-5">
-					Nuestro servicio va más allá de un simple diseño. Entendemos que el desarrollo de páginas web es la base de tu estrategia digital. Por eso, cada proyecto que entregamos está enfocado en tres pilares: un diseño atractivo que captura a tu cliente, un código limpio optimizado para SEO, y una arquitectura escalable que crece con tu negocio. Todos nuestros paquetes, desde el Básico hasta el Pro, están diseñados con esta filosofía.
+					Nuestro servicio va más allá de un simple diseño. Entendemos que el
+					desarrollo de páginas web es la base de tu estrategia digital. Por
+					eso, cada proyecto que entregamos está enfocado en tres pilares: un
+					diseño atractivo que captura a tu cliente, un código limpio optimizado
+					para SEO, y una arquitectura escalable que crece con tu negocio. Todos
+					nuestros paquetes, desde el Básico hasta el Pro, están diseñados con
+					esta filosofía.
 				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
-				<h2 className="text-center text-white mb-xl-5 ">Paquetes de Desarrollo Web</h2>
+				<h2 className="text-center text-white mb-xl-5 ">
+					Paquetes de Desarrollo Web
+				</h2>
 				<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 					<CardPacksProduct
 						idProduct="paquete_basico"
@@ -217,11 +229,12 @@ export default function DevWebClient() {
 				</ul>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
-				<h2>
-					Soluciones Web Rápidas y Profesionales
-				</h2>
+				<h2>Soluciones Web Rápidas y Profesionales</h2>
 				<p className="lead w-100 px-3 px-md-5">
-					¿Necesitas un sitio web especifico y secillo pero profesional para iniciar en tu negocio? En JEG Dev Studios tenemos la solución perfecta para ti. Adquiere tu sitio web personalizado y profesional en solo un par de clicks.
+					¿Necesitas un sitio web especifico y secillo pero profesional para
+					iniciar en tu negocio? En JEG Dev Studios tenemos la solución perfecta
+					para ti. Adquiere tu sitio web personalizado y profesional en solo un
+					par de clicks.
 				</p>
 				<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 					<CardProduct

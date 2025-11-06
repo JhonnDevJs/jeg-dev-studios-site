@@ -31,7 +31,6 @@ import CTA from "@/components/Cta/CTA";
 function WebDev() {
 	return (
 		<>
-		
 			<section className="d-flex flex-column text-white w-100 p-5 m-0 gap-5 gradient-effect-x">
 				<article className="d-flex flex-column pt-5 gap-3">
 					<h1>Saber Más sobre Nuestro Servicio de Desarrollo Web</h1>
@@ -163,7 +162,16 @@ function WebDev() {
 					</p>
 				</article>
 			</section>
-			<CTA />
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<CTA
+					title={"¿Listo para dar el siguiente paso digital?"}
+					paragraph={
+						"Es momento de convertir tu idea en una solución tecnológica escalable y atractiva. Agenda tu consulta gratuita o contáctanos directamente."
+					}
+					label={"Solicita tu Auditoría Gratuita"}
+					link={"/contacto"}
+				/>
+			</section>
 		</>
 	);
 }

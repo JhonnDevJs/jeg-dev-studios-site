@@ -548,7 +548,9 @@ export default function HomeClient({ posts: postsToShow }) {
 						con nosotros, no solo obtienes código; obtienes una arquitectura
 						completa pensada para funcionar y crecer.
 					</p>
-					<h3 className="fw-bold mb-4">Arquitectura Full-Stack y Tecnologías Modernas</h3>
+					<h3 className="fw-bold mb-4">
+						Arquitectura Full-Stack y Tecnologías Modernas
+					</h3>
 					<p className="fs-5 mb-4">
 						Manejamos tu proyecto de inicio a fin. Desarrollamos tanto el
 						frontend (lo que ves) como el backend y las bases de datos (lo que
@@ -569,8 +571,10 @@ export default function HomeClient({ posts: postsToShow }) {
 							<p>Paneles de control con reportes y gráficas personalizadas.</p>
 						</li>
 						<li className="mb-3">
-							<p>Integraciones con sistemas externos como CRMs, pasarelas de pago o
-							facturación electrónica.</p>
+							<p>
+								Integraciones con sistemas externos como CRMs, pasarelas de pago
+								o facturación electrónica.
+							</p>
 						</li>
 					</ul>
 					<h3 className="fw-bold mb-4">Un Servicio de Principio a Fin</h3>
@@ -792,7 +796,17 @@ export default function HomeClient({ posts: postsToShow }) {
 				</div>
 			</section>
 			{mounted && <BlogSection posts={postsToShow} />}
-			<CTA />
+
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<CTA
+					title={"¿Listo para dar el siguiente paso digital?"}
+					paragraph={
+						"Es momento de convertir tu idea en una solución tecnológica escalable y atractiva. Agenda tu consulta gratuita o contáctanos directamente."
+					}
+					label={"Solicita tu Auditoría Gratuita"}
+					link={"/contacto"}
+				/>
+			</section>
 			<FAQ
 				faqs={faqs}
 				subtitle="Resuelve tus dudas sobre nuestros servicios de desarollo, diseño y posicionamiento SEO."

@@ -3,6 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import Image from "next/image";
 import ProjectCard from "@/components/Cards/ProjectCard";
 import DesignProjectCard from "@/components/Cards/DesignProjectCard";
+import CTA from "@/components/Cta/CTA";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 import { storage, db } from "@/lib/firebase";
@@ -124,7 +125,7 @@ function ProjectsClient() {
 					style={{ width: "100%", height: "auto" }}
 				/>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<article className="container text-center text-white">
 					<h1 className="display-md-2 display-4 fw-bolder">
 						Portafolio de Proyectos
@@ -188,6 +189,16 @@ function ProjectsClient() {
 					</article>
 				</section>
 			)}
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<CTA
+					title={"¿Listo para dar el siguiente paso digital?"}
+					paragraph={
+						"Es momento de convertir tu idea en una solución tecnológica escalable y atractiva. Agenda tu consulta gratuita o contáctanos directamente."
+					}
+					label={"Solicita tu Auditoría Gratuita"}
+					link={"/contacto"}
+				/>
+			</section>
 			<FAQ
 				faqs={faqs}
 				subtitle="Preguntas frecuentes sobre nuestro portafolio."

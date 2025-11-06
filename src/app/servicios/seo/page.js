@@ -1,13 +1,13 @@
 export const metadata = {
-	title: "Agencia de Posicionamiento SEO en México | JEG Dev Studios México",
+	title: "Agencia de SEO en México | Posicionamiento Web y GEO | JEG Dev Studios",
 	description:
-		"Consultoría y desarrollo digital para empresas en México: sitios web, apps móviles y software empresarial con soluciones modernas y escalables.",
+		"Somos una agencia de SEO en México. Ofrecemos servicios de SEO Web, Local y GEO (Optimización IA) para atraer más clientes a tu negocio. ¡Solicita tu auditoría!",
 	keywords:
 		"Servicios de posicionamiento SEO, Agencia de posicionamiento SEO en México",
 	openGraph: {
-		title: "Agencia de Posicionamiento SEO en México | JEG Dev Studios",
+		title: "JEG Dev Studios | Agencia de SEO en México: Estrategias Web, Local y GEO",
 		description:
-			"Creamos soluciones digitales para empresas: sitios web profesionales, apps móviles y software a medida. Asesoría experta y desarrollo escalable en México.",
+			"Aumentamos tu visibilidad en Google y en las nuevas respuestas de IA. Conoce nuestros servicios de posicionamiento SEO y GEO.",
 		url: "https://www.jegdevstudios.com/servicios/seo",
 		siteName: "JEG Dev Studios",
 		images: [

@@ -54,6 +54,7 @@ function CardServices({
 							role="button"
 							aria-label={buttonLabelInfo}
 							title={buttonLabelInfo}
+							target="_blank"
 							tabIndex={0}
 						>
 							Saber más

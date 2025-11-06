@@ -30,10 +30,10 @@ export const metadata = {
 	},
 };
 
-
 const faqs = [
 	{
-		question: "¿El servicio de desarrollo de software está disponible para clientes?",
+		question:
+			"¿El servicio de desarrollo de software está disponible para clientes?",
 		answer:
 			"Por el momento, nuestro desarrollo de software se concentra en proyectos internos y productos propios. Esta estrategia nos permite innovar y perfeccionar nuestras soluciones antes de ofrecerlas al público general.",
 	},
@@ -49,7 +49,8 @@ const faqs = [
 			"Utilizamos un conjunto de tecnologías modernas y probadas como Java, PHP con Laravel, React Native para soluciones móviles, y Node.js para backends eficientes. Esto nos garantiza flexibilidad y calidad en cada desarrollo.",
 	},
 	{
-		question: "¿Cómo puedo saber si este servicio estará disponible en el futuro?",
+		question:
+			"¿Cómo puedo saber si este servicio estará disponible en el futuro?",
 		answer:
 			"Te recomendamos seguirnos en nuestras redes sociales y visitar nuestro sitio web regularmente. Anunciaremos cualquier actualización sobre la disponibilidad de nuestros servicios de desarrollo de software para clientes.",
 	},
@@ -101,7 +102,16 @@ function SoftDev() {
 					</p>
 				</article>
 			</section>
-			<CTA />
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<CTA
+					title={"¿Listo para dar el siguiente paso digital?"}
+					paragraph={
+						"Es momento de convertir tu idea en una solución tecnológica escalable y atractiva. Agenda tu consulta gratuita o contáctanos directamente."
+					}
+					label={"Solicita tu Auditoría Gratuita"}
+					link={"/contacto"}
+				/>
+			</section>
 			<FAQ
 				faqs={faqs}
 				subtitle="Preguntas frecuentes sobre nuestro desarrollo de software."

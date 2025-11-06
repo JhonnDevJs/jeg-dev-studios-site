@@ -10,25 +10,24 @@ import CTA from "@/components/Cta/CTA";
 const faqs = [
 	// --- Actuales ---
 	{
-		question: "¿Cuál es la diferencia entre SEO Web y SEO Local?",
+		question: "¿Qué incluyen sus servicios de SEO en México?",
 		answer:
-			'El SEO Web busca posicionarte a nivel nacional para búsquedas generales (ej. "software de contabilidad"). El SEO Local busca posicionarte en un área geográfica específica para búsquedas locales (ej. "desarrollador de software en CDMX").',
+			"Nuestros servicios de SEO en México son integrales. Incluyen una auditoría técnica, investigación de palabras clave, optimización on-page, creación de contenido estratégico y link building. Dependiendo de tu negocio, nos especializamos en SEO Web (nacional) o SEO Local (para negocios físicos).",
 	},
 	{
 		question: "¿En cuánto tiempo veré resultados con el SEO?",
 		answer:
-			"El SEO es una estrategia a mediano-largo plazo. Generalmente, los primeros resultados significativos comienzan a verse entre los 3 y 6 meses, dependiendo de la competencia de tu sector y el estado inicial de tu sitio web.",
+			"El SEO es una estrategia a mediano-largo plazo. Aunque algunas mejoras técnicas pueden dar resultados rápidos, los resultados significativos y sostenibles (como llegar a la primera página para keywords competidas) generalmente comienzan a verse entre los 4 y 6 meses.",
 	},
 	{
-		question:
-			"¿Por qué necesito SEO si mi sitio web ya fue desarrollado por ustedes?",
+		question: "¿Cuál es la diferencia entre SEO, GEO y SEM?",
 		answer:
-			"El desarrollo optimizado (como el que hacemos) construye una base técnica sólida para el SEO (velocidad, estructura, etc.). El servicio de posicionamiento SEO es el trabajo continuo de crear contenido, construir autoridad y adaptar la estrategia para competir activamente por las primeras posiciones.",
+			"SEO (Search Engine Optimization): Es el proceso orgánico (no pagado) para posicionar tu sitio en los enlaces de búsqueda, SEM (Search Engine Marketing): Es la publicidad de paga (ej. Google Ads) para aparecer al instante en los resultados y GEO (Generative Engine Optimization): Es el nuevo proceso para optimizar tu contenido y que sea usado como fuente en las respuestas generadas por Inteligencia Artificial.",
 	},
 	{
-		question: "¿Qué incluye la auditoría SEO inicial?",
+		question: "¿Por qué elegir a JEG Dev Studios como mi agencia de SEO?",
 		answer:
-			"Nuestra auditoría revisa más de 100 puntos, incluyendo la salud técnica de tu sitio (indexación, velocidad), la calidad de tu contenido, tu perfil de enlaces (backlinks) y un análisis competitivo para entender qué están haciendo bien tus rivales.",
+			"Porque somos una agencia de SEO en México con un ADN técnico. A diferencia de las agencias de marketing tradicionales, nosotros nacimos del desarrollo de software. Entendemos el SEO desde el código fuente, la velocidad del servidor y la arquitectura web, lo que nos da una ventaja única para solucionar problemas técnicos complejos que otras agencias no pueden.",
 	},
 ];
 
@@ -47,51 +46,92 @@ export default function SeoClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 gap-3 gradient-effect-x">
 				<h1 className="text-center text-white fw-bold mt-3">
-					Posicionamiento SEO que Genera Resultados de Negocio
+					Agencia de SEO en México: Visibilidad que Genera Negocio
 				</h1>
 				<p className="lead text-white text-center">
-					En el mercado digital actual, ser invisible en Google es como no
-					existir. Como agencia de posicionamiento SEO en México , nuestro único
-					objetivo es poner tu negocio directamente frente a los clientes que te
-					están buscando. No nos enfocamos en métricas de vanidad; Creamos
-					estrategias SEO que se traducen en más tráfico cualificado, más
-					prospectos y más ventas.
+					En JEG Dev Studios, no solo te conseguimos clics; te conseguimos
+					clientes. Como agencia de SEO en México líder en estrategia digital,
+					entendemos que ser invisible en Google es como no existir. Dejamos
+					atrás las métricas de vanidad para enfocarnos en lo único que importa:
+					un servicio de SEO que se traduce en más tráfico cualificado, más
+					prospectos y un retorno de inversión (ROI) medible.
 				</p>
+				<h2>Más Allá del SEO Tradicional: Introducimos GEO</h2>
+				<p className="lead w-100 px-3 px-md-5">
+					El posicionamiento web ha cambiado. Ya no solo compites por un lugar
+					en una lista de diez enlaces; ahora compites por ser la respuesta que
+					ofrece la Inteligencia Artificial (como en las AI Overviews de
+					Google). Nuestra agencia de posicionamiento SEO en México domina todo
+					el espectro de la visibilidad:
+				</p>
+
+				<ul className="fs-5 text-start mx-auto" style={{ maxWidth: "600px" }}>
+					<li className="mb-3">
+						<p>
+							Posicionamiento SEO Web: Para construir tu autoridad y capturar
+							tráfico a nivel nacional.
+						</p>
+					</li>
+					<li className="mb-3">
+						<p>
+							Posicionamiento SEO Local: Para dominar tu barrio y que los
+							clientes te encuentren en Google Maps.
+						</p>
+					</li>
+					<li className="mb-3">
+						<p>
+							Optimización GEO (Generative Engine Optimization): La nueva
+							frontera. Preparamos tu contenido para que sea la fuente principal
+							de las respuestas de IA.
+						</p>
+					</li>
+				</ul>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<h2 className="text-center text-white">
 					Nuestros Servicios de Posicionamiento SEO
 				</h2>
 				<p className="lead text-white text-center">
-					Entendemos que cada negocio tiene un público diferente. Por eso,
-					nuestros servicios de posicionamiento SEO se dividen en dos áreas
-					estratégicas para atacar tus objetivos de la manera más eficiente
-					posible.
+					Ofrecemos una consultoría SEO completa, dividida en tres áreas
+					estratégicas. Elige el plan de acción que tu negocio necesita para
+					dominar las búsquedas.
 				</p>
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 						<CardServices
 							title="SEO Web y Nacional"
-							description="Ideal para empresas que venden productos o servicios a nivel nacional. Nos enfocamos en posicionar tu sitio web para palabras clave de alto volumen, construyendo tu autoridad de dominio y atrayendo tráfico de todo el país."
+							description="Construimos tu autoridad en todo el país. Ideal para e-commerce, empresas SaaS y marcas que buscan una audiencia nacional. Nos enfocamos en las palabras clave de alto volumen y en una estrategia de contenido que te posicione como líder de la industria."
 							url="/servicios/seo/web"
-							buttonLabel="Ver Estrategias de SEO Web"
+							buttonLabel="Conocer más de SEO Web"
 							items={[
 								"Auditoría SEO Técnica Completa",
-								"Investigación de Palabras Clave",
+								"Investigación de Palabras Clave (Keyword Research)",
 								"Optimización On-Page y de Contenido",
-								"Estrategia de Link Building",
+								"Estrategia de Link Building (Construcción de Enlaces)",
 							]}
 						/>
 						<CardServices
 							title="SEO Local para Negocios"
-							description={`Si tus clientes están en tu ciudad o colonia, este es el servicio para ti. Optimizamos tu presencia para que aparezca en Google Maps y en las búsquedas locales ("cerca de mí"), atrayendo clientes a tu puerta.`}
+							description={`Si tus clientes están en tu ciudad o colonia, este es el servicio para ti. Optimizamos tu presencia digital para que aparezcas en el "Map Pack" de Google y en las búsquedas locales ("cerca de mí"), atrayendo clientes listos para comprar a tu puerta.`}
 							url="/servicios/seo/local"
-							buttonLabel="Ver Estrategias de SEO Local"
+							buttonLabel="Explorar SEO Local"
 							items={[
-								"Optimización del perfil empresarial de Google",
-								"Estrategia de Citaciones Locales",
-								"Identidad Visual Corporativa",
-								"Diseño Editorial y Publicitario",
+								"Optimización de Google Business Profile (Google Maps)",
+								"Estrategia de Citaciones Locales y NAP",
+								"Gestión y Estrategia de Reseñas (Reviews)",
+								"SEO On-Page enfocado geográficamente",
+							]}
+						/>
+						<CardServices
+							title="GEO (Optimización para IA Generativa)"
+							description={`Prepara tu sitio para el futuro de las búsquedas. Optimizamos tu contenido para que sea la fuente elegida por los motores de IA (LLMs). Aseguramos que tu autoridad (E-E-A-T) sea clara para que Google cite tu marca, no la de tu competencia.`}
+							url="/servicios/seo/geo"
+							buttonLabel="Solicitar Consultoría GEO"
+							items={[
+								"Creación y Optimización de llms.txt",
+								"Fortalecimiento de señales E-E-A-T",
+								"Estructuración de contenido semántico (Schema)",
+								"Optimización para Búsqueda Conversacional",
 							]}
 						/>
 					</ul>
@@ -99,114 +139,126 @@ export default function SeoClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-x">
 				<h2 className="display-5 text-center text-white">
-					Optimización y Posicionamiento SEO en México
+					Nuestra Metodología SEO: Datos, Estrategia y Transparencia
 				</h2>
 				<p className="fs-4 text-center text-white p-0">
-					En JEG Dev Studios ofrecemos servicios de posicionamiento web SEO
-					diseñados para que tu página aparezca en los primeros resultados de
-					Google y otros buscadores. Nuestro objetivo es impulsar tu objetivo
-					comercial, atraer más clientes y aumentar tu visibilidad digital con
-					estrategias efectivas.
+					En nuestra agencia de SEO en México, no creemos en la magia ni en las
+					promesas vacías. El SEO es una ciencia que requiere un proceso
+					disciplinado. Nuestro método se basa en un ciclo probado de 4 fases
+					para garantizar resultados sostenibles.
 				</p>
 				<CardNestedLists
-					titulo="Nuestros Servicios de SEO"
-					subtitulo="Trabajamos como una agencia de posicionamiento SEO en México que
-					combina la experiencia técnica con estrategias de marketing digital
-					adaptadas a cada negocio."
+					titulo="Auditoría y Diagnóstico Profundo"
+					subtitulo="No podemos trazar un mapa sin saber dónde estás."
 					list={[
 						{
-							text: "SEO Web",
+							text: "Análisis Técnico:",
 							sublist: [
-								"Optimización de páginas web para buscadores.",
-								"Servicios de posicionamiento SEO para páginas web con auditoría técnica y mejora del rendimiento.",
-								"Estrategias avanzadas de SEO y SEM para campañas de alto impacto.",
-								"Estrategias avanzadas de SEO y SEM para campañas de alto impacto.",
-								"Optimización para buscadores tradicionales e integración con IA generativa (SEO para la nueva era de la búsqueda).",
+								"Revisamos la salud de tu sitio: indexación, velocidad de carga (Core Web Vitals), rastreabilidad y arquitectura web.",
 							],
 						},
 						{
-							text: "SEO Local",
+							text: "Análisis de Competencia:",
 							sublist: [
-								"Posiciona tu negocio en Google Maps y búsquedas locales.",
-								"Estrategias GEO para aparecer cuando tus clientes te busquen cerca.",
-								"Servicios de posicionamiento SEO local en México con enfoque en resultados medibles.",
+								"Identificamos qué están haciendo bien tus competidores y dónde están sus debilidades.",
 							],
 						},
 						{
-							text: "SEO Estratégico y Consultoría",
+							text: "Análisis de Contenido:",
 							sublist: [
-								"Creación de estrategias personalizadas de marketing digital y posicionamiento SEO.",
-								"Análisis de competencia con herramientas como SEMrush y Ahrefs.",
-								"Reportes mensuales para medir el avance y ROI.",
+								'Auditamos tu contenido existente para encontrar "gaps" y oportunidades de optimización.',
 							],
 						},
 					]}
 				/>
 			</section>
-
-			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-y">
-				<CardSmallList
-					titulo="¿Por qué elegir JEG Dev Studios como tu agencia SEO en México??"
-					subtitulo=""
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<CardNestedLists
+					titulo="2. Estrategia y Hoja de Ruta (Roadmap)"
+					subtitulo="Con los datos en mano, creamos tu plan de acción."
 					list={[
-						"Somos más que una agencia, somos una empresa de desarrollo y marketing digital que entiende tu negocio desde la base técnica.",
-						"Contamos con expertos en SEO con experiencia en proyectos en México y Latinoamérica.",
-						"Implementamos técnicas de optimización web, local y avanzada para IA.",
-						"Nos adaptamos a tus necesidades: desde pequeñas empresas locales hasta grandes proyectos digitales",
+						{
+							text: "Keyword Research:",
+							sublist: [
+								"Definimos las palabras clave transaccionales e informativas que tu público objetivo está buscando.",
+							],
+						},
+						{
+							text: "Definición de Pilares:",
+							sublist: [
+								'Creamos una estrategia de "Topic Clusters" (silos de contenido) para construir tu autoridad.',
+							],
+						},
+						{
+							text: "Plan de Acción:",
+							sublist: [
+								"Te entregamos una hoja de ruta mensual con acciones claras y priorizadas.",
+							],
+						},
 					]}
-					lastText="Si buscas la mejor agencia de SEO en México para tu empresa, en JEG Dev Studios encontrarás un aliado estratégico para alcanzar tus metas digitales."
 				/>
-				<h2 className="display-5 text-center text-white">
-					Solicita tu Auditoría SEO Incluida en cualquier paquete de desarrollo
-					web o por separado
-				</h2>
-				<p className="fs-4 text-white text-center mt-4">
-					Antes de comenzar, realizamos una auditoría inicial de tu sitio web
-					para identificar oportunidades de crecimiento o de mejora en
-					posicionamiento SEO y estrategias de marketing digital.
-				</p>
-				<p className="fs-4 text-white text-center mt-4">
-					Comienza hoy y descubre cómo nuestros servicios de posicionamiento SEO
-					en México pueden ayudarte a crecer.
-				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardNestedLists
-					titulo="Nuestra Metodología: Datos, Estrategia y Transparencia"
-					subtitulo="El SEO no es magia, es una ciencia. Nuestro proceso se basa en un ciclo probado de análisis y optimización para garantizar los mejores resultados posibles."
+					titulo="3. Implementación y Optimización"
+					subtitulo="Aquí es donde ocurre el trabajo pesado."
 					list={[
 						{
-							text: "1. Auditoría y Diagnóstico:",
+							text: "Optimización On-Page:",
 							sublist: [
-								"Empezamos con un análisis profundo de tu sitio web, tu mercado y tus competidores. Identificamos fortalezas, debilidades y oportunidades de crecimiento.",
+								"Corregimos todos los errores técnicos, optimizamos metadatos, encabezados, y mejoramos la semántica del contenido.",
 							],
 						},
 						{
-							text: "2. Estrategia Personalizada:",
+							text: "Creación de Contenido:",
 							sublist: [
-								"Con los datos en mano, creamos una hoja de ruta (roadmap) a medida. Definimos las palabras clave a atacar, las acciones técnicas a implementar y la estrategia de contenido a seguir.",
+								"Desarrollamos artículos de blog (TOFU), guías (MOFU) y páginas de servicio (BOFU) que responden a la intención de búsqueda de tus usuarios.",
 							],
 						},
 						{
-							text: "3. Implementación y Optimización:",
+							text: "Link Building:",
 							sublist: [
-								"Ejecutamos el plan. Optimizamos tu sitio, creamos contenido de valor y construimos tu autoridad en línea, ajustando la estrategia mes a mes según el rendimiento.",
-							],
-						},
-						{
-							text: "4. Reportes y Medición:",
-							sublist: [
-								"Te entregamos reportes mensuales claros y fáciles de entender. Te mostramos el progreso, el retorno de inversión (ROI) y los próximos pasos. Cero jerga técnica, solo resultados.",
+								"Ejecutamos una estrategia de construcción de enlaces éticos para aumentar la autoridad (E-E-A-T) de tu dominio.",
 							],
 						},
 					]}
 				/>
 			</section>
-			<FAQ
-				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros paquetes, tecnologías, tiempos de entrega y más."
-			/>
-			<CTA />
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<CardNestedLists
+					titulo="4. Reportes de Valor, no de Vanidad"
+					subtitulo="Creemos en la transparencia total."
+					list={[
+						{
+							text: "Dashboard en Tiempo Real:",
+							sublist: [
+								"Te damos acceso a un panel para que veas el progreso de tus rankings.",
+							],
+						},
+						{
+							text: "Reportes Mensuales:",
+							sublist: [
+								"Recibes un informe que no solo muestra gráficos, sino que te explica qué hicimos, por qué lo hicimos y qué impacto tuvo en tus objetivos de negocio (leads y ventas).",
+							],
+						},
+						{
+							text: "Plan de Acción:",
+							sublist: [
+								"Te entregamos una hoja de ruta mensual con acciones claras y priorizadas.",
+							],
+						},
+					]}
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+				<CTA
+					title={"¿Listo para Dominar las Búsquedas en Google?"}
+					paragraph={"Deja de ser invisible para tus clientes. Es hora de que tu negocio obtenga la visibilidad que merece. Agenda una consulta gratuita con nuestro equipo y descubre el potencial de una estrategia SEO profesional."}
+					label={"Solicita tu Auditoría SEO Gratuita"}
+					link={"/contacto"}
+				/>
+			</section>
+			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre SEO" />
 		</>
 	);
 }

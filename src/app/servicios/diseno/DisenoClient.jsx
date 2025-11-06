@@ -183,11 +183,20 @@ export default function DisenoClient() {
 					]}
 				/>
 			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+				<CTA
+					title={"¿Listo para dar el siguiente paso digital?"}
+					paragraph={
+						"Es momento de convertir tu idea en una solución tecnológica escalable y atractiva. Agenda tu consulta gratuita o contáctanos directamente."
+					}
+					label={"Solicita tu Auditoría Gratuita"}
+					link={"/contacto"}
+				/>
+			</section>
 			<FAQ
 				faqs={faqs}
 				subtitle="Resuelve tus dudas sobre nuestros servicios de Diseño Gráfico y digital"
 			/>
-			<CTA />
 		</>
 	);
 }
