@@ -1,7 +1,7 @@
 export const metadata = {
-	title: "Servicios de Desarrollo de Software Personalizado | JEG Dev Studios",
+	title: "Empresa de Desarrollo de Software en México | JEG Dev Studios",
 	description:
-		"Creación de software empresarial a medida — Desarrollo de software adaptado a cada cliente Enfoque personalizado para mejorar procesos",
+		"Somos una empresa de desarrollo de software en México. Ofrecemos un servicio de software a medida: CRMs, ERPs y sistemas empresariales. Cotiza tu proyecto.",
 	keywords:
 		"desarrollo de software a medida, software empresarial, soluciones software empresarial, software empresarial de administracion, desarrollo de software personalizado, JEG Dev Studios",
 	alternates: {

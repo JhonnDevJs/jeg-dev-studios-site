@@ -1,5 +1,5 @@
 export const metadata = {
-	title: "Servicios de Desarrollo de Sitios Web | JEG Dev Studios",
+	title: "Desarrollo de Páginas Web en México | Paquetes | JEG Dev Studios",
 	description:
 		"Contrata servicios de desarrollo web profesionales: sitios empresariales, e-commerce y landing pages con diseño moderno y funcional.",
 	keywords:

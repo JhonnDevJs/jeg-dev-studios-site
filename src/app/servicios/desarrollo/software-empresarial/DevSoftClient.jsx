@@ -2,6 +2,7 @@
 import { useMemo } from "react";
 import CardPacksProduct from "@/components/Cards/CardPacksProduct";
 import CardSmallList from "@/components/Cards/CardSmallList";
+import CardNestedLists from "@/components/Cards/CardNestedLists";
 import SectionProcess from "@/components/SectionProcess";
 import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
@@ -14,6 +15,12 @@ import imgSoftProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-mue
 import "./DevSoftClient.css";
 
 const faqs = [
+	{
+		question:
+			"¿Qué diferencia hay entre ustedes y otra empresa de desarrollo de software en CDMX?",
+		answer:
+			"Nuestra diferencia es el enfoque ágil y la transparencia. Como una empresa de desarrollo de software en CDMX con un proceso basado en Scrum, te involucramos en cada etapa. Ves avances funcionales cada dos semanas, asegurando que el producto final es exactamente lo que tu operación necesita.",
+	},
 	{
 		question:
 			"¿Cuál es la diferencia entre 'Software de escritorio' y 'App web local'?",
@@ -121,15 +128,56 @@ export default function DevSoftClient() {
 					style={{ width: "100%", height: "auto" }}
 				/>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<h1 className="display-1 text-center text-white">
-					Nuestros servicios de Software Empresarial
+					Desarrollo de Software Empresarial en México
 				</h1>
 				<p className="lead w-100 px-3 px-md-5">
-					En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y
-					presupuesto. Ya sea que estés comenzando con un sistema de inventarios
-					o necesites un software más robusto, tenemos la solución perfecta para
-					ti.
+					En JEG Dev Studios somos una empresa de desarrollo de software en
+					México con un enfoque 100% a medida. Transformamos tus operaciones con
+					un servicio de desarrollo de software que resuelve problemas reales,
+					desde sistemas de inventario hasta CRMs y ERPs robustos diseñados para
+					tu flujo de trabajo.
+				</p>
+				<h2 className="text-center text-white">
+					¿Qué Hace una Empresa de Desarrollo de Software?
+				</h2>
+				<p className="lead w-100 px-3 px-md-5">
+					A diferencia de un software "enlatado" que te obliga a cambiar tus
+					procesos, una fábrica de software como JEG Dev Studios crea soluciones
+					desde cero. No te adaptas al software; el software se adapta a ti.
+					¿Buscas empresa de software ejemplos o fábrica de software ejemplos?
+					Creamos:
+				</p>
+				<ul className="fs-5 text-start mx-auto" style={{ maxWidth: "600px" }}>
+					<li className="mb-3">
+						<p>Sistemas de Gestión de Clientes (CRM) personalizados.</p>
+					</li>
+					<li className="mb-3">
+						<p>Plataformas de Planificación de Recursos (ERP) a medida.</p>
+					</li>
+					<li className="mb-3">
+						<p>Software de control de inventarios, almacén y logística.</p>
+					</li>
+					<li>
+						<p>Sistemas de facturación y puntos de venta (POS).</p>
+					</li>
+					<li>
+						<p>
+							Paneles de análisis de datos (Dashboards) que se integran con tus
+							herramientas actuales.
+						</p>
+					</li>
+				</ul>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<h2 className="text-center text-white">
+					Paquetes de Software a Medida
+				</h2>
+				<p className="lead w-100 px-3 px-md-5">
+					Te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya
+					sea que estés comenzando con un sistema de inventarios o necesites un
+					software más robusto, tenemos la solución perfecta para ti.
 				</p>
 				<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 					<CardPacksProduct
@@ -208,23 +256,58 @@ export default function DevSoftClient() {
 			<SectionProcess
 				title={"Nuestro Proceso de Desarrollo de Software"}
 				text={
-					"En JEG Dev Studios seguimos una metodología clara y estructurada para asegurarnos de que tu software cumpla con tus objetivos y funcione correctamente desde el día uno."
+					"En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum para el desarrollo de software. Esto nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes. Nuestro objetivo es que formes parte activa del desarrollo de tu sistema, asegurando que el resultado final supere tus expectativas."
 				}
 			/>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardSmallList
-					titulo="Proceso"
-					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
+					titulo="Descubrimiento y Planificación Inicial"
+					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas."
 					list={[
-						"  Diagnóstico y Consultoría: Nos reunimos contigo para comprender tu negocio, tus procesos y los problemas que deseas resolver. Identificamos puntos críticos y definimos los módulos necesarios.",
-						" Propuesta y Cotización: Con base en el diagnóstico, elaboramos una propuesta con el paquete adecuado, el tiempo estimado de desarrollo y el costo total, incluyendo una cronología por fases.",
-						" Diseño y Prototipado: Creamos los primeros bocetos del sistema (interfaces, navegación, funciones clave) y los validamos contigo para asegurar que se ajusten a tus necesidades.",
-						" Desarrollo por Fases: Desarrollamos el software por etapas. Cada módulo se construye, prueba y presenta individualmente para permitir revisiones rápidas. Utilizamos tecnologías como Python, C#, Java, Node.js, Electron, y React, según el proyecto.",
-						" Pruebas y Revisión Final: Antes de la entrega, hacemos pruebas internas y contigo para asegurar que todo funcione como debe. Se hacen ajustes finales según tus observaciones.",
-						" Entrega y Capacitación: Instalamos el sistema en tus equipos o servidores y capacitamos a tu personal para que puedan utilizarlo sin problemas..",
-						" Soporte y Mantenimiento: Ofrecemos soporte técnico posterior a la entrega durante el tiempo establecido en el contrato. También puedes contratar mantenimiento mensual o por demanda.",
+						"Reunión inicial para entender tu negocio y el propósito del software.",
+						"Definimos los módulos clave, el diseño y los objetivos de cada función.",
+						"Elegimos el paquete de desarrollo más adecuado (Básica, Estándar, Avanzada o Pro).",
+						"Creamos un Product Backlog: la lista detallada de todo lo que tu sistema debe incluir.",
 					]}
-					lastText="Tecnologías: Según el paquete, usamos stacks modernos como Figma, HTML, JavaScript, Tailwind, Next.js, Bootstrap, Node.js, PHP (Laravel) o Java."
+					lastText="Tecnologías: Según el proyecto, usamos stacks robustos como Figma, React, Node.js, PHP (Laravel) o Java."
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+				<CardNestedLists
+					titulo="Ciclos de Desarrollo Iterativos (Sprints)"
+					subtitulo="Dividimos el proyecto en Sprints de 1 o 2 semanas, donde desarrollamos y entregamos módulos o funcionalidades específicas."
+					list={[
+						{
+							text: "a. Sprint Planning",
+							sublist: [
+								"Planificamos qué módulos vamos a trabajar (ej. módulo de clientes, dashboard de reportes, integración con facturación).",
+							],
+						},
+						{
+							text: "b. Desarrollo y Actualizaciones",
+							sublist: [
+								"Nuestro equipo trabaja en el desarrollo del software acordado, garantizando velocidad y seguridad.",
+							],
+						},
+						{
+							text: "c. Entrega Parcial y Feedback",
+							sublist: [
+								"Al final de cada Sprint, te mostramos un avance funcional real del sistema. Tú nos das tu feedback y podemos ajustar detalles.",
+							],
+						},
+					]}
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<CardSmallList
+					titulo="Revisión Final, Despliegue y Capacitación"
+					subtitulo="Una vez terminados los Sprints, realizamos lo siguiente:"
+					list={[
+						"Una demostración final del software completo.",
+						"Una revisión conjunta para asegurarnos de que todo funciona correctamente.",
+						"Instalación y despliegue en tus servidores (locales o en la nube).",
+						"Capacitación a tu equipo para que puedan utilizar el nuevo sistema sin problemas.",
+					]}
 				/>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
@@ -234,7 +317,8 @@ export default function DevSoftClient() {
 					compromiso con la calidad, la funcionalidad y la innovación. Nos
 					enfocamos en que tu software sea útil, estable, seguro y fácil de
 					usar. No desarrollamos software genérico: desarrollamos soluciones que
-					resuelven problemas reales.
+					resuelven problemas reales. Tu empresa merece una herramienta que
+					trabaje por ella. Nosotros la creamos.
 				</p>
 				<p className="text-white fs-4">
 					Tu empresa merece una herramienta que trabaje por ella. Nosotros la
@@ -244,7 +328,7 @@ export default function DevSoftClient() {
 			<CTAProducts />
 			<FAQ
 				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestras soluciones de software."
+				subtitle="Preguntas Frecuentes sobre nuestro Servicio de Desarrollo de Software"
 			/>
 		</>
 	);
