@@ -101,7 +101,7 @@ export default function SeoClient() {
 						<CardServices
 							title="SEO Web y Nacional"
 							description="Construimos tu autoridad en todo el país. Ideal para e-commerce, empresas SaaS y marcas que buscan una audiencia nacional. Nos enfocamos en las palabras clave de alto volumen y en una estrategia de contenido que te posicione como líder de la industria."
-							url="/servicios/seo/web"
+							url="/contacto"
 							buttonLabel="Conocer más de SEO Web"
 							items={[
 								"Auditoría SEO Técnica Completa",
@@ -113,7 +113,7 @@ export default function SeoClient() {
 						<CardServices
 							title="SEO Local para Negocios"
 							description={`Si tus clientes están en tu ciudad o colonia, este es el servicio para ti. Optimizamos tu presencia digital para que aparezcas en el "Map Pack" de Google y en las búsquedas locales ("cerca de mí"), atrayendo clientes listos para comprar a tu puerta.`}
-							url="/servicios/seo/local"
+							url="/contacto"
 							buttonLabel="Explorar SEO Local"
 							items={[
 								"Optimización de Google Business Profile (Google Maps)",
@@ -125,7 +125,7 @@ export default function SeoClient() {
 						<CardServices
 							title="GEO (Optimización para IA Generativa)"
 							description={`Prepara tu sitio para el futuro de las búsquedas. Optimizamos tu contenido para que sea la fuente elegida por los motores de IA (LLMs). Aseguramos que tu autoridad (E-E-A-T) sea clara para que Google cite tu marca, no la de tu competencia.`}
-							url="/servicios/seo/geo"
+							url="/contacto"
 							buttonLabel="Solicitar Consultoría GEO"
 							items={[
 								"Creación y Optimización de llms.txt",

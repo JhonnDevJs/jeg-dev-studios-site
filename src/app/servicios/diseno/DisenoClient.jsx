@@ -72,7 +72,7 @@ export default function DisenoClient() {
 						<CardServices
 							title="Branding y Diseño de Logotipos"
 							description="Construimos la base de tu marca. Creamos logotipos y sistemas de identidad visual completos que comunican tus valores, te diferencian de la competencia y generan reconocimiento."
-							url="/servicios/diseno/branding"
+							url="/contacto"
 							buttonLabel="Ver Servicios de Branding"
 							items={[
 								"Diseño de Logotipos Profesionales",
@@ -84,7 +84,7 @@ export default function DisenoClient() {
 						<CardServices
 							title="Diseño de Experiencia de Usuario (UX/UI)"
 							description="Diseñamos plataformas digitales centradas en el usuario. Creamos interfaces intuitivas y atractivas para sitios web, aplicaciones móviles y software, garantizando una navegación fluida que guía al usuario hacia la conversión."
-							url="/servicios/diseno/ux-ui/"
+							url="/contacto"
 							buttonLabel="Explorar Diseño UX/UI"
 							items={[
 								"Diseño UX/UI para Sitios Web",
@@ -96,7 +96,7 @@ export default function DisenoClient() {
 						<CardServices
 							title="Diseño Editorial y Publicitario"
 							description="Llevamos tu marca al formato físico y digital. Diseñamos desde catálogos y revistas hasta material publicitario para redes sociales, asegurando una comunicación visual coherente y profesional en todos tus canales."
-							url="/servicios/diseno/editorial"
+							url="/contacto"
 							buttonLabel="Ver Soluciones Editoriales"
 							items={[
 								"Diseño de Catálogos y Revistas",
