@@ -8,11 +8,9 @@ export const config = {
 export function middleware(req) {
   if (process.env.ROUTE_AUTH === 'preview') {
     
-    // 2. Lee las variables desde process.env
-    const user = process.env.AUTH_USER; // <-- CAMBIO AQUÍ
-    const pass = process.env.AUTH_PASS; // <-- CAMBIO AQUÍ
+    const user = process.env.AUTH_USER; 
+    const pass = process.env.AUTH_PASS; 
 
-    // (Opcional pero recomendado) Si las variables no existen, bloquea el acceso
     if (!user || !pass) {
       console.error("Variables de autenticación no configuradas");
       return new NextResponse('Auth config error', { status: 500 });
