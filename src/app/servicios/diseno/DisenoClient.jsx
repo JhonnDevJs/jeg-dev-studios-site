@@ -1,4 +1,5 @@
 "use client";
+import { useMemo } from "react";
 import Image from "next/image";
 import StructuredData from "@/components/Seo/StructuredData";
 import CardNestedLists from "@/components/Cards/CardNestedLists";
@@ -6,36 +7,107 @@ import CardServices from "@/components/Cards/CardServices";
 import CTA from "@/components/Cta/CTA";
 import FAQ from "@/components/Seo/FAQ";
 
-const faqs = [
-	// --- Actuales ---
-	{
-		question: "¿Qué necesito para empezar un proyecto de diseño de logotipo?",
-		answer:
-			"Solo necesitamos conocer tu idea de negocio, tus valores y, si tienes, algunos ejemplos de marcas que te gusten. Con eso, nuestro equipo puede empezar a trabajar en las primeras propuestas creativas.",
-	},
-	{
-		question: "¿Me entregan los archivos editables de los diseños?",
-		answer:
-			"Si. Al finalizar cada proyecto de diseño, te entregamos un paquete completo con los archivos en formatos vectoriales (AI, SVG), de imagen (PNG, JPG) y, según el caso, el manual de identidad para su correcta aplicación.",
-	},
-	{
-		question:
-			"¿Puedo contratar solo el diseño UX/UI si ya tengo el desarrollo?",
-		answer:
-			"Ofrecemos nuestros servicios de diseño UX/UI de forma independiente. Podemos crear todas las interfaces y prototipos para que tu equipo de desarrollo pueda implementarlos.",
-	},
-	{
-		question: "¿Cuál es la diferencia entre branding y solo un logotipo?",
-		answer:
-			"Un logotipo es la cara de tu marca. El branding es la personalidad completa: incluye el logotipo, los colores, las tipografías y la voz de tu marca, todo trabajando en conjunto para crear una identidad sólida y coherente.",
-	},
-];
-
 export default function DisenoClient() {
+	const services = useMemo(
+		() => [
+			{
+				id: "servicio-branding-diseno-logotipos",
+				imageSrc: "/img-SEO/og-background-serv-seo.webp",
+				title: "Branding y Diseño de Logotipos",
+				description:
+					"Construimos la base de tu marca. Creamos logotipos y sistemas de identidad visual completos que comunican tus valores, te diferencian de la competencia y generan reconocimiento.",
+				price: 1000,
+				currency: "MXN",
+				url: "/contacto",
+				buttonLabel: "Ver Servicios de Branding",
+				items: [
+					"Diseño de Logotipos Profesionales",
+					"Creación de Manual de Identidad",
+					"Estrategia y Consultoría de Branding",
+					"Diseño de Papelería Corporativa",
+				],
+			},
+			{
+				id: "servicio-diseno-ux-ui",
+				imageSrc: "/img-SEO/og-background-serv-seo.webp",
+				title: "Diseño de Experiencia de Usuario (UX/UI)",
+				description:
+					"Diseñamos plataformas digitales centradas en el usuario. Creamos interfaces intuitivas y atractivas para sitios web, aplicaciones móviles y software, garantizando una navegación fluida que guía al usuario hacia la conversión.",
+				price: 1000,
+				currency: "MXN",
+				url: "/contacto",
+				buttonLabel: "Explorar Diseño UX/UI",
+				items: [
+					"Diseño UX/UI para Sitios Web",
+					"Diseño UX/UI para Apps Móviles",
+					"Investigación y Pruebas de Usuario",
+					"Creación de Prototipos y Wireframes",
+				],
+			},
+			{
+				id: "servicio-diseno-editorial-publicitario",
+				imageSrc: "/img-SEO/og-background-serv-seo.webp",
+				title: "Diseño Editorial y Publicitario",
+				description:
+					"Llevamos tu marca al formato físico y digital. Diseñamos desde catálogos y revistas hasta material publicitario para redes sociales, asegurando una comunicación visual coherente y profesional en todos tus canales.",
+				price: 1000,
+				currency: "MXN",
+				url: "/contacto",
+				buttonLabel: "Ver Soluciones Editoriales",
+				items: [
+					"Diseño de Catálogos y Revistas",
+					"Material para Publicidad Digital",
+					"Edición Fotográfica Profesional",
+					"Diseño de Menús e Invitaciones",
+				],
+			},
+		],
+		[]
+	);
+
+	const webServiceInfo = {
+		name: "Servicios de Diseño Gráfico y Digital en México",
+		serviceType: "Servicios de Posicionamiento SEO Web y GEO",
+		description:
+			"Somos una agencia de diseño gráfico en México. Creamos logotipos, branding y experiencias de usuario (UX/UI) que conectan tu marca con tus clientes.!",
+		image: "/img-SEO/og-background-serv-diseno.webp", // (Recomendado)
+	};
+
+	const faqs = [
+		// --- Actuales ---
+		{
+			question: "¿Qué necesito para empezar un proyecto de diseño de logotipo?",
+			answer:
+				"Solo necesitamos conocer tu idea de negocio, tus valores y, si tienes, algunos ejemplos de marcas que te gusten. Con eso, nuestro equipo puede empezar a trabajar en las primeras propuestas creativas.",
+		},
+		{
+			question: "¿Me entregan los archivos editables de los diseños?",
+			answer:
+				"Si. Al finalizar cada proyecto de diseño, te entregamos un paquete completo con los archivos en formatos vectoriales (AI, SVG), de imagen (PNG, JPG) y, según el caso, el manual de identidad para su correcta aplicación.",
+		},
+		{
+			question:
+				"¿Puedo contratar solo el diseño UX/UI si ya tengo el desarrollo?",
+			answer:
+				"Ofrecemos nuestros servicios de diseño UX/UI de forma independiente. Podemos crear todas las interfaces y prototipos para que tu equipo de desarrollo pueda implementarlos.",
+		},
+		{
+			question: "¿Cuál es la diferencia entre branding y solo un logotipo?",
+			answer:
+				"Un logotipo es la cara de tu marca. El branding es la personalidad completa: incluye el logotipo, los colores, las tipografías y la voz de tu marca, todo trabajando en conjunto para crear una identidad sólida y coherente.",
+		},
+	];
+
 	return (
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-design" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-design" />
+			<StructuredData
+				data={services}
+				type="Service"
+				idPage="service-dev-web"
+				serviceInfo={webServiceInfo}
+			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Servicios.webp"
@@ -70,42 +142,16 @@ export default function DisenoClient() {
 				</p>
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
-						<CardServices
-							title="Branding y Diseño de Logotipos"
-							description="Construimos la base de tu marca. Creamos logotipos y sistemas de identidad visual completos que comunican tus valores, te diferencian de la competencia y generan reconocimiento."
-							url="/contacto"
-							buttonLabel="Ver Servicios de Branding"
-							items={[
-								"Diseño de Logotipos Profesionales",
-								"Creación de Manual de Identidad",
-								"Estrategia y Consultoría de Branding",
-								"Diseño de Papelería Corporativa",
-							]}
-						/>
-						<CardServices
-							title="Diseño de Experiencia de Usuario (UX/UI)"
-							description="Diseñamos plataformas digitales centradas en el usuario. Creamos interfaces intuitivas y atractivas para sitios web, aplicaciones móviles y software, garantizando una navegación fluida que guía al usuario hacia la conversión."
-							url="/contacto"
-							buttonLabel="Explorar Diseño UX/UI"
-							items={[
-								"Diseño UX/UI para Sitios Web",
-								"Diseño UX/UI para Apps Móviles",
-								"Investigación y Pruebas de Usuario",
-								"Creación de Prototipos y Wireframes",
-							]}
-						/>
-						<CardServices
-							title="Diseño Editorial y Publicitario"
-							description="Llevamos tu marca al formato físico y digital. Diseñamos desde catálogos y revistas hasta material publicitario para redes sociales, asegurando una comunicación visual coherente y profesional en todos tus canales."
-							url="/contacto"
-							buttonLabel="Ver Soluciones Editoriales"
-							items={[
-								"Diseño de Catálogos y Revistas",
-								"Material para Publicidad Digital",
-								"Edición Fotográfica Profesional",
-								"Diseño de Menús e Invitaciones",
-							]}
-						/>
+						{services.map((service, index) => (
+							<CardServices
+								key={index}
+								title={service.title}
+								description={service.description}
+								url={service.url}
+								buttonLabel={service.buttonLabel}
+								items={service.items}
+							/>
+						))}
 					</ul>
 				</article>
 			</section>

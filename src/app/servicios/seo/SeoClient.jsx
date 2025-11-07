@@ -1,41 +1,110 @@
 "use client";
+import { useMemo } from "react";
 import Image from "next/image";
 import StructuredData from "@/components/Seo/StructuredData";
-import CardSmallList from "@/components/Cards/CardSmallList";
 import CardNestedLists from "@/components/Cards/CardNestedLists";
 import CardServices from "@/components/Cards/CardServices";
 import FAQ from "@/components/Seo/FAQ";
 import CTA from "@/components/Cta/CTA";
 
-const faqs = [
-	// --- Actuales ---
-	{
-		question: "¿Qué incluyen sus servicios de SEO en México?",
-		answer:
-			"Nuestros servicios de SEO en México son integrales. Incluyen una auditoría técnica, investigación de palabras clave, optimización on-page, creación de contenido estratégico y link building. Dependiendo de tu negocio, nos especializamos en SEO Web (nacional) o SEO Local (para negocios físicos).",
-	},
-	{
-		question: "¿En cuánto tiempo veré resultados con el SEO?",
-		answer:
-			"El SEO es una estrategia a mediano-largo plazo. Aunque algunas mejoras técnicas pueden dar resultados rápidos, los resultados significativos y sostenibles (como llegar a la primera página para keywords competidas) generalmente comienzan a verse entre los 4 y 6 meses.",
-	},
-	{
-		question: "¿Cuál es la diferencia entre SEO, GEO y SEM?",
-		answer:
-			"SEO (Search Engine Optimization): Es el proceso orgánico (no pagado) para posicionar tu sitio en los enlaces de búsqueda, SEM (Search Engine Marketing): Es la publicidad de paga (ej. Google Ads) para aparecer al instante en los resultados y GEO (Generative Engine Optimization): Es el nuevo proceso para optimizar tu contenido y que sea usado como fuente en las respuestas generadas por Inteligencia Artificial.",
-	},
-	{
-		question: "¿Por qué elegir a JEG Dev Studios como mi agencia de SEO?",
-		answer:
-			"Porque somos una agencia de SEO en México con un ADN técnico. A diferencia de las agencias de marketing tradicionales, nosotros nacimos del desarrollo de software. Entendemos el SEO desde el código fuente, la velocidad del servidor y la arquitectura web, lo que nos da una ventaja única para solucionar problemas técnicos complejos que otras agencias no pueden.",
-	},
-];
-
 export default function SeoClient() {
+	const services = useMemo(
+		() => [
+			{
+				id: "servicio-seo-web-nacional",
+				imageSrc: "/img-SEO/og-background-serv-seo.webp",
+				title: "SEO Web y Nacional",
+				description:
+					"Construimos tu autoridad en todo el país. Ideal para e-commerce, empresas SaaS y marcas que buscan una audiencia nacional. Nos enfocamos en las palabras clave de alto volumen y en una estrategia de contenido que te posicione como líder de la industria.",
+				price: 1000,
+				currency: "MXN",
+				url: "/contacto",
+				buttonLabel: "Conocer más de SEO Web",
+				items: [
+					"Auditoría SEO Técnica Completa",
+					"Investigación de Palabras Clave (Keyword Research)",
+					"Optimización On-Page y de Contenido",
+					"Estrategia de Link Building (Construcción de Enlaces)",
+				],
+			},
+			{
+				id: "servicio-seo-local-negocios",
+				imageSrc: "/img-SEO/og-background-serv-seo.webp",
+				title: "SEO Local para Negocios",
+				description: `Si tus clientes están en tu ciudad o colonia, este es el servicio para ti. Optimizamos tu presencia digital para que aparezcas en el "Map Pack" de Google y en las búsquedas locales ("cerca de mí"), atrayendo clientes listos para comprar a tu puerta.`,
+				price: 1000,
+				currency: "MXN",
+				url: "/contacto",
+				buttonLabel: "Explorar SEO Local",
+				items: [
+					"Optimización de Google Business Profile (Google Maps)",
+					"Estrategia de Citaciones Locales y NAP",
+					"Gestión y Estrategia de Reseñas (Reviews)",
+					"SEO On-Page enfocado geográficamente",
+				],
+			},
+			{
+				id: "servicio-geo-optimization-ai",
+				imageSrc: "/img-SEO/og-background-serv-seo.webp",
+				title: "GEO (Optimización para IA Generativa)",
+				description: `Prepara tu sitio para el futuro de las búsquedas. Optimizamos tu contenido para que sea la fuente elegida por los motores de IA (LLMs). Aseguramos que tu autoridad (E-E-A-T) sea clara para que Google cite tu marca, no la de tu competencia.`,
+				price: 1000,
+				currency: "MXN",
+				url: "/contacto",
+				buttonLabel: "Solicitar Consultoría GEO",
+				items: [
+					"Creación y Optimización de llms.txt",
+					"Fortalecimiento de señales E-E-A-T",
+					"Estructuración de contenido semántico (Schema)",
+					"Optimización para Búsqueda Conversacional",
+				],
+			},
+		],
+		[]
+	);
+
+	const webServiceInfo = {
+		name: "Servicios de Posicionamiento SEO Web y GEO en México",
+		serviceType: "Servicios de Posicionamiento SEO Web y GEO",
+		description:
+			"Somos una agencia de SEO en México. Ofrecemos servicios de SEO Web, Local y GEO (Optimización IA) para atraer más clientes a tu negocio. ¡Solicita tu auditoría!",
+		image: "/img-SEO/og-background-serv-seo.webp", // (Recomendado)
+	};
+
+	const faqs = [
+		// --- Actuales ---
+		{
+			question: "¿Qué incluyen sus servicios de SEO en México?",
+			answer:
+				"Nuestros servicios de SEO en México son integrales. Incluyen una auditoría técnica, investigación de palabras clave, optimización on-page, creación de contenido estratégico y link building. Dependiendo de tu negocio, nos especializamos en SEO Web (nacional) o SEO Local (para negocios físicos).",
+		},
+		{
+			question: "¿En cuánto tiempo veré resultados con el SEO?",
+			answer:
+				"El SEO es una estrategia a mediano-largo plazo. Aunque algunas mejoras técnicas pueden dar resultados rápidos, los resultados significativos y sostenibles (como llegar a la primera página para keywords competidas) generalmente comienzan a verse entre los 4 y 6 meses.",
+		},
+		{
+			question: "¿Cuál es la diferencia entre SEO, GEO y SEM?",
+			answer:
+				"SEO (Search Engine Optimization): Es el proceso orgánico (no pagado) para posicionar tu sitio en los enlaces de búsqueda, SEM (Search Engine Marketing): Es la publicidad de paga (ej. Google Ads) para aparecer al instante en los resultados y GEO (Generative Engine Optimization): Es el nuevo proceso para optimizar tu contenido y que sea usado como fuente en las respuestas generadas por Inteligencia Artificial.",
+		},
+		{
+			question: "¿Por qué elegir a JEG Dev Studios como mi agencia de SEO?",
+			answer:
+				"Porque somos una agencia de SEO en México con un ADN técnico. A diferencia de las agencias de marketing tradicionales, nosotros nacimos del desarrollo de software. Entendemos el SEO desde el código fuente, la velocidad del servidor y la arquitectura web, lo que nos da una ventaja única para solucionar problemas técnicos complejos que otras agencias no pueden.",
+		},
+	];
+
 	return (
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-seo" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-seo" />
+			<StructuredData
+				data={services}
+				type="Service"
+				idPage="service-dev-web"
+				serviceInfo={webServiceInfo}
+			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Servicios.webp"
@@ -99,42 +168,16 @@ export default function SeoClient() {
 				</p>
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
-						<CardServices
-							title="SEO Web y Nacional"
-							description="Construimos tu autoridad en todo el país. Ideal para e-commerce, empresas SaaS y marcas que buscan una audiencia nacional. Nos enfocamos en las palabras clave de alto volumen y en una estrategia de contenido que te posicione como líder de la industria."
-							url="/contacto"
-							buttonLabel="Conocer más de SEO Web"
-							items={[
-								"Auditoría SEO Técnica Completa",
-								"Investigación de Palabras Clave (Keyword Research)",
-								"Optimización On-Page y de Contenido",
-								"Estrategia de Link Building (Construcción de Enlaces)",
-							]}
-						/>
-						<CardServices
-							title="SEO Local para Negocios"
-							description={`Si tus clientes están en tu ciudad o colonia, este es el servicio para ti. Optimizamos tu presencia digital para que aparezcas en el "Map Pack" de Google y en las búsquedas locales ("cerca de mí"), atrayendo clientes listos para comprar a tu puerta.`}
-							url="/contacto"
-							buttonLabel="Explorar SEO Local"
-							items={[
-								"Optimización de Google Business Profile (Google Maps)",
-								"Estrategia de Citaciones Locales y NAP",
-								"Gestión y Estrategia de Reseñas (Reviews)",
-								"SEO On-Page enfocado geográficamente",
-							]}
-						/>
-						<CardServices
-							title="GEO (Optimización para IA Generativa)"
-							description={`Prepara tu sitio para el futuro de las búsquedas. Optimizamos tu contenido para que sea la fuente elegida por los motores de IA (LLMs). Aseguramos que tu autoridad (E-E-A-T) sea clara para que Google cite tu marca, no la de tu competencia.`}
-							url="/contacto"
-							buttonLabel="Solicitar Consultoría GEO"
-							items={[
-								"Creación y Optimización de llms.txt",
-								"Fortalecimiento de señales E-E-A-T",
-								"Estructuración de contenido semántico (Schema)",
-								"Optimización para Búsqueda Conversacional",
-							]}
-						/>
+						{services.map((service, index) => (
+							<CardServices
+								key={index}
+								title={service.title}
+								description={service.description}
+								url={service.url}
+								buttonLabel={service.buttonLabel}
+								items={service.items}
+							/>
+						))}
 					</ul>
 				</article>
 			</section>
@@ -254,7 +297,9 @@ export default function SeoClient() {
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CTA
 					title={"¿Listo para Dominar las Búsquedas en Google?"}
-					paragraph={"Deja de ser invisible para tus clientes. Es hora de que tu negocio obtenga la visibilidad que merece. Agenda una consulta gratuita con nuestro equipo y descubre el potencial de una estrategia SEO profesional."}
+					paragraph={
+						"Deja de ser invisible para tus clientes. Es hora de que tu negocio obtenga la visibilidad que merece. Agenda una consulta gratuita con nuestro equipo y descubre el potencial de una estrategia SEO profesional."
+					}
 					label={"Solicita tu Auditoría SEO Gratuita"}
 					link={"/contacto"}
 				/>
