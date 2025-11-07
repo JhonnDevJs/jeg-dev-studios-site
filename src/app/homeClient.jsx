@@ -17,6 +17,7 @@ import {
 	FaAssistiveListeningSystems,
 } from "react-icons/fa";
 import Image from "next/image";
+import Script from "next/script";
 import Link from "next/link";
 import CardServices from "@/components/Cards/CardServices";
 import TeamCarousel from "@/components/Carousel/Slider";
