@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
+import Script from "next/script";
 import Link from "next/link";
 import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
 import FAQ from "@/components/Seo/FAQ";

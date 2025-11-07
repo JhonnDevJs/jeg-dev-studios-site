@@ -3,6 +3,7 @@ import Link from "next/link";
 import CTA from "@/components/Cta/CTA";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
+import Script from "next/script";
 import Image from "next/image";
 import "./AboutClient.css";
 
