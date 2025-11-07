@@ -56,7 +56,7 @@ const faqs = [
 function AppDev() {
 	return (
 		<>
-			<StructuredData data={faqs} type="FAQPage" />
+			<StructuredData data={faqs} type="FAQPage" idPage="faqs-app-dev" />
 			<section className="d-flex flex-column text-white w-100 p-5 m-0 gap-5 gradient-effect-x">
 				<article className="d-flex flex-column pt-5 gap-3">
 					<h1 className="section-title">

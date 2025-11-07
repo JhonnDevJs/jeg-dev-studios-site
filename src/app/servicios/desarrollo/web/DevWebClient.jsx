@@ -215,6 +215,7 @@ export default function DevWebClient() {
 
 	return (
 		<>
+			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-web" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-web" />
 			<script
 				type="application/ld+json"

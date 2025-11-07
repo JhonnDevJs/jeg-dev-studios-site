@@ -34,6 +34,7 @@ const faqs = [
 export default function DesarrolloClient() {
 	return (
 		<>
+			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-development" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-development" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

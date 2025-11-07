@@ -27,6 +27,7 @@ const faqs = [
 export default function AboutClient() {
 	return (
 		<>
+			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-about-us" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-about" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

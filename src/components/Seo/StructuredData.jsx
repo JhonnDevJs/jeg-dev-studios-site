@@ -1,12 +1,12 @@
-"use client";
+"use client"; // Directiva de Next.js para componentes de cliente
 
 import Script from "next/script";
+import { usePathname } from "next/navigation";
 
 const StructuredData = ({ data, type, idPage }) => {
+	const pathname = usePathname();
 	let schema = data;
 
-	// Si se pasa un array y el tipo es 'FAQPage', construye el schema.
-	// Esto asume que los elementos del array tienen 'question' y 'answer'.
 	if (type === "FAQPage" && Array.isArray(data)) {
 		schema = {
 			"@context": "https://schema.org",
@@ -22,11 +22,58 @@ const StructuredData = ({ data, type, idPage }) => {
 		};
 	}
 
+	if (type === "BreadcrumbList" && pathname !== "/") {
+		const breadcrumbs = buildBreadcrumbs(pathname);
+		if (breadcrumbs.length > 0) {
+			schema = {
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				itemListElement: breadcrumbs,
+			};
+		}
+	}
+
+	if (!schema) {
+		return null;
+	}
+
 	return (
-		<Script id={`structured-data-${idPage}`} type="application/ld+json">
-			{JSON.stringify(schema)}
-		</Script>
+		<Script
+			id={`structured-data-${idPage}`}
+			type="application/ld+json"
+			dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+		/>
 	);
+};
+
+const buildBreadcrumbs = (pathname) => {
+	const pathSegments = pathname.split("/").filter((segment) => segment);
+	const breadcrumbs = [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Inicio",
+			item: "https://www.jegdevstudios.com/",
+		},
+	];
+
+	let currentPath = "";
+	pathSegments.forEach((segment, index) => {
+		currentPath += `/${segment}`;
+		const breadcrumb = {
+			"@type": "ListItem",
+			position: index + 2,
+			name: segment.charAt(0).toUpperCase() + segment.slice(1),
+		};
+
+		if (index < pathSegments.length - 1) {
+			breadcrumb.item = `https://www.jegdevstudios.com${currentPath}`;
+		}
+
+		breadcrumbs.push(breadcrumb);
+	});
+
+	return breadcrumbs;
 };
 
 export default StructuredData;

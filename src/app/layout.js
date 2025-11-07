@@ -155,16 +155,20 @@ export default async function RootLayout({ children }) {
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify({
 							"@context": "https://schema.org",
-							"@type": "Organization",
+							// TIPO MEJORADO: Más específico y consistente con tu LocalBusiness
+							"@type": "ProfessionalService",
 							name: "JEG Dev Studios",
 							url: "https://www.jegdevstudios.com/",
 							logo: "https://www.jegdevstudios.com/icons-SEO/logo.webp",
 							image:
 								"https://www.jegdevstudios.com/img-SEO/og-background-home.webp",
 							email: "jegdevstudios@outlook.com",
-							telephone: "+52 1 5512197135",
+							// FORMATO CORREGIDO: E.164 estándar para consistencia
+							telephone: "+525512197135",
 							address: {
 								"@type": "PostalAddress",
+								// "streetAddress": "Tu Calle y Número", // <-- Sigue siendo recomendado añadirlo
+								// "postalCode": "Tu Código Postal",   // <-- Sigue siendo recomendado añadirlo
 								addressLocality: "Álvaro Obregón",
 								addressRegion: "CDMX",
 								addressCountry: "MX",
@@ -172,24 +176,22 @@ export default async function RootLayout({ children }) {
 							priceRange: "$$$",
 							contactPoint: {
 								"@type": "ContactPoint",
-								telephone: "+52-55-1219-7135",
+								// FORMATO CORREGIDO: E.164 estándar para consistencia
+								telephone: "+525512197135",
 								contactType: "Customer Service",
+								areaServed: "MX", // <-- AÑADIDO: Especifica que sirves a México
+								availableLanguage: "es-MX", // <-- AÑADIDO: Especifica el idioma
 							},
 							sameAs: [
+								// <-- URLs CORREGIDAS
 								"https://www.facebook.com/JEGDevStudios",
 								"https://instagram.com/jegdevstudios/",
 								"https://www.tiktok.com/@jeg.dev.studios",
-								"https://x.com/@jegdevstudios",
-								"https://linkedin.com/@jegdevstudios",
+								"https://x.com/JEGDevStudios", // <-- Corregido (basado en datos previos)
+								"https://linkedin.com/company/jegdevstudios", // <-- Corregido a la URL de empresa
 								"https://www.youtube.com/@jegdevstudios",
 								"https://github.com/JEGDevStudios",
 							],
-							aggregateRating: {
-								"@type": "AggregateRating",
-								ratingValue: "4.9",
-								bestRating: "5",
-								ratingCount: "25",
-							},
 						}),
 					}}
 				/>
@@ -201,13 +203,9 @@ export default async function RootLayout({ children }) {
 						__html: JSON.stringify({
 							"@context": "https://schema.org",
 							"@type": "WebSite",
+							name: "JEG Dev Studios",
 							url: "https://www.jegdevstudios.com/",
-							potentialAction: {
-								"@type": "SearchAction",
-								target:
-									"https://www.jegdevstudios.com/search?q={search_term_string}",
-								"query-input": "required name=search_term_string",
-							},
+							inLanguage: "es-MX",
 						}),
 					}}
 				/>
@@ -218,13 +216,16 @@ export default async function RootLayout({ children }) {
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify({
 							"@context": "https://schema.org/",
-							"@type": "LocalBusiness",
+							"@type": "ProfessionalService",
 							name: "JEG Dev Studios",
 							image:
 								"https://www.jegdevstudios.com/img-SEO/og-background-home.webp",
+							logo: "https://www.jegdevstudios.com/icons-SEO/logo.webp",
 							url: "https://www.jegdevstudios.com/",
 							telephone: "+52 1 5512197135",
 							priceRange: "$$$",
+							description:
+								"Agencia de Desarrollo Web y Software en México: Soluciones a Medida. En JEG Dev Studios, creamos sitios, aplicaciones móviles y software a medida que conectan con tus clientes y transforman tus ideas en resultados reales.",
 							address: {
 								"@type": "PostalAddress",
 								addressLocality: "Álvaro Obregón",
@@ -233,27 +234,31 @@ export default async function RootLayout({ children }) {
 							},
 							geo: {
 								"@type": "GeoCoordinates",
-								latitude: "19.4326",
-								longitude: "-99.1332",
+								latitude: "19.3620",
+								longitude: "-99.2044",
 							},
-						}),
-					}}
-				/>
-				<Script
-					id="structured-data-breadcrumbs"
-					type="application/ld+json"
-					strategy="afterInteractive"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify({
-							"@context": "https://schema.org",
-							"@type": "BreadcrumbList",
-							itemListElement: [
+							openingHoursSpecification: [
 								{
-									"@type": "ListItem",
-									position: 1,
-									name: "Inicio",
-									item: "https://www.jegdevstudios.com/",
+									"@type": "OpeningHoursSpecification",
+									dayOfWeek: [
+										"Monday",
+										"Tuesday",
+										"Wednesday",
+										"Thursday",
+										"Friday",
+									],
+									opens: "09:00:00",
+									closes: "18:00:00",
 								},
+							],
+							sameAs: [
+								"https://www.facebook.com/JEGDevStudios",
+								"https://instagram.com/jegdevstudios/",
+								"https://www.tiktok.com/@jeg.dev.studios",
+								"https://www.youtube.com/@jegdevstudios",
+								"https://linkedin.com/company/jegdevstudios",
+								"https://x.com/JEGDevStudios",
+								"https://github.com/JEGDevStudios",
 							],
 						}),
 					}}

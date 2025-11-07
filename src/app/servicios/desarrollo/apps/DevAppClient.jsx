@@ -150,6 +150,7 @@ export default function DevAppClient() {
 	};
 	return (
 		<>
+			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-apps" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-apps" />
 			<script
 				type="application/ld+json"

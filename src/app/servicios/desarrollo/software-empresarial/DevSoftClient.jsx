@@ -160,6 +160,7 @@ export default function DevSoftClient() {
 	};
 	return (
 		<>
+			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-soft" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-soft" />
 			<script
 				type="application/ld+json"

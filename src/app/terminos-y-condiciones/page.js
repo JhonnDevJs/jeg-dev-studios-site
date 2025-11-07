@@ -58,6 +58,7 @@ const faqs = [
 export default function TermsAndConditions() {
 	return (
 		<>
+			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-terms-and-conditions" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-terminos" />
 			<section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5 gradient-effect-y">
 				<h1 className="text-white">Términos y Condiciones de Uso</h1>

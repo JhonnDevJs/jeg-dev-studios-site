@@ -115,6 +115,7 @@ function ProjectsClient() {
 
 	return (
 		<>
+			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-projects" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-projects" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

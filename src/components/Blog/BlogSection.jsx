@@ -148,7 +148,7 @@ export default function BlogSection({ posts }) {
 					<div className="col-lg-7">
 						{sidePosts.map((post, index) => (
 							<article
-								key={post.id || post.link} // <--- AÑADIR KEY AQUÍ
+								key={post.id || post.link || index} // <--- AÑADIR KEY AQUÍ
 								className={`d-flex flex-column flex-md-row shadow-lg ${cardThemeClasses} ${
 									index === sidePosts.length - 1 ? "mb-0" : "mb-4"
 								}`}

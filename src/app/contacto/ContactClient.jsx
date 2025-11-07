@@ -92,6 +92,7 @@ export default function ContactClient() {
 
 	return (
 		<>
+			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-contact" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-contact" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
