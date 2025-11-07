@@ -29,6 +29,29 @@ export default function AboutClient() {
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-about-us" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-about" />
+			<Script
+				id="structured-data-person"
+				type="application/ld+json"
+				strategy="afterInteractive"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "Person",
+						name: "Jhonatan Espinal",
+						url: "https://www.jegdevstudios.com/sobre-nosotros",
+						image: "https://jhoneg-17.github.io/JhonDev/src/assets/img/fotoperfil/foto-jhonatan-espinal.webp",
+						jobTitle: "CEO Fundador y Desarrollador Full-Stack",
+						worksFor: {
+							"@type": "Organization",
+							name: "JEG Dev Studios",
+						},
+						sameAs: [
+							"https://www.linkedin.com/in/jhoneg/",
+							"https://jhoneg-17.github.io/JhonDev/",
+						],
+					}),
+				}}
+			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Nosotros.webp"

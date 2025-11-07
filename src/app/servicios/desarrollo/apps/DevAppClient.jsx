@@ -15,30 +15,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./DevAppClient.css";
 
-const faqs = [
-	{
-		question: "¿Qué es mejor, una app nativa o una multiplataforma?",
-		answer:
-			"Depende de tu objetivo. Una app nativa (un desarrollo para iOS y otro para Android) ofrece el máximo rendimiento. Una app multiplataforma (con React Native o Kotlin Multiplatform) reduce costos y tiempo de desarrollo al usar una base de código compartida, siendo ideal para la mayoría de los proyectos.",
-	},
-	{
-		question: "¿El precio incluye la publicación en las tiendas de apps?",
-		answer:
-			"Sí, todos nuestros paquetes incluyen el proceso completo de preparación y publicación tanto en la Google Play Store (Android) como en la App Store (iOS), asegurando que cumpla con todas las normativas.",
-	},
-	{
-		question: "¿Qué es el 'backend' y por qué lo necesito?",
-		answer:
-			"El backend es el 'cerebro' de tu aplicación. Es un servidor que gestiona los datos, la lógica de negocio y la autenticación de usuarios. Es esencial para apps que necesitan guardar información, tener perfiles de usuario o sincronizar datos entre dispositivos.",
-	},
-	{
-		question:
-			"¿Qué tipo de mantenimiento necesita una app después de ser lanzada?",
-		answer:
-			"Una app requiere mantenimiento para asegurar su compatibilidad con nuevas versiones de iOS y Android, corregir posibles errores y, opcionalmente, añadir nuevas funcionalidades. Ofrecemos planes de mantenimiento para garantizar que tu app siga funcionando perfectamente a largo plazo.",
-	},
-];
-
 export default function DevAppClient() {
 	const products = useMemo(
 		() => [
@@ -124,21 +100,37 @@ export default function DevAppClient() {
 		[]
 	);
 
-	// Fragmento enriquecido para SEO
-	const productSchema = products.map((product) => ({
-		"@context": "https://schema.org/",
-		"@type": "Product",
-		name: product.name,
-		image: product.imageSrc,
-		description: product.description,
-		sku: product.id,
-		offers: {
-			"@type": "Offer",
-			priceCurrency: product.currency,
-			price: product.price,
-			availability: "https://schema.org/InStock",
+	const webServiceInfo = {
+		name: "Desarrollo de Páginas Web Profesionales",
+		serviceType: "Desarrollo de Páginas Web",
+		description:
+			"Servicios de desarrollo de páginas web a medida en Next.js. Olvida WordPress. Somos una de las agencias de sitios web que ofrece paquetes con performance +90 garantizado.",
+		image: "https://www.jegdevstudios.com/img-SEO/og-background-web.webp", // (Recomendado)
+	};
+	
+	const faqs = [
+		{
+			question: "¿Qué es mejor, una app nativa o una multiplataforma?",
+			answer:
+				"Depende de tu objetivo. Una app nativa (un desarrollo para iOS y otro para Android) ofrece el máximo rendimiento. Una app multiplataforma (con React Native o Kotlin Multiplatform) reduce costos y tiempo de desarrollo al usar una base de código compartida, siendo ideal para la mayoría de los proyectos.",
 		},
-	}));
+		{
+			question: "¿El precio incluye la publicación en las tiendas de apps?",
+			answer:
+				"Sí, todos nuestros paquetes incluyen el proceso completo de preparación y publicación tanto en la Google Play Store (Android) como en la App Store (iOS), asegurando que cumpla con todas las normativas.",
+		},
+		{
+			question: "¿Qué es el 'backend' y por qué lo necesito?",
+			answer:
+				"El backend es el 'cerebro' de tu aplicación. Es un servidor que gestiona los datos, la lógica de negocio y la autenticación de usuarios. Es esencial para apps que necesitan guardar información, tener perfiles de usuario o sincronizar datos entre dispositivos.",
+		},
+		{
+			question:
+				"¿Qué tipo de mantenimiento necesita una app después de ser lanzada?",
+			answer:
+				"Una app requiere mantenimiento para asegurar su compatibilidad con nuevas versiones de iOS y Android, corregir posibles errores y, opcionalmente, añadir nuevas funcionalidades. Ofrecemos planes de mantenimiento para garantizar que tu app siga funcionando perfectamente a largo plazo.",
+		},
+	];
 
 	const handleWhatsAppRedirect = (productName) => {
 		const message = `Hola, estoy interesado en el paquete de aplicación "${productName}". ¿Podrían darme más información?`;
@@ -152,9 +144,11 @@ export default function DevAppClient() {
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-apps" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-apps" />
-			<script
-				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+			<StructuredData
+				data={products}
+				type="Service"
+				idPage="service-dev-web"
+				serviceInfo={webServiceInfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

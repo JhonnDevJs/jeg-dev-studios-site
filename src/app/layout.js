@@ -250,6 +250,12 @@ export default async function RootLayout({ children }) {
 									opens: "09:00:00",
 									closes: "18:00:00",
 								},
+								{
+									"@type": "OpeningHoursSpecification",
+									dayOfWeek: "Saturday",
+									opens: "10:00:00",
+									closes: "14:00:00",
+								},
 							],
 							sameAs: [
 								"https://www.facebook.com/JEGDevStudios",

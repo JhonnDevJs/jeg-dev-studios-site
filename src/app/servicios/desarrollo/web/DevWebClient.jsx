@@ -20,31 +20,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./DevWebClient.css";
 
-const faqs = [
-	{
-		question:
-			"¿Cuál es la diferencia entre el 'Mini Sitio' y el 'Sitio Ignite'?",
-		answer:
-			'El "Mini Sitio" es una solución de arranque rápido construida en Google Sites, ideal para validar una idea. El "Sitio Ignite" es un desarrollo web profesional en Next.js (React), diseñado para una velocidad superior (+90 en performance) y con un CMS para que puedas autoadministrarlo.',
-	},
-	{
-		question: "¿Por qué elegir Next.js en lugar de WordPress como otras agencias de sitios web?",
-		answer:
-			"Velocidad y Seguridad. Mientras WordPress es lento y vulnerable a plugins, Next.js es una tecnología moderna que crea sitios ultra-rápidos (mejorando tu SEO) y mucho más seguros. Ofrecemos una tecnología de élite a un precio competitivo.",
-	},
-	{
-		question: '¿Qué significa "performance +90 garantizado"?',
-		answer:
-			'Significa que tu sitio web cargará increíblemente rápido. Usamos herramientas como Google PageSpeed Insights para medir el rendimiento, y garantizamos que tu sitio "Ignite" (o superior) obtendrá una puntuación de más de 90/100, algo crucial para el SEO y la experiencia del usuario.',
-	},
-	{
-		question:
-			"Si contrato un paquete, ¿puedo agregar más funcionalidades después?",
-		answer:
-			'¡Absolutamente! Esa es la belleza de Next.js. A diferencia de las plantillas rígidas, nuestros paquetes "Ignite", "Accelerate" y "Ultimate" están construidos con una arquitectura modular, lo que nos permite añadir nuevas secciones o funciones fácilmente a medida que tu negocio crece.',
-	},
-];
-
 export default function DevWebClient() {
 	const products = useMemo(
 		() => [
@@ -188,21 +163,39 @@ export default function DevWebClient() {
 		[]
 	);
 
-	// Fragmento enriquecido para SEO
-	const productSchema = products.map((product) => ({
-		"@context": "https://schema.org/",
-		"@type": "Product",
-		name: product.name,
-		image: product.imageSrc,
-		description: product.items.join(". "),
-		sku: product.id,
-		offers: {
-			"@type": "Offer",
-			priceCurrency: product.currency,
-			price: product.price,
-			availability: "https://schema.org/InStock",
+	const webServiceInfo = {
+		name: "Desarrollo de Páginas Web Profesionales",
+		serviceType: "Desarrollo de Páginas Web",
+		description:
+			"Servicios de desarrollo de páginas web a medida en Next.js. Olvida WordPress. Somos una de las agencias de sitios web que ofrece paquetes con performance +90 garantizado.",
+		image: "https://www.jegdevstudios.com/img-SEO/og-background-web.webp", // (Recomendado)
+	};
+
+	const faqs = [
+		{
+			question:
+				"¿Cuál es la diferencia entre el 'Mini Sitio' y el 'Sitio Ignite'?",
+			answer:
+				'El "Mini Sitio" es una solución de arranque rápido construida en Google Sites, ideal para validar una idea. El "Sitio Ignite" es un desarrollo web profesional en Next.js (React), diseñado para una velocidad superior (+90 en performance) y con un CMS para que puedas autoadministrarlo.',
 		},
-	}));
+		{
+			question:
+				"¿Por qué elegir Next.js en lugar de WordPress como otras agencias de sitios web?",
+			answer:
+				"Velocidad y Seguridad. Mientras WordPress es lento y vulnerable a plugins, Next.js es una tecnología moderna que crea sitios ultra-rápidos (mejorando tu SEO) y mucho más seguros. Ofrecemos una tecnología de élite a un precio competitivo.",
+		},
+		{
+			question: '¿Qué significa "performance +90 garantizado"?',
+			answer:
+				'Significa que tu sitio web cargará increíblemente rápido. Usamos herramientas como Google PageSpeed Insights para medir el rendimiento, y garantizamos que tu sitio "Ignite" (o superior) obtendrá una puntuación de más de 90/100, algo crucial para el SEO y la experiencia del usuario.',
+		},
+		{
+			question:
+				"Si contrato un paquete, ¿puedo agregar más funcionalidades después?",
+			answer:
+				'¡Absolutamente! Esa es la belleza de Next.js. A diferencia de las plantillas rígidas, nuestros paquetes "Ignite", "Accelerate" y "Ultimate" están construidos con una arquitectura modular, lo que nos permite añadir nuevas secciones o funciones fácilmente a medida que tu negocio crece.',
+		},
+	];
 
 	const handleWhatsAppRedirect = (productName) => {
 		const message = `Hola, estoy interesado en el paquete de desarrollo web "${productName}". ¿Podrían darme más información?`;
@@ -217,10 +210,12 @@ export default function DevWebClient() {
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-web" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-web" />
-			<script
-				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
-			/>
+			<StructuredData 
+        data={products} 
+        type="Service" 
+        idPage="service-dev-web" 
+        serviceInfo={webServiceInfo} 
+      />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Web.webp"

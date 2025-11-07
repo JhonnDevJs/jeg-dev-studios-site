@@ -18,37 +18,6 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "./DevSoftClient.css";
 
-const faqs = [
-	{
-		question:
-			"¿Qué diferencia hay entre ustedes y otra empresa de desarrollo de software en CDMX?",
-		answer:
-			"Nuestra diferencia es el enfoque ágil y la transparencia. Como una empresa de desarrollo de software en CDMX con un proceso basado en Scrum, te involucramos en cada etapa. Ves avances funcionales cada dos semanas, asegurando que el producto final es exactamente lo que tu operación necesita.",
-	},
-	{
-		question:
-			"¿Cuál es la diferencia entre 'Software de escritorio' y 'App web local'?",
-		answer:
-			"El software de escritorio se instala y ejecuta directamente en un ordenador (Windows, macOS). La app web local funciona desde un navegador dentro de tu red interna, sin necesidad de internet, lo que facilita el acceso desde varios dispositivos conectados a la misma red.",
-	},
-	{
-		question: "Si empiezo con una 'Solución Básica', ¿puedo mejorarla después?",
-		answer:
-			"Sí. Todos nuestros desarrollos son modulares y escalables. Puedes empezar con un módulo y, a medida que tu negocio crezca, podemos añadir más funcionalidades, integrar más usuarios o migrar tu sistema a la nube sin problemas.",
-	},
-	{
-		question:
-			"¿Qué significa 'integraciones externas' en la Solución Profesional?",
-		answer:
-			"Significa que podemos conectar tu software con otras herramientas que ya uses, como sistemas de facturación electrónica (SAT), plataformas de pago, CRMs (como Salesforce), o cualquier otra API que necesites para centralizar tus operaciones.",
-	},
-	{
-		question: "¿Ofrecen capacitación y soporte para el software?",
-		answer:
-			"Sí. Los paquetes más avanzados incluyen capacitación inicial para tu equipo. Además, todos los paquetes cuentan con garantía y ofrecemos planes de soporte y mantenimiento post-entrega para asegurar el funcionamiento continuo de tu sistema.",
-	},
-];
-
 export default function DevSoftClient() {
 	const products = useMemo(
 		() => [
@@ -134,22 +103,46 @@ export default function DevSoftClient() {
 		[]
 	);
 
-	// Fragmento enriquecido para SEO
-	const productSchema = products.map((product) => ({
-		"@context": "https://schema.org/",
-		"@type": "Product",
-		name: product.name,
-		image: product.imageSrc,
-		description: product.description,
-		sku: product.id,
-		offers: {
-			"@type": "Offer",
-			priceCurrency: product.currency,
-			price: product.price,
-			availability: "https://schema.org/InStock",
-		},
-	}));
+	const webServiceInfo = {
+		name: "Desarrollo de Páginas Web Profesionales",
+		serviceType: "Desarrollo de Páginas Web",
+		description:
+			"Servicios de desarrollo de páginas web a medida en Next.js. Olvida WordPress. Somos una de las agencias de sitios web que ofrece paquetes con performance +90 garantizado.",
+		image: "https://www.jegdevstudios.com/img-SEO/og-background-web.webp", // (Recomendado)
+	};
 
+	const faqs = [
+		{
+			question:
+				"¿Qué diferencia hay entre ustedes y otra empresa de desarrollo de software en CDMX?",
+			answer:
+				"Nuestra diferencia es el enfoque ágil y la transparencia. Como una empresa de desarrollo de software en CDMX con un proceso basado en Scrum, te involucramos en cada etapa. Ves avances funcionales cada dos semanas, asegurando que el producto final es exactamente lo que tu operación necesita.",
+		},
+		{
+			question:
+				"¿Cuál es la diferencia entre 'Software de escritorio' y 'App web local'?",
+			answer:
+				"El software de escritorio se instala y ejecuta directamente en un ordenador (Windows, macOS). La app web local funciona desde un navegador dentro de tu red interna, sin necesidad de internet, lo que facilita el acceso desde varios dispositivos conectados a la misma red.",
+		},
+		{
+			question:
+				"Si empiezo con una 'Solución Básica', ¿puedo mejorarla después?",
+			answer:
+				"Sí. Todos nuestros desarrollos son modulares y escalables. Puedes empezar con un módulo y, a medida que tu negocio crezca, podemos añadir más funcionalidades, integrar más usuarios o migrar tu sistema a la nube sin problemas.",
+		},
+		{
+			question:
+				"¿Qué significa 'integraciones externas' en la Solución Profesional?",
+			answer:
+				"Significa que podemos conectar tu software con otras herramientas que ya uses, como sistemas de facturación electrónica (SAT), plataformas de pago, CRMs (como Salesforce), o cualquier otra API que necesites para centralizar tus operaciones.",
+		},
+		{
+			question: "¿Ofrecen capacitación y soporte para el software?",
+			answer:
+				"Sí. Los paquetes más avanzados incluyen capacitación inicial para tu equipo. Además, todos los paquetes cuentan con garantía y ofrecemos planes de soporte y mantenimiento post-entrega para asegurar el funcionamiento continuo de tu sistema.",
+		},
+	];
+	
 	const handleWhatsAppRedirect = (productName) => {
 		const message = `Hola, estoy interesado en la solución de software "${productName}". ¿Podrían darme más información?`;
 		// Reemplaza con tu número de WhatsApp en formato internacional
@@ -162,9 +155,11 @@ export default function DevSoftClient() {
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-soft" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-soft" />
-			<script
-				type="application/ld+json"
-				dangerouslySetInnerHTML={{ __html: JSON.stringify(productSchema) }}
+			<StructuredData
+				data={products}
+				type="Service"
+				idPage="service-dev-web"
+				serviceInfo={webServiceInfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

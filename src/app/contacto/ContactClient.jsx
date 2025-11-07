@@ -94,6 +94,30 @@ export default function ContactClient() {
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-contact" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-contact" />
+			<Script
+				id="structured-data-contactpage"
+				type="application/ld+json"
+				strategy="afterInteractive"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "ContactPage",
+						name: "Contacto - JEG Dev Studios",
+						url: "https://www.jegdevstudios.com/contacto",
+						description:
+							"Contacta a JEG Dev Studios para agendar una consulta gratuita sobre desarrollo web, software, SEO y diseño.",
+						// Aquí conectamos el punto de contacto que ya definimos
+						mainEntity: {
+							"@type": "ContactPoint",
+							telephone: "+525512197135",
+							contactType: "Customer Service",
+							areaServed: "MX",
+							availableLanguage: "es-MX",
+							email: "contacto@jegdevstudios.com",
+						},
+					}),
+				}}
+			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Contacto.webp"
