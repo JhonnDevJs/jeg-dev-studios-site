@@ -222,6 +222,34 @@ export default function HomeClient({ posts: postsToShow }) {
 	return (
 		<>
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-home" />
+			<Script
+				id="structured-data-video"
+				type="application/ld+json"
+				strategy="afterInteractive"
+				dangerouslySetInnerHTML={{
+					__html: JSON.stringify({
+						"@context": "https://schema.org",
+						"@type": "VideoObject",
+						name: "JEG Dev Studios | Agencia de Desarrollo Web y Software en México", // Título del video
+						description:
+							"Descubre cómo JEG Dev Studios transforma tus ideas en soluciones digitales robustas", // Descripción del video
+						thumbnailUrl:
+							"https://www.jegdevstudios.com/path/a/miniatura-del-video.jpg",
+						uploadDate: "2025-11-06", // Fecha en que subiste el video
+						duration: "PT1M0S", // Formato ISO 8601 (1 minuto, 0 segundos)
+						contentUrl: "https://www.youtube.com/watch?v=60pib_g34CA", // URL del video en YouTube
+						embedUrl: "https://www.youtube.com/embed/60pib_g34CA?si=vDoEcQGRUt0iU6YD", // URL para embeber
+						publisher: {
+							"@type": "Organization",
+							name: "JEG Dev Studios",
+							logo: {
+								"@type": "ImageObject",
+								url: "https://www.jegdevstudios.com/icons-SEO/logo.webp",
+							},
+						},
+					}),
+				}}
+			/>
 			<section className="section d-flex flex-md-row flex-column justify-content-xl-start justify-content-center align-items-center w-100 vh-100 p-0 m-0 __imageBackground bg-fixed-cover ">
 				<article
 					className="container justify-content-center align-items-center w-100 gap-5 p-4 m-0"
