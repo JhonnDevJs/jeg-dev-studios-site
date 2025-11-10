@@ -113,7 +113,7 @@ export default function DisenoClient() {
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/banners/Christmas/Diseno.webp"
-					alt="Nuestros servicios en JEG Dev Studios"
+					alt="Nuestros servicios de Diseño - JEG Dev Studios"
 					width={1920}
 					height={1080}
 					style={{ width: "100%", height: "auto" }}
