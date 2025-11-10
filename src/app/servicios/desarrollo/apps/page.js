@@ -1,5 +1,5 @@
 export const metadata = {
-	title: "Servicio de desarrollo de aplicaciones modernas | JEG Dev Studios",
+	title: "Servicios de desarrollo de aplicaciones | JEG Dev Studios",
 	description:
 		"Somos los expertos en el desarrollo deaplicaciones en México, ofrecemos soluciones personalizadas que impulsan tu proyecto para Android e iOS.",
 	keywords:
