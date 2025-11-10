@@ -46,7 +46,7 @@ export default function ServicesClient() {
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-services" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
-					src="/fondos/Servicios.webp"
+					src="/banners/Christmas/Servicios.webp"
 					alt="Nuestros servicios en JEG Dev Studios"
 					width={1920}
 					height={1080}

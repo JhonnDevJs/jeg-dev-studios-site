@@ -155,7 +155,7 @@ export default function DevAppClient() {
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
-					src="/fondos/Apps.webp"
+					src="/banners/Christmas/Apps.webp"
 					alt="Conoce nuestros servicios de desarrollo de aplicaciones móviles de JEG Dev Studios"
 					width={1920}
 					height={1080}

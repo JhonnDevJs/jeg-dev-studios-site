@@ -221,7 +221,7 @@ export default function DevWebClient() {
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
-					src="/fondos/Web.webp"
+					src="/banners/Christmas/Web.webp"
 					alt="Conoce nuestros servicios de desarrollo web en JEG Dev Studios"
 					width={1920}
 					height={1080}

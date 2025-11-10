@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import StructuredData from "@/components/Seo/StructuredData";
 
 export const metadata = {
@@ -55,9 +56,21 @@ const faqs = [
 export default function PrivacyPolicy() {
 	return (
 		<>
-			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-notice-privacy" />
+			<StructuredData
+				type="BreadcrumbList"
+				idPage="breadcrumbs-notice-privacy"
+			/>
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-notice-privacy" />
-			<section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5 gradient-effect-y">
+			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
+				<Image
+					src="/banners/Christmas/Notice-Privacy.webp"
+					alt="Conatcta con nosotros - JEG Dev Studios"
+					width={1920}
+					height={1080}
+					style={{ width: "100%", height: "auto" }}
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3  gradient-effect-y">
 				<h1 className="text-white">Aviso de Privacidad</h1>
 				<p className="text-white text-center">
 					En JEG Dev Studios protegemos tu información personal con

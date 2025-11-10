@@ -166,7 +166,7 @@ export default function DevSoftClient() {
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
-					src="/fondos/Software.webp"
+					src="/banners/Christmas/Software.webp"
 					alt="Conoce nuestros servicios de desarrollo de software empresarial"
 					width={1920}
 					height={1080}

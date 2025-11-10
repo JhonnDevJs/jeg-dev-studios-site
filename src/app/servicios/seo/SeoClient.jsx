@@ -109,7 +109,7 @@ export default function SeoClient() {
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
-					src="/fondos/Servicios.webp"
+					src="/banners/Christmas/Seo.webp"
 					alt="Nuestros servicios en JEG Dev Studios"
 					width={1920}
 					height={1080}

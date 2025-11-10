@@ -119,7 +119,7 @@ function ProjectsClient() {
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-projects" />
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
-					src="/fondos/Proyectos.webp"
+					src="/banners/Christmas/Proyectos.webp"
 					alt="Nuestra colección de proyectos en JEG Dev Studios"
 					width={1920}
 					height={1080}

@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 
@@ -58,9 +59,21 @@ const faqs = [
 export default function TermsAndConditions() {
 	return (
 		<>
-			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-terms-and-conditions" />
+			<StructuredData
+				type="BreadcrumbList"
+				idPage="breadcrumbs-terms-and-conditions"
+			/>
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-terminos" />
-			<section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3 mt-5 gradient-effect-y">
+			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
+				<Image
+					src="/banners/Christmas/Terms-Conditions.webp"
+					alt="Conatcta con nosotros - JEG Dev Studios"
+					width={1920}
+					height={1080}
+					style={{ width: "100%", height: "auto" }}
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center w-100 p-xl-5 p-3  gradient-effect-y">
 				<h1 className="text-white">Términos y Condiciones de Uso</h1>
 				<p className="text-white text-center">
 					Consulta los lineamientos legales y condiciones para el uso de los

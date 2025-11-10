@@ -121,7 +121,7 @@ export default function ContactClient() {
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
-					src="/fondos/Contacto.webp"
+					src="/banners/Christmas/Contacto.webp"
 					alt="Conatcta con nosotros - JEG Dev Studios"
 					width={1920}
 					height={1080}

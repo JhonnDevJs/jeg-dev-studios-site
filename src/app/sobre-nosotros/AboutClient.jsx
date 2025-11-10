@@ -55,7 +55,7 @@ export default function AboutClient() {
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
-					src="/fondos/Nosotros.webp"
+					src="/banners/Christmas/Nosotros.webp"
 					alt="Sobre Nosotros - JEG Dev Studios"
 					width={1920}
 					height={1080}
