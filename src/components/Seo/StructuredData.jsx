@@ -5,121 +5,177 @@ import { usePathname } from "next/navigation";
 
 // 1. ACEPTAMOS UNA NUEVA PROP 'serviceInfo'
 const StructuredData = ({ data, type, idPage, serviceInfo }) => {
-  const pathname = usePathname();
-  let schema = data;
+	const pathname = usePathname();
+	let schema = data;
 
-  if (type === "FAQPage" && Array.isArray(data)) {
-    schema = {
-      "@context": "https://schema.org",
-      "@type": "FAQPage",
-      mainEntity: data.map((faq) => ({
-        "@type": "Question",
-        name: faq.question,
-        acceptedAnswer: {
-          "@type": "Answer",
-          text: faq.answer,
-        },
-      })),
-    };
-  }
+	if (type === "FAQPage" && Array.isArray(data)) {
+		schema = {
+			"@context": "https://schema.org",
+			"@type": "FAQPage",
+			mainEntity: data.map((faq) => ({
+				"@type": "Question",
+				name: faq.question,
+				acceptedAnswer: {
+					"@type": "Answer",
+					text: faq.answer,
+				},
+			})),
+		};
+	}
 
-  if (type === "BreadcrumbList" && pathname !== "/") {
-    const breadcrumbs = buildBreadcrumbs(pathname);
-    if (breadcrumbs.length > 0) {
-      schema = {
-        "@context": "https://schema.org",
-        "@type": "BreadcrumbList",
-        itemListElement: breadcrumbs,
-      };
-    }
-  }
+	if (type === "BreadcrumbList" && pathname !== "/") {
+		const breadcrumbs = buildBreadcrumbs(pathname);
+		if (breadcrumbs.length > 0) {
+			schema = {
+				"@context": "https://schema.org",
+				"@type": "BreadcrumbList",
+				itemListElement: breadcrumbs,
+			};
+		}
+	}
 
-  // 2. AÑADIMOS LA NUEVA LÓGICA PARA "Service"
-  if (type === "Service" && Array.isArray(data) && serviceInfo) {
-    
-    // Definimos al proveedor (tu empresa)
-    const providerData = {
-      "@type": "ProfessionalService",
-      "name": "JEG Dev Studios",
-      "url": "https://www.jegdevstudios.com/"
-    };
+	// 2. AÑADIMOS LA NUEVA LÓGICA PARA "Service"
+	if (type === "Service" && Array.isArray(data) && serviceInfo) {
+		// --- 1. CÁLCULO DE LA FECHA DE VENCIMIENTO ---
+		// Creamos una fecha para un año en el futuro
+		const expirationDate = new Date();
+		expirationDate.setFullYear(expirationDate.getFullYear() + 1);
 
-    // Construimos el schema "Service"
-    schema = {
-      "@context": "https://schema.org",
-      "@type": "Service",
-      
-      // Usamos la info estática de la prop 'serviceInfo'
-      "name": serviceInfo.name,
-      "serviceType": serviceInfo.serviceType,
-      "description": serviceInfo.description,
-      "image": serviceInfo.image,
-      
-      "provider": providerData,
-      "areaServed": {
-        "@type": "Country",
-        "name": "MX"
-      },
-      
-      // Usamos 'data' (tu array 'products') para crear las ofertas
-      "offers": data.map((pkg) => ({
-        "@type": "Offer",
-        "name": pkg.name,
-        "description": `${pkg.description}. Incluye: ${pkg.items.join(', ')}.`,
-        "price": pkg.price,
-        "priceCurrency": pkg.currency,
-        "sku": pkg.id,
-        "availability": "https://schema.org/InStock",
-        "url": `https://www.jegdevstudios.com${pathname}` // URL de esta página
-      }))
-    };
-  }
+		// La formateamos como YYYY-MM-DD
+		const priceValidUntilDate = expirationDate.toISOString().split("T")[0];
+		// Esto generará algo como "2026-11-10"
+		// ---------------------------------------------
 
-  if (!schema) {
-    return null;
-  }
+		// Definimos al proveedor (tu empresa)
+		const providerData = {
+			"@type": "ProfessionalService",
+			name: "JEG Dev Studios",
+			url: "https://www.jegdevstudios.com/",
+		};
 
-  return (
-    <Script
-      id={`structured-data-${idPage}`}
-      type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-    />
-  );
+		// Construimos el schema "Service"
+		schema = {
+			"@context": "https://schema.org",
+			"@type": "Service",
+
+			// Usamos la info estática de la prop 'serviceInfo'
+			name: serviceInfo.name,
+			serviceType: serviceInfo.serviceType,
+			description: serviceInfo.description,
+			image: serviceInfo.image,
+
+			provider: providerData,
+			areaServed: {
+				"@type": "Country",
+				name: "MX",
+			},
+
+			aggregateRating: {
+				"@type": "AggregateRating",
+				ratingValue: "4.9", // El promedio de calificación (ej. 4.9)
+				reviewCount: "15", // El número total de reseñas (ej. 15)
+			},
+
+			// Usamos 'data' (tu array 'products') para crear las ofertas
+			offers: data.map((pkg) => ({
+				"@type": "Offer",
+				name: pkg.name,
+				description: `${pkg.description}. Incluye: ${pkg.items.join(", ")}.`,
+				price: pkg.price,
+				priceCurrency: pkg.currency,
+				sku: pkg.id,
+				availability: "https://schema.org/InStock",
+				url: `https://www.jegdevstudios.com${pathname}`, // URL de esta página
+
+				priceValidUntil: priceValidUntilDate,
+
+				hasMerchantReturnPolicy: {
+					"@type": "MerchantReturnPolicy",
+					applicableCountry: "MX",
+					returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+				},
+
+				shippingDetails: {
+					"@type": "OfferShippingDetails",
+					// 1. A dónde "envías" (tu país principal)
+					shippingDestination: {
+						"@type": "DefinedRegion",
+						addressCountry: "MX",
+					},
+					// 2. Costo del "envío" (es $0)
+					shippingRate: {
+						"@type": "MonetaryAmount",
+						value: 0,
+						currency: "MXN",
+					},
+					// 3. Tiempo de entrega (procesamiento + tránsito)
+					deliveryTime: {
+						"@type": "ShippingDeliveryTime",
+						// Tiempo de "manejo" o procesamiento del pedido
+						handlingTime: {
+							"@type": "QuantitativeValue",
+							minValue: 0, // 0 días
+							maxValue: 1, // 1 día (para procesar el pago/alta)
+							unitCode: "DAY",
+						},
+						// Tiempo de "tránsito" (para un servicio digital, es 0)
+						transitTime: {
+							"@type": "QuantitativeValue",
+							minValue: 0,
+							maxValue: 0,
+							unitCode: "DAY",
+						},
+					},
+				},
+			})),
+		};
+	}
+
+	if (!schema) {
+		return null;
+	}
+
+	return (
+		<Script
+			id={`structured-data-${idPage}`}
+			type="application/ld+json"
+			dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+		/>
+	);
 };
 
 // --- (Tu función buildBreadcrumbs se mantiene igual) ---
 const buildBreadcrumbs = (pathname) => {
-  const pathSegments = pathname.split("/").filter((segment) => segment);
-  const breadcrumbs = [
-    {
-      "@type": "ListItem",
-      position: 1,
-      name: "Inicio",
-      item: "https://www.jegdevstudios.com/",
-    },
-  ];
+	const pathSegments = pathname.split("/").filter((segment) => segment);
+	const breadcrumbs = [
+		{
+			"@type": "ListItem",
+			position: 1,
+			name: "Inicio",
+			item: "https://www.jegdevstudios.com/",
+		},
+	];
 
-  let currentPath = "";
-  pathSegments.forEach((segment, index) => {
-    currentPath += `/${segment}`;
-    const breadcrumb = {
-      "@type": "ListItem",
-      position: index + 2,
-      // Lógica de capitalización mejorada
-      name: segment.replace(/-/g, ' ').replace(/\b\w/g, l => l.toUpperCase()),
-      item: `https://www.jegdevstudios.com${currentPath}`,
-    };
-    
-    // La última miga no debe tener 'item' (enlace)
-    if (index === pathSegments.length - 1) {
-      delete breadcrumb.item;
-    }
+	let currentPath = "";
+	pathSegments.forEach((segment, index) => {
+		currentPath += `/${segment}`;
+		const breadcrumb = {
+			"@type": "ListItem",
+			position: index + 2,
+			// Lógica de capitalización mejorada
+			name: segment.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
+			item: `https://www.jegdevstudios.com${currentPath}`,
+		};
 
-    breadcrumbs.push(breadcrumb);
-  });
+		// La última miga no debe tener 'item' (enlace)
+		if (index === pathSegments.length - 1) {
+			delete breadcrumb.item;
+		}
 
-  return breadcrumbs;
+		breadcrumbs.push(breadcrumb);
+	});
+
+	return breadcrumbs;
 };
 
 export default StructuredData;

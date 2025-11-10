@@ -63,12 +63,14 @@ export default function SeoClient() {
 		[]
 	);
 
-	const webServiceInfo = {
+	const seoServiceInfo = {
 		name: "Servicios de Posicionamiento SEO Web y GEO en México",
 		serviceType: "Servicios de Posicionamiento SEO Web y GEO",
 		description:
 			"Somos una agencia de SEO en México. Ofrecemos servicios de SEO Web, Local y GEO (Optimización IA) para atraer más clientes a tu negocio. ¡Solicita tu auditoría!",
-		image: "/img-SEO/og-background-serv-seo.webp", // (Recomendado)
+		image: "/img-SEO/og-background-serv-seo.webp",
+		ratingValue: "4.5", // <-- NUEVO
+		reviewCount: "1",
 	};
 
 	const faqs = [
@@ -103,7 +105,7 @@ export default function SeoClient() {
 				data={services}
 				type="Service"
 				idPage="service-dev-web"
-				serviceInfo={webServiceInfo}
+				serviceInfo={seoServiceInfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

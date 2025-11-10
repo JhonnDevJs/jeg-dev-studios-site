@@ -65,12 +65,14 @@ export default function DisenoClient() {
 		[]
 	);
 
-	const webServiceInfo = {
+	const disenoServiceInfo = {
 		name: "Servicios de Diseño Gráfico y Digital en México",
 		serviceType: "Servicios de Posicionamiento SEO Web y GEO",
 		description:
 			"Somos una agencia de diseño gráfico en México. Creamos logotipos, branding y experiencias de usuario (UX/UI) que conectan tu marca con tus clientes.!",
-		image: "/img-SEO/og-background-serv-diseno.webp", // (Recomendado)
+		image: "/img-SEO/og-background-serv-diseno.webp",
+		ratingValue: "4.9", // <-- NUEVO
+		reviewCount: "17",
 	};
 
 	const faqs = [
@@ -106,7 +108,7 @@ export default function DisenoClient() {
 				data={services}
 				type="Service"
 				idPage="service-dev-web"
-				serviceInfo={webServiceInfo}
+				serviceInfo={disenoServiceInfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

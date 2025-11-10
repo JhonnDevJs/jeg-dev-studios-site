@@ -16,7 +16,7 @@ import "swiper/css/navigation";
 import "./DevAppClient.css";
 
 export default function DevAppClient() {
-	const products = useMemo(
+	const services = useMemo(
 		() => [
 			{
 				id: "app_de_inicio",
@@ -100,14 +100,17 @@ export default function DevAppClient() {
 		[]
 	);
 
-	const webServiceInfo = {
-		name: "Desarrollo de Páginas Web Profesionales",
-		serviceType: "Desarrollo de Páginas Web",
+	const appsservicesinfo = {
+		name: "Desarrollo de Aplicaiones Móviles Profesionales",
+		serviceType: "Desarrollo de Aplicaciones móviles",
 		description:
-			"Servicios de desarrollo de páginas web a medida en Next.js. Olvida WordPress. Somos una de las agencias de sitios web que ofrece paquetes con performance +90 garantizado.",
-		image: "https://www.jegdevstudios.com/img-SEO/og-background-web.webp", // (Recomendado)
+			"Somos los expertos en el desarrollo deaplicaciones en México, ofrecemos soluciones personalizadas que impulsan tu proyecto para Android e iOS.",
+		image:
+			"https://www.jegdevstudios.com/img-SEO/og-background-serv-dev-apps.webp",
+		ratingValue: "4.6",
+		reviewCount: "1",
 	};
-	
+
 	const faqs = [
 		{
 			question: "¿Qué es mejor, una app nativa o una multiplataforma?",
@@ -145,10 +148,10 @@ export default function DevAppClient() {
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-apps" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-apps" />
 			<StructuredData
-				data={products}
+				data={services}
 				type="Service"
 				idPage="service-dev-web"
-				serviceInfo={webServiceInfo}
+				serviceInfo={appsservicesinfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

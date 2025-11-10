@@ -19,7 +19,7 @@ import "swiper/css/navigation";
 import "./DevSoftClient.css";
 
 export default function DevSoftClient() {
-	const products = useMemo(
+	const services = useMemo(
 		() => [
 			{
 				id: "solucion_basica",
@@ -103,12 +103,15 @@ export default function DevSoftClient() {
 		[]
 	);
 
-	const webServiceInfo = {
-		name: "Desarrollo de Páginas Web Profesionales",
+	const softServiesInfo = {
+		name: "Desarrollo de Software Empresarial",
 		serviceType: "Desarrollo de Páginas Web",
 		description:
-			"Servicios de desarrollo de páginas web a medida en Next.js. Olvida WordPress. Somos una de las agencias de sitios web que ofrece paquetes con performance +90 garantizado.",
-		image: "https://www.jegdevstudios.com/img-SEO/og-background-web.webp", // (Recomendado)
+			"Servicios de desarrollo de software a medida: CRMs, ERPs y sistemas empresariales.",
+		image:
+			"https://www.jegdevstudios.com/img-SEO/og-background-serv-dev-soft.webp",
+		ratingValue: "4.9", // <-- NUEVO
+		reviewCount: "1",
 	};
 
 	const faqs = [
@@ -142,7 +145,7 @@ export default function DevSoftClient() {
 				"Sí. Los paquetes más avanzados incluyen capacitación inicial para tu equipo. Además, todos los paquetes cuentan con garantía y ofrecemos planes de soporte y mantenimiento post-entrega para asegurar el funcionamiento continuo de tu sistema.",
 		},
 	];
-	
+
 	const handleWhatsAppRedirect = (productName) => {
 		const message = `Hola, estoy interesado en la solución de software "${productName}". ¿Podrían darme más información?`;
 		// Reemplaza con tu número de WhatsApp en formato internacional
@@ -156,10 +159,10 @@ export default function DevSoftClient() {
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-soft" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-soft" />
 			<StructuredData
-				data={products}
+				data={services}
 				type="Service"
 				idPage="service-dev-web"
-				serviceInfo={webServiceInfo}
+				serviceInfo={softServiesInfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image

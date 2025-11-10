@@ -168,7 +168,10 @@ export default function DevWebClient() {
 		serviceType: "Desarrollo de Páginas Web",
 		description:
 			"Servicios de desarrollo de páginas web a medida en Next.js. Olvida WordPress. Somos una de las agencias de sitios web que ofrece paquetes con performance +90 garantizado.",
-		image: "https://www.jegdevstudios.com/img-SEO/og-background-web.webp", // (Recomendado)
+		image:
+			"https://www.jegdevstudios.com/img-SEO/og-background-serv-dev-soft.webp",
+		ratingValue: "4.8", // <-- NUEVO
+		reviewCount: "3",
 	};
 
 	const faqs = [
@@ -210,12 +213,12 @@ export default function DevWebClient() {
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-web" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-web" />
-			<StructuredData 
-        data={products} 
-        type="Service" 
-        idPage="service-dev-web" 
-        serviceInfo={webServiceInfo} 
-      />
+			<StructuredData
+				data={products}
+				type="Service"
+				idPage="service-dev-web"
+				serviceInfo={webServiceInfo}
+			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/fondos/Web.webp"
