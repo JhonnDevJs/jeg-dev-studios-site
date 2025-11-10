@@ -191,23 +191,23 @@ export default function DevAppClient() {
 						1024: { slidesPerView: 3 },
 					}}
 				>
-					{products.map((product) => (
+					{services.map((service) => (
 						<SwiperSlide
-							key={product.id}
+							key={service.id}
 							className="d-flex justify-content-center"
 						>
 							<CardPacksProduct
-								idProduct={product.id}
-								dataPrice={product.price}
-								title={product.name}
-								price={product.price}
-								moneda={product.currency}
-								imageUrl={product.imageSrc}
-								description={product.description}
-								items={product.items}
-								isPriceFixed={product.isPriceFixed}
-								labelBtn={product.labelBtn}
-								onQuote={() => handleWhatsAppRedirect(product.name)}
+								idProduct={service.id}
+								dataPrice={service.price}
+								title={service.name}
+								price={service.price}
+								moneda={service.currency}
+								imageUrl={service.imageSrc}
+								description={service.description}
+								items={service.items}
+								isPriceFixed={service.isPriceFixed}
+								labelBtn={service.labelBtn}
+								onQuote={() => handleWhatsAppRedirect(service.name)}
 							/>
 						</SwiperSlide>
 					))}
