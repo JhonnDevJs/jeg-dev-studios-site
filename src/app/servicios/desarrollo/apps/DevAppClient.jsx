@@ -157,8 +157,8 @@ export default function DevAppClient() {
 				<Image
 					src="/banners/Christmas/Apps.webp"
 					alt="Conoce nuestros servicios de desarrollo de aplicaciones móviles de JEG Dev Studios"
-					width={1920}
-					height={1080}
+					width={2000}
+					height={600}
 					style={{ width: "100%", height: "auto" }}
 				/>
 			</section>

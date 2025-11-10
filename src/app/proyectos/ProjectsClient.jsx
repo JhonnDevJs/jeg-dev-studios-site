@@ -121,8 +121,8 @@ function ProjectsClient() {
 				<Image
 					src="/banners/Christmas/Proyectos.webp"
 					alt="Nuestra colección de proyectos en JEG Dev Studios"
-					width={1920}
-					height={1080}
+					width={2000}
+					height={600}
 					style={{ width: "100%", height: "auto" }}
 				/>
 			</section>

@@ -111,8 +111,8 @@ export default function SeoClient() {
 				<Image
 					src="/banners/Christmas/Seo.webp"
 					alt="Nuestros servicios SEO - JEG Dev Studios"
-					width={1920}
-					height={1080}
+					width={2000}
+					height={600}
 					style={{ width: "100%", height: "auto" }}
 				/>
 			</section>

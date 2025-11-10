@@ -168,8 +168,8 @@ export default function DevSoftClient() {
 				<Image
 					src="/banners/Christmas/Software.webp"
 					alt="Conoce nuestros servicios de desarrollo de software empresarial"
-					width={1920}
-					height={1080}
+					width={2000}
+					height={600}
 					style={{ width: "100%", height: "auto" }}
 				/>
 			</section>

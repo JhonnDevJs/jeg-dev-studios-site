@@ -40,7 +40,8 @@ export default function AboutClient() {
 						"@type": "Person",
 						name: "Jhonatan Espinal",
 						url: "https://www.jegdevstudios.com/sobre-nosotros",
-						image: "https://jhoneg-17.github.io/JhonDev/src/assets/img/fotoperfil/foto-jhonatan-espinal.webp",
+						image:
+							"https://jhoneg-17.github.io/JhonDev/src/assets/img/fotoperfil/foto-jhonatan-espinal.webp",
 						jobTitle: "CEO Fundador y Desarrollador Full-Stack",
 						worksFor: {
 							"@type": "Organization",
@@ -57,8 +58,8 @@ export default function AboutClient() {
 				<Image
 					src="/banners/Christmas/Nosotros.webp"
 					alt="Sobre Nosotros - JEG Dev Studios"
-					width={1920}
-					height={1080}
+					width={2000}
+					height={600}
 					style={{ width: "100%", height: "auto" }}
 				/>
 			</section>
