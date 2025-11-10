@@ -5,118 +5,118 @@
   <!-- Página principal -->
   <url>
     <loc>https://www.jegdevstudios.com/</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <!-- Página "Servicios" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo web" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo/web</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo de aplicaciones móviles" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo/apps</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios desarrollo de software empresarial" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/desarrollo/software-empresarial</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios Seo" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/seo</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios Design" -->
   <url>
     <loc>https://www.jegdevstudios.com/servicios/diseno</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Página "Servicios Design" -->
   <url>
     <loc>https://www.jegdevstudios.com/proyectos</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <!-- Página de "Sobre nosotros" -->
   <url>
     <loc>https://www.jegdevstudios.com/sobre-nosotros</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <!-- Página de "Blog" -->
   <url>
     <loc>https://blog.jegdevstudios.com/</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>daily</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Página de "Contacto" -->
   <url>
     <loc>https://www.jegdevstudios.com/contacto</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.9</priority>
   </url>
   <!-- Página de "Saber más WebDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/web-dev</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más SoftDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/soft-dev</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Saber más AppDev" -->
   <url>
     <loc>https://www.jegdevstudios.com/saber-mas/app-dev</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.6</priority>
   </url>
   <!-- Página de "Términos y condiciones" -->
   <url>
     <loc>https://www.jegdevstudios.com/terminos-y-condiciones</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
   <!-- Página de "Aviso de privacidad" -->
   <url>
     <loc>https://www.jegdevstudios.com/aviso-de-privacidad</loc>
-    <lastmod>2025-11-07T09:00:00Z</lastmod>
+    <lastmod>2025-11-10T09:00:00Z</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.3</priority>
   </url>
