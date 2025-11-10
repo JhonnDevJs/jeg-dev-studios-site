@@ -231,15 +231,16 @@ export default function HomeClient({ posts: postsToShow }) {
 					__html: JSON.stringify({
 						"@context": "https://schema.org",
 						"@type": "VideoObject",
-						name: "JEG Dev Studios | Agencia de Desarrollo Web y Software en México", // Título del video
+						name: "JEG Dev Studios | Agencia de Desarrollo Web y Software en México",
 						description:
-							"Descubre cómo JEG Dev Studios transforma tus ideas en soluciones digitales robustas", // Descripción del video
+							"Descubre cómo JEG Dev Studios transforma tus ideas en soluciones digitales robustas",
 						thumbnailUrl:
 							"https://www.jegdevstudios.com/path/a/miniatura-del-video.jpg",
-						uploadDate: "2025-11-06", // Fecha en que subiste el video
-						duration: "PT1M0S", // Formato ISO 8601 (1 minuto, 0 segundos)
-						contentUrl: "https://www.youtube.com/watch?v=60pib_g34CA", // URL del video en YouTube
-						embedUrl: "https://www.youtube.com/embed/60pib_g34CA?si=vDoEcQGRUt0iU6YD", // URL para embeber
+						"uploadDate": "2025-10-16T15:00:00Z",
+						duration: "PT1M0S",
+						contentUrl: "https://www.youtube.com/watch?v=60pib_g34CA",
+						embedUrl:
+							"https://www.youtube.com/embed/60pib_g34CA?si=vDoEcQGRUt0iU6YD",
 						publisher: {
 							"@type": "Organization",
 							name: "JEG Dev Studios",
