@@ -67,7 +67,7 @@ export default function DisenoClient() {
 
 	const disenoServiceInfo = {
 		name: "Servicios de Diseño Gráfico y Digital en México",
-		serviceType: "Servicios de Posicionamiento SEO Web y GEO",
+		serviceType: "Servicios de Diseño Gráfico y Digital",
 		description:
 			"Somos una agencia de diseño gráfico en México. Creamos logotipos, branding y experiencias de usuario (UX/UI) que conectan tu marca con tus clientes.!",
 		image: "/img-SEO/og-background-serv-diseno.webp",
@@ -107,7 +107,7 @@ export default function DisenoClient() {
 			<StructuredData
 				data={services}
 				type="Service"
-				idPage="service-dev-web"
+				idPage="service-design"
 				serviceInfo={disenoServiceInfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
