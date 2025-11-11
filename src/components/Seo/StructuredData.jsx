@@ -75,10 +75,6 @@ const StructuredData = ({ data, type, idPage, serviceInfo }) => {
 				"@type": "AggregateRating",
 				ratingValue: serviceInfo.ratingValue,
 				reviewCount: serviceInfo.reviewCount,
-				itemReviewed: {
-					"@type": "Service",
-					"@id": `https://www.jegdevstudios.com${pathname}`,
-				},
 			},
 
 			offers: data.map((pkg) => ({
