@@ -105,7 +105,7 @@ export default function DevSoftClient() {
 
 	const softServiesInfo = {
 		name: "Desarrollo de Software Empresarial",
-		serviceType: "Desarrollo de Páginas Web",
+		serviceType: "Desarrollo de Software Empresarial",
 		description:
 			"Servicios de desarrollo de software a medida: CRMs, ERPs y sistemas empresariales.",
 		image:
@@ -161,7 +161,7 @@ export default function DevSoftClient() {
 			<StructuredData
 				data={services}
 				type="Service"
-				idPage="service-dev-web"
+				idPage="service-dev-soft"
 				serviceInfo={softServiesInfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">

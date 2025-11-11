@@ -150,7 +150,7 @@ export default function DevAppClient() {
 			<StructuredData
 				data={services}
 				type="Service"
-				idPage="service-dev-web"
+				idPage="service-dev-app"
 				serviceInfo={appsservicesinfo}
 			/>
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
