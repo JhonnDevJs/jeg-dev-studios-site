@@ -57,6 +57,7 @@ const StructuredData = ({ data, type, idPage, serviceInfo }) => {
 		schema = {
 			"@context": "https://schema.org",
 			"@type": "Service",
+			"@id": `https://www.jegdevstudios.com${pathname}`, // ID único para el servicio
 
 			// Usamos la info estática de la prop 'serviceInfo'
 			name: serviceInfo.name,
@@ -72,11 +73,14 @@ const StructuredData = ({ data, type, idPage, serviceInfo }) => {
 
 			aggregateRating: {
 				"@type": "AggregateRating",
-				ratingValue: "4.9", // El promedio de calificación (ej. 4.9)
-				reviewCount: "15", // El número total de reseñas (ej. 15)
+				ratingValue: serviceInfo.ratingValue,
+				reviewCount: serviceInfo.reviewCount,
+				itemReviewed: {
+					"@type": "Service",
+					"@id": `https://www.jegdevstudios.com${pathname}`,
+				},
 			},
 
-			// Usamos 'data' (tu array 'products') para crear las ofertas
 			offers: data.map((pkg) => ({
 				"@type": "Offer",
 				name: pkg.name,
@@ -85,7 +89,7 @@ const StructuredData = ({ data, type, idPage, serviceInfo }) => {
 				priceCurrency: pkg.currency,
 				sku: pkg.id,
 				availability: "https://schema.org/InStock",
-				url: `https://www.jegdevstudios.com${pathname}`, // URL de esta página
+				url: `https://www.jegdevstudios.com${pathname}`,
 
 				priceValidUntil: priceValidUntilDate,
 
@@ -97,18 +101,15 @@ const StructuredData = ({ data, type, idPage, serviceInfo }) => {
 
 				shippingDetails: {
 					"@type": "OfferShippingDetails",
-					// 1. A dónde "envías" (tu país principal)
 					shippingDestination: {
 						"@type": "DefinedRegion",
 						addressCountry: "MX",
 					},
-					// 2. Costo del "envío" (es $0)
 					shippingRate: {
 						"@type": "MonetaryAmount",
 						value: 0,
 						currency: "MXN",
 					},
-					// 3. Tiempo de entrega (procesamiento + tránsito)
 					deliveryTime: {
 						"@type": "ShippingDeliveryTime",
 						// Tiempo de "manejo" o procesamiento del pedido
@@ -166,11 +167,6 @@ const buildBreadcrumbs = (pathname) => {
 			name: segment.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
 			item: `https://www.jegdevstudios.com${currentPath}`,
 		};
-
-		// La última miga no debe tener 'item' (enlace)
-		if (index === pathSegments.length - 1) {
-			delete breadcrumb.item;
-		}
 
 		breadcrumbs.push(breadcrumb);
 	});
