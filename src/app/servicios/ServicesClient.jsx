@@ -1,5 +1,4 @@
 "use client";
-import { useState } from "react";
 import CardServices from "@/components/Cards/CardServices";
 import FAQ from "@/components/Seo/FAQ";
 import CTA from "@/components/Cta/CTA";
@@ -32,12 +31,6 @@ const faqs = [
 ];
 
 export default function ServicesClient() {
-	const [openIndex, setOpenIndex] = useState(null);
-
-	const toggle = (index) => {
-		setOpenIndex(openIndex === index ? null : index);
-	};
-
 	return (
 		<>
 			{/* Este componente solo renderiza el schema de FAQ aquí, no en otras páginas */}
