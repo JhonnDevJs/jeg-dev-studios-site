@@ -156,7 +156,7 @@ export default async function RootLayout({ children }) {
 						__html: JSON.stringify({
 							"@context": "https://schema.org",
 							// TIPO MEJORADO: Más específico y consistente con tu LocalBusiness
-							"@type": "ProfessionalService",
+							"@type": "Organization",
 							name: "JEG Dev Studios",
 							url: "https://www.jegdevstudios.com/",
 							logo: "https://www.jegdevstudios.com/icons-SEO/logo.webp",
@@ -216,7 +216,7 @@ export default async function RootLayout({ children }) {
 					dangerouslySetInnerHTML={{
 						__html: JSON.stringify({
 							"@context": "https://schema.org/",
-							"@type": "ProfessionalService",
+							"@type": "Organization",
 							name: "JEG Dev Studios",
 							image:
 								"https://www.jegdevstudios.com/img-SEO/og-background-home.webp",
