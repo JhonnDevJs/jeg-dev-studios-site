@@ -3,171 +3,191 @@
 import Script from "next/script";
 import { usePathname } from "next/navigation";
 
-// 1. ACEPTAMOS UNA NUEVA PROP 'serviceInfo'
 const StructuredData = ({ data, type, idPage, serviceInfo }) => {
-	const pathname = usePathname();
-	let schema = data;
+  const pathname = usePathname();
+  let schema = data;
 
-	if (type === "FAQPage" && Array.isArray(data)) {
-		schema = {
-			"@context": "https://schema.org",
-			"@type": "FAQPage",
-			mainEntity: data.map((faq) => ({
-				"@type": "Question",
-				name: faq.question,
-				acceptedAnswer: {
-					"@type": "Answer",
-					text: faq.answer,
-				},
-			})),
-		};
-	}
+  if (type === "FAQPage" && Array.isArray(data)) {
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      mainEntity: data.map((faq) => ({
+        "@type": "Question",
+        name: faq.question,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.answer,
+        },
+      })),
+    };
+  }
 
-	if (type === "BreadcrumbList" && pathname !== "/") {
-		const breadcrumbs = buildBreadcrumbs(pathname);
-		if (breadcrumbs.length > 0) {
-			schema = {
-				"@context": "https://schema.org",
-				"@type": "BreadcrumbList",
-				itemListElement: breadcrumbs,
-			};
-		}
-	}
+  if (type === "BreadcrumbList" && pathname !== "/") {
+    const breadcrumbs = buildBreadcrumbs(pathname);
+    if (breadcrumbs.length > 0) {
+      schema = {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        itemListElement: breadcrumbs,
+      };
+    }
+  }
 
-	// 2. AÑADIMOS LA NUEVA LÓGICA PARA "Service"
-	if (type === "Service" && Array.isArray(data) && serviceInfo) {
-		// --- 1. CÁLCULO DE LA FECHA DE VENCIMIENTO ---
-		// Creamos una fecha para un año en el futuro
-		const expirationDate = new Date();
-		expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+  // --- INICIO DE LA LÓGICA DE SERVICIO OPTIMIZADA ---
 
-		// La formateamos como YYYY-MM-DD
-		const priceValidUntilDate = expirationDate.toISOString().split("T")[0];
-		// Esto generará algo como "2026-11-10"
-		// ---------------------------------------------
+  // 1. Validación de props más robusta
+  if (type === "Service" && Array.isArray(data) && serviceInfo?.name) {
+    
+    // --- Cálculo de la fecha de vencimiento (Sin cambios) ---
+    const expirationDate = new Date();
+    expirationDate.setFullYear(expirationDate.getFullYear() + 1);
+    const priceValidUntilDate = expirationDate.toISOString().split("T")[0];
+    
+    // 2. 'provider' mejorado con 'Organization', 'logo' y 'sameAs'
+    // Esto conecta tu servicio con la entidad de tu marca (Knowledge Graph)
+    const providerData = {
+      "@type": "Organization", // <-- Mejorado
+      name: "JEG Dev Studios",
+      url: "https://www.jegdevstudios.com/",
+      logo: "https://www.jegdevstudios.com/icons-SEO/logo.webp", // <-- Nuevo
+      sameAs: [ // <-- Nuevo
+        "https://www.facebook.com/JEGDevStudios",
+        "https://instagram.com/jegdevstudios/",
+        "https://www.tiktok.com/@jeg.dev.studios",
+        "https://www.youtube.com/@jegdevstudios",
+        "https://linkedin.com/company/jegdevstudios",
+        "https://x.com/JEGDevStudios",
+        "https://github.com/JEGDevStudios"
+      ],
+    };
 
-		// Definimos al proveedor (tu empresa)
-		const providerData = {
-			"@type": "ProfessionalService",
-			name: "JEG Dev Studios",
-			url: "https://www.jegdevstudios.com/",
-		};
+    // Construimos el schema "Service"
+    schema = {
+      "@context": "https://schema.org",
+      "@type": "Service",
+      "@id": `https://www.jegdevstudios.com${pathname}`, 
 
-		// Construimos el schema "Service"
-		schema = {
-			"@context": "https://schema.org",
-			"@type": "Service",
-			"@id": `https://www.jegdevstudios.com${pathname}`, // ID único para el servicio
+      name: serviceInfo.name,
+      serviceType: serviceInfo.serviceType,
+      description: serviceInfo.description,
+      image: serviceInfo.image,
 
-			// Usamos la info estática de la prop 'serviceInfo'
-			name: serviceInfo.name,
-			serviceType: serviceInfo.serviceType,
-			description: serviceInfo.description,
-			image: serviceInfo.image,
+      provider: providerData, // <-- Usando el 'provider' mejorado
+      areaServed: {
+        "@type": "Country",
+        name: "MX",
+      },
 
-			provider: providerData,
-			areaServed: {
-				"@type": "Country",
-				name: "MX",
-			},
+      // 3. 'serviceOutput' añadido para describir el resultado
+      // Le decimos a Google que el resultado de tu servicio es un producto digital
+      serviceOutput: { // <-- Nuevo
+        "@type": "WebApplication", // Puedes usar "WebSite" si lo prefieres
+        name: serviceInfo.name,
+        url: `https://www.jegdevstudios.com${pathname}`
+      },
 
-			aggregateRating: {
-				"@type": "AggregateRating",
-				ratingValue: serviceInfo.ratingValue,
-				reviewCount: serviceInfo.reviewCount,
-			},
+      aggregateRating: {
+        "@type": "AggregateRating",
+        ratingValue: serviceInfo.ratingValue,
+        reviewCount: serviceInfo.reviewCount,
+        // 'itemReviewed' se omite correctamente aquí
+      },
 
-			offers: data.map((pkg) => ({
-				"@type": "Offer",
-				name: pkg.name,
-				description: `${pkg.description}. Incluye: ${pkg.items.join(", ")}.`,
-				price: pkg.price,
-				priceCurrency: pkg.currency,
-				sku: pkg.id,
-				availability: "https://schema.org/InStock",
-				url: `https://www.jegdevstudios.com${pathname}`,
+      offers: data.map((pkg) => ({
+        "@type": "Offer",
+        // 4. '@id' único añadido a cada oferta
+        "@id": `https://www.jegdevstudios.com${pathname}#${pkg.id}`, // <-- Nuevo
+        name: pkg.name,
+        description: `${pkg.description}. Incluye: ${pkg.items.join(", ")}.`,
+        price: pkg.price,
+        priceCurrency: pkg.currency,
+        sku: pkg.id,
+        availability: "https://schema.org/InStock",
+        url: `https://www.jegdevstudios.com${pathname}`,
+        priceValidUntil: priceValidUntilDate,
+        hasMerchantReturnPolicy: {
+          "@type": "MerchantReturnPolicy",
+          applicableCountry: "MX",
+          returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
+        },
+        shippingDetails: {
+          "@type": "OfferShippingDetails",
+          shippingDestination: {
+            "@type": "DefinedRegion",
+            addressCountry: "MX",
+          },
+          shippingRate: {
+            "@type": "MonetaryAmount",
+            value: 0,
+            currency: "MXN",
+          },
+          deliveryTime: {
+            "@type": "ShippingDeliveryTime",
+            handlingTime: {
+              "@type": "QuantitativeValue",
+              minValue: 0,
+              maxValue: 1,
+              unitCode: "DAY",
+            },
+            transitTime: {
+              "@type": "QuantitativeValue",
+              minValue: 0,
+              maxValue: 0,
+              unitCode: "DAY",
+            },
+          },
+        },
+      })),
+    };
+  }
 
-				priceValidUntil: priceValidUntilDate,
+  // --- FIN DE LA LÓGICA DE SERVICIO OPTIMIZADA ---
 
-				hasMerchantReturnPolicy: {
-					"@type": "MerchantReturnPolicy",
-					applicableCountry: "MX",
-					returnPolicyCategory: "https://schema.org/MerchantReturnNotPermitted",
-				},
+  if (!schema) {
+    return null;
+  }
 
-				shippingDetails: {
-					"@type": "OfferShippingDetails",
-					shippingDestination: {
-						"@type": "DefinedRegion",
-						addressCountry: "MX",
-					},
-					shippingRate: {
-						"@type": "MonetaryAmount",
-						value: 0,
-						currency: "MXN",
-					},
-					deliveryTime: {
-						"@type": "ShippingDeliveryTime",
-						// Tiempo de "manejo" o procesamiento del pedido
-						handlingTime: {
-							"@type": "QuantitativeValue",
-							minValue: 0, // 0 días
-							maxValue: 1, // 1 día (para procesar el pago/alta)
-							unitCode: "DAY",
-						},
-						// Tiempo de "tránsito" (para un servicio digital, es 0)
-						transitTime: {
-							"@type": "QuantitativeValue",
-							minValue: 0,
-							maxValue: 0,
-							unitCode: "DAY",
-						},
-					},
-				},
-			})),
-		};
-	}
-
-	if (!schema) {
-		return null;
-	}
-
-	return (
-		<Script
-			id={`structured-data-${idPage}`}
-			type="application/ld+json"
-			dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-		/>
-	);
+  // 5. 'dangerouslySetInnerHTML' con escapado de caracteres
+  // Esto añade una capa extra de seguridad a tu script
+  return (
+    <Script
+      id={`structured-data-${idPage}`}
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{
+        __html: JSON.stringify(schema)
+          .replace(/</g, "\\u003c")
+          .replace(/>/g, "\\u003e")
+      }}
+    />
+  );
 };
 
 // --- (Tu función buildBreadcrumbs se mantiene igual) ---
 const buildBreadcrumbs = (pathname) => {
-	const pathSegments = pathname.split("/").filter((segment) => segment);
-	const breadcrumbs = [
-		{
-			"@type": "ListItem",
-			position: 1,
-			name: "Inicio",
-			item: "https://www.jegdevstudios.com/",
-		},
-	];
+  const pathSegments = pathname.split("/").filter((segment) => segment);
+  const breadcrumbs = [
+    {
+      "@type": "ListItem",
+      position: 1,
+      name: "Inicio",
+      item: "https://www.jegdevstudios.com/",
+    },
+  ];
 
-	let currentPath = "";
-	pathSegments.forEach((segment, index) => {
-		currentPath += `/${segment}`;
-		const breadcrumb = {
-			"@type": "ListItem",
-			position: index + 2,
-			// Lógica de capitalización mejorada
-			name: segment.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
-			item: `https://www.jegdevstudios.com${currentPath}`,
-		};
+  let currentPath = "";
+  pathSegments.forEach((segment, index) => {
+    currentPath += `/${segment}`;
+    const breadcrumb = {
+      "@type": "ListItem",
+      position: index + 2,
+      name: segment.replace(/-/g, " ").replace(/\b\w/g, (l) => l.toUpperCase()),
+      item: `https://www.jegdevstudios.com${currentPath}`,
+    };
 
-		breadcrumbs.push(breadcrumb);
-	});
+    breadcrumbs.push(breadcrumb);
+  });
 
-	return breadcrumbs;
+  return breadcrumbs;
 };
 
 export default StructuredData;
