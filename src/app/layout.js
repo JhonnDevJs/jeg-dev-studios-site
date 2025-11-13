@@ -146,7 +146,6 @@ export default async function RootLayout({ children }) {
 					type="image/webp"
 				/>
 			)}
-
 			<meta
 				name="google-adsense-account"
 				content="ca-pub-8211604143881682"
@@ -164,7 +163,6 @@ export default async function RootLayout({ children }) {
 				</main>
 				<Footer />
 				<BootstrapClient />
-				<GoogleAnalytics gaId="G-XR060PKRRT" />
 				{/* Structured Data Scripts */}
 				<Script
 					id="structured-data-website"
@@ -240,6 +238,7 @@ export default async function RootLayout({ children }) {
 						}),
 					}}
 				/>
+				<GoogleAnalytics gaId="G-XR060PKRRT" />
 			</body>
 		</html>
 	);
