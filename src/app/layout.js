@@ -167,53 +167,6 @@ export default async function RootLayout({ children }) {
 				<GoogleAnalytics gaId="G-XR060PKRRT" />
 				{/* Structured Data Scripts */}
 				<Script
-					id="structured-data-organization"
-					type="application/ld+json"
-					strategy="afterInteractive"
-					dangerouslySetInnerHTML={{
-						__html: JSON.stringify({
-							"@context": "https://schema.org",
-							// TIPO MEJORADO: Más específico y consistente con tu LocalBusiness
-							"@type": "Organization",
-							name: "JEG Dev Studios",
-							url: "https://www.jegdevstudios.com/",
-							logo: "https://www.jegdevstudios.com/icons-SEO/logo.webp",
-							image:
-								"https://www.jegdevstudios.com/img-SEO/og-background-home.webp",
-							email: "jegdevstudios@outlook.com",
-							// FORMATO CORREGIDO: E.164 estándar para consistencia
-							telephone: "+525512197135",
-							address: {
-								"@type": "PostalAddress",
-								// "streetAddress": "Tu Calle y Número", // <-- Sigue siendo recomendado añadirlo
-								// "postalCode": "Tu Código Postal",   // <-- Sigue siendo recomendado añadirlo
-								addressLocality: "Álvaro Obregón",
-								addressRegion: "CDMX",
-								addressCountry: "MX",
-							},
-							priceRange: "$$$",
-							contactPoint: {
-								"@type": "ContactPoint",
-								// FORMATO CORREGIDO: E.164 estándar para consistencia
-								telephone: "+525512197135",
-								contactType: "Customer Service",
-								areaServed: "MX", // <-- AÑADIDO: Especifica que sirves a México
-								availableLanguage: "es-MX", // <-- AÑADIDO: Especifica el idioma
-							},
-							sameAs: [
-								// <-- URLs CORREGIDAS
-								"https://www.facebook.com/JEGDevStudios",
-								"https://instagram.com/jegdevstudios/",
-								"https://www.tiktok.com/@jeg.dev.studios",
-								"https://x.com/JEGDevStudios", // <-- Corregido (basado en datos previos)
-								"https://linkedin.com/company/jegdevstudios", // <-- Corregido a la URL de empresa
-								"https://www.youtube.com/@jegdevstudios",
-								"https://github.com/JEGDevStudios",
-							],
-						}),
-					}}
-				/>
-				<Script
 					id="structured-data-website"
 					type="application/ld+json"
 					strategy="afterInteractive"
