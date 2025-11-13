@@ -142,7 +142,7 @@ export default function DevWebClient() {
 				id: "mini-sitio",
 				type: "product",
 				name: "Mini Sitio",
-				price: 3500,
+				price: 3599,
 				currency: "MXN",
 				labelBtn: "Contratar ahora",
 				isPriceFixed: true,
