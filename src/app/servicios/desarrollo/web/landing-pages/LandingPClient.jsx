@@ -7,35 +7,6 @@ import FAQ from "@/components/Seo/FAQ"; // Ajusta esta ruta
 // Importa la imagen de tu producto
 // import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 
-// --- 1. METADATOS DE LA PÁGINA ---
-export const metadata = {
-	title: "Desarrollo de Landing Pages de Alta Conversión | JEG Dev Studios",
-	description:
-		"Servicio de desarrollo de landing pages (páginas de aterrizaje) enfocadas en una alta tasa de conversión. Optimizamos tu página para captar clientes potenciales.",
-	keywords:
-		"desarrollo de landing pages, diseño de landing page de alta conversión, creación de páginas de aterrizaje, optimizar landing page, landing page para campañas de marketing, landing page exitosa",
-	alternates: {
-		canonical:
-			"https://www.jegdevstudios.com/servicios/desarrollo/web/landing-pages",
-	},
-	openGraph: {
-		title: "JEG Dev Studios | Desarrollo de Landing Pages Exitosas",
-		description:
-			"Servicio de desarrollo de páginas de aterrizaje (landing pages) 100% enfocadas en mejorar tu tasa de conversión y captar clientes potenciales.",
-		url: "https://www.jegdevstudios.com/servicios/desarrollo/web/landing-pages",
-		images: [
-			{
-				url: "/img-SEO/og-background-serv-landing.webp",
-				width: 1200,
-				height: 630,
-				alt: "Servicio de Desarrollo de Landing Pages de Alta Conversión",
-			},
-		],
-		locale: "es_MX",
-		type: "website",
-	},
-};
-
 // --- 2. DATOS PARA LOS COMPONENTES DE SCHEMA ---
 
 const faqs = [
