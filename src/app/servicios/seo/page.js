@@ -1,13 +1,19 @@
 export const metadata = {
-	title: "Posicionamiento SEO Web y GEO en México | JEG Dev Studios",
+	// TÍTULO MEJORADO: Incluye las 2 keywords que pide SEMrush
+	title: "Agencia de SEO en México | Servicios de Posicionamiento SEO",
+
 	description:
-		"Somos una agencia de SEO en México. Ofrecemos servicios de SEO Web, Local y GEO (Optimización IA) para atraer más clientes a tu negocio. ¡Solicita tu auditoría!",
+		"Somos una agencia de SEO en México. Ofrecemos servicios de SEO Web, Local y GEO (Optimización IA) para atraer clientes potenciales y tráfico orgánico. ¡Solicita tu auditoría!",
+
+	// KEYWORDS MEJORADAS: Enriquecidas con los nuevos términos
 	keywords:
-		"Servicios de posicionamiento SEO, Agencia de posicionamiento SEO en México",
+		"agencia de seo en mexico, servicios de posicionamiento seo, agencia de posicionamiento seo en mexico, consultoría seo, SEO Web, SEO Local, GEO, tráfico orgánico, marketing digital",
+
 	openGraph: {
-		title: "JEG Dev Studios | Agencia de SEO en México: Estrategias Web, Local y GEO",
+		// OG MEJORADO
+		title: "JEG Dev Studios | Tu Agencia de SEO en México",
 		description:
-			"Aumentamos tu visibilidad en Google y en las nuevas respuestas de IA. Conoce nuestros servicios de posicionamiento SEO y GEO.",
+			"Ofrecemos servicios de posicionamiento SEO en México: SEO Web, Local y GEO para generar tráfico orgánico y clientes potenciales.",
 		url: "https://www.jegdevstudios.com/servicios/seo",
 		siteName: "JEG Dev Studios",
 		images: [
@@ -15,7 +21,7 @@ export const metadata = {
 				url: "/img-SEO/og-background-serv-seo.webp",
 				width: 1200,
 				height: 630,
-				alt: "Servicios de JEG Dev Studios",
+				alt: "Agencia de SEO en México - JEG Dev Studios", // Alt más descriptivo
 			},
 		],
 		locale: "es_MX",

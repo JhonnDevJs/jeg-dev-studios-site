@@ -122,19 +122,23 @@ export default function SeoClient() {
 				</h1>
 				<p className="lead text-white text-center">
 					En JEG Dev Studios, no solo te conseguimos clics; te conseguimos
-					clientes. Como agencia de SEO en México líder en estrategia digital,
-					entendemos que ser invisible en Google es como no existir. Dejamos
-					atrás las métricas de vanidad para enfocarnos en lo único que importa:
-					un servicio de SEO que se traduce en más tráfico cualificado, más
-					prospectos y un retorno de inversión (ROI) medible.
+					clientes. Como <strong>agencia de SEO en México</strong> líder en
+					estrategia digital, entendemos que ser invisible en Google es como no
+					existir. Ofrecemos un
+					<strong>servicio de SEO</strong> que se traduce en más{" "}
+					<strong>tráfico orgánico</strong>, más
+					<strong>clientes potenciales</strong> y un retorno de inversión (ROI)
+					medible.
 				</p>
 				<h2>Más Allá del SEO Tradicional: Introducimos GEO</h2>
 				<p className="lead w-100 px-3 px-md-5">
-					El posicionamiento web ha cambiado. Ya no solo compites por un lugar
-					en una lista de diez enlaces; ahora compites por ser la respuesta que
-					ofrece la Inteligencia Artificial (como en las AI Overviews de
-					Google). Nuestra agencia de posicionamiento SEO en México domina todo
-					el espectro de la visibilidad:
+					El posicionamiento web ha cambiado. Ya no solo compites por los
+					primeros
+					<strong>resultados de búsqueda</strong>; ahora compites por ser la
+					respuesta de la IA. Nuestra{" "}
+					<strong>agencia de posicionamiento SEO en México</strong> domina todo
+					el espectro del <strong>marketing digital</strong> para los{" "}
+					<strong>motores de búsqueda</strong>:
 				</p>
 
 				<ul className="fs-5 text-start mx-auto" style={{ maxWidth: "600px" }}>
@@ -164,9 +168,11 @@ export default function SeoClient() {
 					Nuestros Servicios de Posicionamiento SEO
 				</h2>
 				<p className="lead text-white text-center">
-					Ofrecemos una consultoría SEO completa, dividida en tres áreas
-					estratégicas. Elige el plan de acción que tu negocio necesita para
-					dominar las búsquedas.
+					La consultoría SEO es uno de los principales{" "}
+					<strong>servicios</strong> que <strong>ofrece</strong> nuestra
+					agencia. Está dividida en tres áreas estratégicas para dominar los{" "}
+					<strong>resultados de búsqueda</strong>. Elige el plan de acción que
+					tu negocio necesita.
 				</p>
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
@@ -188,10 +194,11 @@ export default function SeoClient() {
 					Nuestra Metodología SEO: Datos, Estrategia y Transparencia
 				</h2>
 				<p className="fs-4 text-center text-white p-0">
-					En nuestra agencia de SEO en México, no creemos en la magia ni en las
-					promesas vacías. El SEO es una ciencia que requiere un proceso
-					disciplinado. Nuestro método se basa en un ciclo probado de 4 fases
-					para garantizar resultados sostenibles.
+					En nuestra <strong>agencia de SEO en México</strong>, no creemos en la
+					magia. El SEO es una ciencia que combina un{" "}
+					<strong>diseño web</strong> técnico con{" "}
+					<strong>marketing digital</strong> y un proceso disciplinado de 4
+					fases para garantizar resultados sostenibles.
 				</p>
 				<CardNestedLists
 					titulo="Auditoría y Diagnóstico Profundo"
@@ -258,7 +265,7 @@ export default function SeoClient() {
 						{
 							text: "Creación de Contenido:",
 							sublist: [
-								"Desarrollamos artículos de blog (TOFU), guías (MOFU) y páginas de servicio (BOFU) que responden a la intención de búsqueda de tus usuarios.",
+								"Desarrollamos artículos de blog (TOFU), guías (MOFU) y páginas de servicio (BOFU). Es una estrategia completa de <strong>contenidos y optimización</strong> que responde a la intención de búsqueda.",
 							],
 						},
 						{
