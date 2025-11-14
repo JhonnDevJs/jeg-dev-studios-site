@@ -46,7 +46,7 @@ export default function DevWebClient() {
 			{
 				id: "mini-sitio",
 				type: "product",
-				name: 'MINI SITIO (El "Pyme Killer")',
+				name: 'MINI SITIO',
 				price: 3599,
 				currency: "MXN",
 				labelBtn: "Contratar ahora",
@@ -65,7 +65,7 @@ export default function DevWebClient() {
 			{
 				id: "paquete_sitio_ignite",
 				type: "pack",
-				name: 'SITIO IGNITE (El "Prime Killer")',
+				name: 'SITIO IGNITE',
 				price: 17999,
 				isPriceFixed: false,
 				currency: "MXN",
@@ -89,7 +89,7 @@ export default function DevWebClient() {
 			{
 				id: "paquete_sitio_accelerate",
 				type: "pack",
-				name: 'SITIO ACCELERATE (El "Elite Killer")',
+				name: 'SITIO ACCELERATE',
 				price: 29999,
 				isPriceFixed: false,
 				labelBtn: "Cotizar Proyecto Accelerate",
@@ -113,7 +113,7 @@ export default function DevWebClient() {
 			{
 				id: "paquete_sitio_ultimate",
 				type: "pack",
-				name: 'SITIO ULTIMATE (El "Paquete Insignia")',
+				name: 'SITIO ULTIMATE',
 				price: 49999,
 				isPriceFixed: false,
 				labelBtn: "Cotizar Proyecto Ultimate",
