@@ -337,7 +337,18 @@ export default function DevSoftClient() {
 					creamos
 				</p>
 			</section>
-			<CTAProducts />
+			<CTAProducts 
+
+				title={'¿Ninguno de estos paquetes se ajusta a lo que necesitas?'}
+				paragraph={'No te preocupes, en JEG Dev Studios desarrollamos soluciones 100% personalizadas. Cuéntanos tu idea y te ayudaremos a crear un proyecto a tu medida, con todo lo que realmente necesitas y nada que no.'}
+				links={[
+					{
+						label: "Solicita una cotización personalizada",
+						link: "/contacto",
+						type: "services", // Puedes usar 'services' o 'outline'
+					},
+				]}
+			/>
 			<FAQ
 				faqs={faqs}
 				subtitle="Preguntas Frecuentes sobre nuestro Servicio de Desarrollo de Software"

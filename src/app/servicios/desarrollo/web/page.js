@@ -1,28 +1,37 @@
 export const metadata = {
-	title: "Desarrollo de Páginas Web en México | JEG Dev Studio",
-	description:
-		"Servicios de desarrollo de páginas web en Next.js. Olvida WordPress. Somos la agencia de sitios web que ofrece paquetes con performance +90 garantizado.",
-	keywords:
-		"contratar desarrollo web, crear sitio web profesional, diseño de páginas web, creación de landing pages, creación de tiendas en línea, desarrollo web en México, soluciones digitales personalizadas, sitio web empresarial, servicios de desarrollo web, JEG Dev Studios",
-	alternates: {
-		canonical: "https://www.jegdevstudios.com/servicios/desarrollo/web",
-	},
-	openGraph: {
-		title: "Servicios de Desarrollo de Sitios Web | JEG Dev Studios",
-		description: "Descubre nuestros servicios de desarrollo web",
-		url: "https://www.jegdevstudios.com/servicios/desarrollo/web",
-		siteName: "JEG Dev Studios",
-		images: [
-			{
-				url: "/img-SEO/og-background-serv-dev-web.webp",
-				width: 1200,
-				height: 630,
-				alt: "Servicios JEG Dev Studios",
-			},
-		],
-		locale: "es_MX",
-		type: "website",
-	},
+  // TÍTULO MEJORADO: Fuerte, claro y con la keyword principal
+  title: "Desarrollo de Páginas Web Profesionales en México | Paquetes",
+  
+  // DESCRIPCIÓN MEJORADA: Resuelve la intención de búsqueda (paquetes)
+  description:
+    "Servicios de desarrollo de páginas web a medida. Conoce nuestros paquetes de sitios web profesionales (Ignite, Accelerate) y soluciones de arranque (Mini Sitio).",
+  
+  // KEYWORDS MEJORADAS: Enfocadas 100% en esta página
+  keywords:
+    "desarrollo de páginas web, paquetes de desarrollo web, desarrollo web profesional, agencias de sitios web, crear sitio web profesional, sitio web empresarial, servicios de desarrollo web",
+  
+  alternates: {
+    canonical: "https://www.jegdevstudios.com/servicios/desarrollo/web",
+  },
+  
+  openGraph: {
+    // OG MEJORADO
+    title: "Desarrollo de Páginas Web Profesionales | JEG Dev Studios",
+    description: "Ofrecemos paquetes de desarrollo web a medida, desde Mini Sitios hasta soluciones 'Ultimate' en Next.js con performance garantizado.",
+    url: "https://www.jegdevstudios.com/servicios/desarrollo/web",
+    siteName: "JEG Dev Studios",
+    images: [
+      {
+        url: "/img-SEO/og-background-serv-dev-web.webp",
+        width: 1200,
+        height: 630,
+        alt: "Paquetes de Desarrollo de Páginas Web en México",
+      },
+    ],
+    locale: "es_MX",
+    type: "website",
+  },
+  // Tu 'twitter' y el resto de 'metadata' están bien
 };
 
 import DevWebClient from "./DevWebClient";

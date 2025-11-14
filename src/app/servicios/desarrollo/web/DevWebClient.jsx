@@ -24,101 +24,6 @@ export default function DevWebClient() {
 	const products = useMemo(
 		() => [
 			{
-				id: "paquete_1_basico",
-				type: "pack",
-				name: "Paquete 1: Básico",
-				price: 5799,
-				labelBtn: "Cotizar paquete",
-				currency: "MXN",
-				description:
-					"La solución perfecta para startups y pequeños negocios que buscan una presencia online profesional y funcional sin una gran inversión inicial.",
-				imageSrc: imgWebProduct1.src,
-				items: [
-					"1 año de Hosting y dominio (con hostinger)",
-					"Certificado SSL",
-					"Email corporativo",
-					"Diseño responsivo (optimizado para móviles)",
-					"Cambios en el diseño: 2 a nivel de sección",
-					"4 Secciones dentro del layout/landing page",
-					"Integración de botón de WhatsApp",
-					"Implementación básica de SEO",
-					"Stack tecnológico: Frontend: HTML, CSS, JAVASCRIPT Backend: Node js",
-					"Tiempo de entrega: 7 a 10 días hábiles",
-				],
-			},
-			{
-				id: "paquete_2_sitio_ignite",
-				type: "pack",
-				name: "Paquete 2: SITIO IGNITE",
-				price: 17999,
-				isPriceFixed: false,
-				currency: "MXN",
-				labelBtn: "Cotizar Proyecto Ignite",
-				description:
-					"Para PyMEs que necesitan un sitio corporativo profesional y ultra-rápido.",
-				imageSrc: imgWebProduct1.src,
-				items: [
-					"Desarrollo en Next.js (React)",
-					"Performance +90 Garantizado (Core Web Vitals)",
-					"De 1 a 5 Secciones (Páginas Reales)",
-					"Diseño UI/UX Personalizado (Figma)",
-					"CMS Autoadministrable (Headless)",
-					"Hosting + Dominio (1 Año GRATIS)",
-					"Certificado SSL",
-					"Formulario de Contacto + Botón de WhatsApp",
-					"SEO Técnico Básico",
-					"3 Rondas de Revisión",
-					"Tiempo de entrega: 3 Semanas",
-				],
-			},
-			{
-				id: "paquete_3_sitio_accelerate",
-				type: "pack",
-				name: "Paquete 3: SITIO ACCELERATE",
-				price: 29999,
-				isPriceFixed: false,
-				labelBtn: "Cotizar Proyecto Accelerate",
-				currency: "MXN",
-				description:
-					"Para Negocios en crecimiento que necesitan SEO y más funciones",
-				imageSrc: imgWebProduct2.src,
-				items: [
-					'Todo en "Ignite" MÁS:',
-					"De 6 a 10 Secciones (Páginas Reales)",
-					"Estrategia y SEO On-Page (Avanzado)",
-					"Blog Autoadministrable",
-					"Formularios Avanzados (con integraciones)",
-					"Configuración de Correos Corporativos (Hasta 10)",
-					"Mantenimiento y Soporte (6 Meses GRATIS)",
-					"Manual de Uso y Capacitación",
-					"4 Rondas de Revisión",
-					"Tiempo de entrega: 4-5 Semanas",
-				],
-			},
-			{
-				id: "paquete_4_sitio_ultimate",
-				type: "pack",
-				name: "Paquete 4: SITIO ULTIMATE",
-				price: 49999,
-				isPriceFixed: false,
-				labelBtn: "Cotizar Proyecto Ultimate",
-				currency: "MXN",
-				description:
-					'Para quién: Empresas establecidas que necesitan una "máquina" de crecimiento.',
-				imageSrc: imgWebProduct3.src,
-				items: [
-					'Todo en "Accelerate" MÁS:',
-					"De 11 a 15 Secciones (Páginas Reales)",
-					"Automatizaciones (CRM, Email Marketing)",
-					"Mantenimiento y Soporte (1 Año GRATIS)",
-					"Servicio de Seguridad 365",
-					"Configuración de Correos Corporativos (Hasta 20)",
-					"Imágenes y Videos de Stock Premium",
-					"5 Rondas de Revisión",
-					"Tiempo de entrega: 5-6 Semanas",
-				],
-			},
-			{
 				id: "landing-page-profesional",
 				type: "product",
 				name: "Landing Page Profesional",
@@ -141,22 +46,91 @@ export default function DevWebClient() {
 			{
 				id: "mini-sitio",
 				type: "product",
-				name: "Mini Sitio",
+				name: 'MINI SITIO (El "Pyme Killer")',
 				price: 3599,
 				currency: "MXN",
 				labelBtn: "Contratar ahora",
 				isPriceFixed: true,
 				description:
-					"Expande tu presencia digital con un sitio multipágina sencillo pero profesional. Perfecto para mostrar diferentes servicios o áreas de tu negocio.",
+					"Para emprendedores y negocios que necesitan arrancar ya con una presencia profesional.",
 				imageSrc: imgWebProduct1.src,
 				items: [
-					"Dominio personalizado incluido (1 año)",
-					"Hosting gratuito mediante Google Sites",
-					"Diseño responsivo",
-					"Posicionamiento inicial en Google (SEO básico)",
-					"Diseño adaptado a la marca del cliente",
-					"Hasta 5 paginas (landings)",
-					"5 secciones por página (landing)",
+					"5 Páginas (en Google Sites)",
+					"Dominio Personalizado (1 Año Gratis)",
+					"Hosting Gratuito (en Google Sites)",
+					"Diseño Responsivo y adaptado a la marca",
+					"SEO Básico (Posicionamiento inicial)",
+				],
+			},
+			{
+				id: "paquete_sitio_ignite",
+				type: "pack",
+				name: 'SITIO IGNITE (El "Prime Killer")',
+				price: 17999,
+				isPriceFixed: false,
+				currency: "MXN",
+				labelBtn: "Cotizar Proyecto Ignite",
+				description:
+					"Para PyMEs que necesitan un sitio corporativo profesional y ultra-rápido.",
+				imageSrc: imgWebProduct1.src,
+				items: [
+					"Desarrollo en Next.js (React) 🚀",
+					"Performance +90 Garantizado (Core Web Vitals)",
+					"De 1 a 5 Secciones (Páginas Reales)",
+					"Diseño UI/UX Personalizado (Figma)",
+					"CMS Autoadministrable (Headless)",
+					"Hosting + Dominio (1 Año GRATIS)",
+					"Certificado SSL y Formulario de Contacto",
+					"SEO Técnico Básico",
+					"3 Rondas de Revisión",
+					"Tiempo de entrega: 3 Semanas",
+				],
+			},
+			{
+				id: "paquete_sitio_accelerate",
+				type: "pack",
+				name: 'SITIO ACCELERATE (El "Elite Killer")',
+				price: 29999,
+				isPriceFixed: false,
+				labelBtn: "Cotizar Proyecto Accelerate",
+				currency: "MXN",
+				description:
+					"Para Negocios en crecimiento que necesitan SEO y más funciones.",
+				imageSrc: imgWebProduct2.src,
+				items: [
+					'Todo en "Ignite" MÁS:',
+					"De 6 a 10 Secciones (Páginas Reales)",
+					"Estrategia y SEO On-Page (Avanzado)",
+					"Blog Autoadministrable",
+					"Formularios Avanzados (con integraciones)",
+					"Configuración de Correos Corporativos (Hasta 10)",
+					"Mantenimiento y Soporte (6 Meses GRATIS)",
+					"Manual de Uso y Capacitación",
+					"4 Rondas de Revisión",
+					"Tiempo de entrega: 4-5 Semanas",
+				],
+			},
+			{
+				id: "paquete_sitio_ultimate",
+				type: "pack",
+				name: 'SITIO ULTIMATE (El "Paquete Insignia")',
+				price: 49999,
+				isPriceFixed: false,
+				labelBtn: "Cotizar Proyecto Ultimate",
+				currency: "MXN",
+				description:
+					'Para empresas establecidas que necesitan una "máquina" de crecimiento.',
+				imageSrc: imgWebProduct3.src,
+				items: [
+					'Todo en "Accelerate" MÁS:',
+					"De 11 a 15 Secciones (Páginas Reales)",
+					"Automatizaciones (CRM, Email Marketing)",
+					"Mantenimiento y Soporte (1 Año GRATIS)",
+					"Servicio de Seguridad 365",
+					"Configuración de Correos Corporativos (Hasta 20)",
+					"Imágenes y Videos de Stock Premium",
+					"5 Rondas de Revisión",
+					"Tiempo de entrega: 5-6 Semanas",
 				],
 			},
 		],
@@ -233,21 +207,22 @@ export default function DevWebClient() {
 					Desarrollo de Páginas Web Profesionales en Next.js
 				</h1>
 				<p className="lead w-100 px-3 px-md-5">
-					En JEG Dev Studios, redefinimos el desarrollo de páginas web. No somos
-					otra de las agencias de sitios web que te cobra $20,000 por una
-					plantilla de WordPress lenta. Nosotros ofrecemos desarrollo web
-					profesional sobre Next.js (React): la tecnología que garantiza un
-					performance de +90 y una velocidad superior. Compara nuestros paquetes
-					y descubre por qué una base tecnológica sólida es tu mejor ventaja
-					competitiva.
+					En JEG Dev Studios, redefinimos el{" "}
+					<strong>desarrollo web profesional</strong>. No somos otra de las{" "}
+					<strong>agencias de sitios web</strong> que te cobra $20,000 por una
+					plantilla de WordPress lenta. Nosotros ofrecemos{" "}
+					<strong>creación de sitios web</strong> sobre Next.js (React): la
+					tecnología que garantiza un performance de +90 y una velocidad
+					superior. Compara nuestros paquetes y descubre por qué una base
+					tecnológica sólida es tu mejor ventaja competitiva.
 				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<h2 className="text-center text-white">
-					Paquetes y Soluciones Web a tu Medida
+					Paquetes de Desarrollo Web a tu Medida
 				</h2>
 				<p className="lead w-100 px-3 px-md-5">
-					Desde un sitio robusto con tecnología de punta hasta una landing page
+					Desde un sitio robusto con tecnología de punta hasta un "Mini Sitio"
 					profesional para arrancar. Desliza para explorar la solución perfecta
 					para tu negocio.
 				</p>
@@ -308,13 +283,75 @@ export default function DevWebClient() {
 					))}
 				</Swiper>
 			</section>
-			<SectionProcess
-				title={"Nuestro Proceso de Desarrollo de Páginas Web"}
-				text={
-					"En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum, que nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes a nuestros clientes. Nuestro objetivo es que formes parte activa del desarrollo de tu página web, asegurando que el resultado final supere tus expectativas."
-				}
-			/>
+			<section className="text-white py-5 gradient-effect-x">
+				<div className="container text-center" style={{ maxWidth: "900px" }}>
+					<h2 className="display-5 fw-bold mb-4">
+						Más Allá del Paquete: Un Servicio Web Integral
+					</h2>
+					<p className="lead mb-5 mx-auto">
+						Nuestro servicio de <strong>diseño y desarrollo web</strong> no
+						termina con la entrega. Construimos una plataforma integral
+						preparada para crecer y competir.
+					</p>
+					<div className="row text-start justify-content-center">
+						<div className="col-md-6 mb-4">
+							<h3 className="h5 fw-bold">
+								Diseño Web y Experiencia de Usuario
+							</h3>
+							<p>
+								No solo creamos código, creamos experiencias. Cada proyecto
+								incluye un <strong>diseño web</strong> enfocado en la{" "}
+								<strong>experiencia de usuario</strong> (UX), asegurando que tu
+								sitio sea intuitivo y accesible en todos los{" "}
+								<strong>dispositivos móviles</strong>.
+							</p>
+						</div>
+
+						<div className="col-md-6 mb-4">
+							<h3 className="h5 fw-bold">Optimización SEO y Estrategia</h3>
+							<p>
+								Un sitio web debe ser encontrado. Integramos{" "}
+								<strong>optimización SEO</strong> técnica desde la base,
+								preparando tu sitio para los{" "}
+								<strong>motores de búsqueda</strong>. Además, conectamos tu web
+								con tus <strong>estrategias de marketing</strong> digital.
+							</p>
+						</div>
+
+						<div className="col-md-6 mb-4">
+							<h3 className="h5 fw-bold">Tecnología Robusta y Escalable</h3>
+							<p>
+								Nuestros <strong>paquetes de diseño</strong> "Ignite" y
+								superiores utilizan una arquitectura moderna que puede escalar a
+								una <strong>aplicación web</strong> completa, integrarse con una{" "}
+								<strong>base de datos</strong> o conectar con{" "}
+								<strong>inteligencia artificial</strong> para funciones
+								avanzadas.
+							</p>
+						</div>
+
+						<div className="col-md-6 mb-4">
+							<h3 className="h5 fw-bold">Servicios Integrados</h3>
+							<p>
+								Ofrecemos una solución de <strong>alta calidad</strong>.
+								Gestionamos tus
+								<strong>correos electrónicos</strong> corporativos,
+								implementamos <strong>accesibilidad web</strong> (WCAG) y te
+								capacitamos para usar tu nuevo CMS.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<SectionProcess
+					title={"Nuestro Proceso de Desarrollo de Páginas Web"}
+					text={
+						"En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum, que nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes a nuestros clientes. Nuestro objetivo es que formes parte activa del desarrollo de tu página web, asegurando que el resultado final supere tus expectativas."
+					}
+				/>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Descubrimiento y Planificación Inicial"
 					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
@@ -327,7 +364,7 @@ export default function DevWebClient() {
 					lastText="Tecnologías: Según el paquete, usamos stacks modernos como Figma, HTML, JavaScript, Tailwind, Next.js, Bootstrap, Node.js, PHP (Laravel) o Java."
 				/>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="Ciclos de Desarrollo Iterativos (Sprints)"
 					subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
@@ -357,7 +394,7 @@ export default function DevWebClient() {
 					]}
 				/>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Revisión Final y Entrega del Proyecto"
 					subtitulo="Una vez terminado el número de Sprints necesarios (dependiendo del paquete elegido), realizamos lo siguiente:"
@@ -369,44 +406,19 @@ export default function DevWebClient() {
 					]}
 				/>
 			</section>
-			<section className="container-fluid text-center text-white py-5 gradient-effect-x">
-				<div className="row justify-content-center g-4">
-					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-						<CardsProcess
-							number="1"
-							titulo="Paquete Básico"
-							list={[
-								"Duración estimada: 7 - 10 días hábiles",
-								"Tecnologías: Figma, HTML, CSS, JS, Node.js",
-								"Entregas por Sprint: 1-2 entregas",
-							]}
-						/>
-					</div>
-					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-						<CardsProcess
-							number="2"
-							titulo="Paquete Plus"
-							list={[
-								"Duración estimada: 10 - 15 días hábiles",
-								"Tecnologías: Figma, HTML, Bootstrap, JS, Php (Laravel)",
-								"Entregas por Sprint: 1-2 entregas",
-							]}
-						/>
-					</div>
-					<div className="col-12 col-md-6 col-lg-4 d-flex justify-content-center">
-						<CardsProcess
-							number="3"
-							titulo="Paquete Pro"
-							list={[
-								"Duración estimada: 15 - 30 días hábiles",
-								"Tecnologías: Figma, Next.js, Tailwind CSS, Php (Laravel) o Node.js",
-								"Entregas por Sprint: 3-5 entregas",
-							]}
-						/>
-					</div>
-				</div>
-			</section>
-			<CTAProducts />
+			<CTAProducts
+				title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
+				paragraph={
+					"No te preocupes, en JEG Dev Studios desarrollamos soluciones 100% personalizadas. Cuéntanos tu idea y te ayudaremos a crear un proyecto a tu medida, con todo lo que realmente necesitas y nada que no."
+				}
+				links={[
+					{
+						label: "Solicita una cotización personalizada",
+						link: "/contacto",
+						type: "services", // Puedes usar 'services' o 'outline'
+					},
+				]}
+			/>
 			<FAQ
 				faqs={faqs}
 				subtitle="Resuelve tus dudas sobre nuestros paquetes de desarrollo web."
