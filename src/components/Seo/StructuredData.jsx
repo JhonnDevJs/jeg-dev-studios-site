@@ -36,7 +36,7 @@ const StructuredData = ({ data, type, idPage, serviceInfo }) => {
   // --- INICIO DE LA LÓGICA DE SERVICIO OPTIMIZADA ---
 
   // 1. Validación de props más robusta
-  if (type === "Service" && Array.isArray(data) && serviceInfo?.name) {
+  if (type === "Product" && Array.isArray(data) && serviceInfo?.name) {
     
     // --- Cálculo de la fecha de vencimiento (Sin cambios) ---
     const expirationDate = new Date();
@@ -61,10 +61,10 @@ const StructuredData = ({ data, type, idPage, serviceInfo }) => {
       ],
     };
 
-    // Construimos el schema "Service"
+    // Construimos el schema "Product"
     schema = {
       "@context": "https://schema.org",
-      "@type": "Service",
+      "@type": "Product",
       "@id": `https://www.jegdevstudios.com${pathname}`, 
 
       name: serviceInfo.name,
