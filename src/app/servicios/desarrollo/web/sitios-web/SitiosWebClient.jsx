@@ -177,7 +177,7 @@ export default function DevWebClient() {
 
 			{/* Sección de Cross-link (Triaje) */}
 			<section className="text-white py-5 gradient-effect-y">
-				<div className="container text-center" style={{ maxWidth: "800px" }}>
+				<div className="container text-center" style={{ maxWidth: "1200px" }}>
 					<h2>¿Buscas una Tienda Online o una Aplicación Web?</h2>
 					<p className="fs-5">
 						Este servicio es ideal para sitios corporativos, portafolios y
