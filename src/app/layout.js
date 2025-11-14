@@ -28,11 +28,13 @@ const servicePageBackgrounds = {
 
 export const metadata = {
 	metadataBase: new URL("https://www.jegdevstudios.com"),
-	title: "Agencia de Desarrollo Web y Software en México | JEG Dev Studios",
-	description:
-		"Somos una agencia en México que ofrece servicios de desarrollo web profesional, software y apps a medida con Sprints ágiles, SEO y diseño a medida. ¡Cotiza ya!",
+	title: "Agencia de Desarrollo de Software y UX UI en México | JEG Dev Studios",
+  
+  // DESCRIPCIÓN MEJORADA: Incluye ambas keywords y es clara.
+  description:
+    'Somos una agencia de desarrollo de software y diseño "agencia ux ui méxico". Transformamos tus ideas en software, apps y sitios web de alto rendimiento. ¡Cotiza tu proyecto!',
 	keywords:
-		"agencia desarrollo web méxico, desarrollo web profesional, desarrollo de software a medida, aplicaciones móviles para empresas, soluciones digitales personalizadas",
+    'agencia de desarrollo de software, "agencia ux ui méxico", agencia de desarrollo web, "generative engine optimization" "geo", desarrollo web profesional, agencia de sprints seo',
 	robots: "index, follow",
 	authors: [{ name: "JEG Dev Studios" }],
 	applicationName: "JEG Dev Studios",
@@ -46,9 +48,9 @@ export const metadata = {
 		telephone: false,
 	},
 	openGraph: {
-		title: "JEG Dev Studios | Sitios web, PYMES, apps y Software a Medida",
-		description:
-			"Empresa de desarrollo web en México especializada en soluciones digitales: páginas web, aplicaciones móviles y software a medida para negocios exigentes.",
+		title: "Agencia de Desarrollo de Software y UX UI en México | JEG Dev Studios",
+    description:
+      'Somos una agencia de desarrollo de software y diseño "agencia ux ui méxico". Transformamos tus ideas en software, apps y sitios web de alto rendimiento.',
 		url: "https://www.jegdevstudios.com/",
 		siteName: "JEG Dev Studios",
 		images: [
@@ -56,7 +58,8 @@ export const metadata = {
 				url: "/img-SEO/og-background-home.webp",
 				width: 1200,
 				height: 630,
-				alt: "JEG Dev Studios",
+				alt: "Agencia de Desarrollo de Software y UX UI en México",
+				type: "image/webp",
 			},
 		],
 		locale: "es_MX",

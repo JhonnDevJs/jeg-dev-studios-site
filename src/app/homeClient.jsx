@@ -42,35 +42,43 @@ export default function HomeClient({ posts: postsToShow }) {
 	useEffect(() => setMounted(true), []);
 
 	const faqs = [
-		// --- Actuales ---
+		// --- Pregunta 1: Optimizada con "agencia de desarrollo de software" y "productos digitales" ---
 		{
 			question:
 				'¿Qué los diferencia de otra "agencia digital" o "agencia web"?',
 			answer:
-				"Una agencia digital o web  a menudo se enfoca en crear sitios de marketing. Nosotros somos una agencia de desarrollo de software. Eso significa que, además de sitios web, construimos aplicaciones complejas, sistemas de gestión interna (CRMs) y productos digitales robustos que solucionan problemas reales de negocio.",
+				"Una agencia digital o web a menudo se enfoca en crear sitios de marketing. Nosotros somos una <strong>agencia de desarrollo de software</strong>. Eso significa que, además de sitios web, construimos <strong>productos digitales</strong> complejos: aplicaciones, sistemas de gestión interna (CRMs) y plataformas a medida que solucionan problemas reales de negocio.",
 		},
+		// --- Pregunta 2: Optimizada con "diseño de experiencia" ---
 		{
 			question: '¿Su "servicio de diseño web en México" incluye UX/UI?',
 			answer:
-				'Sí. Nuestro servicio de diseño web en México  va más allá de lo visual. Somos una "agencia UX UI en México" dedicada. Nuestro equipo de diseño se asegura de que cada pantalla y botón sean intuitivos, accesibles y estén 100% enfocados en que tus usuarios logren sus objetivos',
+				'Sí. Nuestro <strong>servicio de diseño web en México</strong> va más allá de lo visual. Somos una <strong>"agencia UX UI en México"</strong> dedicada. Nuestro equipo de <strong>diseño de experiencia</strong> (UX/UI) se asegura de que cada pantalla y botón sean intuitivos y accesibles para que tus usuarios logren sus objetivos.',
 		},
+		// --- Pregunta 3: (Ya estaba optimizada) ---
 		{
 			question:
 				'¿Cómo adaptan los "servicios que ofrecen" a la "necesidad del cliente"?',
 			answer:
-				"No estandarizamos los servicios que ofrecemos. Nuestro proceso comienza con un análisis profundo para entender la verdadera necesidad del cliente. Investigamos tus objetivos y tu mercado para proponer una solución tecnológica que esté perfectamente alineada con tu negocio, asegurando que no gastes recursos en funciones innecesarias.",
+				"No estandarizamos los <strong>servicios que ofrecemos</strong>. Nuestro proceso comienza con un análisis profundo para entender la verdadera <strong>necesidad del cliente</strong>. Investigamos tus objetivos y tu mercado para proponer una solución tecnológica que esté perfectamente alineada con tu negocio, asegurando que no gastes recursos en funciones innecesarias.",
 		},
-
-		// Desarrollo Web
+		// --- Pregunta 4: Optimizada con "search engine" ---
 		{
 			question: '¿Qué es el "desarrollo web profesional" para ustedes?',
 			answer:
-				"Para nosotros, el desarrollo web profesional significa crear un sitio que funciona en tres niveles. Primero, es rápido y seguro. Segundo, es fácil de usar en móviles y computadoras. Y tercero, está construido desde el código para que Google pueda entenderlo y posicionarlo, lo que llamamos SEO técnico.",
+				"Para nosotros, el <strong>desarrollo web profesional</strong> significa crear un sitio que funciona en tres niveles. Primero, es rápido y seguro. Segundo, es fácil de usar en móviles y computadoras. Y tercero, está construido desde el código para que el <strong>search engine</strong> (Google) pueda entenderlo y posicionarlo, lo que llamamos SEO técnico.",
 		},
+		// --- Pregunta 5: (Ya estaba optimizada) ---
 		{
 			question: "Trabajo en una startup, ¿su proceso ágil me funciona?",
 			answer:
-				"Absolutamente. De hecho, nuestro proceso está diseñado para startups. Sabemos que necesitas moverte rápido y validar ideas ante inversionistas. Como agencia de sprints, trabajamos en ciclos cortos para entregarte avances funcionales. Esto te permite probar tu producto, conseguir financiamiento y escalar sin desperdiciar tu inversión inicial.",
+				"Absolutamente. De hecho, nuestro proceso está diseñado para startups. Sabemos que necesitas moverte rápido y validar ideas ante inversionistas. Como <strong>agencia de sprints</strong>, trabajamos en ciclos cortos para entregarte avances funcionales. Esto te permite probar tu producto, conseguir financiamiento y escalar sin desperdiciar tu <strong>inversión inicial</strong>.",
+		},
+		// --- Pregunta 6: NUEVA PREGUNTA (para GEO y keywords semánticas) ---
+		{
+			question: '¿Qué es "Generative Engine Optimization (GEO)"?',
+			answer:
+				"Es la nueva frontera del SEO. El SEO tradicional se enfoca en el <strong>search engine</strong> (motor de búsqueda) clásico. El <strong>Generative Engine Optimization (GEO)</strong>, o la optimización para motores de <strong>búsqueda generativos</strong>, prepara tu contenido para ser la respuesta de la IA. Preparamos tu web para ser la fuente de autoridad de las nuevas respuestas de IA.",
 		},
 	];
 
@@ -236,7 +244,7 @@ export default function HomeClient({ posts: postsToShow }) {
 							"Descubre cómo JEG Dev Studios transforma tus ideas en soluciones digitales robustas",
 						thumbnailUrl:
 							"https://www.jegdevstudios.com/path/a/miniatura-del-video.jpg",
-						"uploadDate": "2025-10-16T15:00:00Z",
+						uploadDate: "2025-10-16T15:00:00Z",
 						duration: "PT1M0S",
 						contentUrl: "https://www.youtube.com/watch?v=60pib_g34CA",
 						embedUrl:
