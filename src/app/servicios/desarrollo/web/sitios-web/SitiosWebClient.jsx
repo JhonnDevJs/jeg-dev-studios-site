@@ -45,7 +45,10 @@ export default function DevWebClient() {
 			<section className="text-white py-5 text-center">
 				<div className="container">
 					<h1>Servicio de Creación de Sitios Web Profesionales</h1>
-					<p className="lead" style={{ maxWidth: "800px", margin: "auto" }}>
+					<p
+						className="fs-5 lead"
+						style={{ maxWidth: "800px", margin: "auto" }}
+					>
 						Tu sitio web es tu principal vendedor digital, 24/7. Pero existe una
 						gran diferencia entre un <strong>sitio web gratis</strong> hecho con
 						un <strong>creador de páginas web</strong> y una{" "}
@@ -66,7 +69,7 @@ export default function DevWebClient() {
 						¿Por Qué Invertir en un Sitio Web Profesional y no en un Creador
 						Gratuito?
 					</h2>
-					<p style={{ maxWidth: "800px", margin: "auto" }}>
+					<p className="fs-5" style={{ maxWidth: "800px", margin: "auto" }}>
 						Un <strong>creador de sitios web</strong> te ofrece una plantilla
 						limitada. Nosotros te damos una solución de negocios. Un{" "}
 						<strong>sitio web profesional</strong> te permite mostrar tus{" "}
@@ -85,10 +88,7 @@ export default function DevWebClient() {
 					<h2 className="text-center mb-4">
 						Nuestro Servicio de Desarrollo de Sitios Web: Una Solución Integral
 					</h2>
-					<p
-						className="text-center"
-						style={{ maxWidth: "800px", margin: "auto" }}
-					>
+					<p className="fs-5" style={{ maxWidth: "800px", margin: "auto" }}>
 						Entendemos que una <strong>pequeña empresa</strong> necesita más que
 						un folleto digital. Nuestros <strong>servicios de diseño</strong> y
 						desarrollo cubren todo el ciclo de vida de tu proyecto.
@@ -97,7 +97,7 @@ export default function DevWebClient() {
 					<div className="row mt-5">
 						<div className="col-md-6 mb-4">
 							<h4>Diseño UI/UX Personalizado</h4>
-							<p>
+							<p className="fs-5">
 								No usamos plantillas. Nuestro equipo de{" "}
 								<strong>diseño gráfico</strong> colabora contigo para crear un{" "}
 								<strong>diseño de páginas web</strong> único que refleje tu
@@ -106,7 +106,7 @@ export default function DevWebClient() {
 						</div>
 						<div className="col-md-6 mb-4">
 							<h4>Desarrollo de Alto Rendimiento</h4>
-							<p>
+							<p className="fs-5">
 								Construimos tu sitio en tecnologías modernas (como Next.js) que
 								garantizan velocidad y una perfecta adaptación a todos los{" "}
 								<strong>dispositivos móviles</strong>.
@@ -114,7 +114,7 @@ export default function DevWebClient() {
 						</div>
 						<div className="col-md-6 mb-4">
 							<h4>Sistema de Administración de Contenidos (CMS)</h4>
-							<p>
+							<p className="fs-5">
 								Te entregamos un sistema (CMS Headless) para que tú mismo puedas
 								gestionar la <strong>administración de contenidos</strong> de tu
 								blog o secciones de noticias.
@@ -122,7 +122,7 @@ export default function DevWebClient() {
 						</div>
 						<div className="col-md-6 mb-4">
 							<h4>Dominio y Hosting Incluidos</h4>
-							<p>
+							<p className="fs-5">
 								Nos encargamos de todo. Tu servicio incluye tu{" "}
 								<strong>dominio personalizado</strong> y el hosting por 1 año
 								para que puedas <strong>publicar tu sitio web</strong> sin
@@ -131,7 +131,7 @@ export default function DevWebClient() {
 						</div>
 						<div className="col-md-12 text-center">
 							<h4>Optimización SEO Base</h4>
-							<p>
+							<p className="fs-5">
 								Preparamos tu sitio para los{" "}
 								<strong>motores de búsqueda</strong> desde el día uno, aplicando
 								las mejores prácticas de SEO técnico y{" "}
@@ -146,7 +146,7 @@ export default function DevWebClient() {
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2>La Diferencia: Plantilla vs. Desarrollo a Medida (Video)</h2>
-					<p>
+					<p className="fs-5">
 						Muchos <strong>paquetes de diseño</strong> se centran solo en lo
 						visual. Nuestro enfoque se centra en la tecnología que impulsa tu
 						crecimiento. Mira este video donde explicamos por qué un sitio a
@@ -179,19 +179,29 @@ export default function DevWebClient() {
 			<section className="text-white py-5 gradient-effect-y">
 				<div className="container text-center" style={{ maxWidth: "800px" }}>
 					<h2>¿Buscas una Tienda Online o una Aplicación Web?</h2>
-					<p>
+					<p className="fs-5">
 						Este servicio es ideal para sitios corporativos, portafolios y
 						sitios informativos.
 					</p>
-					<ul className="mb-3">
+					<ul
+						className="mb-3"
+						style={{
+							textAlign: "left",
+						}}
+					>
 						<li>
-							Si tu objetivo principal es <strong>vender productos</strong> en
-							línea, lo que necesitas es el desarrollo de una{" "}
-							<strong>tienda online</strong> (eCommerce).
+							<p className="fs-5">
+								Si tu objetivo principal es <strong>vender productos</strong> en
+								línea, lo que necesitas es el desarrollo de una{" "}
+								<strong>tienda online</strong> (eCommerce).
+							</p>
 						</li>
 						<li>
-							Si necesitas una <strong>aplicación web</strong> con lógica de
-							negocio compleja, tu proyecto podría ser de Software Empresarial.
+							<p className="fs-5">
+								Si necesitas una <strong>aplicación web</strong> con lógica de
+								negocio compleja, tu proyecto podría ser de Software
+								Empresarial.
+							</p>
 						</li>
 					</ul>
 					<nav className="d-flex justify-content-center gap-3 mt-2">
@@ -213,9 +223,9 @@ export default function DevWebClient() {
 
 			{/* Sección de Proceso */}
 			<section className="text-white py-5 gradient-effect-x text-center">
-				<div className="container" style={{ maxWidth: "800px" }}>
+				<div className="container" style={{ maxWidth: "1200px" }}>
 					<h2>Nuestro Proceso al Desarrollar Sitios Web</h2>
-					<p>
+					<p className="fs-5">
 						Usamos un proceso ágil (Scrum) al estar{" "}
 						<strong>desarrollando sitios web</strong>. Esto nos permite ser
 						transparentes, eficientes y entregarte valor en cada etapa.
@@ -226,21 +236,26 @@ export default function DevWebClient() {
 					<ol
 						style={{
 							textAlign: "left",
-							maxWidth: "400px",
 							margin: "2rem auto",
 						}}
 					>
-						<li>
-							<p><strong>Descubrimiento y Estrategia:</strong> Analizamos tus metas
-							y las de tu <strong>pequeña empresa</strong>.</p>
+						<li className="fs-5 m-0">
+							<p className="fs-5">
+								<strong>Descubrimiento y Estrategia:</strong> Analizamos tus
+								metas y las de tu <strong>pequeña empresa</strong>.
+							</p>
 						</li>
-						<li>
-							<p><strong>Diseño y Desarrollo:</strong> Nuestro equipo de{" "}
-							<strong>diseño gráfico</strong> y desarrollo crea el sitio.</p>
+						<li className="fs-5 m-0">
+							<p className="fs-5">
+								<strong>Diseño y Desarrollo:</strong> Nuestro equipo de{" "}
+								<strong>diseño gráfico</strong> y desarrollo crea el sitio.
+							</p>
 						</li>
-						<li>
-							<p><strong>Entrega y Publicación:</strong> Hacemos las pruebas
-							finales y te ayudamos a <strong>publicar tu sitio web</strong>.</p>
+						<li className="fs-5 m-0">
+							<p className="fs-5">
+								<strong>Entrega y Publicación:</strong> Hacemos las pruebas
+								finales y te ayudamos a <strong>publicar tu sitio web</strong>.
+							</p>
 						</li>
 					</ol>
 				</div>

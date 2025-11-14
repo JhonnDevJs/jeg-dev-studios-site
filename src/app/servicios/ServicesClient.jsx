@@ -109,7 +109,7 @@ export default function ServicesClient() {
 						/>
 						<CardServices
 							title="Diseño Gráfico y Digital (UX/UI)"
-							description="Creamos identidades visuales memorables y experiencias de usuario que funcionan. Desde un logotipo que define tu marca hasta el <strong>diseño web</strong> e interfaces intuitivas para tus plataformas digitales."
+							description="Creamos identidades visuales memorables y experiencias de usuario que funcionan. Desde un logotipo que define tu marca hasta el diseño web e interfaces intuitivas para tus plataformas digitales."
 							url="/servicios/diseno"
 							buttonLabel="Descubrir Soluciones de Diseño"
 							items={[
@@ -125,14 +125,14 @@ export default function ServicesClient() {
 				<h2 className="display-5 text-center text-white">
 					Tu Socio Tecnológico 360° en Ciudad de México
 				</h2>
-				<p className="fs-4 text-center text-white p-0">
+				<p className="fs-5 text-center text-white p-0">
 					Entendemos que buscar un <strong>proveedor de servicios</strong>{" "}
 					digitales puede ser abrumador. Existen{" "}
 					<strong>agencias digitales</strong>,{" "}
 					<strong>agencias de marketing digital</strong> y fábricas de software.
 					Nosotros integramos lo mejor de todas.
 				</p>
-				<p className="fs-4 text-center text-white p-0">
+				<p className="fs-5 text-center text-white p-0">
 					Con <strong>años de experiencia</strong> en la industria, nuestro
 					equipo en <strong>Ciudad de México</strong> no solo desarrolla;
 					creamos estrategias. Combinamos el <strong>diseño web</strong> de alta
@@ -144,14 +144,14 @@ export default function ServicesClient() {
 				<h3 className="test-center text-white">
 					Más Allá del Lanzamiento: Crecimiento Continuo
 				</h3>
-				<p className="fs-4 text-center text-white p-0">
+				<p className="fs-5 text-center text-white p-0">
 					Nuestro trabajo no termina con la entrega. A diferencia de otras{" "}
 					<strong>agencias digitales</strong>, creemos en el crecimiento a largo
 					plazo. Integramos estrategias de <strong>inbound marketing</strong> y{" "}
 					<strong>marketing digital</strong> para asegurar que tu sitio web{" "}
 					<strong>posiciona orgánicamente</strong>.
 				</p>
-				<p className="fs-4 text-center text-white p-0">
+				<p className="fs-5 text-center text-white p-0">
 					Gestionamos tus campañas en <strong>redes sociales</strong> y
 					optimizamos tu contenido para que no solo atraigas visitantes, sino
 					que los conviertas en clientes leales. Los <strong>servicios</strong>{" "}

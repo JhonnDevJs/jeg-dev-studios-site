@@ -25,7 +25,9 @@ function CardTeam({ imageUrl, name, position, description, links }) {
 								objectFit: "cover",
 							}}
 						/>
-						<h3 className="card-title d-flex justify-content-center align-items-center m-0">{name}</h3>
+						<h3 className="card-title d-flex justify-content-center align-items-center m-0">
+							{name}
+						</h3>
 					</div>
 					<div>
 						<p className="text-light fst-italic">{position}</p>

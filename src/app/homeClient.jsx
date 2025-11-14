@@ -319,7 +319,7 @@ export default function HomeClient({ posts: postsToShow }) {
 
 					<div className="row text-start justify-content-center">
 						<div className="col-md-6 col-lg-5 mb-4 d-flex">
-							<div className="me-3 fs-3 text-white">
+							<div className="me-3 fs-5 text-white">
 								<FaGlobe />
 							</div>
 							<div>
@@ -332,7 +332,7 @@ export default function HomeClient({ posts: postsToShow }) {
 						</div>
 
 						<div className="col-md-6 col-lg-5 mb-4 d-flex">
-							<div className="me-3 fs-3 text-white">
+							<div className="me-3 fs-5 text-white">
 								<FaChartLine />
 							</div>
 							<div>
@@ -345,7 +345,7 @@ export default function HomeClient({ posts: postsToShow }) {
 						</div>
 
 						<div className="col-md-6 col-lg-5 mb-4 d-flex">
-							<div className="me-3 fs-3 text-white">
+							<div className="me-3 fs-5 text-white">
 								<FaLock />
 							</div>
 							<div>
@@ -358,7 +358,7 @@ export default function HomeClient({ posts: postsToShow }) {
 						</div>
 
 						<div className="col-md-6 col-lg-5 mb-4 d-flex">
-							<div className="me-3 fs-3 text-white">
+							<div className="me-3 fs-5 text-white">
 								<FaHeadset />
 							</div>
 							<div>
@@ -654,7 +654,7 @@ export default function HomeClient({ posts: postsToShow }) {
 						</p>
 						<ul className="d-flex flex-column justify-content-start list-unstyled fs-5 text-start">
 							<li className="d-flex align-items-start mb-3">
-								<div className="me-3 mt-1 fs-3 text-white">
+								<div className="me-3 mt-1 fs-5 text-white">
 									<FaHandshake />
 								</div>
 								<p>
@@ -663,7 +663,7 @@ export default function HomeClient({ posts: postsToShow }) {
 								</p>
 							</li>
 							<li className="d-flex align-items-start mb-3">
-								<div className="me-3 mt-1 fs-3 text-white">
+								<div className="me-3 mt-1 fs-5 text-white">
 									<FaAssistiveListeningSystems />
 								</div>
 								<p>
@@ -672,7 +672,7 @@ export default function HomeClient({ posts: postsToShow }) {
 								</p>
 							</li>
 							<li className="d-flex align-items-start mb-3">
-								<div className="me-3 mt-1 fs-3 text-white">
+								<div className="me-3 mt-1 fs-5 text-white">
 									<FaFire />
 								</div>
 								<p>
@@ -731,13 +731,13 @@ export default function HomeClient({ posts: postsToShow }) {
 						style={{ maxWidth: "600px" }}
 					>
 						<li className="d-flex align-items-start mb-3">
-							<div className="me-3 mt-1 fs-3 text-white">
+							<div className="me-3 mt-1 fs-5 text-white">
 								<FaSearch />
 							</div>
 							<p>Diseños y desarrollos 100% optimizados para SEO.</p>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<div className="me-3 mt-1 fs-3 text-white">
+							<div className="me-3 mt-1 fs-5 text-white">
 								<FaChartLine />
 							</div>
 							<p>
@@ -746,7 +746,7 @@ export default function HomeClient({ posts: postsToShow }) {
 							</p>
 						</li>
 						<li className="d-flex align-items-start mb-3">
-							<div className="me-3 mt-1 fs-3 text-white">
+							<div className="me-3 mt-1 fs-5 text-white">
 								<FaChartBar />
 							</div>
 							<p>

@@ -144,7 +144,7 @@ export default function ContactClient() {
 						alt="Logo JEG Dev Studios"
 						title="Logo JEG Dev Studios"
 					></Image>
-					<p className="fs-3 text-center text-white">
+					<p className="fs-5 text-center text-white">
 						Estamos aquí para ayudarte. Escríbenos y nuestro equipo te
 						responderá lo antes posible.
 					</p>
@@ -251,7 +251,7 @@ export default function ContactClient() {
 				<div className="custom-modal-backdrop">
 					<div className="custom-modal-content rounded-4 bg-black text-white text-center p-4">
 						<div className="mb-4">
-							<div className="fs-3 fw-bold">
+							<div className="fs-5 fw-bold">
 								Tu mensaje ha sido enviado
 								<br />
 								exitosamente.
