@@ -215,7 +215,7 @@ export default function DevWebClient() {
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-web" />
 			<StructuredData
 				data={products}
-				type="Service"
+				type="Product"
 				idPage="service-dev-web"
 				serviceInfo={webServiceInfo}
 			/>

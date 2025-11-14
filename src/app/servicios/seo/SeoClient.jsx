@@ -103,7 +103,7 @@ export default function SeoClient() {
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-seo" />
 			<StructuredData
 				data={services}
-				type="Service"
+				type="Product"
 				idPage="service-seo"
 				serviceInfo={seoServiceInfo}
 			/>

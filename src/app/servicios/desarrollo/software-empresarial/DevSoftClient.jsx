@@ -160,7 +160,7 @@ export default function DevSoftClient() {
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-soft" />
 			<StructuredData
 				data={services}
-				type="Service"
+				type="Product"
 				idPage="service-dev-soft"
 				serviceInfo={softServiesInfo}
 			/>

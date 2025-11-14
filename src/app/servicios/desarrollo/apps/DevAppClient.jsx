@@ -149,7 +149,7 @@ export default function DevAppClient() {
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-apps" />
 			<StructuredData
 				data={services}
-				type="Service"
+				type="Product"
 				idPage="service-dev-app"
 				serviceInfo={appsservicesinfo}
 			/>

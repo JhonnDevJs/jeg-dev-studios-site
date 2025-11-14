@@ -106,7 +106,7 @@ export default function DisenoClient() {
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-design" />
 			<StructuredData
 				data={services}
-				type="Service"
+				type="Product"
 				idPage="service-design"
 				serviceInfo={disenoServiceInfo}
 			/>
