@@ -125,7 +125,7 @@ export default function LandingPageDevelopmentPage() {
 			{/* --- Sección de Video (Requisito de SEMrush) --- */}
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container" style={{ maxWidth: "900px" }}>
-					<h2>Video: La Anatomía de una Landing Page Exitosa</h2>
+					<h2>La Anatomía de una Landing Page Exitosa</h2>
 					<p className="fs-5">
 						Creamos <strong>páginas de destino</strong> que siguen una
 						estructura probada para convertir. Mira este video donde explicamos
