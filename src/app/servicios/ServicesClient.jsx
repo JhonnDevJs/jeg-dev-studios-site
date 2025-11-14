@@ -30,6 +30,23 @@ const faqs = [
 	},
 ];
 
+const services = [
+	{
+		text: "Soporte técnico, escalabilidad y personalización total",
+	},
+	{
+		text: "Diseños profesionales alineados a tu identidad visual",
+	},
+	{
+		text: "Optimización para buscadores (SEO) desde el inicio",
+	},
+	{
+		text: "Procesos claros de desarrollo (Sprint + feedback continuo)",
+	},
+	{
+		text: "Acompañamiento post-entrega: mantenimiento y soporte",
+	},
+];
 export default function ServicesClient() {
 	return (
 		<>
@@ -48,60 +65,57 @@ export default function ServicesClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 gap-3 gradient-effect-x">
 				<h1 className="text-center text-white fw-bold mt-3">
-					Soluciones Digitales a Medida: Desarrollo, SEO y Diseño
+					Agencia de Desarrollo Digital: Soluciones Web, SEO y Diseño
 				</h1>
 				<p className="lead text-white text-center">
-					En JEG Dev Studios, creamos ecosistemas digitales completos. Desde el
-					desarrollo de software robusto hasta estrategias SEO que te posicionan
-					en Google y diseños que enamoran a tus usuarios. Explora nuestra gama
-					de servicios de desarrollo digital y descubre cómo podemos impulsar tu
-					negocio.
+					En JEG Dev Studios, funcionamos como tu socio tecnológico integral.
+					Somos una <strong>agencia de desarrollo digital</strong> que unifica
+					estrategia, código y creatividad. Ofrecemos{" "}
+					<strong>servicios de desarrollo digital</strong> que van desde la
+					creación de software a medida hasta el posicionamiento SEO y el diseño
+					UX/UI.
 				</p>
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<h2 className="text-center text-white">Nuestras Áreas de Expertise</h2>
 				<p className="lead text-white text-center">
-					Como agencia de desarrollo digital , ofrecemos soluciones integrales
-					en tres pilares fundamentales. Cada servicio está diseñado para
-					funcionar en conjunto, creando una estrategia digital cohesiva y
-					potente.
+					Nuestra metodología se basa en tres pilares fundamentales. Cada
+					servicio está diseñado para funcionar en conjunto, creando una
+					estrategia digital cohesiva y potente para tu negocio.
 				</p>
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 						<CardServices
 							title="Desarrollo a Medida: Web, Apps y Software"
-							description="Damos vida a tus ideas con tecnología de vanguardia. Desde sitios web que cautivan y aplicaciones móviles que conectan, hasta software empresarial que optimiza tus operaciones."
+							description="Damos vida a tus ideas con tecnología de vanguardia. Desde sitios web que cautivan y desarrollo de aplicaciones móviles que conectan, hasta software empresarial que optimiza tus operaciones."
 							url="/servicios/desarrollo"
 							buttonLabel="Ver Servicios de Desarrollo"
 							items={[
-								"Sitios Web Profesionales",
+								"Sitios Web Profesionales y E-commerce",
 								"Aplicaciones Móviles (iOS/Android)",
 								"Software Empresarial a Medida",
-								"Optimización y Rendimiento",
 							]}
 						/>
 						<CardServices
 							title="Posicionamiento SEO Estratégico"
-							description="Hacemos que tus clientes te encuentren. Aumentamos tu visibilidad en los motores de búsqueda a través de estrategias técnicas, de contenido y locales que atraen tráfico de calidad y convierten."
+							description="Hacemos que tus clientes te encuentren. Aumentamos tu visibilidad en Google y en las nuevas respuestas de IA (GEO) con estrategias técnicas, de contenido y locales que atraen tráfico cualificado."
 							url="/servicios/seo"
 							buttonLabel="Explorar Estrategias SEO"
 							items={[
-								"Branding y Diseño de Logotipos",
-								"Diseño de Interfaces (UX/UI)",
-								"Identidad Visual Corporativa",
-								"Diseño Editorial y Publicitario",
+								"Auditoría y Estrategia SEO",
+								"SEO Web, Local y GEO",
+								"Optimización On-Page y Técnica",
 							]}
 						/>
 						<CardServices
 							title="Diseño Gráfico y Digital (UX/UI)"
-							description="Creamos identidades visuales memorables y experiencias de usuario que funcionan. Desde un logotipo que define tu marca hasta interfaces intuitivas para tus plataformas digitales."
+							description="Creamos identidades visuales memorables y experiencias de usuario que funcionan. Desde un logotipo que define tu marca hasta el <strong>diseño web</strong> e interfaces intuitivas para tus plataformas digitales."
 							url="/servicios/diseno"
 							buttonLabel="Descubrir Soluciones de Diseño"
 							items={[
-								"Sistemas a medida según tu flujo de trabajo",
-								"Control de usuarios, reportes, paneles y estadísticas",
-								"Interfaces accesibles y seguras",
-								"Integraciones con CRMs o facturación electrónica",
+								"Branding y Diseño de Logotipos",
+								"Diseño de Interfaces (UX/UI)",
+								"Identidad Visual Corporativa",
 							]}
 						/>
 					</ul>
@@ -109,63 +123,61 @@ export default function ServicesClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-x">
 				<h2 className="display-5 text-center text-white">
-					Por qué elegir JEG Dev Studios
+					Tu Socio Tecnológico 360° en Ciudad de México
 				</h2>
 				<p className="fs-4 text-center text-white p-0">
-					Servicio 100% mexicano, pensado para el mundo. Creamos sitios web,
-					aplicaciones y software empresarial con calidad profesional para
-					clientes en México y cualquier parte del mundo. Nos diferenciamos por
-					nuestra tecnología innovadora, compromiso con la entrega puntual y
-					atención personalizada en cada proyecto.
+					Entendemos que buscar un <strong>proveedor de servicios</strong>{" "}
+					digitales puede ser abrumador. Existen{" "}
+					<strong>agencias digitales</strong>,{" "}
+					<strong>agencias de marketing digital</strong> y fábricas de software.
+					Nosotros integramos lo mejor de todas.
 				</p>
-				<ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
-					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">
-							Soporte técnico, escalabilidad y personalización total
-						</p>
-					</li>
-					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">
-							Diseños profesionales alineados a tu identidad visual
-						</p>
-					</li>
-					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
-						<h3 className="fs-2 m-0">
-							Entrega rápida, con asesoría estratégica en cada fase
-						</h3>
-					</li>
-					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">
-							Optimización para buscadores (SEO) desde el inicio
-						</p>
-					</li>
-					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">
-							Procesos claros de desarrollo (Sprint + feedback continuo)
-						</p>
-					</li>
-					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
-						<h3 className="fs-2 m-0">
-							Tecnología moderna y escalable adaptada a tu negocio
-						</h3>
-					</li>
-					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">
-							Acompañamiento post-entrega: mantenimiento y soporte
-						</p>
-					</li>
-					<li className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
-						<p className="fs-2 m-0">
-							Soluciones a medida para web, apps y software empresarial
-						</p>
-					</li>
-				</ul>
-				<p className="fs-4 text-white text-center mt-4">
-					¿Tienes dudas sobre cuál servicio es el ideal para ti? Contáctanos y
-					te ayudamos a tomar la mejor decisión.
+				<p className="fs-4 text-center text-white p-0">
+					Con <strong>años de experiencia</strong> en la industria, nuestro
+					equipo en <strong>Ciudad de México</strong> no solo desarrolla;
+					creamos estrategias. Combinamos el <strong>diseño web</strong> de alta
+					calidad con el desarrollo de <strong>productos digitales</strong> y el{" "}
+					<strong>desarrollo de aplicaciones móviles</strong>, asegurando que tu
+					proyecto no solo se vea bien, sino que funcione y escale.
+				</p>
+
+				<h3 className="test-center text-white">
+					Más Allá del Lanzamiento: Crecimiento Continuo
+				</h3>
+				<p className="fs-4 text-center text-white p-0">
+					Nuestro trabajo no termina con la entrega. A diferencia de otras{" "}
+					<strong>agencias digitales</strong>, creemos en el crecimiento a largo
+					plazo. Integramos estrategias de <strong>inbound marketing</strong> y{" "}
+					<strong>marketing digital</strong> para asegurar que tu sitio web{" "}
+					<strong>posiciona orgánicamente</strong>.
+				</p>
+				<p className="fs-4 text-center text-white p-0">
+					Gestionamos tus campañas en <strong>redes sociales</strong> y
+					optimizamos tu contenido para que no solo atraigas visitantes, sino
+					que los conviertas en clientes leales. Los <strong>servicios</strong>{" "}
+					que <strong>ofrecen</strong> nuestros competidores son aislados;
+					nosotros ofrecemos un ecosistema completo.
 				</p>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-y">
+				<h2 className="display-5 text-center text-white">
+					Beneficios de Elegir a JEG Dev Studios
+				</h2>
+				<ul className="d-flex flex-wrap justify-content-center align-items-center w-100 gap-2 p-0 m-0 list-unstyled">
+					{services.map((service, index) => (
+						<li key={index} className="card bg-transparent text-center text-white border border-white rounded-5 shadow-sm p-3">
+							<p className="fs-2 m-0">
+								{service.text}
+							</p>
+						</li>
+					))}
+				</ul>
+			</section>
+			<FAQ
+				faqs={faqs}
+				subtitle="Resuelve tus dudas sobre nuestros paquetes, tecnologías, tiempos de entrega y más."
+			/>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CTA
 					title={"¿Listo para dar el siguiente paso digital?"}
 					paragraph={
@@ -175,10 +187,6 @@ export default function ServicesClient() {
 					link={"/contacto"}
 				/>
 			</section>
-			<FAQ
-				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros paquetes, tecnologías, tiempos de entrega y más."
-			/>
 		</>
 	);
 }
