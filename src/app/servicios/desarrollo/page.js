@@ -1,13 +1,13 @@
 export const metadata = {
-	title: "Desarrollo de Software a Medida | JEG Dev Studios México",
+	title: "Desarrollo de Software a Medida | Fábrica de Software | JEG Dev Studios",
 	description:
-		"Somos una agencia de desarrollo de software. Creamos soluciones web, apps móviles y sistemas empresariales a medida para optimizar tus procesos y resultados.",
+    "Somos una agencia y fábrica de software especializada en desarrollo de software a medida. Transformamos tus ideas en productos de software robustos. Conoce nuestro proceso.",
 	keywords:
-		"Desarrollo de software a medida, Agencia de desarrollo de software",
+    "desarrollo de software a medida, fábrica de software, agencia de desarrollo de software, proyectos de desarrollo de software, software personalizado",
 	openGraph: {
-		title: "Desarrollo Digital para Empresas en México | JEG Dev Studios",
-		description:
-			"Creamos soluciones digitales para empresas: sitios web profesionales, apps móviles y software a medida. Asesoría experta y desarrollo escalable en México.",
+    title: "Desarrollo de Software a Medida | Fábrica de Software | JEG Dev Studios",
+    description:
+      "Transformamos tus ideas en productos de software robustos. Conoce nuestro proceso de desarrollo de software a medida.",
 		url: "https://www.jegdevstudios.com/servicios/desarrollo",
 		siteName: "JEG Dev Studios",
 		images: [

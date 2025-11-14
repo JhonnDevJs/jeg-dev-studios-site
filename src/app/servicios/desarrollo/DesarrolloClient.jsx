@@ -1,7 +1,7 @@
 "use client";
 import Image from "next/image";
 import StructuredData from "@/components/Seo/StructuredData";
-import CardNestedLists from "@/components/Cards/CardNestedLists";
+import CardSmallList from "@/components/Cards/CardSmallList";
 import CardServices from "@/components/Cards/CardServices";
 import FAQ from "@/components/Seo/FAQ";
 import CTA from "@/components/Cta/CTA";
@@ -11,23 +11,23 @@ const faqs = [
 		question:
 			"¿Cuál es la diferencia entre desarrollo a medida y una plantilla?",
 		answer:
-			"Una plantilla te obliga a adaptar tus procesos a una estructura rígida y limitada. El desarrollo a medida es lo contrario: creamos una solución de software que se adapta perfectamente a tu flujo de trabajo, garantizando máxima eficiencia, seguridad y escalabilidad a largo plazo.",
+			"Una plantilla te obliga a adaptar tus procesos a una estructura rígida. El desarrollo de software a medida es lo contrario: nosotros creamos software personalizado que se adapta perfectamente a tu flujo de trabajo, garantizando eficiencia y escalabilidad.",
 	},
 	{
 		question: "¿Qué tecnologías se utilizan para el desarrollo?",
 		answer:
-			"Seleccionamos las mejores tecnologías según las necesidades de tu proyecto. Para el frontend usamos frameworks modernos como React y Next.js , y para el backend trabajamos con plataformas robustas como Node.js y PHP (Laravel) . En el móvil, nos especializamos en React Native, Java y Kotlin .",
+			"Usamos las mejores tecnologías para cada proyecto. En frontend, React y Next.js; en backend, Node.js y PHP (Laravel). Para móvil, nuestro equipo especializado trabaja con React Native, Java y Kotlin.",
 	},
 	{
 		question: "¿Mi proyecto podrá crecer en el futuro si lo necesito?",
 		answer:
-			"Sí, absolutamente. La escalabilidad es un pilar de nuestro proceso de desarrollo. Construimos todas nuestras soluciones con una arquitectura modular y código limpio, lo que permite agregar nuevas funcionalidades o soportar un mayor número de usuarios en el futuro sin necesidad de reconstruir todo desde cero.",
+			"Sí. La escalabilidad es un pilar de nuestros procesos de desarrollo. Construimos con arquitectura modular y código limpio, permitiendo añadir nuevas funciones o soportar más usuarios en el futuro sin reconstruir todo desde cero.",
 	},
 	{
 		question:
 			"¿Qué necesito de mi parte para comenzar un proyecto de desarrollo?",
 		answer:
-			"Para comenzar, solo necesitamos tener una conversación contigo. El primer paso es una consulta gratuita donde escuchamos tu idea, tus objetivos y los problemas que buscas resolver. Con esa información, definimos un alcance y te presentamos una propuesta estratégica sin compromiso.",
+			"Solo necesitamos entender tus necesidades específicas. El primer paso es una consulta gratuita donde escuchamos tu idea, tus objetivos y los problemas que buscas resolver. Con eso, definimos el alcance del proyecto.",
 	},
 ];
 
@@ -47,51 +47,49 @@ export default function DesarrolloClient() {
 			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 gap-3 gradient-effect-x">
 				<h1 className="text-center text-white fw-bold mt-3">
-					Desarrollo de Software a Medida: Del Concepto al Código
+					Desarrollo de Software a Medida: Tu Fábrica de Software
 				</h1>
 				<p className="lead text-white text-center">
-					En JEG Dev Studios, no solo escribimos código; creamos soluciones.
-					Como agencia de desarrollo de software , transformamos tus ideas en
-					herramientas digitales robustas, escalables y seguras. Nuestro enfoque
-					se centra en entender tus desafíos únicos para construir la solución
-					perfecta, ya sea un sitio web, una aplicación móvil o un sistema
-					empresarial completo.
+					En JEG Dev Studios, funcionamos como tu{" "}
+					<strong>fábrica de software</strong> personal. No solo escribimos
+					código; creamos soluciones. Como{" "}
+					<strong>agencia de desarrollo de software</strong>, transformamos tus
+					ideas en <strong>productos de software</strong> digitales que son
+					robustos, escalables y seguros. Nuestro enfoque se centra en entender
+					tus desafíos únicos para construir la solución perfecta.
 				</p>
-			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<h2 className="text-center text-white">
 					Nuestras Especialidades en Desarrollo
 				</h2>
 				<p className="lead text-white text-center">
 					Cada proyecto digital tiene un objetivo diferente. Por eso, hemos
-					perfeccionado nuestra experiencia en tres áreas clave del desarrollo
-					de software a medida . Elige la solución que mejor se adapta a tu
-					visión.
+					perfeccionado nuestra experiencia en tres áreas clave del{" "}
+					<strong>desarrollo de software a medida</strong>. Elige la solución
+					que mejor se adapta a tu visión.
 				</p>
+			</section>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<article className="d-flex flex-column justify-content-center align-items-center w-100 p-0 m-0">
 					<ul className="row row-cols-1 row-cols-sm-3 row-cols-md-5 justify-content-center align-items-startcenter w-100 h-100 gap-5 p-0 m-0">
 						<CardServices
-							title="Desarrollo de Sitios Web Profesionales"
-							description="Diseñamos cada detalle, desde lo visual hasta lo interactivo. Nuestro objetivo es optimizar la navegación y comunicar tu mensaje de forma clara y eficaz."
+							title="Desarrollo Web Profesional"
+							description="Creamos tu presencia en internet. Desde páginas corporativas y blogs hasta complejas tiendas en línea"
 							url="/servicios/desarrollo/web"
-							buttonLabel="Ver Soluciones de Desarrollo Web"
+							buttonLabel="Conocer más sobre Desarrollo Web"
 							items={[
-								"Desarrollo Web Profesional",
-								"Ecommerce y Tiendas en Línea",
-								"Aplicaciones Web",
-								"Diseño UX/UI y Branding Digital",
-								"Hosting, Dominios y Mantenimiento Web",
+								"Sitios Web Corporativos y Blogs",
+								"Tiendas en Línia (E-commerce)",
+								"Optimización SEO desde el Código",
+								"Diseño Responsivo y Rápido",
 							]}
 							urlInfo={"/saber-mas/web-dev"}
-							buttonLabelInfo={
-								"Conoce más sobre nuestros servicios de desarrollo web"
-							}
+							buttonLabelInfo={"Conocer más sobre Desarrollo Web"}
 						/>
 						<CardServices
 							title="Desarrollo de Aplicaciones Móviles"
-							description="Usamos lenguajes como Kotlin, React Native y PHP (Laravel). Esto nos permite garantizar compatibilidad, rendimiento y un mantenimiento sencillo. Así, aseguramos la escalabilidad y eficiencia de tu proyecto."
+							description="Conecta con tus usuarios dondequiera que estén. Desarrollamos aplicaciones nativas e híbridas para iOS y Android"
 							url="/servicios/desarrollo/apps"
-							buttonLabel="Ver Soluciones de Apps"
+							buttonLabel="Explorar Desarrollo de Apps<"
 							items={[
 								"Aplicaciones Nativas (iOS/Android)",
 								"Desarrollo Multiplataforma Híbrido",
@@ -99,143 +97,45 @@ export default function DesarrolloClient() {
 								"Integración con Backend y API",
 							]}
 							urlInfo={"/saber-mas/soft-dev"}
-							buttonLabelInfo={
-								"Conoce más sobre nuestros servicios de desarrollo de aplicaciones móviles"
-							}
+							buttonLabelInfo={"Explorar Desarrollo de Apps"}
 						/>
 						<CardServices
 							title="Desarrollo de Software Empresarial"
-							description="Optimiza y automatiza tus operaciones. Creamos sistemas a medida (CRMs, ERPs, etc.) que se adaptan a tu flujo de trabajo, mejorando la eficiencia, la toma de decisiones y el control de tu negocio."
+							description="Optimiza y automatiza tus operaciones. Creamos sistemas a medida (CRMs, ERPs, etc.) que se adaptan a tu flujo de trabajo"
 							url="/servicios/desarrollo/software-empresarial"
 							buttonLabel="Ver Soluciones de Software"
 							items={[
-								"Sistemas de medición (CRM, ERP)",
+								"Sistemas a Medida (CRM, ERP)",
 								"Automatización de Procesos Internos",
 								"Paneles de Control y Reportería",
 								"Integración con Sistemas Existentes",
 							]}
 							urlInfo={"/saber-mas/app-dev"}
-							buttonLabelInfo={
-								"Conoce más sobre nuestros servicios de desarrollo de software empresarial"
-							}
+							buttonLabelInfo={"Ver Soluciones de Software"}
 						/>
 					</ul>
 				</article>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
-				<CardNestedLists
-					titulo="¿Qué ofrecemos en desarrollo web personalizado?"
-					subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
-					list={[
-						{
-							text: "Landing pages modernas y optimizadas",
-							sublist: [
-								"Creamos sitios de una sola sección orientados a la conversión, ideales para promocionar servicios o productos específicos.",
-							],
-						},
-						{
-							text: "Sitios empresariales profesionales",
-							sublist: [
-								"Diseños personalizados con navegación clara y estructuras adaptadas a negocios que necesitan presencia sólida en línea.",
-							],
-						},
-						{
-							text: "Diseño responsivo y optimización SEO",
-							sublist: [
-								"Adaptamos cada sitio a todos los dispositivos y aplicamos técnicas básicas de posicionamiento para visibilidad en buscadores.",
-							],
-						},
-						{
-							text: "Tecnologías usadas",
-							sublist: [
-								"Para el desarrollo Frontend de tus sitios utilizamos una variedad de tecnologías como son: HTML, CSS, JAVASCRIPT, REACT, NEXT JS, ANGULAR, BOOTSTRAP CSS Y TAILWIND CSS.",
-								"Para el desarrollo Backend de tus webs utilizamos tecnologías de vanguardia como: Node js y PHP (Laravel)",
-							],
-						},
-					]}
-				/>
-			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
-				<CardNestedLists
-					titulo="Desarrollo de aplicaciones móviles Android/iOS"
-					subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
-					list={[
-						{
-							text: "Apps nativas e híbridas",
-							sublist: [
-								"Desarrollo de aplicaciones específicas para iOS o Android, o multiplataforma con tecnologías modernas.",
-							],
-						},
-						{
-							text: "Publicación en tiendas",
-							sublist: [
-								"Subimos tu app a Google Play y/o App Store, cumpliendo con todos los requisitos técnicos y de diseño.",
-							],
-						},
-						{
-							text: "Integración con bases de datos y backends",
-							sublist: [
-								"Conectamos tu app con servidores seguros para almacenar datos, procesar pagos o integrar funcionalidades clave.",
-							],
-						},
-						{
-							text: "Tecnologías utilizadas",
-							sublist: [
-								"React Native, Java, Kotlin, Laravel, Firebase, SQLite.",
-							],
-						},
-					]}
-				/>
-			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
-				<CardNestedLists
-					titulo="Soluciones de software empresarial"
-					subtitulo="Para nuestros servicios de desarrollo web planteamos diferentes alternativas y soluciones para nuestros clientes garantizando flexibilidad, escalabilidad, calidad y total control de lo que se nos solicita ajustandonos a cada proyecto."
-					list={[
-						{
-							text: "Sistemas a medida según tu flujo de trabajo",
-							sublist: [
-								"Diseñamos software que se adapta a los procesos específicos de tu empresa, mejorando eficiencia y control.",
-							],
-						},
-						{
-							text: "Control de usuarios, reportes, paneles y estadísticas",
-							sublist: [
-								"Funcionalidades avanzadas como permisos por rol, paneles de datos y reportes exportables en PDF/Excel.",
-							],
-						},
-						{
-							text: "Interfaces accesibles y seguras",
-							sublist: [
-								"Aplicaciones responsivas, con buen contraste y enfoque UX, incluyendo cifrado de datos y respaldos.",
-							],
-						},
-						{
-							text: "Integraciones con CRMs o facturación electrónica",
-							sublist: [
-								"Conectamos tu sistema con herramientas como Facturama, Salesforce o Zoho según tus necesidades.",
-							],
-						},
-					]}
-				/>
-			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
-				<CardNestedLists
+				<CardSmallList
 					titulo="Nuestro Proceso: Calidad, Agilidad y Transparencia"
-					subtitulo="Creemos en un desarrollo inteligente. Nuestro proceso se basa en la metodología ágil (Sprints), lo que te permite ver avances funcionales cada dos semanas. Escribimos código limpio, aplicamos prácticas de seguridad (DevSecOps) y construimos arquitecturas escalables para que tu inversión tecnológica crezca contigo."
+					subtitulo="El éxito de los proyectos de desarrollo de software depende de procesos de desarrollo claros. Nuestro método ágil (Scrum) se enfoca en la transparencia y la entrega de valor constante, cubriendo todo el ciclo de vida del desarrollo."
 					list={[
-						{
-							text: "Beneficios Clave:",
-							sublist: [
-								"Código 100% Personalizado: Sin plantillas ni limitaciones.",
-								"Arquitectura Escalable: Preparada para el crecimiento futuro.",
-								"Propiedad Intelectual: El código fuente es tuyo.",
-								"Seguridad Integrada: Protegemos tus datos desde el día uno.",
-							],
-						},
+						'1. Consultoría y Estrategia: Todo comienza por entender tus necesidades específicas. Nos reunimos contigo para analizar tus objetivos y definir el alcance del proyecto. Nuestro equipo especializado te asesora sobre la mejor solución tecnológica.',
+						'2. Diseño y Arquitectura (UX/UI): Diseñamos el flujo de usuario y las interfaces (UX/UI) para crear productos de software intuitivos. Definimos la arquitectura tecnológica (frontend, backend, bases de datos) asegurando que la solución sea escalable y segura.',
+						'3. Desarrollo Ágil (Sprints): Aquí es donde nuestra fábrica de software cobra vida. Dividimos el proyecto en "Sprints" (ciclos de 1-2 semanas) donde nuestro equipo especializado desarrolla, prueba y te presenta módulos funcionales.',
+						'4. Pruebas, Despliegue y Soporte: Cubrimos todo el ciclo de vida del desarrollo. Realizamos pruebas de calidad (QA), desplegamos la solución en tu servidor y te acompañamos con soporte para asegurar un lanzamiento exitoso.',
 					]}
+					lastText=""
 				/>
 			</section>
+
+			<FAQ
+				faqs={faqs}
+				subtitle="Preguntas Frecuentes sobre Desarrollo"
+			/>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CTA
 					title={"¿Listo para dar el siguiente paso digital?"}
@@ -246,10 +146,6 @@ export default function DesarrolloClient() {
 					link={"/contacto"}
 				/>
 			</section>
-			<FAQ
-				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros servicios de desarrollo digital"
-			/>
 		</>
 	);
 }
