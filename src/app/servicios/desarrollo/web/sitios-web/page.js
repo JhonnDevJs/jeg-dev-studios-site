@@ -1,37 +1,29 @@
 export const metadata = {
-  // TÍTULO MEJORADO: Fuerte, claro y con la keyword principal
-  title: "Creación de Sitios Web Profesionales | JEG Dev Studios",
-  
-  // DESCRIPCIÓN MEJORADA: Resuelve la intención de búsqueda (paquetes)
+  title: "Desarrollo de Sitios Web Corporativos | JEG Dev Studios",
   description:
-    "Ofrecemos el servicio de desarrollo de sitios web profesionales a medida. Creamos tu sitio web corporativo o para tu pequeña empresa. Cotiza tu proyecto.",
-  
-  // KEYWORDS MEJORADAS: Enfocadas 100% en esta página
+    "Servicio de desarrollo de sitios web corporativos y empresariales a medida. Creamos una presencia digital robusta para tu negocio, optimizada para SEO y escalable.",
   keywords:
-    "creación de sitios web profesionales, servicio de desarrollo de sitios web, web profesional",
-  
+    "desarrollo de sitios web corporativos, servicio de desarrollo de sitios web, sitio web empresarial, creación de sitios web profesionales, web profesional",
   alternates: {
-    canonical: "https://www.jegdevstudios.com/servicios/desarrollo/web",
+    canonical:
+      "https://www.jegdevstudios.com/servicios/desarrollo/web/sitios-web",
   },
-  
   openGraph: {
-    // OG MEJORADO
-    title: "JEG Dev Studios | Creación de Sitios Web Profesionales a Medida",
-    description: "Deja atrás a los creadores de sitios web gratis. Ofrecemos un servicio de desarrollo de sitios web profesionales que posicionan en buscadores y funcionan en dispositivos móviles.",
+    title: "JEG Dev Studios | Desarrollo de Sitios Web Corporativos a Medida",
+    description:
+      "Ofrecemos un servicio de desarrollo de sitios web para empresas, enfocados en rendimiento, SEO y un diseño de alta calidad que genera confianza.",
     url: "https://www.jegdevstudios.com/servicios/desarrollo/web/sitios-web",
-    siteName: "JEG Dev Studios",
     images: [
       {
-        url: "/img-SEO/og-background-serv-dev-web.webp",
+        url: "/img-SEO/og-background-serv-sitios-web.webp", // <-- RECOMENDADO: Crear una imagen OG para esta página
         width: 1200,
         height: 630,
-        alt: "Paquetes de Desarrollo de Páginas Web en México",
+        alt: "Servicio de Desarrollo de Sitios Web Corporativos",
       },
     ],
     locale: "es_MX",
     type: "website",
   },
-  // Tu 'twitter' y el resto de 'metadata' están bien
 };
 
 import SitiosWebClient from "./SitiosWebClient";

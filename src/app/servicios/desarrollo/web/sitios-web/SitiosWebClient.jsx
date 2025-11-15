@@ -44,20 +44,19 @@ export default function DevWebClient() {
 			{/* Asumo que tienes un componente Hero o Banner similar al de las otras páginas */}
 			<section className="text-white py-5 text-center">
 				<div className="container">
-					<h1>Servicio de Creación de Sitios Web Profesionales</h1>
+					<h1>Desarrollo de Sitios Web Corporativos a Medida</h1>
 					<p
 						className="fs-5 lead"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
 						Tu sitio web es tu principal vendedor digital, 24/7. Pero existe una
-						gran diferencia entre un <strong>sitio web gratis</strong> hecho con
-						un <strong>creador de páginas web</strong> y una{" "}
-						<strong>web profesional</strong> construida a medida. En JEG Dev
-						Studios, ofrecemos un{" "}
+						diferencia entre un <strong>sitio web gratis</strong> (hecho con un{" "}
+						<strong>creador de páginas web</strong>) y un{" "}
+						<strong>sitio de alta calidad</strong> construido a medida. En JEG
+						Dev Studios, ofrecemos un{" "}
 						<strong>servicio de desarrollo de sitios web</strong> enfocado en el
-						rendimiento, un <strong>diseño web</strong> de{" "}
-						<strong>alta calidad</strong> y resultados tangibles para tu
-						negocio.
+						rendimiento, un <strong>diseño web</strong> premium y resultados
+						tangibles.
 					</p>
 				</div>
 			</section>
@@ -66,34 +65,36 @@ export default function DevWebClient() {
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container">
 					<h2>
-						¿Por Qué Invertir en un Sitio Web Profesional y no en un Creador
-						Gratuito?
+						¿Por Qué Invertir en un Sitio a Medida y no en un Creador Gratuito?
 					</h2>
 					<p className="fs-5" style={{ maxWidth: "800px", margin: "auto" }}>
 						Un <strong>creador de sitios web</strong> te ofrece una plantilla
-						limitada. Nosotros te damos una solución de negocios. Un{" "}
-						<strong>sitio web profesional</strong> te permite mostrar tus{" "}
+						limitada. Nosotros te damos una solución de negocios. Una{" "}
+						<strong>plataforma escalable</strong> te permite mostrar tus{" "}
 						<strong>productos o servicios</strong> de forma única, genera
-						confianza en tu marca y, lo más importante, está construido para que
-						se <strong>posicionen en buscadores</strong> como Google. Están
-						diseñados para escalar y adaptarse a tus necesidades, algo que las
-						opciones gratuitas no pueden ofrecer.
+						confianza en tu marca y, lo más importante, está construida para que
+						se <strong>posicionen en buscadores</strong> como Google.
 					</p>
 				</div>
 			</section>
 
 			{/* Sección de Características del Servicio */}
-			<section className="text-white py-5 gradient-effect-y">
+			<section className="text-white py-5 gradient-effect-x">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="text-center mb-4">
-						Nuestro Servicio de Desarrollo de Sitios Web: Una Solución Integral
+						Nuestro Servicio de Sitios Web: Una Solución Integral
 					</h2>
-					<p className="fs-5" style={{ maxWidth: "800px", margin: "auto" }}>
-						Entendemos que una <strong>pequeña empresa</strong> necesita más que
-						un folleto digital. Nuestros <strong>servicios de diseño</strong> y
-						desarrollo cubren todo el ciclo de vida de tu proyecto.
+					<p
+						className="text-center"
+						style={{ maxWidth: "800px", margin: "auto" }}
+					>
+						<p className="fs-5">
+							Entendemos que una <strong>pequeña empresa</strong> necesita más
+							que un folleto digital. Nuestros{" "}
+							<strong>servicios de diseño</strong> y desarrollo cubren todo el
+							ciclo de vida de tu proyecto.
+						</p>
 					</p>
-					{/* Asumo que usas un layout de 2 columnas para esta lista */}
 					<div className="row mt-5">
 						<div className="col-md-6 mb-4">
 							<h4>Diseño UI/UX Personalizado</h4>
@@ -120,13 +121,14 @@ export default function DevWebClient() {
 								blog o secciones de noticias.
 							</p>
 						</div>
+						{/* ITEM ACTUALIZADO: Añade 'certificados ssl' */}
 						<div className="col-md-6 mb-4">
-							<h4>Dominio y Hosting Incluidos</h4>
+							<h4>Dominio, Hosting y Seguridad</h4>
 							<p className="fs-5">
 								Nos encargamos de todo. Tu servicio incluye tu{" "}
-								<strong>dominio personalizado</strong> y el hosting por 1 año
-								para que puedas <strong>publicar tu sitio web</strong> sin
-								preocupaciones.
+								<strong>dominio personalizado</strong>, hosting por 1 año y{" "}
+								<strong>certificados SSL</strong> para que puedas{" "}
+								<strong>publicar tu sitio web</strong> sin preocupaciones.
 							</p>
 						</div>
 						<div className="col-md-12 text-center">
@@ -142,35 +144,50 @@ export default function DevWebClient() {
 				</div>
 			</section>
 
-			{/* Sección de Video (Requisito de SEMrush) */}
-			<section className="text-white py-5 gradient-effect-x text-center">
+			{/* --- Sección de Video (Se mantiene) --- */}
+			<section className="text-white py-5 gradient-effect-y text-center">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2>La Diferencia: Plantilla vs. Desarrollo a Medida (Video)</h2>
 					<p className="fs-5">
 						Muchos <strong>paquetes de diseño</strong> se centran solo en lo
 						visual. Nuestro enfoque se centra en la tecnología que impulsa tu
 						crecimiento. Mira este video donde explicamos por qué un sitio a
-						medida es una inversión más inteligente que una plantilla para una{" "}
-						<strong>pequeña empresa</strong>.
+						medida es una inversión más inteligente.
 					</p>
-					{/* Componente de Video: 
-              Inserta aquí tu iframe de YouTube/Vimeo. 
-            */}
 					<div
 						className="video-responsive-container"
 						style={{ maxWidth: "700px", margin: "auto" }}
 					>
-						{/* <iframe 
-                width="560" 
-                height="315" 
-                src="https://www.youtube.com/embed/TU_URL_DE_TU_VIDEO" 
-                title="Video sobre Plantilla vs. Desarrollo a Medida" 
-                frameBorder="0" 
-                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-                allowFullScreen
-                loading="lazy">
-              </iframe>
-              */}
+						{/* <iframe ... (tu video aquí) ... /> */}
+					</div>
+				</div>
+			</section>
+			<section className="text-white py-5 gradient-effect-x">
+				<div className="container text-center" style={{ maxWidth: "800px" }}>
+					<h2>¿Qué Más Necesitas? Un Ecosistema Digital Completo</h2>
+					<p className="lead fs-5">
+						Un sitio web es solo el comienzo. Como agencia integral, podemos
+						expandir tu presencia digital.
+					</p>
+					<div className="row mt-4 text-start">
+						<div className="col-md-6 mb-3">
+							<h4>Comercio Electrónico</h4>
+							<p className="fs-5">
+								Si tu objetivo es <strong>vender productos</strong> en línea,
+								podemos escalar tu sitio corporativo a una solución de{" "}
+								<strong>comercio electrónico</strong> completa, con carritos de
+								compra y pasarelas de pago.
+							</p>
+						</div>
+						<div className="col-md-6 mb-3">
+							<h4>Marketing Digital</h4>
+							<p className="fs-5">
+								Integramos tu sitio con tus <strong>redes sociales</strong> y{" "}
+								<strong>estrategias de marketing</strong>. Configuramos tus
+								herramientas de analítica para rastrear el éxito de tus
+								campañas.
+							</p>
+						</div>
 					</div>
 				</div>
 			</section>
@@ -189,14 +206,14 @@ export default function DevWebClient() {
 							textAlign: "left",
 						}}
 					>
-						<li>
+						<li className="fs-5">
 							<p className="fs-5">
 								Si tu objetivo principal es <strong>vender productos</strong> en
 								línea, lo que necesitas es el desarrollo de una{" "}
 								<strong>tienda online</strong> (eCommerce).
 							</p>
 						</li>
-						<li>
+						<li className="fs-5">
 							<p className="fs-5">
 								Si necesitas una <strong>aplicación web</strong> con lógica de
 								negocio compleja, tu proyecto podría ser de Software
@@ -222,36 +239,35 @@ export default function DevWebClient() {
 			</section>
 
 			{/* Sección de Proceso */}
-			<section className="text-white py-5 gradient-effect-x text-center">
-				<div className="container" style={{ maxWidth: "1200px" }}>
-					<h2>Nuestro Proceso al Desarrollar Sitios Web</h2>
+			<section className="text-white py-5 gradient-effect-y text-center">
+				<div className="container" style={{ maxWidth: "800px" }}>
+					{/* H2 ACTUALIZADO: Reduce Keyword Stuffing */}
+					<h2>Nuestro Proceso de Creación de Sitios Web</h2>
 					<p className="fs-5">
-						Usamos un proceso ágil (Scrum) al estar{" "}
-						<strong>desarrollando sitios web</strong>. Esto nos permite ser
+						Usamos un proceso ágil (Scrum) al{" "}
+						<strong>desarrollar sitios web</strong>. Esto nos permite ser
 						transparentes, eficientes y entregarte valor en cada etapa.
 					</p>
-					{/* Aquí puedes reusar tu componente de Proceso Scrum 
-              o usar una lista simple como esta:
-            */}
 					<ol
 						style={{
 							textAlign: "left",
+							maxWidth: "400px",
 							margin: "2rem auto",
 						}}
 					>
-						<li className="fs-5 m-0">
+						<li className="fs-5">
 							<p className="fs-5">
 								<strong>Descubrimiento y Estrategia:</strong> Analizamos tus
 								metas y las de tu <strong>pequeña empresa</strong>.
 							</p>
 						</li>
-						<li className="fs-5 m-0">
+						<li className="fs-5">
 							<p className="fs-5">
 								<strong>Diseño y Desarrollo:</strong> Nuestro equipo de{" "}
 								<strong>diseño gráfico</strong> y desarrollo crea el sitio.
 							</p>
 						</li>
-						<li className="fs-5 m-0">
+						<li className="fs-5">
 							<p className="fs-5">
 								<strong>Entrega y Publicación:</strong> Hacemos las pruebas
 								finales y te ayudamos a <strong>publicar tu sitio web</strong>.
