@@ -13,17 +13,17 @@ const faqs = [
 		question:
 			"¿Cuál es la diferencia entre la invitación de Google Sites y la de Canva?",
 		answer:
-			"La invitación de <strong>Google Sites ($299)</strong> es un 'mini-sitio' web funcional y fácil de navegar, ideal para organizar mucha información. Las <strong>invitaciones digitales Canva ($399)</strong> se enfocan más en un diseño visual premium, con animaciones y un estilo de 'una sola página' publicado como web.",
+			"La invitación de Google Sites ($299) es un 'mini-sitio' web funcional y fácil de navegar, ideal para organizar mucha información. Las invitaciones digitales Canva ($399) se enfocan más en un diseño visual premium, con animaciones y un estilo de 'una sola página' publicado como web.",
 	},
 	{
 		question: "¿En cuánto tiempo entregan la invitación digital?",
 		answer:
-			"Una vez que nos entregas toda la información (fotos, direcciones, fechas) y confirmas tu <strong>método de pago</strong>, nuestro tiempo de entrega estándar es de 2 a 3 días hábiles.",
+			"Una vez que nos entregas toda la información (fotos, direcciones, fechas) y confirmas tu método de pago, nuestro tiempo de entrega estándar es de 2 a 3 días hábiles.",
 	},
 	{
 		question: "¿Cómo puedo compartir mi invitación?",
 		answer:
-			"Te entregamos un enlace web único. Puedes <strong>compartir tu invitación</strong> fácilmente por WhatsApp, <strong>correo electrónico</strong>, o publicarla en tus <strong>redes sociales</strong> para todos tus <strong>amigos y familiares</strong>.",
+			"Te entregamos un enlace web único. Puedes compartir tu invitación fácilmente por WhatsApp, correo electrónico, o publicarla en tus redes sociales para todos tus amigos y familiares.",
 	},
 ];
 

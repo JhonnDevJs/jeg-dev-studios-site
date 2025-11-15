@@ -11,22 +11,22 @@ const faqs = [
 	{
 		question: "¿Qué es un CMS o 'sistema de gestión de contenidos'?",
 		answer:
-			"Un <strong>sistema de gestión de contenidos</strong> (CMS) es la herramienta que te permite escribir, editar y publicar una <strong>entrada de blog</strong> sin saber programar. Nosotros te lo entregamos configurado, ya sea WordPress, Blogger o un CMS Headless (como Strapi) para tu <strong>blog en Next.js</strong>.",
+			"Un sistema de gestión de contenidos (CMS) es la herramienta que te permite escribir, editar y publicar una entrada de blog sin saber programar. Nosotros te lo entregamos configurado, ya sea WordPress, Blogger o un CMS Headless (como Strapi) para tu blog en Next.js.",
 	},
 	{
 		question: "¿WordWordPress vs. Next.js: ¿Cuál es mejor para mi blog?",
 		answer:
-			"Depende. <strong>Instalar WordPress</strong> es ideal para un <strong>blog personal</strong> o de Pyme que busca muchas <strong>opciones de personalización</strong> rápidamente. Un <strong>blog en Next.js</strong> es una solución premium para empresas que buscan el máximo rendimiento, seguridad y una experiencia de <strong>gestión de contenido</strong> superior.",
+			"Depende. Instalar WordPress es ideal para un blog personal o de Pyme que busca muchas opciones de personalización rápidamente. Un blog en Next.js es una solución premium para empresas que buscan el máximo rendimiento, seguridad y una experiencia de gestión de contenido superior.",
 	},
 	{
 		question: "¿Cómo puedo 'promocionar mi blog' una vez que esté hecho?",
 		answer:
-			"La promoción es clave. Puedes usar <strong>herramientas de marketing</strong> como el <strong>correo electrónico</strong> (email marketing) para tus suscriptores, compartir cada <strong>entrada de blog</strong> en <strong>redes sociales</strong>, y por supuesto, la optimización para <strong>motores de búsqueda</strong> (SEO) que ya incluimos.",
+			"La promoción es clave. Puedes usar herramientas de marketing como el correo electrónico (email marketing) para tus suscriptores, compartir cada entrada de blog en redes sociales, y por supuesto, la optimización para motores de búsqueda (SEO) que ya incluimos.",
 	},
 	{
 		question: "¿Este servicio incluye métodos de monetización?",
 		answer:
-			"Nuestro servicio construye la plataforma técnica. Si tu estrategia incluye <strong>métodos de monetización</strong> (como anuncios de AdSense, venta de infoproductos o contenido bajo un <strong>plan de pago</strong>), nosotros implementamos las integraciones técnicas necesarias para que puedas hacerlo.",
+			"Nuestro servicio construye la plataforma técnica. Si tu estrategia incluye métodos de monetización (como anuncios de AdSense, venta de infoproductos o contenido bajo un plan de pago), nosotros implementamos las integraciones técnicas necesarias para que puedas hacerlo.",
 	},
 ];
 

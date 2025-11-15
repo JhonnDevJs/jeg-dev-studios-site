@@ -12,23 +12,23 @@ const faqs = [
 	{
 		question: "¿Qué formas de pago y opciones de pago integran?",
 		answer:
-			"Integramos todas las <strong>formas de pago</strong> más utilizadas. Esto incluye <strong>tarjetas de débito</strong> y crédito (vía Stripe, Mercado Pago), <strong>pagos digitales</strong> como <strong>Apple Pay y Google Pay</strong>, <strong>transferencias bancarias</strong> (SPEI) y <strong>opciones de pago</strong> en efectivo (OXXO Pay).",
+			"Integramos todas las formas de pago más utilizadas. Esto incluye tarjetas de débito y crédito (vía Stripe, Mercado Pago), pagos digitales como Apple Pay y Google Pay, transferencias bancarias (SPEI) y opciones de pago en efectivo (OXXO Pay).",
 	},
 	{
 		question: "¿Por qué usan Strapi para el panel de administración?",
 		answer:
-			"Usamos <strong>Strapi</strong> porque es un CMS Headless líder. Nos permite darte un panel 100% personalizado, seguro y fácil de usar, que se conecta de forma ultra-rápida a tu <strong>tienda online</strong> desarrollada en Next.js, dándote el mejor rendimiento posible.",
+			"Usamos Strapi porque es un CMS Headless líder. Nos permite darte un panel 100% personalizado, seguro y fácil de usar, que se conecta de forma ultra-rápida a tu tienda online desarrollada en Next.js, dándote el mejor rendimiento posible.",
 	},
 	{
 		question: "¿Ustedes gestionan los nombres de dominios y el hosting?",
 		answer:
-			"Sí, nuestros paquetes de <strong>desarrollo de comercio electrónico</strong> pueden incluir el registro de tus <strong>nombres de dominios</strong> y el hosting por el primer año, para que solo te preocupes por <strong>empezar a vender online</strong>.",
+			"Sí, nuestros paquetes de desarrollo de comercio electrónico pueden incluir el registro de tus nombres de dominios y el hosting por el primer año, para que solo te preocupes por empezar a vender online.",
 	},
 	{
 		question:
 			"¿Este servicio incluye la estrategia de marketing digital para mi tienda?",
 		answer:
-			"Este servicio construye la plataforma tecnológica. Una <strong>estrategia de marketing</strong> completa (SEO, campañas en <strong>redes sociales</strong>, <strong>inbound marketing</strong>) es un servicio de Posicionamiento SEO que se contrata por separado y es fundamental para llevar <strong>clientes potenciales</strong> a tu <strong>tienda en línea</strong>.",
+			"Este servicio construye la plataforma tecnológica. Una estrategia de marketing completa (SEO, campañas en redes sociales, inbound marketing) es un servicio de Posicionamiento SEO que se contrata por separado y es fundamental para llevar clientes potenciales a tu tienda en línea.",
 	},
 ];
 
