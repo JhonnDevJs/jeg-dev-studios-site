@@ -13,7 +13,7 @@ export const metadata = {
 		title: "Términos y Condiciones | JEG Dev Studios",
 		description:
 			"Revisa los Términos y Condiciones que rigen el uso de nuestros servicios digitales en JEG Dev Studios.",
-		url: "https://www.jegdevstudios.com/terminos-y-condiciones",
+		url: "https://www.jegdevstudios.com/legal/terminos-y-condiciones",
 		siteName: "JEG Dev Studios",
 		images: [
 			{
@@ -27,7 +27,7 @@ export const metadata = {
 		type: "website",
 	},
 	alternates: {
-		canonical: "https://www.jegdevstudios.com/terminos-y-condiciones",
+		canonical: "https://www.jegdevstudios.com/legal/terminos-y-condiciones",
 	},
 };
 

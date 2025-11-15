@@ -12,7 +12,7 @@ export const metadata = {
 		title: "Aviso de Privacidad | JEG Dev Studios",
 		description:
 			"Infórmate sobre cómo protegemos y utilizamos tus datos personales en JEG Dev Studios, de acuerdo con la legislación vigente.",
-		url: "https://www.jegdevstudios.com/aviso-de-privacidad",
+		url: "https://www.jegdevstudios.com/legal/aviso-de-privacidad",
 		siteName: "JEG Dev Studios",
 		images: [
 			{
@@ -26,7 +26,7 @@ export const metadata = {
 		type: "website",
 	},
 	alternates: {
-		canonical: "https://www.jegdevstudios.com/aviso-de-privacidad",
+		canonical: "https://www.jegdevstudios.com/legal/aviso-de-privacidad",
 	},
 };
 

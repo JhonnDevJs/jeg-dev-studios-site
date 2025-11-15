@@ -86,6 +86,18 @@ const nextConfig = {
         destination: '/servicios/desarrollo/software-empresarial',
         permanent: true,
       },
+      
+      // --- REGLAS DE REESTRUCTURA DE LEGALES (desde /legal/) ---
+      {
+        source: '/terminos-y-condiciones',
+        destination: '/legal/terminos-y-condiciones',
+        permanent: true,
+      },
+      {
+        source: '/aviso-de-privacidad',
+        destination: '/legal/aviso-de-privacidad',
+        permanent: true,
+      },
     ];
   },
 };
