@@ -13,17 +13,17 @@ const faqs = [
 		question:
 			"¿Cuál es la diferencia entre la invitación de Google Sites y la de Canva?",
 		answer:
-			"La invitación de <strong>Google Sites ($299)</strong> es un 'mini-sitio' web funcional y fácil de navegar, ideal para organizar mucha información. La invitación de <strong>Canva ($399)</strong> se enfoca más en un diseño visual premium, con animaciones y un estilo de 'una sola página' publicado como web.",
+			"La invitación de <strong>Google Sites ($299)</strong> es un 'mini-sitio' web funcional y fácil de navegar, ideal para organizar mucha información. Las <strong>invitaciones digitales Canva ($399)</strong> se enfocan más en un diseño visual premium, con animaciones y un estilo de 'una sola página' publicado como web.",
 	},
 	{
 		question: "¿En cuánto tiempo entregan la invitación digital?",
 		answer:
-			"Una vez que nos entregas toda la información (fotos, direcciones, fechas), nuestro tiempo de entrega estándar es de 2 a 3 días hábiles.",
+			"Una vez que nos entregas toda la información (fotos, direcciones, fechas) y confirmas tu <strong>método de pago</strong>, nuestro tiempo de entrega estándar es de 2 a 3 días hábiles.",
 	},
 	{
-		question: "¿El servicio incluye la confirmación de asistencia (RSVP)?",
+		question: "¿Cómo puedo compartir mi invitación?",
 		answer:
-			"¡Sí! Todas nuestras invitaciones web incluyen un botón de <strong>'Confirmar Asistencia'</strong>  que se enlaza directamente a tu WhatsApp, facilitando que tus invitados te confirmen al instante.",
+			"Te entregamos un enlace web único. Puedes <strong>compartir tu invitación</strong> fácilmente por WhatsApp, <strong>correo electrónico</strong>, o publicarla en tus <strong>redes sociales</strong> para todos tus <strong>amigos y familiares</strong>.",
 	},
 ];
 
@@ -50,15 +50,16 @@ export default function InvitacionesPage() {
 			</section>
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container">
-					<h1>Creación de Invitaciones Digitales Web</h1>
+					<h1>Invitaciones Digitales para tu Ocasión Especial</h1>
 					<p
 						className="fs-5 lead"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
-						Dale a tu evento la presentación que se merece. Creamos invitaciones
-						web interactivas para Bodas, XV Años, Bautizos y más. Son modernas,
-						ecológicas y la forma más fácil de compartir todos los detalles con
-						tus invitados en un solo enlace.
+						Celebra tu <strong>ocasión especial</strong> con una invitación
+						digital interactiva. Creamos <strong>invitaciones para boda</strong>
+						, <strong>invitaciones para xv años</strong>, bautizos y más.
+						Comparte tu evento con <strong>amigos y familiares</strong> de forma
+						elegante, moderna y ecológica.
 					</p>
 				</div>
 			</section>
@@ -72,6 +73,8 @@ export default function InvitacionesPage() {
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
 						Elige la plataforma que mejor se adapte a tu estilo y presupuesto.
+						Aceptamos un solo <strong>método de pago</strong> seguro
+						(Transferencia o Mercado Pago) para tu comodidad.
 					</p>
 
 					<div className="row justify-content-center align-items-stretch mt-4 gy-4">
@@ -114,7 +117,7 @@ export default function InvitacionesPage() {
 							</div>
 						</div>
 
-						{/* Opción 2: Canva Premium */}
+						{/* Opción 2: Canva Premium (ACTUALIZADA) */}
 						<div className="col-lg-5">
 							<div
 								className="card h-100"
@@ -126,9 +129,9 @@ export default function InvitacionesPage() {
 										$399 <span className="fs-6 fw-normal">MXN</span>
 									</p>
 									<p className="card-text">
-										Un diseño premium y animado con el estilo visual de Canva,
-										entregado como un sitio web interactivo de una sola página
-										(one-page).
+										Un diseño premium y animado con el estilo visual de las{" "}
+										<strong>invitaciones digitales Canva</strong>, publicado
+										como un sitio web de una sola página.
 									</p>
 									<ul
 										className="text-start mt-3"
@@ -158,15 +161,14 @@ export default function InvitacionesPage() {
 			<section className="text-white py-5 gradient-effect-x">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="text-center mb-4">
-						Todas Nuestras Invitaciones Incluyen
+						Características de tu Invitación Digital
 					</h2>
 					<p
 						className="fs-5 text-center lead"
 						style={{ maxWidth: "800px", margin: "auto", marginBottom: "3rem" }}
 					>
-						Basado en los elementos más importantes para un evento exitoso,
-						integramos todas las características que tú y tus invitados
-						necesitan:
+						Integramos todas las características que tú y tus invitados
+						necesitan para esta <strong>ocasión especial</strong>:
 					</p>
 					{/* Asumo un layout de 2 columnas */}
 					<div className="row">
@@ -180,8 +182,8 @@ export default function InvitacionesPage() {
 						<div className="col-md-6 mb-4">
 							<h4>Mapas Interactivos</h4>
 							<p className="fs-5">
-								Integración con Google Maps para la Ceremonia y la
-								Recepción, para que nadie se pierda.
+								Integración con Google Maps para la Ceremonia y la Recepción,
+								para que nadie se pierda.
 							</p>
 						</div>
 						<div className="col-md-6 mb-4">
@@ -199,20 +201,61 @@ export default function InvitacionesPage() {
 							</p>
 						</div>
 						<div className="col-md-6 mb-4">
-							<h4>Código de Vestimenta</h4>
+							<h4>Código de Vestimenta y Mesa de Regalos</h4>
 							<p className="fs-5">
-								Una sección clara para indicar el código de vestimenta (Ej.
-								Formal, Etiqueta).
-							</p>
-						</div>
-						<div className="col-md-6 mb-4">
-							<h4>Mesa de Regalos</h4>
-							<p className="fs-5">
-								Espacio para tu enlace a Liverpool, Amazon, o indicar "Lluvia de
-								Sobres".
+								Secciones claras para indicar el código de vestimenta (Ej.
+								Formal) y tu enlace a la mesa de regalos (Liverpool, Amazon,
+								etc.).
 							</p>
 						</div>
 					</div>
+				</div>
+			</section>
+
+			<section className="text-white py-5 gradient-effect-y text-center">
+				<div className="container" style={{ maxWidth: "800px" }}>
+					<h2>Cómo Funciona: Fácil de Crear y Compartir</h2>
+					<ol
+						style={{
+							textAlign: "left",
+							maxWidth: "500px",
+							margin: "2rem auto",
+							paddingLeft: "40px",
+						}}
+					>
+						<li className="fs-5 mb-3">
+							<p className="fs-5">
+							<strong>Elige tu Paquete:</strong> Seleccionas el diseño de Google
+							Sites o Canva. Usamos el mejor{" "}
+							<strong>creador de invitaciones</strong> para tu estilo.</p>
+						</li>
+						<li className="fs-5 mb-3">
+							<p className="fs-5">
+							<strong>Envíanos tu Info:</strong> Nos pasas tus fotos, fechas y
+							direcciones.</p>
+						</li>
+						<li className="fs-5 mb-3">
+							<p className="fs-5">
+							<strong>Recibe tu Enlace:</strong> Te entregamos un enlace web
+							único. Puedes <strong>compartir tu invitación</strong> por
+							WhatsApp, <strong>correo electrónico</strong> o{" "}
+							<strong>redes sociales</strong>.</p>
+						</li>
+						<li className="fs-5 mb-3">
+							<p className="fs-5">
+								<strong>Optimizado para Todos:</strong> Nuestras{" "}
+								<strong>invitaciones web</strong> son visibles en cualquier
+								dispositivo. Si detectamos un{" "}
+								<strong>navegador que no es compatible</strong> (o una{" "}
+								<strong>versión desactualizada del navegador</strong>), la
+								invitación se mostrará igualmente. Para las animaciones de
+								Canva, siempre recomendamos que el usuario{" "}
+								<strong>actualiza tu navegador</strong> a la{" "}
+								<strong>versión más reciente</strong> de Chrome o Safari para{" "}
+								<strong>seguir disfrutando</strong> de la experiencia completa para esa ocasión especial.
+							</p>
+						</li>
+					</ol>
 				</div>
 			</section>
 
