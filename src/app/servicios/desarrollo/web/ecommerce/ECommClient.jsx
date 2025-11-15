@@ -10,25 +10,25 @@ import CTAProducts from "@/components/Cta/CTAProducts"; // Asumo que tienes un C
 
 const faqs = [
 	{
-		question: "¿Qué métodos de pago puedo aceptar en mi tienda online?",
+		question: "¿Qué formas de pago y opciones de pago integran?",
 		answer:
-			"Integramos los métodos de pago más populares en México. Podemos configurar tu tienda online para estar aceptando pagos con tarjeta de crédito (vía Stripe, Mercado Pago, Conekta) y también pagos en efectivo (OXXO Pay) o transferencias (SPEI).",
+			"Integramos todas las <strong>formas de pago</strong> más utilizadas. Esto incluye <strong>tarjetas de débito</strong> y crédito (vía Stripe, Mercado Pago), <strong>pagos digitales</strong> como <strong>Apple Pay y Google Pay</strong>, <strong>transferencias bancarias</strong> (SPEI) y <strong>opciones de pago</strong> en efectivo (OXXO Pay).",
 	},
 	{
 		question: "¿Por qué usan Strapi para el panel de administración?",
 		answer:
-			"Usamos Strapi porque es un CMS Headless líder en el mercado. Nos permite darte un panel 100% personalizado, seguro y fácil de usar, que se conecta de forma ultra-rápida a tu tienda online desarrollada en Next.js, dándote el mejor rendimiento posible.",
+			"Usamos <strong>Strapi</strong> porque es un CMS Headless líder. Nos permite darte un panel 100% personalizado, seguro y fácil de usar, que se conecta de forma ultra-rápida a tu <strong>tienda online</strong> desarrollada en Next.js, dándote el mejor rendimiento posible.",
 	},
 	{
 		question: "¿Ustedes gestionan los nombres de dominios y el hosting?",
 		answer:
-			"Sí, nuestros paquetes de desarrollo de comercio electrónico pueden incluir el registro de tus nombres de dominios y el hosting por el primer año, para que solo te preocupes por empezar a vender.",
+			"Sí, nuestros paquetes de <strong>desarrollo de comercio electrónico</strong> pueden incluir el registro de tus <strong>nombres de dominios</strong> y el hosting por el primer año, para que solo te preocupes por <strong>empezar a vender online</strong>.",
 	},
 	{
 		question:
 			"¿Este servicio incluye la estrategia de marketing digital para mi tienda?",
 		answer:
-			"Este servicio construye la plataforma tecnológica. Una estrategia de marketing completa (SEO, campañas en redes sociales, inbound marketing) es un servicio de Posicionamiento SEO que se contrata por separado y es fundamental para llevar tráfico a tu tienda en línea.",
+			"Este servicio construye la plataforma tecnológica. Una <strong>estrategia de marketing</strong> completa (SEO, campañas en <strong>redes sociales</strong>, <strong>inbound marketing</strong>) es un servicio de Posicionamiento SEO que se contrata por separado y es fundamental para llevar <strong>clientes potenciales</strong> a tu <strong>tienda en línea</strong>.",
 	},
 ];
 
@@ -56,16 +56,16 @@ export default function EcommerceDevelopmentPage() {
 			</section>
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container">
-					<h1>Desarrollo de eCommerce: Tu Tienda en Línea Profesional</h1>
+					<h1>Desarrollo de Comercio Electrónico: Tu Tienda en Línea</h1>
 					<p
 						className="fs-5 lead"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
-						Lleva tu negocio al siguiente nivel con una plataforma de{" "}
-						<strong>comercio electrónico</strong> diseñada a tu medida. Creamos
-						tu <strong>tienda en línea</strong> desde cero, enfocándonos en la
-						velocidad (Next.js), una gestión fácil (Strapi) y una experiencia de
-						compra que convierte visitantes en clientes.
+						Lleva tu negocio al siguiente nivel. Nuestro servicio de{" "}
+						<strong>desarrollo de comercio electrónico</strong> está enfocado en
+						la velocidad (Next.js), una gestión fácil (Strapi) y una experiencia
+						de compra que convierte. Es hora de{" "}
+						<strong>empezar a vender online</strong>.
 					</p>
 				</div>
 			</section>
@@ -114,7 +114,7 @@ export default function EcommerceDevelopmentPage() {
 			<section className="text-white py-5 gradient-effect-x">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="text-center mb-4">
-						Un Servicio de Comercio Electrónico Completo
+						Un Servicio de eCommerce 360°: Más Allá del Carrito
 					</h2>
 					<p
 						className="text-center fs-5 lead"
@@ -124,40 +124,47 @@ export default function EcommerceDevelopmentPage() {
 							marginBottom: "3rem",
 						}}
 					>
-						Nos encargamos de toda la tecnología para que tú te enfoques en
-						vender. Nuestro servicio de{" "}
-						<strong>creación de tiendas en línea</strong> cubre:
+						Nuestro servicio de{" "}
+						<strong>desarrollo de comercio electrónico</strong> es una solución
+						integral. Cubrimos los tres pilares del éxito para los{" "}
+						<strong>negocios online</strong>:
 					</p>
 					{/* Asumo un layout de 3 columnas */}
 					<div className="row">
 						<div className="col-md-4 mb-4">
-							<h4>Pasarelas de Pago Seguras</h4>
+							<h4>1. Opciones de Pago Flexibles y Seguras</h4>
 							<p className="fs-5">
-								Integramos los <strong>métodos de pago</strong> que tus clientes
-								prefieren: <strong>tarjeta de crédito</strong>, PayPal, OXXO Pay
-								y más, garantizando un proceso de{" "}
-								<strong>aceptando pagos</strong> seguro y confiable.
+								No pierdas una venta por no tener la{" "}
+								<strong>forma de pago</strong> correcta. Integramos todas las{" "}
+								<strong>opciones de pago</strong> más utilizadas:{" "}
+								<strong>tarjetas de débito</strong> y crédito (Stripe, Mercado
+								Pago), <strong>transferencias bancarias</strong> (SPEI), y{" "}
+								<strong>pagos digitales</strong> como{" "}
+								<strong>Apple Pay y Google Pay</strong>. También configuramos
+								métodos para <strong>pagar en efectivo</strong> (OXXO Pay).
 							</p>
 						</div>
 						<div className="col-md-4 mb-4">
 							{/* --- CAMBIO AQUÍ --- */}
-							<h4>Gestión de Contenido con Strapi</h4>
+							<h4>2. Gestión de Contenido con Strapi</h4>
 							<p className="fs-5">
 								Te entregamos un panel de{" "}
-								<strong>administración de contenidos</strong> (CMS)
-								autoadministrable construido con <strong>Strapi</strong>, fácil
-								de usar para que puedas subir nuevas fotos de{" "}
-								<strong>alta calidad</strong>, editar precios y cambiar la{" "}
-								<strong>descripción de producto</strong> sin ayuda.
+								<strong>administración de contenidos</strong> (CMS) con{" "}
+								<strong>Strapi</strong>. Podrás subir fotos de{" "}
+								<strong>alta calidad</strong>, editar precios, gestionar
+								inventario y cambiar la <strong>descripción de producto</strong>{" "}
+								de forma autónoma.
 							</p>
 						</div>
 						<div className="col-md-4 mb-4">
-							<h4>Logística y Atención al Cliente</h4>
+							<h4>3. Múltiples Canales de Venta y Marketing</h4>
 							<p className="fs-5">
-								Configuramos tu sistema de <strong>pagos y envíos</strong>.
-								Además, integramos herramientas de{" "}
-								<strong>atención al cliente</strong> como chatbots, WhatsApp y
-								formularios de contacto.
+								Tu <strong>tienda online</strong> es el centro de tu ecosistema.
+								La integramos con tus <strong>redes sociales</strong> (Instagram
+								Shopping, Facebook Shops) y otros{" "}
+								<strong>canales de venta</strong>. Nuestro enfoque en SEO y UX
+								está diseñado para capturar{" "}
+								<strong>clientes potenciales</strong>.
 							</p>
 						</div>
 					</div>
@@ -217,7 +224,7 @@ export default function EcommerceDevelopmentPage() {
 
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CTAProducts
-					title={"¿Listo para Abrir tu Tienda al Mundo?"}
+					title={"¿Listo para Vender en Línea?"}
 					paragraph={
 						"No dejes que una plataforma limitada frene tu crecimiento. Invierte en una tienda online profesional, rápida y segura con Next.js y Strapi. Hablemos de tu proyecto de comercio electrónico."
 					}
