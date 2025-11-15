@@ -36,6 +36,8 @@ export default function DevAppClient() {
 					"Publicación en tienda (Google Play o App Store incluida).",
 					"Manual básico de uso y entrega de APK.",
 				],
+				urlInfo: "",
+				buttonLabelInfo: "",
 			},
 			{
 				id: "app_dual_basica",
@@ -55,6 +57,8 @@ export default function DevAppClient() {
 					"Publicación en ambas tiendas.",
 					"Diseño adaptado y personalizado con tu identidad visual.",
 				],
+				urlInfo: "",
+				buttonLabelInfo: "",
 			},
 			{
 				id: "app_funcional_pro",
@@ -75,6 +79,8 @@ export default function DevAppClient() {
 					"Base de datos relacional conectada al backend.",
 					"Panel de administración web opcional.",
 				],
+				urlInfo: "",
+				buttonLabelInfo: "",
 			},
 			{
 				id: "app_a_medida_premium",
@@ -95,6 +101,8 @@ export default function DevAppClient() {
 					"Mantenimiento técnico por 3 meses incluido.",
 					"Asesoría y soporte para estrategias de publicación y escalabilidad.",
 				],
+				urlInfo: "",
+				buttonLabelInfo: "",
 			},
 		],
 		[]

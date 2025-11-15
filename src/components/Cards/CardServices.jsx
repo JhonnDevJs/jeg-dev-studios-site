@@ -6,8 +6,6 @@ function CardServices({
 	description,
 	url,
 	buttonLabel,
-	urlInfo,
-	buttonLabelInfo,
 	items = [],
 }) {
 	return (
@@ -45,23 +43,6 @@ function CardServices({
 					))}
 				</ul>
 			</div>
-			<div className="card-footer d-flex flex-column justify-content-center align-items-center">
-				<div className="d-flex justify-content-center align-items-end mt-auto pt-3">
-					{urlInfo && buttonLabelInfo && (
-						<Link
-							href={urlInfo}
-							className="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
-							role="button"
-							aria-label={buttonLabelInfo}
-							title={buttonLabelInfo}
-							target="_blank"
-							tabIndex={0}
-						>
-							Saber más
-						</Link>
-					)}
-				</div>
-			</div>
 		</li>
 	);
 }
@@ -71,8 +52,6 @@ CardServices.propTypes = {
 	description: PropTypes.string,
 	url: PropTypes.string.isRequired,
 	buttonLabel: PropTypes.string.isRequired,
-	urlInfo: PropTypes.string,
-	buttonLabelInfo: PropTypes.string.isRequired,
 	items: PropTypes.arrayOf(PropTypes.string),
 };
 

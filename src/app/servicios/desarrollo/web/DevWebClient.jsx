@@ -24,6 +24,28 @@ export default function DevWebClient() {
 	const products = useMemo(
 		() => [
 			{
+				id: "invitacion-digital",
+				type: "product",
+				name: "Invitaciones Digitales",
+				price: 2999,
+				currency: "MXN",
+				labelBtn: "Contratar ahora",
+				isPriceFixed: true,
+				description:
+					"Lanza tu idea o promociona un servicio específico rápidamente. Una página de aterrizaje optimizada para la conversión, construida sobre una plataforma fiable.",
+				imageSrc: imgWebProduct1.src,
+				items: [
+					"Dominio personalizado incluido (1 año)",
+					"Hosting gratuito mediante Google Sites",
+					"Diseño responsivo",
+					"Posicionamiento inicial en Google (SEO básico)",
+					"Diseño adaptado a la marca del cliente",
+					"Hasta 5 secciones para tu página (landing)",
+				],
+				urlInfo: "/servicios/desarrollo/web/landing-pages",
+				buttonLabelInfo: "Conocer más sobre el servicio",
+			},
+			{
 				id: "landing-page-profesional",
 				type: "product",
 				name: "Landing Page Profesional",
@@ -42,11 +64,13 @@ export default function DevWebClient() {
 					"Diseño adaptado a la marca del cliente",
 					"Hasta 5 secciones para tu página (landing)",
 				],
+				urlInfo: "/servicios/desarrollo/web/landing-pages",
+				buttonLabelInfo: "Conocer más sobre el servicio",
 			},
 			{
 				id: "mini-sitio",
 				type: "product",
-				name: 'MINI SITIO',
+				name: "MINI SITIO",
 				price: 3599,
 				currency: "MXN",
 				labelBtn: "Contratar ahora",
@@ -61,11 +85,13 @@ export default function DevWebClient() {
 					"Diseño Responsivo y adaptado a la marca",
 					"SEO Básico (Posicionamiento inicial)",
 				],
+				urlInfo: "/servicios/desarrollo/web/sitios-web",
+				buttonLabelInfo: "Conocer más sobre el servicio",
 			},
 			{
 				id: "paquete_sitio_ignite",
 				type: "pack",
-				name: 'SITIO IGNITE',
+				name: "SITIO IGNITE",
 				price: 17999,
 				isPriceFixed: false,
 				currency: "MXN",
@@ -85,11 +111,13 @@ export default function DevWebClient() {
 					"3 Rondas de Revisión",
 					"Tiempo de entrega: 3 Semanas",
 				],
+				urlInfo: "/servicios/desarrollo/web/blogs",
+				buttonLabelInfo: "Conocer más sobre el servicio",
 			},
 			{
 				id: "paquete_sitio_accelerate",
 				type: "pack",
-				name: 'SITIO ACCELERATE',
+				name: "SITIO ACCELERATE",
 				price: 29999,
 				isPriceFixed: false,
 				labelBtn: "Cotizar Proyecto Accelerate",
@@ -109,11 +137,13 @@ export default function DevWebClient() {
 					"4 Rondas de Revisión",
 					"Tiempo de entrega: 4-5 Semanas",
 				],
+				urlInfo: "/servicios/desarrollo/web/sitios-web",
+				buttonLabelInfo: "Conocer más sobre el servicio",
 			},
 			{
 				id: "paquete_sitio_ultimate",
 				type: "pack",
-				name: 'SITIO ULTIMATE',
+				name: "SITIO ULTIMATE",
 				price: 49999,
 				isPriceFixed: false,
 				labelBtn: "Cotizar Proyecto Ultimate",
@@ -132,6 +162,8 @@ export default function DevWebClient() {
 					"5 Rondas de Revisión",
 					"Tiempo de entrega: 5-6 Semanas",
 				],
+				urlInfo: "/servicios/desarrollo/web/ecommerce",
+				buttonLabelInfo: "Conocer más sobre el servicio",
 			},
 		],
 		[]
@@ -263,6 +295,8 @@ export default function DevWebClient() {
 									isPriceFixed={product.isPriceFixed}
 									labelBtn={product.labelBtn}
 									onQuote={() => handleWhatsAppRedirect(product.name)}
+									urlInfo={product.urlInfo}
+									buttonLabelInfo={product.buttonLabelInfo}
 								/>
 							) : (
 								<CardProduct
@@ -277,6 +311,8 @@ export default function DevWebClient() {
 									isPriceFixed={product.isPriceFixed}
 									labelBtn={product.labelBtn}
 									onAdd={() => handleWhatsAppRedirect(product.name)}
+									urlInfo={product.urlInfo}
+									buttonLabelInfo={product.buttonLabelInfo}
 								/>
 							)}
 						</SwiperSlide>

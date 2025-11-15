@@ -1,5 +1,6 @@
 "use client";
 import PropTypes from "prop-types";
+import Link from "next/link";
 
 function CardPacksProduct({
 	idProduct,
@@ -13,6 +14,8 @@ function CardPacksProduct({
 	description, // Prop para la descripción corta
 	isPriceFixed = false, // Prop para definir si el precio es fijo
 	labelBtn = "Cotizar mi proyecto", // Prop para el texto del botón
+	urlInfo,
+	buttonLabelInfo,
 }) {
 	const handleQuoteRequest = () => {
 		onQuote({ idProduct, title, moneda, dataPrice });
@@ -37,13 +40,15 @@ function CardPacksProduct({
 				<meta itemProp="description" content={descriptionText} />
 			)}
 
-			<div className="card-body d-flex flex-column">
-				<h3 itemProp="name" className="fw-bolder card-title text-center">
+			<div className="card-header d-flex flex-column justify-content-evenly flex-grow-1">
+				<h3 itemProp="name" className="h2 fw-bolder card-title text-center">
 					{title}
 				</h3>
 				{description && (
 					<p className="card-text text-white-50 text-center">{description}</p>
 				)}
+			</div>
+			<div className="card-body d-flex flex-column">
 				{/* Contenedor para la oferta del producto (precio, moneda, disponibilidad) */}
 				<div itemProp="offers" itemScope itemType="http://schema.org/Offer">
 					<meta itemProp="priceCurrency" content={moneda} />
@@ -64,23 +69,43 @@ function CardPacksProduct({
 						</p>
 					</div>
 				</div>
-				<button className="btn-services" onClick={handleQuoteRequest}>
+				<button className="btn-services my-auto" onClick={handleQuoteRequest}>
 					<span className="fw-bolder">{labelBtn}</span>
 				</button>
-			</div>
-			<div className="card-footer d-flex justify-content-center align-items-center">
+				
 				{/* Podrías añadir una descripción del producto aquí con itemProp="description" */}
-				<ul className="list-group list-group-flush w-100">
+				
+				<ul className="list-group list-group-flush mx-auto">
 					{items.map((item, idx) => (
 						<li
 							key={idx}
-							className="d-flex justify-content-start align-items-center list-group-item bg-transparent text-white w-100"
+							className={`row align-items-center bg-transparent text-white py-2 ${
+								idx < items.length - 1 ? "border-bottom border-white-50" : ""
+							}`}
 						>
-							<span className="icon-check-list fs-6 me-2"></span>
-							<p className="fs-6 m-0">{item}</p>
+							<span className="col-auto icon-check-list fs-5 me-2"></span>
+							<p className="col fs-5 m-0">{item}</p>
 						</li>
 					))}
 				</ul>
+			</div>
+			
+			<div className="card-footer d-flex flex-column justify-content-center align-items-center">
+				<div className="d-flex justify-content-center align-items-end mt-auto pt-3">
+					{urlInfo && buttonLabelInfo && (
+						<Link
+							href={urlInfo}
+							className="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+							role="button"
+							aria-label={buttonLabelInfo}
+							title={buttonLabelInfo}
+							target="_blank"
+							tabIndex={0}
+						>
+							Saber más
+						</Link>
+					)}
+				</div>
 			</div>
 		</li>
 	);
@@ -99,6 +124,8 @@ CardPacksProduct.propTypes = {
 	description: PropTypes.string,
 	isPriceFixed: PropTypes.bool,
 	labelBtn: PropTypes.string,
+	urlInfo: PropTypes.string,
+	buttonLabelInfo: PropTypes.string,
 };
 
 export default CardPacksProduct;

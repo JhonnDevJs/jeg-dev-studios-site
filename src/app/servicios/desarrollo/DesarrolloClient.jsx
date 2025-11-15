@@ -82,8 +82,6 @@ export default function DesarrolloClient() {
 								"Optimización SEO desde el Código",
 								"Diseño Responsivo y Rápido",
 							]}
-							urlInfo={"/saber-mas/web-dev"}
-							buttonLabelInfo={"Conocer más sobre Desarrollo Web"}
 						/>
 						<CardServices
 							title="Desarrollo de Aplicaciones Móviles"
@@ -96,8 +94,6 @@ export default function DesarrolloClient() {
 								"Interfaces de Usuario Intuitivas (UX/UI)",
 								"Integración con Backend y API",
 							]}
-							urlInfo={"/saber-mas/soft-dev"}
-							buttonLabelInfo={"Explorar Desarrollo de Apps"}
 						/>
 						<CardServices
 							title="Desarrollo de Software Empresarial"
@@ -110,8 +106,6 @@ export default function DesarrolloClient() {
 								"Paneles de Control y Reportería",
 								"Integración con Sistemas Existentes",
 							]}
-							urlInfo={"/saber-mas/app-dev"}
-							buttonLabelInfo={"Ver Soluciones de Software"}
 						/>
 					</ul>
 				</article>

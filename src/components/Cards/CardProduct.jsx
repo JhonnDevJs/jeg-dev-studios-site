@@ -1,5 +1,6 @@
 "use client";
 import PropTypes from "prop-types";
+import Link from "next/link";
 
 function CardProduct({
 	idProduct,
@@ -13,9 +14,11 @@ function CardProduct({
 	description, // Prop para la descripción corta
 	isPriceFixed = false, // Prop para definir si el precio es fijo
 	labelBtn = "Contratar servicio", // Prop para el texto del botón
+	urlInfo,
+	buttonLabelInfo,
 }) {
 	const handleAddToCart = () => {
-		onAdd({ idProduct, title, moneda, dataPrice });
+		onAdd({ idProduct, title, moneda, dataPrice, urlInfo, buttonLabelInfo });
 	};
 
 	// Generar una descripción a partir de la lista de items (características)
@@ -26,7 +29,7 @@ function CardProduct({
 			itemScope // Indica que este elemento describe un ítem.
 			itemType="http://schema.org/Product" // Especifica que el ítem es un Producto.
 			id={idProduct}
-			className="card d-block bg-transparent border rounded-5 text-white text-start shadow-md p-0 card-services"
+			className="card d-flex flex-column bg-transparent border rounded-5 text-white text-start shadow-md p-1 card-services"
 			style={{ width: "22rem" }}
 			data-price={dataPrice}
 		>
@@ -36,14 +39,16 @@ function CardProduct({
 			{descriptionText && (
 				<meta itemProp="description" content={descriptionText} />
 			)}
-
-			<div className="card-body d-flex flex-column">
+			<div className="card-header d-flex flex-column justify-content-evenly flex-grow-1">
 				<h3 itemProp="name" className="h2 fw-bolder card-title text-center">
 					{title}
 				</h3>
 				{description && (
 					<p className="card-text text-white-50 text-center">{description}</p>
 				)}
+			</div>
+
+			<div className="card-body d-flex flex-column justify-content-evenly flex-grow-1 py-2">
 				{/* Contenedor para la oferta del producto (precio, moneda, disponibilidad) */}
 				<div itemProp="offers" itemScope itemType="http://schema.org/Offer">
 					<meta itemProp="priceCurrency" content={moneda} />
@@ -64,11 +69,10 @@ function CardProduct({
 						</p>
 					</div>
 				</div>
-				<button className="btn-services" onClick={handleAddToCart}>
+				<button className="btn-services my-auto" onClick={handleAddToCart}>
 					<span className="fw-bolder">{labelBtn}</span>
 				</button>
-			</div>
-			<div className="card-footer d-flex justify-content-center align-items-center">
+				
 				<ul className="list-group list-group-flush mx-auto">
 					{items.map((item, idx) => (
 						<li
@@ -77,11 +81,28 @@ function CardProduct({
 								idx < items.length - 1 ? "border-bottom border-white-50" : ""
 							}`}
 						>
-							<span className="col-auto icon-check-list fs-6 me-2"></span>
-							<p className="col fs-6 m-0">{item}</p>
+							<span className="col-auto icon-check-list fs-5 me-2"></span>
+							<p className="col fs-5 m-0">{item}</p>
 						</li>
 					))}
 				</ul>
+			</div>
+			<div className="card-footer d-flex flex-column justify-content-center align-items-center">
+				<div className="d-flex justify-content-center align-items-end mt-auto pt-3">
+					{urlInfo && buttonLabelInfo && (
+						<Link
+							href={urlInfo}
+							className="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+							role="button"
+							aria-label={buttonLabelInfo}
+							title={buttonLabelInfo}
+							target="_blank"
+							tabIndex={0}
+						>
+							Saber más
+						</Link>
+					)}
+				</div>
 			</div>
 		</li>
 	);
@@ -100,6 +121,8 @@ CardProduct.propTypes = {
 	description: PropTypes.string, // La descripción es opcional
 	isPriceFixed: PropTypes.bool,
 	labelBtn: PropTypes.string,
+	urlInfo: PropTypes.string,
+	buttonLabelInfo: PropTypes.string,
 };
 
 export default CardProduct;

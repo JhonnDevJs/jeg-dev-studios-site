@@ -39,6 +39,8 @@ export default function DevSoftClient() {
 					"Manual básico de usuario.",
 					"Instalación en un equipo.",
 				],
+				urlInfo: "",
+				buttonLabelInfo: "",
 			},
 			{
 				id: "solucion_estandar",
@@ -57,6 +59,8 @@ export default function DevSoftClient() {
 					"Exportación de reportes a PDF/Excel.",
 					"Instalación en hasta 3 dispositivos.",
 				],
+				urlInfo: "",
+				buttonLabelInfo: "",
 			},
 			{
 				id: "solucion_avanzada",
@@ -77,6 +81,8 @@ export default function DevSoftClient() {
 					"Instalación en red local o servidor.",
 					"Capacitación inicial para tu equipo.",
 				],
+				urlInfo: "",
+				buttonLabelInfo: "",
 			},
 			{
 				id: "solucion_profesional",
@@ -98,6 +104,8 @@ export default function DevSoftClient() {
 					"Capacitación y documentación completa.",
 					"Soporte técnico durante el primer mes incluido.",
 				],
+				urlInfo: "",
+				buttonLabelInfo: "",
 			},
 		],
 		[]
