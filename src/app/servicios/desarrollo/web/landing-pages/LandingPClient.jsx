@@ -14,17 +14,17 @@ const faqs = [
 		question:
 			"¿Cuál es la diferencia entre una 'landing page o página' y un sitio web?",
 		answer:
-			"Un sitio web tiene múltiples páginas y objetivos (informar, contactar, etc.). Una <strong>landing page</strong> (o <strong>página de aterrizaje</strong>) tiene UN solo objetivo: que el usuario realice una <strong>acción deseada</strong> específica, como registrarse o comprar. Esto maximiza la <strong>tasa de conversión</strong>.",
+			"Un sitio web tiene múltiples páginas y objetivos (informar, contactar, etc.). Una landing page (o página de aterrizaje) tiene UN solo objetivo: que el usuario realice una acción deseada específica, como registrarse o comprar. Esto maximiza la tasa de conversión.",
 	},
 	{
 		question: "¿Qué son las 'páginas de destino'?",
 		answer:
-			"<strong>Páginas de destino</strong> y <strong>páginas de aterrizaje</strong> son lo mismo. Son páginas diseñadas específicamente para recibir el tráfico de <strong>campañas de marketing</strong> (ya sea desde <strong>redes sociales</strong>, anuncios de Google o un <strong>correo electrónico</strong>) y convertir a ese visitante en un <strong>cliente potencial</strong>.",
+			"Páginas de destino y páginas de aterrizaje son lo mismo. Son páginas diseñadas específicamente para recibir el tráfico de campañas de marketing (ya sea desde redes sociales, anuncios de Google o un correo electrónico) y convertir a ese visitante en un cliente potencial.",
 	},
 	{
 		question: "¿Cómo miden el éxito de una landing page?",
 		answer:
-			"Una <strong>landing page exitosa</strong> se mide por su <strong>tasa de conversión</strong> (cuántas personas realizan la <strong>llamada a la acción</strong>) y su <strong>tasa de rebote</strong> (cuántas personas se van sin interactuar). Nuestras páginas están optimizadas para maximizar la primera y minimizar la segunda.",
+			"Una landing page exitosa se mide por su tasa de conversión (cuántas personas realizan la llamada a la acción) y su tasa de rebote (cuántas personas se van sin interactuar). Nuestras páginas están optimizadas para maximizar la primera y minimizar la segunda.",
 	},
 ];
 
