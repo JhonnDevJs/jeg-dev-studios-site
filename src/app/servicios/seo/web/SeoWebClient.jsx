@@ -12,18 +12,18 @@ const faqs = [
 	{
 		question: "¿Qué es una 'auditoría SEO' y por qué la necesito?",
 		answer:
-			"Una <strong>auditoría SEO</strong> es un diagnóstico completo de tu sitio. Revisamos más de 100 factores técnicos, de contenido y de autoridad para encontrar por qué no estás rankeando. Es el primer paso obligatorio para cualquier <strong>estrategia de seo</strong> exitosa.",
+			"Una auditoría SEO es un diagnóstico completo de tu sitio. Revisamos más de 100 factores técnicos, de contenido y de autoridad para encontrar por qué no estás rankeando. Es el primer paso obligatorio para cualquier estrategia de seo exitosa.",
 	},
 	{
 		question: "¿Son un 'consultor SEO en México' o una 'agencia SEO' completa?",
 		answer:
-			"Somos una <strong>agencia SEO</strong> completa. Esto significa que no solo te damos un reporte (como haría un <strong>consultor SEO</strong>), sino que nuestro <strong>equipo especializado</strong> implementa los cambios, crea el contenido y ejecuta la estrategia para conseguir resultados.",
+			"Somos una agencia SEO completa. Esto significa que no solo te damos un reporte (como haría un consultor SEO), sino que nuestro equipo especializado implementa los cambios, crea el contenido y ejecuta la estrategia para conseguir resultados.",
 	},
 	{
 		question:
 			"¿Este servicio de posicionamiento web incluye la gestión de redes sociales?",
 		answer:
-			"No directamente. Este servicio se enfoca 100% en el <strong>tráfico orgánico</strong> desde <strong>motores de búsqueda</strong>. La gestión de <strong>redes sociales</strong> es parte de nuestros servicios de <strong>marketing digital</strong>, aunque el contenido que creamos para SEO puede ser reutilizado en tus perfiles.",
+			"No directamente. Este servicio se enfoca 100% en el tráfico orgánico desde motores de búsqueda. La gestión de redes sociales es parte de nuestros servicios de marketing digital, aunque el contenido que creamos para SEO puede ser reutilizado en tus perfiles.",
 	},
 ];
 

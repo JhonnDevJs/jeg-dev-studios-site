@@ -18,7 +18,7 @@ export default function SeoClient() {
 					"Construimos tu autoridad en todo el país. Ideal para e-commerce, empresas SaaS y marcas que buscan una audiencia nacional. Nos enfocamos en las palabras clave de alto volumen y en una estrategia de contenido que te posicione como líder de la industria.",
 				price: 1000,
 				currency: "MXN",
-				url: "/contacto",
+				url: "/servicios/seo/web",
 				buttonLabel: "Conocer más de SEO Web",
 				items: [
 					"Auditoría SEO Técnica Completa",
@@ -34,7 +34,7 @@ export default function SeoClient() {
 				description: `Si tus clientes están en tu ciudad o colonia, este es el servicio para ti. Optimizamos tu presencia digital para que aparezcas en el "Map Pack" de Google y en las búsquedas locales ("cerca de mí"), atrayendo clientes listos para comprar a tu puerta.`,
 				price: 1000,
 				currency: "MXN",
-				url: "/contacto",
+				url: "/servicios/seo/local",
 				buttonLabel: "Explorar SEO Local",
 				items: [
 					"Optimización de Google Business Profile (Google Maps)",
