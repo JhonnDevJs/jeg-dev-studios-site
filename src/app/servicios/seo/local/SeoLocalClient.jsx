@@ -12,17 +12,17 @@ const faqs = [
 	{
 		question: "¿Qué es Google My Business o Perfil de Google?",
 		answer:
-			"El <strong>Perfil de Google</strong> (antes conocido como <strong>Google My Business</strong> o GMB) es la herramienta gratuita de <strong>empresas de Google</strong> que te permite gestionar cómo aparece tu negocio local en <strong>Google Maps</strong> y en los <strong>resultados de búsqueda</strong>. Es la piedra angular de cualquier <strong>estrategia de posicionamiento</strong> local.",
+			"El Perfil de Google</strong> (antes conocido como Google My Business o GMB) es la herramienta gratuita de empresas de Google que te permite gestionar cómo aparece tu negocio local en Google Maps y en los resultados de búsqueda. Es la piedra angular de cualquier estrategia de posicionamiento local.",
 	},
 	{
 		question: "¿Cuánto tardo en ver resultados en Google Maps?",
 		answer:
-			"El <strong>SEO local</strong> suele ser más rápido que el SEO web nacional. Aunque depende de la competencia, generalmente puedes empezar a ver mejoras en tus <strong>posiciones en Google</strong> y en <strong>Google Maps</strong> en un plazo de 1 a 3 meses.",
+			"El SEO local suele ser más rápido que el SEO web nacional. Aunque depende de la competencia, generalmente puedes empezar a ver mejoras en tus posiciones en Google y en Google Maps en un plazo de 1 a 3 meses.",
 	},
 	{
 		question: "¿Este servicio incluye Google Ads o gestión de Redes Sociales?",
 		answer:
-			"No. Este servicio se enfoca 100% en el <strong>posicionamiento web</strong> orgánico. <strong>Google Ads</strong> es un servicio de publicidad de pago (SEM) y la gestión de <strong>redes sociales</strong> es parte de una estrategia de <strong>marketing digital</strong> más amplia, los cuales podemos cotizar por separado.",
+			"No. Este servicio se enfoca 100% en el posicionamiento web orgánico. Google Ads es un servicio de publicidad de pago (SEM) y la gestión de redes sociales es parte de una estrategia de marketing digital más amplia, los cuales podemos cotizar por separado.",
 	},
 ];
 
