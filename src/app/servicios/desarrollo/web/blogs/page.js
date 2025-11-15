@@ -1,17 +1,18 @@
 
 // --- 1. METADATOS DE LA PÁGINA ---
 export const metadata = {
-  title: "Servicio de Creación de Blogs Profesionales | JEG Dev Studios",
+  // Resuelve el error de <title> tag
+  title: "Servicio de Desarrollo de Blogs con CMS en Next.js | JEG Dev Studios",
   description:
-    "Servicio de desarrollo de blogs a medida. Creamos blogs profesionales en Next.js con CMS autoadministrable, optimizados para SEO y tu estrategia de contenidos.",
+    "Servicio de desarrollo de blogs a medida. Creamos un blog para tu empresa con un CMS (Blogger, WordPress o Next.js/Strapi). Optimizado para SEO y marketing de contenidos.",
   keywords:
-    "crear un blog profesional, servicio de desarrollo de blogs, desarrollo de blogs a medida, crear blog para empresa, blog con cms, blog en next.js",
+    "servicio de desarrollo de blogs, crear blog para empresa, blog con cms, blog en next.js, desarrollo de blogs a medida, crear un blog profesional",
   alternates: {
     canonical:
       "https://www.jegdevstudios.com/servicios/desarrollo/web/blogs",
   },
   openGraph: {
-    title: "JEG Dev Studios | Servicio de Creación de Blogs Profesionales",
+    title: "JEG Dev Studios | Servicio de Desarrollo de Blogs Profesionales",
     description:
       "Transforma tu estrategia de contenidos. Ofrecemos el servicio de desarrollo de blogs a medida, optimizados para SEO y autoadministrables.",
     url: "https://www.jegdevstudios.com/servicios/desarrollo/web/blogs",

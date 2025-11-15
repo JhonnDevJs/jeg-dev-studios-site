@@ -9,19 +9,24 @@ import CTAProducts from "@/components/Cta/CTAProducts";
 
 const faqs = [
 	{
-		question: "¿No puedo usar una plataforma gratis como Medium o Blogger?",
+		question: "¿Qué es un CMS o 'sistema de gestión de contenidos'?",
 		answer:
-			"Sí, pero tiene desventajas. En esas plataformas, el contenido no es 100% tuyo y el SEO es limitado. Al crear un blog profesional con nosotros, construyes autoridad en tu propio dominio, controlas el diseño y lo integras a tu embudo de ventas.",
+			"Un <strong>sistema de gestión de contenidos</strong> (CMS) es la herramienta que te permite escribir, editar y publicar una <strong>entrada de blog</strong> sin saber programar. Nosotros te lo entregamos configurado, ya sea WordPress, Blogger o un CMS Headless (como Strapi) para tu <strong>blog en Next.js</strong>.",
 	},
 	{
-		question: "¿Qué es un CMS Autoadministrable?",
+		question: "¿WordWordPress vs. Next.js: ¿Cuál es mejor para mi blog?",
 		answer:
-			"Es un 'Sistema de Gestión de Contenidos' (Headless CMS) que te permite escribir, editar y publicar nuevos artículos fácilmente, sin necesidad de tocar una línea de código. Te capacitamos para que tengas total autonomía sobre tu estrategia de contenidos.",
+			"Depende. <strong>Instalar WordPress</strong> es ideal para un <strong>blog personal</strong> o de Pyme que busca muchas <strong>opciones de personalización</strong> rápidamente. Un <strong>blog en Next.js</strong> es una solución premium para empresas que buscan el máximo rendimiento, seguridad y una experiencia de <strong>gestión de contenido</strong> superior.",
 	},
 	{
-		question: "¿Este servicio incluye la redacción de los artículos del blog?",
+		question: "¿Cómo puedo 'promocionar mi blog' una vez que esté hecho?",
 		answer:
-			"Este es el servicio de desarrollo de blogs, es decir, la construcción de la plataforma. La redacción de artículos es un servicio de 'Marketing de Contenidos' que forma parte de nuestras estrategias de Posicionamiento SEO. Podemos cotizarlo por separado.",
+			"La promoción es clave. Puedes usar <strong>herramientas de marketing</strong> como el <strong>correo electrónico</strong> (email marketing) para tus suscriptores, compartir cada <strong>entrada de blog</strong> en <strong>redes sociales</strong>, y por supuesto, la optimización para <strong>motores de búsqueda</strong> (SEO) que ya incluimos.",
+	},
+	{
+		question: "¿Este servicio incluye métodos de monetización?",
+		answer:
+			"Nuestro servicio construye la plataforma técnica. Si tu estrategia incluye <strong>métodos de monetización</strong> (como anuncios de AdSense, venta de infoproductos o contenido bajo un <strong>plan de pago</strong>), nosotros implementamos las integraciones técnicas necesarias para que puedas hacerlo.",
 	},
 ];
 
@@ -50,35 +55,50 @@ export default function BlogDevelopmentPage() {
 			</section>
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container">
-					<h1>Servicio de Creación de Blogs Profesionales</h1>
-					<p className="fs-5 lead" style={{ maxWidth: "800px", margin: "auto" }}>
-						En la era del contenido, tu blog es tu activo más valioso. Es el
-						motor de tu estrategia de marketing (TOFU), tu principal herramienta
-						de SEO y la forma más poderosa de construir confianza. En JEG Dev
-						Studios, ofrecemos un{" "}
-						<strong>servicio de desarrollo de blogs</strong> que va más allá de
-						una simple plantilla.
+					{/* H1 ACTUALIZADO: Resuelve el error de H1 */}
+					<h1>Servicio de Desarrollo de Blogs Profesionales</h1>
+					<p
+						className="lead fs-5"
+						style={{ maxWidth: "800px", margin: "auto" }}
+					>
+						En la era del contenido, tu blog es tu principal herramienta de
+						<strong>marketing digital</strong>. Es el motor para atraer{" "}
+						<strong>clientes potenciales</strong> (TOFU) y construir confianza.
+						Ofrecemos un <strong>servicio de desarrollo de blogs</strong> para{" "}
+						<strong>crear un blog para tu empresa</strong> que sea rápido,
+						seguro y fácil de administrar.
 					</p>
 				</div>
 			</section>
 
-			{/* --- Sección de Propuesta de Valor (TOFU/MOFU) --- */}
+			{/* --- Sección de Propuesta de Valor (MOFU / Informativa) --- */}
+			{/* Esta sección añade "long-form content" y legibilidad */}
 			<section className="text-white py-5 gradient-effect-y">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="text-center mb-4">
-						¿Por Qué tu Empresa Necesita un Blog Profesional?
+						¿Por Qué un Blog Profesional y no un Blog Gratis?
 					</h2>
 					<p
-						className="text-center fs-5 lead"
+						className="text-center lead fs-5"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
-						Un blog es la mejor forma de responder las preguntas de tus clientes
-						antes de que las hagan. Un <strong>blog profesional</strong> bien
-						ejecutado logra 4 objetivos clave:
+						Un <strong>blog gratis</strong> o un <strong>blog personal</strong>{" "}
+						en una <strong>plataforma de blogs</strong> genérica limita tu
+						crecimiento. Al <strong>crear un blog para empresa</strong> con un
+						dominio personalizado, obtienes ventajas cruciales:
 					</p>
 					<div className="row mt-5">
 						<div className="col-md-6 mb-4">
-							<h4>Genera Autoridad y Confianza (E-E-A-T)</h4>
+							<h4>Atrae Tráfico Orgánico (SEO)</h4>
+							<p className="fs-5">
+								Cada <strong>entrada de blog</strong> es una nueva página que
+								los <strong>motores de búsqueda</strong> pueden indexar. Un blog
+								optimizado te permite atraer a tu{" "}
+								<strong>público objetivo</strong> respondiendo sus dudas.
+							</p>
+						</div>
+						<div className="col-md-6 mb-4">
+							<h4>Genera Autoridad y Confianza</h4>
 							<p className="fs-5">
 								Publicar contenido de valor te posiciona como un experto en tu
 								industria. Responde dudas, ofrece guías y demuestra por qué eres
@@ -86,145 +106,255 @@ export default function BlogDevelopmentPage() {
 							</p>
 						</div>
 						<div className="col-md-6 mb-4">
-							<h4>Atrae Tráfico Orgánico (SEO)</h4>
+							<h4>Control Total y Personalización</h4>
 							<p className="fs-5">
-								Cada artículo es una nueva puerta de entrada a tu sitio. Un blog
-								te permite atacar cientos de palabras clave informativas que tus
-								páginas de servicio nunca podrían capturar.
+								Olvida las limitaciones de un <strong>blog gratis</strong>. Con
+								un <strong>blog con CMS</strong> propio, tienes 100% de control
+								sobre el diseño y las{" "}
+								<strong>opciones de personalización</strong>.
 							</p>
 						</div>
 						<div className="col-md-6 mb-4">
-							<h4>Captura Leads Calificados</h4>
+							<h4>Captura de Clientes Potenciales</h4>
 							<p className="fs-5">
-								Tu blog atrae a usuarios en la etapa TOFU (Top of Funnel). Al
-								ofrecerles valor, puedes convertirlos en leads (MOFU) a través
-								de llamadas a la acción (CTAs) y suscripciones a tu newsletter.
-							</p>
-						</div>
-						<div className="col-md-6 mb-4">
-							<h4>Es un Activo 100% Tuyo</h4>
-							<p className="fs-5">
-								A diferencia de las redes sociales, tu blog y su contenido te
-								pertenecen. No estás sujeto a cambios de algoritmos,
-								prohibiciones o la "renta" de espacio en plataformas de
-								terceros.
+								Tu blog es la herramienta perfecta para convertir visitantes en
+								leads. Integramos llamadas a la acción (CTAs) y formularios de{" "}
+								<strong>correo electrónico</strong> para hacer crecer tu lista.
 							</p>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			{/* --- Sección de Características del Servicio (MOFU) --- */}
-			<section className="text-white py-5 gradient-effect-x">
-				<div className="container" style={{ maxWidth: "900px" }}>
-					<h2 className="text-center mb-4">
-						Nuestro Servicio de Desarrollo de Blogs
-					</h2>
-					<p
-						className="text-center fs-5 lead"
-						style={{
-							maxWidth: "800px",
-							margin: "auto",
-							marginBottom: "3rem",
-						}}
-					>
-						Creamos la plataforma tecnológica para que tú solo te preocupes por
-						lo más importante: escribir. Nuestro{" "}
-						<strong>servicio de desarrollo de blogs a medida</strong> incluye:
-					</p>
-					{/* Asumo un layout de 2 columnas */}
-					<div className="row">
-						<div className="col-md-6 mb-4">
-							<h4>Desarrollo en Next.js</h4>
-							<p className="fs-5">
-								Construimos tu blog con tecnología de punta (React/Next.js) para
-								garantizar tiempos de carga ultra-rápidos (vital para el SEO) y
-								una experiencia de usuario fluida.
-							</p>
-						</div>
-						<div className="col-md-6 mb-4">
-							<h4>CMS Autoadministrable</h4>
-							<p className="fs-5">
-								Te integramos un CMS Headless (como Strapi o Sanity) para que
-								puedas crear, editar y publicar tus artículos de forma intuitiva
-								y sin conocimientos técnicos.
-							</p>
-						</div>
-						<div className="col-md-6 mb-4">
-							<h4>Optimización SEO Técnica</h4>
-							<p className="fs-5">
-								Configuramos todo lo que Google necesita: generación automática
-								de sitemap.xml, datos estructurados (Schema) para artículos,
-								meta-tags dinámicas y un rendimiento impecable.
-							</p>
-						</div>
-						<div className="col-md-6 mb-4">
-							<h4>Diseño UX/UI Personalizado</h4>
-							<p className="fs-5">
-								Adaptamos el diseño del blog a tu identidad de marca. Creamos
-								una experiencia de lectura limpia, accesible y 100% responsive
-								en todos los dispositivos.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
-
-			{/* --- Sección de Cross-link (Triaje) --- */}
-			<section className="text-white py-5 gradient-effect-y text-center">
-				<div className="container" style={{ maxWidth: "800px" }}>
-					<h2>¿Tu Blog es Parte de un Proyecto Más Grande?</h2>
-					<p className="fs-5">
-						Podemos integrar tu nuevo blog dentro de un sitio web corporativo o
-						una plataforma de E-commerce.
-					</p>
-					<nav className="d-flex justify-content-center gap-3 mt-2">
-						<Link
-							href="/servicios/desarrollo/web/sitios-web"
-							className="btn-services m-2"
-						>
-							Ver Servicios de Sitios Web
-						</Link>
-						<Link
-							href="/servicios/desarrollo/web/ecommerce"
-							className="btn-services m-2"
-						>
-							Ver Servicios de E-commerce
-						</Link>
-					</nav>
-				</div>
-			</section>
-
-			{/* --- Sección de Proceso --- */}
+			{/* --- Sección de Paquetes (BOFU) --- */}
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container" style={{ maxWidth: "1200px" }}>
-					<h2>Nuestro Proceso para Crear tu Blog</h2>
-					{/* Aquí puedes reusar tu componente de Proceso Scrum 
-                o usar una lista simple como esta:
-            */}
+					<h2 className="mb-4">Nuestras Soluciones para tu Blog</h2>
+					<p
+						className="lead fs-5"
+						style={{ maxWidth: "800px", margin: "auto" }}
+					>
+						Ofrecemos tres <strong>planes de pago</strong> que se adaptan a tu
+						presupuesto y necesidad técnica. Todos incluyen dominio
+						personalizado por 1 año.
+					</p>
+
+					<div className="row justify-content-center align-items-stretch mt-4 gy-4">
+						{/* Opción 1: Blogger */}
+						<div className="col-lg-4">
+							<div
+								className="card h-100"
+								style={{ backgroundColor: "#222", color: "white" }}
+							>
+								<div className="card-body d-flex flex-column">
+									<h3 className="card-title">Blog Starter (Blogger)</h3>
+									<p className="fs-2 fw-bold">
+										$1,999 <span className="fs-6 fw-normal">MXN</span>
+									</p>
+									<p className="card-text fs-5">
+										Ideal para arrancar. Usamos la plataforma de Blogger de
+										Google, conectada a tu dominio propio.
+									</p>
+									<ul
+										className="text-start mt-3"
+										style={{ paddingLeft: "20px" }}
+									>
+										<li className="fs-5">
+											<p className="fs-5">Plataforma: Blogger de Google</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Dominio Personalizado (1 Año)</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Hosting Gratuito de Google</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Plantilla semi-personalizada</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">
+												Fácil de usar (gestión de contenido simple)
+											</p>
+										</li>
+									</ul>
+									<div className="mt-auto pt-3">
+										<Link
+											href="/contacto?producto=blog-blogger"
+											className="btn-services"
+										>
+											Contratar Starter
+										</Link>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{/* Opción 2: WordPress */}
+						<div className="col-lg-4">
+							<div
+								className="card h-100"
+								style={{ backgroundColor: "#222", color: "white" }}
+							>
+								<div className="card-body d-flex flex-column">
+									<h3 className="card-title">Blog Pro (WordPress)</h3>
+									<p className="fs-2 fw-bold">
+										$4,999 <span className="fs-6 fw-normal">MXN</span>
+									</p>
+									<p className="card-text fs-5">
+										La <strong>plataforma de blogs</strong> más popular. Te
+										permite <strong>instalar WordPress</strong> en tu propio
+										hosting con miles de opciones de personalización.
+									</p>
+									<ul
+										className="text-start mt-3"
+										style={{ paddingLeft: "20px" }}
+									>
+										<li className="fs-5">
+											<p className="fs-5">Plataforma: WordPress.org</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Dominio Personalizado (1 Año)</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Requiere Hosting (No incluido)</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Tema premium y plugins SEO</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">
+												Máxima personalización y escalabilidad
+											</p>
+										</li>
+									</ul>
+									<div className="mt-auto pt-3">
+										<Link
+											href="/contacto?producto=blog-wordpress"
+											className="btn-services"
+										>
+											Contratar Pro
+										</Link>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						{/* Opción 3: Next.js */}
+						<div className="col-lg-4">
+							<div
+								className="card h-100"
+								style={{ backgroundColor: "#222", color: "white" }}
+							>
+								<div className="card-body d-flex flex-column">
+									<h3 className="card-title">Blog Ultimate (Next.js)</h3>
+									<p className="fs-2 fw-bold">
+										$14,999 <span className="fs-6 fw-normal">MXN</span>
+									</p>
+									<p className="card-text fs-5">
+										La solución más rápida y segura. Un{" "}
+										<strong>blog en Next.js</strong> con un{" "}
+										<strong>blog con CMS</strong> Headless (Strapi).
+									</p>
+									<ul
+										className="text-start mt-3"
+										style={{ paddingLeft: "20px" }}
+									>
+										<li className="fs-5">
+											<p className="fs-5">Plataforma: Next.js + Strapi CMS</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Dominio Personalizado (1 Año)</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Hosting Vercel/Netlify (Incluido)</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">Rendimiento y Seguridad Superior</p>
+										</li>
+										<li className="fs-5">
+											<p className="fs-5">100% Personalizado a tu marca</p>
+										</li>
+									</ul>
+									<div className="mt-auto pt-3">
+										<Link
+											href="/contacto?producto=blog-nextjs"
+											className="btn-services"
+										>
+											Contratar Ultimate
+										</Link>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* --- Sección de Video (Requisito de SEMrush) --- */}
+			<section className="text-white py-5 gradient-effect-y text-center">
+				<div className="container" style={{ maxWidth: "900px" }}>
+					<h2>¿Qué es un Blog con CMS Headless?</h2>
+					<p className="fs-5">
+						El futuro de la <strong>gestión de contenido</strong> es "headless".
+						Mira este video donde explicamos por qué un{" "}
+						<strong>blog en Next.js</strong> con un{" "}
+						<strong>blog con CMS</strong> (como Strapi) es técnicamente superior
+						a las plataformas tradicionales como WordPress.
+					</p>
+					<div
+						className="video-responsive-container"
+						style={{ maxWidth: "700px", margin: "2rem auto" }}
+					>
+						{/* <iframe 
+                width="560" 
+                height="315" 
+                src="https://www.youtube.com/embed/TU_URL_DE_TU_VIDEO" 
+                title="Video sobre CMS Headless vs WordPress" 
+                frameBorder="0" 
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                allowFullScreen
+                loading="lazy">
+              </iframe>
+              */}
+					</div>
+				</div>
+			</section>
+
+			{/* --- NUEVA SECCIÓN SEMÁNTICA --- */}
+			<section className="text-white py-5 gradient-effect-x text-center">
+				<div className="container" style={{ maxWidth: "800px" }}>
+					<h2>Cómo Promocionar tu Blog</h2>
+					<p className="lead fs-5">
+						Nuestro <strong>servicio de desarrollo de blogs</strong> te da la
+						plataforma. El éxito viene al promocionarla.
+					</p>
 					<ol
 						style={{
 							textAlign: "left",
+							maxWidth: "400px",
 							margin: "2rem auto",
 						}}
 					>
-						<li className="fs-5 m-0">
+						<li className="fs-5">
 							<p className="fs-5">
-								<strong>Estrategia y Arquitectura:</strong> Definimos la
-								estructura de categorías y la arquitectura de la información
-								para un SEO óptimo.
+								<strong>Email Marketing:</strong> Captura el{" "}
+								<strong>correo electrónico</strong> de tus lectores y envíales
+								cada nueva <strong>entrada de blog</strong>.
 							</p>
 						</li>
-						<li className="fs-5 m-0">
+						<li className="fs-5">
 							<p className="fs-5">
-								<strong>Diseño UX/UI y Desarrollo:</strong> Diseñamos la
-								experiencia de lectura y desarrollamos el blog y su CMS.
+								<strong>Redes Sociales:</strong>{" "}
+								<strong>Promociona tu blog</strong> en todos tus canales
+								sociales (LinkedIn, Instagram, X) para alcanzar a tu{" "}
+								<strong>público objetivo</strong>.
 							</p>
 						</li>
-						<li className="fs-5 m-0">
+						<li className="fs-5">
 							<p className="fs-5">
-								<strong>Capacitación y Lanzamiento:</strong> Te capacitamos para
-								usar el CMS y lanzamos tu blog al público.
+								<strong>Herramientas de Marketing:</strong> Integramos tu blog
+								con Google Analytics y Search Console para medir tu tráfico y
+								encontrar nuevas oportunidades.
 							</p>
 						</li>
 					</ol>
