@@ -79,21 +79,18 @@ export default function DevWebClient() {
 			</section>
 
 			{/* Sección de Características del Servicio */}
-			<section className="text-white py-5 gradient-effect-x">
+			<section className="text-white py-5 gradient-effect-y">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="text-center mb-4">
 						Nuestro Servicio de Sitios Web: Una Solución Integral
 					</h2>
 					<p
-						className="text-center"
+						className="text-center fs-5"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
-						<p className="fs-5">
-							Entendemos que una <strong>pequeña empresa</strong> necesita más
-							que un folleto digital. Nuestros{" "}
-							<strong>servicios de diseño</strong> y desarrollo cubren todo el
-							ciclo de vida de tu proyecto.
-						</p>
+						Entendemos que una <strong>pequeña empresa</strong> necesita más que
+						un folleto digital. Nuestros <strong>servicios de diseño</strong> y
+						desarrollo cubren todo el ciclo de vida de tu proyecto.
 					</p>
 					<div className="row mt-5">
 						<div className="col-md-6 mb-4">
@@ -145,7 +142,7 @@ export default function DevWebClient() {
 			</section>
 
 			{/* --- Sección de Video (Se mantiene) --- */}
-			<section className="text-white py-5 gradient-effect-y text-center">
+			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2>La Diferencia: Plantilla vs. Desarrollo a Medida (Video)</h2>
 					<p className="fs-5">
@@ -162,7 +159,7 @@ export default function DevWebClient() {
 					</div>
 				</div>
 			</section>
-			<section className="text-white py-5 gradient-effect-x">
+			<section className="text-white py-5 gradient-effect-y">
 				<div className="container text-center" style={{ maxWidth: "800px" }}>
 					<h2>¿Qué Más Necesitas? Un Ecosistema Digital Completo</h2>
 					<p className="lead fs-5">
@@ -193,7 +190,7 @@ export default function DevWebClient() {
 			</section>
 
 			{/* Sección de Cross-link (Triaje) */}
-			<section className="text-white py-5 gradient-effect-y">
+			<section className="text-white py-5 gradient-effect-x">
 				<div className="container text-center" style={{ maxWidth: "1200px" }}>
 					<h2>¿Buscas una Tienda Online o una Aplicación Web?</h2>
 					<p className="fs-5">
