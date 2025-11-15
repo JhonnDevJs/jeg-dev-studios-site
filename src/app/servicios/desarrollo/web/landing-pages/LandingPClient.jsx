@@ -53,17 +53,17 @@ export default function LandingPageDevelopmentPage() {
 			</section>
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container">
-					<h1>Desarrollo de Landing Pages de Alta Conversión</h1>
+					<h1>Diseño de Landing Page de Alta Conversión</h1>
 					<p
 						className="fs-5 lead"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
-						¿Estás invirtiendo en <strong>campañas de marketing</strong> pero no
-						ves resultados? El problema podría no ser tu anuncio, sino tu{" "}
+						¿Inviertes en <strong>campañas de marketing</strong> pero no ves
+						resultados? El problema podría no ser tu anuncio, sino tu{" "}
 						<strong>página de aterrizaje</strong>. Ofrecemos un servicio experto
-						de <strong>desarrollo de landing pages</strong> 100% enfocadas en
-						una sola cosa: mejorar tu <strong>tasa de conversión</strong> y
-						capturar más <strong>clientes potenciales</strong>.
+						de <strong>creación de páginas de aterrizaje</strong> enfocado en
+						una sola cosa: <strong>aumentar las conversiones</strong> y capturar
+						más <strong>clientes potenciales</strong>.
 					</p>
 				</div>
 			</section>
@@ -72,7 +72,7 @@ export default function LandingPageDevelopmentPage() {
 			<section className="text-white py-5 gradient-effect-y">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="text-center mb-4">
-						¿Desarrollo a Medida vs. un `Creador de Landing Page`?
+						La Diferencia: Un Creador Gratuito vs. un Diseño Optimizado
 					</h2>
 					<p
 						className="fs-5 text-center lead"
@@ -121,16 +121,63 @@ export default function LandingPageDevelopmentPage() {
 					</div>
 				</div>
 			</section>
+			<section className="text-white py-5 gradient-effect-x text-center">
+				<div className="container" style={{ maxWidth: "900px" }}>
+					<h2 className="mb-4">La Anatomía de una Landing Page Efectiva</h2>
+					<p className="lead" style={{ maxWidth: "800px", margin: "auto" }}>
+						Para <strong>optimizar una landing page</strong>, no basta con un
+						diseño bonito. Aplicamos una estructura probada, diseñada para{" "}
+						<strong>captar la atención</strong> de tu{" "}
+						<strong>público objetivo</strong> y guiarlo hacia la{" "}
+						<strong>toma de decisiones</strong>.
+					</p>
+					<div className="row mt-5 text-start">
+						<div className="col-md-6 mb-3">
+							<h4>1. Título de Impacto (Hook)</h4>
+							<p>
+								El primer mensaje que ve tu <strong>público objetivo</strong>.
+								Debe ser claro, conciso y prometer la solución a su problema
+								inmediatamente.
+							</p>
+						</div>
+						<div className="col-md-6 mb-3">
+							<h4>2. Descripción Clara de Beneficios</h4>
+							<p>
+								No listamos características, vendemos beneficios. Explicamos
+								cómo tu <strong>producto o servicio</strong> mejora la vida del
+								cliente, ayudándolo a <strong>tomar decisiones</strong>.
+							</p>
+						</div>
+						<div className="col-md-6 mb-3">
+							<h4>3. Un Único "Call to Action" (CTA)</h4>
+							<p>
+								Una <strong>landing page efectiva</strong> tiene UN solo{" "}
+								<strong>call to action</strong> (llamada a la acción). Ya sea
+								"Comprar", "Registrarse" o "Descargar", todos los elementos de
+								la página apuntan a esta única acción.
+							</p>
+						</div>
+						<div className="col-md-6 mb-3">
+							<h4>4. Prueba Social (Confianza)</h4>
+							<p>
+								Integramos testimonios, reseñas o logos de clientes para
+								construir confianza. Esto reduce la fricción y es clave para{" "}
+								<strong>aumentar las conversiones</strong>.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
 
 			{/* --- Sección de Video (Requisito de SEMrush) --- */}
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container" style={{ maxWidth: "900px" }}>
-					<h2>La Anatomía de una Landing Page Exitosa</h2>
+					<h2>Cómo Optimizar tu Landing Page</h2>
 					<p className="fs-5">
 						Creamos <strong>páginas de destino</strong> que siguen una
 						estructura probada para convertir. Mira este video donde explicamos
-						los 5 elementos clave que toda <strong>landing page exitosa</strong>{" "}
-						debe tener.
+						los 5 elementos clave que usamos para{" "}
+						<strong>optimizar una landing page</strong>.
 					</p>
 					<div
 						className="video-responsive-container"
@@ -149,17 +196,14 @@ export default function LandingPageDevelopmentPage() {
 						className="fs-5 lead"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
-						Ofrecemos dos caminos para crear tu página de aterrizaje,
+						Ofrecemos dos caminos para tu{" "}
+						<strong>landing page para campañas de marketing</strong>,
 						dependiendo de tu necesidad y presupuesto.
 					</p>
 
 					<div className="row justify-content-center align-items-stretch mt-4 gy-4">
 						{/* Opción 1: Paquete Google Sites */}
 						<div className="col-lg-5">
-							{/* Aquí deberías usar tu componente <CardProduct> 
-                  pasando los datos de tu producto.
-                  Esto es solo un ejemplo visual de la estructura:
-                */}
 							<div
 								className="card h-100"
 								style={{ backgroundColor: "#222", color: "white" }}
@@ -172,7 +216,7 @@ export default function LandingPageDevelopmentPage() {
 									<p className="card-text">
 										Lanza tu idea o promociona un servicio específico
 										rápidamente. Una página de aterrizaje optimizada para la
-										conversión, construida sobre una plataforma fiable.
+										conversión, construida sobre Google Sites.
 									</p>
 									<ul
 										className="text-start mt-3"
@@ -183,11 +227,11 @@ export default function LandingPageDevelopmentPage() {
 										<li>Diseño responsivo</li>
 										<li>Posicionamiento inicial en Google (SEO básico)</li>
 										<li>Diseño adaptado a la marca del cliente</li>
-										<li>Hasta 5 secciones para tu página (landing)</li>
+										<li>Hasta 5 secciones para tu página</li>
 									</ul>
 									<div className="mt-auto pt-3">
 										<Link
-											href="/servicios/desarrollo/web/"
+											href="/contacto?producto=landing-page-profesional"
 											className="btn-services"
 										>
 											Contratar ahora
@@ -208,12 +252,12 @@ export default function LandingPageDevelopmentPage() {
 										Landing Page de Alto Rendimiento
 									</h3>
 									<p className="fs-2 fw-bold">
-										Desde $4,999 <span className="fs-6 fw-normal">MXN</span>
+										Desde $17,999 <span className="fs-6 fw-normal">MXN</span>
 									</p>
 									<p className="card-text">
-										Para campañas de marketing serias. Desarrollada en Next.js
-										(React) con performance +90 garantizado para una tasa de
-										conversión y SEO imbatibles.
+										La solución definitiva en{" "}
+										<strong>diseño de landing page de alta conversión</strong>.
+										Desarrollada en Next.js con performance +90 garantizado.
 									</p>
 									<ul
 										className="text-start mt-3"
@@ -227,7 +271,10 @@ export default function LandingPageDevelopmentPage() {
 										<li>Hosting + Dominio (1 Año GRATIS)</li>
 									</ul>
 									<div className="mt-auto pt-3">
-										<Link href="/contacto" className="btn-services">
+										<Link
+											href="/contacto?producto=landing-page-performance"
+											className="btn-services"
+										>
 											Cotizar Proyecto
 										</Link>
 									</div>
