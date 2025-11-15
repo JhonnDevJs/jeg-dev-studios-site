@@ -77,12 +77,27 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/saber-mas/app-dev',
+        destination: '/servicios/desarrollo/web',
+        permanent: true,
+      },
+      {
         source: '/services/desarrollo-movil',
         destination: '/servicios/desarrollo/apps',
         permanent: true,
       },
       {
+        source: '/saber-mas/app-dev',
+        destination: '/servicios/desarrollo/apps',
+        permanent: true,
+      },
+      {
         source: '/services/desarrollo-software',
+        destination: '/servicios/desarrollo/software-empresarial',
+        permanent: true,
+      },
+      {
+        source: '/saber-mas/soft-dev',
         destination: '/servicios/desarrollo/software-empresarial',
         permanent: true,
       },
