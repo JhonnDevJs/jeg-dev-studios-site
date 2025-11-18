@@ -27,7 +27,7 @@ export default function DevWebClient() {
 				id: "invitacion-digital",
 				type: "product",
 				name: "Invitaciones Digitales",
-				price: 2999,
+				price: 299,
 				currency: "MXN",
 				labelBtn: "Contratar ahora",
 				isPriceFixed: true,
