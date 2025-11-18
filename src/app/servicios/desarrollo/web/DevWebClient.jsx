@@ -63,6 +63,7 @@ export default function DevWebClient() {
 					"Posicionamiento inicial en Google (SEO básico)",
 					"Diseño adaptado a la marca del cliente",
 					"Hasta 5 secciones para tu página (landing)",
+					"Entrega en 3 a 5 días",
 				],
 				urlInfo: "/servicios/desarrollo/web/landing-pages",
 				buttonLabelInfo: "Conocer más sobre el servicio",
@@ -84,6 +85,7 @@ export default function DevWebClient() {
 					"Hosting Gratuito (en Google Sites)",
 					"Diseño Responsivo y adaptado a la marca",
 					"SEO Básico (Posicionamiento inicial)",
+					"Entrega en 5 a 7 días",
 				],
 				urlInfo: "/servicios/desarrollo/web/sitios-web",
 				buttonLabelInfo: "Conocer más sobre el servicio",
@@ -442,19 +444,21 @@ export default function DevWebClient() {
 					]}
 				/>
 			</section>
-			<CTAProducts
-				title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
-				paragraph={
-					"No te preocupes, en JEG Dev Studios desarrollamos soluciones 100% personalizadas. Cuéntanos tu idea y te ayudaremos a crear un proyecto a tu medida, con todo lo que realmente necesitas y nada que no."
-				}
-				links={[
-					{
-						label: "Solicita una cotización personalizada",
-						link: "/contacto",
-						type: "services", // Puedes usar 'services' o 'outline'
-					},
-				]}
-			/>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+				<CTAProducts
+					title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
+					paragraph={
+						"No te preocupes, en JEG Dev Studios desarrollamos soluciones 100% personalizadas. Cuéntanos tu idea y te ayudaremos a crear un proyecto a tu medida, con todo lo que realmente necesitas y nada que no."
+					}
+					links={[
+						{
+							label: "Solicita una cotización personalizada",
+							link: "/contacto",
+							type: "services", // Puedes usar 'services' o 'outline'
+						},
+					]}
+				/>
+			</section>
 			<FAQ
 				faqs={faqs}
 				subtitle="Resuelve tus dudas sobre nuestros paquetes de desarrollo web."
