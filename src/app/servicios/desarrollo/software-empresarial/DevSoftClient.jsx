@@ -1,3 +1,4 @@
+// Ruta: /servicios/desarrollo/software-empresarial/page.jsx
 "use client";
 import { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -10,10 +11,12 @@ import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 import Image from "next/image";
+// Asegúrate de importar tus imágenes correctamente
 import imgSoftProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "./DevSoftClient.css";
@@ -21,6 +24,7 @@ import "./DevSoftClient.css";
 export default function DevSoftClient() {
 	const services = useMemo(
 		() => [
+			// ... (Tus paquetes se mantienen igual, son buenos)
 			{
 				id: "solucion_basica",
 				name: "Solución Básica",
@@ -118,8 +122,8 @@ export default function DevSoftClient() {
 			"Servicios de desarrollo de software a medida: CRMs, ERPs y sistemas empresariales.",
 		image:
 			"https://www.jegdevstudios.com/img-SEO/og-background-serv-dev-soft.webp",
-		ratingValue: "4.9", // <-- NUEVO
-		reviewCount: "1",
+		// ratingValue: "4.9", // Solo si tienes reseñas reales visibles
+		// reviewCount: "1",
 	};
 
 	const faqs = [
@@ -127,110 +131,131 @@ export default function DevSoftClient() {
 			question:
 				"¿Qué diferencia hay entre ustedes y otra empresa de desarrollo de software en CDMX?",
 			answer:
-				"Nuestra diferencia es el enfoque ágil y la transparencia. Como una empresa de desarrollo de software en CDMX con un proceso basado en Scrum, te involucramos en cada etapa. Ves avances funcionales cada dos semanas, asegurando que el producto final es exactamente lo que tu operación necesita.",
+				"Nuestra diferencia es el enfoque ágil y la transparencia. Como una <strong>empresa de desarrollo de software en México</strong> con un proceso basado en Scrum, te involucramos en cada etapa, asegurando soluciones de <strong>alta calidad</strong>.",
 		},
 		{
-			question:
-				"¿Cuál es la diferencia entre 'Software de escritorio' y 'App web local'?",
+			question: "¿Cómo ayudan a reducir los costos operativos?",
 			answer:
-				"El software de escritorio se instala y ejecuta directamente en un ordenador (Windows, macOS). La app web local funciona desde un navegador dentro de tu red interna, sin necesidad de internet, lo que facilita el acceso desde varios dispositivos conectados a la misma red.",
+				"Al implementar <strong>soluciones tecnológicas</strong> a medida, automatizamos tareas repetitivas y optimizamos tus procesos. Esto te permite <strong>reducir los costos</strong> operativos y mejorar la eficiencia general de tu negocio.",
 		},
 		{
 			question:
 				"Si empiezo con una 'Solución Básica', ¿puedo mejorarla después?",
 			answer:
-				"Sí. Todos nuestros desarrollos son modulares y escalables. Puedes empezar con un módulo y, a medida que tu negocio crezca, podemos añadir más funcionalidades, integrar más usuarios o migrar tu sistema a la nube sin problemas.",
+				"Sí. Todos nuestros desarrollos son modulares. Puedes empezar con un módulo y escalar hacia una <strong>transformación digital</strong> completa, integrando incluso <strong>inteligencia artificial</strong> en el futuro.",
 		},
 		{
-			question:
-				"¿Qué significa 'integraciones externas' en la Solución Profesional?",
+			question: "¿Qué tecnologías avanzadas utilizan?",
 			answer:
-				"Significa que podemos conectar tu software con otras herramientas que ya uses, como sistemas de facturación electrónica (SAT), plataformas de pago, CRMs (como Salesforce), o cualquier otra API que necesites para centralizar tus operaciones.",
+				"Utilizamos <strong>tecnologías avanzadas</strong> como React, Node.js y bases de datos en la nube para darte una <strong>ventaja competitiva</strong>. También desarrollamos <strong>aplicaciones móviles</strong> complementarias si tu operación lo requiere.",
 		},
 		{
-			question: "¿Ofrecen capacitación y soporte para el software?",
+			question: "¿Ofrecen servicios de soporte y mantenimiento?",
 			answer:
-				"Sí. Los paquetes más avanzados incluyen capacitación inicial para tu equipo. Además, todos los paquetes cuentan con garantía y ofrecemos planes de soporte y mantenimiento post-entrega para asegurar el funcionamiento continuo de tu sistema.",
+				"Sí. <strong>Ofrecemos servicios</strong> de soporte continuo para asegurar que tu software siga funcionando perfectamente y se adapte a los cambios de tu empresa.",
 		},
 	];
 
 	const handleWhatsAppRedirect = (productName) => {
 		const message = `Hola, estoy interesado en la solución de software "${productName}". ¿Podrían darme más información?`;
-		// Reemplaza con tu número de WhatsApp en formato internacional
 		const whatsappLink = `https://wa.me/5215512197135?text=${encodeURIComponent(
 			message
 		)}`;
 		window.open(whatsappLink, "_blank");
 	};
+
 	return (
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-soft" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-dev-soft" />
 			<StructuredData
 				data={services}
-				type="Product"
+				type="Service" // CORREGIDO a Service
 				idPage="service-dev-soft"
 				serviceInfo={softServiesInfo}
 			/>
+
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/banners/Christmas/Software.webp"
-					alt="Conoce nuestros servicios de desarrollo de software empresarial"
+					alt="Servicio de desarrollo de software empresarial en México"
 					width={2000}
 					height={600}
 					style={{ width: "100%", height: "auto" }}
+					priority
 				/>
 			</section>
+
+			{/* SECCIÓN H1 OPTIMIZADA */}
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<h1 className="display-1 text-center text-white">
-					Tu Empresa de Desarrollo de Software Empresarial en México
+					Servicio de Desarrollo de Software Empresarial
 				</h1>
 				<p className="lead w-100 px-3 px-md-5">
-					En JEG Dev Studios somos una empresa de desarrollo de software en
-					México con un enfoque 100% a medida. Transformamos tus operaciones con
-					un servicio de desarrollo de software que resuelve problemas reales,
-					desde sistemas de inventario hasta CRMs y ERPs robustos diseñados para
-					tu flujo de trabajo.
+					En JEG Dev Studios somos una{" "}
+					<strong>empresa de desarrollo de software en México</strong>
+					con un enfoque 100% a medida. Transformamos tus operaciones con{" "}
+					<strong>soluciones tecnológicas</strong>
+					que resuelven problemas reales, impulsando tu{" "}
+					<strong>transformación digital</strong>.
 				</p>
-				<h2 className="text-center text-white">
-					¿Qué Hace una Empresa de Desarrollo de Software?
-				</h2>
-				<p className="lead w-100 px-3 px-md-5">
-					A diferencia de un software "enlatado" que te obliga a cambiar tus
-					procesos, una fábrica de software como JEG Dev Studios crea soluciones
-					desde cero. No te adaptas al software; el software se adapta a ti.
-					¿Buscas empresa de software ejemplos o fábrica de software ejemplos?
-					Creamos:
-				</p>
-				<ul className="fs-5 text-start mx-auto" style={{ maxWidth: "600px" }}>
-					<li className="mb-3">
-						<p>Sistemas de Gestión de Clientes (CRM) personalizados.</p>
-					</li>
-					<li className="mb-3">
-						<p>Plataformas de Planificación de Recursos (ERP) a medida.</p>
-					</li>
-					<li className="mb-3">
-						<p>Software de control de inventarios, almacén y logística.</p>
-					</li>
-					<li>
-						<p>Sistemas de facturación y puntos de venta (POS).</p>
-					</li>
-					<li>
-						<p>
-							Paneles de análisis de datos (Dashboards) que se integran con tus
-							herramientas actuales.
-						</p>
-					</li>
-				</ul>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+
+			{/* NUEVA SECCIÓN INFORMATIVA (SOLUCIONA CONTENIDO Y SEMÁNTICA) */}
+			<section className="text-white py-5 gradient-effect-y">
+				<div className="container" style={{ maxWidth: "900px" }}>
+					<h2 className="text-center mb-4">
+						Impulsa tu Ventaja Competitiva con Software a Medida
+					</h2>
+					<div className="row mt-5">
+						<div className="col-md-6 mb-4">
+							<h4>Automatización y Eficiencia</h4>
+							<p>
+								Nuestras herramientas te permiten automatizar procesos manuales,
+								lo que ayuda a <strong>reducir los costos</strong>y minimizar
+								errores humanos. <strong>Ofrecemos soluciones</strong> que
+								trabajan por ti las 24 horas.
+							</p>
+						</div>
+						<div className="col-md-6 mb-4">
+							<h4>Integración de Tecnologías Avanzadas</h4>
+							<p>
+								No solo creamos bases de datos. Integramos{" "}
+								<strong>tecnologías avanzadas</strong> e{" "}
+								<strong>inteligencia artificial</strong>
+								para analizar tus datos y ayudarte a tomar decisiones
+								estratégicas de <strong>alta calidad</strong>.
+							</p>
+						</div>
+						<div className="col-md-6 mb-4">
+							<h4>Ecosistema Digital Completo</h4>
+							<p>
+								Podemos conectar tu software empresarial con{" "}
+								<strong>aplicaciones móviles</strong> para tu fuerza de ventas o
+								con tu tienda en línea, creando un ecosistema unificado.
+							</p>
+						</div>
+						<div className="col-md-6 mb-4">
+							<h4>Escalabilidad Sin Límites</h4>
+							<p>
+								A diferencia del software enlatado, nuestras soluciones crecen
+								contigo. Te damos una <strong>ventaja competitiva</strong>
+								al tener una herramienta que se adapta a tu ritmo de innovación.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* SECCIÓN DE PAQUETES */}
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<h2 className="text-center text-white">
 					Paquetes de Software a Medida
 				</h2>
 				<p className="lead w-100 px-3 px-md-5">
-					Te ofrecemos paquetes adaptados a tus necesidades y presupuesto. Ya
-					sea que estés comenzando con un sistema de inventarios o necesites un
-					software más robusto, tenemos la solución perfecta para ti.
+					Te ofrecemos paquetes adaptados a tus necesidades y presupuesto.{" "}
+					<strong>Ofrecemos servicios</strong> flexibles, desde sistemas básicos
+					hasta plataformas empresariales completas.
 				</p>
 				<Swiper
 					className="w-100 py-5"
@@ -245,8 +270,6 @@ export default function DevSoftClient() {
 					}}
 					breakpoints={{
 						320: { slidesPerView: 1 },
-						480: { slidesPerView: 1 },
-						640: { slidesPerView: 1 },
 						768: { slidesPerView: 2 },
 						1024: { slidesPerView: 3 },
 					}}
@@ -273,13 +296,16 @@ export default function DevSoftClient() {
 					))}
 				</Swiper>
 			</section>
-			<SectionProcess
-				title={"Nuestro Proceso de Desarrollo de Software"}
-				text={
-					"En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum para el desarrollo de software. Esto nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes. Nuestro objetivo es que formes parte activa del desarrollo de tu sistema, asegurando que el resultado final supere tus expectativas."
-				}
-			/>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<SectionProcess
+					title={"Nuestro Proceso de Desarrollo de Software"}
+					text={
+						"En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum para el desarrollo de software. Esto nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes. Nuestro objetivo es que formes parte activa del desarrollo de tu sistema, asegurando que el resultado final supere tus expectativas."
+					}
+				/>
+			</section>
+			{/* ... (Tus secciones de CardSmallList y CardNestedLists se mantienen, son buenas para la legibilidad) ... */}
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Descubrimiento y Planificación Inicial"
 					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas."
@@ -292,7 +318,7 @@ export default function DevSoftClient() {
 					lastText="Tecnologías: Según el proyecto, usamos stacks robustos como Figma, React, Node.js, PHP (Laravel) o Java."
 				/>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="Ciclos de Desarrollo Iterativos (Sprints)"
 					subtitulo="Dividimos el proyecto en Sprints de 1 o 2 semanas, donde desarrollamos y entregamos módulos o funcionalidades específicas."
@@ -318,7 +344,7 @@ export default function DevSoftClient() {
 					]}
 				/>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Revisión Final, Despliegue y Capacitación"
 					subtitulo="Una vez terminados los Sprints, realizamos lo siguiente:"
@@ -330,32 +356,32 @@ export default function DevSoftClient() {
 					]}
 				/>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
-				<h2 className="text-white">Compromiso con la exelencia</h2>
+
+			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<h2 className="text-white">Compromiso con la Excelencia</h2>
 				<p className="text-white fs-4">
-					Cada línea de código que escribimos en JEG Dev Studios refleja nuestro
-					compromiso con la calidad, la funcionalidad y la innovación. Nos
-					enfocamos en que tu software sea útil, estable, seguro y fácil de
-					usar. No desarrollamos software genérico: desarrollamos soluciones que
-					resuelven problemas reales. Tu empresa merece una herramienta que
-					trabaje por ella. Nosotros la creamos.
+					Cada línea de código que escribimos refleja nuestro compromiso con la{" "}
+					<strong>alta calidad</strong>. Nos enfocamos en que tu software sea
+					útil, estable y seguro. No desarrollamos software genérico:
+					desarrollamos soluciones que resuelven problemas reales.
 				</p>
 				<p className="text-white fs-4">
 					Tu empresa merece una herramienta que trabaje por ella. Nosotros la
-					creamos
+					creamos.
 				</p>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CTAProducts
 					title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
 					paragraph={
-						"No te preocupes, en JEG Dev Studios desarrollamos soluciones 100% personalizadas. Cuéntanos tu idea y te ayudaremos a crear un proyecto a tu medida, con todo lo que realmente necesitas y nada que no."
+						"No te preocupes, desarrollamos soluciones 100% personalizadas. Cuéntanos tu idea y te ayudaremos a crear un proyecto a tu medida."
 					}
 					links={[
 						{
 							label: "Solicita una cotización personalizada",
 							link: "/contacto",
-							type: "services", // Puedes usar 'services' o 'outline'
+							type: "services",
 						},
 					]}
 				/>
