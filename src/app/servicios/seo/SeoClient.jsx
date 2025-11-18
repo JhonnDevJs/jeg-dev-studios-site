@@ -101,12 +101,14 @@ export default function SeoClient() {
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-seo" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-seo" />
+			{/* CORRECCIÓN: Usar type="Service" en lugar de "Product" */}
 			<StructuredData
 				data={services}
-				type="Product"
+				type="Service"
 				idPage="service-seo"
 				serviceInfo={seoServiceInfo}
 			/>
+
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/banners/Christmas/Seo.webp"
@@ -114,13 +116,19 @@ export default function SeoClient() {
 					width={2000}
 					height={600}
 					style={{ width: "100%", height: "auto" }}
+					priority
 				/>
 			</section>
+
+			{/* SECCIÓN H1 Y SEMÁNTICA */}
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 pb-xl-0 gap-3 gradient-effect-x">
 				<h1 className="text-center text-white fw-bold mt-3">
 					Agencia de SEO en México: Visibilidad que Genera Negocio
 				</h1>
-				<p className="lead text-white text-center">
+				<p
+					className="lead text-white text-center"
+					style={{ maxWidth: "900px" }}
+				>
 					En JEG Dev Studios, no solo te conseguimos clics; te conseguimos
 					clientes. Como <strong>agencia de SEO en México</strong> líder en
 					estrategia digital, entendemos que ser invisible en Google es como no
@@ -130,12 +138,13 @@ export default function SeoClient() {
 					<strong>clientes potenciales</strong> y un retorno de inversión (ROI)
 					medible.
 				</p>
-				<h2>Más Allá del SEO Tradicional: Introducimos GEO</h2>
-				<p className="lead w-100 px-3 px-md-5">
+
+				<h2 className="mt-4">Más Allá del SEO Tradicional: Introducimos GEO</h2>
+				<p className="lead w-100 px-3 px-md-5" style={{ maxWidth: "900px" }}>
 					El posicionamiento web ha cambiado. Ya no solo compites por los
 					primeros
 					<strong>resultados de búsqueda</strong>; ahora compites por ser la
-					respuesta de la IA. Nuestra{" "}
+					respuesta que ofrece la Inteligencia Artificial. Nuestra{" "}
 					<strong>agencia de posicionamiento SEO en México</strong> domina todo
 					el espectro del <strong>marketing digital</strong> para los{" "}
 					<strong>motores de búsqueda</strong>:
@@ -163,11 +172,15 @@ export default function SeoClient() {
 					</li>
 				</ul>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<h2 className="text-center text-white">
 					Nuestros Servicios de Posicionamiento SEO
 				</h2>
-				<p className="lead text-white text-center">
+				<p
+					className="lead text-white text-center"
+					style={{ maxWidth: "800px" }}
+				>
 					La consultoría SEO es uno de los principales{" "}
 					<strong>servicios</strong> que <strong>ofrece</strong> nuestra
 					agencia. Está dividida en tres áreas estratégicas para dominar los{" "}
@@ -189,19 +202,25 @@ export default function SeoClient() {
 					</ul>
 				</article>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center w-100 gap-3 p-xl-5 p-3 gradient-effect-x">
 				<h2 className="display-5 text-center text-white">
 					Nuestra Metodología SEO: Datos, Estrategia y Transparencia
 				</h2>
-				<p className="fs-4 text-center text-white p-0">
+				<p
+					className="fs-4 text-center text-white p-0"
+					style={{ maxWidth: "900px" }}
+				>
 					En nuestra <strong>agencia de SEO en México</strong>, no creemos en la
 					magia. El SEO es una ciencia que combina un{" "}
 					<strong>diseño web</strong> técnico con{" "}
 					<strong>marketing digital</strong> y un proceso disciplinado de 4
 					fases para garantizar resultados sostenibles.
 				</p>
+
+				{/* FASE 1 */}
 				<CardNestedLists
-					titulo="Auditoría y Diagnóstico Profundo"
+					titulo="1. Auditoría y Diagnóstico Profundo"
 					subtitulo="No podemos trazar un mapa sin saber dónde estás."
 					list={[
 						{
@@ -225,6 +244,7 @@ export default function SeoClient() {
 					]}
 				/>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="2. Estrategia y Hoja de Ruta (Roadmap)"
@@ -251,6 +271,7 @@ export default function SeoClient() {
 					]}
 				/>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardNestedLists
 					titulo="3. Implementación y Optimización"
@@ -277,6 +298,7 @@ export default function SeoClient() {
 					]}
 				/>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="4. Reportes de Valor, no de Vanidad"
@@ -303,6 +325,7 @@ export default function SeoClient() {
 					]}
 				/>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CTA
 					title={"¿Listo para Dominar las Búsquedas en Google?"}

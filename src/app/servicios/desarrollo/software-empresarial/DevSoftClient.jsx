@@ -122,8 +122,8 @@ export default function DevSoftClient() {
 			"Servicios de desarrollo de software a medida: CRMs, ERPs y sistemas empresariales.",
 		image:
 			"https://www.jegdevstudios.com/img-SEO/og-background-serv-dev-soft.webp",
-		// ratingValue: "4.9", // Solo si tienes reseñas reales visibles
-		// reviewCount: "1",
+		ratingValue: "4.9", // Solo si tienes reseñas reales visibles
+		reviewCount: "1",
 	};
 
 	const faqs = [
