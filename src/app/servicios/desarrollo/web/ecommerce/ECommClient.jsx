@@ -12,23 +12,23 @@ const faqs = [
 	{
 		question: "¿Qué formas de pago y opciones de pago integran?",
 		answer:
-			"Integramos todas las formas de pago más utilizadas. Esto incluye tarjetas de débito y crédito (vía Stripe, Mercado Pago), pagos digitales como Apple Pay y Google Pay, transferencias bancarias (SPEI) y opciones de pago en efectivo (OXXO Pay).",
+			"Integramos todas las formas de pago más utilizadas para facilitar tus <strong>ventas online</strong>. Esto incluye <strong>pagos con tarjeta</strong> de débito y crédito (vía Stripe, Mercado Pago), pagos digitales como Apple Pay y Google Pay, transferencias bancarias (SPEI) y opciones de pago en efectivo (OXXO Pay).",
 	},
 	{
 		question: "¿Por qué usan Strapi para el panel de administración?",
 		answer:
-			"Usamos Strapi porque es un CMS Headless líder. Nos permite darte un panel 100% personalizado, seguro y fácil de usar, que se conecta de forma ultra-rápida a tu tienda online desarrollada en Next.js, dándote el mejor rendimiento posible.",
+			"Usamos Strapi porque es un CMS Headless líder. Nos permite darte un panel 100% personalizado, seguro y fácil de usar, que se conecta de forma ultra-rápida a tu tienda online desarrollada en Next.js, dándote el mejor rendimiento posible para <strong>vender por internet</strong>.",
 	},
 	{
 		question: "¿Ustedes gestionan los nombres de dominios y el hosting?",
 		answer:
-			"Sí, nuestros paquetes de desarrollo de comercio electrónico pueden incluir el registro de tus nombres de dominios y el hosting por el primer año, para que solo te preocupes por empezar a vender online.",
+			"Sí, nuestros paquetes de desarrollo de comercio electrónico pueden incluir el registro de tus nombres de dominios y el hosting por el primer año, para que solo te preocupes por <strong>ofrecer productos</strong> y empezar a vender.",
 	},
 	{
 		question:
 			"¿Este servicio incluye la estrategia de marketing digital para mi tienda?",
 		answer:
-			"Este servicio construye la plataforma tecnológica. Una estrategia de marketing completa (SEO, campañas en redes sociales, inbound marketing) es un servicio de Posicionamiento SEO que se contrata por separado y es fundamental para llevar clientes potenciales a tu tienda en línea.",
+			"Este servicio construye la plataforma tecnológica. Una estrategia de marketing completa (SEO, campañas en redes sociales, inbound marketing) es un servicio de Posicionamiento SEO que se contrata por separado y es fundamental para llevar clientes potenciales y brindar una mejor <strong>atención al cliente</strong>.",
 	},
 ];
 
@@ -52,6 +52,7 @@ export default function EcommerceDevelopmentPage() {
 					width={2000}
 					height={600}
 					style={{ width: "100%", height: "auto" }}
+					priority // Importante para LCP
 				/>
 			</section>
 			<section className="text-white py-5 gradient-effect-x text-center">
@@ -62,10 +63,9 @@ export default function EcommerceDevelopmentPage() {
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
 						Lleva tu negocio al siguiente nivel. Nuestro servicio de{" "}
-						<strong>desarrollo de comercio electrónico</strong> está enfocado en
-						la velocidad (Next.js), una gestión fácil (Strapi) y una experiencia
-						de compra que convierte. Es hora de{" "}
-						<strong>empezar a vender online</strong>.
+						<strong>venta en línea</strong> está enfocado en la velocidad
+						(Next.js), una gestión fácil (Strapi) y una experiencia de compra
+						que convierte. Es hora de <strong>empezar a vender online</strong>.
 					</p>
 				</div>
 			</section>
@@ -129,7 +129,6 @@ export default function EcommerceDevelopmentPage() {
 						integral. Cubrimos los tres pilares del éxito para los{" "}
 						<strong>negocios online</strong>:
 					</p>
-					{/* Asumo un layout de 3 columnas */}
 					<div className="row">
 						<div className="col-md-4 mb-4">
 							<h4>1. Opciones de Pago Flexibles y Seguras</h4>
@@ -137,15 +136,14 @@ export default function EcommerceDevelopmentPage() {
 								No pierdas una venta por no tener la{" "}
 								<strong>forma de pago</strong> correcta. Integramos todas las{" "}
 								<strong>opciones de pago</strong> más utilizadas:{" "}
-								<strong>tarjetas de débito</strong> y crédito (Stripe, Mercado
+								<strong>tarjetas de crédito</strong> y débito (Stripe, Mercado
 								Pago), <strong>transferencias bancarias</strong> (SPEI), y{" "}
 								<strong>pagos digitales</strong> como{" "}
 								<strong>Apple Pay y Google Pay</strong>. También configuramos
-								métodos para <strong>pagar en efectivo</strong> (OXXO Pay).
+								métodos para pagar en efectivo (OXXO Pay).
 							</p>
 						</div>
 						<div className="col-md-4 mb-4">
-							{/* --- CAMBIO AQUÍ --- */}
 							<h4>2. Gestión de Contenido con Strapi</h4>
 							<p className="fs-5">
 								Te entregamos un panel de{" "}
@@ -157,14 +155,14 @@ export default function EcommerceDevelopmentPage() {
 							</p>
 						</div>
 						<div className="col-md-4 mb-4">
-							<h4>3. Múltiples Canales de Venta y Marketing</h4>
+							<h4>3. Múltiples Canales de Venta y Atención</h4>
 							<p className="fs-5">
 								Tu <strong>tienda online</strong> es el centro de tu ecosistema.
 								La integramos con tus <strong>redes sociales</strong> (Instagram
 								Shopping, Facebook Shops) y otros{" "}
-								<strong>canales de venta</strong>. Nuestro enfoque en SEO y UX
-								está diseñado para capturar{" "}
-								<strong>clientes potenciales</strong>.
+								<strong>canales de venta</strong>. Además, facilitamos la
+								<strong>atención al cliente</strong> mediante chatbots o
+								WhatsApp.
 							</p>
 						</div>
 					</div>
@@ -175,7 +173,6 @@ export default function EcommerceDevelopmentPage() {
 			<section className="text-white py-5 gradient-effect-y text-center">
 				<div className="container" style={{ maxWidth: "1200px" }}>
 					<h2>Nuestro Proceso para Lanzar tu Tienda Online</h2>
-					{/* Puedes reusar tu componente de Proceso Scrum aquí */}
 					<ol
 						style={{
 							textAlign: "left",
@@ -232,7 +229,7 @@ export default function EcommerceDevelopmentPage() {
 						{
 							label: "Cotizar mi Tienda en Línea",
 							link: "/contacto",
-							type: "services", // Puedes usar 'services' o 'outline'
+							type: "services",
 						},
 					]}
 				/>
