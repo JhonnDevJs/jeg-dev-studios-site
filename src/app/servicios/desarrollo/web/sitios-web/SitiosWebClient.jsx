@@ -3,6 +3,7 @@ import Image from "next/image";
 import Link from "next/link";
 import StructuredData from "@/components/Seo/StructuredData";
 import FAQ from "@/components/Seo/FAQ";
+import SectionProcess from "@/components/SectionProcess";
 import CTAProducts from "@/components/Cta/CTAProducts";
 import "./SitiosWebClient.css";
 
@@ -32,245 +33,325 @@ export default function DevWebClient() {
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-sitios-web" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-sitios-web" />
 
+			{/* Puedes añadir un schema de "Service" aquí si lo deseas */}
+
 			<section className="__image-background-sections d-flex justify-content-center align-items-center w-100 p-0">
 				<Image
 					src="/banners/Christmas/Web.webp"
-					alt="Conoce nuestros servicios de desarrollo web en JEG Dev Studios"
+					alt="Servicio de desarrollo de sitios web profesionales"
 					width={2000}
 					height={600}
 					style={{ width: "100%", height: "auto" }}
+					priority
 				/>
 			</section>
-			{/* Asumo que tienes un componente Hero o Banner similar al de las otras páginas */}
+
 			<section className="text-white py-5 text-center">
 				<div className="container">
-					<h1>Desarrollo de Sitios Web Corporativos a Medida</h1>
+					{/* H1 OPTIMIZADO con la keyword exacta */}
+					<h1>Servicio de Desarrollo de Sitios Web Profesionales</h1>
 					<p
 						className="fs-5 lead"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
-						Tu sitio web es tu principal vendedor digital, 24/7. Pero existe una
-						diferencia entre un <strong>sitio web gratis</strong> (hecho con un{" "}
-						<strong>creador de páginas web</strong>) y un{" "}
-						<strong>sitio de alta calidad</strong> construido a medida. En JEG
-						Dev Studios, ofrecemos un{" "}
-						<strong>servicio de desarrollo de sitios web</strong> enfocado en el
-						rendimiento, un <strong>diseño web</strong> premium y resultados
-						tangibles.
+						Tu sitio web es tu carta de presentación digital. En JEG Dev
+						Studios, nos especializamos en la
+						<strong>creación de sitios web profesionales</strong> que van más
+						allá de una simple plantilla. Ofrecemos una{" "}
+						<strong>web profesional</strong> construida a medida, enfocada en el
+						rendimiento, la seguridad y resultados tangibles para tu negocio.
 					</p>
 				</div>
 			</section>
 
-			{/* Sección de Propuesta de Valor */}
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container">
-					<h2>
-						¿Por Qué Invertir en un Sitio a Medida y no en un Creador Gratuito?
-					</h2>
+					<h2>¿Por Qué Invertir en un Sitio a Medida?</h2>
 					<p className="fs-5" style={{ maxWidth: "800px", margin: "auto" }}>
-						Un <strong>creador de sitios web</strong> te ofrece una plantilla
-						limitada. Nosotros te damos una solución de negocios. Una{" "}
-						<strong>plataforma escalable</strong> te permite mostrar tus{" "}
-						<strong>productos o servicios</strong> de forma única, genera
-						confianza en tu marca y, lo más importante, está construida para que
-						se <strong>posicionen en buscadores</strong> como Google.
+						Un sitio web genérico te ofrece opciones limitadas. Nosotros te
+						damos una solución de negocios. Una plataforma escalable te permite
+						mostrar tus productos o servicios de forma única, genera confianza
+						en tu marca y, lo más importante, está construida para que se
+						posicionen en buscadores como Google.
 					</p>
 				</div>
 			</section>
 
-			{/* Sección de Características del Servicio */}
+			{/* NUEVA SECCIÓN INFORMATIVA Y SEMÁNTICA (Video + Keywords difíciles) */}
 			<section className="text-white py-5 gradient-effect-y">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="text-center mb-4">
-						Nuestro Servicio de Sitios Web: Una Solución Integral
+						Desarrollo Profesional vs. Constructores "Arrastrar y Soltar"
 					</h2>
 					<p
-						className="text-center fs-5"
+						className="text-center fs-5 mb-5"
 						style={{ maxWidth: "800px", margin: "auto" }}
 					>
-						Entendemos que una <strong>pequeña empresa</strong> necesita más que
-						un folleto digital. Nuestros <strong>servicios de diseño</strong> y
-						desarrollo cubren todo el ciclo de vida de tu proyecto.
+						Muchas plataformas te prometen crear un sitio con solo{" "}
+						<strong>arrastrar y soltar</strong> elementos. Aunque parece fácil,
+						estas herramientas suelen generar código sucio, lento y difícil de
+						posicionar. Mira este video para entender la diferencia.
 					</p>
-					<div className="row mt-5">
-						<div className="col-md-6 mb-4">
-							<h4>Diseño UI/UX Personalizado</h4>
-							<p className="fs-5">
-								No usamos plantillas. Nuestro equipo de{" "}
-								<strong>diseño gráfico</strong> colabora contigo para crear un{" "}
-								<strong>diseño de páginas web</strong> único que refleje tu
-								marca y mejore la <strong>experiencia de usuario</strong>.
-							</p>
-						</div>
-						<div className="col-md-6 mb-4">
-							<h4>Desarrollo de Alto Rendimiento</h4>
-							<p className="fs-5">
-								Construimos tu sitio en tecnologías modernas (como Next.js) que
-								garantizan velocidad y una perfecta adaptación a todos los{" "}
-								<strong>dispositivos móviles</strong>.
-							</p>
-						</div>
-						<div className="col-md-6 mb-4">
-							<h4>Sistema de Administración de Contenidos (CMS)</h4>
-							<p className="fs-5">
-								Te entregamos un sistema (CMS Headless) para que tú mismo puedas
-								gestionar la <strong>administración de contenidos</strong> de tu
-								blog o secciones de noticias.
-							</p>
-						</div>
-						{/* ITEM ACTUALIZADO: Añade 'certificados ssl' */}
-						<div className="col-md-6 mb-4">
-							<h4>Dominio, Hosting y Seguridad</h4>
-							<p className="fs-5">
-								Nos encargamos de todo. Tu servicio incluye tu{" "}
-								<strong>dominio personalizado</strong>, hosting por 1 año y{" "}
-								<strong>certificados SSL</strong> para que puedas{" "}
-								<strong>publicar tu sitio web</strong> sin preocupaciones.
-							</p>
-						</div>
-						<div className="col-md-12 text-center">
-							<h4>Optimización SEO Base</h4>
-							<p className="fs-5">
-								Preparamos tu sitio para los{" "}
-								<strong>motores de búsqueda</strong> desde el día uno, aplicando
-								las mejores prácticas de SEO técnico y{" "}
-								<strong>accesibilidad web</strong>.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
 
-			{/* --- Sección de Video (Se mantiene) --- */}
-			<section className="text-white py-5 gradient-effect-x text-center">
-				<div className="container" style={{ maxWidth: "900px" }}>
-					<h2>La Diferencia: Plantilla vs. Desarrollo a Medida (Video)</h2>
-					<p className="fs-5">
-						Muchos <strong>paquetes de diseño</strong> se centran solo en lo
-						visual. Nuestro enfoque se centra en la tecnología que impulsa tu
-						crecimiento. Mira este video donde explicamos por qué un sitio a
-						medida es una inversión más inteligente.
-					</p>
 					<div
-						className="video-responsive-container"
+						className="video-responsive-container mb-5"
 						style={{ maxWidth: "700px", margin: "auto" }}
 					>
-						{/* <iframe ... (tu video aquí) ... /> */}
+						{/* AQUÍ VA TU VIDEO */}
+						{/* <iframe ... /> */}
 					</div>
-				</div>
-			</section>
-			<section className="text-white py-5 gradient-effect-y">
-				<div className="container text-center" style={{ maxWidth: "800px" }}>
-					<h2>¿Qué Más Necesitas? Un Ecosistema Digital Completo</h2>
-					<p className="lead fs-5">
-						Un sitio web es solo el comienzo. Como agencia integral, podemos
-						expandir tu presencia digital.
-					</p>
-					<div className="row mt-4 text-start">
-						<div className="col-md-6 mb-3">
-							<h4>Comercio Electrónico</h4>
-							<p className="fs-5">
-								Si tu objetivo es <strong>vender productos</strong> en línea,
-								podemos escalar tu sitio corporativo a una solución de{" "}
-								<strong>comercio electrónico</strong> completa, con carritos de
-								compra y pasarelas de pago.
-							</p>
-						</div>
-						<div className="col-md-6 mb-3">
-							<h4>Marketing Digital</h4>
-							<p className="fs-5">
-								Integramos tu sitio con tus <strong>redes sociales</strong> y{" "}
-								<strong>estrategias de marketing</strong>. Configuramos tus
-								herramientas de analítica para rastrear el éxito de tus
-								campañas.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
 
-			{/* Sección de Cross-link (Triaje) */}
+					<div className="row">
+						<div className="col-md-6 mb-4">
+							<h4>Limitaciones de las Plantillas</h4>
+							<p className="fs-5">
+								Las herramientas de "arrastrar y soltar" te encierran en un
+								diseño predefinido. Si quieres escalar a
+								<strong>tiendas en línea</strong> complejas o funciones a
+								medida, te encontrarás con muros técnicos.
+							</p>
+						</div>
+						<div className="col-md-6 mb-4">
+							<h4>Ventajas del Código a Medida</h4>
+							<p className="fs-5">
+								Nuestro <strong>servicio de desarrollo de sitios web</strong> te
+								da libertad total. Optimizamos cada línea de código para que tu
+								sitio vuele y Google lo ame.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* --- SECCIÓN DE CARACTERÍSTICAS EXTENDIDA (Aumenta volumen de texto) --- */}
 			<section className="text-white py-5 gradient-effect-x">
-				<div className="container text-center" style={{ maxWidth: "1200px" }}>
-					<h2>¿Buscas una Tienda Online o una Aplicación Web?</h2>
-					<p className="fs-5">
-						Este servicio es ideal para sitios corporativos, portafolios y
-						sitios informativos.
-					</p>
-					<ul
-						className="mb-3"
-						style={{
-							textAlign: "left",
-						}}
-					>
-						<li className="fs-5">
-							<p className="fs-5">
-								Si tu objetivo principal es <strong>vender productos</strong> en
-								línea, lo que necesitas es el desarrollo de una{" "}
-								<strong>tienda online</strong> (eCommerce).
-							</p>
-						</li>
-						<li className="fs-5">
-							<p className="fs-5">
-								Si necesitas una <strong>aplicación web</strong> con lógica de
-								negocio compleja, tu proyecto podría ser de Software
-								Empresarial.
-							</p>
-						</li>
-					</ul>
-					<nav className="d-flex justify-content-center gap-3 mt-2">
-						<Link
-							href="/servicios/desarrollo/web/ecommerce"
-							className="btn-services m-2"
-						>
-							Conocer servicios de eCommerce
-						</Link>
-						<Link
-							href="/servicios/desarrollo/software-empresarial"
-							className="btn-services m-2"
-						>
-							Ver soluciones de Software
-						</Link>
-					</nav>
+				<div className="container" style={{ maxWidth: "1100px" }}>
+					<h2 className="text-center mb-5">
+						Un Servicio Integral para tu Presencia Digital
+					</h2>
+					<div className="row g-4">
+						<div className="col-md-6">
+							<div className="p-4 h-100 border border-secondary rounded-3 bg-black bg-opacity-25">
+								<h3 className="h4 text-primary-light">
+									Diseño UI/UX Personalizado
+								</h3>
+								<p>
+									Olvídate de las plantillas que usa tu competencia. Nuestro
+									equipo colabora contigo para crear una identidad visual única.
+									Diseñamos cada pantalla pensando en la conversión y en
+									reflejar la esencia de tu marca, asegurando que tu sitio sea
+									memorable.
+								</p>
+							</div>
+						</div>
+						<div className="col-md-6">
+							<div className="p-4 h-100 border border-secondary rounded-3 bg-black bg-opacity-25">
+								<h3 className="h4 text-primary-light">
+									Velocidad y Rendimiento (Core Web Vitals)
+								</h3>
+								<p>
+									Construimos tu sitio en tecnologías modernas (como Next.js)
+									que garantizan una carga ultra-rápida. Un sitio rápido no solo
+									mejora la experiencia del usuario, sino que es un factor
+									crítico para rankear alto en los motores de búsqueda.
+								</p>
+							</div>
+						</div>
+						<div className="col-md-6">
+							<div className="p-4 h-100 border border-secondary rounded-3 bg-black bg-opacity-25">
+								<h3 className="h4 text-primary-light">
+									Autoadministrable (CMS Headless)
+								</h3>
+								<p>
+									Te entregamos el control. Implementamos un sistema de gestión
+									(CMS) moderno y seguro para que tú mismo puedas actualizar
+									textos, subir noticias al blog o cambiar imágenes sin depender
+									de un programador y sin riesgo de "romper" el sitio.
+								</p>
+							</div>
+						</div>
+						<div className="col-md-6">
+							<div className="p-4 h-100 border border-secondary rounded-3 bg-black bg-opacity-25">
+								<h3 className="h4 text-primary-light">
+									Seguridad y Certificados SSL
+								</h3>
+								<p>
+									La seguridad no es opcional. Incluimos la configuración de{" "}
+									<strong>certificados SSL</strong> avanzados para encriptar la
+									información de tu sitio. Además, gestionamos tu{" "}
+									<strong>dominio personalizado</strong> y el hosting en
+									servidores de alto rendimiento.
+								</p>
+							</div>
+						</div>
+					</div>
 				</div>
 			</section>
 
-			{/* Sección de Proceso */}
-			<section className="text-white py-5 gradient-effect-y text-center">
-				<div className="container" style={{ maxWidth: "800px" }}>
-					{/* H2 ACTUALIZADO: Reduce Keyword Stuffing */}
-					<h2>Nuestro Proceso de Creación de Sitios Web</h2>
-					<p className="fs-5">
-						Usamos un proceso ágil (Scrum) al{" "}
-						<strong>desarrollar sitios web</strong>. Esto nos permite ser
-						transparentes, eficientes y entregarte valor en cada etapa.
+			{/* SECCIÓN DE CARACTERÍSTICAS EXTENDIDA */}
+			<section className="text-white py-5 gradient-effect-y">
+				<div className="container" style={{ maxWidth: "1100px" }}>
+					<h2 className="text-center mb-5">
+						Un Servicio Integral para tu Presencia Digital
+					</h2>
+					<div className="row g-4">
+						<div className="col-md-6">
+							<div className="p-4 h-100 border border-secondary rounded-3 bg-black bg-opacity-25">
+								<h3 className="h4 text-primary-light">
+									Diseño UI/UX Personalizado
+								</h3>
+								<p>
+									Olvídate de las plantillas que usa tu competencia. Nuestro
+									equipo colabora contigo para crear una identidad visual única.
+									Diseñamos cada pantalla pensando en la conversión y en
+									reflejar la esencia de tu marca, asegurando que tu sitio sea
+									memorable.
+								</p>
+							</div>
+						</div>
+						<div className="col-md-6">
+							<div className="p-4 h-100 border border-secondary rounded-3 bg-black bg-opacity-25">
+								<h3 className="h4 text-primary-light">
+									Velocidad y Rendimiento (Core Web Vitals)
+								</h3>
+								<p>
+									Construimos tu sitio en tecnologías modernas (como Next.js)
+									que garantizan una carga ultra-rápida. Un sitio rápido no solo
+									mejora la experiencia del usuario, sino que es un factor
+									crítico para rankear alto en los motores de búsqueda.
+								</p>
+							</div>
+						</div>
+						<div className="col-md-6">
+							<div className="p-4 h-100 border border-secondary rounded-3 bg-black bg-opacity-25">
+								<h3 className="h4 text-primary-light">
+									Autoadministrable (CMS Headless)
+								</h3>
+								<p>
+									Te entregamos el control. Implementamos un sistema de gestión
+									(CMS) moderno y seguro para que tú mismo puedas actualizar
+									textos, subir noticias al blog o cambiar imágenes sin depender
+									de un programador y sin riesgo de "romper" el sitio.
+								</p>
+							</div>
+						</div>
+						<div className="col-md-6">
+							<div className="p-4 h-100 border border-secondary rounded-3 bg-black bg-opacity-25">
+								<h3 className="h4 text-primary-light">
+									Seguridad y Certificados SSL
+								</h3>
+								<p>
+									La seguridad no es opcional. Incluimos la configuración de{" "}
+									<strong>certificados SSL</strong> avanzados para encriptar la
+									información de tu sitio. Además, gestionamos tu{" "}
+									<strong>dominio personalizado</strong> y el hosting en
+									servidores de alto rendimiento.
+								</p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			{/* SECCIÓN: ¿PARA QUIÉN ES ESTE SERVICIO? */}
+			<section className="text-white py-5 gradient-effect-x">
+				<div className="container" style={{ maxWidth: "900px" }}>
+					<h2 className="text-center mb-4">¿Este Servicio es Para Ti?</h2>
+					<p className="text-center fs-5 mb-5">
+						Nuestro servicio de{" "}
+						<strong>creación de sitios web profesionales</strong> está diseñado
+						para:
 					</p>
-					<ol
-						style={{
-							textAlign: "left",
-							maxWidth: "400px",
-							margin: "2rem auto",
-						}}
-					>
-						<li className="fs-5">
-							<p className="fs-5">
-								<strong>Descubrimiento y Estrategia:</strong> Analizamos tus
-								metas y las de tu <strong>pequeña empresa</strong>.
+					<div className="row text-center">
+						<div className="col-md-4 mb-3">
+							<h4 className="h5 fw-bold">Empresas de Servicios</h4>
+							<p className="small">
+								Consultoras, despachos legales, arquitectos y agencias que
+								necesitan generar confianza y captar leads.
 							</p>
-						</li>
-						<li className="fs-5">
-							<p className="fs-5">
-								<strong>Diseño y Desarrollo:</strong> Nuestro equipo de{" "}
-								<strong>diseño gráfico</strong> y desarrollo crea el sitio.
+						</div>
+						<div className="col-md-4 mb-3">
+							<h4 className="h5 fw-bold">Startups y PyMEs</h4>
+							<p className="small">
+								Negocios que buscan una presencia digital sólida para escalar y
+								validar su modelo de negocio.
 							</p>
-						</li>
-						<li className="fs-5">
-							<p className="fs-5">
-								<strong>Entrega y Publicación:</strong> Hacemos las pruebas
-								finales y te ayudamos a <strong>publicar tu sitio web</strong>.
+						</div>
+						<div className="col-md-4 mb-3">
+							<h4 className="h5 fw-bold">Marcas Personales</h4>
+							<p className="small">
+								Profesionales que quieren destacar su portafolio y autoridad en
+								su industria.
 							</p>
-						</li>
-					</ol>
+						</div>
+					</div>
+
+					<div className="alert alert-dark mt-4 text-center" role="alert">
+						<h4 className="alert-heading h6 fw-bold">
+							¿Buscas Vender Productos?
+						</h4>
+						<p className="mb-0 small">
+							Si tu objetivo principal es tener un carrito de compras y{" "}
+							<strong>comercio electrónico</strong>, te recomendamos visitar
+							nuestra sección especializada en{" "}
+							<Link
+								href="/servicios/desarrollo/web/ecommerce"
+								className="text-primary text-decoration-none fw-bold"
+							>
+								Desarrollo de Tiendas en Línea
+							</Link>
+							, donde integramos pasarelas de pago y catálogos complejos.
+						</p>
+					</div>
+				</div>
+			</section>
+
+			{/* --- SECCIÓN DE PROCESO DETALLADO (Aumenta volumen de texto) --- */}
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+				<SectionProcess
+					title={"Nuestro Proceso de Desarrollo Web"}
+					text={
+						"No improvisamos. Usamos una metodología probada para asegurar que tu sitio web se entregue a tiempo y supere tus expectativas."
+					}
+				/>
+			</section>
+
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
+				<div
+					className="container"
+					style={{ maxWidth: "800px", textAlign: "left" }}
+				>
+					<div className="mb-4">
+						<h3 className="h5 fw-bold">1. Descubrimiento y Estrategia</h3>
+						<p>
+							Analizamos tu mercado, tu competencia y tus objetivos. Definimos
+							la arquitectura de la información para asegurar que tus usuarios
+							encuentren lo que buscan.
+						</p>
+					</div>
+					<div className="mb-4">
+						<h3 className="h5 fw-bold">2. Diseño UI/UX y Prototipado</h3>
+						<p>
+							Creamos wireframes y diseños de alta fidelidad. Podrás ver cómo
+							lucirá tu <strong>web profesional</strong> antes de escribir una
+							sola línea de código.
+						</p>
+					</div>
+					<div className="mb-4">
+						<h3 className="h5 fw-bold">3. Desarrollo y Programación</h3>
+						<p>
+							Nuestros desarrolladores construyen el sitio usando las mejores
+							prácticas de código, asegurando compatibilidad con todos los
+							navegadores y dispositivos.
+						</p>
+					</div>
+					<div className="mb-4">
+						<h3 className="h5 fw-bold">4. Lanzamiento y Conexión Social</h3>
+						<p>
+							Configuramos tu dominio, instalamos los certificados de seguridad
+							y conectamos tu sitio con tus <strong>redes sociales</strong> y
+							herramientas de análisis.
+						</p>
+					</div>
 				</div>
 			</section>
 
