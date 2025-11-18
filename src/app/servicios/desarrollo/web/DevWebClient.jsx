@@ -102,7 +102,7 @@ export default function DevWebClient() {
 					"Para PyMEs que necesitan un sitio corporativo profesional y ultra-rápido.",
 				imageSrc: imgWebProduct1.src,
 				items: [
-					"Desarrollo en Next.js (React) 🚀",
+					"Desarrollo en Next.js (React)",
 					"Performance +90 Garantizado (Core Web Vitals)",
 					"De 1 a 5 Secciones (Páginas Reales)",
 					"Diseño UI/UX Personalizado (Figma)",
