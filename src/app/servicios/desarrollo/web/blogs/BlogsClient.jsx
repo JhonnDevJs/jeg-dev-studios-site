@@ -363,20 +363,21 @@ export default function BlogDevelopmentPage() {
 
 			{/* --- Sección de FAQ --- */}
 			<FAQ faqs={faqs} title="Preguntas Frecuentes sobre Desarrollo de Blogs" />
-
-			<CTAProducts
-				title={"¿Listo para Convertirte en una Autoridad en tu Sector?"}
-				paragraph={
-					"Deja de publicar en plataformas prestadas. Es hora de construir tu propio motor de contenidos y atraer a tus clientes ideales. Hablemos de tu proyecto."
-				}
-				links={[
-					{
-						label: "Solicitar Consultoría para mi Blog",
-						link: "/contacto",
-						type: "services", // Puedes usar 'services' o 'outline'
-					},
-				]}
-			/>
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
+				<CTAProducts
+					title={"¿Listo para Convertirte en una Autoridad en tu Sector?"}
+					paragraph={
+						"Deja de publicar en plataformas prestadas. Es hora de construir tu propio motor de contenidos y atraer a tus clientes ideales. Hablemos de tu proyecto."
+					}
+					links={[
+						{
+							label: "Solicitar Consultoría para mi Blog",
+							link: "/contacto",
+							type: "services", // Puedes usar 'services' o 'outline'
+						},
+					]}
+				/>
+			</section>
 		</>
 	);
 }
