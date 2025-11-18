@@ -251,7 +251,71 @@ export default function DevWebClient() {
 					tecnológica sólida es tu mejor ventaja competitiva.
 				</p>
 			</section>
-			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
+			{/* --- NUEVA SECCIÓN INFORMATIVA (SEMÁNTICA + LONG FORM) --- */}
+			<section className="text-white py-5 gradient-effect-y">
+				<div className="container" style={{ maxWidth: "1000px" }}>
+					<h2 className="text-center mb-5">
+						¿Por Qué Elegir un Desarrollo Full Stack en México?
+					</h2>
+
+					<div className="row align-items-center mb-5">
+						<div className="col-md-6">
+							<h3 className="h4 fw-bold text-primary-light">
+								Más que Diseño de Páginas Web
+							</h3>
+							<p className="fs-5">
+								Muchas <strong>agencias de diseño web</strong> se enfocan solo
+								en lo visual. Nosotros somos expertos en{" "}
+								<strong>Full Stack</strong>. Esto significa que dominamos tanto
+								el diseño (lo que ves) como el <strong>Back End</strong> (la
+								lógica detrás). Esto es crucial si planeas escalar tu sitio a
+								una <strong>tienda en línea</strong> o una plataforma compleja
+								en el futuro.
+							</p>
+						</div>
+						<div className="col-md-6">
+							<div className="p-4 border border-light rounded bg-black bg-opacity-25">
+								<p className="mb-0">
+									<em>
+										"Un sitio bonito que no funciona técnicamente es un gasto,
+										no una inversión."
+									</em>
+								</p>
+							</div>
+						</div>
+					</div>
+
+					<div className="row">
+						<div className="col-md-4 mb-4">
+							<h4 className="h5 fw-bold">Experiencia Comprobada</h4>
+							<p>
+								Con <strong>años de experiencia</strong> en el mercado de{" "}
+								<strong>desarrollo web en México</strong>, entendemos las
+								necesidades locales y globales. Sabemos qué tecnologías
+								funcionan para tu mercado.
+							</p>
+						</div>
+						<div className="col-md-4 mb-4">
+							<h4 className="h5 fw-bold">Servicios Integrales</h4>
+							<p>
+								No solo entregamos el código. <strong>Ofrecen servicios</strong>{" "}
+								que incluyen hosting, dominio, correos y soporte, para que tú te
+								enfoques en tu negocio mientras nosotros cuidamos la tecnología.
+							</p>
+						</div>
+						<div className="col-md-4 mb-4">
+							<h4 className="h5 fw-bold">Calidad vs. Plantillas</h4>
+							<p>
+								Evitamos los constructores genéricos. Nuestro código hecho a
+								mano garantiza seguridad y velocidad, factores que Google ama
+								para el posicionamiento.
+							</p>
+						</div>
+					</div>
+				</div>
+			</section>
+			{/* --- FIN NUEVA SECCIÓN --- */}
+			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<h2 className="text-center text-white">
 					Paquetes de Desarrollo Web a tu Medida
 				</h2>
@@ -321,66 +385,6 @@ export default function DevWebClient() {
 					))}
 				</Swiper>
 			</section>
-			<section className="text-white py-5 gradient-effect-x">
-				<div className="container text-center" style={{ maxWidth: "900px" }}>
-					<h2 className="display-5 fw-bold mb-4">
-						Más Allá del Paquete: Un Servicio Web Integral
-					</h2>
-					<p className="lead mb-5 mx-auto">
-						Nuestro servicio de <strong>diseño y desarrollo web</strong> no
-						termina con la entrega. Construimos una plataforma integral
-						preparada para crecer y competir.
-					</p>
-					<div className="row text-start justify-content-center">
-						<div className="col-md-6 mb-4">
-							<h3 className="h5 fw-bold">
-								Diseño Web y Experiencia de Usuario
-							</h3>
-							<p>
-								No solo creamos código, creamos experiencias. Cada proyecto
-								incluye un <strong>diseño web</strong> enfocado en la{" "}
-								<strong>experiencia de usuario</strong> (UX), asegurando que tu
-								sitio sea intuitivo y accesible en todos los{" "}
-								<strong>dispositivos móviles</strong>.
-							</p>
-						</div>
-
-						<div className="col-md-6 mb-4">
-							<h3 className="h5 fw-bold">Optimización SEO y Estrategia</h3>
-							<p>
-								Un sitio web debe ser encontrado. Integramos{" "}
-								<strong>optimización SEO</strong> técnica desde la base,
-								preparando tu sitio para los{" "}
-								<strong>motores de búsqueda</strong>. Además, conectamos tu web
-								con tus <strong>estrategias de marketing</strong> digital.
-							</p>
-						</div>
-
-						<div className="col-md-6 mb-4">
-							<h3 className="h5 fw-bold">Tecnología Robusta y Escalable</h3>
-							<p>
-								Nuestros <strong>paquetes de diseño</strong> "Ignite" y
-								superiores utilizan una arquitectura moderna que puede escalar a
-								una <strong>aplicación web</strong> completa, integrarse con una{" "}
-								<strong>base de datos</strong> o conectar con{" "}
-								<strong>inteligencia artificial</strong> para funciones
-								avanzadas.
-							</p>
-						</div>
-
-						<div className="col-md-6 mb-4">
-							<h3 className="h5 fw-bold">Servicios Integrados</h3>
-							<p>
-								Ofrecemos una solución de <strong>alta calidad</strong>.
-								Gestionamos tus
-								<strong>correos electrónicos</strong> corporativos,
-								implementamos <strong>accesibilidad web</strong> (WCAG) y te
-								capacitamos para usar tu nuevo CMS.
-							</p>
-						</div>
-					</div>
-				</div>
-			</section>
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<SectionProcess
 					title={"Nuestro Proceso de Desarrollo de Páginas Web"}
@@ -396,12 +400,13 @@ export default function DevWebClient() {
 					list={[
 						" Reunión inicial contigo para entender tu negocio y el propósito del sitio.",
 						" Definimos las funcionalidades clave, el diseño deseado y objetivos de cada sección.",
-						" Elegimos el paquete de desarrollo más adecuado (Básico, Plus o Pro).",
+						" Elegimos el paquete de desarrollo más adecuado (Mini Sitio, Ignite, Accelerate, Ultimate).",
 						" Creamos un Product Backlog, que es la lista de todo lo que tu sitio debe incluir.",
 					]}
-					lastText="Tecnologías: Según el paquete, usamos stacks modernos como Figma, HTML, JavaScript, Tailwind, Next.js, Bootstrap, Node.js, PHP (Laravel) o Java."
+					lastText="Tecnologías: Usamos Google Sites para el 'Mini Sitio' y Next.js, React, Figma, y CMS Headless para los paquetes profesionales."
 				/>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="Ciclos de Desarrollo Iterativos (Sprints)"
@@ -432,6 +437,7 @@ export default function DevWebClient() {
 					]}
 				/>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Revisión Final y Entrega del Proyecto"
@@ -444,6 +450,7 @@ export default function DevWebClient() {
 					]}
 				/>
 			</section>
+
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CTAProducts
 					title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
@@ -454,7 +461,7 @@ export default function DevWebClient() {
 						{
 							label: "Solicita una cotización personalizada",
 							link: "/contacto",
-							type: "services", // Puedes usar 'services' o 'outline'
+							type: "services",
 						},
 					]}
 				/>
