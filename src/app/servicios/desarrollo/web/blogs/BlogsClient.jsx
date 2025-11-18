@@ -11,22 +11,22 @@ const faqs = [
 	{
 		question: "¿Qué es un CMS o 'sistema de gestión de contenidos'?",
 		answer:
-			"Un sistema de gestión de contenidos (CMS) es la herramienta que te permite escribir, editar y publicar una entrada de blog sin saber programar. Nosotros te lo entregamos configurado, ya sea WordPress, Blogger o un CMS Headless (como Strapi) para tu blog en Next.js.",
+			"Un <strong>sistema de gestión de contenidos</strong> (CMS) es la herramienta que te permite escribir, editar y publicar una <strong>entrada de blog</strong> sin saber programar. Nosotros te lo entregamos configurado, ya sea WordPress, Blogger o un CMS Headless (como Strapi) para tu <strong>blog en Next.js</strong>.",
 	},
 	{
-		question: "¿WordWordPress vs. Next.js: ¿Cuál es mejor para mi blog?",
+		question: "¿WordPress vs. Next.js: ¿Cuál es mejor para mi blog?",
 		answer:
-			"Depende. Instalar WordPress es ideal para un blog personal o de Pyme que busca muchas opciones de personalización rápidamente. Un blog en Next.js es una solución premium para empresas que buscan el máximo rendimiento, seguridad y una experiencia de gestión de contenido superior.",
+			"Depende. <strong>Instalar WordPress</strong> es ideal para un <strong>blog personal</strong> o de Pyme que busca muchas <strong>opciones de personalización</strong> rápidamente. Un <strong>blog en Next.js</strong> es una solución premium para empresas que buscan el máximo rendimiento, seguridad y una experiencia de <strong>gestión de contenido</strong> superior.",
 	},
 	{
 		question: "¿Cómo puedo 'promocionar mi blog' una vez que esté hecho?",
 		answer:
-			"La promoción es clave. Puedes usar herramientas de marketing como el correo electrónico (email marketing) para tus suscriptores, compartir cada entrada de blog en redes sociales, y por supuesto, la optimización para motores de búsqueda (SEO) que ya incluimos.",
+			"La promoción es clave. Puedes usar <strong>herramientas de marketing</strong> como el <strong>correo electrónico</strong> (email marketing) para tus suscriptores, compartir cada <strong>entrada de blog</strong> en redes sociales, y por supuesto, la optimización para <strong>motores de búsqueda</strong> (SEO) que ya incluimos.",
 	},
 	{
 		question: "¿Este servicio incluye métodos de monetización?",
 		answer:
-			"Nuestro servicio construye la plataforma técnica. Si tu estrategia incluye métodos de monetización (como anuncios de AdSense, venta de infoproductos o contenido bajo un plan de pago), nosotros implementamos las integraciones técnicas necesarias para que puedas hacerlo.",
+			"Nuestro servicio construye la plataforma técnica. Si tu estrategia incluye <strong>métodos de monetización</strong> (como anuncios de AdSense, venta de infoproductos o contenido bajo un <strong>plan de pago</strong>), nosotros implementamos las integraciones técnicas necesarias para que puedas hacerlo.",
 	},
 ];
 
@@ -38,9 +38,6 @@ export default function BlogDevelopmentPage() {
 			{/* --- INYECCIÓN DE SCHEMAS --- */}
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-blogs" />
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-blogs" />
-
-			{/* Aquí puedes añadir un Schema "Service" si lo deseas, 
-          similar al que hicimos para /web, pero enfocado en "Blog Development" */}
 
 			{/* --- Sección Hero --- */}
 
@@ -55,8 +52,11 @@ export default function BlogDevelopmentPage() {
 			</section>
 			<section className="text-white py-5 gradient-effect-x text-center">
 				<div className="container">
-					{/* H1 ACTUALIZADO: Resuelve el error de H1 */}
-					<h1>Servicio de Desarrollo de Blogs Profesionales</h1>
+					{/* H1 ACTUALIZADO con keywords objetivo */}
+					<h1>
+						Servicio de Desarrollo de Blogs: Crea un Blog para Empresa en
+						Next.js
+					</h1>
 					<p
 						className="lead fs-5"
 						style={{ maxWidth: "800px", margin: "auto" }}
@@ -65,14 +65,13 @@ export default function BlogDevelopmentPage() {
 						<strong>marketing digital</strong>. Es el motor para atraer{" "}
 						<strong>clientes potenciales</strong> (TOFU) y construir confianza.
 						Ofrecemos un <strong>servicio de desarrollo de blogs</strong> para{" "}
-						<strong>crear un blog para tu empresa</strong> que sea rápido,
-						seguro y fácil de administrar.
+						que puedas tener un <strong>blog con CMS</strong> rápido, seguro y
+						fácil de administrar.
 					</p>
 				</div>
 			</section>
 
 			{/* --- Sección de Propuesta de Valor (MOFU / Informativa) --- */}
-			{/* Esta sección añade "long-form content" y legibilidad */}
 			<section className="text-white py-5 gradient-effect-y">
 				<div className="container" style={{ maxWidth: "900px" }}>
 					<h2 className="text-center mb-4">
@@ -250,7 +249,7 @@ export default function BlogDevelopmentPage() {
 									<p className="fs-2 fw-bold">
 										$14,999 <span className="fs-6 fw-normal">MXN</span>
 									</p>
-									<p className="card-text fs-5">
+									<p className="card-text">
 										La solución más rápida y segura. Un{" "}
 										<strong>blog en Next.js</strong> con un{" "}
 										<strong>blog con CMS</strong> Headless (Strapi).
@@ -293,7 +292,7 @@ export default function BlogDevelopmentPage() {
 			{/* --- Sección de Video (Requisito de SEMrush) --- */}
 			<section className="text-white py-5 gradient-effect-y text-center">
 				<div className="container" style={{ maxWidth: "900px" }}>
-					<h2>¿Qué es un Blog con CMS Headless?</h2>
+					<h2>Video: ¿Qué es un Blog con CMS Headless?</h2>
 					<p className="fs-5">
 						El futuro de la <strong>gestión de contenido</strong> es "headless".
 						Mira este video donde explicamos por qué un{" "}
@@ -326,7 +325,7 @@ export default function BlogDevelopmentPage() {
 					<h2>Cómo Promocionar tu Blog</h2>
 					<p className="lead fs-5">
 						Nuestro <strong>servicio de desarrollo de blogs</strong> te da la
-						plataforma. El éxito viene al promocionarla.
+						plataforma. El éxito viene al <strong>promociona tu blog</strong>.
 					</p>
 					<ol
 						style={{
@@ -362,7 +361,7 @@ export default function BlogDevelopmentPage() {
 			</section>
 
 			{/* --- Sección de FAQ --- */}
-			<FAQ faqs={faqs} title="Preguntas Frecuentes sobre Desarrollo de Blogs" />
+			<FAQ title="Preguntas Frecuentes sobre Desarrollo de Blogs" faqs={faqs} />
 			<section className="d-flex flex-column justify-content-center align-items-center text-center text-white w-100 p-xl-5 p-3 gap-3">
 				<CTAProducts
 					title={"¿Listo para Convertirte en una Autoridad en tu Sector?"}
