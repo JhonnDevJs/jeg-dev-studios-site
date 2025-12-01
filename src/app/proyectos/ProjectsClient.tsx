@@ -45,7 +45,7 @@ const faqs: FaqItem[] = [
 	},
 ];
 
-function ProjectsClient({ project }: DesignProjectCard) {
+export default function ProjectsClient() {
 	// 2. Tipamos el estado para que sea un diccionario de arrays de Proyectos
 	const [projectsByCategory, setProjectsByCategory] = useState<Record<string, Project[]>>({});
 	const [loading, setLoading] = useState(true);
@@ -238,5 +238,3 @@ function ProjectsClient({ project }: DesignProjectCard) {
 		</>
 	);
 }
-
-export default ProjectsClient;
