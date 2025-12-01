@@ -2,14 +2,14 @@
   "version": "2.0.0",
   "tasks": [
     {
-      "label": "npm: install",
-      "type": "npm",
+      "label": "pnpm: install",
+      "type": "pnpm",
       "script": "install",
       "detail": "Instala las dependencias del proyecto"
     },
     {
-      "label": "npm: dev",
-      "type": "npm",
+      "label": "pnpm: dev",
+      "type": "pnpm",
       "script": "dev",
       "detail": "Ejecuta el servidor de desarrollo",
       "isBackground": true,
