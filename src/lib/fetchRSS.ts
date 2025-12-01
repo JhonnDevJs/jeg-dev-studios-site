@@ -1,8 +1,19 @@
 
 // src/lib/fetchRSS.js
-import Parser from 'rss-parser';
+import Parser, { Item as RssParserItem } from 'rss-parser';
 
-const parser = new Parser();
+/**
+ * Extends the base rss-parser Item type to include custom fields
+ * that might be present in the feed, like 'media:thumbnail'.
+ */
+interface CustomItem extends RssParserItem {
+  'media:thumbnail'?: {
+    $: { url: string };
+  };
+}
+
+// Initialize the parser with our custom item type
+const parser = new Parser<{}, CustomItem>();
 // Es una buena práctica usar variables de entorno para URLs configurables.
 // Puedes definir BLOG_FEED_URL en tu archivo .env.local
 const FEED_URL = process.env.BLOG_FEED_URL || 'https://blog.jegdevstudios.com/feeds/posts/default?alt=rss';
@@ -12,7 +23,7 @@ const FEED_URL = process.env.BLOG_FEED_URL || 'https://blog.jegdevstudios.com/fe
  * @param {string} htmlContent - El contenido HTML del post.
  * @returns {string|null} La URL de la imagen o null si no se encuentra.
  */
-const extractImageUrl = (htmlContent) => {
+const extractImageUrl = (htmlContent: string | undefined) => {
   if (!htmlContent) {
     return null;
   }
@@ -26,7 +37,7 @@ const extractImageUrl = (htmlContent) => {
  * @param {number} [limit] - El número máximo de posts a devolver.
  * @returns {Promise<Array<Object>>} Una promesa que resuelve a un array de objetos de post.
  */
-export const getBlogPosts = async (limit) => {
+export const getBlogPosts = async (limit: number) => {
   console.log(`Intentando obtener el feed RSS desde: ${FEED_URL}`);
   try {
     const feed = await parser.parseURL(FEED_URL);
@@ -37,7 +48,7 @@ export const getBlogPosts = async (limit) => {
     // El método slice no da error si el final es mayor que la longitud, así que podemos simplificar.
     const limitedItems = limit > 0 ? allItems.slice(0, limit) : allItems;
 
-    return limitedItems.map(item => {
+    return limitedItems.map((item: CustomItem) => {
       // Lógica para obtener la imagen, priorizando y con fallbacks.
       const imageUrl = 
         extractImageUrl(item.content) ?? 
@@ -47,7 +58,7 @@ export const getBlogPosts = async (limit) => {
 
       // Lógica simplificada para procesar categorías.
       const categories = (item.categories ?? [])
-        .map(cat => (typeof cat === 'string' ? cat : cat?._))
+        .map(cat => (typeof cat === 'string' ? cat : (cat as { _: string })?._))
         .filter(Boolean); // Elimina valores nulos o indefinidos.
 
       return {

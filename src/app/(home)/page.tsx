@@ -1,19 +1,10 @@
 import HomeClient from "./homeClient";
 import { getBlogPosts } from '@/lib/fetchRSS';
+import { Post } from "@/types";
 
 export const revalidate = 3600;
 
 const POSTS_TO_SHOW_ON_HOME = 4;
-
-interface Post {
-  slug?: string; // Was missing, now optional
-  title?: string;
-  date?: string; // Was missing, now optional
-  link?: string;
-  pubDate?: string;
-  imageUrl?: string; // Usaremos imageUrl para consistencia
-  excerpt?: string; // Renamed from contentSnippet
-}
 
 export default async function Home() {
   let postsToShow: Post[] = [];
