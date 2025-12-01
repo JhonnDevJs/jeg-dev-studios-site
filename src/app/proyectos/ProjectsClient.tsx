@@ -6,8 +6,7 @@ import DesignProjectCard from "@/components/Cards/DesignProjectCard";
 import CTA from "@/components/Cta/CTA";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
-import { storage, db } from "@/lib/firebase";
-import { getDownloadURL, ref } from "firebase/storage";
+import { db } from "@/lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import "./Projects.css";
 
