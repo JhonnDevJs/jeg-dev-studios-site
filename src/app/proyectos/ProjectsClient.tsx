@@ -24,7 +24,7 @@ interface Project {
 	description: string;
 	technologies: string[];
 	link?: string;
-	// Añade aquí cualquier otra propiedad que venga de Firestore
+	figmaEmbedUrl?: string; // Propiedad que faltaba
 }
 
 const faqs: FaqItem[] = [
@@ -45,7 +45,7 @@ const faqs: FaqItem[] = [
 	},
 ];
 
-function ProjectsClient() {
+function ProjectsClient({ project }: DesignProjectCard) {
 	// 2. Tipamos el estado para que sea un diccionario de arrays de Proyectos
 	const [projectsByCategory, setProjectsByCategory] = useState<Record<string, Project[]>>({});
 	const [loading, setLoading] = useState(true);
@@ -56,10 +56,20 @@ function ProjectsClient() {
 			try {
 				// 1. Obtener los datos de los proyectos desde Firestore
 				const querySnapshot = await getDocs(collection(db, "projects"));
-				const projectsData = querySnapshot.docs.map((doc) => ({ // TypeScript ahora sabe que esto puede tener cualquier propiedad
-					id: doc.id,
-					...doc.data(),
-				})) as Project[]; // Forzamos el tipado a nuestro array de Proyectos
+				// Mapeamos explícitamente para asegurar que los datos coincidan con la interfaz Project
+				const projectsData: Project[] = querySnapshot.docs.map((doc) => {
+					const data = doc.data();
+					return {
+						id: doc.id,
+						image: data.image || "/placeholder.png",
+						category: data.category || "web",
+						title: data.title || "Sin Título",
+						description: data.description || "Sin Descripción",
+						technologies: data.technologies || [],
+						link: data.link, // Será undefined si no existe en Firestore
+						figmaEmbedUrl: data.figmaEmbedUrl, // Será undefined si no existe en Firestore
+					};
+				});
 
 				// 2. Asignar la URL de la imagen directamente desde los datos de Firestore
 				const projectsWithCorrectedImages = projectsData.map((project: Project) => {
@@ -91,6 +101,7 @@ function ProjectsClient() {
 				);
 
 				setProjectsByCategory(groupedProjects);
+				console.log("Proyectos agrupados por categoría:", groupedProjects);
 			} catch (error) {
 				console.error("Error fetching projects data: ", error);
 			} finally {
@@ -192,15 +203,10 @@ function ProjectsClient() {
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 							{activeProjects.length > 0 ? (
 								activeProjects.map((project: Project) => {
-									// 2. Aseguramos que el link siempre sea un string para cumplir con el tipo del componente hijo
-									const projectWithRequiredLink = {
-										...project,
-										link: project.link || "#", // Proporcionamos un valor por defecto
-									};
 									return activeCategory === "design" ? (
-										<DesignProjectCard key={project.id} project={projectWithRequiredLink} />
+										<DesignProjectCard key={project.id} project={project} />
 									) : (
-										<ProjectCard key={project.id} project={projectWithRequiredLink} />
+										<ProjectCard key={project.id} project={{ ...project, link: project.link || "#" }} />
 									);
 								}
 								)
