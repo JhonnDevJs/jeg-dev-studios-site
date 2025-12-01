@@ -17,58 +17,6 @@ body {
   color: #ffffff;
 }
 
-.header-nav {
-  height: 4.5rem;
-}
-
-.navbar-nav {
-  overflow: hidden;
-}
-
-/* Hamburguesa blanca */
-.navbar-toggler-icon {
-  filter: brightness(0) invert(1);
-}
-
-/* Sin borde al hacer click */
-.navbar-toggler:focus,
-.navbar-toggler:hover,
-.navbar-toggler:active {
-  box-shadow: none;
-  outline: none;
-  border: none;
-}
-
-.navbar-nav.gradient-border {
-  background: #00000000;
-  border-radius: 0.95rem;
-  padding: 2px;
-}
-
-.nav-efecto {
-  transition: transform 0.2s cubic-bezier(.4, 2, .6, 1), color 0.2s;
-}
-
-.nav-efecto:hover,
-.nav-efecto:focus {
-  transform: scale(1.15);
-  color: #DA24BB !important;
-}
-
-.nav-efecto.active {
-  transform: scale(1.15);
-  color: #1171FD !important;
-}
-
-@media (max-width: 991px) {
-
-  .nav-efecto:hover,
-  .nav-efecto:focus,
-  .nav-efecto.active {
-    transform: none !important;
-  }
-}
-
 .gradient-border {
   position: relative;
   z-index: 1;
