@@ -285,7 +285,7 @@ export default function HomeClient({ posts: postsToShow }: HomeClientProps) {
 					style={{ maxWidth: "47rem" }}
 				>
 					<div className="container mx-auto p-0 m-0">
-						<h1 className="text-white text-shadow">
+						<h1 className="text-2xl md:text-3xl lg:text-4xl text-white text-shadow">
 							Agencia de Desarrollo Web y Software en México: Soluciones a
 							Medida
 						</h1>
