@@ -38,13 +38,13 @@ import Richi from "@/assets/img/img/team/ricardo.webp";
 import "./home.css";
 // 1. Define qué propiedades tiene un Post (ajusta esto según tus datos reales)
 interface Post {
-	slug: string;
-	title: string;
-	date: string;
-	link: string;
-	pubDate: string;
-	coverImage: string;
-	excerpt: string;
+	slug?: string; // Was missing, now optional
+	title?: string;
+	date?: string; // Was missing, now optional
+	link?: string;
+	pubDate?: string;
+	imageUrl?: string; // Usaremos imageUrl para consistencia
+	excerpt?: string;
 }
 
 interface HomeClientProps {
@@ -854,7 +854,26 @@ export default function HomeClient({ posts: postsToShow }: HomeClientProps) {
 					))}
 				</div>
 			</section>
-			{mounted && <BlogSection posts={postsToShow} />}
+			{mounted && postsToShow.length > 0 && (
+				<BlogSection
+					posts={postsToShow
+						.map((post) => {
+							// Mapeamos las propiedades de Post a BlogPost
+							if (post.title && post.link && post.pubDate) {
+								return {
+									...post, // Pasamos todas las propiedades originales
+									title: post.title,
+									link: post.link,
+									pubDate: post.pubDate,
+									contentSnippet: post.excerpt, // Renombramos excerpt a contentSnippet
+									// El resto de propiedades como 'content' y 'categories' se pasarán con el ...post
+								};
+							}
+							return null;
+						})
+						.filter((post): post is NonNullable<typeof post> => post !== null)}
+				/>
+			)}
 
 			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
 				<CTA
