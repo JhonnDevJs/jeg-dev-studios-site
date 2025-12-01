@@ -108,7 +108,7 @@ function ProjectsClient() {
 
 	const categories = [
 		{ id: "web", title: "Desarrollo Web" },
-		{ id: "mobile", title: "Aplicaciones Móviles" },
+		{ id: "app", title: "Aplicaciones Móviles" },
 		{ id: "software", title: "Software" },
 		{ id: "design", title: "Diseño" },
 		{ id: "seo", title: "SEO" },
