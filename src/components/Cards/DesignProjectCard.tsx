@@ -17,8 +17,8 @@ function DesignProjectCard({ project }: DesignProjectCard) {
 	const [showModal, setShowModal] = useState(false);
 	return (
 		<>
-			<div className="col-12 col-sm-6 col-lg-4">
-				<div className="h-full shadow-lg border-none rounded-lg overflow-hidden bg-gray-800">
+			<div className="w-full">
+				<div className="h-full shadow-lg border-none rounded-lg overflow-hidden bg-gray-800 flex flex-col">
 					<div className="project-card-img-web relative">
 						<Image
 							loading="lazy"
