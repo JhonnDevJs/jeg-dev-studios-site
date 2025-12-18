@@ -21,7 +21,7 @@ const faqs: FaqItem[] = [
 	{
 		question: "¿En qué se especializa el equipo fundador?",
 		answer:
-			"Nuestro equipo combina experticia en áreas clave: desarrollo Full-Stack y SEO (Jhonatan), diseño de experiencias de usuario UX/UI (Fernanda), desarrollo Backend robusto (Leonardo) y desarrollo Frontend enfocado en rendimiento (Ricardo). Esta diversidad nos permite ofrecer soluciones integrales.",
+			"Nuestro equipo combina experticia en áreas clave: desarrollo Full-Stack,  y desarrollo Frontend enfocado en rendimiento SEO (Jhonatan), diseño de experiencias de usuario UX/UI (Fernanda), desarrollo Backend robusto (Leonardo). Esta diversidad nos permite ofrecer soluciones integrales.",
 	},
 	{
 		question: "¿Dónde se encuentran ubicados?",
@@ -81,8 +81,8 @@ export default function AboutClient() {
 						<h2 className="text-3xl font-bold text-white mb-4">Nuestra Historia</h2>
 						<p className="text-lg text-gray-300 leading-relaxed">
 							JEG Dev Studios fue fundada en mayo de 2024 por Jhonatan Espinal
-							Garcia, quien más adelante se unió con Jose Leonardo González,
-							Fernanda Briseño y Ricardo Ubaldo González como cofundadores.
+							Garcia, quien más adelante se unió con Jose Leonardo González y
+							Fernanda Briseño como cofundadores.
 							Nuestro objetivo es transformar ideas en experiencias digitales
 							inolvidables a través de soluciones tecnológicas personalizadas. Nos
 							encontramos en una etapa de crecimiento continuo, con el firme
@@ -166,7 +166,8 @@ export default function AboutClient() {
 							Desarrollador
 							<br />
 							Dirige el estudio con visión estratégica y pasión por la innovación
-							digital.
+							digital, especialista en Frontend, SEO y rendimiento
+							web.
 						</p>
 						<p className="text-lg text-gray-300 leading-relaxed mt-2">
 							<strong>Jose Leonardo González</strong> – Cofundador y Desarrollador
@@ -178,13 +179,6 @@ export default function AboutClient() {
 							<strong>Fernanda Briseño</strong> – Cofundadora y Diseñadora UX/UI
 							<br />
 							Líder en la creación de interfaces visuales atractivas y usables.
-						</p>
-						<p className="text-lg text-gray-300 leading-relaxed mt-2">
-							<strong>Ricardo Ubaldo González</strong> – Cofundador y
-							Desarrollador Frontend
-							<br />
-							Especialista en desarrollo de interfaces modernas, SEO y rendimiento
-							web.
 						</p>
 					</article>
 

@@ -31,10 +31,9 @@ import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 import AsideAgenciaDigital from "@/assets/img/img/home/agencia-digital.webp";
 import TeamGroup from "@/assets/img/img/home/team-group.webp";
-import ferPhoto from "@/assets/img/img/team/fer-briseño.webp";
+import ferPhoto from "@/assets/img/img/team/fer-briseno.webp";
 import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
 import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
-import Richi from "@/assets/img/img/team/ricardo.webp";
 import "./home.css";
 // 1. Define qué propiedades tiene un Post (ajusta esto según tus datos reales)
 import { Post } from "@/types";
@@ -148,12 +147,12 @@ export default function HomeClient({ posts: postsToShow }: HomeClientProps) {
 					icon: "icon-linkedin-no-bg",
 				},
 				{
-					url: "https://github.com/JhonEG-17",
+					url: "https://github.com/JhonnDevJs",
 					title: "GitHub de Jhonatan Espinal Garcia",
 					icon: "icon-github",
 				},
 				{
-					url: "https://jhoneg-17.github.io/JhonDev/",
+					url: "https://www.jhondev.xyz",
 					title: "Portafolio web de Jhonatan Espinal Garcia",
 					icon: "icon-link",
 				},
@@ -192,20 +191,6 @@ export default function HomeClient({ posts: postsToShow }: HomeClientProps) {
 				},
 			],
 			imageUrl: leoPhoto,
-		},
-		{
-			name: "Ricardo Ubaldo",
-			position: "Co-Fundador y Desarrollador.",
-			description:
-				"Desarrollador Frontend experto en maquetación web. Con amplia experiencia en frameworks como Bootstrap, convierte diseños en interfaces de usuario pixel-perfect, responsivas y altamente optimizadas para todos los dispositivos.",
-			links: [
-				{
-					url: "https://www.linkedin.com/in/ricardo-ubaldo-gonz%C3%A1lez-4522a5291/",
-					title: "LinkedIn de Ricardo Ubaldo",
-					icon: "icon-linkedin-no-bg",
-				},
-			],
-			imageUrl: Richi,
 		},
 	];
 
@@ -847,27 +832,27 @@ export default function HomeClient({ posts: postsToShow }: HomeClientProps) {
 				</div>
 			</section>
 			{mounted && postsToShow.length > 0 && (
-        <BlogSection
-          posts={postsToShow
-            .map((post: Post) => {
-              // Mapeamos las propiedades de Post a BlogPost
-              if (post.title && post.link && post.pubDate) {
-                return {
-                  ...post, // Pasamos todas las propiedades originales
-                  title: post.title,
-                  link: post.link,
-                  pubDate: post.pubDate,
-                  contentSnippet: post.excerpt, 
-                  // CORRECCIÓN AQUÍ:
-                  // Si imageUrl es null, lo convertimos a undefined usando '??'
-                  imageUrl: post.imageUrl ?? undefined, 
-                };
-              }
-              return null;
-            })
-            .filter((post): post is NonNullable<typeof post> => post !== null)}
-        />
-      )}
+				<BlogSection
+					posts={postsToShow
+						.map((post: Post) => {
+							// Mapeamos las propiedades de Post a BlogPost
+							if (post.title && post.link && post.pubDate) {
+								return {
+									...post, // Pasamos todas las propiedades originales
+									title: post.title,
+									link: post.link,
+									pubDate: post.pubDate,
+									contentSnippet: post.excerpt,
+									// CORRECCIÓN AQUÍ:
+									// Si imageUrl es null, lo convertimos a undefined usando '??'
+									imageUrl: post.imageUrl ?? undefined,
+								};
+							}
+							return null;
+						})
+						.filter((post): post is NonNullable<typeof post> => post !== null)}
+				/>
+			)}
 
 			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
 				<CTA
