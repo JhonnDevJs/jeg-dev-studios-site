@@ -73,8 +73,7 @@ function NavBar() {
         <Image src={iconLogo} className="w-[30px] rounded" alt="logo de la agencia JEG Dev Studios" />
         <h1 className="text-lg font-bold tracking-tight text-white">JEG Dev Studios</h1>
       </Link>
-      <button className="hidden md:hidden h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors"
-        className="flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors"
+      <button className="md:hidden flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
         <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>menu</span>
