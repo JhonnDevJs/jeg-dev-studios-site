@@ -23,26 +23,26 @@ function Footer() {
             <div className="flex flex-col gap-4">
               <h4 className="text-xs font-bold uppercase tracking-wider text-white/80">Menu</h4>
               <ul className="flex flex-col gap-3">
-                <li><Link className="text-sm text-gray-400 hover:text-primary transition-colors" href="/">Inicio</Link></li>
-                <li><Link className="text-sm text-gray-400 hover:text-primary transition-colors" href="/servicios">Servicios</Link></li>
-                <li><Link className="text-sm text-gray-400 hover:text-primary transition-colors" href="/portafolio">Portafolio</Link></li>
-                <li><Link className="text-sm text-gray-400 hover:text-primary transition-colors" href="/sobre-nosotros">Sobre Nosotros</Link></li>
-                <li><Link className="text-sm text-gray-400 hover:text-primary transition-colors" href="/contacto">Contacto</Link></li>
+                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/">Inicio</Link></li>
+                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/servicios">Servicios</Link></li>
+                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/portafolio">Portafolio</Link></li>
+                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/sobre-nosotros">Sobre Nosotros</Link></li>
+                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/contacto">Contacto</Link></li>
               </ul>
             </div>
             <div className="flex flex-col gap-4">
               <h4 className="text-xs font-bold uppercase tracking-wider text-white/80">Contacto</h4>
               <ul className="flex flex-col gap-3">
                 <li className="flex items-start gap-2 text-sm text-gray-400">
-                  <span className="material-symbols-outlined mt-0.5 text-primary shrink-0" style={{ fontSize: 16 }}>location_on</span>
+                  <span className="material-symbols-outlined mt-0.5 text-blue-500 shrink-0" style={{ fontSize: 16 }}>location_on</span>
                   <span>CDMX, México</span>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-400">
-                  <span className="material-symbols-outlined text-primary shrink-0" style={{ fontSize: 16 }}>mail</span>
+                  <span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontSize: 16 }}>mail</span>
                   <Link className="hover:text-white transition-colors truncate" href="#">contacto@jegdevstudios.com</Link>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-400">
-                  <span className="material-symbols-outlined text-primary shrink-0" style={{ fontSize: 16 }}>call</span>
+                  <span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontSize: 16 }}>call</span>
                   <Link className="hover:text-white transition-colors" href="https://wa.me/message/IFBW3ARPBITWA1">Chat de whatsapp</Link>
                 </li>
               </ul>
@@ -50,7 +50,7 @@ function Footer() {
           </div>
           <div className="flex flex-col gap-6 border-t border-white/5 pt-8">
             <div className="flex gap-4">
-              
+
               <Link
                 className="flex text-2xl no-underline"
                 href="https://www.facebook.com/JEGDevStudios"
@@ -124,8 +124,8 @@ function Footer() {
             </div>
             <div className="flex flex-col gap-3">
               <div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500">
-                <Link className="hover:text-primary transition-colors" href="/aviso-de-privacidad">Política de Privacidad</Link>
-                <Link className="hover:text-primary transition-colors" href="/terminos-y-condiciones">Términos y Condiciones</Link>
+                <Link className="hover:text-blue-500 transition-colors" href="/aviso-de-privacidad">Política de Privacidad</Link>
+                <Link className="hover:text-blue-500 transition-colors" href="/terminos-y-condiciones">Términos y Condiciones</Link>
               </div>
               <p className="text-[10px] text-gray-600">
                 &copy; {new Date().getFullYear()} JEG Dev Studios. Todos los derechos reservados.

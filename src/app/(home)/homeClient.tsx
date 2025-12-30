@@ -95,7 +95,7 @@ export default function HomeClient() {
 				{/* HERO SECTION */}
 				<div className="relative flex flex-col items-center justify-center px-4 py-8">
 					<div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-						<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background-dark/0 to-background-dark opacity-70"></div>
+						<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-background-dark/0 to-background-dark opacity-70"></div>
 						<div className="absolute top-20 right-[-20%] w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
 						<div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/10 rounded-full blur-3xl"></div>
 					</div>
@@ -106,16 +106,16 @@ export default function HomeClient() {
 						</div>
 						<h2 className="mb-4 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
 							Impulsamos tu <br />
-							<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary from-blue-500 to-blue-300">Crecimiento Digital.</span>
+							<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 from-blue-500 to-blue-300">Crecimiento Digital.</span>
 						</h2>
 						<p className="mb-8 text-lg font-normal leading-relaxed text-gray-400 max-w-[90%]">
 							Expertos en Desarrollo de Software, SEO y CRO. Convertimos visitantes en clientes para empresas ambiciosas.
 						</p>
 						<div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
-							<button className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full bg-blue-500 px-8 text-base font-bold text-white hover:text-blue-500 shadow-lg shadow-primary/25 transition-transform active:scale-95 hover:bg-white">
+							<button className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full bg-blue-500 px-8 text-base font-bold text-white hover:text-blue-500 shadow-lg shadow-blue-500/25 transition-transform active:scale-95 hover:bg-white">
 								Solicitar Auditoría
 							</button>
-							<button className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full border border-primary/50 bg-transparent px-8 text-base font-bold text-primary transition-colors hover:bg-blue-500/10 active:scale-95">
+							<button className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full border border-blue-500/50 bg-transparent px-8 text-base font-bold text-blue-500 transition-colors hover:bg-blue-500/10 active:scale-95">
 								Ver Servicios
 							</button>
 						</div>
@@ -126,52 +126,52 @@ export default function HomeClient() {
 				<section className="relative z-10 px-4 pt-4 pb-8">
 					<div className="flex items-center justify-between mb-6">
 						<h3 className="text-2xl font-bold text-white">Nuestros Servicios</h3>
-						<a className="text-sm font-medium text-primary hover:text-blue-300" href="#">Ver todo</a>
+						<a className="text-sm font-medium text-blue-500 hover:text-blue-300" href="#">Ver todo</a>
 					</div>
 					<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-primary/30 transition-all duration-300">
+						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all"></div>
 							<div className="relative z-10 flex flex-col h-full">
-								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform duration-300">
+								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-blue-500 group-hover:scale-110 transition-transform duration-300">
 									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>terminal</span>
 								</div>
 								<h4 className="mb-2 text-xl font-bold text-white">Desarrollo de Software</h4>
 								<p className="mb-4 text-sm leading-relaxed text-gray-400">
 									Soluciones a la medida, escalables y seguras. Desde apps móviles hasta plataformas enterprise.
 								</p>
-								<a className="mt-auto inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors gap-1" href="#">
+								<a className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="#">
 									Saber más
 									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
 								</a>
 							</div>
 						</div>
-						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-primary/30 transition-all duration-300">
+						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-purple-500/5 blur-2xl group-hover:bg-purple-500/10 transition-all"></div>
 							<div className="relative z-10 flex flex-col h-full">
-								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform duration-300">
+								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-blue-500 group-hover:scale-110 transition-transform duration-300">
 									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>search_insights</span>
 								</div>
 								<h4 className="mb-2 text-xl font-bold text-white">Estrategia SEO</h4>
 								<p className="mb-4 text-sm leading-relaxed text-gray-400">
 									Posicionamiento orgánico que domina los buscadores y genera tráfico altamente cualificado.
 								</p>
-								<a className="mt-auto inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors gap-1" href="#">
+								<a className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="#">
 									Saber más
 									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
 								</a>
 							</div>
 						</div>
-						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-primary/30 transition-all duration-300">
+						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-green-500/5 blur-2xl group-hover:bg-green-500/10 transition-all"></div>
 							<div className="relative z-10 flex flex-col h-full">
-								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform duration-300">
+								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-blue-500 group-hover:scale-110 transition-transform duration-300">
 									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>devices</span>
 								</div>
 								<h4 className="mb-2 text-xl font-bold text-white">Diseño Web &amp; CRO</h4>
 								<p className="mb-4 text-sm leading-relaxed text-gray-400">
 									Interfaces rápidas optimizadas para la conversión. Convertimos visitas en ventas reales.
 								</p>
-								<a className="mt-auto inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors gap-1" href="#">
+								<a className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="#">
 									Saber más
 									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
 								</a>
@@ -202,19 +202,19 @@ export default function HomeClient() {
 				<div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4 px-4 py-4">
 
 					{/* Card JEG (Recomendado) */}
-					<div className="relative flex flex-1 flex-col gap-4 rounded-xl border border-primary/40 bg-surface-dark p-5 shadow-[0_0_30px_-10px_rgba(37,140,244,0.15)] overflow-hidden">
+					<div className="relative flex flex-1 flex-col gap-4 rounded-xl border border-blue-500/40 bg-surface-dark p-5 shadow-[0_0_30px_-10px_rgba(37,140,244,0.15)] overflow-hidden">
 						<div className="absolute -right-12 -top-12 h-24 w-24 bg-blue-500/20 blur-2xl rounded-full pointer-events-none"></div>
 						<div className="flex flex-col gap-1 relative z-10">
 							<div className="flex items-center justify-between">
 								<h1 className="text-white text-sm font-bold leading-tight opacity-90">JEG Dev Studios</h1>
-								<p className="text-white text-[10px] uppercase font-bold tracking-wider rounded-full bg-blue-500 px-2.5 py-1 text-center shadow-lg shadow-primary/20">Recomendado</p>
+								<p className="text-white text-[10px] uppercase font-bold tracking-wider rounded-full bg-blue-500 px-2.5 py-1 text-center shadow-lg shadow-blue-500/20">Recomendado</p>
 							</div>
 							<p className="flex items-baseline gap-1 text-white mt-1">
 								<span className="text-white text-3xl font-black leading-tight tracking-[-0.033em]">Expertos</span>
 								<span className="text-white/60 text-sm font-medium leading-tight">/ garantizado</span>
 							</p>
 						</div>
-						<div className="h-px bg-gradient-to-r from-primary/50 to-transparent w-full my-1"></div>
+						<div className="h-px bg-gradient-to-r from-blue-500/50 to-transparent w-full my-1"></div>
 						<div className="flex flex-col gap-3">
 							{[
 								"Carga < 1s (Core Vitals)",
@@ -223,7 +223,7 @@ export default function HomeClient() {
 								"Analytics Custom"
 							].map((item, index) => (
 								<div key={index} className="text-[14px] font-medium leading-normal flex items-start gap-3 text-white">
-									<span className="material-symbols-outlined text-primary shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+									<span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
 									<span>{item}</span>
 								</div>
 							))}
@@ -261,7 +261,7 @@ export default function HomeClient() {
 				{/* SECCIÓN PROCESO */}
 				<div className="flex flex-col px-4">
 					<div className="flex items-center gap-2 mb-2">
-						<span className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-primary uppercase tracking-wider">Nuestro Proceso</span>
+						<span className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-500 uppercase tracking-wider">Nuestro Proceso</span>
 					</div>
 					<h2 className="text-white tracking-tight text-[28px] font-bold leading-tight text-left">
 						Metodología Ágil
@@ -273,15 +273,15 @@ export default function HomeClient() {
 
 				{/* TIMELINE */}
 				<div className="relative px-4 pb-8">
-					<div className="absolute left-[34px] top-2 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent"></div>
+					<div className="absolute left-[34px] top-2 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-blue/50 to-transparent"></div>
 
 					{/* Paso 1 */}
 					<div className="relative flex gap-5 mb-10 group">
-						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-dark border-2 border-primary shadow-[0_0_15px_-3px_rgba(37,140,244,0.4)]">
-							<span className="material-symbols-outlined text-primary text-[20px]">manage_search</span>
+						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500 shadow-[0_0_15px_-3px_rgba(37,140,244,0.4)]">
+							<span className="material-symbols-outlined text-blue-500 text-[20px]">manage_search</span>
 						</div>
 						<div className="flex flex-col pt-1">
-							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">Diagnóstico y Estrategia</h3>
+							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Diagnóstico y Estrategia</h3>
 							<p className="text-sm text-[#9cabba] leading-relaxed">
 								Auditoría técnica inicial y definición de KPIs. Entendemos el problema antes de escribir código.
 							</p>
@@ -290,11 +290,11 @@ export default function HomeClient() {
 
 					{/* Paso 2 */}
 					<div className="relative flex gap-5 mb-10 group">
-						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-dark border-2 border-primary/50 shadow-lg shadow-black/50">
+						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
 							<span className="material-symbols-outlined text-white text-[20px]">calendar_month</span>
 						</div>
 						<div className="flex flex-col pt-1">
-							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">Sprint Planning</h3>
+							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Sprint Planning</h3>
 							<p className="text-sm text-[#9cabba] leading-relaxed">
 								Roadmap dividido en entregables de 2 semanas. Priorizamos valor comercial inmediato.
 							</p>
@@ -303,11 +303,11 @@ export default function HomeClient() {
 
 					{/* Paso 3 */}
 					<div className="relative flex gap-5 mb-10 group">
-						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-dark border-2 border-primary/50 shadow-lg shadow-black/50">
+						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
 							<span className="material-symbols-outlined text-white text-[20px]">code_blocks</span>
 						</div>
 						<div className="flex flex-col pt-1">
-							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">Desarrollo Iterativo</h3>
+							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Desarrollo Iterativo</h3>
 							<p className="text-sm text-[#9cabba] leading-relaxed">
 								Código limpio y escalable. Reuniones semanales para demo de avances y feedback real.
 							</p>
@@ -320,7 +320,7 @@ export default function HomeClient() {
 							<span className="material-symbols-outlined text-white text-[20px]">rocket_launch</span>
 						</div>
 						<div className="flex flex-col pt-1">
-							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">Launch &amp; CRO</h3>
+							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Launch &amp; CRO</h3>
 							<p className="text-sm text-[#9cabba] leading-relaxed">
 								Despliegue a producción y monitoreo continuo para optimización de conversión (CRO).
 							</p>
@@ -330,7 +330,7 @@ export default function HomeClient() {
 			</div>
 			<div className="relative flex flex-col items-center px-4 py-8 flex-grow">
 				<div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-					<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background-dark/0 to-background-dark opacity-70"></div>
+					<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-background-dark/0 to-background-dark opacity-70"></div>
 					<div className="absolute top-20 right-[-20%] w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
 					<div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/10 rounded-full blur-3xl"></div>
 				</div>
@@ -353,7 +353,7 @@ export default function HomeClient() {
 						<div className="space-y-1">
 							<label className="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1" htmlFor="name">Nombre</label>
 							<div className="relative">
-								<input className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="name" placeholder="Tu nombre completo" type="text" />
+								<input className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all" id="name" placeholder="Tu nombre completo" type="text" />
 								<span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 pointer-events-none" style={{ fontSize: '20px' }}>person</span>
 							</div>
 						</div>
@@ -361,7 +361,7 @@ export default function HomeClient() {
 						<div className="space-y-1">
 							<label className="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1" htmlFor="email">Email</label>
 							<div className="relative">
-								<input className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="email" placeholder="tu@empresa.com" type="email" />
+								<input className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all" id="email" placeholder="tu@empresa.com" type="email" />
 								<span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 pointer-events-none" style={{ fontSize: '20px' }}>mail</span>
 							</div>
 						</div>
@@ -369,7 +369,7 @@ export default function HomeClient() {
 						<div className="space-y-1">
 							<label className="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1" htmlFor="service">Servicio de interés</label>
 							<div className="relative">
-								<select className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-none" id="service">
+								<select className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white appearance-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all bg-none" id="service">
 									<option className="bg-surface-dark">Desarrollo de Software</option>
 									<option className="bg-surface-dark">SEO y Posicionamiento</option>
 									<option className="bg-surface-dark">Diseño Web &amp; CRO</option>
@@ -381,10 +381,10 @@ export default function HomeClient() {
 
 						<div className="space-y-1">
 							<label className="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1" htmlFor="message">Mensaje</label>
-							<textarea className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" id="message" placeholder="Cuéntanos los detalles..." rows={4}></textarea>
+							<textarea className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-blue-500 focus:ring-1 focus:ring-blue-500 outline-none transition-all resize-none" id="message" placeholder="Cuéntanos los detalles..." rows={4}></textarea>
 						</div>
 
-						<button className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-blue-600 py-4 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-transform active:scale-95 hover:brightness-110" type="button">
+						<button className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-blue-500 to-blue-600 py-4 text-sm font-bold text-white shadow-lg shadow-blue-500/25 transition-transform active:scale-95 hover:brightness-110" type="button">
 							Enviar Solicitud
 							<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>send</span>
 						</button>
@@ -392,7 +392,7 @@ export default function HomeClient() {
 
 					<div className="mt-8 flex flex-col gap-4 border-t border-white/5 pt-8">
 						<div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
-							<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-primary">
+							<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
 								<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>call</span>
 							</div>
 							<div>
@@ -401,7 +401,7 @@ export default function HomeClient() {
 							</div>
 						</div>
 						<div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
-							<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-primary">
+							<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
 								<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>mail</span>
 							</div>
 							<div>
@@ -415,7 +415,7 @@ export default function HomeClient() {
         <section className="flex flex-col gap-6">
           <div className="text-center mb-2">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-4 backdrop-blur-sm">
-              <span className="text-xs font-medium text-primary">Dudas Comunes</span>
+              <span className="text-xs font-medium text-blue-500">Dudas Comunes</span>
             </div>
             <h2 className="text-3xl font-extrabold text-white">Preguntas Frecuentes</h2>
             <p className="mt-3 text-sm text-gray-400 max-w-md mx-auto">
@@ -425,10 +425,10 @@ export default function HomeClient() {
           
           <div className="flex flex-col gap-3">
             {/* Pregunta Abierta */}
-            <div className="rounded-2xl bg-surface-dark border border-primary/30 p-5 transition-all">
+            <div className="rounded-2xl bg-surface-dark border border-blue-500/30 p-5 transition-all">
               <div className="flex justify-between items-start gap-4">
                 <h3 className="font-bold text-white text-lg">¿Cuánto tarda un desarrollo web?</h3>
-                <span className="material-symbols-outlined text-primary" style={{ fontSize: '24px' }}>remove</span>
+                <span className="material-symbols-outlined text-blue-500" style={{ fontSize: '24px' }}>remove</span>
               </div>
               <p className="mt-3 text-sm leading-relaxed text-gray-400">
                 Depende de la complejidad. Una landing page toma 1-2 semanas, mientras que una plataforma a medida puede tomar de 2 a 4 meses. Entregamos cronogramas detallados antes de iniciar.
@@ -460,7 +460,7 @@ export default function HomeClient() {
         </section>
 
         {/* CTA SECTION */}
-        <section className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-primary to-blue-700 px-6 py-12 text-center shadow-2xl shadow-primary/20">
+        <section className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-blue-500 to-blue-700 px-6 py-12 text-center shadow-2xl shadow-blue-500/20">
           <div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10 mix-blend-overlay"></div>
           <div className="absolute top-0 right-0 -mr-12 -mt-12 h-40 w-40 rounded-full bg-white/20 blur-3xl"></div>
           <div className="absolute bottom-0 left-0 -ml-12 -mb-12 h-40 w-40 rounded-full bg-black/20 blur-3xl"></div>

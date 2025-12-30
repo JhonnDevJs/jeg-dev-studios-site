@@ -206,7 +206,7 @@ export default function ContactClient() {
 
 						<div className="mt-8 flex flex-col gap-4 border-t border-white/5 pt-8">
 							<div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
-								<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+								<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-blue-500">
 									<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>call</span>
 								</div>
 								<div>
@@ -215,7 +215,7 @@ export default function ContactClient() {
 								</div>
 							</div>
 							<div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
-								<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+								<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-blue-500">
 									<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>mail</span>
 								</div>
 								<div>
@@ -244,26 +244,26 @@ export default function ContactClient() {
 							<div className="flex flex-col gap-4">
 								<h4 className="text-xs font-bold uppercase tracking-wider text-white/80">Menu</h4>
 								<ul className="flex flex-col gap-3">
-									<li><a className="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Inicio</a></li>
-									<li><a className="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Servicios</a></li>
-									<li><a className="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Portafolio</a></li>
-									<li><a className="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Sobre Nosotros</a></li>
-									<li><a className="text-sm text-gray-400 hover:text-primary transition-colors" href="#">Contacto</a></li>
+									<li><a className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="#">Inicio</a></li>
+									<li><a className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="#">Servicios</a></li>
+									<li><a className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="#">Portafolio</a></li>
+									<li><a className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="#">Sobre Nosotros</a></li>
+									<li><a className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="#">Contacto</a></li>
 								</ul>
 							</div>
 							<div className="flex flex-col gap-4">
 								<h4 className="text-xs font-bold uppercase tracking-wider text-white/80">Contacto</h4>
 								<ul className="flex flex-col gap-3">
 									<li className="flex items-start gap-2 text-sm text-gray-400">
-										<span className="material-symbols-outlined mt-0.5 text-primary shrink-0" style={{ fontSize: '16px' }}>location_on</span>
+										<span className="material-symbols-outlined mt-0.5 text-blue-500 shrink-0" style={{ fontSize: '16px' }}>location_on</span>
 										<span>CDMX, México</span>
 									</li>
 									<li className="flex items-center gap-2 text-sm text-gray-400">
-										<span className="material-symbols-outlined text-primary shrink-0" style={{ fontSize: '16px' }}>mail</span>
+										<span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontSize: '16px' }}>mail</span>
 										<a className="hover:text-white transition-colors truncate" href="#">contacto@jegdevstudios.com</a>
 									</li>
 									<li className="flex items-center gap-2 text-sm text-gray-400">
-										<span className="material-symbols-outlined text-primary shrink-0" style={{ fontSize: '16px' }}>call</span>
+										<span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontSize: '16px' }}>call</span>
 										<a className="hover:text-white transition-colors" href="#">+52 55 1234 5678</a>
 									</li>
 								</ul>
@@ -283,8 +283,8 @@ export default function ContactClient() {
 							</div>
 							<div className="flex flex-col gap-3">
 								<div className="flex flex-wrap gap-x-6 gap-y-2 text-xs text-gray-500">
-									<a className="hover:text-primary transition-colors" href="#">Política de Privacidad</a>
-									<a className="hover:text-primary transition-colors" href="#">Términos y Condiciones</a>
+									<a className="hover:text-blue-500 transition-colors" href="#">Política de Privacidad</a>
+									<a className="hover:text-blue-500 transition-colors" href="#">Términos y Condiciones</a>
 								</div>
 								<p className="text-[10px] text-gray-600">
 									© 2024 JEG Dev Studios. Todos los derechos reservados.
