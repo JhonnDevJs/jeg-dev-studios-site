@@ -18,17 +18,19 @@ body {
   color: #ffffff;
 }
 
-._icon-color::before {
-  color: lavender;
+.__icons-color::before {
+  color: #969696;
 }
 
 /* Scrollbar personalizado */
 ::-webkit-scrollbar {
   width: 6px;
 }
+
 ::-webkit-scrollbar-track {
   background: #101922;
 }
+
 ::-webkit-scrollbar-thumb {
   background: #3b4754;
   border-radius: 3px;

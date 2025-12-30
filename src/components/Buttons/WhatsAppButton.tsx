@@ -6,7 +6,7 @@ export default function BtnWhats() {
       href="https://wa.me/message/IFBW3ARPBITWA1"
       target="_blank"
       rel="noopener noreferrer"
-      className="btn-whatsapp inline-block bg-green-600 hover:bg-green-700 rounded-full border-none text-white text-center p-3"
+      className="fixed bottom-30 right-5 inline-block bg-green-600 hover:bg-green-700 rounded-full border-none text-white text-center p-3 z-10"
       aria-label="botón de mensaje directo a WhatsApp"
       title="botón de mensaje directo a WhatsApp"
     >

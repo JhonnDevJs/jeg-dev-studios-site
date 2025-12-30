@@ -220,7 +220,7 @@ export default function ContactClient() {
 								</div>
 								<div>
 									<p className="text-xs text-gray-500">Escríbenos un correo</p>
-									<p className="text-sm font-semibold text-white">hola@jegdev.com</p>
+									<p className="text-sm font-semibold text-white">contacto@jegdevstudios.com</p>
 								</div>
 							</div>
 						</div>
@@ -260,7 +260,7 @@ export default function ContactClient() {
 									</li>
 									<li className="flex items-center gap-2 text-sm text-gray-400">
 										<span className="material-symbols-outlined text-primary shrink-0" style={{ fontSize: '16px' }}>mail</span>
-										<a className="hover:text-white transition-colors truncate" href="#">hola@jegdev.com</a>
+										<a className="hover:text-white transition-colors truncate" href="#">contacto@jegdevstudios.com</a>
 									</li>
 									<li className="flex items-center gap-2 text-sm text-gray-400">
 										<span className="material-symbols-outlined text-primary shrink-0" style={{ fontSize: '16px' }}>call</span>
