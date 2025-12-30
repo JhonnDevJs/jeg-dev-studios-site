@@ -73,9 +73,51 @@ function NavBar() {
         <Image src={iconLogo} className="w-[30px] rounded" alt="logo de la agencia JEG Dev Studios" />
         <h1 className="text-lg font-bold tracking-tight text-white">JEG Dev Studios</h1>
       </Link>
-      <button className="flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors">
+      <button className="hidden md:hidden h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors"
+        className="flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors"
+        onClick={() => setIsMenuOpen(!isMenuOpen)}
+      >
         <span className="material-symbols-outlined" style={{ fontSize: '28px' }}>menu</span>
       </button>
+      <ul
+        ref={navRef}
+        className={`absolute left-0 top-full z-40 w-full origin-top-right overflow-hidden rounded-b-3xl bg-background-dark/90 py-4 text-white shadow-lg transition-all duration-300 backdrop-blur-md md:relative md:top-auto md:z-0 md:flex md:w-auto md:items-center md:bg-transparent md:py-0 md:shadow-none ${isMenuOpen
+          ? "max-h-[100vh] opacity-100 bg-[#101922]"
+          : "max-h-0 opacity-0 md:max-h-full md:opacity-100"
+          }`}
+      >
+        <div
+          className="md:hidden absolute top-0 left-0 h-2 w-full"
+          style={indicatorStyle}
+        />
+        {navLinks.map(({ href, label, title }) => (
+          <li key={href}>
+            <Link
+              href={href}
+              title={title}
+              className={`block px-6 py-3 text-base font-medium transition-colors hover:text-blue-500 md:px-3 md:py-2 ${pathname === href
+                ? "text-blue-500"
+                : ""
+                }`}
+              aria-current={pathname === href ? "page" : undefined}
+              onClick={() => setIsMenuOpen(false)} // Close menu on link click
+            >
+              {label}
+            </Link>
+          </li>
+        ))}
+        <div className="md:relative md:order-first md:mx-2">
+          <div
+            className="absolute bottom-0 left-0 h-1.5 bg-gradient-to-r from-blue-500 to-blue-300 transition-all duration-300 md:hidden"
+            style={indicatorStyle}
+          />
+          <div
+            className="absolute bottom-0 left-0 h-1.5 bg-gradient-to-r from-blue-500 to-blue-300 transition-all duration-300 md:hidden"
+            style={indicatorStyle}
+          />
+        </div>
+      </ul>
+
     </header>
   );
 }
