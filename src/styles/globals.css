@@ -1,5 +1,5 @@
 @import "tailwindcss";
-@import "../assets/icons/icon-fonts/style.css"
+@import "../assets/icons/icon-fonts/style.css";
 
 /* Asegura que el scrollbar se vea bien y define el gradiente */
 @layer utilities {
@@ -16,6 +16,10 @@ body {
   min-height: max(884px, 100dvh);
   background-color: #101922; /* Tu color background-dark */
   color: #ffffff;
+}
+
+._icon-color::before {
+  color: lavender;
 }
 
 /* Scrollbar personalizado */
