@@ -1,50 +1,16 @@
 "use client";
-import { useEffect, useState } from "react";
 
 import {
 	jsxDEV as _jsxDEV,
 	Fragment as _Fragment,
 } from "react/jsx-dev-runtime";
-import {
-	FaGlobe,
-	FaChartLine,
-	FaLock,
-	FaHeadset,
-	FaHandshake,
-	FaFire,
-	FaSearch,
-	FaChartBar,
-	FaAssistiveListeningSystems,
-} from "react-icons/fa";
 import Image from "next/image";
 import Script from "next/script";
 import Link from "next/link";
-import CardServices from "@/components/Cards/CardServices";
-import TeamCarousel from "@/components/Carousel/Slider";
-import CTA from "@/components/Cta/CTA";
-import BlogSection from "@/components/Blog/BlogSection";
-import CardsProcess from "@/components/Cards/CardsProcess";
-import CardTeam from "@/components/Cards/CardTeam";
-import CardNestedLists from "@/components/Cards/CardNestedLists";
-import CardSmallList from "@/components/Cards/CardSmallList";
-import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
-import AsideAgenciaDigital from "@/assets/img/img/home/agencia-digital.webp";
-import TeamGroup from "@/assets/img/img/home/team-group.webp";
-import ferPhoto from "@/assets/img/img/team/fer-briseno.webp";
-import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
-import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
 import "./home.css";
-// 1. Define qué propiedades tiene un Post (ajusta esto según tus datos reales)
-import { Post } from "@/types";
 
-interface HomeClientProps {
-	posts: Post[];
-}
-
-export default function HomeClient({ posts: postsToShow }: HomeClientProps) {
-	const [mounted, setMounted] = useState(false);
-	useEffect(() => setMounted(true), []);
+export default function HomeClient() {
 
 	interface FaqItem {
 		question: string;
@@ -92,138 +58,6 @@ export default function HomeClient({ posts: postsToShow }: HomeClientProps) {
 		},
 	];
 
-	const cardServices = [
-		{
-			title: "Desarrollo a Medida: Web, Apps y Software",
-			description:
-				"Construimos el motor digital de tu negocio. Desde sitios web profesionales y tiendas en línea que convierten, hasta aplicaciones móviles que conectan y software a medida que optimiza tus operaciones con código limpio y escalable.",
-			url: "/servicios/desarrollo",
-			buttonLabel: "Ver servicios de desarrollo",
-			items: [
-				"Sitios Web y E-commerce de Alto Rendimiento",
-				"Aplicaciones Móviles (iOS/Android)",
-				"Software Empresarial a Medida",
-				"Arquitectura Escalable y Segura",
-			],
-		},
-		{
-			title: "Posicionamiento SEO Estratégico",
-			description:
-				"Hacemos que tus clientes te encuentren en Google. Aumentamos tu visibilidad con estrategias de posicionamiento SEO, GEO y AIO técnicas, de contenido y locales que atraen tráfico cualificado y generan ventas.",
-			url: "/servicios/seo",
-			buttonLabel: "Explorar servicios de SEO",
-			items: [
-				"Auditoría y Estrategia SEO",
-				"Optimización On-Page y Técnica",
-				"SEO Local para Negocios",
-				"Reportes de Rendimiento",
-			],
-		},
-		{
-			title: "Diseño Gráfico y Digital (UX/UI)",
-			description:
-				"Creamos identidades visuales memorables y experiencias de usuario que funcionan. Desde un logotipo que define tu marca hasta interfaces intuitivas para tus plataformas digitales.",
-			url: "/servicios/diseno",
-			buttonLabel: "Descubrir Soluciones de Diseño",
-			items: [
-				"Branding y Diseño de Logotipos",
-				"Diseño de Interfaces (UX/UI)",
-				"Aplicaciones Web",
-				"Diseño Editorial y Publicitario",
-			],
-		},
-	];
-
-	const teamData = [
-		{
-			name: "Jhonatan Espinal",
-			position: "CEO Fundador y Desarrollador",
-			description:
-				"Como fundador de JEG Dev Studios, transformo ideas complejas en soluciones digitales de alto rendimiento. Me especializo en desarrollo full-stack con React y Next.js, y en la optimización SEO técnica para garantizar que cada proyecto alcance su máxima visibilidad y resultados de negocio.",
-			links: [
-				{
-					url: "https://www.linkedin.com/in/JhonEG",
-					title: "LinkedIn de Jhonatan Espinal Garcia",
-					icon: "icon-linkedin-no-bg",
-				},
-				{
-					url: "https://github.com/JhonnDevJs",
-					title: "GitHub de Jhonatan Espinal Garcia",
-					icon: "icon-github",
-				},
-				{
-					url: "https://www.jhondev.xyz",
-					title: "Portafolio web de Jhonatan Espinal Garcia",
-					icon: "icon-link",
-				},
-			],
-			imageUrl: jhonPhoto,
-		},
-		{
-			name: "Fernanda Briseño",
-			position: "Co-Fundadora y Diseñadora web",
-			description:
-				"Soy Fernanda Briseño, Diseñadora UX/UI. Mejoro mis habilidades en experiencia de usuario e interfaces, creando diseños funcionales gracias a mi conocimiento en desarrollo web.",
-			links: [
-				{
-					url: "https://www.linkedin.com/in/fernanda-brise%C3%B1o-64b310342/",
-					title: "LinkedIn de Fernanda Briseño",
-					icon: "icon-linkedin-no-bg",
-				},
-				{
-					url: "https://www.behance.net/karlabriseo1",
-					title: "Behance de Fernanda Briseño",
-					icon: "icon-behance",
-				},
-			],
-			imageUrl: ferPhoto,
-		},
-		{
-			name: "Leonardo González",
-			position: "Co-Fundador y Desarrollador.",
-			description:
-				"Soy un programador versátil con conocimientos en diversos lenguajes de programación. Me especializo en el desarrollo frontend, creando interfaces de usuario atractivas y funcionales. Mi pasión por la tecnología me impulsa a seguir aprendiendo y mejorando constantemente. Me estaco por mi gran capacidad de realizar analisis para la resolución efectiva de los problemas.",
-			links: [
-				{
-					url: "https://www.linkedin.com/in/jose-leonardo-gonzalez-valadez-860b012b4/",
-					title: "LinkedIn de Leonardo González",
-					icon: "icon-linkedin-no-bg",
-				},
-			],
-			imageUrl: leoPhoto,
-		},
-	];
-
-	const cardsProcess = [
-		{
-			number: "1",
-			title: "SITIO IGNITE",
-			list: [
-				"Duración estimada: 3 Semanas",
-				"Tecnologías: Figma, Next js",
-				"Entregas por Sprint: 1-2 entregas",
-			],
-		},
-		{
-			number: "2",
-			title: "SITIO ACCELERATE",
-			list: [
-				"Duración estimada: 4 - 5 Semanas",
-				"Tecnologías: Figma, Next js, Tailwind, Php (Laravel)",
-				"Entregas por Sprint: 2-3 entregas",
-			],
-		},
-		{
-			number: "3",
-			title: "SITIO ULTIMATE",
-			list: [
-				"Duración estimada: 5 - 6 Semanas",
-				"Tecnologías: Figma, Next.js, Tailwind CSS, Php (Laravel) o Node.js",
-				"Entregas por Sprint: 3-5 entregas",
-			],
-		},
-	];
-
 	return (
 		<>
 			<StructuredData data={faqs} type="FAQPage" idPage="faqs-home" />
@@ -256,618 +90,328 @@ export default function HomeClient({ posts: postsToShow }: HomeClientProps) {
 					}),
 				}}
 			/>
-			<section className="section flex flex-col md:flex-row justify-center xl:justify-start items-center w-full min-h-screen p-0 m-0 __imageBackground bg-fixed-cover">
-				<article
-					className="container flex flex-col justify-center items-center w-full gap-5 p-4 m-0"
-					style={{ maxWidth: "47rem" }}
-				>
-					<div className="container mx-auto p-0 m-0">
-						<h1 className="text-2xl md:text-3xl lg:text-4xl text-white text-shadow">
-							Agencia de Desarrollo Web y Software en México: Soluciones a
-							Medida
-						</h1>
-						<p className="text-lg xl:text-xl text-gray-200 text-shadow text-brack">
-							En JEG Dev Studios, como{" "}
-							<strong>agencia de desarrollo web</strong> y{" "}
-							<strong>software líder</strong>, creamos sitios, aplicaciones
-							móviles y software a medida que conectan con tus clientes y
-							transforman tus ideas en resultados reales.
-						</p>
-					</div>
-					<div className="flex flex-col bg-transparent items-center xl:items-start justify-start w-full gap-3">
-						<Link
-							className="btn-services"
-							href="/servicios"
-							style={{ maxWidth: "15.3rem" }}
-						>
-							<span className="btn-text">Ver nuestros servicios</span>
-						</Link>
-						<Link
-							className="btn-services"
-							href="/contacto"
-							style={{ maxWidth: "13.4rem" }}
-						>
-							<span className="btn-text">Solicitar consulta gratis</span>
-						</Link>
-						<Link
-							href="/sobre-nosotros"
-							className="btn-services"
-							style={{ maxWidth: "7.8rem" }}
-						>
-							<span className="btn-text">Nosotros</span>
-						</Link>
-					</div>
-				</article>
-			</section>
-			<section id="beneficios" className="text-white py-16 gradient-effect-x">
-				<div className="container mx-auto text-center">
-					<h2 className="text-5xl font-bold mb-4">
-						Más que servicios, creamos soluciones integrales
-					</h2>
-					<p className="text-xl mb-5 mx-auto" style={{ maxWidth: "800px" }}>
-						En JEG Dev Studios, esta{" "}
-						<strong>empresa de desarrollo de software</strong> se enfoca en
-						ofrecer soluciones digitales personalizadas que impulsan tu negocio.
-						Desde un <strong>diseño y desarrollo web profesional</strong> hasta
-						software a medida, cada proyecto que creamos está alineado con tus
-						metas y diseñado para lograr un impacto medible.
-					</p>
+			<div className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24 bg-background-dark text-white selection:bg-primary/30 font-display">
 
-					<div className="flex flex-wrap text-left justify-center">
-						<div className="w-full md:w-1/2 lg:w-5/12 mb-4 flex">
-							<div className="mr-3 text-lg text-white">
-								<FaGlobe />
-							</div>
-							<div>
-								<h3 className="text-xl font-bold">Mejora tu presencia en línea</h3>
-								<p className="mb-0">
-									Diseños atractivos que comunican tu propuesta de valor desde
-									el primer clic.
-								</p>
-							</div>
-						</div>
-
-						<div className="w-full md:w-1/2 lg:w-5/12 mb-4 flex">
-							<div className="mr-3 text-lg text-white">
-								<FaChartLine />
-							</div>
-							<div>
-								<h3 className="text-xl font-bold">Aumenta tu alcance</h3>
-								<p className="mb-0">
-									Sitios responsivos y optimizados para buscadores que generan
-									tráfico de calidad.
-								</p>
-							</div>
-						</div>
-
-						<div className="w-full md:w-1/2 lg:w-5/12 mb-4 flex">
-							<div className="mr-3 text-lg text-white">
-								<FaLock />
-							</div>
-							<div>
-								<h3 className="text-xl font-bold">Procesos seguros y escalables</h3>
-								<p className="mb-0">
-									Arquitectura moderna con buenas prácticas de seguridad y
-									crecimiento.
-								</p>
-							</div>
-						</div>
-
-						<div className="w-full md:w-1/2 lg:w-5/12 mb-4 flex">
-							<div className="mr-3 text-lg text-white">
-								<FaHeadset />
-							</div>
-							<div>
-								<h3 className="text-xl font-bold">Soporte personalizado</h3>
-								<p className="mb-0">
-									Acompañamiento profesional antes, durante y después del
-									desarrollo.
-								</p>
-							</div>
-						</div>
+				{/* HERO SECTION */}
+				<div className="relative flex flex-col items-center justify-center px-4 py-8">
+					<div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+						<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background-dark/0 to-background-dark opacity-70"></div>
+						<div className="absolute top-20 right-[-20%] w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+						<div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/10 rounded-full blur-3xl"></div>
 					</div>
-				</div>
-			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
-				<h2 className="text-5xl font-bold mb-4">Nuestros Servicios Principales</h2>
-				<p className="text-white text-lg mb-4">
-					Te ofrecemos soluciones digitales integrales, divididas en tres áreas
-					de expertise. Cada servicio está diseñado para funcionar en conjunto,
-					creando una estrategia digital cohesiva y potente para tu negocio.
-				</p>				<p className="text-white text-lg mb-4">
-					Incluimos asesoría estratégica,{" "}
-					<strong>desarrollo de aplicaciones móviles</strong>, branding,{" "}
-					<strong>diseño UX/UI</strong>, estrategias de{" "}
-					<strong>marketing digital</strong> y{" "}
-					<strong>soporte post-lanzamiento</strong>, buscando superar a las
-					mejores <strong>agencias de diseño web</strong> del país.
-				</p>
-				<article className="flex justify-center items-center w-full p-0 m-0">
-					<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-stretch w-full h-full gap-5 p-0 m-0">
-						{cardServices.map((card, index) => (
-							<CardServices
-								key={index}
-								title={card.title}
-								description={card.description}
-								buttonLabel={card.buttonLabel}
-								url={card.url}
-								items={card.items}
-							/>
-						))}
-					</ul>
-				</article>
-			</section>
-			<section
-				className="section-agencia-digital-full flex flex-col md:flex-row items-stretch justify-center bg-black w-full"
-				style={{ minHeight: "100vh", position: "relative" }}
-			>
-				<div className="container-agencia-digital flex flex-col md:flex-row items-center justify-center w-full h-full relative">
-					{/* Imagen */}
-					<div className="agencia-img-container-full relative flex-shrink-0">
-						<Image
-							loading="lazy"
-							src={AsideAgenciaDigital}
-							alt="Agencia digital JEG Dev Studios"
-							fill
-							sizes="(max-width: 767px) 100vw, 600px"
-							style={{ objectFit: "cover" }} // object-cover
-							className="w-full h-full"
-						/>
-					</div>
-					{/* Texto */}
-					<div className="agencia-text-container-full flex flex-col justify-center items-center xl:items-start text-white p-4 flex-grow relative">
-						<h2 className="text-4xl font-bold mb-4 text-center">
-							Más que una Agencia de Desarrollo Web común
+					<div className="relative z-10 flex flex-col items-center max-w-lg text-center">
+						<div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-6 backdrop-blur-sm">
+							<span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
+							<span className="text-xs font-medium text-gray-300">Agencia Digital #1 en México</span>
+						</div>
+						<h2 className="mb-4 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+							Impulsamos tu <br />
+							<span className="text-transparent bg-clip-text bg-gradient-to-r from-primary from-blue-500 to-blue-300">Crecimiento Digital.</span>
 						</h2>
-						<p className="text-lg md:text-xl mb-4">
-							A diferencia de muchas agencias, en JEG Dev Studios alineamos cada
-							solución con el objetivo comercial de nuestros clientes. Somos una{" "}
-							<strong>empresa de desarrollo web</strong>. Creamos soluciones que
-							logran resultados reales. Para lograrlo, combinamos un{" "}
-							<strong>diseño de páginas web</strong> impactante, una gran
-							experiencia de usuario y un potente{" "}
-							<strong>posicionamiento SEO</strong>.Todo respaldado por
-							programación moderna y <strong>marketing digital</strong>.
+						<p className="mb-8 text-lg font-normal leading-relaxed text-gray-400 max-w-[90%]">
+							Expertos en Desarrollo de Software, SEO y CRO. Convertimos visitantes en clientes para empresas ambiciosas.
 						</p>
-						<p className="text-lg md:text-xl">
-							Si estás buscando una <strong>agencia de diseño web</strong> que
-							entienda tu negocio y no solo escriba código, esta es la empresa
-							correcta.
-						</p>
-					</div>
-				</div>
-			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
-				<CardSmallList
-					titulo="¿Qué podemos hacer por tu negocio?"
-					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
-					list={[
-						"Desarrollo y diseño de páginas web enfocados en tu propuesta de valor",
-						"Estrategias de marketing digital integradas desde el primer Sprint",
-						"Posicionamiento SEO optimizado en estructura, contenido y velocidad",
-						"Servicios relacionados como integración con CRMs, pasarelas y analítica",
-						"Acompañamiento estratégico para cumplir tu objetivo comercial",
-					]}
-					lastText="Nuestro objetivo siempre sera entregarles la mejor experiencia de desarrollo a nuestros clientes."
-				/>
-			</section>
-			<section className="flex flex-col justify-center items-center text-center w-full gap-3 p-3 xl:p-20 gradient-effect-y">
-				<h2 className="text-5xl text-center text-white">
-					¿Por qué elegirnos como tu empresa de desarrollo web en México?
-				</h2>
-				<p className="text-2xl text-center text-white p-0">
-					Somos una agencia de desarrollo de software 100% mexicana, pensada
-					para el mundo. Creamos sitios web con calidad profesional para
-					clientes en México y en todo el mundo. Nos diferenciamos por nuestra
-					tecnología innovadora y nuestro compromiso con la entrega puntual.
-					Además, te ofrecemos atención personalizada en cada proyecto.
-				</p>
-				<ul className="flex flex-wrap justify-center items-center w-full gap-2 p-0 m-0 list-none">
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">Profesionalismo</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">Soluciones personalizadas a tu negocio</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<h3 className="text-3xl m-0">Desarrollo 100% Personalizado</h3>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">+5 años de experiencia combinada</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">Acompañamiento y soporte 24/7</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<h3 className="text-3xl m-0">Soporte Local y Atención en Español</h3>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">Garantía de satisfacción</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">Entrega puntual garantizada</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">Comunicación transparente</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">Diseño 100% adaptado a móviles</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<p className="text-3xl m-0">Compromiso y responsabilidad</p>
-					</li>
-					<li className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3">
-						<h3 className="text-3xl m-0">
-							Optimización y Posicionamiento SEO de alto rendimiento
-						</h3>
-					</li>
-				</ul>
-			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
-				<h2 className="text-5xl font-bold text-white">Cómo trabajamos tu sitio web</h2>
-				<p className="text-lg text-white mt-3">
-					Nuestro enfoque nos permite trabajar como las{" "}
-					<strong>agencias de desarrollo</strong> más ágiles, entregando valor
-					tangible y medible en cada fase.
-				</p>
-				<CardNestedLists
-					titulo="Cómo trabajamos tu sitio web"
-					subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web."
-					list={[
-						{
-							text: "Evaluamos tu negocio",
-							sublist: ["Analizamos tus necesidades y objetivos."],
-						},
-						{
-							text: "Definimos objetivos digitales",
-							sublist: ["Creamos un plan personalizado y claro."],
-						},
-						{
-							text: "Elegimos el paquete de desarrollo más adecuado (Básico, Plus o Pro).",
-							sublist: ["Desarrollamos con calidad y comunicación constante."],
-						},
-						{
-							text: "Diseñamos y desarrollamos.",
-							sublist: [
-								" Al final de cada Sprint, te mostramos un avance funcional real del sitio (por videollamada o enlace privado).",
-								" Tú nos das tu feedback y podemos ajustar detalles antes del siguiente Sprint.",
-							],
-						},
-						{
-							text: "Medimos resultados y optimizamos",
-							sublist: ["Revisamos resultados y optimizamos para ti."],
-						},
-					]}
-				/>
-			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
-				<div className="video-responsive-container">
-					<iframe
-						className="video-responsive-iframe"
-						src="https://www.youtube.com/embed/60pib_g34CA?si=bDdRfBVO6nFRqdFl&controls=0&showinfo=0&rel=0"
-						title="Video de presentación de JEG Dev Studios"
-						allow=""
-						referrerPolicy="strict-origin-when-cross-origin"
-						allowFullScreen
-						loading="lazy"
-					></iframe>
-				</div>
-				<p className="text-white mt-3">
-					Conoce más sobre nuestra forma de trabajo y cómo podemos ayudarte a
-					crecer.
-				</p>
-			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
-				<CardSmallList
-					titulo="Más que desarrollo, valor añadido"
-					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
-					list={[
-						"Capacitación para el uso de tu nuevo sistema o sitio web",
-						"Integración con herramientas de marketing digital y CRM",
-						"Actualizaciones tecnológicas continuas para mantener tu proyecto vigente",
-						"Consultoría estratégica para impulsar el crecimiento digital de tu negocio",
-					]}
-					lastText="En JEG Dev Studios no solo entregamos soluciones, sino que te
-						acompañamos en todo el camino para que aproveches al máximo tu
-						inversión tecnológica."
-				/>
-			</section>
-			<section className="flex flex-col items-center justify-center text-white py-16 text-center px-3 md:px-10 gradient-effect-y">
-				<div className="flex flex-col items-center justify-center text-center" style={{ maxWidth: "1200px" }}>
-					<h2 className="text-4xl font-bold mb-4">
-						Soluciones Tecnológicas Completas: Nuestro Alcance
-					</h2>
-					<p className="text-lg mb-4">
-						Creemos en las soluciones integrales. Cuando contratas un proyecto
-						con nosotros, no solo obtienes código; obtienes una arquitectura
-						completa pensada para funcionar y crecer.
-					</p>
-					<h3 className="text-2xl font-bold mb-4">
-						Arquitectura Full-Stack y Tecnologías Modernas
-					</h3>
-					<p className="text-lg mb-4">
-						Manejamos tu proyecto de inicio a fin. Desarrollamos tanto el
-						frontend (lo que ves) como el backend y las bases de datos (lo que
-						no ves). Para sitios web, usamos tecnologías de vanguardia como
-						React, Next.js, Node.js y PHP (Laravel). Para aplicaciones móviles,
-						nos especializamos en React Native, Java y Kotlin.
-					</p>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-8">
-						<div className="text-left">
-							<h4 className="text-2xl font-bold mb-4">Funcionalidad Avanzada y Sin Límites</h4>
-							<p className="text-lg mb-4">
-								Tu software debe adaptarse a tu negocio, no al revés. Creamos las
-								características que tu operación requiere, incluyendo:
-							</p>
-							<ul className="text-lg text-left list-disc pl-5 space-y-2">
-								<li className="mb-3">
-									<p>Sistemas multiusuario con diferentes roles y permisos.</p>
-								</li>
-								<li className="mb-3">
-									<p>Paneles de control con reportes y gráficas personalizadas.</p>
-								</li>
-								<li className="mb-3">
-									<p>
-										Integraciones con sistemas externos como CRMs, pasarelas de pago
-										o facturación electrónica.
-									</p>
-								</li>
-							</ul>
-						</div>
-						<div className="text-left">
-							<h4 className="text-2xl font-bold mb-4">Un Servicio de Principio a Fin</h4>
-							<p className="text-lg mb-4">
-								Nos encargamos de todo el proceso para que no tengas que preocuparte
-								por los detalles técnicos.
-							</p>
-							<ul className="text-lg text-left list-disc pl-5 space-y-2">
-								<li className="mb-3">
-									Gestionamos la publicación de tus apps en la Play Store y App
-									Store.
-								</li>
-								<li className="mb-3">
-									Podemos incluir servicios de dominio, hosting e instalación.
-								</li>
-								<li className="mb-3">
-									Todos nuestros desarrollos web incluyen optimización SEO técnica
-									desde la base.
-								</li>
-							</ul>
+						<div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
+							<button className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full bg-primary px-8 text-base font-bold text-white shadow-lg shadow-primary/25 transition-transform active:scale-95 hover:bg-blue-500">
+								Solicitar Auditoría
+							</button>
+							<button className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full border border-primary/50 bg-transparent px-8 text-base font-bold text-primary transition-colors hover:bg-primary/10 active:scale-95">
+								Ver Servicios
+							</button>
 						</div>
 					</div>
 				</div>
-			</section>
-			<section
-				className="section-agencia-digital-full flex flex-col md:flex-row items-stretch justify-center w-full gradient-effect-x"
-				style={{ minHeight: "100vh", position: "relative" }}
-			>
-				<div
-					className="container-agencia-digital flex flex-col md:flex-row items-center justify-evenly w-full h-full relative"
-					style={{ maxWidth: "1200px" }}
-				>
-					{/* Texto */}
-					<div className="agencia-text-container-full flex flex-col justify-center items-center xl:items-start text-white xl:p-20 xl:pr-0 p-3 flex-grow relative">
-						<h2 className="text-4xl font-bold mb-4">
-							Un equipo humano detrás de la tecnología
-						</h2>
-						<p className="text-lg mb-4">
-							En JEG Dev Studios creemos que la tecnología es para las personas.
-							Por eso:
-						</p>
-						<ul className="flex flex-col justify-start list-none text-lg text-left">
-							<li className="flex items-start mb-3">
-								<div className="mr-3 mt-1 text-lg text-white">
-									<FaHandshake />
-								</div>
-								<p>
-									Estamos comprometidos con la innovación y la creatividad en
-									cada proyecto.
-								</p>
-							</li>
-							<li className="flex items-start mb-3">
-								<div className="mr-3 mt-1 text-lg text-white">
-									<FaAssistiveListeningSystems />
-								</div>
-								<p>
-									Escuchamos a nuestros clientes para construir soluciones que
-									realmente funcionen.
-								</p>
-							</li>
-							<li className="flex items-start mb-3">
-								<div className="mr-3 mt-1 text-lg text-white">
-									<FaFire />
-								</div>
-								<p>
-									Tenemos pasión por la tecnología y el desarrollo de soluciones
-									reales y efectivas.
-								</p>
-							</li>
-						</ul>
+
+				{/* SERVICES SECTION */}
+				<section className="relative z-10 px-4 pt-4 pb-8">
+					<div className="flex items-center justify-between mb-6">
+						<h3 className="text-2xl font-bold text-white">Nuestros Servicios</h3>
+						<a className="text-sm font-medium text-primary hover:text-blue-300" href="#">Ver todo</a>
 					</div>
-					{/* Imagen */}
-					<div className="agencia-img-container-full relative flex-shrink-0">
-						<Image
-							loading="lazy"
-							src={TeamGroup}
-							alt="Imagen del equipo de JEG Dev Studios"
-							fill
-							sizes="(max-width: 767px) 100vw, 600px"
-							style={{ objectFit: "cover" }} // object-cover
-							className="w-full h-full"
-						/>
+					<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-primary/30 transition-all duration-300">
+							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-primary/5 blur-2xl group-hover:bg-primary/10 transition-all"></div>
+							<div className="relative z-10 flex flex-col h-full">
+								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform duration-300">
+									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>terminal</span>
+								</div>
+								<h4 className="mb-2 text-xl font-bold text-white">Desarrollo de Software</h4>
+								<p className="mb-4 text-sm leading-relaxed text-gray-400">
+									Soluciones a la medida, escalables y seguras. Desde apps móviles hasta plataformas enterprise.
+								</p>
+								<a className="mt-auto inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors gap-1" href="#">
+									Saber más
+									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
+								</a>
+							</div>
+						</div>
+						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-primary/30 transition-all duration-300">
+							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-purple-500/5 blur-2xl group-hover:bg-purple-500/10 transition-all"></div>
+							<div className="relative z-10 flex flex-col h-full">
+								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform duration-300">
+									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>search_insights</span>
+								</div>
+								<h4 className="mb-2 text-xl font-bold text-white">Estrategia SEO</h4>
+								<p className="mb-4 text-sm leading-relaxed text-gray-400">
+									Posicionamiento orgánico que domina los buscadores y genera tráfico altamente cualificado.
+								</p>
+								<a className="mt-auto inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors gap-1" href="#">
+									Saber más
+									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
+								</a>
+							</div>
+						</div>
+						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-primary/30 transition-all duration-300">
+							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-green-500/5 blur-2xl group-hover:bg-green-500/10 transition-all"></div>
+							<div className="relative z-10 flex flex-col h-full">
+								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-primary group-hover:scale-110 transition-transform duration-300">
+									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>devices</span>
+								</div>
+								<h4 className="mb-2 text-xl font-bold text-white">Diseño Web &amp; CRO</h4>
+								<p className="mb-4 text-sm leading-relaxed text-gray-400">
+									Interfaces rápidas optimizadas para la conversión. Convertimos visitas en ventas reales.
+								</p>
+								<a className="mt-auto inline-flex items-center text-sm font-bold text-primary hover:text-white transition-colors gap-1" href="#">
+									Saber más
+									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
+								</a>
+							</div>
+						</div>
 					</div>
-				</div>
-			</section>
-			<section
-				className="section flex flex-col bg-black justify-center items-center w-full gap-3 p-3 xl:p-20 m-0 gradient-effect-y"
-				style={{ minHeight: "553px" }}
-			>
-				<h2 className="text-center text-white">
-					Somos un equipo experto en SEO, diseño, desarrollo web, software y
-					apps móviles.
-				</h2>
-				<TeamCarousel>
-					{teamData.map((teamItem, index) => (
-						<CardTeam
-							key={index}
-							imageUrl={teamItem.imageUrl}
-							name={teamItem.name}
-							position={teamItem.position}
-							description={teamItem.description}
-							links={teamItem.links}
-						/>
-					))}
-				</TeamCarousel>
-			</section>
-			<section className="flex flex-col justify-center items-center text-white py-16 text-center px-3 md:px-10 gradient-effect-x">
-				<div className="flex flex-col justify-center items-center" style={{ maxWidth: "900px" }}>
-					<h2 className="text-4xl font-bold mb-4">
-						Optimización para crecer en buscadores
+				</section>
+
+				{/* TRUST SECTION */}
+				<section className="px-4 py-6">
+					<p className="text-center text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Confían en nosotros</p>
+					<div className="flex justify-center gap-6 opacity-40 grayscale">
+						<div className="h-6 w-20 rounded bg-white/20"></div>
+						<div className="h-6 w-20 rounded bg-white/20"></div>
+						<div className="h-6 w-20 rounded bg-white/20"></div>
+					</div>
+				</section>
+				<div className="flex flex-col pt-6 pb-2 px-4">
+					<h2 className="text-white tracking-tight text-[28px] font-bold leading-tight text-left">
+						¿Por qué <span className="text-gradient">JEG Dev Studios?</span>
 					</h2>
-					<p className="text-lg mb-4">
-						Además de un diseño atractivo y funcional, garantizamos que tu
-						proyecto tenga el mejor posicionamiento con:
-					</p>
-					<ul
-						className="list-none text-lg text-left mx-auto"
-						style={{ maxWidth: "600px" }}
-					>
-						<li className="flex items-start mb-3">
-							<div className="mr-3 mt-1 text-lg text-white">
-								<FaSearch />
-							</div>
-							<p>Diseños y desarrollos 100% optimizados para SEO.</p>
-						</li>
-						<li className="flex items-start mb-3">
-							<div className="mr-3 mt-1 text-lg text-white">
-								<FaChartLine />
-							</div>
-							<p>
-								Estrategias para maximizar tu visibilidad en buscadores y atraer
-								tráfico de calidad.
-							</p>
-						</li>
-						<li className="flex items-start mb-3">
-							<div className="mr-3 mt-1 text-lg text-white">
-								<FaChartBar />
-							</div>
-							<p>
-								Análisis continuo y seguimiento para mejorar tu posicionamiento
-								digital.
-							</p>
-						</li>
-					</ul>
-				</div>
-			</section>
-			<section
-				className="flex flex-col justify-center items-center w-full py-16 __bg-image-pricing bg-fixed-cover"
-				id="web-pricing"
-			>
-				<div className="text-center mb-5">
-					<h2 className="font-bold text-white text-4xl">
-						¿Cuánto cuesta una página web en México?
-					</h2>
-					<p className="text-white text-lg">
-						Conoce los paquetes y qué influye en su precio
+					<p className="text-[#9cabba] text-sm font-medium pt-2">
+						No somos otra agencia más. Somos tu partner técnico.
 					</p>
 				</div>
 
-				<div className="flex flex-wrap w-full p-1 xl:p-20">
-					{/* Paquetes según el tipo de negocio */}
-					<div className="w-full md:w-1/2 mb-4">
-						<h3 className="text-xl font-semibold text-center text-white">
-							Paquetes según el tipo de negocio
-						</h3>
-						<ul className="bg-transparent list-none p-0">
-							<li className="bg-transparent text-white py-2 border-b border-gray-700">
-								<p>Landing page para emprendedores</p>
-							</li>
-							<li className="bg-transparent text-white py-2 border-b border-gray-700">
-								<p>Sitio web corporativo</p>
-							</li>
-							<li className="bg-transparent text-white py-2 border-b border-gray-700">
-								<p>Tienda en línea con pasarela de pagos</p>
-							</li>
-							<li className="bg-transparent text-white py-2">
-								<p>Plataformas personalizadas o portales web</p>
-							</li>
-						</ul>
+				{/* GRID COMPARATIVO (Cards) */}
+				<div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] gap-4 px-4 py-4">
+
+					{/* Card JEG (Recomendado) */}
+					<div className="relative flex flex-1 flex-col gap-4 rounded-xl border border-primary/40 bg-surface-dark p-5 shadow-[0_0_30px_-10px_rgba(37,140,244,0.15)] overflow-hidden">
+						<div className="absolute -right-12 -top-12 h-24 w-24 bg-primary/20 blur-2xl rounded-full pointer-events-none"></div>
+						<div className="flex flex-col gap-1 relative z-10">
+							<div className="flex items-center justify-between">
+								<h1 className="text-white text-sm font-bold leading-tight opacity-90">JEG Dev Studios</h1>
+								<p className="text-white text-[10px] uppercase font-bold tracking-wider rounded-full bg-primary px-2.5 py-1 text-center shadow-lg shadow-primary/20">Recomendado</p>
+							</div>
+							<p className="flex items-baseline gap-1 text-white mt-1">
+								<span className="text-white text-3xl font-black leading-tight tracking-[-0.033em]">Expertos</span>
+								<span className="text-white/60 text-sm font-medium leading-tight">/ garantizado</span>
+							</p>
+						</div>
+						<div className="h-px bg-gradient-to-r from-primary/50 to-transparent w-full my-1"></div>
+						<div className="flex flex-col gap-3">
+							{[
+								"Carga < 1s (Core Vitals)",
+								"Código SEO Nativo",
+								"Agile & Transparente",
+								"Analytics Custom"
+							].map((item, index) => (
+								<div key={index} className="text-[14px] font-medium leading-normal flex items-start gap-3 text-white">
+									<span className="material-symbols-outlined text-primary shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
+									<span>{item}</span>
+								</div>
+							))}
+						</div>
 					</div>
 
-					{/* Factores que determinan el precio */}
-					<div className="w-full md:w-1/2 mb-4">
-						<h3 className="text-xl font-semibold text-center text-white shadow-lg">
-							Factores que determinan el precio
-						</h3>
-						<ul className="bg-transparent list-none p-0">
-							<li className="bg-transparent text-white py-2 border-b border-gray-700">
-								<p>Cantidad de secciones o páginas</p>
-							</li>
-							<li className="bg-transparent text-white py-2 border-b border-gray-700">
-								<p>Diseño personalizado vs plantilla</p>
-							</li>
-							<li className="bg-transparent text-white py-2 border-b border-gray-700">
-								<p>Funciones específicas (formularios, reservas, etc.)</p>
-							</li>
-							<li className="bg-transparent text-white py-2 border-b border-gray-700">
-								<p>Integraciones externas (WhatsApp, pagos, CRM...)</p>
-							</li>
-							<li className="bg-transparent text-white py-2">
-								<p>Optimización SEO y velocidad</p>
-							</li>
-						</ul>
+					{/* Card Otras Agencias */}
+					<div className="flex flex-1 flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-5 opacity-90 grayscale-[0.3]">
+						<div className="flex flex-col gap-1">
+							<h1 className="text-[#9cabba] text-sm font-bold leading-tight">Otras Agencias</h1>
+							<p className="flex items-baseline gap-1 text-[#9cabba]">
+								<span className="text-white/80 text-3xl font-black leading-tight tracking-[-0.033em]">Genéricos</span>
+								<span className="text-[#9cabba]/60 text-sm font-medium leading-tight">/ variable</span>
+							</p>
+						</div>
+						<div className="h-px bg-border-dark w-full my-1"></div>
+						<div className="flex flex-col gap-3">
+							{[
+								"Carga > 3s (Lento)",
+								"Dependencia de Plugins",
+								"Waterfall / Burocracia",
+								"Analytics Básicos"
+							].map((item, index) => (
+								<div key={index} className="text-[14px] font-normal leading-normal flex items-start gap-3 text-[#9cabba]">
+									<span className="material-symbols-outlined text-red-500/80 shrink-0">cancel</span>
+									<span>{item}</span>
+								</div>
+							))}
+						</div>
 					</div>
 				</div>
-			</section>
-			<section className="w-full text-center text-white py-16 gradient-effect-y px-4">
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-4 justify-items-center">
-					{cardsProcess.map((card, index) => (
-						<CardsProcess
-							key={index}
-							number={card.number}
-							titulo={card.title}
-							list={card.list}
-						/>
-					))}
-				</div>
-			</section>
-			{mounted && postsToShow.length > 0 && (
-				<BlogSection
-					posts={postsToShow
-						.map((post: Post) => {
-							// Mapeamos las propiedades de Post a BlogPost
-							if (post.title && post.link && post.pubDate) {
-								return {
-									...post, // Pasamos todas las propiedades originales
-									title: post.title,
-									link: post.link,
-									pubDate: post.pubDate,
-									contentSnippet: post.excerpt,
-									// CORRECCIÓN AQUÍ:
-									// Si imageUrl es null, lo convertimos a undefined usando '??'
-									imageUrl: post.imageUrl ?? undefined,
-								};
-							}
-							return null;
-						})
-						.filter((post): post is NonNullable<typeof post> => post !== null)}
-				/>
-			)}
 
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
-				<CTA
-					title={"¿Listo para dar el siguiente paso digital?"}
-					paragraph={
-						"Es momento de convertir tu idea en una solución tecnológica escalable y atractiva. Agenda tu consulta gratuita o contáctanos directamente."
-					}
-					label={"Solicita tu Auditoría Gratuita"}
-					link={"/contacto"}
-				/>
-			</section>
-			<FAQ
-				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros servicios de desarollo, diseño y posicionamiento SEO."
-			/>
+				<div className="h-8"></div>
+
+				{/* SECCIÓN PROCESO */}
+				<div className="flex flex-col px-4">
+					<div className="flex items-center gap-2 mb-2">
+						<span className="px-2 py-0.5 rounded text-[10px] font-bold bg-primary/20 text-primary uppercase tracking-wider">Nuestro Proceso</span>
+					</div>
+					<h2 className="text-white tracking-tight text-[28px] font-bold leading-tight text-left">
+						Metodología Ágil
+					</h2>
+					<p className="text-[#9cabba] text-base font-normal leading-normal pt-2 pb-6">
+						Transparencia total. Sin cajas negras. Así llevamos tu idea a producción.
+					</p>
+				</div>
+
+				{/* TIMELINE */}
+				<div className="relative px-4 pb-8">
+					<div className="absolute left-[34px] top-2 bottom-0 w-0.5 bg-gradient-to-b from-primary via-primary/50 to-transparent"></div>
+
+					{/* Paso 1 */}
+					<div className="relative flex gap-5 mb-10 group">
+						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-dark border-2 border-primary shadow-[0_0_15px_-3px_rgba(37,140,244,0.4)]">
+							<span className="material-symbols-outlined text-primary text-[20px]">manage_search</span>
+						</div>
+						<div className="flex flex-col pt-1">
+							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">Diagnóstico y Estrategia</h3>
+							<p className="text-sm text-[#9cabba] leading-relaxed">
+								Auditoría técnica inicial y definición de KPIs. Entendemos el problema antes de escribir código.
+							</p>
+						</div>
+					</div>
+
+					{/* Paso 2 */}
+					<div className="relative flex gap-5 mb-10 group">
+						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-dark border-2 border-primary/50 shadow-lg shadow-black/50">
+							<span className="material-symbols-outlined text-white text-[20px]">calendar_month</span>
+						</div>
+						<div className="flex flex-col pt-1">
+							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">Sprint Planning</h3>
+							<p className="text-sm text-[#9cabba] leading-relaxed">
+								Roadmap dividido en entregables de 2 semanas. Priorizamos valor comercial inmediato.
+							</p>
+						</div>
+					</div>
+
+					{/* Paso 3 */}
+					<div className="relative flex gap-5 mb-10 group">
+						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-surface-dark border-2 border-primary/50 shadow-lg shadow-black/50">
+							<span className="material-symbols-outlined text-white text-[20px]">code_blocks</span>
+						</div>
+						<div className="flex flex-col pt-1">
+							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">Desarrollo Iterativo</h3>
+							<p className="text-sm text-[#9cabba] leading-relaxed">
+								Código limpio y escalable. Reuniones semanales para demo de avances y feedback real.
+							</p>
+						</div>
+					</div>
+
+					{/* Paso 4 */}
+					<div className="relative flex gap-5 group">
+						<div className="relative z-10 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-primary shadow-[0_0_20px_0px_rgba(37,140,244,0.5)]">
+							<span className="material-symbols-outlined text-white text-[20px]">rocket_launch</span>
+						</div>
+						<div className="flex flex-col pt-1">
+							<h3 className="text-lg font-bold text-white mb-1 group-hover:text-primary transition-colors">Launch &amp; CRO</h3>
+							<p className="text-sm text-[#9cabba] leading-relaxed">
+								Despliegue a producción y monitoreo continuo para optimización de conversión (CRO).
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div className="relative flex flex-col items-center px-4 py-8 flex-grow">
+        <div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
+          <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-primary/20 via-background-dark/0 to-background-dark opacity-70"></div>
+          <div className="absolute top-20 right-[-20%] w-64 h-64 bg-primary/10 rounded-full blur-3xl"></div>
+          <div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/10 rounded-full blur-3xl"></div>
+        </div>
+        
+        <div className="relative z-10 w-full max-w-lg">
+          <div className="text-center mb-8">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-4 backdrop-blur-sm">
+              <span className="flex h-2 w-2 rounded-full bg-primary animate-pulse"></span>
+              <span className="text-xs font-medium text-gray-300">Respuesta en &lt; 24h</span>
+            </div>
+            <h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl mb-3">
+              Ponte en Contacto
+            </h2>
+            <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+              ¿Tienes un proyecto en mente? Escríbenos y hagamos crecer tu negocio digital.
+            </p>
+          </div>
+          
+          <form className="flex flex-col gap-5">
+            <div className="space-y-1">
+              <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1" htmlFor="name">Nombre</label>
+              <div className="relative">
+                <input className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="name" placeholder="Tu nombre completo" type="text" />
+                <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 pointer-events-none" style={{ fontSize: '20px' }}>person</span>
+              </div>
+            </div>
+            
+            <div className="space-y-1">
+              <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1" htmlFor="email">Email</label>
+              <div className="relative">
+                <input className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all" id="email" placeholder="tu@empresa.com" type="email" />
+                <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 pointer-events-none" style={{ fontSize: '20px' }}>mail</span>
+              </div>
+            </div>
+            
+            <div className="space-y-1">
+              <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1" htmlFor="service">Servicio de interés</label>
+              <div className="relative">
+                <select className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white appearance-none focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all bg-none" id="service">
+                  <option className="bg-surface-dark">Desarrollo de Software</option>
+                  <option className="bg-surface-dark">SEO y Posicionamiento</option>
+                  <option className="bg-surface-dark">Diseño Web &amp; CRO</option>
+                  <option className="bg-surface-dark">Otro</option>
+                </select>
+                <span className="material-symbols-outlined absolute right-4 top-1/2 -translate-y-1/2 text-gray-600 pointer-events-none" style={{ fontSize: '20px' }}>expand_more</span>
+              </div>
+            </div>
+            
+            <div className="space-y-1">
+              <label className="text-xs font-semibold uppercase tracking-wider text-gray-500 ml-1" htmlFor="message">Mensaje</label>
+              <textarea className="block w-full rounded-xl border border-white/10 bg-surface-dark p-4 text-white placeholder-gray-600 focus:border-primary focus:ring-1 focus:ring-primary outline-none transition-all resize-none" id="message" placeholder="Cuéntanos los detalles..." rows={4}></textarea>
+            </div>
+            
+            <button className="mt-2 flex w-full items-center justify-center gap-2 rounded-xl bg-gradient-to-r from-primary to-blue-600 py-4 text-sm font-bold text-white shadow-lg shadow-primary/25 transition-transform active:scale-95 hover:brightness-110" type="button">
+              Enviar Solicitud
+              <span className="material-symbols-outlined" style={{ fontSize: '18px' }}>send</span>
+            </button>
+          </form>
+          
+          <div className="mt-8 flex flex-col gap-4 border-t border-white/5 pt-8">
+            <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>call</span>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">Llámanos directamente</p>
+                <p className="text-sm font-semibold text-white">+52 55 1234 5678</p>
+              </div>
+            </div>
+            <div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+              <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-primary/10 text-primary">
+                <span className="material-symbols-outlined" style={{ fontSize: '20px' }}>mail</span>
+              </div>
+              <div>
+                <p className="text-xs text-gray-500">Escríbenos un correo</p>
+                <p className="text-sm font-semibold text-white">hola@jegdev.com</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
 		</>
 	);
 }

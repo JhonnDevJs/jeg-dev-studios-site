@@ -1,4 +1,3 @@
-import { Geist, Geist_Mono } from "next/font/google";
 import { headers } from "next/headers";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ReactNode } from "react";
@@ -7,16 +6,15 @@ import NavBar from "@/components/Layout/NavBar";
 import BtnWhats from "@/components/Buttons/WhatsAppButton";
 import Footer from "@/components/Layout/Footer";
 import "@/styles/globals.css";
+import { Inter } from "next/font/google";
 
-const geistSans = Geist({
-	variable: "--font-geist-sans",
+// Configuración optimizada de la fuente Inter
+const inter = Inter({
 	subsets: ["latin"],
+	variable: "--font-inter", // Variable CSS para Tailwind
+	display: "swap",
 });
 
-const geistMono = Geist_Mono({
-	variable: "--font-geist-mono",
-	subsets: ["latin"],
-});
 
 // Tipamos el objeto de fondos para evitar errores de índice
 const servicePageBackgrounds: Record<string, string> = {
@@ -145,7 +143,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 		}
 	}
 	return (
-		<html lang="es-MX">
+		<html lang="es-MX" className={`${inter.variable} dark`}>
 			{imageToPreload && (
 				<link
 					rel="preload"
@@ -154,21 +152,17 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 					type="image/webp"
 				/>
 			)}
+			<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
 			<meta
 				name="google-adsense-account"
 				content="ca-pub-8211604143881682"
 			></meta>
 			<body
-				className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+				className={`font-display antialiased text-white bg-[#101922] min-h-screen`}
 			>
 				<NavBar />
-				<main
-					className="container-fluid d-flex flex-column min-vh-100 p-0 m-0"
-					role="main"
-				>
-					{children}
-					<BtnWhats />
-				</main>
+				{children}
+				<BtnWhats />
 				<Footer />
 				{/* Structured Data Scripts */}
 				<Script
