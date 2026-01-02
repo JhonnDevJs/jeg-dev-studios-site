@@ -358,6 +358,29 @@ export default function HomeClient({ initialFaqs }: HomeClientProps) {
 					</div>
 				</section>
 			</div>
+			
+			{mounted && postsToShow.length > 0 && (
+				<BlogSection
+					posts={postsToShow
+						.map((post: Post) => {
+							// Mapeamos las propiedades de Post a BlogPost
+							if (post.title && post.link && post.pubDate) {
+								return {
+									...post, // Pasamos todas las propiedades originales
+									title: post.title,
+									link: post.link,
+									pubDate: post.pubDate,
+									contentSnippet: post.excerpt,
+									// CORRECCIÓN AQUÍ:
+									// Si imageUrl es null, lo convertimos a undefined usando '??'
+									imageUrl: post.imageUrl ?? undefined,
+								};
+							}
+							return null;
+						})
+						.filter((post): post is NonNullable<typeof post> => post !== null)}
+				/>
+			)}
 		</>
 	);
 }
