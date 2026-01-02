@@ -54,10 +54,10 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 				Descubre temas interesantes en nuestro Blog
 			</h2>
 
-			<div className="flex flex-wrap m-2 lg:m-4">
+			<div className="flex flex-wrap">
 				{/* Entrada Principal (Izquierda) */}
 				{mainPost && (
-					<div className="w-full lg:w-5/12 p-2 lg:p-4">
+					<div className="w-full lg:w-5/12 pr-0 lg:pr-4 pb-4 lg:pb-0 ">
 						<article className={`shadow-lg rounded-lg overflow-hidden ${cardThemeClasses}`}>
 							{mainPost.imageUrl && (
 								<div
@@ -82,8 +82,8 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 								<h3 className="text-xl font-bold mb-2">{mainPost.title}</h3>
 								<p
 									className={`${cardThemeClasses.includes("text-white")
-											? "text-white/75"
-											: "text-muted"
+										? "text-white/75"
+										: "text-muted"
 										} small mb-2`}
 								>
 									Publicado el{" "}
@@ -122,8 +122,8 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 									target="_blank"
 									rel="noopener noreferrer"
 									className={`inline-block ${cardThemeClasses.includes("text-white")
-											? "border border-white text-white hover:bg-white hover:text-black"
-											: "bg-blue-600 text-white hover:bg-blue-700"
+										? "border border-white text-white hover:bg-white hover:text-black"
+										: "bg-blue-600 text-white hover:bg-blue-700"
 										} mt-auto self-start px-4 py-2 rounded-md text-sm font-semibold transition-colors`}
 									aria-label={`Leer artículo completo sobre ${mainPost.title}`}
 									title={`Leer artículo completo sobre ${mainPost.title}`}
@@ -138,7 +138,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 
 				{/* Entradas Secundarias (Derecha, Apiladas) */}
 				{sidePosts.length > 0 && (
-					<div className="w-full lg:w-7/12 p-2 lg:p-4">
+					<div className="w-full lg:w-7/12">
 						{sidePosts.map((post, index) => (
 							<article
 								key={post.id || post.link}
@@ -146,7 +146,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 									}`}
 							>
 								{post.imageUrl && (
-									<div className="side-post-image-container">
+									<div className="relative h-48 w-full md:h-full md:w-48 shrink-0">
 										<Image
 											src={post.imageUrl}
 											alt={`Imagen para ${post.title}`}
@@ -161,8 +161,8 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 									<h4 className="text-base font-bold mb-1">{post.title}</h4>
 									<p
 										className={`text-sm ${cardThemeClasses.includes("text-white")
-												? "text-white/75"
-												: "text-muted"
+											? "text-white/75"
+											: "text-muted"
 											} small mb-1`}
 									>
 										{new Date(post.pubDate).toLocaleDateString("es-ES", {
@@ -201,8 +201,8 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 										target="_blank"
 										rel="noopener noreferrer"
 										className={`inline-block text-xs font-semibold ${cardThemeClasses.includes("text-white")
-												? "border border-white text-white hover:bg-white hover:text-black"
-												: "border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
+											? "border border-white text-white hover:bg-white hover:text-black"
+											: "border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
 											} mt-auto self-start px-3 py-1.5 rounded-md transition-colors`}
 										aria-label={`Leer más sobre ${post.title}`}
 										title={`Leer más sobre ${post.title}`}

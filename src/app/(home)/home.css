@@ -1,0 +1,11 @@
+.featured-blog-section .blog-post-summary p {
+  margin-bottom: 0;
+}
+/* Opcional: asegurar que el resumen no empuje el botón si el contenido es muy corto */
+/* y flex-grow-1 está presente en el contenedor del resumen */
+.blog-post-summary {
+  min-height: 3.6em;
+  /* Asegura un mínimo de espacio si el contenido es muy corto, */
+  /* ayudando a mt-auto en el botón si el resumen es el único elemento flexible. */
+  /* Esto es opcional y depende de cómo se vea con contenido muy corto. */
+}
