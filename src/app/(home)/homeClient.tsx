@@ -3,6 +3,7 @@
 // Imports Hooks
 import Link from "next/link";
 import Script from "next/script";
+import { useEffect, useState } from "react";
 
 // Import Custom Hooks
 
@@ -34,7 +35,7 @@ import {
 import "./home.css";
 
 
-export default function HomeClient({ initialFaqs }: HomeClientProps) {
+export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClientProps) {
 
 	return (
 		<>
