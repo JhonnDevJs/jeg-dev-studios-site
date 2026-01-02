@@ -181,7 +181,6 @@ export default function ServicesClient() {
 
 			<FAQ
 				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros servicios y forma de trabajo."
 			/>
 
 			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3">

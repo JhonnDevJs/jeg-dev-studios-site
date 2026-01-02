@@ -14,12 +14,22 @@
 /* Forzar color de fondo globalmente para asegurar que sea oscuro */
 body {
   min-height: max(884px, 100dvh);
-  background-color: #101922; /* Tu color background-dark */
+  background-color: #101922;
+  /* Tu color background-dark */
   color: #ffffff;
 }
 
-.__icons-color::before {
+.__icons-color {
   color: #969696;
+  transition: color 0.3s ease;
+}
+
+.__icons-color:hover {
+  color: #1a76ee;
+}
+
+.__icons-color::before {
+  color: inherit;
 }
 
 /* Scrollbar personalizado */
@@ -34,4 +44,6 @@ body {
 ::-webkit-scrollbar-thumb {
   background: #3b4754;
   border-radius: 3px;
+  background-size: contain;
 }
+

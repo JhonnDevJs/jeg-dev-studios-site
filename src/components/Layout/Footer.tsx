@@ -15,7 +15,7 @@ function Footer() {
               </div>
               <span className="text-xl font-bold tracking-tight text-white">JEG Dev Studios</span>
             </div>
-            <p className="text-sm leading-relaxed text-gray-400 max-w-xs">
+            <p className="text-sm leading-relaxed text-gray-400">
               Ya sea que estés comparando <strong>agencias de diseño</strong> o buscando una <strong>agencia de desarrollo web</strong> en JEG Dev studios encontrarás una empresa que combina creatividad, tecnología y estrategia.
             </p>
           </div>
@@ -48,7 +48,7 @@ function Footer() {
               </ul>
             </div>
           </div>
-          <div className="flex flex-col gap-6 border-t border-white/5 pt-8">
+          <div className="flex flex-col justify-center items-center gap-6 border-t border-white/5 pt-8">
             <div className="flex gap-4">
 
               <Link

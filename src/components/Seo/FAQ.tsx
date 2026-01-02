@@ -10,53 +10,52 @@ interface FaqItem {
 // 2. Definimos las props que recibe el componente
 interface FAQProps {
   faqs: FaqItem[];   // Un array de objetos FaqItem
-  subtitle?: string; // El ? indica que es opcional (puede venir o no)
 }
 
-export default function FAQ({ faqs, subtitle }: FAQProps) {
+export default function FAQ({ faqs }: FAQProps) {
   // 3. Indicamos que el estado puede ser un número (el índice) o null (cerrado)
-  const [openIndex, setOpenIndex] = useState<number | null>(null);
+  const [openIndex, setOpenIndex] = useState<number | null>(0);
 
   const toggle = (index: number) => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
   return (
-    <section className="bg-black text-white py-12">
-      <div className="container mx-auto px-4">
-        <h2 className="text-3xl font-bold text-center mb-4">
-          Preguntas Frecuentes
-        </h2>
-
-        {/* Como 'subtitle' es opcional en la interfaz, esta comprobación es segura */}
-        {subtitle && (
-          <p className="text-center mb-8 text-gray-300 font-light">{subtitle}</p>
-        )}
-
-        <div className="max-w-3xl mx-auto space-y-3">
-          {faqs.map((faq, index) => (
-            <div key={index}>
-              <button
-                className="btn-services w-full text-left flex justify-between items-center p-4"
-                onClick={() => toggle(index)}
-              >
-                <h3 className="text-lg font-semibold">{faq.question}</h3>
-                <span
-                  className={`transform transition-transform duration-300 ${openIndex === index ? "rotate-90" : "rotate-0"
-                    }`}
-                >
-                  ▶
-                </span>
-              </button>
-              {openIndex === index && (
-                <div className="mt-2 text-gray-300 px-4 py-3 bg-gray-900 rounded-lg">
-                  <p>{faq.answer}</p>
-                </div>
-              )}
-            </div>
-          ))}
+    <section className="flex flex-col w-full gap-6 py-8">
+      <div className="text-center mb-2">
+        <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-4 backdrop-blur-sm">
+          <span className="text-xs font-medium text-blue-500">Dudas Comunes</span>
         </div>
+        <h2 className="text-3xl font-extrabold text-white">Preguntas Frecuentes</h2>
+        <p className="mt-3 text-sm text-gray-400 max-w-md mx-auto">
+          Resolvemos tus inquietudes sobre desarrollo, SEO y procesos de trabajo.
+        </p>
       </div>
-    </section>
+
+      <div className="flex flex-col gap-3">
+        {faqs.map((faq, index) => (
+          <div
+            key={index}
+            className={`rounded-2xl bg-surface-dark border p-5 transition-all ${openIndex === index
+              ? "border-blue-500/30"
+              : "border-white/5 hover:border-white/10 cursor-pointer"
+              }`}
+            onClick={() => toggle(index)}
+          >
+            <div className={`flex justify-between gap-4 ${openIndex === index ? "items-start" : "items-center"}`}>
+              <h3 className={`font-bold text-white ${openIndex === index ? "text-lg" : "text-base"}`}>{faq.question}</h3>
+              <span className={`material-symbols-outlined ${openIndex === index ? "text-blue-500" : "text-gray-500"}`} style={{ fontSize: '24px' }}>
+                {openIndex === index ? "remove" : "add"}
+              </span>
+            </div>
+            {openIndex === index && (
+              <p className="mt-3 text-sm leading-relaxed text-gray-400">
+                {faq.answer}
+              </p>
+            )}
+          </div>
+        ))}
+      </div>
+    </section >
   );
 }

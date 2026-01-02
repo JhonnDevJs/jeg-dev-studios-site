@@ -152,7 +152,8 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 					type="image/webp"
 				/>
 			)}
-			<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" />
+			{/* @ts-ignore */}
+			<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet" precedence="default" />
 			<meta
 				name="google-adsense-account"
 				content="ca-pub-8211604143881682"
@@ -161,7 +162,9 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 				className={`font-display antialiased text-white bg-[#101922] min-h-screen`}
 			>
 				<NavBar />
-				{children}
+				<main className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24 bg-background-dark text-white selection:bg-blue-500/30 font-display">
+					{children}
+				</main>
 				<BtnWhats />
 				<Footer />
 				{/* Structured Data Scripts */}
