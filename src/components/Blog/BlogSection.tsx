@@ -49,12 +49,12 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 	const cardThemeClasses = "bg-black/20 backdrop-blur-lg border border-white/10 text-white";
 
 	return (
-		<section className="w-full p-3 lg:p-4 xl:p-5 featured-blog-section gradient-effect-x">
+		<section className="w-full py-3 lg:py-4 xl:py-5 featured-blog-section">
 			<h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
 				Descubre temas interesantes en nuestro Blog
 			</h2>
 
-			<div className="flex flex-wrap -m-2 lg:-m-4">
+			<div className="flex flex-wrap m-2 lg:m-4">
 				{/* Entrada Principal (Izquierda) */}
 				{mainPost && (
 					<div className="w-full lg:w-5/12 p-2 lg:p-4">

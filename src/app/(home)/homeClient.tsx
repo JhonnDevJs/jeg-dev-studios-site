@@ -19,16 +19,13 @@ interface HomeClientProps {
 }
 
 // Import Components
+import BlogSection from "@/components/Blog/BlogSection";
 import ContactForm from "@/components/Forms/ContactForm";
 import StructuredData from "@/components/Seo/StructuredData";
 import FAQ from "@/components/Seo/FAQ";
 
 // Imports Assets
 
-import {
-	jsxDEV as _jsxDEV,
-	Fragment as _Fragment,
-} from "react/jsx-dev-runtime";
 
 // Import Styles custom
 
@@ -36,6 +33,8 @@ import "./home.css";
 
 
 export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClientProps) {
+	const [mounted, setMounted] = useState(false);
+	useEffect(() => setMounted(true), []);
 
 	return (
 		<>
@@ -358,8 +357,7 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 						</p>
 					</div>
 				</section>
-			</div>
-			
+				
 			{mounted && postsToShow.length > 0 && (
 				<BlogSection
 					posts={postsToShow
@@ -382,6 +380,8 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 						.filter((post): post is NonNullable<typeof post> => post !== null)}
 				/>
 			)}
+			</div>
+
 		</>
 	);
 }
