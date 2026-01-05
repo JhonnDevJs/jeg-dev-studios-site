@@ -1,5 +1,6 @@
 "use client";
 import FAQ from "@/components/Seo/FAQ";
+import StructuredData from "@/components/Seo/StructuredData";
 
 // Import Types
 interface PrivacyClientProps {
@@ -16,6 +17,12 @@ export default function PrivacyClient({ initialFaqs }: PrivacyClientProps) {
 
   return (
     <>
+    
+			<StructuredData
+				type="BreadcrumbList"
+				idPage="breadcrumbs-notice-privacy"
+			/>
+			<StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-notice-privacy" />
       {/* 2. MAIN CONTENT */}
       
 			<main className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col w-full px-4 md:px-16">
