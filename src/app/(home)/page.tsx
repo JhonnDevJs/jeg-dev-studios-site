@@ -1,6 +1,19 @@
-import HomeClient from "./homeClient";
+// Import hooks
+
+
+// Import Custom Hooks
+
+
+// Imports libs
+import { getPageFaqs, getPageAssets } from "@/lib/data-service.";
 import { getBlogPosts } from '@/lib/fetchRSS';
+
+// Import Types
 import { Post } from "@/types";
+
+// Import Components
+
+import HomeClient from "./homeClient";
 
 export const revalidate = 3600;
 
@@ -17,5 +30,8 @@ export default async function Home() {
     postsToShow = []; // Asegúrate de que postsToShow sea un array
   }
 
-  return <HomeClient posts={postsToShow} />;
+	const faqs = await getPageFaqs("home");
+	const assets = await getPageAssets("home");
+
+  return <HomeClient posts={postsToShow} initialFaqs={faqs} assets={assets}/>;
 }

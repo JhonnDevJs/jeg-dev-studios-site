@@ -181,7 +181,7 @@ export default function ProjectsClient() {
 								key={category.id}
 								data-category-id={category.id}
 								type="button"
-								className={`relative z-10 px-4 py-2 text-lg font-bold shadow-lg rounded-md transition-colors duration-300 ${activeCategory === category.id ? "text-white" : "text-gray-300 hover:text-white"
+								className={`relative z-1 px-4 py-2 text-lg font-bold shadow-lg rounded-md transition-colors duration-300 ${activeCategory === category.id ? "text-white" : "text-gray-300 hover:text-white"
 									}`}
 								onClick={() => setActiveCategory(category.id)}
 							>

@@ -1,9 +1,26 @@
 "use client";
-import CardServices from "@/components/Cards/CardServices";
-import FAQ from "@/components/Seo/FAQ";
-import CTA from "@/components/Cta/CTA";
-import StructuredData from "@/components/Seo/StructuredData"; // Importar el nuevo componente
+
+// Imports Hooks
 import Image from "next/image";
+
+// Import Custom Hooks
+
+
+// Imports libs
+
+// Import Types
+
+// Import Components
+import StructuredData from "@/components/Seo/StructuredData";
+import CardServices from "@/components/Cards/CardServices";
+import CTA from "@/components/Cta/CTA";
+import FAQ from "@/components/Seo/FAQ";
+
+// Imports Assets
+
+
+// Import Styles custom
+
 import "./ServicesClient.css";
 
 interface FaqItem {
@@ -181,7 +198,6 @@ export default function ServicesClient() {
 
 			<FAQ
 				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros servicios y forma de trabajo."
 			/>
 
 			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3">
