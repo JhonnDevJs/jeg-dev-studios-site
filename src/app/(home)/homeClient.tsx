@@ -73,7 +73,7 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 			<section className="relative flex flex-col items-center justify-center px-4 py-8">
 				<div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
 					<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-background-dark/0 to-background-dark opacity-70"></div>
-					<div className="absolute top-20 right-[-20%] w-64 h-64 bg-blue-500/50 rounded-full blur-3xl"></div>
+					<div className="absolute top-20 right-[-20%] w-64 h-64 bg-blue-500/60 rounded-full blur-3xl"></div>
 					<div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/40 rounded-full blur-3xl"></div>
 				</div>
 				<div className="relative z-1 flex flex-col items-center max-w-lg text-center">
