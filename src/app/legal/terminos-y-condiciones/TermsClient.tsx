@@ -1,3 +1,4 @@
+import Link from "next/link";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 
@@ -212,7 +213,7 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
       <main className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col w-full px-4 md:px-16">
 
         {/* HERO TITLE */}
-        <div className="mb-8">
+        <section className="mb-8">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
             <span className="material-symbols-outlined text-blue-500 text-[18px]">
               verified_user
@@ -230,20 +231,20 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
             </span>
             <p>Última actualización: Enero 2026</p>
           </div>
-        </div>
+        </section>
 
         {/* INTRO TEXT */}
-        <div className="mb-8">
+        <section className="mb-8">
           <p className="text-slate-600 dark:text-slate-300 text-base leading-relaxed">
             Bienvenido a JEG Dev Studios. Estos términos rigen el uso de
             nuestra aplicación y los servicios de desarrollo de software, SEO
             y CRO que ofrecemos. Al utilizar nuestros servicios, usted acepta
             cumplir con estos acuerdos.
           </p>
-        </div>
+        </section>
 
         {/* 3. ACORDEÓN DINÁMICO (Términos) */}
-        <div className="flex flex-col gap-4">
+        <section className="flex flex-col gap-4">
           {terms.map((term, index) => (
             <details
               key={term.id}
@@ -273,10 +274,10 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
               </div>
             </details>
           ))}
-        </div>
+        </section>
 
         {/* 4. CTA CONTACTO */}
-        <div className="mt-8 rounded-xl bg-gradient-to-r from-blue-500/20 to-blue-600/10 p-6 border border-blue-500/20">
+        <section className="mt-8 rounded-xl bg-gradient-to-r from-blue-500/20 to-blue-600/10 p-6 border border-blue-500/20">
           <h4 className="text-slate-900 dark:text-white font-bold text-lg mb-2">
             ¿Tienes dudas sobre los términos?
           </h4>
@@ -284,15 +285,41 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
             Nuestro equipo legal y de soporte está disponible para aclarar
             cualquier punto antes de comenzar tu proyecto.
           </p>
-          <a href="mailto:contacto@jegdevstudios.com">
+          <Link href="mailto:contacto@jegdevstudios.com">
             <button className="w-full rounded-full bg-blue-500 hover:bg-blue-600 text-white font-medium py-3 px-4 transition-colors flex items-center justify-center gap-2">
               <span className="material-symbols-outlined text-[20px]">
                 mail
               </span>
               Contactar Soporte
             </button>
-          </a>
-        </div>
+          </Link>
+        </section>
+
+        <section className="py-6">
+
+          <h4 className="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400 mb-3">Documentos Relacionados</h4>
+
+          <article className="space-y-2">
+
+            <Link className="flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-slate-100 dark:border-slate-800 group hover:border-primary/50 transition-colors" href="/terminos-y-condiciones">
+
+              <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Términos y Condiciones</span>
+
+              <span className="material-symbols-outlined text-slate-400 group-hover:text-primary text-sm">arrow_forward_ios</span>
+
+            </Link>
+
+            <Link className="flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-slate-100 dark:border-slate-800 group hover:border-primary/50 transition-colors" href="/aviso-de-privacidad">
+
+              <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Política de Cookies</span>
+
+              <span className="material-symbols-outlined text-slate-400 group-hover:text-primary text-sm">arrow_forward_ios</span>
+
+            </Link>
+
+          </article>
+
+        </section>
         <FAQ
           faqs={initialFaqs}
         />

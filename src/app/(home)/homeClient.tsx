@@ -102,65 +102,160 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 			<div className="relative flex flex-col items-center px-4 md:px-16 py-8 flex-grow">
 
 				{/* SERVICES SECTION */}
-				<section className="relative z-1 pt-4 pb-8">
+				<section className="relative z-1 pb-16 ">
 					<div className="flex items-center justify-between mb-6">
 						<h3 className="text-2xl font-bold text-white">Nuestros Servicios</h3>
-						<Link className="text-sm font-medium text-blue-500 hover:text-blue-300" href="/servicios">Ver todo</Link>
+						<Link href="/servicios" className="text-sm font-medium text-blue-500 hover:text-blue-300">
+							Ver todo
+						</Link>
 					</div>
-					<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
-						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
+
+					<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+						{/* Card 1: Software */}
+						<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all"></div>
-							<div className="relative z-1 flex flex-col h-full">
-								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-blue-500 group-hover:scale-110 transition-transform duration-300">
-									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>terminal</span>
+
+							{/* 3. SECCIÓN DESARROLLO (Código) */}
+							<section className="flex flex-col gap-5 h-full">
+								<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl group">
+									<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-1"></div>
+									{/* IMAGEN DINÁMICA DE SUPABASE */}
+									<div
+										className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+										style={{
+											backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6CnvFbqMpxRj7hn0k4n9YbiZuNtRx0rD7wVMA7-OluDsgWlWWH8MONL5e2zq2y7Z3uvlHAFq9vatxOllaY_C8IKjC6lxFFFcq_5BydxnGuiKJRezZQk1MDJA8a5QwmHTa0LQIfAE4w-WTF6uy1y13nUUAW460tncmfTQs6j14xIFxVcqEgud8nKFaGf565wCPGk8hsZ9GddOpJFdP4i16YIbAnGo11WgKSHExVqY3EkvX5EbDgJBtAwykTPQ9MxYJl4N9SwtaFhLj')`,
+										}}
+									></div>
+									<div className="absolute bottom-4 left-4 z-2">
+										<span className="px-3 py-1 bg-purple-600/90 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-2 inline-block backdrop-blur-sm">
+											Desarrollo App & Web
+										</span>
+									</div>
 								</div>
-								<h4 className="mb-2 text-xl font-bold text-white">Desarrollo de Software</h4>
-								<p className="mb-4 text-sm leading-relaxed text-gray-400">
-									Soluciones a la medida, escalables y seguras. Desde apps móviles hasta plataformas enterprise.
-								</p>
-								<Link className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="/servicios/desarrollo">
-									Saber más
-									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
-								</Link>
-							</div>
-						</div>
-						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
+
+								<div className="flex flex-col gap-4 flex-grow">
+									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white">
+										Código que <span className="text-purple-400">Escala</span> y Convierte
+									</h2>
+									<div className="glass-panel p-5 rounded-2xl border-purple-500/10 bg-purple-500/5">
+										<p className="text-slate-300 text-base font-normal leading-relaxed">
+											Desarrollamos soluciones robustas utilizando Next.js y Supabase. Priorizamos la velocidad, la seguridad y una arquitectura limpia.
+										</p>
+									</div>
+
+									<div className="flex flex-col gap-3 mt-2">
+										<div className="flex items-start gap-3">
+											<span className="material-symbols-outlined text-purple-400 mt-0.5">terminal</span>
+											<p className="text-slate-200 text-base font-medium">Arquitectura Limpia & Escalable</p>
+										</div>
+										<div className="flex items-start gap-3">
+											<span className="material-symbols-outlined text-purple-400 mt-0.5">speed</span>
+											<p className="text-slate-200 text-base font-medium">Core Web Vitals +90</p>
+										</div>
+									</div>
+									<Link href="/servicios/desarrollo" className="mt-auto inline-flex items-center text-sm font-bold text-purple-400 hover:text-white transition-colors gap-1 pt-2">
+										Saber más <span className="material-symbols-outlined text-lg">arrow_forward</span>
+									</Link>
+								</div>
+							</section>
+						</article>
+
+						{/* Card 2: SEO */}
+						<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-purple-500/5 blur-2xl group-hover:bg-purple-500/10 transition-all"></div>
-							<div className="relative z-1 flex flex-col h-full">
-								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-blue-500 group-hover:scale-110 transition-transform duration-300">
-									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>search_insights</span>
+							{/* 2. SECCIÓN SEO & GROWTH (Conectada a Supabase) */}
+							<section className="flex flex-col gap-5 h-full">
+								<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl group">
+									<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-1"></div>
+									{/* IMAGEN DINÁMICA DE SUPABASE */}
+									<div
+										className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+										style={{
+											backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBS4cyMOiKUDMT7rM4GCbZvrWasa-8UCzBS69LYi3cGXtjc7id67gfuJX28lHCMfic5h1TmDrM5EdQvfHcc2n9Jri-IzHxv3qUpkSef4gYMobYdWcH4loK7yTAFlqWXaAXtfSz3cwxSQ4xYDER96YYawWNM7GPb2LtxogeKlf-5OFDkyBDjgs94I9tjFs2ex4YMu0tbnrTv8AlgCQcu6RXarCx2-ftcrWiVmti4LjW1rGdXnlq61dqFwviJSbbcTyuny0zlJCejN-4_')`,
+										}}
+									></div>
+									<div className="absolute bottom-4 left-4 z-2">
+										<span className="px-3 py-1 bg-blue-500/90 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-2 inline-block backdrop-blur-sm">
+											SEO & Growth
+										</span>
+									</div>
 								</div>
-								<h4 className="mb-2 text-xl font-bold text-white">Estrategia SEO</h4>
-								<p className="mb-4 text-sm leading-relaxed text-gray-400">
-									Posicionamiento orgánico que domina los buscadores y genera tráfico altamente cualificado.
-								</p>
-								<Link className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="/servicios/seo">
-									Saber más
-									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
-								</Link>
-							</div>
-						</div>
-						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
+
+								<div className="flex flex-col gap-4 flex-grow">
+									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white">
+										Domina los <span className="text-blue-500">Resultados</span> de Búsqueda
+									</h2>
+									<div className="glass-panel p-5 rounded-2xl border-blue-500/10 bg-blue-500/5">
+										<p className="text-slate-300 text-base font-normal leading-relaxed">
+											No solo traemos tráfico, traemos clientes cualificados. Nuestras estrategias de SEO técnico y de contenido están diseñadas quirúrgicamente para maximizar tu visibilidad.
+										</p>
+									</div>
+
+									{/* Lista de beneficios */}
+									<div className="flex flex-col gap-3 mt-2">
+										{["Investigación de Palabras Clave", "Optimización On-Page Técnica", "Link Building de Alta Autoridad"].map((item, i) => (
+											<div key={i} className="flex items-start gap-3">
+												<span className="material-symbols-outlined text-blue-500 mt-0.5">check_circle</span>
+												<p className="text-slate-200 text-base font-medium">{item}</p>
+											</div>
+										))}
+									</div>
+									<Link href="/servicios/seo" className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1 pt-2">
+										Saber más <span className="material-symbols-outlined text-lg">arrow_forward</span>
+									</Link>
+								</div>
+							</section>
+						</article>
+
+						{/* Card 3: Diseño Web */}
+						<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-green-500/5 blur-2xl group-hover:bg-green-500/10 transition-all"></div>
-							<div className="relative z-1 flex flex-col h-full">
-								<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-blue-500 group-hover:scale-110 transition-transform duration-300">
-									<span className="material-symbols-outlined" style={{ fontSize: '32px' }}>devices</span>
+							<section className="flex flex-col gap-5 h-full">
+								<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl group">
+									<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-1"></div>
+									{/* IMAGEN DINÁMICA */}
+									<div
+										className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
+										style={{
+											backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOruKW6ROXy0XMQNA-o4to_eQFwtAa6wVfhNIfw9EYSb0FDrOFXwoAeprHlJhNTMeXptRARPE4RhlNkOkmRVg-h5PEo6kkeU-NWg-Tb0v0q3fU7_6rOY5nWnRkwi76tvhICTGtJw8DPstRWEjJt1pI-C6ou7WFWlwCPlHvF4KA0-LNL_yKQUfjkKMLY5Rzges6CweEJgD05o0FJq9O7dlYX7zwavWhyZI0GNrQdhbZUgcNfnuYoAS_pzSNDMC7lX33jB_-fGr9DRUt')`,
+										}}
+									></div>
+									<div className="absolute bottom-4 left-4 z-2">
+										<span className="px-3 py-1 bg-green-500/90 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-2 inline-block backdrop-blur-sm">
+											Diseño & Branding
+										</span>
+									</div>
 								</div>
-								<h4 className="mb-2 text-xl font-bold text-white">Diseño Web &amp; CRO</h4>
-								<p className="mb-4 text-sm leading-relaxed text-gray-400">
-									Interfaces rápidas optimizadas para la conversión. Convertimos visitas en ventas reales.
-								</p>
-								<Link className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="/servicios/diseno">
-									Saber más
-									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
-								</Link>
-							</div>
-						</div>
+
+								<div className="flex flex-col gap-4 flex-grow">
+									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white">
+										Diseño que <span className="text-green-400">Enamora</span> y Vende
+									</h2>
+									<div className="glass-panel p-5 rounded-2xl border-green-500/10 bg-green-500/5">
+										<p className="text-slate-300 text-base font-normal leading-relaxed">
+											Creamos experiencias visuales memorables. Desde la identidad de tu marca hasta la interfaz de tu producto, cada pixel cuenta para conectar con tu audiencia.
+										</p>
+									</div>
+
+									<div className="flex flex-col gap-3 mt-2">
+										{["Diseño UX/UI Intuitivo", "Branding e Identidad Visual", "Material Publicitario de Alto Impacto"].map((item, i) => (
+											<div key={i} className="flex items-start gap-3">
+												<span className="material-symbols-outlined text-green-400 mt-0.5">check_circle</span>
+												<p className="text-slate-200 text-base font-medium">{item}</p>
+											</div>
+										))}
+									</div>
+									<Link href="/servicios/diseno" className="mt-auto inline-flex items-center text-sm font-bold text-green-400 hover:text-white transition-colors gap-1 pt-2">
+										Saber más <span className="material-symbols-outlined text-lg">arrow_forward</span>
+									</Link>
+								</div>
+							</section>
+						</article>
 					</div>
 				</section>
 
 				{/* TRUST SECTION */}
-				<section className="hidden px-4 py-6">
+				<section className="hidden py-6">
 					<p className="text-center text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Confían en nosotros</p>
 					<div className="flex justify-center gap-6 opacity-40 grayscale">
 						<div className="h-6 w-20 rounded bg-white/20"></div>
@@ -241,7 +336,7 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 				</section>
 
 				{/* SECCIÓN PROCESO */}
-				<section className="flex flex-col justify-center items-center w-full">
+				<section className="flex flex-col justify-center items-center w-full pb-12">
 					<div className="flex items-center gap-2 mb-2">
 						<span className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-500 uppercase tracking-wider">Nuestro Proceso</span>
 					</div>
@@ -251,62 +346,85 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 					<p className="text-[#9cabba] text-base font-normal leading-normal pt-2 pb-6">
 						Transparencia total. Sin cajas negras. Así llevamos tu idea a producción.
 					</p>
+					<div className="flex flex-col md:flex-row w-full gap-4">
+						{/* TIMELINE */}
+						<article className="relative w-full md:flex-1 px-4 pb-8 md:pb-0">
+							<div className="absolute left-[34px] top-2 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-blue/50 to-transparent"></div>
 
-					{/* TIMELINE */}
-					<div className="relative px-4 pb-8">
-						<div className="absolute left-[34px] top-2 bottom-0 w-0.5 bg-gradient-to-b from-blue-500 via-blue/50 to-transparent"></div>
+							{/* Paso 1 */}
+							<div className="relative flex gap-5 mb-10 group">
+								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500 shadow-[0_0_15px_-3px_rgba(37,140,244,0.4)]">
+									<span className="material-symbols-outlined text-blue-500 text-[20px]">manage_search</span>
+								</div>
+								<div className="flex flex-col pt-1">
+									<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Diagnóstico y Estrategia</h3>
+									<p className="text-sm text-[#9cabba] leading-relaxed">
+										Auditoría técnica inicial y definición de KPIs. Entendemos el problema antes de escribir código.
+									</p>
+								</div>
+							</div>
 
-						{/* Paso 1 */}
-						<div className="relative flex gap-5 mb-10 group">
-							<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500 shadow-[0_0_15px_-3px_rgba(37,140,244,0.4)]">
-								<span className="material-symbols-outlined text-blue-500 text-[20px]">manage_search</span>
+							{/* Paso 2 */}
+							<div className="relative flex gap-5 mb-10 group">
+								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
+									<span className="material-symbols-outlined text-white text-[20px]">calendar_month</span>
+								</div>
+								<div className="flex flex-col pt-1">
+									<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Sprint Planning</h3>
+									<p className="text-sm text-[#9cabba] leading-relaxed">
+										Roadmap dividido en entregables de 2 semanas. Priorizamos valor comercial inmediato.
+									</p>
+								</div>
 							</div>
-							<div className="flex flex-col pt-1">
-								<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Diagnóstico y Estrategia</h3>
-								<p className="text-sm text-[#9cabba] leading-relaxed">
-									Auditoría técnica inicial y definición de KPIs. Entendemos el problema antes de escribir código.
-								</p>
-							</div>
-						</div>
 
-						{/* Paso 2 */}
-						<div className="relative flex gap-5 mb-10 group">
-							<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
-								<span className="material-symbols-outlined text-white text-[20px]">calendar_month</span>
+							{/* Paso 3 */}
+							<div className="relative flex gap-5 mb-10 group">
+								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
+									<span className="material-symbols-outlined text-white text-[20px]">code_blocks</span>
+								</div>
+								<div className="flex flex-col pt-1">
+									<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Desarrollo Iterativo</h3>
+									<p className="text-sm text-[#9cabba] leading-relaxed">
+										Código limpio y escalable. Reuniones semanales para demo de avances y feedback real.
+									</p>
+								</div>
 							</div>
-							<div className="flex flex-col pt-1">
-								<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Sprint Planning</h3>
-								<p className="text-sm text-[#9cabba] leading-relaxed">
-									Roadmap dividido en entregables de 2 semanas. Priorizamos valor comercial inmediato.
-								</p>
-							</div>
-						</div>
 
-						{/* Paso 3 */}
-						<div className="relative flex gap-5 mb-10 group">
-							<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
-								<span className="material-symbols-outlined text-white text-[20px]">code_blocks</span>
+							{/* Paso 4 */}
+							<div className="relative flex gap-5 group">
+								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500 shadow-[0_0_20px_0px_rgba(37,140,244,0.5)]">
+									<span className="material-symbols-outlined text-white text-[20px]">rocket_launch</span>
+								</div>
+								<div className="flex flex-col pt-1">
+									<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Launch &amp; CRO</h3>
+									<p className="text-sm text-[#9cabba] leading-relaxed">
+										Despliegue a producción y monitoreo continuo para optimización de conversión (CRO).
+									</p>
+								</div>
 							</div>
-							<div className="flex flex-col pt-1">
-								<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Desarrollo Iterativo</h3>
-								<p className="text-sm text-[#9cabba] leading-relaxed">
-									Código limpio y escalable. Reuniones semanales para demo de avances y feedback real.
-								</p>
-							</div>
-						</div>
+						</article>
 
-						{/* Paso 4 */}
-						<div className="relative flex gap-5 group">
-							<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-blue-500 shadow-[0_0_20px_0px_rgba(37,140,244,0.5)]">
-								<span className="material-symbols-outlined text-white text-[20px]">rocket_launch</span>
+						{/* 4. SECCIÓN VIDEO (Caso de Éxito) */}
+						<article className="flex flex-col w-full md:flex-1 gap-4">
+							<div className="flex flex-col gap-1">
+								<div className="flex items-center gap-2 mb-2">
+									<span className="material-symbols-outlined text-blue-500">play_circle</span>
+									<h2 className="text-2xl font-bold text-white">Cómo aumentamos tu ROI</h2>
+								</div>
 							</div>
-							<div className="flex flex-col pt-1">
-								<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Launch &amp; CRO</h3>
-								<p className="text-sm text-[#9cabba] leading-relaxed">
-									Despliegue a producción y monitoreo continuo para optimización de conversión (CRO).
-								</p>
+
+							<div className="relative w-full rounded-lg overflow-hidden group shadow-[0_0_40px_-10px_rgba(37,140,244,0.3)] border border-white/10 aspect-video">
+								<iframe
+									className="w-full h-full"
+									src="https://www.youtube.com/embed/60pib_g34CA?si=bDdRfBVO6nFRqdFl&controls=0&showinfo=0&rel=0"
+									title="Video de presentación de JEG Dev Studios"
+									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+									referrerPolicy="strict-origin-when-cross-origin"
+									allowFullScreen
+									loading="lazy"
+								></iframe>
 							</div>
-						</div>
+						</article>
 					</div>
 				</section>
 
@@ -316,7 +434,7 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 					<div className="text-center mb-8">
 						<div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-4 backdrop-blur-sm">
 							<span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
-							<span className="text-xs font-medium text-gray-300">Respuesta en &lt; 24h</span>
+							<span className="text-xs font-medium text-gray-300">Respuesta en menos de 24h</span>
 						</div>
 						<h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl mb-3">
 							Ponte en Contacto
@@ -442,7 +560,7 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 				/>
 
 				{/* CTA SECTION */}
-				<section className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-blue-500 to-blue-700 w-full px-6 py-12 text-center shadow-2xl shadow-blue-500/20">
+				<section className="relative overflow-hidden rounded-[2.5rem] bg-gradient-to-b from-blue-500 to-blue-700 w-full px-6 py-12 mb-12 text-center shadow-2xl shadow-blue-500/20">
 					<div className="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] bg-repeat opacity-90 mix-blend-overlay"></div>
 					<div className="absolute top-0 right-0 -mr-12 -mt-12 h-40 w-40 rounded-full bg-white/35 blur-3xl"></div>
 					<div className="absolute bottom-0 left-0 -ml-12 -mb-12 h-40 w-40 rounded-full bg-black/40 blur-3xl"></div>

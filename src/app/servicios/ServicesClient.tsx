@@ -13,9 +13,7 @@ import Image from "next/image";
 
 // Import Components
 import StructuredData from "@/components/Seo/StructuredData";
-import CardServices from "@/components/Cards/CardServices";
 import FAQ from "@/components/Seo/FAQ";
-import CTA from "@/components/Cta/CTA";
 
 // Imports Assets
 
@@ -50,14 +48,6 @@ const faqs: FaqItem[] = [
 		answer:
 			"¡Claro! De hecho, lo recomendamos. Crear una estrategia integral desde el inicio garantiza los mejores resultados y ofrecemos planes personalizados.",
 	},
-];
-
-const services = [
-	{ text: "Soporte técnico, escalabilidad y personalización total" },
-	{ text: "Diseños profesionales alineados a tu identidad visual" },
-	{ text: "Optimización para buscadores (SEO) desde el inicio" },
-	{ text: "Procesos claros de desarrollo (Sprint + feedback continuo)" },
-	{ text: "Acompañamiento post-entrega: mantenimiento y soporte" },
 ];
 
 export default function ServicesClient() {
@@ -108,157 +98,14 @@ export default function ServicesClient() {
 							</div>
 						</div>
 					</section>
-					<section className="relative z-1 pb-16 ">
-						<div className="flex items-center justify-between mb-6">
-							<h3 className="text-2xl font-bold text-white">Nuestros Servicios</h3>
-							<Link href="/servicios" className="text-sm font-medium text-blue-500 hover:text-blue-300">
-								Ver todo
-							</Link>
-						</div>
-
-						<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-							{/* Card 1: Software */}
-							<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
-								<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all"></div>
-
-								{/* 3. SECCIÓN DESARROLLO (Código) */}
-								<section className="flex flex-col gap-5 h-full">
-									<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl group">
-										<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-1"></div>
-										{/* IMAGEN DINÁMICA DE SUPABASE */}
-										<div
-											className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-											style={{
-												backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuD6CnvFbqMpxRj7hn0k4n9YbiZuNtRx0rD7wVMA7-OluDsgWlWWH8MONL5e2zq2y7Z3uvlHAFq9vatxOllaY_C8IKjC6lxFFFcq_5BydxnGuiKJRezZQk1MDJA8a5QwmHTa0LQIfAE4w-WTF6uy1y13nUUAW460tncmfTQs6j14xIFxVcqEgud8nKFaGf565wCPGk8hsZ9GddOpJFdP4i16YIbAnGo11WgKSHExVqY3EkvX5EbDgJBtAwykTPQ9MxYJl4N9SwtaFhLj')`,
-											}}
-										></div>
-										<div className="absolute bottom-4 left-4 z-2">
-											<span className="px-3 py-1 bg-purple-600/90 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-2 inline-block backdrop-blur-sm">
-												Desarrollo App & Web
-											</span>
-										</div>
-									</div>
-
-									<div className="flex flex-col gap-4 flex-grow">
-										<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white">
-											Código que <span className="text-purple-400">Escala</span> y Convierte
-										</h2>
-										<div className="glass-panel p-5 rounded-2xl border-purple-500/10 bg-purple-500/5">
-											<p className="text-slate-300 text-base font-normal leading-relaxed">
-												Desarrollamos soluciones robustas utilizando Next.js y Supabase. Priorizamos la velocidad, la seguridad y una arquitectura limpia.
-											</p>
-										</div>
-
-										<div className="flex flex-col gap-3 mt-2">
-											<div className="flex items-start gap-3">
-												<span className="material-symbols-outlined text-purple-400 mt-0.5">terminal</span>
-												<p className="text-slate-200 text-base font-medium">Arquitectura Limpia & Escalable</p>
-											</div>
-											<div className="flex items-start gap-3">
-												<span className="material-symbols-outlined text-purple-400 mt-0.5">speed</span>
-												<p className="text-slate-200 text-base font-medium">Core Web Vitals +90</p>
-											</div>
-										</div>
-										<Link href="/servicios/desarrollo" className="mt-auto inline-flex items-center text-sm font-bold text-purple-400 hover:text-white transition-colors gap-1 pt-2">
-											Saber más <span className="material-symbols-outlined text-lg">arrow_forward</span>
-										</Link>
-									</div>
-								</section>
-							</article>
-
-							{/* Card 2: SEO */}
-							<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
-								<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-purple-500/5 blur-2xl group-hover:bg-purple-500/10 transition-all"></div>
-								{/* 2. SECCIÓN SEO & GROWTH (Conectada a Supabase) */}
-								<section className="flex flex-col gap-5 h-full">
-									<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl group">
-										<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-1"></div>
-										{/* IMAGEN DINÁMICA DE SUPABASE */}
-										<div
-											className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
-											style={{
-												backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuBS4cyMOiKUDMT7rM4GCbZvrWasa-8UCzBS69LYi3cGXtjc7id67gfuJX28lHCMfic5h1TmDrM5EdQvfHcc2n9Jri-IzHxv3qUpkSef4gYMobYdWcH4loK7yTAFlqWXaAXtfSz3cwxSQ4xYDER96YYawWNM7GPb2LtxogeKlf-5OFDkyBDjgs94I9tjFs2ex4YMu0tbnrTv8AlgCQcu6RXarCx2-ftcrWiVmti4LjW1rGdXnlq61dqFwviJSbbcTyuny0zlJCejN-4_')`,
-											}}
-										></div>
-										<div className="absolute bottom-4 left-4 z-2">
-											<span className="px-3 py-1 bg-blue-500/90 text-white text-xs font-bold uppercase tracking-wider rounded-full mb-2 inline-block backdrop-blur-sm">
-												SEO & Growth
-											</span>
-										</div>
-									</div>
-
-									<div className="flex flex-col gap-4 flex-grow">
-										<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white">
-											Domina los <span className="text-blue-500">Resultados</span> de Búsqueda
-										</h2>
-										<div className="glass-panel p-5 rounded-2xl border-blue-500/10 bg-blue-500/5">
-											<p className="text-slate-300 text-base font-normal leading-relaxed">
-												No solo traemos tráfico, traemos clientes cualificados. Nuestras estrategias de SEO técnico y de contenido están diseñadas quirúrgicamente para maximizar tu visibilidad.
-											</p>
-										</div>
-
-										{/* Lista de beneficios */}
-										<div className="flex flex-col gap-3 mt-2">
-											{["Investigación de Palabras Clave", "Optimización On-Page Técnica", "Link Building de Alta Autoridad"].map((item, i) => (
-												<div key={i} className="flex items-start gap-3">
-													<span className="material-symbols-outlined text-blue-500 mt-0.5">check_circle</span>
-													<p className="text-slate-200 text-base font-medium">{item}</p>
-												</div>
-											))}
-										</div>
-										<Link href="/servicios/seo" className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1 pt-2">
-											Saber más <span className="material-symbols-outlined text-lg">arrow_forward</span>
-										</Link>
-									</div>
-								</section>
-							</article>
-
-							{/* Card 3: Diseño Web */}
-							<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
-								<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-green-500/5 blur-2xl group-hover:bg-green-500/10 transition-all"></div>
-								<div className="relative z-1 flex flex-col h-full flex-grow">
-									<div className="mb-4 flex h-14 w-14 items-center justify-center rounded-2xl bg-white/5 border border-white/10 text-green-400 group-hover:scale-110 transition-transform duration-300">
-										<span className="material-symbols-outlined text-3xl">devices</span>
-									</div>
-									<h4 className="mb-2 text-xl font-bold text-white">Diseño Web & CRO</h4>
-									<p className="mb-4 text-sm leading-relaxed text-gray-400">
-										Interfaces rápidas optimizadas para la conversión. Convertimos visitas en ventas reales.
-									</p>
-									<Link href="/servicios/desarrollo/web" className="mt-auto inline-flex items-center text-sm font-bold text-green-400 hover:text-white transition-colors gap-1">
-										Saber más <span className="material-symbols-outlined text-lg">arrow_forward</span>
-									</Link>
-								</div>
-							</article>
-						</div>
-					</section>
+					
 					<section>
 						{/* Separador */}
 						<div className="w-full">
 							<div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
 						</div>
 
-						{/* 4. SECCIÓN VIDEO (Caso de Éxito) */}
-						<article className="flex flex-col gap-4">
-							<div className="flex flex-col gap-1">
-								<div className="flex items-center gap-2 mb-2">
-									<span className="material-symbols-outlined text-blue-500">play_circle</span>
-									<span className="text-blue-500 text-sm font-bold uppercase tracking-wider">Caso de Éxito</span>
-								</div>
-								<h2 className="text-2xl font-bold text-white">Cómo aumentamos tu ROI</h2>
-							</div>
-
-							<div className="relative w-full rounded-lg overflow-hidden group shadow-[0_0_40px_-10px_rgba(37,140,244,0.3)] border border-white/10 aspect-video">
-								<iframe
-									className="w-full h-full"
-									src="https://www.youtube.com/embed/60pib_g34CA?si=bDdRfBVO6nFRqdFl&controls=0&showinfo=0&rel=0"
-									title="Video de presentación de JEG Dev Studios"
-									allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-									referrerPolicy="strict-origin-when-cross-origin"
-									allowFullScreen
-									loading="lazy"
-								></iframe>
-							</div>
-						</article>
+						
 						<FAQ
 							faqs={faqs}
 						/>
