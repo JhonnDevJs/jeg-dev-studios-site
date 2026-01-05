@@ -7,34 +7,15 @@ import Script from "next/script";
 import Image from "next/image";
 import "./AboutClient.css";
 
-interface FaqItem {
-	question: string;
-	answer: string;
+interface AboutClientProps {
+	initialFaqs: any;
 }
 
-const faqs: FaqItem[] = [
-	{
-		question: "¿Qué significa 'JEG: Jumpstart Every Goal'?",
-		answer:
-			"Es nuestra filosofía. Significa 'Impulsa Cada Objetivo'. No solo construimos software, sino que actuamos como el catalizador que impulsa las metas de nuestros clientes, convirtiendo sus ideas en realidades digitales funcionales.",
-	},
-	{
-		question: "¿En qué se especializa el equipo fundador?",
-		answer:
-			"Nuestro equipo combina experticia en áreas clave: desarrollo Full-Stack,  y desarrollo Frontend enfocado en rendimiento SEO (Jhonatan), diseño de experiencias de usuario UX/UI (Fernanda), desarrollo Backend robusto (Leonardo). Esta diversidad nos permite ofrecer soluciones integrales.",
-	},
-	{
-		question: "¿Dónde se encuentran ubicados?",
-		answer:
-			"Nuestra sede principal se encuentra en la Ciudad de México (CDMX), pero nuestro modelo de trabajo nos permite colaborar con clientes de todo México y cualquier parte del mundo, adaptándonos a diferentes zonas horarias y necesidades.",
-	},
-];
-
-export default function AboutClient() {
+export default function AboutClient({ initialFaqs }: AboutClientProps) {
 	return (
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-about-us" />
-			<StructuredData data={faqs} type="FAQPage" idPage="faqs-about" />
+			<StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-about" />
 			<Script
 				id="structured-data-person"
 				type="application/ld+json"
@@ -295,7 +276,7 @@ export default function AboutClient() {
 				<div className="h-8"></div>
 
 				<FAQ
-					faqs={faqs}
+					faqs={initialFaqs}
 				/>
 			</main>
 		</>

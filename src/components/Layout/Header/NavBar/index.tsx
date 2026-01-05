@@ -2,11 +2,9 @@
 
 import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import iconLogo from "@/assets/img/logo/logo-bg-blue.webp";
 import { usePathname } from "next/navigation";
 
-function NavBar() {
+export default function NavBar() {
   const pathname = usePathname();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef<HTMLUListElement>(null);
@@ -72,9 +70,12 @@ function NavBar() {
               title: "Web",
               href: "/servicios/desarrollo/web",
               links: [
-                { label: "Sitios Web", href: "/servicios/desarrollo/web/sitios-web" },
+                { label: "Blogs", href: "/servicios/desarrollo/web/blogs" },
                 { label: "E-commerce", href: "/servicios/desarrollo/web/ecommerce" },
+                { label: "Invitaciones", href: "/servicios/desarrollo/web/invitacione" },
                 { label: "Landing Pages", href: "/servicios/desarrollo/web/landing-pages" },
+                { label: "Menus digitales", href: "/servicios/desarrollo/web/menus" },
+                { label: "Sitios web y web corporativas", href: "/servicios/desarrollo/web/sitios-web" },
               ]
             },
             {
@@ -106,6 +107,7 @@ function NavBar() {
           items: [
             { label: "SEO Web & Técnico", href: "/servicios/seo/web" },
             { label: "SEO Local", href: "/servicios/seo/local" },
+            // { label: "SEO Local", href: "/servicios/seo/geo" },
           ],
         },
       ],
@@ -121,12 +123,7 @@ function NavBar() {
   };
 
   return (
-
-    <header className="sticky top-0 z-50 flex items-center justify-between bg-background-dark/90 backdrop-blur-md p-4 transition-all duration-300">
-      <Link href="/" className="flex items-center gap-3">
-        <Image src={iconLogo} className="w-[30px] rounded" alt="logo de la agencia JEG Dev Studios" />
-        <h1 className="text-lg font-bold tracking-tight text-white">JEG Dev Studios</h1>
-      </Link>
+    <>
       <button className="md:hidden flex h-10 w-10 items-center justify-center rounded-full text-white hover:bg-white/10 transition-colors"
         onClick={() => setIsMenuOpen(!isMenuOpen)}
       >
@@ -292,9 +289,6 @@ function NavBar() {
           </li>
         ))}
       </ul>
-
-    </header>
+    </>
   );
 }
-
-export default NavBar;

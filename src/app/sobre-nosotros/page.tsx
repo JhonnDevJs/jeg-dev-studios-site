@@ -1,3 +1,5 @@
+import { getPageFaqs } from "@/lib/data-service.";
+
 export const metadata = {
 	title: "Sobre Nosotros | JEG Dev Studios",
 	description:
@@ -28,6 +30,8 @@ export const metadata = {
 
 import AboutClient from "./AboutClient";
 
-export default function AboutUs() {
-	return <AboutClient />;
+export default async function AboutUs() {
+
+	const faqs = await getPageFaqs("sobre-nosotros")
+	return <AboutClient initialFaqs={faqs} />;
 }

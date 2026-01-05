@@ -2,7 +2,7 @@ import { headers } from "next/headers";
 import { GoogleAnalytics } from "@next/third-parties/google";
 import { ReactNode } from "react";
 import Script from "next/script";
-import NavBar from "@/components/Layout/NavBar";
+import Header from "@/components/Layout/Header";
 import BtnWhats from "@/components/Buttons/WhatsAppButton";
 import Footer from "@/components/Layout/Footer";
 import "@/styles/globals.css";
@@ -161,7 +161,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 			<body
 				className={`font-display antialiased text-white bg-[#101922] min-h-screen`}
 			>
-				<NavBar />
+				<Header />
 				<main className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24 bg-background-dark text-white selection:bg-blue-500/30 font-display">
 					{children}
 				</main>

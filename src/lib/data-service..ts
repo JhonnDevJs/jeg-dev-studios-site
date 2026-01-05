@@ -31,3 +31,22 @@ export async function getPageAssets(slug: string) {
 
   return assetsMap;
 }
+
+export async function getLogos() {
+  const { data, error } = await supabase
+    .from("logos")
+    .select("key_name, url");
+
+  if (error) {
+    console.error("Error fetching logos:", error);
+    return {};
+  }
+
+  // Convertimos el array a un objeto para acceso rápido: logos.isotipo
+  const logosMap: Record<string, string> = {};
+  data.forEach((item) => {
+    logosMap[item.key_name] = item.url;
+  });
+  
+  return logosMap;
+}

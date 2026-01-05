@@ -1,8 +1,12 @@
+// Imports Hooks
 import Link from "next/link";
 import Image from "next/image";
-import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
 
-function Footer() {
+// Imports Components
+
+import Logo from "./Logo";
+
+export default async function Footer() {
   return (
     <>
 
@@ -10,9 +14,7 @@ function Footer() {
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
-              <div className="flex h-10 w-10 items-center justify-center rounded-xl bg-gradient-to-br from-primary to-blue-600 shadow-lg shadow-primary/20">
-                <Image src={iconLogo} className="w-[30px] rounded" alt="logo de la agencia JEG Dev Studios" />
-              </div>
+              <Logo />
               <span className="text-xl font-bold tracking-tight text-white">JEG Dev Studios</span>
             </div>
             <p className="text-sm leading-relaxed text-gray-400">
@@ -137,5 +139,3 @@ function Footer() {
     </>
   );
 }
-
-export default Footer;
