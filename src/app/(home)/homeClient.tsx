@@ -99,7 +99,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">Crecimiento Digital.</span>
 					</h2>
 					<p className="mb-8 text-lg font-normal leading-relaxed text-gray-100 max-w-[90%]">
-						Expertos en Desarrollo de Software, SEO/GEO y Diseño. Convertimos visitantes en clientes para empresas ambiciosas.
+						Tu agencia experta en desarrollo Web, Software, Apps, SEO/GEO y Diseño. Convertimos visitantes en clientes para empresas ambiciosas.
 					</p>
 					<div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
 						<Link href={"/contacto"} className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full bg-blue-500 px-8 text-base font-bold text-white hover:text-blue-500 shadow-lg shadow-blue-500/25 transition-transform active:scale-95 hover:bg-white">
