@@ -1,6 +1,5 @@
 // Imports Hooks
 import Link from "next/link";
-import Image from "next/image";
 
 // Imports Components
 
@@ -41,7 +40,7 @@ export default async function Footer() {
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-400">
                   <span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontSize: 16 }}>mail</span>
-                  <Link className="hover:text-white transition-colors truncate" href="#">contacto@jegdevstudios.com</Link>
+                  <Link className="hover:text-white transition-colors truncate" href="mailto:contacto@jegdevstudios.com">Enviar un Mail</Link>
                 </li>
                 <li className="flex items-center gap-2 text-sm text-gray-400">
                   <span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontSize: 16 }}>call</span>

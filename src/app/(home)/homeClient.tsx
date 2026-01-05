@@ -32,7 +32,20 @@ import FAQ from "@/components/Seo/FAQ";
 import "./home.css";
 
 
-export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClientProps) {
+export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: HomeClientProps) {
+
+	// Lógica simple para detectar temporada (opcional)
+	const date = new Date();
+	const month = date.getMonth(); // 0 = Enero, 10 = Noviembre, 11 = Diciembre
+
+	let heroBg = assets?.hero_bg_atemporal?.image_url;
+
+	if (month === 10) { // Noviembre (Día de muertos / Halloween pasado)
+		heroBg = assets?.hero_bg_halloween?.image_url || heroBg;
+	} else if (month === 11) { // Diciembre (Navidad)
+		heroBg = assets?.hero_bg_christmas?.image_url || heroBg;
+	}
+
 	const [mounted, setMounted] = useState(false);
 	useEffect(() => setMounted(true), []);
 
@@ -70,13 +83,13 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 			/>
 
 			{/* HERO SECTION */}
-			<section className="relative flex flex-col items-center justify-center px-4 py-8">
+			<section className="relative flex flex-col items-center md:items-start justify-center px-4 md:px-16 py-8 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${heroBg}')` }}>
 				<div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
 					<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-background-dark/0 to-background-dark opacity-70"></div>
-					<div className="absolute top-20 right-[-20%] w-64 h-64 bg-blue-500/60 rounded-full blur-3xl"></div>
-					<div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/40 rounded-full blur-3xl"></div>
+					<div className="absolute top-20 right-[-20%] w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
+					<div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/1 rounded-full blur-3xl"></div>
 				</div>
-				<div className="relative z-1 flex flex-col items-center max-w-lg text-center">
+				<div className="relative z-1 flex flex-col items-center md:items-start max-w-lg text-center md:text-left">
 					<div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-6 backdrop-blur-sm">
 						<span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
 						<span className="text-xs font-medium text-gray-300">Agencia Digital #1 en México</span>
@@ -85,10 +98,10 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 						Impulsamos tu <br />
 						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">Crecimiento Digital.</span>
 					</h2>
-					<p className="mb-8 text-lg font-normal leading-relaxed text-gray-400 max-w-[90%]">
-						Expertos en Desarrollo de Software, SEO y CRO. Convertimos visitantes en clientes para empresas ambiciosas.
+					<p className="mb-8 text-lg font-normal leading-relaxed text-gray-100 max-w-[90%]">
+						Expertos en Desarrollo de Software, SEO/GEO y Diseño. Convertimos visitantes en clientes para empresas ambiciosas.
 					</p>
-					<div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
+					<div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
 						<Link href={"/contacto"} className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full bg-blue-500 px-8 text-base font-bold text-white hover:text-blue-500 shadow-lg shadow-blue-500/25 transition-transform active:scale-95 hover:bg-white">
 							Solicitar Auditoría
 						</Link>
