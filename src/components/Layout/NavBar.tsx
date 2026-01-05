@@ -105,16 +105,6 @@ function NavBar() {
             </Link>
           </li>
         ))}
-        <div className="md:relative md:order-first md:mx-2">
-          <div
-            className="absolute bottom-0 left-0 h-1.5 bg-gradient-to-r from-blue-500 to-blue-300 transition-all duration-300 md:hidden"
-            style={indicatorStyle}
-          />
-          <div
-            className="absolute bottom-0 left-0 h-1.5 bg-gradient-to-r from-blue-500 to-blue-300 transition-all duration-300 md:hidden"
-            style={indicatorStyle}
-          />
-        </div>
       </ul>
 
     </header>

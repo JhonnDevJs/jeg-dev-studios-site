@@ -89,9 +89,9 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 						Expertos en Desarrollo de Software, SEO y CRO. Convertimos visitantes en clientes para empresas ambiciosas.
 					</p>
 					<div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
-						<button className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full bg-blue-500 px-8 text-base font-bold text-white hover:text-blue-500 shadow-lg shadow-blue-500/25 transition-transform active:scale-95 hover:bg-white">
+						<Link href={"/contacto"} className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full bg-blue-500 px-8 text-base font-bold text-white hover:text-blue-500 shadow-lg shadow-blue-500/25 transition-transform active:scale-95 hover:bg-white">
 							Solicitar Auditoría
-						</button>
+						</Link>
 						<Link href="/servicios" className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full border border-blue-500/50 bg-transparent px-8 text-base font-bold text-blue-500 transition-colors hover:bg-blue-500/10 active:scale-95">
 							Ver Servicios
 						</Link>
@@ -105,7 +105,7 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 				<section className="relative z-1 pt-4 pb-8">
 					<div className="flex items-center justify-between mb-6">
 						<h3 className="text-2xl font-bold text-white">Nuestros Servicios</h3>
-						<a className="text-sm font-medium text-blue-500 hover:text-blue-300" href="#">Ver todo</a>
+						<Link className="text-sm font-medium text-blue-500 hover:text-blue-300" href="/servicios">Ver todo</Link>
 					</div>
 					<div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
 						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
@@ -118,10 +118,10 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 								<p className="mb-4 text-sm leading-relaxed text-gray-400">
 									Soluciones a la medida, escalables y seguras. Desde apps móviles hasta plataformas enterprise.
 								</p>
-								<a className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="#">
+								<Link className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="/servicios/desarrollo">
 									Saber más
 									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
-								</a>
+								</Link>
 							</div>
 						</div>
 						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
@@ -134,10 +134,10 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 								<p className="mb-4 text-sm leading-relaxed text-gray-400">
 									Posicionamiento orgánico que domina los buscadores y genera tráfico altamente cualificado.
 								</p>
-								<a className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="#">
+								<Link className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="/servicios/seo">
 									Saber más
 									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
-								</a>
+								</Link>
 							</div>
 						</div>
 						<div className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300">
@@ -150,17 +150,17 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 								<p className="mb-4 text-sm leading-relaxed text-gray-400">
 									Interfaces rápidas optimizadas para la conversión. Convertimos visitas en ventas reales.
 								</p>
-								<a className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="#">
+								<Link className="mt-auto inline-flex items-center text-sm font-bold text-blue-500 hover:text-white transition-colors gap-1" href="/servicios/diseno">
 									Saber más
 									<span className="material-symbols-outlined" style={{ fontSize: '18px' }}>arrow_forward</span>
-								</a>
+								</Link>
 							</div>
 						</div>
 					</div>
 				</section>
 
 				{/* TRUST SECTION */}
-				<section className="px-4 py-6">
+				<section className="hidden px-4 py-6">
 					<p className="text-center text-xs font-semibold uppercase tracking-wider text-gray-500 mb-4">Confían en nosotros</p>
 					<div className="flex justify-center gap-6 opacity-40 grayscale">
 						<div className="h-6 w-20 rounded bg-white/20"></div>
@@ -312,7 +312,7 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 
 				{/* CONTACT FORM */}
 
-				<div className="flex flex-col justify-center items-center w-full">
+				<section className="flex flex-col justify-center items-center w-full">
 					<div className="text-center mb-8">
 						<div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-4 backdrop-blur-sm">
 							<span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
@@ -325,8 +325,116 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 							¿Tienes un proyecto en mente? Escríbenos y hagamos crecer tu negocio digital.
 						</p>
 					</div>
-					<ContactForm />
-				</div>
+					<article className="relative flex flex-col justify-center items-center w-full">
+
+						<div className="relative z-1 flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
+
+							<ContactForm />
+
+							<div className="flex flex-col gap-4 w-full lg:w-80 shrink-0 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0 mt-8 lg:mt-0">
+								<div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
+										<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>message</span>
+									</div>
+									<div>
+										<p className="text-xs text-gray-300">Envíanos un mensaje vía WhatsApp</p>
+										<Link href={"https://wa.me/message/IFBW3ARPBITWA1"} className="text-sm font-semibold text-white">Clic aquí para enviar mensaje</Link>
+									</div>
+								</div>
+								<div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
+										<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>mail</span>
+									</div>
+									<div>
+										<p className="text-xs text-gray-300">Escríbenos un correo</p>
+										<Link href={"mailto:contacto@jegdevstudios.com"} className="text-sm font-semibold text-white">Clic aquí para copiar correo</Link>
+									</div>
+								</div>
+								<div className="flex items-start gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
+										<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>link</span>
+									</div>
+									<div>
+										<p className="text-xs text-gray-300">Siguenos</p>
+										<div className="flex flex-col gap-4 pt-4">
+
+											<Link
+												className="flex text-2xl gap-4 no-underline"
+												href="https://www.facebook.com/JEGDevStudios"
+												target="_blank"
+												rel="noopener noreferrer"
+												title="Enlace a página de facebook de JEG Dev studios"
+												aria-label="Enlace a página de facebook de JEG Dev studios"
+												aria-labelledby="facebook"
+												tabIndex={0}
+											><span className="icon-facebook __icons-color"></span> <span className="text-sm font-semibold text-white">Facebook</span></Link>
+											<Link
+												className="flex text-2xl gap-4 no-underline"
+												href="https://instagram.com/jegdevstudios/"
+												target="_blank"
+												rel="noopener noreferrer"
+												title="Enlace a perfil de Instagram de JEG Dev studios"
+												aria-label="Enlace a perfil de Instagram de JEG Dev studios"
+												aria-labelledby="instagram"
+												tabIndex={0}
+											><span className=" icon-instagram __icons-color"></span> <span className="text-sm font-semibold text-white">Instagram</span></Link>
+											<Link
+												className="flex text-2xl gap-4 no-underline"
+												href="https://linkedin.com/company/jegdevstudios"
+												target="_blank"
+												rel="noopener noreferrer"
+												title="Enlace a perfil de linkedin de JEG Dev studios"
+												aria-label="Enlace a perfil de linkedin de JEG Dev studios"
+												aria-labelledby="linkedin"
+												tabIndex={0}
+											><span className=" icon-linkedin-no-bg __icons-color"></span> <span className="text-sm font-semibold text-white">LinkedIn</span></Link>
+											<Link
+												className="flex text-2xl gap-4 no-underline"
+												href="https://x.com/JEGDevStudios"
+												target="_blank"
+												rel="noopener noreferrer"
+												title="Enlace a perfil de github de JEG Dev studios"
+												aria-label="Enlace a perfil de x (twitter) de JEG Dev studios"
+												aria-labelledby="github"
+												tabIndex={0}
+											><span className=" icon-x __icons-color"></span> <span className="text-sm font-semibold text-white">X (Twitter)</span></Link>
+											<Link
+												className="flex text-2xl gap-4 no-underline"
+												href="https://www.tiktok.com/@jeg.dev.studios"
+												target="_blank"
+												rel="noopener noreferrer"
+												title="Enlace a perfil de TikTok de JEG Dev studios"
+												aria-label="Enlace a perfil de TikTok de JEG Dev studios"
+												aria-labelledby="TikTok"
+												tabIndex={0}
+											><span className=" icon-tiktok __icons-color"></span> <span className="text-sm font-semibold text-white">TikTok</span></Link>
+											<Link
+												className="flex text-2xl gap-4 no-underline"
+												href="https://www.youtube.com/@jegdevstudios"
+												target="_blank"
+												rel="noopener noreferrer"
+												title="Enlace a canal de Youtube de JEG Dev studios"
+												aria-label="Enlace a canal de Youtube de JEG Dev studios"
+												aria-labelledby="Youtube"
+												tabIndex={0}
+											><span className=" icon-youtube __icons-color"></span> <span className="text-sm font-semibold text-white">Youtube</span></Link>
+											<Link
+												className="flex text-2xl gap-4 no-underline"
+												href="https://github.com/JEGDevStudios"
+												target="_blank"
+												rel="noopener noreferrer"
+												title="Enlace a perfil de github de JEG Dev studios"
+												aria-label="Enlace a perfil de github de JEG Dev studios"
+												aria-labelledby="github"
+												tabIndex={0}
+											><span className=" icon-github __icons-color"></span> <span className="text-sm font-semibold text-white">GitHub</span></Link>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</article>
+				</section>
 
 				{/* FAQ SECTION */}
 				<FAQ
@@ -357,29 +465,29 @@ export default function HomeClient({ initialFaqs, posts: postsToShow }: HomeClie
 						</p>
 					</div>
 				</section>
-				
-			{mounted && postsToShow.length > 0 && (
-				<BlogSection
-					posts={postsToShow
-						.map((post: Post) => {
-							// Mapeamos las propiedades de Post a BlogPost
-							if (post.title && post.link && post.pubDate) {
-								return {
-									...post, // Pasamos todas las propiedades originales
-									title: post.title,
-									link: post.link,
-									pubDate: post.pubDate,
-									contentSnippet: post.excerpt,
-									// CORRECCIÓN AQUÍ:
-									// Si imageUrl es null, lo convertimos a undefined usando '??'
-									imageUrl: post.imageUrl ?? undefined,
-								};
-							}
-							return null;
-						})
-						.filter((post): post is NonNullable<typeof post> => post !== null)}
-				/>
-			)}
+
+				{mounted && postsToShow.length > 0 && (
+					<BlogSection
+						posts={postsToShow
+							.map((post: Post) => {
+								// Mapeamos las propiedades de Post a BlogPost
+								if (post.title && post.link && post.pubDate) {
+									return {
+										...post, // Pasamos todas las propiedades originales
+										title: post.title,
+										link: post.link,
+										pubDate: post.pubDate,
+										contentSnippet: post.excerpt,
+										// CORRECCIÓN AQUÍ:
+										// Si imageUrl es null, lo convertimos a undefined usando '??'
+										imageUrl: post.imageUrl ?? undefined,
+									};
+								}
+								return null;
+							})
+							.filter((post): post is NonNullable<typeof post> => post !== null)}
+					/>
+				)}
 			</div>
 
 		</>

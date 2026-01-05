@@ -1,0 +1,10 @@
+/* .gradient-text {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-primary to-blue-400;
+}
+
+.gradient-btn {
+  @apply bg-gradient-to-br from-primary to-accent-cyan transition-opacity duration-300;
+}
+.gradient-btn:active {
+  @apply opacity-90;
+} */
