@@ -47,13 +47,6 @@ const nextConfig = {
         destination: 'https://blog.jegdevstudios.com/', // URL completa porque cambia el host
         permanent: true,
       },
-      
-      // --- REGLA DE MIGRACIÓN A HOME ---
-      {
-        source: '/servicios',
-        destination: '/',
-        permanent: true,
-      },
 
       // --- REGLAS DE REESTRUCTURA DE SERVICIOS (desde /servicios/) ---
       {

@@ -1,7 +1,6 @@
 "use client";
 
 // Imports Hooks
-import Link from "next/link";
 import Image from "next/image";
 
 // Import Custom Hooks
@@ -13,6 +12,8 @@ import Image from "next/image";
 
 // Import Components
 import StructuredData from "@/components/Seo/StructuredData";
+import CardServices from "@/components/Cards/CardServices";
+import CTA from "@/components/Cta/CTA";
 import FAQ from "@/components/Seo/FAQ";
 
 // Imports Assets
@@ -50,6 +51,14 @@ const faqs: FaqItem[] = [
 	},
 ];
 
+const services = [
+	{ text: "Soporte técnico, escalabilidad y personalización total" },
+	{ text: "Diseños profesionales alineados a tu identidad visual" },
+	{ text: "Optimización para buscadores (SEO) desde el inicio" },
+	{ text: "Procesos claros de desarrollo (Sprint + feedback continuo)" },
+	{ text: "Acompañamiento post-entrega: mantenimiento y soporte" },
+];
+
 export default function ServicesClient() {
 	return (
 		<>
@@ -66,98 +75,141 @@ export default function ServicesClient() {
 					priority // Importante para LCP
 				/>
 			</section>
-			<div className="bg-background-light dark:bg-background-dark min-h-screen flex flex-col font-display text-slate-900 dark:text-white overflow-x-hidden selection:bg-blue-500 selection:text-white px-4 md:px-16">
 
-				<main className="flex-grow flex flex-col gap-8 pb-10">
-					<section className="relative flex flex-col items-center justify-center py-16 lg:py-24">
-						{/* Background Effects */}
-						<div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-							<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-background-dark/0 to-background-dark opacity-70"></div>
-							<div className="absolute top-20 right-[-20%] w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
-							<div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/10 rounded-full blur-3xl"></div>
-						</div>
+			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 pb-0 xl:pb-0 gap-3 gradient-effect-x">
+				<h1 className="text-4xl md:text-5xl font-bold text-center text-white mt-3">
+					Agencia de Desarrollo Digital: Soluciones Web, SEO y Diseño
+				</h1>
+				<p className="text-lg md:text-xl text-white text-center max-w-4xl">
+					En JEG Dev Studios, funcionamos como tu socio tecnológico integral.
+					Somos una <strong>agencia de desarrollo digital</strong> que unifica
+					estrategia, código y creatividad. Ofrecemos{" "}
+					<strong>servicios de desarrollo digital</strong> que van desde la
+					creación de software a medida hasta el posicionamiento SEO y el diseño
+					UX/UI.
+				</p>
+			</section>
 
-						<div className="relative z-1 flex flex-col items-center max-w-2xl text-center">
-							<div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-6 backdrop-blur-sm">
-								<span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
-								<span className="text-xs font-medium text-gray-300">Agencia Digital #1 en México</span>
-							</div>
-							<h2 className="mb-4 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-6xl">
-								Impulsamos tu <br />
-								<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">
-									Crecimiento Digital.
-								</span>
-							</h2>
-							<p className="mb-8 text-lg font-normal leading-relaxed text-gray-400 max-w-[90%] mx-auto">
-								Expertos en Desarrollo de Software, SEO y CRO. Convertimos visitantes en clientes para empresas ambiciosas.
-							</p>
-							<div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center">
-								<Link href="/contacto" className="flex w-full sm:w-auto h-14 items-center justify-center rounded-full bg-blue-500 px-8 text-base font-bold text-white shadow-lg shadow-blue-500/25 transition-transform active:scale-95 hover:bg-blue-500">
-									Solicitar Auditoría
-								</Link>
-							</div>
-						</div>
-					</section>
-					
-					<section>
-						{/* Separador */}
-						<div className="w-full">
-							<div className="h-px bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-						</div>
-
-						
-						<FAQ
-							faqs={faqs}
+			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
+				<h2 className="text-3xl md:text-4xl font-bold text-center text-white">Nuestras Áreas de Expertise</h2>
+				<p className="text-lg md:text-xl text-white text-center max-w-3xl">
+					Nuestra metodología se basa en tres pilares fundamentales. Cada
+					servicio está diseñado para funcionar en conjunto, creando una
+					estrategia digital cohesiva y potente para tu negocio.
+				</p>
+				<article className="flex flex-col justify-center items-center w-full p-0 m-0">
+					<ul className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 justify-items-center items-stretch w-full h-full gap-5 p-0 m-0">
+						<CardServices
+							title="Desarrollo a Medida: Web, Apps y Software"
+							description="Damos vida a tus ideas con tecnología de vanguardia. Desde sitios web que cautivan y desarrollo de aplicaciones móviles que conectan, hasta software empresarial que optimiza tus operaciones."
+							url="/servicios/desarrollo"
+							buttonLabel="Ver Servicios de Desarrollo"
+							items={[
+								"Sitios Web Profesionales y E-commerce",
+								"Aplicaciones Móviles (iOS/Android)",
+								"Software Empresarial a Medida",
+							]}
 						/>
-					</section>
-					<section className="pb-8 mx-auto w-full">
-						<div className="relative overflow-hidden rounded-[2rem] bg-surface-dark shadow-xl min-h-[300px] flex items-center justify-center">
-							{/* Imagen de fondo dinámica */}
-							<div
-								className="absolute inset-0 z-0 bg-cover bg-center transition-transform duration-700 hover:scale-105"
-								style={{
-									backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuAOruKW6ROXy0XMQNA-o4to_eQFwtAa6wVfhNIfw9EYSb0FDrOFXwoAeprHlJhNTMeXptRARPE4RhlNkOkmRVg-h5PEo6kkeU-NWg-Tb0v0q3fU7_6rOY5nWnRkwi76tvhICTGtJw8DPstRWEjJt1pI-C6ou7WFWlwCPlHvF4KA0-LNL_yKQUfjkKMLY5Rzges6CweEJgD05o0FJq9O7dlYX7zwavWhyZI0GNrQdhbZUgcNfnuYoAS_pzSNDMC7lX33jB_-fGr9DRUt')`,
-								}}
-							></div>
+						<CardServices
+							title="Posicionamiento SEO Estratégico"
+							description="Hacemos que tus clientes te encuentren. Aumentamos tu visibilidad en Google y en las nuevas respuestas de IA (GEO) con estrategias técnicas, de contenido y locales que atraen tráfico cualificado."
+							url="/servicios/seo"
+							buttonLabel="Explorar Estrategias SEO"
+							items={[
+								"Auditoría y Estrategia SEO",
+								"SEO Web, Local y GEO",
+								"Optimización On-Page y Técnica",
+							]}
+						/>
+						<CardServices
+							title="Diseño Gráfico y Digital (UX/UI)"
+							description="Creamos identidades visuales memorables y experiencias de usuario que funcionan. Desde un logotipo que define tu marca hasta el diseño web e interfaces intuitivas para tus plataformas digitales."
+							url="/servicios/diseno"
+							buttonLabel="Descubrir Soluciones de Diseño"
+							items={[
+								"Branding y Diseño de Logotipos",
+								"Diseño de Interfaces (UX/UI)",
+								"Identidad Visual Corporativa",
+							]}
+						/>
+					</ul>
+				</article>
+			</section>
 
-							{/* Overlays para legibilidad */}
-							<div className="absolute inset-0 z-1 bg-gradient-to-t from-black via-[#101922]/80 to-transparent"></div>
-							<div className="absolute inset-0 z-1 bg-gradient-to-br from-blue-500/80 to-purple-600/40 mix-blend-overlay"></div>
+			{/* SECCIÓN SEMÁNTICA MEJORADA */}
+			<section className="flex flex-col justify-center items-center text-center w-full gap-3 p-3 xl:p-20 gradient-effect-x">
+				<h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+					Tu Socio Tecnológico 360° en Ciudad de México
+				</h2>
+				<div className="max-w-4xl">
+					<p className="text-xl text-center text-white mb-4">
+						Entendemos que buscar un <strong>proveedor de servicios</strong>{" "}
+						digitales puede ser abrumador. Existen{" "}
+						<strong>agencias digitales</strong>,{" "}
+						<strong>agencias de marketing digital</strong> y fábricas de
+						software. Nosotros integramos lo mejor de todas.
+					</p>
+					<p className="text-xl text-center text-white mb-5">
+						Con <strong>años de experiencia</strong> en la industria, nuestro
+						equipo en <strong>Ciudad de México</strong> no solo desarrolla;
+						creamos estrategias. Combinamos el <strong>diseño web</strong> de
+						alta calidad con el desarrollo de{" "}
+						<strong>productos digitales</strong> y el{" "}
+						<strong>desarrollo de aplicaciones móviles</strong>, asegurando que
+						tu proyecto no solo se vea bien, sino que funcione y escale.
+					</p>
 
-							<div className="relative z-2 flex flex-col items-center justify-center p-8 text-center gap-6">
-								<div className="flex flex-col gap-2">
-									<h3 className="text-white text-3xl font-bold leading-tight tracking-tight">
-										¿Listo para <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-200 to-white">escalar?</span>
-									</h3>
-									<p className="text-gray-200 text-base font-medium leading-relaxed max-w-[280px] mx-auto">
-										Impulsa tu negocio hoy. Expertos en desarrollo y SEO listos para ayudarte.
-									</p>
-								</div>
-								<Link href="/contacto" className="group relative flex w-full max-w-[280px] cursor-pointer items-center justify-center gap-3 overflow-hidden rounded-full bg-blue-500 px-6 py-4 text-white shadow-[0_0_20px_rgba(37,140,244,0.3)] transition-all hover:bg-blue-600 hover:shadow-[0_0_25px_rgba(37,140,244,0.5)] active:scale-95">
-									<span className="text-base font-bold leading-none tracking-wide">
-										Cotizar Proyecto
-									</span>
-									<span className="material-symbols-outlined text-[20px] transition-transform group-hover:translate-x-1">
-										arrow_forward
-									</span>
-								</Link>
-							</div>
-						</div>
-					</section>
-				</main>
-
-				{/* 7. FLOATING CTA */}
-				<div className="fixed bottom-0 left-0 w-full p-4 z-50 bg-gradient-to-t from-background-dark via-background-dark to-transparent pt-10">
-					<Link href="/contacto">
-						<button className="w-full bg-blue-500 hover:bg-blue-600 active:bg-blue-700 text-white font-bold text-lg py-4 rounded-full shadow-lg shadow-blue-500/25 flex items-center justify-center gap-2 transition-all">
-							<span>Iniciar Proyecto</span>
-							<span className="material-symbols-outlined">rocket_launch</span>
-						</button>
-					</Link>
+					<h3 className="text-2xl text-center text-white font-bold mb-3">
+						Más Allá del Lanzamiento: Crecimiento Continuo
+					</h3>
+					<p className="text-xl text-center text-white mb-3">
+						Nuestro trabajo no termina con la entrega. A diferencia de otras{" "}
+						<strong>agencias digitales</strong>, creemos en el crecimiento a
+						largo plazo. Integramos estrategias de{" "}
+						<strong>inbound marketing</strong> y{" "}
+						<strong>marketing digital</strong> para asegurar que tu sitio web{" "}
+						<strong>posiciona orgánicamente</strong>.
+					</p>
+					<p className="text-xl text-center text-white">
+						Gestionamos tus campañas en <strong>redes sociales</strong> y
+						optimizamos tu contenido para que no solo atraigas visitantes, sino
+						que los conviertas en clientes leales. Los{" "}
+						<strong>servicios</strong> que <strong>ofrecen</strong> nuestros
+						competidores son aislados; nosotros ofrecemos un ecosistema
+						completo.
+					</p>
 				</div>
+			</section>
 
-			</div>
+			<section className="flex flex-col justify-center items-center text-center w-full gap-3 p-3 xl:p-20 gradient-effect-y">
+				<h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+					Beneficios de Elegir a JEG Dev Studios
+				</h2>
+				<ul className="flex flex-wrap justify-center items-center w-full gap-2 p-0 m-0 list-none">
+					{services.map((service, index) => (
+						<li
+							key={index}
+							className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3 min-w-[250px]">
+							<p className="text-lg m-0">{service.text}</p>
+						</li>
+					))}
+				</ul>
+			</section>
 
+			<FAQ
+				faqs={faqs}
+			/>
+
+			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3">
+				<CTA
+					title={"¿Listo para dar el siguiente paso digital?"}
+					paragraph={
+						"Es momento de convertir tu idea en una solución tecnológica escalable y atractiva. Agenda tu consulta gratuita o contáctanos directamente."
+					}
+					label={"Solicita tu Auditoría Gratuita"}
+					link={"/contacto"}
+				/>
+			</section>
 		</>
 	);
 }
