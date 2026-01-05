@@ -213,7 +213,7 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
 				type="BreadcrumbList"
 				idPage="breadcrumbs-terms-and-conditions"
 			/>
-			<StructuredData data={faqs} type="FAQPage" idPage="faqs-terminos" />
+			<StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-terminos" />
       <main className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col w-full px-4 md:px-16">
 
         {/* HERO TITLE */}
