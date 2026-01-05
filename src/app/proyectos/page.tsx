@@ -1,3 +1,7 @@
+// Import Custom Hooks
+
+import { getPageFaqs } from "@/lib/data-service.";
+
 export const metadata = {
 	title: "Conoce nuestro portafolio de Proyectos | JEG Dev Studios",
 	description:
@@ -28,6 +32,8 @@ export const metadata = {
 
 import ProjectsClient from "./ProjectsClient";
 
-export default function ProyectsPage() {
-	return <ProjectsClient />;
+export default async function ProyectsPage() {
+
+	const faqs = await getPageFaqs("portafolio")
+	return <ProjectsClient initialFaqs={faqs} />;
 }
