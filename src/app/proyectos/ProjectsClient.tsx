@@ -10,9 +10,8 @@ import { db } from "@/lib/firebase";
 import { collection, getDocs } from "firebase/firestore";
 import "./Projects.css";
 
-interface FaqItem {
-	question: string;
-	answer: string;
+interface ProjectsClientProps {
+	initialFaqs: any;
 }
 
 // 1. Definimos la interfaz para un objeto de Proyecto
@@ -27,25 +26,8 @@ interface Project {
 	figmaEmbedUrl?: string; // Propiedad que faltaba
 }
 
-const faqs: FaqItem[] = [
-	{
-		question: "¿Los proyectos del portafolio son de clientes reales?",
-		answer:
-			"Sí, la mayoría de los proyectos que mostramos son trabajos realizados para clientes reales. También incluimos algunos proyectos internos que desarrollamos para explorar nuevas tecnologías y demostrar nuestras capacidades.",
-	},
-	{
-		question: "¿Por qué no veo proyectos en algunas categorías?",
-		answer:
-			"Nuestro portafolio está en constante actualización. Si una categoría aparece vacía, significa que estamos preparando los casos de estudio de nuestros proyectos más recientes en esa área. ¡Vuelve pronto para ver las novedades!",
-	},
-	{
-		question: "Me gusta un proyecto, ¿pueden hacer algo similar para mí?",
-		answer:
-			"¡Claro! El portafolio es una excelente referencia para que nos muestres qué estilo o funcionalidades te interesan. Podemos tomarlo como punto de partida para crear una solución 100% personalizada para tu negocio.",
-	},
-];
 
-export default function ProjectsClient() {
+export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 	// 2. Tipamos el estado para que sea un diccionario de arrays de Proyectos
 	const [projectsByCategory, setProjectsByCategory] = useState<Record<string, Project[]>>({});
 	const [loading, setLoading] = useState(true);
@@ -147,7 +129,7 @@ export default function ProjectsClient() {
 	return (
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-projects" />
-			<StructuredData data={faqs} type="FAQPage" idPage="faqs-projects" />
+			<StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-projects" />
 			<section className="__image-background-sections flex justify-center items-center w-full p-0">
 				<Image
 					src="/banners/Christmas/Proyectos.webp"
@@ -181,7 +163,7 @@ export default function ProjectsClient() {
 								key={category.id}
 								data-category-id={category.id}
 								type="button"
-								className={`relative z-10 px-4 py-2 text-lg font-bold shadow-lg rounded-md transition-colors duration-300 ${activeCategory === category.id ? "text-white" : "text-gray-300 hover:text-white"
+								className={`relative z-1 px-4 py-2 text-lg font-bold shadow-lg rounded-md transition-colors duration-300 ${activeCategory === category.id ? "text-white" : "text-gray-300 hover:text-white"
 									}`}
 								onClick={() => setActiveCategory(category.id)}
 							>
@@ -232,8 +214,7 @@ export default function ProjectsClient() {
 				/>
 			</section>
 			<FAQ
-				faqs={faqs}
-				subtitle="Preguntas frecuentes sobre nuestro portafolio."
+				faqs={initialFaqs}
 			/>
 		</>
 	);

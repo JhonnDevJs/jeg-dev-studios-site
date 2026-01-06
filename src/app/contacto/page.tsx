@@ -1,3 +1,6 @@
+// Import Libs
+import { getPageFaqs } from "@/lib/data-service.";
+
 export const metadata = {
 	title: "Contáctanos | JEG Dev Studios",
 	description:
@@ -28,6 +31,9 @@ export const metadata = {
 
 import ContactClient from "./ContactClient";
 
-export default function ContactPage() {
-	return <ContactClient />;
+export default async function ContactPage() {
+
+	const faqs = await getPageFaqs("contacto");
+
+	return <ContactClient initialFaqs={faqs} />;
 }

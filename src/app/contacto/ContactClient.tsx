@@ -1,121 +1,38 @@
 "use client";
-import { useState, ChangeEvent, FormEvent } from "react";
-import Image from "next/image";
+
+// Imports Hooks
 import Script from "next/script";
 import Link from "next/link";
-import iconLogo from "@/assets/img/logo/logo-bg-transparent.webp";
+
+// Import Custom Hooks
+
+
+// Imports libs
+
+
+// Import Types
+interface ContactClientProps {
+	initialFaqs: any; // You can replace 'any' with a more specific type if available
+}
+
+
+// Import Components
+import ContactForm from "@/components/Forms/ContactForm";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
+
+// Imports Assets
+
+// Import Styles custom
 import "./contactClient.css";
 
-// Interfaz para las FAQs (buena práctica tenerla aquí o importarla)
-interface FaqItem {
-	question: string;
-	answer: string;
-}
 
-// 1. Definimos una interfaz propia para los datos del formulario
-interface ContactFormData {
-	name: string;
-	email: string;
-	type: string;
-	message: string;
-}
-
-const faqs: FaqItem[] = [
-	{
-		question: "¿En cuánto tiempo responden los mensajes?",
-		answer: "Solemos responder en menos de 24 horas hábiles",
-	},
-	{
-		question: "¿Puedo solicitar un presupuesto personalizado?",
-		answer:
-			"Sí, completa el formulario y cuéntanos tu idea. Te contactaremos con una propuesta adaptada.",
-	},
-	{
-		question: "¿Incluye mantenimiento o soporte?",
-		answer:
-			"Depende del paquete contratado. Algunos incluyen mantenimiento básico por un tiempo limitado. También ofrecemos planes de soporte y mantenimiento personalizados para proyectos a largo plazo.",
-	},
-	{
-		question: "¿Cuáles son las formas de pago disponibles?",
-		answer:
-			"Trabajamos con transferencias bancarias, pagos vía PayPal y otros métodos digitales. Te indicamos los pasos según tu ubicación.",
-	},
-	{
-		question: "¿Cuál es el proceso para contratar soporte?",
-		answer:
-			"Dependiendo del caso puedes contratarlo a través de nuestro portal web, enviando un mensaje por WhatsApp a nuestro equipo de soporte, llenando este formulario seleccionando la opción de soporte o enviando un correo electrónico.",
-	},
-	{
-		question: "¿Cuáles son sus redes sociales oficiales?",
-		answer:
-			"Puedes encontrarnos en Facebook, Instagram, TikTok, YouTube, LinkedIn, X (antes Twitter) y GitHub como @JEGDevStudios. ¡Síguenos para no perderte ninguna novedad!",
-	},
-];
-
-export default function ContactClient() {
-	const [loading, setLoading] = useState(false);
-	const [showModal, setShowModal] = useState(false);
-
-	// 2. Tipamos el estado inicial
-	const [formData, setFormData] = useState<ContactFormData>({
-		name: "",
-		email: "",
-		type: "",
-		message: "",
-	});
-
-	// 3. Tipamos el evento 'e' para Inputs, Selects y TextAreas
-	const handleChange = (
-		e: ChangeEvent<HTMLInputElement | HTMLSelectElement | HTMLTextAreaElement>
-	) => {
-		const { name, value } = e.target;
-		// TypeScript necesita saber que copiamos el estado anterior y sobrescribimos una clave
-		setFormData((prev) => ({ ...prev, [name]: value }));
-	};
-
-	// 4. Tipamos el evento del formulario (Submit)
-	const handleSubmit = async (e: FormEvent) => {
-		e.preventDefault();
-		setLoading(true);
-
-		try {
-			const response = await fetch(
-				"https://jegdevstudios.onrender.com/send-email",
-				{
-					method: "POST",
-					headers: {
-						"Content-Type": "application/json",
-					},
-					body: JSON.stringify(formData),
-				}
-			);
-
-			if (response.ok) {
-				setFormData({
-					name: "",
-					email: "",
-					type: "",
-					message: "",
-				});
-				setShowModal(true);
-			} else {
-				alert("Error al enviar el correo");
-			}
-		} catch (error) {
-			console.error("Error:", error);
-			alert("Error al enviar el correo");
-		} finally {
-			setLoading(false);
-		}
-	};
+export default function ContactClient({ initialFaqs }: ContactClientProps) {
 
 	return (
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-contact" />
-			<StructuredData data={faqs} type="FAQPage" idPage="faqs-contact" />
-
+			<StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-contact" />
 			<Script
 				id="structured-data-contactpage"
 				type="application/ld+json"
@@ -139,163 +56,89 @@ export default function ContactClient() {
 					}),
 				}}
 			/>
-			<section className="__image-background-sections flex justify-center items-center w-full p-0">
-				<Image
-					src="/banners/Christmas/Contacto.webp"
-					alt="Contacta con nosotros - JEG Dev Studios"
-					width={2000}
-					height={600}
-					className="w-full h-auto"
-				/>
-			</section>
-			<section className="flex flex-col justify-center items-center w-full gradient-effect-x">
-				<h1 className="text-6xl md:text-8xl text-center text-white mt-5">Contáctanos</h1>
-				<p className="text-xl text-center text-white">
-					Escríbenos para recibir asesoría personalizada, resolver dudas o
-					solicitar la cotización de tu proyecto.
-				</p>
-			</section>
-			<section className="flex flex-col md:flex-row justify-center items-center w-full p-3 xl:p-5 gap-5 gradient-effect-y">
-				<aside className="flex flex-col justify-center items-center w-full h-full gap-4">
-					<Image
-						src={iconLogo}
-						width={164}
-						height={164}
-						alt="Logo JEG Dev Studios"
-						title="Logo JEG Dev Studios"
-					></Image>
-					<p className="text-xl text-center text-white">
-						Estamos aquí para ayudarte. Escríbenos y nuestro equipo te
-						responderá lo antes posible.
-					</p>
-					<div className="flex justify-center items-center gap-4">
-						<Link
-							href="mailto:contacto@jegdevstudios.com"
-							className="text-6xl text-center text-white no-underline"
-							tabIndex={0}
-							aria-label="Envíar un mensaje por correo electrónico a contacto@jegdevstudios.com"
-							title="Envíar un mensaje por correo electrónico a contacto@jegdevstudios.com"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<span className="icon-gmail" aria-hidden="true"></span>
-						</Link>
-						<Link
-							href="https://wa.me/5215512197135"
-							className="text-6xl text-center text-white no-underline"
-							tabIndex={0}
-							aria-label="Envíar un mensaje por WhatsApp +52 55-1219-7135"
-							title="Envíar un mensaje por WhatsApp +52 55-1219-7135"
-							target="_blank"
-							rel="noopener noreferrer"
-						>
-							<span className="icon-whatsapp" aria-hidden="true"></span>
-						</Link>
+
+			<div className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased selection:bg-blue-500 selection:text-white min-h-screen flex flex-col overflow-x-hidden px-4 md:px-16">
+				<div className="flex-1 overflow-y-auto pb-0">
+
+					{/* 2. HERO TITLE */}
+					<div className="px-5 pt-6 pb-2 mx-auto">
+						<div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 mb-4">
+							<span className="w-2 h-2 rounded-full bg-blue-500 animate-pulse"></span>
+							<span className="text-xs font-semibold text-blue-500 uppercase tracking-wider">SEO & Software</span>
+						</div>
+						<h1 className="text-slate-900 dark:text-white tracking-tight text-[36px] font-extrabold leading-[1.1] text-left mb-3">
+							Hablemos de tu <span className="gradient-text">próximo éxito</span>
+						</h1>
+						<p className="text-slate-500 dark:text-slate-400 text-base font-normal leading-relaxed">
+							Cuéntanos sobre tus necesidades de desarrollo o SEO. Nuestro equipo en México está listo para potenciar tu negocio.
+						</p>
 					</div>
-				</aside>
-				<article className="flex flex-col justify-center items-center text-center w-full h-full">
-					<h2 className="text-white">Contactanos</h2>
-					<form
-						className="text-xl font-semibold custom-form"
-						id="contactForm"
-						onSubmit={handleSubmit}
-					>
-						<input
-							type="text"
-							name="name"
-							placeholder="Nombre completo"
-							value={formData.name}
-							onChange={handleChange}
-							required
-						/>
-						<input
-							type="email"
-							name="email"
-							placeholder="Correo Electrónico"
-							value={formData.email}
-							onChange={handleChange}
-							required
-						/>
-						<label htmlFor="type" className="text-white">
-							Tipo de Consulta
-						</label>
-						<select
-							name="type"
-							value={formData.type}
-							onChange={handleChange}
-							required
-						>
-							<option value="" disabled>
-								Selecciona un tipo
-							</option>
-							<option value="consulta" className="text-black">
-								General (Cualquier otra consulta)
-							</option>
-							<option value="cotizacion" className="text-black">
-								Cotización
-							</option>
-							<option value="soporte" className="text-black">
-								Soporte
-							</option>
-							<option value="facturacion" className="text-black">
-								Facturación
-							</option>
-						</select>
-						<textarea
-							id="message"
-							name="message"
-							rows={4}
-							placeholder="Escriba su mensaje..."
-							value={formData.message}
-							onChange={handleChange}
-							required
-						/>
-						<button type="submit" className="text-xl font-bold btn-services">
-							{loading ? (
-								<div className="flex items-center">
-									<strong role="status">Enviando...</strong>
-									<div
-										className="animate-spin rounded-full h-5 w-5 border-b-2 border-white ml-auto"
-										aria-hidden="true"
-									></div>
+
+					<div className="relative z-1 flex flex-col lg:flex-row gap-8 lg:gap-12 w-full">
+
+						{/* 3. FORMULARIO */}
+
+						<ContactForm />
+
+						{/* 4. CONTACTO DIRECTO GRID */}
+						<div className="flex flex-col gap-4 w-full lg:w-80 shrink-0 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0 mt-8 lg:mt-0">
+
+							<div className="px-5 pb-6 max-w-lg mx-auto w-full">
+								<h3 className="text-slate-900 dark:text-white text-lg font-bold mb-4 px-2">Contacto Directo</h3>
+								<div className="grid grid-cols-3 gap-3">
+									<Link href="tel:+525512197135" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
+										<div className="size-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors">
+											<span className="material-symbols-outlined">call</span>
+										</div>
+										<span className="text-xs font-medium text-slate-600 dark:text-slate-300">Llamar</span>
+									</Link>
+									<Link href="mailto:contacto@jegdevstudios.com" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl  bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
+										<div className="size-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+											<span className="material-symbols-outlined">mail</span>
+										</div>
+										<span className="text-xs font-medium text-slate-600 dark:text-slate-300">Email</span>
+									</Link>
+									<Link href="https://wa.me/message/IFBW3ARPBITWA1" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
+										<div className="size-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
+											<span className="material-symbols-outlined">chat</span>
+										</div>
+										<span className="text-xs font-medium text-slate-600 dark:text-slate-300">WhatsApp</span>
+									</Link>
 								</div>
-							) : (
-								"Enviar"
-							)}
-						</button>
-					</form>
-				</article>
-			</section>
-
-			{/* Aquí pasamos las props tipadas al componente FAQ */}
-			<FAQ faqs={faqs} />
-
-			{showModal && (
-				<div className="custom-modal-backdrop">
-					<div className="custom-modal-content rounded-2xl bg-black text-white text-center p-4">
-						<div className="mb-4">
-							<div className="text-xl font-bold">
-								Tu mensaje ha sido enviado
-								<br />
-								exitosamente.
 							</div>
-							<div className="text-xl mt-2">
-								Nos comunicaremos
-								<br />
-								contigo a la brevedad.
-								<br />
-								:)
+							{/* 5. MAPA (Imagen Dinámica) */}
+							<div className="px-5 pb-10 max-w-lg mx-auto w-full">
+								<div className="relative w-full h-48 rounded-[2rem] overflow-hidden group shadow-lg">
+									{/* IMAGEN DE SUPABASE */}
+									<div
+										className="w-full h-full bg-cover bg-center opacity-80 group-hover:scale-105 transition-transform duration-500"
+										style={{
+											backgroundImage: `url('https://lh3.googleusercontent.com/aida-public/AB6AXuAKexHxtrtjMMzfzpTxtc5gRluLIor3fwrJufE6hfHdN1HqS4I7rFQhH61Nsd635NjgfIN7GVJRiH9DZIjduu2xaacsnteJ0f5-fUuR1PQ8K3l0nZs59KBuxNUjbzMea6uVJBV42UPaJHqvFgRKfwiUCcmgcIYUQw3qB9iFroX6QJg45JFQ0rraNFRck6DlPysEtULmEm3JNaX1zOzD4YACdZ9fhrTPmjWGZ--x_hTh8OtATTvltIjT7xSHSvxJxqNXY4lhRxBQiHBJ')`
+										}}
+									></div>
+									<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/20 to-transparent"></div>
+									<div className="absolute bottom-0 left-0 w-full p-5">
+										<div className="flex items-start gap-3">
+											<div className="size-10 rounded-full bg-blue-500 flex items-center justify-center text-white shrink-0 shadow-lg shadow-blue-500/30">
+												<span className="material-symbols-outlined">location_on</span>
+											</div>
+											<div>
+												<h4 className="text-white font-bold text-base">Ciudad de México</h4>
+												<p className="text-slate-300 text-sm leading-snug">Av. Reforma 222, Cuauhtémoc,<br />06600 CDMX, México</p>
+											</div>
+										</div>
+									</div>
+								</div>
 							</div>
 						</div>
-						<button
-							className="btn-services"
-							onClick={() => setShowModal(false)}
-						>
-							Aceptar
-						</button>
 					</div>
+
+
+
+					{/* Aquí pasamos las props tipadas al componente FAQ */}
+					<FAQ faqs={initialFaqs} />
 				</div>
-			)}
+			</div>
 		</>
 	);
 }

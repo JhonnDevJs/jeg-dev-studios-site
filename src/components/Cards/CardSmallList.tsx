@@ -20,7 +20,7 @@ function CardSmallList({ titulo, subtitulo, list, lastText }: CardSmallListProps
         >
           {/* Círculo donde va la flecha */}
           <div
-            className="w-8 h-8 rounded-full bg-gradient-to-r from-[#da24bb] to-[#090edb] flex items-center justify-center z-10"
+            className="w-8 h-8 rounded-full bg-gradient-to-r from-[#da24bb] to-[#090edb] flex items-center justify-center z-1"
           >
             {/* Flechas dobles hacia abajo SVG */}
             <svg
