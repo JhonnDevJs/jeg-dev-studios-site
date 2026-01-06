@@ -201,7 +201,7 @@ export default function SeoLocalPage() {
 			</section>
 
 			{/* --- Sección de FAQ --- */}
-			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre SEO Local" />
+			<FAQ faqs={faqs} />
 
 			{/* --- Sección CTA Final (BOFU) --- */}
 

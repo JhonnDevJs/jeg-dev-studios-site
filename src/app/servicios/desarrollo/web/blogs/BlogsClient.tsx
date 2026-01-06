@@ -304,7 +304,7 @@ export default function BlogDevelopmentPage() {
 			</section>
 
 			{/* --- Sección de FAQ --- */}
-			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre Desarrollo de Blogs" />
+			<FAQ faqs={faqs}/>
 			<section className="flex flex-col justify-content-center align-items-center text-center text-white w-full p-4 xl:p-20 gap-3">
 				<CTAProducts
 					title={"¿Listo para Convertirte en una Autoridad en tu Sector?"}
