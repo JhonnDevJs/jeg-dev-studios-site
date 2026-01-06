@@ -1,16 +1,28 @@
 import { supabase } from "./supabase";
 
-export async function getPageFaqs(slug: string) {
+export interface Faq {
+  question: string;
+  answer: string;
+}
+
+export async function getPageFaqs(slug: string): Promise<Faq[]> {
   const { data, error } = await supabase
     .from("faqs")
     .select("question, answer")
     .eq("page_slug", slug)
     .order("sort_order", { ascending: true });
+
   if (error) {
-    console.error("Error fetching FAQS: ", error)
+    console.error("Error fetching FAQS: ", error);
     return [];
   }
-  return data;
+  return (data as Faq[]) || [];
+}
+
+export interface SiteAsset {
+  section_key: string;
+  image_url: string;
+  alt_text: string;
 }
 
 export async function getPageAssets(slug: string) {
@@ -21,15 +33,20 @@ export async function getPageAssets(slug: string) {
 
   if (error) {
     console.error("Error fetching Assets: ", error);
-    return {}
+    return {};
   }
 
-  const assetsMap: Record<string, any> = {};
-  data.forEach((item => {
+  const assetsMap: Record<string, SiteAsset> = {};
+  (data || []).forEach((item) => {
     assetsMap[item.section_key] = item;
-  }))
+  });
 
   return assetsMap;
+}
+
+export interface Logo {
+  key_name: string;
+  url: string;
 }
 
 export async function getLogos() {
@@ -44,7 +61,7 @@ export async function getLogos() {
 
   // Convertimos el array a un objeto para acceso rápido: logos.isotipo
   const logosMap: Record<string, string> = {};
-  data.forEach((item) => {
+  (data || []).forEach((item) => {
     logosMap[item.key_name] = item.url;
   });
   
