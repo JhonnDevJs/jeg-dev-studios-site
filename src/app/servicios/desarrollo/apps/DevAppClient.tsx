@@ -228,7 +228,6 @@ export default function DevAppClient() {
 			</section>
 			<FAQ
 				faqs={faqs}
-				subtitle="Preguntas frecuentes sobre el desarrollo de apps."
 			/>
 			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3">
 				<CTAProducts

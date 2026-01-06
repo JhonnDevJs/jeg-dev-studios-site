@@ -476,7 +476,6 @@ export default function DevWebClient() {
 			</section>
 			<FAQ
 				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros paquetes de desarrollo web."
 			/>
 		</>
 	);

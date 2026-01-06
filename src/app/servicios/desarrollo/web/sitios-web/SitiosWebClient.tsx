@@ -310,7 +310,6 @@ export default function DevWebClient() {
 			{/* Sección de FAQ (Requisito de SEMrush) */}
 			<FAQ
 				faqs={faqs}
-				subtitle="Preguntas Frecuentes sobre la Creación de Sitios Web"
 			/>
 
 			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3">

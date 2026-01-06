@@ -249,7 +249,6 @@ export default function DisenoClient() {
 			</section>
 			<FAQ
 				faqs={faqs}
-				subtitle="Resuelve tus dudas sobre nuestros servicios de Diseño Gráfico y digital"
 			/>
 		</>
 	);
