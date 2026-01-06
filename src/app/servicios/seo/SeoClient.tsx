@@ -332,7 +332,7 @@ export default function SeoClient() {
 					link={"/contacto"}
 				/>
 			</section>
-			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre SEO" />
+			<FAQ faqs={faqs} />
 		</>
 	);
 }

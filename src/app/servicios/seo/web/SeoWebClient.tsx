@@ -173,7 +173,7 @@ export default function SeoWebPage() {
 			</section>
 
 			{/* --- Sección de FAQ --- */}
-			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre Consultoría SEO" />
+			<FAQ faqs={faqs} />
 
 			{/* --- Sección CTA Final (BOFU) --- */}
 
