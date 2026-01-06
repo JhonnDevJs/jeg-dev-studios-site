@@ -346,7 +346,7 @@ export default function LandingPageDevelopmentPage() {
 			</section>
 
 			{/* --- Sección de FAQ --- */}
-			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre Páginas de Destino" />
+			<FAQ faqs={faqs} />
 		</>
 	);
 }
