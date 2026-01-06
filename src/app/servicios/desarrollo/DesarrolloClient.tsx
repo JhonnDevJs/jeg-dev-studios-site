@@ -188,7 +188,7 @@ export default function DesarrolloClient() {
 				/>
 			</section>
 
-			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre Desarrollo" />
+			<FAQ faqs={faqs}/>
 
 			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3">
 				<CTA
