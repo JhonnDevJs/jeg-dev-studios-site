@@ -10,7 +10,7 @@ export default function SectionProcess({ title, text }: SectionProcessProps) {
 	return (
 		<section className="section-process-waves flex flex-col justify-center items-center text-center text-white w-full h-1/2 relative overflow-hidden p-4">
 			<article
-				className="process-waves-container flex flex-col items-center gap-3 relative z-10"
+				className="process-waves-container flex flex-col items-center gap-3 relative z-1"
 			>
 				<h2 className="text-white text-center text-4xl font-bold">{title}</h2>
 				<h3 className="text-white text-center text-2xl font-light">(Basado en Scrum)</h3>

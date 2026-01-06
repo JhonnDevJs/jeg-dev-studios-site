@@ -214,7 +214,7 @@ export default function MenusPage() {
 			</section>
 
 			{/* --- Sección de FAQ --- */}
-			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre Menús Digitales" />
+			<FAQ faqs={faqs} />
 
 			{/* --- Sección CTA Final (BOFU) --- */}
 

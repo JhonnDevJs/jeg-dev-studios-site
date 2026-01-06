@@ -1,137 +1,48 @@
 @import "tailwindcss";
 @import "../assets/icons/icon-fonts/style.css";
 
-* {
-  font-weight: 400;
-  font-style: normal;
-  box-sizing: border-box;
+/* Asegura que el scrollbar se vea bien y define el gradiente */
+@layer utilities {
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-image: linear-gradient(to right, #258cf4, #60a5fa);
+  }
 }
 
+/* Forzar color de fondo globalmente para asegurar que sea oscuro */
 body {
-  /* Usa la variable de la fuente principal (Geist Sans) */
-  font-family: var(--font-geist-sans);
-  background-color: #000;
-}
-
-.__icons-color::before {
+  min-height: max(884px, 100dvh);
+  background-color: #101922;
+  /* Tu color background-dark */
   color: #ffffff;
 }
 
-.gradient-border {
-  position: relative;
-  z-index: 1;
-  border: none;
-  border-radius: 0.95rem;
-  background: linear-gradient(90deg, #090EDB, #DA24BB);
-  color: #fff;
-  padding: 2px;
-  transition: background 0.3s;
+.__icons-color {
+  color: #969696;
+  transition: color 0.3s ease;
 }
 
-.gradient-border>span,
-.gradient-border .btn-text {
-  display: block;
-  background: #00000000;
-  color: #fff;
-  border-radius: 0.95rem;
-  padding: 0.5rem 1rem;
-  width: 100%;
-  height: 100%;
-  transition: background 0.3s, color 0.3s;
+.__icons-color:hover {
+  color: #1a76ee;
 }
 
-.gradient-border:hover>span,
-.gradient-border:hover .btn-text {
-  background: #fff;
-  color: #181818;
+.__icons-color::before {
+  color: inherit;
 }
 
-.gradient-border:active>span,
-.gradient-border:focus>span {
-  background: #222;
-
+/* Scrollbar personalizado */
+::-webkit-scrollbar {
+  width: 6px;
 }
 
-
-.btn-whatsapp {
-  position: fixed;
-  bottom: 8rem;
-  right: 1rem;
-  z-index: 2;
+::-webkit-scrollbar-track {
+  background: #101922;
 }
 
-.gradient-effect-x {
-  background: radial-gradient(65.69% 90.55% at 100% 100.04%, rgba(255, 113, 164, 0.5) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(38.25% 50.87% at 0% 100.04%, rgba(9, 166, 255, 0.35) 0%, rgba(0, 255, 194, 0) 100%), #000;
-}
-
-.gradient-effect-y {
-  background: radial-gradient(65.69% 90.55% at 100% 0%, rgba(255, 113, 164, 0.5) 0%, rgba(0, 0, 0, 0) 100%), radial-gradient(38.25% 50.87% at 0% 0%, rgba(9, 166, 255, 0.35) 0%, rgba(0, 255, 194, 0) 100%), #000;
-}
-
-.card-services {
-  background: rgba(24, 24, 24, 0.603);
-  /* Fondo semitransparente */
-  backdrop-filter: blur(40px);
-  /* Aplica el blur */
-  -webkit-backdrop-filter: blur(20px);
-  /* Soporte Safari */
-  border-radius: 1rem;
-  border: 1px solid rgba(255, 255, 255, 0.144);
-  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
-  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-.card-services:hover {
-  transform: scale(1.05);
-}
-
-.btn-services {
-  position: relative;
-  padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4); /* Fondo transparente */
-  border-radius: 20px; /* 🔁 Este valor modifica el redondeado */
-  color: white;
-  text-decoration: none;
-  text-align: center;
-  z-index: 1;
-}
-
-.btn-services::before {
-  content: "";
-  position: absolute;
-  top: -2px;
-  left: -2px;
-  right: -2px;
-  bottom: -2px;
-  background: linear-gradient(90deg, #7b00ff, #ff00cc);
-  border-radius: 22px; /* Debe ser igual o mayor al de `.card` */
-  z-index: -1;
-  mask: 
-    linear-gradient(#fff 0 0) content-box, 
-    linear-gradient(#fff 0 0);
-  mask-composite: exclude;
-  -webkit-mask-composite: destination-out;
-  padding: 2px;
-}
-
-.btn-services:hover {
-  background: rgb(255, 255, 255); /* Fondo más opaco */
-  color: black;
-}
-
-/* Active (al presionar): efecto de "pulso" */
-.btn-services:active {
-  transform: scale(1.05);
-  background: rgb(255, 255, 255); /* Fondo más opaco */
-  color: black;
-}
-
-.accordion span {
-  font-size: 1.2rem;
-}
-
-/* Oculta la barra y flecha en pantallas pequeñas */
-@media (max-width: 650px) {
-  .vertical-bar-arrow {
-    display: none !important;
-  }
+::-webkit-scrollbar-thumb {
+  background: #3b4754;
+  border-radius: 3px;
+  background-size: contain;
 }

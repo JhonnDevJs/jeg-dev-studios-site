@@ -234,7 +234,7 @@ export default function InvitacionesPage() {
 			</section>
 
 			{/* --- Sección de FAQ --- */}
-			<FAQ faqs={faqs} subtitle="Preguntas Frecuentes sobre Invitaciones Digitales" />
+			<FAQ faqs={faqs} />
 
 			{/* --- Sección CTA Final (BOFU) --- */}
 

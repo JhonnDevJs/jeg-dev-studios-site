@@ -192,7 +192,7 @@ export default function EcommerceDevelopmentPage() {
 
 			{/* --- Sección de FAQ --- */}
 			<FAQ
-				faqs={faqs} subtitle="Preguntas Frecuentes sobre Comercio Electrónico"
+				faqs={faqs}
 			/>
 
 			{/* --- Sección CTA Final (BOFU) --- */}

@@ -396,7 +396,6 @@ export default function DevSoftClient() {
 			</section>
 			<FAQ
 				faqs={faqs}
-				subtitle="Preguntas Frecuentes sobre nuestro Servicio de Desarrollo de Software"
 			/>
 		</>
 	);

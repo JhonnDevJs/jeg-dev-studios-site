@@ -61,7 +61,7 @@ export default function Slider({ children }: SliderProps) {
 			<button
 				type="button"
 				onClick={goToPrev}
-				className="absolute bottom-5 left-0 z-10 flex items-center justify-center h-full w-16 cursor-pointer"
+				className="absolute bottom-5 left-0 z-1 flex items-center justify-center h-full w-16 cursor-pointer"
 				aria-label="Previous"
 			>
 				<span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
@@ -72,7 +72,7 @@ export default function Slider({ children }: SliderProps) {
 			<button
 				type="button"
 				onClick={goToNext}
-				className="absolute bottom-5 right-0 z-10 flex items-center justify-center h-full w-16 cursor-pointer"
+				className="absolute bottom-5 right-0 z-1 flex items-center justify-center h-full w-16 cursor-pointer"
 				aria-label="Next"
 			>
 				<span className="inline-flex items-center justify-center w-10 h-10 rounded-full bg-white/30 group-hover:bg-white/50">
