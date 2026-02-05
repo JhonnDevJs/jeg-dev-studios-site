@@ -94,10 +94,10 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 						<span className="flex h-2 w-2 rounded-full bg-green-500 animate-pulse"></span>
 						<span className="text-xs font-medium text-gray-300">Agencia Digital #1 en México</span>
 					</div>
-					<h2 className="mb-4 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
-						Impulsamos tu <br />
-						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">Crecimiento Digital.</span>
-					</h2>
+					<h1 className="mb-4 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl">
+						Agencia de Desarrollo Next.js y Software <br />
+						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">a Medida en México</span>
+					</h1>
 					<p className="mb-8 text-lg font-normal leading-relaxed text-gray-100 max-w-[90%]">
 						Tu agencia experta en desarrollo Web, Software, Apps, SEO/GEO y Diseño. Convertimos visitantes en clientes para empresas ambiciosas.
 					</p>
@@ -152,7 +152,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 									</h2>
 									<div className="glass-panel p-5 rounded-2xl border-purple-500/10 bg-purple-500/5">
 										<p className="text-slate-300 text-base font-normal leading-relaxed">
-											Desarrollamos soluciones robustas utilizando Next.js y Supabase. Priorizamos la velocidad, la seguridad y una arquitectura limpia.
+											Expertos en Desarrollo con Next.js y Supabase
 										</p>
 									</div>
 
@@ -200,7 +200,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 									</h2>
 									<div className="glass-panel p-5 rounded-2xl border-blue-500/10 bg-blue-500/5">
 										<p className="text-slate-300 text-base font-normal leading-relaxed">
-											No solo traemos tráfico, traemos clientes cualificados. Nuestras estrategias de SEO técnico y de contenido están diseñadas quirúrgicamente para maximizar tu visibilidad.
+											Estrategias de SEO y GEO que atraen clientes cualificados
 										</p>
 									</div>
 
@@ -357,7 +357,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 						Metodología Ágil
 					</h2>
 					<p className="text-[#9cabba] text-base font-normal leading-normal pt-2 pb-6">
-						Transparencia total. Sin cajas negras. Así llevamos tu idea a producción.
+						Transparencia total. Sin cajas negras. Así llevamos tu idea a producción con desarrollo de software a medida para PyMEs
 					</p>
 					<div className="flex flex-col md:flex-row w-full gap-4">
 						{/* TIMELINE */}

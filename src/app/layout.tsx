@@ -26,7 +26,7 @@ const servicePageBackgrounds: Record<string, string> = {
 
 export const metadata = {
 	metadataBase: new URL("https://www.jegdevstudios.com"),
-	title: "Agencia de Desarrollo de Software y UX UI en México | JEG Dev Studios",
+	title: "Agencia de Desarrollo Next.js y Software a Medida en México | JEG Dev Studios",
 
 	// DESCRIPCIÓN MEJORADA: Incluye ambas keywords y es clara.
 	description:
