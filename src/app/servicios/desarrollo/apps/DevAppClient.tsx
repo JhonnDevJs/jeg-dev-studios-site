@@ -7,6 +7,7 @@ import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 import Image from "next/image";
+import TimelineProcess from "@/components/Cards/TimelineProcess";
 import imgAppProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
@@ -109,10 +110,10 @@ export default function DevAppClient() {
 	);
 
 	const appsservicesinfo = {
-		name: "Desarrollo de Aplicaiones Móviles Profesionales",
+		name: "Desarrollo de Aplicaciones Móviles Profesionales",
 		serviceType: "Desarrollo de Aplicaciones móviles",
 		description:
-			"Somos los expertos en el desarrollo deaplicaciones en México, ofrecemos soluciones personalizadas que impulsan tu proyecto para Android e iOS.",
+			"Somos los expertos en el desarrollo de aplicaciones en México, ofrecemos soluciones personalizadas que impulsan tu proyecto para Android e iOS.",
 		image:
 			"https://www.jegdevstudios.com/img-SEO/og-background-serv-dev-apps.webp",
 		ratingValue: "4.6",
@@ -156,6 +157,40 @@ export default function DevAppClient() {
 		)}`;
 		window.open(whatsappLink, "_blank");
 	};
+
+	const features = [
+		{
+			icon: "smartphone",
+			title: "Nativa vs. Híbrida",
+			description: "Te asesoramos para elegir. Apps Nativas (Swift/Kotlin) para máximo rendimiento o Híbridas (React Native) para un desarrollo ágil en ambas plataformas."
+		},
+		{
+			icon: "dns",
+			title: "Backend Robusto",
+			description: "El cerebro de tu app. Desarrollamos servidores seguros en Java o Node.js que gestionan tus datos, usuarios y lógica de negocio en la nube."
+		},
+		{
+			icon: "palette",
+			title: "Diseño UI/UX Premium",
+			description: "No usamos plantillas genéricas. Diseñamos interfaces intuitivas y hermosas en Figma, pensadas para retener a tus usuarios."
+		},
+		{
+			icon: "cloud_done",
+			title: "Publicación Garantizada",
+			description: "Lidiamos con la burocracia de Apple y Google. Nos encargamos de que tu app cumpla las normativas y sea aprobada en las tiendas."
+		},
+		{
+			icon: "api",
+			title: "Integraciones API",
+			description: "Conectamos tu app con pasarelas de pago, mapas, redes sociales o tu sistema ERP actual para una operación fluida."
+		},
+		{
+			icon: "support_agent",
+			title: "Soporte Continuo",
+			description: "La tecnología avanza. Ofrecemos mantenimiento para que tu app siga funcionando con las nuevas versiones de iOS y Android."
+		}
+	];
+
 	return (
 		<>
 			<StructuredData type="BreadcrumbList" idPage="breadcrumbs-dev-apps" />
@@ -175,16 +210,46 @@ export default function DevAppClient() {
 					className="w-full h-auto"
 				/>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-x">
-				<h1 className="text-6xl md:text-7xl font-bold text-center text-white">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<h1 className="text-6xl md:text-7xl font-bold text-center text-gray-900 dark:text-white">
 					Nuestros servicios de desarrollo de aplicaciones
 				</h1>
-				<p className="text-xl w-full px-3 md:px-5 max-w-4xl">
+				<p className="text-lg md:text-xl w-full px-3 md:px-5 max-w-4xl text-gray-600 dark:text-white">
 					En JEG Dev Studios te ofrecemos paquetes adaptados a tus necesidades y
 					presupuesto. Ya sea que estés iniciando con una app sencilla o
 					necesites una aplicación móvil completa y escalable, tenemos la
 					solución perfecta para ti.
 				</p>
+			</section>
+
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4">
+				<div className="flex flex-col justify-center items-center w-full max-w-6xl">
+					<h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">
+						Todo lo que incluye tu App
+					</h2>
+					<p className="text-lg md:text-xl text-center max-w-3xl mx-auto mb-12 text-gray-600 dark:text-white">
+						Desglosamos la tecnología detrás de nuestros paquetes. Calidad de código, diseño y seguridad en cada entrega.
+					</p>
+					<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 w-full">
+						{features.map((feature, index) => (
+							<div key={index} className="group relative p-8 bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 rounded-[2rem] hover:border-blue-500/50 transition-all duration-300 hover:shadow-xl dark:hover:shadow-blue-900/20 flex flex-col">
+								<div className="absolute top-0 right-0 p-6 opacity-5 group-hover:opacity-10 transition-opacity pointer-events-none">
+									<span className="material-symbols-outlined text-8xl text-blue-600 dark:text-blue-400">{feature.icon}</span>
+								</div>
+								<div className="relative z-10 flex flex-col flex-grow">
+									<div className="w-14 h-14 rounded-2xl bg-blue-50 dark:bg-blue-900/20 flex items-center justify-center mb-6 group-hover:scale-110 transition-transform duration-300">
+										<span className="material-symbols-outlined text-3xl text-blue-600 dark:text-blue-400">{feature.icon}</span>
+									</div>
+									<h4 className="text-xl font-bold mb-3 text-gray-900 dark:text-white">{feature.title}</h4>
+									<p className="text-gray-600 dark:text-gray-300 leading-relaxed">{feature.description}</p>
+								</div>
+							</div>
+						))}
+					</div>
+				</div>
+			</section>
+
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
 				<Swiper
 					className="w-full py-12"
 					modules={[Navigation, Autoplay]}
@@ -226,10 +291,46 @@ export default function DevAppClient() {
 					))}
 				</Swiper>
 			</section>
-			<FAQ
-				faqs={faqs}
-			/>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3">
+
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<div className="container max-w-4xl mx-auto w-full mb-8 text-center">
+					<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+						Nuestro Proceso de Desarrollo Móvil
+					</h2>
+					<p className="text-lg md:text-xl text-gray-600 dark:text-white">
+						Desde la idea hasta la tienda de aplicaciones. Un flujo de trabajo transparente y ágil.
+					</p>
+				</div>
+				<TimelineProcess
+					steps={[
+						{
+							title: "Consultoría y Estrategia",
+							description: "Definimos el alcance, la tecnología (Nativa vs Híbrida) y el modelo de negocio de tu aplicación."
+						},
+						{
+							title: "Diseño UX/UI (Prototipado)",
+							description: "Diseñamos cada pantalla en Figma. Validamos la navegación y la experiencia de usuario antes de programar."
+						},
+						{
+							title: "Desarrollo y Backend",
+							description: "Programamos la aplicación y configuramos el servidor (Backend) y la base de datos que la potenciará."
+						},
+						{
+							title: "Testing y QA",
+							description: "Pruebas rigurosas en dispositivos reales para asegurar estabilidad y rendimiento."
+						},
+						{
+							title: "Publicación y Lanzamiento",
+							description: "Gestionamos el despliegue en Google Play y App Store, asegurando que tu app esté disponible para el mundo."
+						}
+					]}
+				/>
+			</section>
+
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<FAQ faqs={faqs} />
+			</section>
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 				<CTAProducts
 					title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
 					paragraph={

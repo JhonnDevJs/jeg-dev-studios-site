@@ -10,7 +10,7 @@ function CardSmallList({ titulo, subtitulo, list, lastText }: CardSmallListProps
   return (
     <div
       // 1. Contenedor principal con clases de Tailwind
-      className="w-11/12 p-2 mb-5 bg-zinc-800/15 rounded-2xl border-none shadow-[0_4px_32px_0_rgba(0,0,0,0.15)] backdrop-blur"
+      className="w-11/12 p-2 mb-5 bg-white dark:bg-zinc-800/15 rounded-2xl border border-gray-200 dark:border-none shadow-[0_4px_32px_0_rgba(0,0,0,0.15)] backdrop-blur"
     >
       <div className="flex p-4 items-stretch">
         {/* Línea y círculo con flecha */}
@@ -53,8 +53,8 @@ function CardSmallList({ titulo, subtitulo, list, lastText }: CardSmallListProps
         </div>
 
         <div className="grow flex flex-col justify-center text-left">
-          <h2 className="text-2xl font-bold text-white">{titulo}</h2>
-          <h3 className="text-xl m-auto mb-2 mt-3 text-left text-white w-full">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{titulo}</h2>
+          <h3 className="text-xl m-auto mb-2 mt-3 text-left text-gray-700 dark:text-white w-full">
             {subtitulo}
           </h3>
           <ul
@@ -64,7 +64,7 @@ function CardSmallList({ titulo, subtitulo, list, lastText }: CardSmallListProps
             {list.map((item, idx) => (
               <li
                 // 3. Elementos de la lista
-                className="flex items-start mb-4 text-white text-left"
+                className="flex items-start mb-4 text-gray-600 dark:text-white text-left"
                 key={idx}
               >
                 <span
@@ -85,7 +85,7 @@ function CardSmallList({ titulo, subtitulo, list, lastText }: CardSmallListProps
         </div>
       </div>
       {lastText && (
-        <p className="pl-4 text-left text-white text-xl">{lastText}</p> // Se mantiene igual, ya usa clases de Tailwind
+        <p className="pl-4 text-left text-gray-600 dark:text-white text-xl">{lastText}</p> // Se mantiene igual, ya usa clases de Tailwind
       )}
     </div>
   );

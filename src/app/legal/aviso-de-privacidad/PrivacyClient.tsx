@@ -17,15 +17,15 @@ export default function PrivacyClient({ initialFaqs }: PrivacyClientProps) {
 
   return (
     <>
-    
-			<StructuredData
-				type="BreadcrumbList"
-				idPage="breadcrumbs-notice-privacy"
-			/>
-			<StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-notice-privacy" />
+
+      <StructuredData
+        type="BreadcrumbList"
+        idPage="breadcrumbs-notice-privacy"
+      />
+      <StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-notice-privacy" />
       {/* 2. MAIN CONTENT */}
-      
-			<main className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col w-full px-4 md:px-16">
+
+      <main className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col w-full px-4 md:px-16">
 
 
         {/* HERO HEADER */}
@@ -55,7 +55,7 @@ export default function PrivacyClient({ initialFaqs }: PrivacyClientProps) {
 
         {/* SECTION 1: DATOS RECOPILADOS */}
         <section className="px-4 mb-4">
-          <div className="bg-surface-dark rounded-2xl p-5 border border-slate-100 dark:border-slate-800 shadow-sm">
+          <div className="bg-white dark:bg-surface-dark rounded-2xl p-5 border border-gray-200 dark:border-slate-800 shadow-sm">
             <div className="flex items-center gap-3 mb-3">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500/10 text-blue-500">
                 <span className="material-symbols-outlined text-lg">database</span>
@@ -88,7 +88,7 @@ export default function PrivacyClient({ initialFaqs }: PrivacyClientProps) {
 
         {/* SECTION 2: USO DE INFORMACIÓN */}
         <section className="px-4 mb-4">
-          <div className="bg-surface-dark rounded-2xl p-5 border border-slate-100 dark:border-slate-800 shadow-sm">
+          <div className="bg-white dark:bg-surface-dark rounded-2xl p-5 border border-gray-200 dark:border-slate-800 shadow-sm">
             <div className="flex items-center gap-3 mb-3">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500/10 text-blue-500">
                 <span className="material-symbols-outlined text-lg">analytics</span>
@@ -125,7 +125,7 @@ export default function PrivacyClient({ initialFaqs }: PrivacyClientProps) {
 
         {/* SECTION 3: COMPARTIR INFORMACIÓN */}
         <section className="px-4 mb-4">
-          <div className="bg-surface-dark rounded-2xl p-5 border border-slate-100 dark:border-slate-800 shadow-sm">
+          <div className="bg-white dark:bg-surface-dark rounded-2xl p-5 border border-gray-200 dark:border-slate-800 shadow-sm">
             <div className="flex items-center gap-3 mb-3">
               <div className="flex items-center justify-center w-8 h-8 rounded-full bg-blue-500/10 text-blue-500">
                 <span className="material-symbols-outlined text-lg">share</span>
@@ -164,13 +164,13 @@ export default function PrivacyClient({ initialFaqs }: PrivacyClientProps) {
 
         {/* SECTION 5: SEGURIDAD Y COOKIES */}
         <section className="px-4 mb-6 grid gap-4">
-          <div className="bg-surface-dark rounded-2xl p-5 border border-slate-100 dark:border-slate-800 shadow-sm">
+          <div className="bg-white dark:bg-surface-dark rounded-2xl p-5 border border-gray-200 dark:border-slate-800 shadow-sm">
             <h4 className="font-bold text-slate-900 dark:text-white mb-2 text-sm">Medidas de Seguridad</h4>
             <p className="text-xs text-slate-600 dark:text-slate-400">
               JEG Dev Studios adopta las medidas técnicas, administrativas y físicas necesarias para garantizar la seguridad de sus datos y evitar su uso no autorizado.
             </p>
           </div>
-          <div className="bg-surface-dark rounded-2xl p-5 border border-slate-100 dark:border-slate-800 shadow-sm">
+          <div className="bg-white dark:bg-surface-dark rounded-2xl p-5 border border-gray-200 dark:border-slate-800 shadow-sm">
             <h4 className="font-bold text-slate-900 dark:text-white mb-2 text-sm">Cookies</h4>
             <p className="text-xs text-slate-600 dark:text-slate-400">
               Actualmente no utilizamos cookies ni tecnologías de rastreo. Si en el futuro se implementan, se notificará mediante este aviso.

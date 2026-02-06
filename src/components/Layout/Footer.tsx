@@ -9,48 +9,48 @@ export default async function Footer() {
   return (
     <>
 
-      <footer className="mt-auto border-t border-white/5 bg-[#0B0D10] px-6 py-10">
+      <footer className="mt-auto border-t border-gray-200 dark:border-white/5 bg-white dark:bg-[#0B0D10] px-6 py-10 transition-colors duration-300">
         <div className="flex flex-col gap-8">
           <div className="flex flex-col gap-4">
             <div className="flex items-center gap-3">
               <Logo />
-              <span className="text-xl font-bold tracking-tight text-white">JEG Dev Studios</span>
+              <span className="text-xl font-bold tracking-tight text-gray-900 dark:text-white">JEG Dev Studios</span>
             </div>
-            <p className="text-sm leading-relaxed text-gray-400">
+            <p className="text-sm leading-relaxed text-gray-600 dark:text-gray-400">
               Ya sea que estés comparando <strong>agencias de diseño</strong> o buscando una <strong>agencia de desarrollo web</strong> en JEG Dev studios encontrarás una empresa que combina creatividad, tecnología y estrategia.
             </p>
           </div>
           <div className="grid grid-cols-2 gap-8">
             <div className="flex flex-col gap-4">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-white/80">Menu</h4>
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white/80">Menu</h4>
               <ul className="flex flex-col gap-3">
-                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/">Inicio</Link></li>
-                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/servicios">Servicios</Link></li>
-                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/portafolio">Portafolio</Link></li>
-                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/sobre-nosotros">Sobre Nosotros</Link></li>
-                <li><Link className="text-sm text-gray-400 hover:text-blue-500 transition-colors" href="/contacto">Contacto</Link></li>
+                <li><Link className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors" href="/">Inicio</Link></li>
+                <li><Link className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors" href="/servicios">Servicios</Link></li>
+                <li><Link className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors" href="/portafolio">Portafolio</Link></li>
+                <li><Link className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors" href="/sobre-nosotros">Sobre Nosotros</Link></li>
+                <li><Link className="text-sm text-gray-600 dark:text-gray-400 hover:text-blue-500 transition-colors" href="/contacto">Contacto</Link></li>
               </ul>
             </div>
             <div className="flex flex-col gap-4">
-              <h4 className="text-xs font-bold uppercase tracking-wider text-white/80">Contacto</h4>
+              <h4 className="text-xs font-bold uppercase tracking-wider text-gray-900 dark:text-white/80">Contacto</h4>
               <ul className="flex flex-col gap-3">
-                <li className="flex items-start gap-2 text-sm text-gray-400">
+                <li className="flex items-start gap-2 text-sm text-gray-600 dark:text-gray-400">
                   <span className="material-symbols-outlined mt-0.5 text-blue-500 shrink-0" style={{ fontSize: 16 }}>location_on</span>
                   <span>CDMX, México</span>
                 </li>
-                <li className="flex items-center gap-2 text-sm text-gray-400">
+                <li className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                   <span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontSize: 16 }}>mail</span>
-                  <Link className="hover:text-white transition-colors truncate" href="mailto:contacto@jegdevstudios.com">Enviar un Mail</Link>
+                  <Link className="hover:text-blue-600 dark:hover:text-white transition-colors truncate" href="mailto:contacto@jegdevstudios.com">Enviar un Mail</Link>
                 </li>
-                <li className="flex items-center gap-2 text-sm text-gray-400">
+                <li className="flex items-center gap-2 text-sm text-gray-600 dark:text-gray-400">
                   <span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontSize: 16 }}>call</span>
-                  <Link className="hover:text-white transition-colors" href="https://wa.me/message/IFBW3ARPBITWA1">Chat de whatsapp</Link>
+                  <Link className="hover:text-blue-600 dark:hover:text-white transition-colors" href="https://wa.me/message/IFBW3ARPBITWA1">Chat de whatsapp</Link>
                 </li>
               </ul>
             </div>
           </div>
-          <div className="flex flex-col justify-center items-center gap-6 border-t border-white/5 pt-8">
-            <div className="flex gap-4">
+          <div className="flex flex-col justify-center items-center gap-6 border-t border-gray-200 dark:border-white/5 pt-8">
+            <div className="flex gap-4 items-center">
 
               <Link
                 className="flex text-2xl no-underline"

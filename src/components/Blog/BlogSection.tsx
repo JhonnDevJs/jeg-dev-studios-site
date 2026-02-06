@@ -45,12 +45,9 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 	const mainPost = posts[0];
 	const sidePosts = posts.slice(1, 4);
 
-	// Clases para el efecto "glassmorphism"
-	const cardThemeClasses = "bg-black/20 backdrop-blur-lg border border-white/10 text-white";
-
 	return (
 		<section className="w-full py-3 lg:py-4 xl:py-5 featured-blog-section">
-			<h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-white">
+			<h2 className="text-4xl md:text-5xl font-bold mb-12 text-center text-gray-900 dark:text-white">
 				Descubre temas interesantes en nuestro Blog
 			</h2>
 
@@ -58,7 +55,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 				{/* Entrada Principal (Izquierda) */}
 				{mainPost && (
 					<div className="w-full lg:w-5/12 pr-0 lg:pr-4 pb-4 lg:pb-0 ">
-						<article className={`shadow-lg rounded-lg overflow-hidden ${cardThemeClasses}`}>
+						<article className="shadow-lg rounded-lg overflow-hidden bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white transition-colors">
 							{mainPost.imageUrl && (
 								<div
 									style={{
@@ -81,10 +78,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 							<div className="flex flex-col p-4">
 								<h3 className="text-xl font-bold mb-2">{mainPost.title}</h3>
 								<p
-									className={`${cardThemeClasses.includes("text-white")
-										? "text-white/75"
-										: "text-muted"
-										} small mb-2`}
+									className="text-gray-500 dark:text-white/75 small mb-2"
 								>
 									Publicado el{" "}
 									{new Date(mainPost.pubDate).toLocaleDateString("es-ES", {
@@ -101,7 +95,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 										{mainPost.categories.map((category, catIndex) => (
 											<span
 												key={catIndex}
-												className="inline-block bg-gray-600 text-white text-xs font-semibold mr-1 mb-1 px-2.5 py-0.5 rounded-full"
+												className="inline-block bg-gray-100 text-gray-700 dark:bg-gray-600 dark:text-white text-xs font-semibold mr-1 mb-1 px-2.5 py-0.5 rounded-full"
 											>
 												{category}
 											</span>
@@ -121,10 +115,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 									href={mainPost.link}
 									target="_blank"
 									rel="noopener noreferrer"
-									className={`inline-block ${cardThemeClasses.includes("text-white")
-										? "border border-white text-white hover:bg-white hover:text-black"
-										: "bg-blue-600 text-white hover:bg-blue-700"
-										} mt-auto self-start px-4 py-2 rounded-md text-sm font-semibold transition-colors`}
+									className="inline-block bg-blue-600 text-white hover:bg-blue-700 dark:border dark:border-white dark:bg-transparent dark:text-white dark:hover:bg-white dark:hover:text-black mt-auto self-start px-4 py-2 rounded-md text-sm font-semibold transition-colors"
 									aria-label={`Leer artículo completo sobre ${mainPost.title}`}
 									title={`Leer artículo completo sobre ${mainPost.title}`}
 									tabIndex={0}
@@ -142,8 +133,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 						{sidePosts.map((post, index) => (
 							<article
 								key={post.id || post.link}
-								className={`flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden ${cardThemeClasses} ${index === sidePosts.length - 1 ? "mb-0" : "mb-4"
-									}`}
+								className={`flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white transition-colors ${index === sidePosts.length - 1 ? "mb-0" : "mb-4"}`}
 							>
 								{post.imageUrl && (
 									<div className="relative h-48 w-full md:h-full md:w-48 shrink-0">
@@ -160,10 +150,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 								<div className="p-3 flex flex-col flex-grow">
 									<h4 className="text-base font-bold mb-1">{post.title}</h4>
 									<p
-										className={`text-sm ${cardThemeClasses.includes("text-white")
-											? "text-white/75"
-											: "text-muted"
-											} small mb-1`}
+										className="text-sm text-gray-500 dark:text-white/75 small mb-1"
 									>
 										{new Date(post.pubDate).toLocaleDateString("es-ES", {
 											day: "numeric",
@@ -176,7 +163,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 											{post.categories.map((category, catIndex) => (
 												<span
 													key={catIndex}
-													className="inline-block bg-gray-600 text-white text-xs font-semibold mr-1 mb-1 px-2 py-0.5 rounded-full"
+													className="inline-block bg-gray-100 text-gray-700 dark:bg-gray-600 dark:text-white text-xs font-semibold mr-1 mb-1 px-2 py-0.5 rounded-full"
 												>
 													{category}
 												</span>
@@ -200,10 +187,7 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 										href={post.link}
 										target="_blank"
 										rel="noopener noreferrer"
-										className={`inline-block text-xs font-semibold ${cardThemeClasses.includes("text-white")
-											? "border border-white text-white hover:bg-white hover:text-black"
-											: "border border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white"
-											} mt-auto self-start px-3 py-1.5 rounded-md transition-colors`}
+										className="inline-block text-xs font-semibold border border-blue-600 text-blue-600 hover:bg-blue-50 dark:border-white dark:text-white dark:hover:bg-white dark:hover:text-black mt-auto self-start px-3 py-1.5 rounded-md transition-colors"
 										aria-label={`Leer más sobre ${post.title}`}
 										title={`Leer más sobre ${post.title}`}
 										tabIndex={0}

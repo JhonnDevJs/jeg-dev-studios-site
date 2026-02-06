@@ -86,19 +86,19 @@ export default function ContactClient({ initialFaqs }: ContactClientProps) {
 							<div className="px-5 pb-6 max-w-lg mx-auto w-full">
 								<h3 className="text-slate-900 dark:text-white text-lg font-bold mb-4 px-2">Contacto Directo</h3>
 								<div className="grid grid-cols-3 gap-3">
-									<Link href="tel:+525512197135" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
+									<Link href="tel:+525512197135" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
 										<div className="size-10 rounded-full bg-green-500/10 flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors">
 											<span className="material-symbols-outlined">call</span>
 										</div>
 										<span className="text-xs font-medium text-slate-600 dark:text-slate-300">Llamar</span>
 									</Link>
-									<Link href="mailto:contacto@jegdevstudios.com" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl  bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
+									<Link href="mailto:contacto@jegdevstudios.com" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
 										<div className="size-10 rounded-full bg-blue-500/10 flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
 											<span className="material-symbols-outlined">mail</span>
 										</div>
 										<span className="text-xs font-medium text-slate-600 dark:text-slate-300">Email</span>
 									</Link>
-									<Link href="https://wa.me/message/IFBW3ARPBITWA1" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
+									<Link href="https://wa.me/message/IFBW3ARPBITWA1" className="flex flex-col items-center justify-center gap-2 p-4 rounded-2xl bg-white dark:bg-surface-dark border border-slate-200 dark:border-slate-700 hover:border-blue-500/50 transition-colors group">
 										<div className="size-10 rounded-full bg-emerald-500/10 flex items-center justify-center text-emerald-500 group-hover:bg-emerald-500 group-hover:text-white transition-colors">
 											<span className="material-symbols-outlined">chat</span>
 										</div>

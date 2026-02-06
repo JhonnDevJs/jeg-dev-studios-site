@@ -4,9 +4,8 @@ import { useMemo } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Navigation, Autoplay } from "swiper/modules";
 import CardPacksProduct from "@/components/Cards/CardPacksProduct";
-import CardSmallList from "@/components/Cards/CardSmallList";
-import CardNestedLists from "@/components/Cards/CardNestedLists";
-import SectionProcess from "@/components/SectionProcess";
+import CardInfo from "@/components/Cards/CardInfo";
+import TimelineProcess from "@/components/Cards/TimelineProcess";
 import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
@@ -193,11 +192,11 @@ export default function DevSoftClient() {
 			</section>
 
 			{/* SECCIÓN H1 OPTIMIZADA */}
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-x">
-				<h1 className="text-6xl md:text-7xl font-bold text-center text-white">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<h1 className="text-6xl md:text-7xl font-bold text-center text-gray-900 dark:text-white">
 					Servicio de Desarrollo de Software Empresarial
 				</h1>
-				<p className="text-xl w-full px-3 md:px-5 max-w-4xl">
+				<p className="text-lg md:text-xl w-full px-3 md:px-5 max-w-4xl text-gray-600 dark:text-white">
 					En JEG Dev Studios somos una{" "}
 					<strong>empresa de desarrollo de software en México</strong>
 					con un enfoque 100% a medida. Transformamos tus operaciones con{" "}
@@ -208,57 +207,38 @@ export default function DevSoftClient() {
 			</section>
 
 			{/* NUEVA SECCIÓN INFORMATIVA (SOLUCIONA CONTENIDO Y SEMÁNTICA) */}
-			<section className="text-white py-12 md:py-20 gradient-effect-y">
-				<div className="container mx-auto px-4" style={{ maxWidth: "900px" }}>
-					<h2 className="text-3xl md:text-4xl font-bold text-center mb-8">
+			<section className="text-gray-900 dark:text-white py-12 md:py-20 px-4 gradient-effect-y">
+				<div className="container mx-auto w-full" style={{ maxWidth: "1000px" }}>
+					<h2 className="text-3xl md:text-4xl font-bold text-center mb-8 text-gray-900 dark:text-white">
 						Impulsa tu Ventaja Competitiva con Software a Medida
 					</h2>
-					<div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-10">
-						<div className="mb-4">
-							<h4 className="text-xl font-semibold mb-2">Automatización y Eficiencia</h4>
-							<p className="text-gray-300">
-								Nuestras herramientas te permiten automatizar procesos manuales,
-								lo que ayuda a <strong>reducir los costos</strong>y minimizar
-								errores humanos. <strong>Ofrecemos soluciones</strong> que
-								trabajan por ti las 24 horas.
-							</p>
-						</div>
-						<div className="mb-4">
-							<h4 className="text-xl font-semibold mb-2">Integración de Tecnologías Avanzadas</h4>
-							<p className="text-gray-300">
-								No solo creamos bases de datos. Integramos{" "}
-								<strong>tecnologías avanzadas</strong> e{" "}
-								<strong>inteligencia artificial</strong>
-								para analizar tus datos y ayudarte a tomar decisiones
-								estratégicas de <strong>alta calidad</strong>.
-							</p>
-						</div>
-						<div className="mb-4">
-							<h4 className="text-xl font-semibold mb-2">Ecosistema Digital Completo</h4>
-							<p className="text-gray-300">
-								Podemos conectar tu software empresarial con{" "}
-								<strong>aplicaciones móviles</strong> para tu fuerza de ventas o
-								con tu tienda en línea, creando un ecosistema unificado.
-							</p>
-						</div>
-						<div className="mb-4">
-							<h4 className="text-xl font-semibold mb-2">Escalabilidad Sin Límites</h4>
-							<p className="text-gray-300">
-								A diferencia del software enlatado, nuestras soluciones crecen
-								contigo. Te damos una <strong>ventaja competitiva</strong>
-								al tener una herramienta que se adapta a tu ritmo de innovación.
-							</p>
-						</div>
+					<div className="grid grid-cols-1 md:grid-cols-2 gap-6 mt-10">
+						<CardInfo
+							title="Automatización y Eficiencia"
+							description="Nuestras herramientas te permiten automatizar procesos manuales, lo que ayuda a reducir los costos y minimizar errores humanos. Ofrecemos soluciones que trabajan por ti las 24 horas."
+						/>
+						<CardInfo
+							title="Integración de Tecnologías Avanzadas"
+							description="No solo creamos bases de datos. Integramos tecnologías avanzadas e inteligencia artificial para analizar tus datos y ayudarte a tomar decisiones estratégicas de alta calidad."
+						/>
+						<CardInfo
+							title="Ecosistema Digital Completo"
+							description="Podemos conectar tu software empresarial con aplicaciones móviles para tu fuerza de ventas o con tu tienda en línea, creando un ecosistema unificado."
+						/>
+						<CardInfo
+							title="Escalabilidad Sin Límites"
+							description="A diferencia del software enlatado, nuestras soluciones crecen contigo. Te damos una ventaja competitiva al tener una herramienta que se adapta a tu ritmo de innovación."
+						/>
 					</div>
 				</div>
 			</section>
 
 			{/* SECCIÓN DE PAQUETES */}
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-x">
-				<h2 className="text-3xl md:text-4xl font-bold text-center text-white">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">
 					Paquetes de Software a Medida
 				</h2>
-				<p className="text-xl w-full px-3 md:px-5 max-w-4xl">
+				<p className="text-lg md:text-xl w-full px-3 md:px-5 max-w-4xl text-gray-600 dark:text-white">
 					Te ofrecemos paquetes adaptados a tus necesidades y presupuesto.{" "}
 					<strong>Ofrecemos servicios</strong> flexibles, desde sistemas básicos
 					hasta plataformas empresariales completas.
@@ -302,84 +282,49 @@ export default function DevSoftClient() {
 					))}
 				</Swiper>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-y">
-				{/* 2. Se movió el contenido fuera del componente 'SectionProcess' para evitar el error de tipado,
-				   ya que el componente espera props vacías. Lo ideal sería corregir el componente 'SectionProcess' directamente. */}
-				<h2 className="text-3xl md:text-4xl font-bold text-center text-white">Nuestro Proceso de Desarrollo de Software</h2>
-				<p className="text-xl w-full px-3 md:px-5 max-w-4xl">
-					En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum para el desarrollo de software. Esto nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes. Nuestro objetivo es que formes parte activa del desarrollo de tu sistema, asegurando que el resultado final supere tus expectativas.
-				</p>
-				{/* El componente se deja vacío para no causar errores */}
-				<SectionProcess title="" text="" />
-			</section>
-			{/* ... (Tus secciones de CardSmallList y CardNestedLists se mantienen, son buenas para la legibilidad) ... */}
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-x">
-				<CardSmallList
-					titulo="Descubrimiento y Planificación Inicial"
-					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas."
-					list={[
-						"Reunión inicial para entender tu negocio y el propósito del software.",
-						"Definimos los módulos clave, el diseño y los objetivos de cada función.",
-						"Elegimos el paquete de desarrollo más adecuado (Básica, Estándar, Avanzada o Pro).",
-						"Creamos un Product Backlog: la lista detallada de todo lo que tu sistema debe incluir.",
-					]}
-					lastText="Tecnologías: Según el proyecto, usamos stacks robustos como Figma, React, Node.js, PHP (Laravel) o Java."
-				/>
-			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-y">
-				<CardNestedLists
-					titulo="Ciclos de Desarrollo Iterativos (Sprints)"
-					subtitulo="Dividimos el proyecto en Sprints de 1 o 2 semanas, donde desarrollamos y entregamos módulos o funcionalidades específicas."
-					list={[
+
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
+				<div className="container max-w-4xl mx-auto w-full mb-8 text-center">
+					<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+						Nuestro Proceso de Desarrollo de Software
+					</h2>
+					<p className="text-lg md:text-xl text-gray-600 dark:text-white">
+						En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum. Trabajamos de forma organizada y transparente, entregando avances constantes para que el resultado supere tus expectativas.
+					</p>
+				</div>
+				<TimelineProcess
+					steps={[
 						{
-							text: "a. Sprint Planning",
-							sublist: [
-								"Planificamos qué módulos vamos a trabajar (ej. módulo de clientes, dashboard de reportes, integración con facturación).",
-							],
+							title: "Descubrimiento y Planificación Inicial",
+							description: "Desde el primer contacto, nos enfocamos en comprender tu visión. Definimos los módulos clave, el diseño y creamos un Product Backlog detallado con todo lo que tu sistema debe incluir."
 						},
 						{
-							text: "b. Desarrollo y Actualizaciones",
-							sublist: [
-								"Nuestro equipo trabaja en el desarrollo del software acordado, garantizando velocidad y seguridad.",
-							],
+							title: "Ciclos de Desarrollo Iterativos (Sprints)",
+							description: "Dividimos el proyecto en Sprints de 1 o 2 semanas. Planificamos qué módulos trabajar, desarrollamos con código seguro y te mostramos avances funcionales al final de cada ciclo para recibir tu feedback."
 						},
 						{
-							text: "c. Entrega Parcial y Feedback",
-							sublist: [
-								"Al final de cada Sprint, te mostramos un avance funcional real del sistema. Tú nos das tu feedback y podemos ajustar detalles.",
-							],
-						},
-					]}
-				/>
-			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-x">
-				<CardSmallList
-					titulo="Revisión Final, Despliegue y Capacitación"
-					subtitulo="Una vez terminados los Sprints, realizamos lo siguiente:"
-					list={[
-						"Una demostración final del software completo.",
-						"Una revisión conjunta para asegurarnos de que todo funciona correctamente.",
-						"Instalación y despliegue en tus servidores (locales o en la nube).",
-						"Capacitación a tu equipo para que puedan utilizar el nuevo sistema sin problemas.",
+							title: "Revisión Final, Despliegue y Capacitación",
+							description: "Realizamos una demostración final del software completo. Una vez aprobado, lo instalamos en tus servidores (locales o nube) y capacitamos a tu equipo para que puedan utilizar el nuevo sistema sin problemas."
+						}
 					]}
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center w-full p-4 xl:p-20 gap-3 gradient-effect-y">
-				<h2 className="text-3xl md:text-4xl font-bold text-white">Compromiso con la Excelencia</h2>
-				<p className="text-xl text-white max-w-4xl">
+			<section className="flex flex-col justify-center items-center text-center w-full py-12 md:py-20 px-4 gap-3">
+				<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Compromiso con la Excelencia</h2>
+				<p className="text-lg md:text-xl text-gray-600 dark:text-white max-w-4xl">
 					Cada línea de código que escribimos refleja nuestro compromiso con la{" "}
 					<strong>alta calidad</strong>. Nos enfocamos en que tu software sea
 					útil, estable y seguro. No desarrollamos software genérico:
 					desarrollamos soluciones que resuelven problemas reales.
 				</p>
-				<p className="text-xl text-white max-w-4xl">
+				<p className="text-lg md:text-xl text-gray-600 dark:text-white max-w-4xl">
 					Tu empresa merece una herramienta que trabaje por ella. Nosotros la
 					creamos.
 				</p>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 				<CTAProducts
 					title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
 					paragraph={
@@ -394,9 +339,9 @@ export default function DevSoftClient() {
 					]}
 				/>
 			</section>
-			<FAQ
-				faqs={faqs}
-			/>
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<FAQ faqs={faqs} />
+			</section>
 		</>
 	);
 }

@@ -110,20 +110,26 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 	const activeProjects: Project[] = projectsByCategory[activeCategory] || [];
 
 	useEffect(() => {
-		if (navRef.current) {
-			// 1. Especificamos que el elemento buscado es un HTMLElement
-			const activeButton = navRef.current.querySelector<HTMLElement>(
-				`button[data-category-id="${activeCategory}"]`
-			);
-			if (activeButton) {
-				// Ahora TypeScript sabe que offsetWidth, offsetHeight y offsetLeft existen
-				setIndicatorStyle({
-					width: activeButton.offsetWidth,
-					height: activeButton.offsetHeight,
-					transform: `translateX(${activeButton.offsetLeft}px)`,
-				});
+		const updateIndicator = () => {
+			if (navRef.current) {
+				// 1. Especificamos que el elemento buscado es un HTMLElement
+				const activeButton = navRef.current.querySelector<HTMLElement>(
+					`button[data-category-id="${activeCategory}"]`
+				);
+				if (activeButton) {
+					// Usamos translate(x, y) para soportar múltiples líneas (wrap)
+					setIndicatorStyle({
+						width: activeButton.offsetWidth,
+						height: activeButton.offsetHeight,
+						transform: `translate(${activeButton.offsetLeft}px, ${activeButton.offsetTop}px)`,
+					});
+				}
 			}
-		}
+		};
+
+		updateIndicator();
+		window.addEventListener("resize", updateIndicator);
+		return () => window.removeEventListener("resize", updateIndicator);
 	}, [activeCategory]);
 
 	return (
@@ -139,13 +145,13 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 					className="w-full h-auto"
 				/>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3">
-				<article className="container text-center text-white">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<article className="container text-center text-gray-900 dark:text-white">
 					<h1 className="text-5xl md:text-7xl font-extrabold">
 						Portafolio de Proyectos
 					</h1>
 					<p
-						className="mt-4 mx-auto text-base md:text-lg text-white/50"
+						className="mt-4 mx-auto text-base md:text-lg text-gray-600 dark:text-white/50"
 						style={{ maxWidth: "48rem" }}
 					>
 						Explora una colección diversa de proyectos que abarcan desarrollo
@@ -157,13 +163,13 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 						ref={navRef}
 						className="relative flex flex-wrap justify-center md:justify-start mt-5 gap-2"
 					>
-						<div className="absolute top-0 left-0 h-full rounded-md bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 ease-in-out" style={indicatorStyle} />
+						<div className="absolute top-0 left-0 rounded-md bg-gradient-to-r from-blue-600 to-purple-600 transition-all duration-300 ease-in-out" style={indicatorStyle} />
 						{categories.map((category) => (
 							<button
 								key={category.id}
 								data-category-id={category.id}
 								type="button"
-								className={`relative z-1 px-4 py-2 text-lg font-bold shadow-lg rounded-md transition-colors duration-300 ${activeCategory === category.id ? "text-white" : "text-gray-300 hover:text-white"
+								className={`relative z-1 px-4 py-2 text-lg font-bold shadow-lg rounded-md transition-colors duration-300 ${activeCategory === category.id ? "text-white" : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
 									}`}
 								onClick={() => setActiveCategory(category.id)}
 							>
@@ -176,11 +182,11 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 
 			{/* Sección de Proyectos Activos */}
 			{loading ? (
-				<p className="text-xl text-white/50 text-center py-10">
+				<p className="text-xl text-gray-500 dark:text-white/50 text-center py-10">
 					Cargando los proyectos disponibles..
 				</p>
 			) : (
-				<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-x">
+				<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 					<article className="container">
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 							{activeProjects.length > 0 ? (
@@ -194,7 +200,7 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 								)
 							) : (
 								<div className="col-span-full">
-									<p className="text-xl text-white/50 py-10">
+									<p className="text-xl text-gray-500 dark:text-white/50 py-10">
 										Próximamente tendremos proyectos en esta categoría.
 									</p>
 								</div>
@@ -203,7 +209,7 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 					</article>
 				</section>
 			)}
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-y">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
 				<CTA
 					title={"¿Listo para dar el siguiente paso digital?"}
 					paragraph={

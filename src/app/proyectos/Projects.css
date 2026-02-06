@@ -93,13 +93,16 @@
 }
 
 .card {
-  background: rgba(24, 24, 24, 0.603);
-  /* Fondo semitransparente */
+  background: rgba(255, 255, 255, 0.8);
   backdrop-filter: blur(40px);
-  /* Aplica el blur */
   -webkit-backdrop-filter: blur(20px);
-  /* Soporte Safari */
   border-radius: 1rem;
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 5px rgba(0, 0, 0, 0.1);
+}
+
+:is(.dark .card) {
+  background: rgba(24, 24, 24, 0.603);
   border: 1px solid rgba(255, 255, 255, 0.144);
   box-shadow: 0 4px 5px rgba(0, 0, 0, 0.26);
 }
@@ -115,14 +118,17 @@
 .btn-primary {
   position: relative;
   padding: 1rem;
-  background-color: rgba(0, 0, 0, 0.4);
-  /* Fondo transparente */
+  background-color: rgba(255, 255, 255, 0.8);
   border-radius: 20px;
-  /* 🔁 Este valor modifica el redondeado */
-  color: white;
+  color: #1a202c;
   text-decoration: none;
   text-align: center;
   z-index: 1;
+}
+
+:is(.dark .btn-primary) {
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
 }
 
 .btn-primary::before {
