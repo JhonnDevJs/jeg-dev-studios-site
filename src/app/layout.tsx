@@ -7,6 +7,7 @@ import BtnWhats from "@/components/Buttons/WhatsAppButton";
 import Footer from "@/components/Layout/Footer";
 import "@/styles/globals.css";
 import { Inter } from "next/font/google";
+import { Providers } from "./providers";
 
 // Configuración optimizada de la fuente Inter
 const inter = Inter({
@@ -143,7 +144,7 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 		}
 	}
 	return (
-		<html lang="es-MX" className={`${inter.variable} dark`}>
+		<html lang="es-MX" className={`${inter.variable}`} suppressHydrationWarning>
 			{imageToPreload && (
 				<link
 					rel="preload"
@@ -159,14 +160,16 @@ export default async function RootLayout({ children }: RootLayoutProps) {
 				content="ca-pub-8211604143881682"
 			></meta>
 			<body
-				className={`font-display antialiased text-white bg-[#101922] min-h-screen`}
+				className={`font-display antialiased text-gray-900 dark:text-white bg-background-light dark:bg-background-dark min-h-screen transition-colors duration-300`}
 			>
-				<Header />
-				<main className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24 bg-background-dark text-white selection:bg-blue-500/30 font-display">
-					{children}
-				</main>
-				<BtnWhats />
-				<Footer />
+				<Providers>
+					<Header />
+					<main className="relative flex h-auto min-h-screen w-full flex-col overflow-x-hidden pb-24 bg-background-light dark:bg-background-dark text-gray-900 dark:text-white selection:bg-blue-500/30 font-display transition-colors duration-300">
+						{children}
+					</main>
+					<BtnWhats />
+					<Footer />
+				</Providers>
 				{/* Structured Data Scripts */}
 				<Script
 					id="structured-data-website"

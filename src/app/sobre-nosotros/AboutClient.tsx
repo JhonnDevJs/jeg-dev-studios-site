@@ -65,13 +65,13 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
 				{/* 3. STATS */}
 				<section className="py-4 flex gap-4">
 					<div className="flex-1 bg-white dark:bg-gray-800/50 p-4 rounded-2xl border border-gray-100 dark:border-gray-700">
-						<p className="text-3xl font-bold text-blue-500">2024</p>
+						<p className="text-3xl font-bold text-blue-600 dark:text-blue-500">2024</p>
 						<p className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">
 							Año de Fundación
 						</p>
 					</div>
 					<div className="flex-1 bg-white dark:bg-gray-800/50 p-4 rounded-2xl border border-gray-100 dark:border-gray-700">
-						<p className="text-3xl font-bold text-blue-500">100%</p>
+						<p className="text-3xl font-bold text-blue-600 dark:text-blue-500">100%</p>
 						<p className="text-xs text-slate-500 dark:text-slate-400 font-medium mt-1">
 							Compromiso
 						</p>
@@ -144,7 +144,7 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
 					<div className="relative pl-4 border-l-2 border-gray-200 dark:border-gray-800 ml-2 space-y-8">
 						<div className="relative pl-6">
 							<div className="absolute -left-[9px] top-1 h-4 w-4 rounded-full border-4 border-white dark:border-background-dark bg-blue-500"></div>
-							<p className="text-xs font-bold text-blue-500 uppercase tracking-wider mb-1">Mayo 2024</p>
+							<p className="text-xs font-bold text-blue-600 dark:text-blue-500 uppercase tracking-wider mb-1">Mayo 2024</p>
 							<h3 className="text-slate-900 dark:text-white font-bold text-base">La Fundación</h3>
 							<p className="text-slate-500 dark:text-slate-400 text-sm mt-1">
 								Jhonatan Espinal Garcia funda JEG Dev Studios con la visión de transformar ideas en experiencias digitales.
@@ -203,7 +203,7 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
 								style={{ backgroundImage: `url('https://media.licdn.com/dms/image/v2/D4E03AQHw0Uic_48q2Q/profile-displayphoto-scale_400_400/B4EZsFcwcQGYAg-/0/1765322984034?e=1769040000&v=beta&t=TnSJDPNAaESoZZT0v2CkhLoALPtWHQy14dAM7QpMKZU')` }}></div>
 							<div>
 								<h3 className="text-sm font-bold text-slate-900 dark:text-white">Jhonatan Espinal</h3>
-								<span className="text-xs text-blue-500 font-medium">Fundador & CEO</span>
+								<span className="text-xs text-blue-600 dark:text-blue-500 font-medium">Fundador & CEO</span>
 								<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
 									Especialista en Frontend, SEO y rendimiento web.
 								</p>
@@ -214,7 +214,7 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
 								style={{ backgroundImage: `url('https://media.licdn.com/dms/image/v2/D4E35AQE_8HQ5Ush2Rg/profile-framedphoto-shrink_400_400/B4EZiFrLIpGwAc-/0/1754589344595?e=1768244400&v=beta&t=xXFEGXnGGMY8Ey35oVgRKlIWYtEE3WWTXk5DMl4j6Ds')` }}></div>
 							<div>
 								<h3 className="text-sm font-bold text-slate-900 dark:text-white">Leonardo Valadez</h3>
-								<span className="text-xs text-purple-400 font-medium">Cofundador & Backend</span>
+								<span className="text-xs text-purple-600 dark:text-purple-400 font-medium">Cofundador & Backend</span>
 								<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
 									Arquitecturas sólidas y eficientes.
 								</p>
@@ -225,7 +225,7 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
 								style={{ backgroundImage: `url('https://media.licdn.com/dms/image/v2/D4E03AQGZnUrySE06lg/profile-displayphoto-shrink_400_400/B4EZWN3c_hGgAo-/0/1741841879421?e=1769040000&v=beta&t=DknIFEk3VXoxgbN54cUwkVcb63ixVdUyd9iAktm2z3A')` }}></div>
 							<div>
 								<h3 className="text-sm font-bold text-slate-900 dark:text-white">Fernanda Briseño</h3>
-								<span className="text-xs text-pink-400 font-medium">Cofundadora & UX/UI</span>
+								<span className="text-xs text-pink-600 dark:text-pink-400 font-medium">Cofundadora & UX/UI</span>
 								<p className="text-xs text-slate-500 dark:text-slate-400 mt-1 line-clamp-2">
 									Interfaces visuales atractivas y usables.
 								</p>
@@ -256,12 +256,12 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
 
 				{/* 9. CTA FINAL */}
 				<section className="mt-4 pb-8 pt-4">
-					<div className="rounded-3xl bg-gradient-to-br from-gray-900 to-black dark:from-gray-800 dark:to-gray-900 p-6 text-center relative overflow-hidden border border-gray-800">
+					<div className="rounded-3xl bg-white dark:bg-gradient-to-br dark:from-gray-800 dark:to-gray-900 p-6 text-center relative overflow-hidden border border-gray-200 dark:border-gray-800 shadow-lg dark:shadow-none">
 						<div className="absolute -top-10 -left-10 w-32 h-32 bg-blue-500/20 rounded-full blur-3xl"></div>
 						<div className="absolute -bottom-10 -right-10 w-32 h-32 bg-blue-600/20 rounded-full blur-3xl"></div>
 
-						<h2 className="relative text-white text-xl font-bold mb-2">¿Listo para digitalizar tu negocio?</h2>
-						<p className="relative text-gray-400 text-sm mb-6 max-w-[250px] mx-auto">
+						<h2 className="relative text-gray-900 dark:text-white text-xl font-bold mb-2">¿Listo para digitalizar tu negocio?</h2>
+						<p className="relative text-gray-600 dark:text-gray-400 text-sm mb-6 max-w-[250px] mx-auto">
 							Hablemos y encuentra la solución ideal con nosotros.
 						</p>
 						<Link href="/contacto">

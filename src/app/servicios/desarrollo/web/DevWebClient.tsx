@@ -242,8 +242,8 @@ export default function DevWebClient() {
 					className="w-full h-auto"
 				/>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
-				<h1 className="text-6xl md:text-7xl font-bold text-center text-white">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
+				<h1 className="text-6xl md:text-7xl font-bold text-center text-gray-900 dark:text-white">
 					Desarrollo de Páginas Web Profesionales en Next.js
 				</h1>
 				<p className="text-lg md:text-xl max-w-4xl mx-auto">
@@ -257,8 +257,8 @@ export default function DevWebClient() {
 					tecnológica sólida es tu mejor ventaja competitiva.
 				</p>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
-				<h2 className="text-3xl md:text-4xl font-bold text-center text-white">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
+				<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">
 					Paquetes de Desarrollo Web a tu Medida
 				</h2>
 				<p className="text-lg md:text-xl max-w-4xl mx-auto">
@@ -328,18 +328,18 @@ export default function DevWebClient() {
 				</Swiper>
 			</section>
 			{/* --- NUEVA SECCIÓN INFORMATIVA (SEMÁNTICA + LONG FORM) --- */}
-			<section className="text-white py-12 md:py-20 gradient-effect-x">
+			<section className="text-gray-900 dark:text-white py-12 md:py-20 gradient-effect-x">
 				<div className="container mx-auto px-4" style={{ maxWidth: "1000px" }}>
-					<h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
+					<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
 						¿Por Qué Elegir un Desarrollo Full Stack en México?
 					</h2>
 
 					<div className="grid md:grid-cols-2 gap-8 items-center mb-12">
 						<div>
-							<h3 className="text-2xl font-bold text-cyan-400 mb-3">
+							<h3 className="text-2xl font-bold text-cyan-600 dark:text-cyan-400 mb-3">
 								Más que Diseño de Páginas Web
 							</h3>
-							<p className="text-lg text-gray-300">
+							<p className="text-lg text-gray-600 dark:text-gray-300">
 								Muchas <strong>agencias de diseño web</strong> se enfocan solo
 								en lo visual. Nosotros somos expertos en{" "}
 								<strong>Full Stack</strong>. Esto significa que dominamos tanto
@@ -350,8 +350,8 @@ export default function DevWebClient() {
 							</p>
 						</div>
 						<div>
-							<div className="p-4 border border-gray-700 rounded-lg bg-black/25">
-								<p className="mb-0">
+							<div className="p-4 border border-gray-200 dark:border-gray-700 rounded-lg bg-white dark:bg-black/25 shadow-sm dark:shadow-none">
+								<p className="mb-0 text-gray-700 dark:text-gray-300">
 									<em>
 										"Un sitio bonito que no funciona técnicamente es un gasto,
 										no una inversión."
@@ -364,7 +364,7 @@ export default function DevWebClient() {
 					<div className="grid md:grid-cols-3 gap-8">
 						<div className="mb-4">
 							<h4 className="text-xl font-semibold mb-2">Experiencia Comprobada</h4>
-							<p className="text-gray-300">
+							<p className="text-gray-600 dark:text-gray-300">
 								Con <strong>años de experiencia</strong> en el mercado de{" "}
 								<strong>desarrollo web en México</strong>, entendemos las
 								necesidades locales y globales. Sabemos qué tecnologías
@@ -373,7 +373,7 @@ export default function DevWebClient() {
 						</div>
 						<div className="mb-4">
 							<h4 className="text-xl font-semibold mb-2">Servicios Integrales</h4>
-							<p className="text-gray-300">
+							<p className="text-gray-600 dark:text-gray-300">
 								No solo entregamos el código. <strong>Ofrecen servicios</strong>{" "}
 								que incluyen hosting, dominio, correos y soporte, para que tú te
 								enfoques en tu negocio mientras nosotros cuidamos la tecnología.
@@ -381,7 +381,7 @@ export default function DevWebClient() {
 						</div>
 						<div className="mb-4">
 							<h4 className="text-xl font-semibold mb-2">Calidad vs. Plantillas</h4>
-							<p className="text-gray-300">
+							<p className="text-gray-600 dark:text-gray-300">
 								Evitamos los constructores genéricos. Nuestro código hecho a
 								mano garantiza seguridad y velocidad, factores que Google ama
 								para el posicionamiento.
@@ -391,17 +391,15 @@ export default function DevWebClient() {
 				</div>
 			</section>
 			{/* --- FIN NUEVA SECCIÓN --- */}
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
 				{/* 2. Se movió el contenido fuera del componente 'SectionProcess' para evitar el error de tipado,
 				   ya que el componente espera props vacías. Lo ideal sería corregir el componente 'SectionProcess' directamente. */}
-				<h2 className="text-3xl md:text-4xl font-bold text-center text-white">Nuestro Proceso de Desarrollo de Páginas Web</h2>
+				<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">Nuestro Proceso de Desarrollo de Páginas Web</h2>
 				<p className="text-lg md:text-xl max-w-4xl mx-auto">
 					En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum, que nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes a nuestros clientes. Nuestro objetivo es que formes parte activa del desarrollo de tu página web, asegurando que el resultado final supere tus expectativas.
 				</p>
-				{/* El componente se deja vacío para no causar errores */}
-				<SectionProcess title="" text="" />
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Descubrimiento y Planificación Inicial"
 					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
@@ -415,7 +413,7 @@ export default function DevWebClient() {
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="Ciclos de Desarrollo Iterativos (Sprints)"
 					subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
@@ -446,7 +444,7 @@ export default function DevWebClient() {
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
 				<CardSmallList
 					titulo="Revisión Final y Entrega del Proyecto"
 					subtitulo="Una vez terminado el número de Sprints necesarios (dependiendo del paquete elegido), realizamos lo siguiente:"
@@ -459,7 +457,7 @@ export default function DevWebClient() {
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3">
 				<CTAProducts
 					title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
 					paragraph={

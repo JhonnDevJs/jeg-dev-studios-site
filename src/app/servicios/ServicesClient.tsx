@@ -76,11 +76,11 @@ export default function ServicesClient() {
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 pb-0 xl:pb-0 gap-3 gradient-effect-x">
-				<h1 className="text-4xl md:text-5xl font-bold text-center text-white mt-3">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 pb-0 xl:pb-0 gap-3 gradient-effect-x">
+				<h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mt-3">
 					Agencia de Desarrollo Digital: Soluciones Web, SEO y Diseño
 				</h1>
-				<p className="text-lg md:text-xl text-white text-center max-w-4xl">
+				<p className="text-lg md:text-xl text-gray-600 dark:text-white text-center max-w-4xl">
 					En JEG Dev Studios, funcionamos como tu socio tecnológico integral.
 					Somos una <strong>agencia de desarrollo digital</strong> que unifica
 					estrategia, código y creatividad. Ofrecemos{" "}
@@ -90,9 +90,9 @@ export default function ServicesClient() {
 				</p>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
-				<h2 className="text-3xl md:text-4xl font-bold text-center text-white">Nuestras Áreas de Expertise</h2>
-				<p className="text-lg md:text-xl text-white text-center max-w-3xl">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
+				<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">Nuestras Áreas de Expertise</h2>
+				<p className="text-lg md:text-xl text-gray-600 dark:text-white text-center max-w-3xl">
 					Nuestra metodología se basa en tres pilares fundamentales. Cada
 					servicio está diseñado para funcionar en conjunto, creando una
 					estrategia digital cohesiva y potente para tu negocio.
@@ -138,18 +138,18 @@ export default function ServicesClient() {
 
 			{/* SECCIÓN SEMÁNTICA MEJORADA */}
 			<section className="flex flex-col justify-center items-center text-center w-full gap-3 p-3 xl:p-20 gradient-effect-x">
-				<h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+				<h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white">
 					Tu Socio Tecnológico 360° en Ciudad de México
 				</h2>
 				<div className="max-w-4xl">
-					<p className="text-xl text-center text-white mb-4">
+					<p className="text-xl text-center text-gray-600 dark:text-white mb-4">
 						Entendemos que buscar un <strong>proveedor de servicios</strong>{" "}
 						digitales puede ser abrumador. Existen{" "}
 						<strong>agencias digitales</strong>,{" "}
 						<strong>agencias de marketing digital</strong> y fábricas de
 						software. Nosotros integramos lo mejor de todas.
 					</p>
-					<p className="text-xl text-center text-white mb-5">
+					<p className="text-xl text-center text-gray-600 dark:text-white mb-5">
 						Con <strong>años de experiencia</strong> en la industria, nuestro
 						equipo en <strong>Ciudad de México</strong> no solo desarrolla;
 						creamos estrategias. Combinamos el <strong>diseño web</strong> de
@@ -159,10 +159,10 @@ export default function ServicesClient() {
 						tu proyecto no solo se vea bien, sino que funcione y escale.
 					</p>
 
-					<h3 className="text-2xl text-center text-white font-bold mb-3">
+					<h3 className="text-2xl text-center text-gray-900 dark:text-white font-bold mb-3">
 						Más Allá del Lanzamiento: Crecimiento Continuo
 					</h3>
-					<p className="text-xl text-center text-white mb-3">
+					<p className="text-xl text-center text-gray-600 dark:text-white mb-3">
 						Nuestro trabajo no termina con la entrega. A diferencia de otras{" "}
 						<strong>agencias digitales</strong>, creemos en el crecimiento a
 						largo plazo. Integramos estrategias de{" "}
@@ -170,7 +170,7 @@ export default function ServicesClient() {
 						<strong>marketing digital</strong> para asegurar que tu sitio web{" "}
 						<strong>posiciona orgánicamente</strong>.
 					</p>
-					<p className="text-xl text-center text-white">
+					<p className="text-xl text-center text-gray-600 dark:text-white">
 						Gestionamos tus campañas en <strong>redes sociales</strong> y
 						optimizamos tu contenido para que no solo atraigas visitantes, sino
 						que los conviertas en clientes leales. Los{" "}
@@ -182,14 +182,14 @@ export default function ServicesClient() {
 			</section>
 
 			<section className="flex flex-col justify-center items-center text-center w-full gap-3 p-3 xl:p-20 gradient-effect-y">
-				<h2 className="text-4xl md:text-5xl font-bold text-center text-white">
+				<h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white">
 					Beneficios de Elegir a JEG Dev Studios
 				</h2>
 				<ul className="flex flex-wrap justify-center items-center w-full gap-2 p-0 m-0 list-none">
 					{services.map((service, index) => (
 						<li
 							key={index}
-							className="bg-transparent text-center text-white border border-white rounded-full shadow-sm p-3 min-w-[250px]">
+							className="bg-white dark:bg-transparent text-center text-gray-900 dark:text-white border border-gray-200 dark:border-white rounded-full shadow-sm p-3 min-w-[250px]">
 							<p className="text-lg m-0">{service.text}</p>
 						</li>
 					))}
@@ -200,7 +200,7 @@ export default function ServicesClient() {
 				faqs={faqs}
 			/>
 
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3">
 				<CTA
 					title={"¿Listo para dar el siguiente paso digital?"}
 					paragraph={

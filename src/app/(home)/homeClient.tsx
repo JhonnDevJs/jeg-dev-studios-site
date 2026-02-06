@@ -85,7 +85,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 			{/* HERO SECTION */}
 			<section className="relative flex flex-col items-center md:items-start justify-center px-4 md:px-16 py-8 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('${heroBg}')` }}>
 				<div className="absolute inset-0 z-0 overflow-hidden pointer-events-none">
-					<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-background-dark/0 to-background-dark opacity-70"></div>
+					<div className="absolute top-0 left-1/2 -translate-x-1/2 w-[150%] h-[500px] bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-blue-500/20 via-transparent to-background-dark opacity-70"></div>
 					<div className="absolute top-20 right-[-20%] w-64 h-64 bg-blue-500/10 rounded-full blur-3xl"></div>
 					<div className="absolute top-40 left-[-10%] w-48 h-48 bg-blue-600/1 rounded-full blur-3xl"></div>
 				</div>
@@ -98,7 +98,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 						Agencia de Desarrollo Next.js y Software <br />
 						<span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-300">a Medida en México</span>
 					</h1>
-					<p className="mb-8 text-lg font-normal leading-relaxed text-gray-100 max-w-[90%]">
+					<p className="mb-8 text-lg font-normal leading-relaxed text-white max-w-[90%]">
 						Tu agencia experta en desarrollo Web, Software, Apps, SEO/GEO y Diseño. Convertimos visitantes en clientes para empresas ambiciosas.
 					</p>
 					<div className="flex w-full flex-col gap-3 sm:flex-row sm:justify-center md:justify-start">
@@ -117,7 +117,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 				{/* SERVICES SECTION */}
 				<section className="relative z-1 pb-16 ">
 					<div className="flex items-center justify-between mb-6">
-						<h3 className="text-2xl font-bold text-white">Nuestros Servicios</h3>
+						<h3 className="text-2xl font-bold text-gray-900 dark:text-white">Nuestros Servicios</h3>
 						<Link href="/servicios" className="text-sm font-medium text-blue-500 hover:text-blue-300">
 							Ver todo
 						</Link>
@@ -125,13 +125,13 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 
 					<div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
 						{/* Card 1: Software */}
-						<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
+						<article className="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col shadow-lg dark:shadow-none">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-blue-500/5 blur-2xl group-hover:bg-blue-500/10 transition-all"></div>
 
 							{/* 3. SECCIÓN DESARROLLO (Código) */}
 							<section className="flex flex-col gap-5 h-full">
 								<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl group">
-									<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-1"></div>
+									<div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 dark:from-background-dark/90 via-transparent to-transparent z-1"></div>
 									{/* IMAGEN DINÁMICA DE SUPABASE */}
 									<div
 										className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -147,11 +147,11 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 								</div>
 
 								<div className="flex flex-col gap-4 flex-grow">
-									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white">
+									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
 										Código que <span className="text-purple-400">Escala</span> y Convierte
 									</h2>
 									<div className="glass-panel p-5 rounded-2xl border-purple-500/10 bg-purple-500/5">
-										<p className="text-slate-300 text-base font-normal leading-relaxed">
+										<p className="text-gray-600 dark:text-slate-300 text-base font-normal leading-relaxed">
 											Expertos en Desarrollo con Next.js y Supabase
 										</p>
 									</div>
@@ -159,11 +159,11 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 									<div className="flex flex-col gap-3 mt-2">
 										<div className="flex items-start gap-3">
 											<span className="material-symbols-outlined text-purple-400 mt-0.5">terminal</span>
-											<p className="text-slate-200 text-base font-medium">Arquitectura Limpia & Escalable</p>
+											<p className="text-gray-700 dark:text-slate-200 text-base font-medium">Arquitectura Limpia & Escalable</p>
 										</div>
 										<div className="flex items-start gap-3">
 											<span className="material-symbols-outlined text-purple-400 mt-0.5">speed</span>
-											<p className="text-slate-200 text-base font-medium">Core Web Vitals +90</p>
+											<p className="text-gray-700 dark:text-slate-200 text-base font-medium">Core Web Vitals +90</p>
 										</div>
 									</div>
 									<Link href="/servicios/desarrollo" className="mt-auto inline-flex items-center text-sm font-bold text-purple-400 hover:text-white transition-colors gap-1 pt-2">
@@ -174,12 +174,12 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 						</article>
 
 						{/* Card 2: SEO */}
-						<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
+						<article className="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col shadow-lg dark:shadow-none">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-purple-500/5 blur-2xl group-hover:bg-purple-500/10 transition-all"></div>
 							{/* 2. SECCIÓN SEO & GROWTH (Conectada a Supabase) */}
 							<section className="flex flex-col gap-5 h-full">
 								<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl group">
-									<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-1"></div>
+									<div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 dark:from-background-dark/90 via-transparent to-transparent z-1"></div>
 									{/* IMAGEN DINÁMICA DE SUPABASE */}
 									<div
 										className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -195,11 +195,11 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 								</div>
 
 								<div className="flex flex-col gap-4 flex-grow">
-									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white">
+									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
 										Domina los <span className="text-blue-500">Resultados</span> de Búsqueda
 									</h2>
 									<div className="glass-panel p-5 rounded-2xl border-blue-500/10 bg-blue-500/5">
-										<p className="text-slate-300 text-base font-normal leading-relaxed">
+										<p className="text-gray-600 dark:text-slate-300 text-base font-normal leading-relaxed">
 											Estrategias de SEO y GEO que atraen clientes cualificados
 										</p>
 									</div>
@@ -209,7 +209,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 										{["Investigación de Palabras Clave", "Optimización On-Page Técnica", "Link Building de Alta Autoridad"].map((item, i) => (
 											<div key={i} className="flex items-start gap-3">
 												<span className="material-symbols-outlined text-blue-500 mt-0.5">check_circle</span>
-												<p className="text-slate-200 text-base font-medium">{item}</p>
+												<p className="text-gray-700 dark:text-slate-200 text-base font-medium">{item}</p>
 											</div>
 										))}
 									</div>
@@ -221,11 +221,11 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 						</article>
 
 						{/* Card 3: Diseño Web */}
-						<article className="group relative overflow-hidden rounded-[2rem] bg-surface-dark border border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col">
+						<article className="group relative overflow-hidden rounded-[2rem] bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 p-6 hover:border-blue-500/30 transition-all duration-300 flex flex-col shadow-lg dark:shadow-none">
 							<div className="absolute right-0 top-0 h-32 w-32 translate-x-10 translate-y-[-10px] rounded-full bg-green-500/5 blur-2xl group-hover:bg-green-500/10 transition-all"></div>
 							<section className="flex flex-col gap-5 h-full">
 								<div className="relative w-full aspect-[4/3] rounded-lg overflow-hidden shadow-2xl group">
-									<div className="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-transparent to-transparent z-1"></div>
+									<div className="absolute inset-0 bg-gradient-to-t from-gray-900/90 dark:from-background-dark/90 via-transparent to-transparent z-1"></div>
 									{/* IMAGEN DINÁMICA */}
 									<div
 										className="w-full h-full bg-cover bg-center transition-transform duration-700 group-hover:scale-105"
@@ -241,11 +241,11 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 								</div>
 
 								<div className="flex flex-col gap-4 flex-grow">
-									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-white">
+									<h2 className="text-3xl font-extrabold leading-tight tracking-tight text-gray-900 dark:text-white">
 										Diseño que <span className="text-green-400">Enamora</span> y Vende
 									</h2>
 									<div className="glass-panel p-5 rounded-2xl border-green-500/10 bg-green-500/5">
-										<p className="text-slate-300 text-base font-normal leading-relaxed">
+										<p className="text-gray-600 dark:text-slate-300 text-base font-normal leading-relaxed">
 											Creamos experiencias visuales memorables. Desde la identidad de tu marca hasta la interfaz de tu producto, cada pixel cuenta para conectar con tu audiencia.
 										</p>
 									</div>
@@ -254,7 +254,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 										{["Diseño UX/UI Intuitivo", "Branding e Identidad Visual", "Material Publicitario de Alto Impacto"].map((item, i) => (
 											<div key={i} className="flex items-start gap-3">
 												<span className="material-symbols-outlined text-green-400 mt-0.5">check_circle</span>
-												<p className="text-slate-200 text-base font-medium">{item}</p>
+												<p className="text-gray-700 dark:text-slate-200 text-base font-medium">{item}</p>
 											</div>
 										))}
 									</div>
@@ -280,10 +280,10 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 				{/* WHY JEG */}
 				<section className="flex flex-col justify-center items-center w-full">
 					<div className="flex flex-col pt-6 pb-2">
-						<h2 className="text-white tracking-tight text-[28px] font-bold leading-tight text-left">
+						<h2 className="text-gray-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight text-left">
 							¿Por qué <span className="text-gradient">JEG Dev Studios?</span>
 						</h2>
-						<p className="text-[#9cabba] text-sm font-medium pt-2">
+						<p className="text-gray-600 dark:text-[#9cabba] text-sm font-medium pt-2">
 							No somos otra agencia más. Somos tu partner técnico.
 						</p>
 					</div>
@@ -291,16 +291,16 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 					<div className="grid grid-cols-[repeat(auto-fit,minmax(280px,1fr))] w-full gap-4 py-4 ">
 
 						{/* Card JEG (Recomendado) */}
-						<div className="relative flex flex-1 flex-col gap-4 rounded-xl border border-blue-500/40 bg-surface-dark p-5 shadow-[0_0_30px_-10px_rgba(37,140,244,0.15)] overflow-hidden">
+						<div className="relative flex flex-1 flex-col gap-4 rounded-xl border border-blue-500/40 bg-white dark:bg-surface-dark p-5 shadow-[0_0_30px_-10px_rgba(37,140,244,0.15)] overflow-hidden">
 							<div className="absolute -right-12 -top-12 h-24 w-24 bg-blue-500/20 blur-2xl rounded-full pointer-events-none"></div>
 							<div className="flex flex-col gap-1 relative z-1">
 								<div className="flex items-center justify-between">
-									<h1 className="text-white text-sm font-bold leading-tight opacity-90">JEG Dev Studios</h1>
+									<h1 className="text-gray-900 dark:text-white text-sm font-bold leading-tight opacity-90">JEG Dev Studios</h1>
 									<p className="text-white text-[10px] uppercase font-bold tracking-wider rounded-full bg-blue-500 px-2.5 py-1 text-center shadow-lg shadow-blue-500/20">Recomendado</p>
 								</div>
-								<p className="flex items-baseline gap-1 text-white mt-1">
-									<span className="text-white text-3xl font-black leading-tight tracking-[-0.033em]">Expertos</span>
-									<span className="text-white/60 text-sm font-medium leading-tight">/ garantizado</span>
+								<p className="flex items-baseline gap-1 text-gray-900 dark:text-white mt-1">
+									<span className="text-gray-900 dark:text-white text-3xl font-black leading-tight tracking-[-0.033em]">Expertos</span>
+									<span className="text-gray-500 dark:text-white/60 text-sm font-medium leading-tight">/ garantizado</span>
 								</p>
 							</div>
 							<div className="h-px bg-gradient-to-r from-blue-500/50 to-transparent w-full my-1"></div>
@@ -311,7 +311,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 									"Agile & Transparente",
 									"Analytics Custom"
 								].map((item, index) => (
-									<div key={index} className="text-[14px] font-medium leading-normal flex items-start gap-3 text-white">
+									<div key={index} className="text-[14px] font-medium leading-normal flex items-start gap-3 text-gray-700 dark:text-white">
 										<span className="material-symbols-outlined text-blue-500 shrink-0" style={{ fontVariationSettings: "'FILL' 1" }}>check_circle</span>
 										<span>{item}</span>
 									</div>
@@ -320,15 +320,15 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 						</div>
 
 						{/* Card Otras Agencias */}
-						<div className="flex flex-1 flex-col gap-4 rounded-xl border border-border-dark bg-surface-dark/50 p-5 opacity-90 grayscale-[0.3]">
+						<div className="flex flex-1 flex-col gap-4 rounded-xl border border-gray-200 dark:border-border-dark bg-gray-50 dark:bg-surface-dark/50 p-5 opacity-90 grayscale-[0.3]">
 							<div className="flex flex-col gap-1">
-								<h1 className="text-[#9cabba] text-sm font-bold leading-tight">Otras Agencias</h1>
-								<p className="flex items-baseline gap-1 text-[#9cabba]">
-									<span className="text-white/80 text-3xl font-black leading-tight tracking-[-0.033em]">Genéricos</span>
-									<span className="text-[#9cabba]/60 text-sm font-medium leading-tight">/ variable</span>
+								<h1 className="text-gray-500 dark:text-[#9cabba] text-sm font-bold leading-tight">Otras Agencias</h1>
+								<p className="flex items-baseline gap-1 text-gray-500 dark:text-[#9cabba]">
+									<span className="text-gray-700 dark:text-white/80 text-3xl font-black leading-tight tracking-[-0.033em]">Genéricos</span>
+									<span className="text-gray-400 dark:text-[#9cabba]/60 text-sm font-medium leading-tight">/ variable</span>
 								</p>
 							</div>
-							<div className="h-px bg-border-dark w-full my-1"></div>
+							<div className="h-px bg-gray-300 dark:bg-border-dark w-full my-1"></div>
 							<div className="flex flex-col gap-3">
 								{[
 									"Carga > 3s (Lento)",
@@ -336,7 +336,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 									"Waterfall / Burocracia",
 									"Analytics Básicos"
 								].map((item, index) => (
-									<div key={index} className="text-[14px] font-normal leading-normal flex items-start gap-3 text-[#9cabba]">
+									<div key={index} className="text-[14px] font-normal leading-normal flex items-start gap-3 text-gray-500 dark:text-[#9cabba]">
 										<span className="material-symbols-outlined text-red-500/80 shrink-0">cancel</span>
 										<span>{item}</span>
 									</div>
@@ -353,10 +353,10 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 					<div className="flex items-center gap-2 mb-2">
 						<span className="px-2 py-0.5 rounded text-[10px] font-bold bg-blue-500/20 text-blue-500 uppercase tracking-wider">Nuestro Proceso</span>
 					</div>
-					<h2 className="text-white tracking-tight text-[28px] font-bold leading-tight text-left">
+					<h2 className="text-gray-900 dark:text-white tracking-tight text-[28px] font-bold leading-tight text-left">
 						Metodología Ágil
 					</h2>
-					<p className="text-[#9cabba] text-base font-normal leading-normal pt-2 pb-6">
+					<p className="text-gray-600 dark:text-[#9cabba] text-base font-normal leading-normal pt-2 pb-6">
 						Transparencia total. Sin cajas negras. Así llevamos tu idea a producción con desarrollo de software a medida para PyMEs
 					</p>
 					<div className="flex flex-col md:flex-row w-full gap-4">
@@ -366,12 +366,12 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 
 							{/* Paso 1 */}
 							<div className="relative flex gap-5 mb-10 group">
-								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500 shadow-[0_0_15px_-3px_rgba(37,140,244,0.4)]">
+								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-black border-2 border-blue-500 shadow-[0_0_15px_-3px_rgba(37,140,244,0.4)]">
 									<span className="material-symbols-outlined text-blue-500 text-[20px]">manage_search</span>
 								</div>
 								<div className="flex flex-col pt-1">
-									<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Diagnóstico y Estrategia</h3>
-									<p className="text-sm text-[#9cabba] leading-relaxed">
+									<h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-500 transition-colors">Diagnóstico y Estrategia</h3>
+									<p className="text-sm text-gray-600 dark:text-[#9cabba] leading-relaxed">
 										Auditoría técnica inicial y definición de KPIs. Entendemos el problema antes de escribir código.
 									</p>
 								</div>
@@ -379,12 +379,12 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 
 							{/* Paso 2 */}
 							<div className="relative flex gap-5 mb-10 group">
-								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
-									<span className="material-symbols-outlined text-white text-[20px]">calendar_month</span>
+								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
+									<span className="material-symbols-outlined text-gray-900 dark:text-white text-[20px]">calendar_month</span>
 								</div>
 								<div className="flex flex-col pt-1">
-									<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Sprint Planning</h3>
-									<p className="text-sm text-[#9cabba] leading-relaxed">
+									<h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-500 transition-colors">Sprint Planning</h3>
+									<p className="text-sm text-gray-600 dark:text-[#9cabba] leading-relaxed">
 										Roadmap dividido en entregables de 2 semanas. Priorizamos valor comercial inmediato.
 									</p>
 								</div>
@@ -392,12 +392,12 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 
 							{/* Paso 3 */}
 							<div className="relative flex gap-5 mb-10 group">
-								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
-									<span className="material-symbols-outlined text-white text-[20px]">code_blocks</span>
+								<div className="relative z-1 flex h-10 w-10 shrink-0 items-center justify-center rounded-full bg-white dark:bg-black border-2 border-blue-500/50 shadow-lg shadow-black/50">
+									<span className="material-symbols-outlined text-gray-900 dark:text-white text-[20px]">code_blocks</span>
 								</div>
 								<div className="flex flex-col pt-1">
-									<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Desarrollo Iterativo</h3>
-									<p className="text-sm text-[#9cabba] leading-relaxed">
+									<h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-500 transition-colors">Desarrollo Iterativo</h3>
+									<p className="text-sm text-gray-600 dark:text-[#9cabba] leading-relaxed">
 										Código limpio y escalable. Reuniones semanales para demo de avances y feedback real.
 									</p>
 								</div>
@@ -409,8 +409,8 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 									<span className="material-symbols-outlined text-white text-[20px]">rocket_launch</span>
 								</div>
 								<div className="flex flex-col pt-1">
-									<h3 className="text-lg font-bold text-white mb-1 group-hover:text-blue-500 transition-colors">Launch &amp; CRO</h3>
-									<p className="text-sm text-[#9cabba] leading-relaxed">
+									<h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1 group-hover:text-blue-500 transition-colors">Launch &amp; CRO</h3>
+									<p className="text-sm text-gray-600 dark:text-[#9cabba] leading-relaxed">
 										Despliegue a producción y monitoreo continuo para optimización de conversión (CRO).
 									</p>
 								</div>
@@ -422,7 +422,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 							<div className="flex flex-col gap-1">
 								<div className="flex items-center gap-2 mb-2">
 									<span className="material-symbols-outlined text-blue-500">play_circle</span>
-									<h2 className="text-2xl font-bold text-white">Cómo aumentamos tu ROI</h2>
+									<h2 className="text-2xl font-bold text-gray-900 dark:text-white">Cómo aumentamos tu ROI</h2>
 								</div>
 							</div>
 
@@ -447,12 +447,12 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 					<div className="text-center mb-8">
 						<div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-3 py-1 mb-4 backdrop-blur-sm">
 							<span className="flex h-2 w-2 rounded-full bg-blue-500 animate-pulse"></span>
-							<span className="text-xs font-medium text-gray-300">Respuesta en menos de 24h</span>
+							<span className="text-xs font-medium text-gray-600 dark:text-gray-300">Respuesta en menos de 24h</span>
 						</div>
-						<h2 className="text-3xl font-extrabold tracking-tight text-white sm:text-4xl mb-3">
+						<h2 className="text-3xl font-extrabold tracking-tight text-gray-900 dark:text-white sm:text-4xl mb-3">
 							Ponte en Contacto
 						</h2>
-						<p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
+						<p className="text-gray-600 dark:text-gray-400 text-sm leading-relaxed max-w-xs mx-auto">
 							¿Tienes un proyecto en mente? Escríbenos y hagamos crecer tu negocio digital.
 						</p>
 					</div>
@@ -462,31 +462,31 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 
 							<ContactForm />
 
-							<div className="flex flex-col gap-4 w-full lg:w-80 shrink-0 border-t lg:border-t-0 border-white/5 pt-8 lg:pt-0 mt-8 lg:mt-0">
-								<div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+							<div className="flex flex-col gap-4 w-full lg:w-80 shrink-0 border-t lg:border-t-0 border-gray-200 dark:border-white/5 pt-8 lg:pt-0 mt-8 lg:mt-0">
+								<div className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
 									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
 										<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>message</span>
 									</div>
 									<div>
-										<p className="text-xs text-gray-300">Envíanos un mensaje vía WhatsApp</p>
-										<Link href={"https://wa.me/message/IFBW3ARPBITWA1"} className="text-sm font-semibold text-white">Clic aquí para enviar mensaje</Link>
+										<p className="text-xs text-gray-600 dark:text-gray-300">Envíanos un mensaje vía WhatsApp</p>
+										<Link href={"https://wa.me/message/IFBW3ARPBITWA1"} className="text-sm font-semibold text-gray-900 dark:text-white">Clic aquí para enviar mensaje</Link>
 									</div>
 								</div>
-								<div className="flex items-center gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+								<div className="flex items-center gap-4 p-4 rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
 									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
 										<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>mail</span>
 									</div>
 									<div>
-										<p className="text-xs text-gray-300">Escríbenos un correo</p>
-										<Link href={"mailto:contacto@jegdevstudios.com"} className="text-sm font-semibold text-white">Clic aquí para copiar correo</Link>
+										<p className="text-xs text-gray-600 dark:text-gray-300">Escríbenos un correo</p>
+										<Link href={"mailto:contacto@jegdevstudios.com"} className="text-sm font-semibold text-gray-900 dark:text-white">Clic aquí para copiar correo</Link>
 									</div>
 								</div>
-								<div className="flex items-start gap-4 p-4 rounded-xl bg-surface-dark border border-white/5">
+								<div className="flex items-start gap-4 p-4 rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 shadow-sm dark:shadow-none">
 									<div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-blue-500/10 text-blue-500">
 										<span className="material-symbols-outlined" style={{ fontSize: '20px' }}>link</span>
 									</div>
 									<div>
-										<p className="text-xs text-gray-300">Siguenos</p>
+										<p className="text-xs text-gray-600 dark:text-gray-300">Siguenos</p>
 										<div className="flex flex-col gap-4 pt-4">
 
 											<Link
@@ -498,7 +498,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 												aria-label="Enlace a página de facebook de JEG Dev studios"
 												aria-labelledby="facebook"
 												tabIndex={0}
-											><span className="icon-facebook __icons-color"></span> <span className="text-sm font-semibold text-white">Facebook</span></Link>
+											><span className="icon-facebook __icons-color"></span> <span className="text-sm font-semibold text-gray-900 dark:text-white">Facebook</span></Link>
 											<Link
 												className="flex text-2xl gap-4 no-underline"
 												href="https://instagram.com/jegdevstudios/"
@@ -508,7 +508,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 												aria-label="Enlace a perfil de Instagram de JEG Dev studios"
 												aria-labelledby="instagram"
 												tabIndex={0}
-											><span className=" icon-instagram __icons-color"></span> <span className="text-sm font-semibold text-white">Instagram</span></Link>
+											><span className=" icon-instagram __icons-color"></span> <span className="text-sm font-semibold text-gray-900 dark:text-white">Instagram</span></Link>
 											<Link
 												className="flex text-2xl gap-4 no-underline"
 												href="https://linkedin.com/company/jegdevstudios"
@@ -518,7 +518,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 												aria-label="Enlace a perfil de linkedin de JEG Dev studios"
 												aria-labelledby="linkedin"
 												tabIndex={0}
-											><span className=" icon-linkedin-no-bg __icons-color"></span> <span className="text-sm font-semibold text-white">LinkedIn</span></Link>
+											><span className=" icon-linkedin-no-bg __icons-color"></span> <span className="text-sm font-semibold text-gray-900 dark:text-white">LinkedIn</span></Link>
 											<Link
 												className="flex text-2xl gap-4 no-underline"
 												href="https://x.com/JEGDevStudios"
@@ -528,7 +528,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 												aria-label="Enlace a perfil de x (twitter) de JEG Dev studios"
 												aria-labelledby="github"
 												tabIndex={0}
-											><span className=" icon-x __icons-color"></span> <span className="text-sm font-semibold text-white">X (Twitter)</span></Link>
+											><span className=" icon-x __icons-color"></span> <span className="text-sm font-semibold text-gray-900 dark:text-white">X (Twitter)</span></Link>
 											<Link
 												className="flex text-2xl gap-4 no-underline"
 												href="https://www.tiktok.com/@jeg.dev.studios"
@@ -538,7 +538,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 												aria-label="Enlace a perfil de TikTok de JEG Dev studios"
 												aria-labelledby="TikTok"
 												tabIndex={0}
-											><span className=" icon-tiktok __icons-color"></span> <span className="text-sm font-semibold text-white">TikTok</span></Link>
+											><span className=" icon-tiktok __icons-color"></span> <span className="text-sm font-semibold text-gray-900 dark:text-white">TikTok</span></Link>
 											<Link
 												className="flex text-2xl gap-4 no-underline"
 												href="https://www.youtube.com/@jegdevstudios"
@@ -548,7 +548,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 												aria-label="Enlace a canal de Youtube de JEG Dev studios"
 												aria-labelledby="Youtube"
 												tabIndex={0}
-											><span className=" icon-youtube __icons-color"></span> <span className="text-sm font-semibold text-white">Youtube</span></Link>
+											><span className=" icon-youtube __icons-color"></span> <span className="text-sm font-semibold text-gray-900 dark:text-white">Youtube</span></Link>
 											<Link
 												className="flex text-2xl gap-4 no-underline"
 												href="https://github.com/JEGDevStudios"
@@ -558,7 +558,7 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 												aria-label="Enlace a perfil de github de JEG Dev studios"
 												aria-labelledby="github"
 												tabIndex={0}
-											><span className=" icon-github __icons-color"></span> <span className="text-sm font-semibold text-white">GitHub</span></Link>
+											><span className=" icon-github __icons-color"></span> <span className="text-sm font-semibold text-gray-900 dark:text-white">GitHub</span></Link>
 										</div>
 									</div>
 								</div>
