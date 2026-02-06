@@ -1,23 +1,9 @@
-"use client";
 import Image from "next/image";
 import Link from "next/link";
+import { getBlogPosts } from "@/lib/fetchRSS";
+import { Post } from "@/types";
 
-// 1. Definimos la estructura de un Post individual
-interface BlogPost {
-	id?: string; // Opcional porque a veces usas el index como key
-	title: string;
-	link: string;
-	pubDate: string; // Usualmente viene como string del RSS/JSON
-	imageUrl?: string; // Opcional
-	content?: string;
-	contentSnippet?: string;
-	categories?: string[]; // Array de strings
-}
-
-// 2. Definimos las props que recibe el componente
-interface BlogSectionProps {
-	posts: BlogPost[];
-}
+const POSTS_TO_SHOW = 4;
 
 // 3. Tipamos el argumento 'html' como string
 function cleanHTML(html: string): string {
@@ -28,8 +14,31 @@ function cleanHTML(html: string): string {
 		.replace(/javascript:/gi, ""); // Elimina javascript: en href
 }
 
-// 4. Asignamos la interfaz a las props del componente
-export default function BlogSection({ posts }: BlogSectionProps) {
+export default async function BlogSection() {
+	let rawPosts: Post[] = [];
+	try {
+		rawPosts = await getBlogPosts(POSTS_TO_SHOW);
+	} catch (error) {
+		console.error("Error fetching blog posts in BlogSection:", error);
+	}
+
+	// Mapeo de datos (lógica movida desde HomeClient)
+	const posts = rawPosts
+		.map((post) => {
+			if (post.title && post.link && post.pubDate) {
+				return {
+					...post,
+					title: post.title,
+					link: post.link,
+					pubDate: post.pubDate,
+					contentSnippet: post.excerpt,
+					imageUrl: post.imageUrl ?? undefined,
+					categories: (post as any).categories as string[] | undefined,
+				};
+			}
+			return null;
+		})
+		.filter((post): post is NonNullable<typeof post> => post !== null);
 
 	// Validación inicial
 	if (!posts || !Array.isArray(posts) || posts.length === 0) {
@@ -136,14 +145,14 @@ export default function BlogSection({ posts }: BlogSectionProps) {
 								className={`flex flex-col md:flex-row shadow-lg rounded-lg overflow-hidden bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 text-gray-900 dark:text-white transition-colors ${index === sidePosts.length - 1 ? "mb-0" : "mb-4"}`}
 							>
 								{post.imageUrl && (
-									<div className="relative h-48 w-full md:h-full md:w-48 shrink-0">
+									<div className="relative h-48 w-full md:w-48 md:h-auto shrink-0">
 										<Image
 											src={post.imageUrl}
 											alt={`Imagen para ${post.title}`}
 											title={`Imagen para ${post.title}`}
 											fill
 											sizes="(max-width: 767px) 100vw, 270px"
-											style={{ objectFit: "cover" }}
+											className="object-cover"
 										/>
 									</div>
 								)}
