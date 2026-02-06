@@ -242,7 +242,7 @@ export default function DevWebClient() {
 					className="w-full h-auto"
 				/>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 				<h1 className="text-6xl md:text-7xl font-bold text-center text-gray-900 dark:text-white">
 					Desarrollo de Páginas Web Profesionales en Next.js
 				</h1>
@@ -257,7 +257,7 @@ export default function DevWebClient() {
 					tecnológica sólida es tu mejor ventaja competitiva.
 				</p>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
 				<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">
 					Paquetes de Desarrollo Web a tu Medida
 				</h2>
@@ -328,7 +328,7 @@ export default function DevWebClient() {
 				</Swiper>
 			</section>
 			{/* --- NUEVA SECCIÓN INFORMATIVA (SEMÁNTICA + LONG FORM) --- */}
-			<section className="text-gray-900 dark:text-white py-12 md:py-20 gradient-effect-x">
+			<section className="text-gray-900 dark:text-white py-12 md:py-20">
 				<div className="container mx-auto px-4" style={{ maxWidth: "1000px" }}>
 					<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white mb-12">
 						¿Por Qué Elegir un Desarrollo Full Stack en México?
@@ -391,7 +391,7 @@ export default function DevWebClient() {
 				</div>
 			</section>
 			{/* --- FIN NUEVA SECCIÓN --- */}
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
 				{/* 2. Se movió el contenido fuera del componente 'SectionProcess' para evitar el error de tipado,
 				   ya que el componente espera props vacías. Lo ideal sería corregir el componente 'SectionProcess' directamente. */}
 				<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">Nuestro Proceso de Desarrollo de Páginas Web</h2>
@@ -399,7 +399,7 @@ export default function DevWebClient() {
 					En JEG Dev Studios, aplicamos una metodología ágil basada en Scrum, que nos permite trabajar de forma organizada, flexible y transparente, entregando avances constantes a nuestros clientes. Nuestro objetivo es que formes parte activa del desarrollo de tu página web, asegurando que el resultado final supere tus expectativas.
 				</p>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 				<CardSmallList
 					titulo="Descubrimiento y Planificación Inicial"
 					subtitulo="Desde el primer contacto, nos enfocamos en comprender tu visión, objetivos y necesidades específicas. ¿Qué hacemos en esta fase?"
@@ -413,7 +413,7 @@ export default function DevWebClient() {
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
 				<CardNestedLists
 					titulo="Ciclos de Desarrollo Iterativos (Sprints)"
 					subtitulo="Dividimos el proyecto en pequeños ciclos llamados Sprints, de 1 o 2 semanas, en los que desarrollamos y entregamos funcionalidades específicas de tu sitio web. Cada Sprint incluye:"
@@ -444,7 +444,7 @@ export default function DevWebClient() {
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 				<CardSmallList
 					titulo="Revisión Final y Entrega del Proyecto"
 					subtitulo="Una vez terminado el número de Sprints necesarios (dependiendo del paquete elegido), realizamos lo siguiente:"
@@ -457,7 +457,7 @@ export default function DevWebClient() {
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-3 xl:p-20 gap-3">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 				<CTAProducts
 					title={"¿Ninguno de estos paquetes se ajusta a lo que necesitas?"}
 					paragraph={

@@ -73,7 +73,7 @@ export default function NavBar() {
               links: [
                 { label: "Blogs", href: "/servicios/desarrollo/web/blogs" },
                 { label: "E-commerce", href: "/servicios/desarrollo/web/ecommerce" },
-                { label: "Invitaciones", href: "/servicios/desarrollo/web/invitacione" },
+                { label: "Invitaciones", href: "/servicios/desarrollo/web/invitaciones" },
                 { label: "Landing Pages", href: "/servicios/desarrollo/web/landing-pages" },
                 { label: "Menus digitales", href: "/servicios/desarrollo/web/menus" },
                 { label: "Sitios web y web corporativas", href: "/servicios/desarrollo/web/sitios-web" },
@@ -289,8 +289,11 @@ export default function NavBar() {
             )}
           </li>
         ))}
-        <ThemeToggle />
-      </ul>
+
+        <li className="group relative px-6 py-3 md:px-0 md:py-0 flex items-center justify-end">
+          <ThemeToggle />
+        </li>
+      </ul >
     </>
   );
 }

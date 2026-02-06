@@ -145,7 +145,7 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 					className="w-full h-auto"
 				/>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-4 xl:p-20 gap-3">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 				<article className="container text-center text-gray-900 dark:text-white">
 					<h1 className="text-5xl md:text-7xl font-extrabold">
 						Portafolio de Proyectos
@@ -186,7 +186,7 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 					Cargando los proyectos disponibles..
 				</p>
 			) : (
-				<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-4 xl:p-20 gap-3 gradient-effect-x">
+				<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 					<article className="container">
 						<div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
 							{activeProjects.length > 0 ? (
@@ -209,7 +209,7 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
 					</article>
 				</section>
 			)}
-			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full p-4 xl:p-20 gap-3 gradient-effect-y">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
 				<CTA
 					title={"¿Listo para dar el siguiente paso digital?"}
 					paragraph={

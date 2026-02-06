@@ -5,6 +5,10 @@ import Link from "next/link";
 import StructuredData from "@/components/Seo/StructuredData"; // Ajusta esta ruta
 import FAQ from "@/components/Seo/FAQ"; // Ajusta esta ruta
 import SectionProcess from "@/components/SectionProcess";
+import CardPricing from "@/components/Cards/CardPricing";
+import CardInfo from "@/components/Cards/CardInfo";
+import AnatomyItem from "@/components/Cards/AnatomyItem";
+import ShowcaseSection from "@/components/ShowcaseSection";
 
 // --- 2. DATOS PARA LOS COMPONENTES DE SCHEMA ---
 
@@ -48,10 +52,10 @@ export default function LandingPageDevelopmentPage() {
 				/>
 			</section>
 
-			<section className="flex flex-col justify-center items-center text-white py-5 gradient-effect-x text-center">
-				<div className="flex flex-col justify-center items-center">
-					<h1 className="text-4xl md:text-5xl font-bold">Diseño de Landing Page de Alta Conversión</h1>
-					<p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto mt-4">
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white py-12 md:py-20 px-4 text-center">
+				<div className="flex flex-col justify-center items-center w-full">
+					<h1 className="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white">Diseño de Landing Page de Alta Conversión</h1>
+					<p className="text-lg md:text-xl text-gray-600 dark:text-white max-w-4xl mx-auto mt-4">
 						¿Inviertes en <strong>campañas de marketing</strong> pero no ves
 						resultados? El problema podría no ser tu anuncio, sino tu{" "}
 						<strong>página de aterrizaje</strong>. Ofrecemos un servicio experto
@@ -62,13 +66,21 @@ export default function LandingPageDevelopmentPage() {
 				</div>
 			</section>
 
+			{/* --- SECCIÓN DE MUESTRA VISUAL --- */}
+			<ShowcaseSection
+				imageSrc="/banners/Christmas/Web.webp"
+				alt="Ejemplo de Landing Page de Alta Conversión"
+				title="Estructura que Convierte"
+				badgeColor="bg-orange-600"
+			/>
+
 			{/* --- SECCIÓN NUEVA: CASOS DE USO (Aumenta Contenido Informativo) --- */}
-			<section className="flex flex-col justify-center items-center text-white py-5 gradient-effect-y">
-				<div className="flex flex-col justify-center items-center max-w-5xl mx-auto">
-					<h2 className="text-3xl md:text-4xl font-bold text-center mb-5">
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white py-12 md:py-20 px-4 gradient-effect-y">
+				<div className="flex flex-col justify-center items-center max-w-5xl mx-auto w-full">
+					<h2 className="text-3xl md:text-4xl font-bold text-center mb-5 text-gray-900 dark:text-white">
 						¿Cuándo es Indispensable una Landing Page?
 					</h2>
-					<p className="text-lg md:text-xl text-center mb-5 max-w-4xl mx-auto">
+					<p className="text-lg md:text-xl text-center mb-5 max-w-4xl mx-auto text-gray-600 dark:text-white">
 						No siempre necesitas un sitio web completo. Una{" "}
 						<strong>landing page para campañas de marketing</strong>
 						es la herramienta correcta cuando tienes un objetivo específico y
@@ -77,57 +89,76 @@ export default function LandingPageDevelopmentPage() {
 					</p>
 
 					<div className="grid md:grid-cols-2 gap-4">
-						<div>
-							<div className="p-4 border border-gray-700 rounded-lg bg-black/25 h-full">
-								<h3 className="text-xl font-bold text-cyan-400 mb-2">
-									Lanzamiento de Producto
-								</h3>
-								<p>
-									Si vas a lanzar un nuevo producto al mercado, necesitas una
-									página dedicada que explique sus beneficios, muestre videos y
-									guíe al usuario a comprar o reservarlo. Una{" "}
-									<strong>landing page exitosa</strong> elimina el menú de
-									navegación para evitar que el usuario se vaya a otras
-									secciones.
-								</p>
+						<CardInfo
+							title="Lanzamiento de Producto"
+							description="Si vas a lanzar un nuevo producto al mercado, necesitas una página dedicada que explique sus beneficios, muestre videos y guíe al usuario a comprar o reservarlo. Una landing page exitosa elimina el menú de navegación para evitar que el usuario se vaya a otras secciones."
+						/>
+						<CardInfo
+							title="Campañas de Google Ads y Redes Sociales"
+							description="Nunca envíes tráfico de pago a tu página de inicio (Home). Debes enviarlos a una página de destino que coincida exactamente con lo que prometió el anuncio. Esto mejora tu Nivel de Calidad en Google y reduce tu costo por clic."
+						/>
+						<CardInfo
+							title="Captación de Leads (Lead Magnets)"
+							description="Si ofreces un ebook, un webinar o una consulta gratuita, necesitas una página sencilla con un formulario claro. El objetivo es intercambiar valor por el correo electrónico del visitante para nutrirlo después."
+						/>
+						<CardInfo
+							title="Eventos y Webinars"
+							description="Para registrar asistentes, necesitas una página que genere urgencia, muestre la agenda y tenga un call to action (CTA) irresistible."
+						/>
+					</div>
+				</div>
+			</section>
+
+			{/* --- SECCIÓN VISUAL: ESTRUCTURA DE ALTA CONVERSIÓN --- */}
+			<section className="w-full py-12 md:py-20 px-4 bg-gray-50 dark:bg-white/5">
+				<div className="container mx-auto max-w-6xl">
+					<div className="flex flex-col md:flex-row gap-12 items-center">
+						<div className="w-full md:w-1/2 text-left">
+							<div className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-orange-600 uppercase bg-orange-100 rounded-full dark:bg-orange-900/30 dark:text-orange-400">
+								Anatomía de Ventas
 							</div>
+							<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+								Estructura Psicológica Persuasiva
+							</h2>
+							<p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+								Cada píxel tiene un propósito. Eliminamos distracciones (como menús de navegación) y enfocamos todo en la llamada a la acción.
+							</p>
+							<p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+								Utilizamos patrones de lectura en "F" y "Z" para guiar el ojo del usuario directamente hacia el botón de conversión.
+							</p>
 						</div>
-						<div>
-							<div className="p-4 border border-gray-700 rounded-lg bg-black/25 h-full">
-								<h3 className="text-xl font-bold text-cyan-400 mb-2">
-									Campañas de Google Ads y Redes Sociales
-								</h3>
-								<p>
-									Nunca envíes tráfico de pago a tu página de inicio (Home).
-									Debes enviarlos a una <strong>página de destino</strong>
-									que coincida exactamente con lo que prometió el anuncio. Esto
-									mejora tu Nivel de Calidad en Google y reduce tu costo por
-									clic.
-								</p>
-							</div>
-						</div>
-						<div>
-							<div className="p-4 border border-gray-700 rounded-lg bg-black/25 h-full">
-								<h3 className="text-xl font-bold text-cyan-400 mb-2">
-									Captación de Leads (Lead Magnets)
-								</h3>
-								<p>
-									Si ofreces un ebook, un webinar o una consulta gratuita,
-									necesitas una página sencilla con un formulario claro. El
-									objetivo es intercambiar valor por el{" "}
-									<strong>correo electrónico</strong> del visitante para
-									nutrirlo después.
-								</p>
-							</div>
-						</div>
-						<div>
-							<div className="p-4 border border-gray-700 rounded-lg bg-black/25 h-full">
-								<h3 className="text-xl font-bold text-cyan-400 mb-2">Eventos y Webinars</h3>
-								<p>
-									Para registrar asistentes, necesitas una página que genere
-									urgencia, muestre la agenda y tenga un
-									<strong>call to action</strong> (CTA) irresistible.
-								</p>
+
+						{/* Wireframe Landing Page */}
+						<div className="w-full md:w-1/2 relative perspective-1000">
+							<div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-4 overflow-hidden transform rotate-y-6 hover:rotate-y-0 transition-transform duration-700 ease-out h-[400px] flex flex-col">
+								{/* Hero Section */}
+								<div className="w-full h-1/2 bg-gray-100 dark:bg-gray-700 rounded-lg mb-4 flex items-center justify-center relative overflow-hidden">
+									<div className="text-center space-y-2 z-10">
+										<div className="w-48 h-4 bg-gray-300 dark:bg-gray-600 rounded mx-auto"></div>
+										<div className="w-32 h-3 bg-gray-200 dark:bg-gray-600/50 rounded mx-auto"></div>
+										<div className="w-24 h-8 bg-orange-500 rounded mx-auto mt-4 shadow-lg shadow-orange-500/30"></div>
+									</div>
+									{/* Abstract shapes */}
+									<div className="absolute top-0 right-0 w-20 h-20 bg-blue-500/10 rounded-full blur-xl"></div>
+									<div className="absolute bottom-0 left-0 w-32 h-32 bg-purple-500/10 rounded-full blur-xl"></div>
+								</div>
+								{/* Social Proof */}
+								<div className="flex justify-center gap-4 mb-4 opacity-50">
+									<div className="w-12 h-4 bg-gray-200 dark:bg-gray-600 rounded"></div>
+									<div className="w-12 h-4 bg-gray-200 dark:bg-gray-600 rounded"></div>
+									<div className="w-12 h-4 bg-gray-200 dark:bg-gray-600 rounded"></div>
+								</div>
+								{/* Features Grid */}
+								<div className="grid grid-cols-2 gap-4 flex-grow">
+									<div className="bg-gray-50 dark:bg-gray-700/30 rounded p-2">
+										<div className="w-6 h-6 bg-blue-100 dark:bg-blue-900/50 rounded-full mb-2"></div>
+										<div className="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded"></div>
+									</div>
+									<div className="bg-gray-50 dark:bg-gray-700/30 rounded p-2">
+										<div className="w-6 h-6 bg-purple-100 dark:bg-purple-900/50 rounded-full mb-2"></div>
+										<div className="w-full h-2 bg-gray-200 dark:bg-gray-600 rounded"></div>
+									</div>
+								</div>
 							</div>
 						</div>
 					</div>
@@ -135,57 +166,48 @@ export default function LandingPageDevelopmentPage() {
 			</section>
 
 			{/* --- SECCIÓN DE ANATOMÍA (Optimizada Semánticamente) --- */}
-			<section className="flex flex-col justify-center items-center text-white py-5 gradient-effect-x">
-				<div className="flex flex-col justify-center items-center max-w-4xl mx-auto">
-					<h2 className="text-3xl md:text-4xl font-bold text-center mb-4">
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white py-12 md:py-20 px-4">
+				<div className="flex flex-col justify-center items-center max-w-4xl mx-auto w-full">
+					<h2 className="text-3xl md:text-4xl font-bold text-center mb-4 text-gray-900 dark:text-white">
 						La Anatomía de una Landing Page Efectiva
 					</h2>
-					<p className="text-lg md:text-xl text-center mb-5 max-w-4xl mx-auto">
+					<p className="text-lg md:text-xl text-center mb-5 max-w-4xl mx-auto text-gray-600 dark:text-white">
 						Para <strong>optimizar una landing page</strong>, no basta con un
 						diseño bonito. Aplicamos una estructura probada para{" "}
 						<strong>captar la atención</strong> y guiar hacia la{" "}
 						<strong>toma de decisiones</strong>.
 					</p>
 
-					<div className="grid md:grid-cols-2 gap-x-8 gap-y-4 text-left">
-						<div className="mb-4">
-							<h4 className="text-lg font-bold">1. Título de Impacto (Hook)</h4>
-							<p>
-								El primer mensaje que ve tu usuario. Debe ser claro y prometer
-								la solución a su problema en menos de 3 segundos.
-							</p>
-						</div>
-						<div className="mb-4">
-							<h4 className="text-lg font-bold">2. Beneficios, no Características</h4>
-							<p>
-								Explicamos cómo tu producto mejora la vida del cliente. Usamos
-								listas con viñetas para facilitar la lectura rápida.
-							</p>
-						</div>
-						<div className="mb-4">
-							<h4 className="text-lg font-bold">3. Un Único "Call to Action"</h4>
-							<p>
-								Eliminamos fugas. Ya sea "Comprar", "Registrarse" o "Descargar",
-								todos los botones de la página tienen el mismo objetivo.
-							</p>
-						</div>
-						<div className="mb-4">
-							<h4 className="text-lg font-bold">4. Prueba Social (Confianza)</h4>
-							<p>
-								Integramos testimonios y logos de clientes. Esto reduce la
-								fricción y es clave para{" "}
-								<strong>aumentar las conversiones</strong>.
-							</p>
-						</div>
+					<div className="grid md:grid-cols-2 gap-x-12 gap-y-12 text-left w-full mt-8">
+						<AnatomyItem
+							number="1"
+							title="Título de Impacto (Hook)"
+							description="El primer mensaje que ve tu usuario. Debe ser claro y prometer la solución a su problema en menos de 3 segundos."
+						/>
+						<AnatomyItem
+							number="2"
+							title="Beneficios, no Características"
+							description="Explicamos cómo tu producto mejora la vida del cliente. Usamos listas con viñetas para facilitar la lectura rápida."
+						/>
+						<AnatomyItem
+							number="3"
+							title="Un Único 'Call to Action'"
+							description="Eliminamos fugas. Ya sea 'Comprar', 'Registrarse' o 'Descargar', todos los botones de la página tienen el mismo objetivo."
+						/>
+						<AnatomyItem
+							number="4"
+							title="Prueba Social (Confianza)"
+							description="Integramos testimonios y logos de clientes. Esto reduce la fricción y es clave para aumentar las conversiones."
+						/>
 					</div>
 				</div>
 			</section>
 
 			{/* --- SECCIÓN VIDEO (Requisito SEMrush) --- */}
-			<section className="flex flex-col justify-center items-center text-white py-5 gradient-effect-y text-center">
-				<div className="flex flex-col justify-center items-center max-w-4xl mx-auto">
-					<h2 className="text-3xl md:text-4xl font-bold">Cómo Optimizar tu Landing Page</h2>
-					<p className="text-lg md:text-xl mb-4">
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white py-12 md:py-20 px-4 gradient-effect-y text-center">
+				<div className="flex flex-col justify-center items-center max-w-4xl mx-auto w-full">
+					<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white">Cómo Optimizar tu Landing Page</h2>
+					<p className="text-lg md:text-xl mb-4 text-gray-600 dark:text-white">
 						Creamos <strong>páginas de destino</strong> que siguen una
 						estructura probada. Mira este video donde explicamos los 5 elementos
 						clave para <strong>optimizar una landing page</strong>.
@@ -198,59 +220,100 @@ export default function LandingPageDevelopmentPage() {
 			</section>
 
 			{/* --- NUEVA SECCIÓN: COMPARATIVA TÉCNICA (Aumenta volumen y autoridad) --- */}
-			<section className="flex flex-col justify-center items-center text-white py-5 gradient-effect-x">
-				<div className="flex flex-col justify-center items-center max-w-5xl mx-auto">
-					<h2 className="text-3xl md:text-4xl font-bold text-center mb-5">
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white py-12 md:py-20 px-4">
+				<div className="flex flex-col justify-center items-center max-w-5xl mx-auto w-full">
+					<h2 className="text-3xl md:text-4xl font-bold text-center mb-5 text-gray-900 dark:text-white">
 						Tecnología: Creador Gratuito vs. Desarrollo a Medida
 					</h2>
-					<div className="table-responsive">
-						<table className="w-full text-left border-collapse">
+					<div className="w-full overflow-x-auto rounded-3xl border border-gray-200 dark:border-white/10 shadow-xl bg-white dark:bg-surface-dark">
+						<table className="w-full text-left border-collapse min-w-[700px]">
 							<thead>
-								<tr className="text-center">
-									<th scope="col" className="text-lg p-2 border border-gray-700">
+								<tr className="text-center border-b border-gray-200 dark:border-white/10">
+									<th scope="col" className="text-lg p-6 font-extrabold text-gray-900 dark:text-white bg-gray-50 dark:bg-white/5 w-1/3">
 										Característica
 									</th>
-									<th scope="col" className="text-lg p-2 border border-gray-700 text-gray-400">
-										Creador Genérico (Wix, etc.)
+									<th scope="col" className="text-lg p-6 font-bold text-gray-500 dark:text-gray-400 bg-gray-50 dark:bg-white/5 w-1/3">
+										Creador Genérico <span className="block text-sm font-normal opacity-80">(Wix, etc.)</span>
 									</th>
-									<th scope="col" className="text-lg p-2 border border-gray-700 text-cyan-400">
-										Desarrollo a Medida (Next.js)
+									<th scope="col" className="text-lg p-6 font-extrabold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-900/20 w-1/3 relative">
+										<span className="absolute top-0 right-0 bg-blue-600 text-white text-[10px] font-bold px-3 py-1 rounded-bl-xl shadow-sm">RECOMENDADO</span>
+										Desarrollo a Medida <span className="block text-sm font-normal opacity-80">(Next.js)</span>
 									</th>
 								</tr>
 							</thead>
 							<tbody className="align-middle">
-								<tr className="bg-white/5">
-									<td className="font-bold p-2 border border-gray-700">Velocidad de Carga</td>
-									<td className="p-2 border border-gray-700">Lenta (mucho código basura)</td>
-									<td className="text-cyan-400 font-bold p-2 border border-gray-700">
-										Extrema (Código optimizado)
+								<tr className="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+									<td className="font-bold p-6 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-white">
+										<div className="flex items-center gap-3">
+											<span className="material-symbols-outlined text-gray-400">speed</span>
+											Velocidad de Carga
+										</div>
+									</td>
+									<td className="p-6 border-b border-gray-100 dark:border-white/5 text-gray-600 dark:text-gray-400 text-center">
+										Lenta <span className="text-sm opacity-75 block">(mucho código basura)</span>
+									</td>
+									<td className="p-6 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-white font-bold bg-blue-50/30 dark:bg-blue-900/10 text-center">
+										<div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400">
+											<span className="material-symbols-outlined">bolt</span>
+											Extrema (Código optimizado)
+										</div>
 									</td>
 								</tr>
-								<tr>
-									<td className="font-bold p-2 border border-gray-700">Personalización</td>
-									<td className="p-2 border border-gray-700">Limitada a la plantilla</td>
-									<td className="text-cyan-400 font-bold p-2 border border-gray-700">
-										100% Total (Pixel Perfect)
+								<tr className="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+									<td className="font-bold p-6 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-white">
+										<div className="flex items-center gap-3">
+											<span className="material-symbols-outlined text-gray-400">palette</span>
+											Personalización
+										</div>
+									</td>
+									<td className="p-6 border-b border-gray-100 dark:border-white/5 text-gray-600 dark:text-gray-400 text-center">
+										Limitada a la plantilla
+									</td>
+									<td className="p-6 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-white font-bold bg-blue-50/30 dark:bg-blue-900/10 text-center">
+										<div className="flex items-center justify-center gap-2 text-blue-600 dark:text-blue-400">
+											<span className="material-symbols-outlined">check_circle</span>
+											100% Total (Pixel Perfect)
+										</div>
 									</td>
 								</tr>
-								<tr className="bg-white/5">
-									<td className="font-bold p-2 border border-gray-700">Tasa de Rebote</td>
-									<td className="p-2 border border-gray-700">Alta (por lentitud)</td>
-									<td className="text-cyan-400 font-bold p-2 border border-gray-700">
-										Mínima (Carga instantánea)
+								<tr className="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+									<td className="font-bold p-6 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-white">
+										<div className="flex items-center gap-3">
+											<span className="material-symbols-outlined text-gray-400">trending_up</span>
+											Tasa de Rebote
+										</div>
+									</td>
+									<td className="p-6 border-b border-gray-100 dark:border-white/5 text-gray-600 dark:text-gray-400 text-center">
+										Alta <span className="text-sm opacity-75 block">(por lentitud)</span>
+									</td>
+									<td className="p-6 border-b border-gray-100 dark:border-white/5 text-gray-900 dark:text-white font-bold bg-blue-50/30 dark:bg-blue-900/10 text-center">
+										<div className="flex items-center justify-center gap-2 text-green-600 dark:text-green-400">
+											<span className="material-symbols-outlined">arrow_downward</span>
+											Mínima (Carga instantánea)
+										</div>
 									</td>
 								</tr>
-								<tr>
-									<td className="font-bold p-2 border border-gray-700">SEO Técnico</td>
-									<td className="p-2 border border-gray-700">Básico</td>
-									<td className="text-cyan-400 font-bold p-2 border border-gray-700">
-										Avanzado (Core Web Vitals)
+								<tr className="group hover:bg-gray-50 dark:hover:bg-white/5 transition-colors">
+									<td className="font-bold p-6 text-gray-900 dark:text-white">
+										<div className="flex items-center gap-3">
+											<span className="material-symbols-outlined text-gray-400">search</span>
+											SEO Técnico
+										</div>
+									</td>
+									<td className="p-6 text-gray-600 dark:text-gray-400 text-center">
+										Básico
+									</td>
+									<td className="p-6 text-gray-900 dark:text-white font-bold bg-blue-50/30 dark:bg-blue-900/10 text-center">
+										<div className="flex items-center justify-center gap-2 text-blue-600 dark:text-blue-400">
+											<span className="material-symbols-outlined">verified</span>
+											Avanzado (Core Web Vitals)
+										</div>
 									</td>
 								</tr>
 							</tbody>
 						</table>
 					</div>
-					<p className="text-center mt-4 text-lg">
+					<p className="text-center mt-8 text-lg text-gray-600 dark:text-gray-300 max-w-3xl">
 						Un desarrollo a medida reduce la <strong>tasa de rebote</strong> y
 						mejora la experiencia en
 						<strong>dispositivos móviles</strong>, factores que Google ama.
@@ -259,10 +322,10 @@ export default function LandingPageDevelopmentPage() {
 			</section>
 
 			{/* --- SECCIÓN DE PAQUETES (BOFU) --- */}
-			<section className="flex flex-col justify-center items-center text-white py-5 gradient-effect-y text-center">
-				<div className="flex flex-col justify-center items-center max-w-6xl mx-auto">
-					<h2 className="text-3xl md:text-4xl font-bold mb-4">Nuestras Soluciones de Landing Page</h2>
-					<p className="text-lg md:text-xl text-gray-300 max-w-4xl mx-auto">
+			<section className="flex flex-col justify-center items-center text-gray-900 dark:text-white py-12 md:py-20 px-4 gradient-effect-y text-center">
+				<div className="flex flex-col justify-center items-center max-w-6xl mx-auto w-full">
+					<h2 className="text-3xl md:text-4xl font-bold mb-4 text-gray-900 dark:text-white">Nuestras Soluciones de Landing Page</h2>
+					<p className="text-lg md:text-xl text-gray-600 dark:text-white max-w-4xl mx-auto">
 						Ofrecemos dos caminos para tu{" "}
 						<strong>landing page para campañas de marketing</strong>,
 						dependiendo de tu necesidad y presupuesto.
@@ -270,73 +333,42 @@ export default function LandingPageDevelopmentPage() {
 
 					<div className="flex flex-wrap justify-center items-stretch mt-5 gap-8">
 						{/* Opción 1: Google Sites */}
-						<div className="w-full lg:w-5/12">
-							<div className="bg-[#222] text-white rounded-lg h-full flex flex-col p-6">
-								<div className="flex-grow">
-									<h3 className="text-2xl font-bold">Landing Page Profesional</h3>
-									<p className="text-4xl font-bold my-2">
-										$2,999 <span className="text-base font-normal">MXN</span>
-									</p>
-									<p>
-										Solución rápida y económica en Google Sites. Ideal para
-										validar ideas o negocios que empiezan.
-									</p>
-									<ul className="text-left mt-3 list-disc list-inside space-y-2">
-										<li>Dominio personalizado incluido (1 año)</li>
-										<li>Hosting gratuito (Google Sites)</li>
-										<li>Diseño responsivo básico</li>
-										<li>Hasta 5 secciones</li>
-									</ul>
-								</div>
-								<div className="mt-auto pt-3">
-									<Link
-										href="/contacto?producto=landing-page-profesional"
-										className="btn-services"
-									>
-										Contratar ahora
-									</Link>
-								</div>
-							</div>
-						</div>
+						<CardPricing
+							title="Landing Page Profesional"
+							price="2,999"
+							currency="MXN"
+							description="Solución rápida y económica en Google Sites. Ideal para validar ideas o negocios que empiezan."
+							features={[
+								"Dominio personalizado incluido (1 año)",
+								"Hosting gratuito (Google Sites)",
+								"Diseño responsivo básico",
+								"Hasta 5 secciones",
+							]}
+							buttonLabel="Contratar ahora"
+							buttonLink="/contacto?producto=landing-page-profesional"
+						/>
 
 						{/* Opción 2: Next.js */}
-						<div className="w-full lg:w-5/12">
-							<div className="bg-[#1a1a1a] text-white rounded-lg border border-cyan-500 h-full flex flex-col p-6">
-								<div className="flex-grow">
-									<div className="bg-cyan-500 text-black text-sm font-bold px-2 py-1 rounded-full inline-block mb-2">
-										Recomendado
-									</div>
-									<h3 className="text-2xl font-bold">Landing de Alto Rendimiento</h3>
-									<p className="text-4xl font-bold my-2">
-										Desde $4,999 <span className="text-base font-normal">MXN</span>
-									</p>
-									<p>
-										La solución definitiva para campañas serias. Desarrollada en
-										Next.js para máxima velocidad y SEO.
-									</p>
-									<ul className="text-left mt-3 list-disc list-inside space-y-2">
-										<li>Performance +90 Garantizado</li>
-										<li>Diseño UI/UX en Figma (A medida)</li>
-										<li>Formularios avanzados con integraciones</li>
-										<li>Hosting y Dominio incluidos (1 año)</li>
-									</ul>
-								</div>
-								<div className="mt-auto pt-3">
-									<Link
-										href="/contacto?producto=landing-page-performance"
-										className="btn-services"
-									>
-										Cotizar Proyecto
-									</Link>
-								</div>
-							</div>
-						</div>
+						<CardPricing
+							title="Landing de Alto Rendimiento"
+							price="4,999"
+							currency="MXN"
+							description="La solución definitiva para campañas serias. Desarrollada en Next.js para máxima velocidad y SEO."
+							features={[
+								"Performance +90 Garantizado",
+								"Diseño UI/UX en Figma (A medida)",
+								"Formularios avanzados con integraciones",
+								"Hosting y Dominio incluidos (1 año)",
+							]}
+							buttonLabel="Cotizar Proyecto"
+							buttonLink="/contacto?producto=landing-page-performance"
+						/>
 					</div>
 				</div>
 			</section>
 
 			{/* --- SECCIÓN DE PROCESO DETALLADO --- */}
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-4 xl:p-20 gap-3 gradient-effect-x">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
 				<SectionProcess
 					title={"Nuestro Proceso de Optimización (CRO)"}
 					text={
@@ -344,9 +376,9 @@ export default function LandingPageDevelopmentPage() {
 					}
 				/>
 			</section>
-
-			{/* --- Sección de FAQ --- */}
-			<FAQ faqs={faqs} />
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<FAQ faqs={faqs} />
+			</section>
 		</>
 	);
 }

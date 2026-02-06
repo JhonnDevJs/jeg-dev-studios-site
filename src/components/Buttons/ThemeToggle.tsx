@@ -20,9 +20,10 @@ export default function ThemeToggle() {
       aria-label="Cambiar tema"
     >
       {currentTheme === "dark" ? (
-        <span className="material-symbols-outlined text-white">light_mode</span>
+        <span className="flex gap-3 justify-center items-center"><span className="block md:hidden">Modo claro</span><span className="material-symbols-outlined text-white">light_mode</span>
+        </span>
       ) : (
-        <span className="material-symbols-outlined text-blue-600">dark_mode</span>
+        <span className="flex gap-3 justify-center items-center"><span className="block md:hidden">Modo oscuro</span><span className="material-symbols-outlined text-blue-600">dark_mode</span></span>
       )}
     </button>
   );

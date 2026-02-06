@@ -2,10 +2,11 @@
 import { useMemo } from "react";
 import Image from "next/image";
 import StructuredData from "@/components/Seo/StructuredData";
-import CardNestedLists from "@/components/Cards/CardNestedLists";
 import CardServices from "@/components/Cards/CardServices";
-import CTA from "@/components/Cta/CTA";
+import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
+import CardInfo from "@/components/Cards/CardInfo";
+import TimelineProcess from "@/components/Cards/TimelineProcess";
 
 export default function DisenoClient() {
 	const services = useMemo(
@@ -124,11 +125,11 @@ export default function DisenoClient() {
 					className="w-full h-auto"
 				/>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 pb-0 xl:pb-0 gap-3 gradient-effect-x">
-				<h1 className="text-4xl md:text-5xl font-bold text-center text-white mt-3">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<h1 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mt-3">
 					Diseño Gráfico y Digital que Conecta y Convierte
 				</h1>
-				<p className="text-lg md:text-xl text-white text-center max-w-4xl">
+				<p className="text-lg md:text-xl text-gray-600 dark:text-white text-center max-w-4xl">
 					En JEG Dev Studios, creemos que un gran diseño es más que una cara
 					bonita; es una herramienta estratégica. Como agencia de diseño gráfico
 					en México , fusionamos creatividad y funcionalidad para construir
@@ -137,11 +138,11 @@ export default function DisenoClient() {
 					cliente sea impactante.
 				</p>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
-				<h2 className="text-3xl md:text-4xl font-bold text-center text-white">
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
+				<h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">
 					Nuestros Servicios de Diseño Gráfico y Digital
 				</h2>
-				<p className="text-lg md:text-xl text-white text-center max-w-4xl">
+				<p className="text-lg md:text-xl text-gray-600 dark:text-white text-center max-w-4xl">
 					Desde la creación de un logotipo que define tu esencia hasta el diseño
 					de interfaces que guían a tus usuarios, nuestra área de diseño cubre
 					todo el espectro de la comunicación visual. Explora nuestras
@@ -162,94 +163,141 @@ export default function DisenoClient() {
 					</ul>
 				</article>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center w-full gap-3 p-3 xl:p-20 gradient-effect-x">
-				<h2 className="text-4xl md:text-5xl font-bold text-center text-white">
-					Servicios de Diseño Gráfico y Digital en México
+
+			{/* --- SECCIÓN VISUAL: WIREFRAMING Y PROTOTIPADO --- */}
+			<section className="w-full py-12 md:py-20 px-4 bg-gray-50 dark:bg-white/5">
+				<div className="container mx-auto max-w-6xl">
+					<div className="flex flex-col md:flex-row gap-12 items-center">
+						<div className="w-full md:w-1/2 text-left">
+							<div className="inline-block px-3 py-1 mb-4 text-xs font-bold tracking-wider text-blue-600 uppercase bg-blue-100 rounded-full dark:bg-blue-900/30 dark:text-blue-400">
+								Metodología Visual
+							</div>
+							<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+								Del Boceto a la Realidad: Wireframing y Prototipado
+							</h2>
+							<p className="text-lg text-gray-600 dark:text-gray-300 mb-6 leading-relaxed">
+								No diseñamos a ciegas. Antes de aplicar color, estructuramos la información mediante <strong>wireframes</strong> de baja fidelidad para validar la experiencia de usuario (UX).
+							</p>
+							<p className="text-lg text-gray-600 dark:text-gray-300 leading-relaxed">
+								Utilizamos herramientas líderes como <strong>Figma</strong> para crear prototipos interactivos que te permiten visualizar el flujo final antes de escribir una sola línea de código.
+							</p>
+						</div>
+
+						{/* Representación Visual de Wireframe con CSS */}
+						<div className="w-full md:w-1/2 relative perspective-1000">
+							<div className="relative bg-white dark:bg-gray-800 rounded-2xl shadow-2xl border border-gray-200 dark:border-gray-700 p-6 overflow-hidden transform rotate-y-6 hover:rotate-y-0 transition-transform duration-700 ease-out">
+								{/* Header del Wireframe */}
+								<div className="flex items-center justify-between mb-6 border-b border-gray-100 dark:border-gray-700 pb-4">
+									<div className="w-24 h-6 bg-gray-200 dark:bg-gray-600 rounded animate-pulse"></div>
+									<div className="flex gap-2">
+										<div className="w-16 h-4 bg-gray-100 dark:bg-gray-700 rounded"></div>
+										<div className="w-16 h-4 bg-gray-100 dark:bg-gray-700 rounded"></div>
+									</div>
+								</div>
+								{/* Hero del Wireframe */}
+								<div className="flex gap-4 mb-6">
+									<div className="w-2/3 space-y-3">
+										<div className="w-3/4 h-8 bg-gray-200 dark:bg-gray-600 rounded animate-pulse delay-75"></div>
+										<div className="w-full h-4 bg-gray-100 dark:bg-gray-700 rounded"></div>
+										<div className="w-full h-4 bg-gray-100 dark:bg-gray-700 rounded"></div>
+										<div className="w-32 h-10 bg-blue-100 dark:bg-blue-900/40 rounded mt-4"></div>
+									</div>
+									<div className="w-1/3 h-32 bg-gray-100 dark:bg-gray-700 rounded-lg"></div>
+								</div>
+								{/* Grid del Wireframe */}
+								<div className="grid grid-cols-3 gap-4">
+									<div className="h-24 bg-gray-50 dark:bg-gray-700/50 rounded border border-dashed border-gray-200 dark:border-gray-600"></div>
+									<div className="h-24 bg-gray-50 dark:bg-gray-700/50 rounded border border-dashed border-gray-200 dark:border-gray-600"></div>
+									<div className="h-24 bg-gray-50 dark:bg-gray-700/50 rounded border border-dashed border-gray-200 dark:border-gray-600"></div>
+								</div>
+
+								{/* Badge Flotante */}
+								<div className="absolute bottom-6 right-6 bg-blue-600 text-white text-xs font-bold px-4 py-2 rounded-full shadow-lg z-10">
+									Figma Prototype
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section className="flex flex-col justify-center items-center text-center w-full gap-3 py-12 md:py-20 px-4">
+				<h2 className="text-4xl md:text-5xl font-bold text-center text-gray-900 dark:text-white mb-8">
+					¿Por Qué Elegirnos para tu Diseño?
 				</h2>
-				<p className="text-xl md:text-2xl text-center text-white p-0">
-					Tu marca merece un diseño único: logotipos, branding, UX/UI, editorial
-					y más.
-				</p>
-				<CardNestedLists
-					titulo="En JEG Dev Studios ofrecemos servicios de diseño gráfico que ayudan a marcas, negocios y emprendedores a destacar en un mercado cada vez más competitivo."
-					subtitulo="Nos especializamos en crear experiencias visuales memorables a través de:"
-					list={[
-						{
-							text: "Logotipos y Branding",
-							sublist: ["Identidad sólida y profesional."],
-						},
-						{
-							text: "Diseño UX/UI para Web, Apps y Software",
-							sublist: [
-								"Interfaces modernas, funcionales y centradas en el usuario.",
-							],
-						},
-						{
-							text: "Diseño Editorial",
-							sublist: ["Catálogos, revistas, manuales de identidad y más."],
-						},
-						{
-							text: "Publicidad Digital",
-							sublist: [
-								"Menús, invitaciones y materiales promocionales creativos.",
-							],
-						},
-						{
-							text: "Edición Fotográfica y Contenido Visua",
-							sublist: ["Para reforzar tu comunicación."],
-						},
-					]}
-				/>
-				<p className="text-xl md:text-2xl text-center text-white p-0 max-w-4xl">
-					Somos una de las mejores agencias de diseño gráfico en México, con
-					sede en CDMX, listos para convertir tus ideas en realidades visuales
-					impactantes.
-				</p>
-				<p className="text-xl md:text-2xl text-center text-white p-0 max-w-4xl">
-					Ya sea que busques un estudio de diseño gráfico para un proyecto
-					puntual o una agencia que te acompañe a largo plazo, en JEG Dev
-					Studios encontrarás un equipo creativo y estratégico.
-				</p>
+				<div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
+					<CardInfo
+						title="Logotipos y Branding"
+						description="Identidad sólida y profesional. No hacemos dibujos, creamos marcas que perduran."
+					/>
+					<CardInfo
+						title="Diseño UX/UI"
+						description="Interfaces modernas, funcionales y centradas en el usuario para web y apps."
+					/>
+					<CardInfo
+						title="Diseño Editorial"
+						description="Catálogos, revistas y manuales de identidad maquetados con precisión."
+					/>
+					<CardInfo
+						title="Publicidad Digital"
+						description="Creativos para redes sociales y campañas que detienen el scroll."
+					/>
+					<CardInfo
+						title="Edición Fotográfica"
+						description="Retoque profesional y composición visual para reforzar tu comunicación."
+					/>
+					<CardInfo
+						title="Estrategia Visual"
+						description="Alineamos cada pixel con los objetivos comerciales de tu negocio."
+					/>
+				</div>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-y">
-				<CardNestedLists
-					titulo="Nuestro Proceso Creativo: Estrategia, Diseño y Resultado"
-					subtitulo="Nuestro proceso de diseño está pensado para entregar resultados, no solo archivos. Comenzamos con una fase de investigación para entender a fondo tu marca y tu audiencia. Luego, pasamos a la conceptualización y el diseño, trabajando contigo a través de revisión para asegurar que el resultado final sea perfecto. Finalmente, te entregamos todos los archivos editables y guías de uso para que tengas control total sobre tu nueva identidad visual."
-					list={[
+
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
+				<div className="container max-w-4xl mx-auto w-full mb-8 text-center">
+					<h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+						Nuestro Proceso Creativo
+					</h2>
+					<p className="text-lg md:text-xl text-gray-600 dark:text-white">
+						Nuestro proceso de diseño está pensado para entregar resultados, no solo archivos.
+					</p>
+				</div>
+				<TimelineProcess
+					steps={[
 						{
-							text: "1. Investigación y Estrategia:",
-							sublist: [
-								"Primero, nos sumergimos en tu marca, tu mercado y tu audiencia. Analizamos a fondo tus objetivos para definir una dirección creativa sólida y un plan de acción claro antes de empezar a diseñar.",
-							],
+							title: "Investigación y Estrategia",
+							description: "Primero, nos sumergimos en tu marca, tu mercado y tu audiencia. Analizamos a fondo tus objetivos para definir una dirección creativa sólida y un plan de acción claro antes de empezar a diseñar."
 						},
 						{
-							text: "2. Diseño y Colaboración:",
-							sublist: [
-								"Creamos las propuestas visuales (logotipos, interfaces, etc.) y trabajamos de la mano contigo a través de revisión. Tu feedback es clave para refinar cada detalle hasta que el resultado sea perfecto y cumpla con tus expectativas.",
-							],
+							title: "Diseño y Colaboración",
+							description: "Creamos las propuestas visuales (logotipos, interfaces, etc.) y trabajamos de la mano contigo a través de revisiones. Tu feedback es clave para refinar cada detalle hasta que el resultado sea perfecto."
 						},
 						{
-							text: "3. Entrega y Empoderamiento:",
-							sublist: [
-								"Finalmente, te entregamos un paquete completo con todos los archivos editables (AI, SVG, PNG) y las guías de uso necesarias. Te damos todo lo que necesitas para que tengas control total sobre tu nueva identidad visual.",
-							],
-						},
+							title: "Entrega y Empoderamiento",
+							description: "Finalmente, te entregamos un paquete completo con todos los archivos editables (AI, SVG, PNG) y las guías de uso necesarias. Te damos todo lo que necesitas para que tengas control total sobre tu nueva identidad visual."
+						}
 					]}
 				/>
 			</section>
-			<section className="flex flex-col justify-center items-center text-center text-white w-full p-3 xl:p-20 gap-3 gradient-effect-x">
-				<CTA
+
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<CTAProducts
 					title={"¿Listo para dar el siguiente paso digital?"}
 					paragraph={
 						"Es momento de convertir tu idea en una solución tecnológica escalable y atractiva. Agenda tu consulta gratuita o contáctanos directamente."
 					}
-					label={"Solicita tu Auditoría Gratuita"}
-					link={"/contacto"}
+					links={[
+						{
+							label: "Solicita tu Auditoría Gratuita",
+							link: "/contacto",
+							type: "services",
+						},
+					]}
 				/>
 			</section>
-			<FAQ
-				faqs={faqs}
-			/>
+			<section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
+				<FAQ faqs={faqs} />
+			</section>
 		</>
 	);
 }
