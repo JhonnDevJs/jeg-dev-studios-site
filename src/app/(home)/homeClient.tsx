@@ -14,13 +14,13 @@ import { useEffect, useState } from "react";
 interface HomeClientProps {
 	assets: any;
 	initialFaqs: any; // You can replace 'any' with a more specific type if available
+	blogSection: React.ReactNode;
 }
 
 // Import Components
 import ContactForm from "@/components/Forms/ContactForm";
 import StructuredData from "@/components/Seo/StructuredData";
 import FAQ from "@/components/Seo/FAQ";
-import BlogSection from "@/components/Blog/BlogSection";
 
 // Imports Assets
 
@@ -30,7 +30,7 @@ import BlogSection from "@/components/Blog/BlogSection";
 import "./home.css";
 
 
-export default function HomeClient({ initialFaqs, assets }: HomeClientProps) {
+export default function HomeClient({ initialFaqs, assets, blogSection }: HomeClientProps) {
 
 	// Lógica simple para detectar temporada (opcional)
 	const date = new Date();
@@ -596,7 +596,7 @@ export default function HomeClient({ initialFaqs, assets }: HomeClientProps) {
 				</section>
 
 				{/* Renderizamos el componente del blog pasado desde el servidor */}
-				<BlogSection />
+				{blogSection}
 			</div>
 
 		</>
