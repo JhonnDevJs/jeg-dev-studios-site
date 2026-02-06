@@ -1,4 +1,3 @@
-
 type CardNestedListsProps = {
   titulo: string;
   subtitulo: string;
@@ -9,32 +8,16 @@ type CardNestedListsProps = {
   lastText?: string;
 };
 
-
 export default function CardNestedLists({ titulo, subtitulo, list, lastText }: CardNestedListsProps) {
   return (
     <div
-      className="w-11/12 p-1 md:p-2 mb-5"
-      style={{
-        background: "rgba(33, 37, 41, 0.15)", // Tailwind: bg-gray-800 bg-opacity-15 (aproximado)
-        borderRadius: "18px",
-        border: "none",
-        boxShadow: "0 4px 32px 0 rgba(0,0,0,0.15)",
-        backdropFilter: "blur(8px)",
-        WebkitBackdropFilter: "blur(8px)",
-      }}
+      className="w-11/12 p-1 md:p-2 mb-5 bg-white dark:bg-zinc-800/15 rounded-[18px] border border-gray-200 dark:border-none shadow-[0_4px_32px_0_rgba(0,0,0,0.15)] backdrop-blur-md"
     >
-      <div className="flex p-2 md:p-4" style={{ alignItems: "stretch" }}>
+      <div className="flex p-2 md:p-4 items-stretch">
         {/* Línea y círculo con flecha */}
         <div
-          className="vertical-bar-arrow"
-          style={{
-            position: "relative",
-            width: "30px",
-            display: "flex",
-            flexDirection: "column",
-            alignItems: "center",
-            marginRight: "16px",
-          }}
+          className="relative flex flex-col items-center mr-4"
+          style={{ width: "32px" }}
         >
           {/* Círculo donde va la flecha */}
           <div
@@ -87,18 +70,18 @@ export default function CardNestedLists({ titulo, subtitulo, list, lastText }: C
             }}
           ></div>
         </div>
-        <div className="flex-grow-1 d-flex flex-column justify-content-center">
-          <h2 className="card-title text-white">{titulo}</h2>
-          <h3 className="card-subtitle m-auto mb-2 mt-3 text-start text-white">
+        <div className="flex-grow flex flex-col justify-center">
+          <h2 className="text-2xl font-bold text-gray-900 dark:text-white">{titulo}</h2>
+          <h3 className="text-xl m-auto mb-2 mt-3 text-start text-gray-700 dark:text-white w-full">
             {subtitulo}
           </h3>
           <ul
-            className="ps-1 mt-3 m-auto mb-2 col-12"
+            className="pl-1 mt-3 m-auto mb-2 w-full"
             style={{ listStyle: "none", margin: 0 }}
           >
             {list.map((item, idx) => (
               <li
-                className="flex flex-col items-start mb-4 text-white"
+                className="flex flex-col items-start mb-4 text-gray-600 dark:text-white"
                 key={idx}
               >
                 <div className="flex items-start text-start">
@@ -114,6 +97,7 @@ export default function CardNestedLists({ titulo, subtitulo, list, lastText }: C
                       color: "#fff",
                       marginRight: "12px",
                       flexShrink: 0,
+                      marginTop: "4px"
                     }}
                   >
                     {/* Palomita SVG */}
@@ -124,12 +108,11 @@ export default function CardNestedLists({ titulo, subtitulo, list, lastText }: C
                       />
                     </svg>
                   </span>
-                  <h4>{item.text}</h4>
+                  <h4 className="font-bold text-lg m-0">{item.text}</h4>
                 </div>
                 <ul
                   style={{
                     listStyle: "disc",
-                    color: "#fff",
                     marginLeft: "3rem",
                     textAlign: "left",
                   }}
@@ -137,9 +120,10 @@ export default function CardNestedLists({ titulo, subtitulo, list, lastText }: C
                   {item.sublist.map((sub, subIdx) => (
                     <li
                       key={subIdx}
-                      style={{ color: "#fff", marginBottom: "0.5rem" }}
+                      style={{ marginBottom: "0.5rem" }}
+                      className="text-gray-600 dark:text-white"
                     >
-                      <p className="text-left">{sub}</p>
+                      <p className="text-left m-0">{sub}</p>
                     </li>
                   ))}
                 </ul>
@@ -149,7 +133,7 @@ export default function CardNestedLists({ titulo, subtitulo, list, lastText }: C
         </div>
       </div>
       {lastText && (
-        <p className="pl-4 text-left text-white text-xl">{lastText}</p>
+        <p className="pl-4 text-left text-gray-600 dark:text-white text-xl">{lastText}</p>
       )}
     </div>
   );

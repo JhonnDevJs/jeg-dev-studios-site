@@ -1,5 +1,6 @@
 @import "tailwindcss";
 @import "../assets/icons/icon-fonts/style.css";
+@config "../../tailwind.config.ts";
 
 /* Asegura que el scrollbar se vea bien y define el gradiente */
 @layer utilities {
@@ -14,9 +15,6 @@
 /* Forzar color de fondo globalmente para asegurar que sea oscuro */
 body {
   min-height: max(884px, 100dvh);
-  background-color: #101922;
-  /* Tu color background-dark */
-  color: #ffffff;
 }
 
 .__icons-color {
@@ -38,11 +36,19 @@ body {
 }
 
 ::-webkit-scrollbar-track {
+  background: #f5f7f8;
+}
+
+.dark ::-webkit-scrollbar-track {
   background: #101922;
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #3b4754;
+  background: #cbd5e1;
   border-radius: 3px;
   background-size: contain;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3b4754;
 }

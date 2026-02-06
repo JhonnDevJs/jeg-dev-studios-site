@@ -45,7 +45,7 @@ function CardProduct({
 			itemScope // Indica que este elemento describe un ítem.
 			itemType="http://schema.org/Product" // Especifica que el ítem es un Producto.
 			id={idProduct}
-			className="flex flex-col bg-transparent border rounded-3xl text-white text-left shadow-md p-1 card-services"
+			className="flex flex-col bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-3xl text-gray-900 dark:text-white text-left shadow-md p-1 transition-all duration-300"
 			style={{ width: "22rem" }}
 			data-price={dataPrice}
 		>
@@ -56,11 +56,11 @@ function CardProduct({
 				<meta itemProp="description" content={descriptionText} />
 			)}
 			<div className="flex flex-col justify-evenly flex-grow p-4">
-				<h3 itemProp="name" className="text-4xl font-extrabold text-center">
+				<h3 itemProp="name" className="text-4xl font-extrabold text-center text-gray-900 dark:text-white">
 					{title}
 				</h3>
 				{description && (
-					<p className="text-white/50 text-center">{description}</p>
+					<p className="text-gray-600 dark:text-white/50 text-center">{description}</p>
 				)}
 			</div>
 
@@ -73,30 +73,30 @@ function CardProduct({
 					<link itemProp="availability" href="http://schema.org/InStock" />
 
 					<div className="flex justify-evenly items-center">
-						<p className="font-light m-0">
+						<p className="font-light m-0 text-gray-600 dark:text-gray-300">
 							{isPriceFixed ? "Precio: " : "Desde: "}
 						</p>
-						<h4 className="font-bold text-xl">
+						<h4 className="font-bold text-xl text-gray-900 dark:text-white">
 							<span className="font-light">$</span>
 							{price}
 						</h4>
-						<p className="m-0">
+						<p className="m-0 text-gray-600 dark:text-gray-300">
 							<span> {moneda}</span>
 						</p>
 					</div>
 				</div>
-				<button className="btn-services my-auto" onClick={handleAddToCart}>
+				<button className="mt-4 w-full rounded-xl bg-blue-600 text-white hover:bg-blue-700 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 border border-transparent dark:border-white/10 font-bold py-3 px-6 transition-all active:scale-95 my-auto" onClick={handleAddToCart}>
 					<span className="font-bold">{labelBtn}</span>
 				</button>
 
-				<ul className="list-none p-0 mx-auto w-full">
+				<ul className="list-none p-0 mx-auto w-full mt-4">
 					{items.map((item, idx) => (
 						<li
 							key={idx}
-							className={`flex items-center bg-transparent text-white py-2 ${idx < items.length - 1 ? "border-b border-white/50" : ""
+							className={`flex items-center bg-transparent text-gray-700 dark:text-white py-2 ${idx < items.length - 1 ? "border-b border-gray-200 dark:border-white/50" : ""
 								}`}
 						>
-							<span className="icon-check-list text-xl mr-2"></span>
+							<span className="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
 							<p className="flex-1 text-xl m-0">{item}</p>
 						</li>
 					))}
@@ -107,7 +107,7 @@ function CardProduct({
 					{urlInfo && buttonLabelInfo && (
 						<Link
 							href={urlInfo}
-							className="link-light link-offset-2 link-underline-opacity-25 link-underline-opacity-100-hover"
+							className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
 							role="button"
 							aria-label={buttonLabelInfo}
 							title={buttonLabelInfo}

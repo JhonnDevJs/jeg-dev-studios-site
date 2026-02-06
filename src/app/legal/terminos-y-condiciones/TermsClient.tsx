@@ -209,12 +209,12 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
 
   return (
     <>
-			<StructuredData
-				type="BreadcrumbList"
-				idPage="breadcrumbs-terms-and-conditions"
-			/>
-			<StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-terminos" />
-      <main className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col w-full px-4 md:px-16">
+      <StructuredData
+        type="BreadcrumbList"
+        idPage="breadcrumbs-terms-and-conditions"
+      />
+      <StructuredData data={initialFaqs} type="FAQPage" idPage="faqs-terminos" />
+      <main className="bg-background-light dark:bg-background-dark font-display text-slate-900 dark:text-white antialiased min-h-screen flex flex-col w-full px-4 pt-5 md:px-16">
 
         {/* HERO TITLE */}
         <section className="mb-8">
@@ -252,7 +252,7 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
           {terms.map((term, index) => (
             <details
               key={term.id}
-              className="group rounded-xl bg-surface-dark border border-slate-200 dark:border-slate-800 open:border-blue-500/50 dark:open:border-blue-500/50 transition-all duration-300"
+              className="group rounded-xl bg-white dark:bg-surface-dark border border-gray-200 dark:border-slate-800 open:border-blue-500/50 dark:open:border-blue-500/50 transition-all duration-300 shadow-sm dark:shadow-none"
               open={index === 0} // El primero abierto por defecto
             >
               <summary className="flex w-full cursor-pointer items-center justify-between p-4 md:p-5 select-none">
@@ -271,7 +271,7 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
                 </span>
               </summary>
               <div className="px-5 pb-5 pt-0">
-                <div className="h-px w-full bg-slate-100 dark:bg-slate-700 mb-4"></div>
+                <div className="h-px w-full bg-gray-200 dark:bg-slate-700 mb-4"></div>
                 <div className="text-slate-600 dark:text-gray-300 text-sm leading-relaxed">
                   {term.content}
                 </div>
@@ -281,7 +281,7 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
         </section>
 
         {/* 4. CTA CONTACTO */}
-        <section className="mt-8 rounded-xl bg-gradient-to-r from-blue-500/20 to-blue-600/10 p-6 border border-blue-500/20">
+        <section className="mt-8 rounded-xl bg-blue-50 dark:bg-gradient-to-r dark:from-blue-500/20 dark:to-blue-600/10 p-6 border border-blue-100 dark:border-blue-500/20">
           <h4 className="text-slate-900 dark:text-white font-bold text-lg mb-2">
             ¿Tienes dudas sobre los términos?
           </h4>
@@ -305,17 +305,17 @@ export default function TermsClient({ initialFaqs }: TermsClientProps) {
 
           <article className="space-y-2">
 
-            <Link className="flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-slate-100 dark:border-slate-800 group hover:border-primary/50 transition-colors" href="/terminos-y-condiciones">
+            <Link className="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-slate-800 group hover:border-blue-500/50 transition-colors shadow-sm dark:shadow-none" href="/terminos-y-condiciones">
 
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Términos y Condiciones</span>
+              <span className="text-sm font-medium text-gray-700 dark:text-slate-200">Términos y Condiciones</span>
 
               <span className="material-symbols-outlined text-slate-400 group-hover:text-primary text-sm">arrow_forward_ios</span>
 
             </Link>
 
-            <Link className="flex items-center justify-between p-3 rounded-lg bg-surface-dark border border-slate-100 dark:border-slate-800 group hover:border-primary/50 transition-colors" href="/aviso-de-privacidad">
+            <Link className="flex items-center justify-between p-3 rounded-lg bg-white dark:bg-surface-dark border border-gray-200 dark:border-slate-800 group hover:border-blue-500/50 transition-colors shadow-sm dark:shadow-none" href="/aviso-de-privacidad">
 
-              <span className="text-sm font-medium text-slate-700 dark:text-slate-200">Política de Cookies</span>
+              <span className="text-sm font-medium text-gray-700 dark:text-slate-200">Política de Cookies</span>
 
               <span className="material-symbols-outlined text-slate-400 group-hover:text-primary text-sm">arrow_forward_ios</span>
 
