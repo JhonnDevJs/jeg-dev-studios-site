@@ -11,18 +11,16 @@ import { useEffect, useState } from "react";
 // Imports libs
 
 // Import Types
-import { Post } from "@/types";
 interface HomeClientProps {
-	posts: Post[];
 	assets: any;
 	initialFaqs: any; // You can replace 'any' with a more specific type if available
 }
 
 // Import Components
-import BlogSection from "@/components/Blog/BlogSection";
 import ContactForm from "@/components/Forms/ContactForm";
 import StructuredData from "@/components/Seo/StructuredData";
 import FAQ from "@/components/Seo/FAQ";
+import BlogSection from "@/components/Blog/BlogSection";
 
 // Imports Assets
 
@@ -32,7 +30,7 @@ import FAQ from "@/components/Seo/FAQ";
 import "./home.css";
 
 
-export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: HomeClientProps) {
+export default function HomeClient({ initialFaqs, assets }: HomeClientProps) {
 
 	// Lógica simple para detectar temporada (opcional)
 	const date = new Date();
@@ -597,28 +595,8 @@ export default function HomeClient({ initialFaqs, assets, posts: postsToShow }: 
 					</div>
 				</section>
 
-				{mounted && postsToShow.length > 0 && (
-					<BlogSection
-						posts={postsToShow
-							.map((post: Post) => {
-								// Mapeamos las propiedades de Post a BlogPost
-								if (post.title && post.link && post.pubDate) {
-									return {
-										...post, // Pasamos todas las propiedades originales
-										title: post.title,
-										link: post.link,
-										pubDate: post.pubDate,
-										contentSnippet: post.excerpt,
-										// CORRECCIÓN AQUÍ:
-										// Si imageUrl es null, lo convertimos a undefined usando '??'
-										imageUrl: post.imageUrl ?? undefined,
-									};
-								}
-								return null;
-							})
-							.filter((post): post is NonNullable<typeof post> => post !== null)}
-					/>
-				)}
+				{/* Renderizamos el componente del blog pasado desde el servidor */}
+				<BlogSection />
 			</div>
 
 		</>
