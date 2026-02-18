@@ -11,28 +11,31 @@ interface TimelineProcessProps {
 
 export default function TimelineProcess({ steps }: TimelineProcessProps) {
   return (
-    <div className="w-full max-w-4xl mx-auto">
-      <div className="relative pl-4 md:pl-0">
-        {/* Vertical Line */}
-        <div className="absolute left-4 md:left-6 top-4 bottom-4 w-0.5 bg-gray-200 dark:bg-white/10 rounded-full"></div>
+    <div className="w-full max-w-4xl mx-auto px-4">
+      <div className="relative pl-8 md:pl-12">
+        {/* Continuous Gradient Line */}
+        <div className="absolute left-[11px] md:left-[15px] top-4 bottom-4 w-[2px] bg-gradient-to-b from-blue-600 via-purple-500 to-transparent opacity-20 dark:opacity-40 rounded-full"></div>
 
-        <div className="flex flex-col gap-8 md:gap-12">
+        <div className="flex flex-col gap-6">
           {steps.map((step, index) => (
-            <div key={index} className="relative pl-12 md:pl-20 group">
-              {/* Number Bubble */}
-              <div className="absolute left-0 md:left-2 top-0 flex h-9 w-9 items-center justify-center rounded-full bg-white dark:bg-[#101922] border-4 border-gray-50 dark:border-[#101922] shadow-sm z-10 group-hover:scale-110 transition-transform duration-300">
-                <div className="h-full w-full rounded-full bg-blue-600 dark:bg-blue-500 flex items-center justify-center text-white text-xs font-bold shadow-lg shadow-blue-500/30">
-                  {index + 1}
-                </div>
-              </div>
+            <div key={index} className="relative group">
+              {/* Dot Marker */}
+              <div className="absolute -left-[29px] md:-left-[41px] top-8 w-6 h-6 rounded-full border-4 border-white dark:border-background-dark bg-gray-200 dark:bg-white/20 group-hover:bg-blue-600 group-hover:scale-125 transition-all duration-300 z-10 shadow-sm"></div>
 
-              {/* Card Content */}
-              <div className="p-6 bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/5 rounded-2xl shadow-sm hover:shadow-md hover:border-blue-500/30 transition-all duration-300">
-                <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
-                  {step.title}
-                </h3>
-                <div className="text-gray-600 dark:text-gray-300 leading-relaxed">
-                  {step.description}
+              {/* Card */}
+              <div className="relative p-6 md:p-8 bg-white dark:bg-surface-dark border border-gray-100 dark:border-white/5 rounded-2xl shadow-sm dark:shadow-none hover:shadow-xl hover:-translate-y-1 hover:border-blue-500/20 transition-all duration-300 overflow-hidden">
+                {/* Number Watermark */}
+                <span className="absolute -top-4 -right-2 text-8xl font-black text-gray-50 dark:text-white/5 select-none -z-0 group-hover:text-blue-50/50 dark:group-hover:text-blue-900/10 transition-colors duration-500">
+                  {index + 1}
+                </span>
+
+                <div className="relative z-10">
+                  <h3 className="text-xl md:text-2xl font-bold text-gray-900 dark:text-white mb-3 group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
+                    {step.title}
+                  </h3>
+                  <div className="text-gray-600 dark:text-gray-300 leading-relaxed">
+                    {step.description}
+                  </div>
                 </div>
               </div>
             </div>
