@@ -1,5 +1,8 @@
 // Ruta: /servicios/seo/web/page
 
+// Import Hooks
+import Link from "next/link";
+
 // Importa tus componentes
 import StructuredData from "@/components/Seo/StructuredData"; // Ajusta esta ruta
 import FAQ from "@/components/Seo/FAQ"; // Ajusta esta ruta

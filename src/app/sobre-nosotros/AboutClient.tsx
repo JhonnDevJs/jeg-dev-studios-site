@@ -1,4 +1,8 @@
 "use client";
+
+// Import Hooks
+import Link from "next/link";
+
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 import Script from "next/script";
