@@ -1,23 +1,15 @@
 "use client";
 import { useMemo } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import CardProduct from "@/components/Cards/CardProduct";
-import CardPacksProduct from "@/components/Cards/CardPacksProduct";
 import CTAProducts from "@/components/Cta/CTAProducts";
 import CardSmallList from "@/components/Cards/CardSmallList";
 import CardNestedLists from "@/components/Cards/CardNestedLists";
-import CardsProcess from "@/components/Cards/CardsProcess";
-import SectionProcess from "@/components/SectionProcess";
+import ProductSection from "@/components/Cards/ProductSection";
 import StructuredData from "@/components/Seo/StructuredData";
 import FAQ from "@/components/Seo/FAQ";
-import Image from "next/image";
 import imgWebProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgWebProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 
-import "swiper/css";
-import "swiper/css/navigation";
 import "./DevWebClient.css";
 
 export default function DevWebClient() {
@@ -32,7 +24,7 @@ export default function DevWebClient() {
         labelBtn: "Contratar ahora",
         isPriceFixed: true,
         description:
-          "Lanza tu idea o promociona un servicio específico rápidamente. Una página de aterrizaje optimizada para la conversión, construida sobre una plataforma fiable.",
+          "Invita a tus familiares y amigos a tu evento de una manera original y moderna.",
         imageSrc: imgWebProduct1.src,
         items: [
           "Hasta 5 secciones",
@@ -249,75 +241,42 @@ export default function DevWebClient() {
           tecnológica sólida es tu mejor ventaja competitiva.
         </p>
       </section>
-      <section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">
-          Paquetes de Desarrollo Web a tu Medida
-        </h2>
-        <p className="text-lg md:text-xl max-w-4xl mx-auto">
-          Desde un sitio robusto con tecnología de punta hasta un "Mini Sitio"
-          profesional para arrancar. Desliza para explorar la solución perfecta
-          para tu negocio.
-        </p>
-        <Swiper
-          className="w-full py-12"
-          modules={[Navigation, Autoplay]}
-          navigation={true}
-          spaceBetween={30}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            480: { slidesPerView: 1 },
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {products.map((product) => (
-            <SwiperSlide
+      <section className="flex flex-col w-full pb-12 md:pb-20">
+        <div className="container mx-auto px-4 mb-12 text-center">
+          <h2 className="text-3xl md:text-5xl font-bold text-gray-900 dark:text-white mb-6">
+            Paquetes de Desarrollo Web a tu Medida
+          </h2>
+          <p className="text-lg md:text-xl text-gray-600 dark:text-gray-300 max-w-4xl mx-auto">
+            Desde un sitio robusto con tecnología de punta hasta un "Mini Sitio"
+            profesional para arrancar. Explora la solución perfecta para tu
+            negocio.
+          </p>
+        </div>
+
+        <div className="w-full flex flex-col">
+          {products.map((product, index) => (
+            <ProductSection
               key={product.id}
-              className="flex justify-items-center p-12"
-            >
-              {product.type === "pack" ? (
-                <CardPacksProduct
-                  idProduct={product.id}
-                  dataPrice={product.price}
-                  title={product.name}
-                  price={product.price}
-                  moneda={product.currency}
-                  imageUrl={product.imageSrc}
-                  description={product.description}
-                  items={product.items}
-                  isPriceFixed={product.isPriceFixed}
-                  labelBtn={product.labelBtn}
-                  onQuote={() => handleWhatsAppRedirect(product.name)}
-                  urlInfo={product.urlInfo}
-                  buttonLabelInfo={product.buttonLabelInfo}
-                />
-              ) : (
-                <CardProduct
-                  idProduct={product.id}
-                  dataPrice={product.price}
-                  title={product.name}
-                  price={product.price}
-                  moneda={product.currency}
-                  imageUrl={product.imageSrc}
-                  description={product.description}
-                  items={product.items}
-                  isPriceFixed={product.isPriceFixed}
-                  labelBtn={product.labelBtn}
-                  onAdd={() => handleWhatsAppRedirect(product.name)}
-                  urlInfo={product.urlInfo}
-                  buttonLabelInfo={product.buttonLabelInfo}
-                />
-              )}
-            </SwiperSlide>
+              id={product.id}
+              title={product.name}
+              description={product.description}
+              price={product.price}
+              currency={product.currency}
+              features={product.items}
+              imageSrc={product.imageSrc}
+              isReversed={index % 2 !== 0} // Alternating layout
+              isRecommended={
+                product.type === "pack" &&
+                product.price > 10000 &&
+                product.price < 30000
+              } // Highlight middle pack or similar logic
+              isPriceFixed={product.isPriceFixed}
+              actionLabel={product.labelBtn}
+              onAction={() => handleWhatsAppRedirect(product.name)}
+              urlInfo={product.urlInfo}
+            />
           ))}
-        </Swiper>
+        </div>
       </section>
       {/* --- NUEVA SECCIÓN INFORMATIVA (SEMÁNTICA + LONG FORM) --- */}
       <section className="text-gray-900 dark:text-white py-12 md:py-20">

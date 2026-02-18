@@ -4,7 +4,6 @@ import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
 import CardInfo from "@/components/Cards/CardInfo";
 import TimelineProcess from "@/components/Cards/TimelineProcess";
-import Image from "next/image";
 
 export default function PublicidadClient() {
   const faqs = [

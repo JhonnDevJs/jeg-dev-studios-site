@@ -1,23 +1,19 @@
 // Ruta: /servicios/desarrollo/software-empresarial/page
 "use client";
 import { useMemo } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import CardPacksProduct from "@/components/Cards/CardPacksProduct";
+
+import ProductSection from "@/components/Cards/ProductSection";
 import CardInfo from "@/components/Cards/CardInfo";
 import TimelineProcess from "@/components/Cards/TimelineProcess";
 import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
-import Image from "next/image";
 // Asegúrate de importar tus imágenes correctamente
 import imgSoftProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import imgSoftProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 
-import "swiper/css";
-import "swiper/css/navigation";
 import "./DevSoftClient.css";
 
 export default function DevSoftClient() {
@@ -226,53 +222,37 @@ export default function DevSoftClient() {
       </section>
 
       {/* SECCIÓN DE PAQUETES */}
-      <section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-gray-900 dark:text-white">
-          Paquetes de Software a Medida
-        </h2>
-        <p className="text-lg md:text-xl w-full px-3 md:px-5 max-w-4xl text-gray-600 dark:text-white">
-          Te ofrecemos paquetes adaptados a tus necesidades y presupuesto.{" "}
-          <strong>Ofrecemos servicios</strong> flexibles, desde sistemas básicos
-          hasta plataformas empresariales completas.
-        </p>
-        <Swiper
-          className="w-full py-12"
-          modules={[Navigation, Autoplay]}
-          navigation={true}
-          spaceBetween={30}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {services.map((service) => (
-            <SwiperSlide
+      <section className="flex flex-col w-full pb-12 md:pb-20 text-center">
+        <div className="container mx-auto px-4 mb-12">
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-6">
+            Paquetes de Software a Medida
+          </h2>
+          <p className="text-lg md:text-xl max-w-4xl mx-auto text-gray-600 dark:text-gray-300">
+            Te ofrecemos paquetes adaptados a tus necesidades y presupuesto.{" "}
+            <strong>Ofrecemos servicios</strong> flexibles, desde sistemas
+            básicos hasta plataformas empresariales completas.
+          </p>
+        </div>
+
+        <div className="w-full flex flex-col">
+          {services.map((service, index) => (
+            <ProductSection
               key={service.id}
-              className="flex justify-items-center p-12"
-            >
-              <CardPacksProduct
-                idProduct={service.id}
-                dataPrice={service.price}
-                title={service.name}
-                price={service.price}
-                moneda={service.currency}
-                imageUrl={service.imageSrc}
-                description={service.description}
-                items={service.items}
-                isPriceFixed={service.isPriceFixed}
-                labelBtn={service.labelBtn}
-                onQuote={() => handleWhatsAppRedirect(service.name)}
-              />
-            </SwiperSlide>
+              id={service.id}
+              title={service.name}
+              description={service.description}
+              price={service.price}
+              currency={service.currency}
+              features={service.items}
+              imageSrc={service.imageSrc}
+              isReversed={index % 2 !== 0}
+              onAction={() => handleWhatsAppRedirect(service.name)}
+              actionLabel={service.labelBtn}
+              isPriceFixed={service.isPriceFixed}
+              isRecommended={service.price > 30000 && service.price < 50000} // Highlight "Advanced"
+            />
           ))}
-        </Swiper>
+        </div>
       </section>
 
       <section className="flex flex-col justify-center items-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">

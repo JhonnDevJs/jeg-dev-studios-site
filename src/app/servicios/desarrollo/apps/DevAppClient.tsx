@@ -1,19 +1,15 @@
 "use client";
 import { useMemo } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Autoplay } from "swiper/modules";
-import CardPacksProduct from "@/components/Cards/CardPacksProduct";
 import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
-import Image from "next/image";
 import TimelineProcess from "@/components/Cards/TimelineProcess";
+import ProductSection from "@/components/Cards/ProductSection";
 import imgAppProduct1 from "@/assets/img/img/services/dev-web/pack-1/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct2 from "@/assets/img/img/services/dev-web/pack-2/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct3 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
 import imgAppProduct4 from "@/assets/img/img/services/dev-web/pack-3/imagen-muestra-de-pagina-web.webp";
-import "swiper/css";
-import "swiper/css/navigation";
+
 import "./DevAppClient.css";
 
 export default function DevAppClient() {
@@ -259,47 +255,26 @@ export default function DevAppClient() {
         </div>
       </section>
 
-      <section className="flex flex-col justify-center items-center text-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3 gradient-effect-y">
-        <Swiper
-          className="w-full py-12"
-          modules={[Navigation, Autoplay]}
-          navigation={true}
-          spaceBetween={30}
-          centeredSlides={true}
-          loop={true}
-          autoplay={{
-            delay: 3000,
-            disableOnInteraction: false,
-          }}
-          breakpoints={{
-            320: { slidesPerView: 1 },
-            480: { slidesPerView: 1 },
-            640: { slidesPerView: 1 },
-            768: { slidesPerView: 2 },
-            1024: { slidesPerView: 3 },
-          }}
-        >
-          {services.map((service) => (
-            <SwiperSlide
+      <section className="flex flex-col w-full pb-12 md:pb-20">
+        <div className="w-full flex flex-col">
+          {services.map((service, index) => (
+            <ProductSection
               key={service.id}
-              className="flex justify-items-center p-12"
-            >
-              <CardPacksProduct
-                idProduct={service.id}
-                dataPrice={service.price}
-                title={service.name}
-                price={service.price}
-                moneda={service.currency}
-                imageUrl={service.imageSrc}
-                description={service.description}
-                items={service.items}
-                isPriceFixed={service.isPriceFixed}
-                labelBtn={service.labelBtn}
-                onQuote={() => handleWhatsAppRedirect(service.name)}
-              />
-            </SwiperSlide>
+              id={service.id}
+              title={service.name}
+              description={service.description}
+              price={service.price}
+              currency={service.currency}
+              features={service.items}
+              imageSrc={service.imageSrc}
+              isReversed={index % 2 !== 0}
+              onAction={() => handleWhatsAppRedirect(service.name)}
+              actionLabel={service.labelBtn}
+              isPriceFixed={service.isPriceFixed}
+              isRecommended={service.price > 30000 && service.price < 80000} // Highlight middle option
+            />
           ))}
-        </Swiper>
+        </div>
       </section>
 
       <section className="flex flex-col justify-center items-center text-gray-900 dark:text-white w-full py-12 md:py-20 px-4 gap-3">

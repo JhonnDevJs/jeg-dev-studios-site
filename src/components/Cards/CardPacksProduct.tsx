@@ -3,127 +3,165 @@ import Link from "next/link";
 
 // 1. Definimos la interfaz de las props con TypeScript
 interface CardPacksProductProps {
-	idProduct: string;
-	dataPrice: number;
-	title: string;
-	price: number; // Cambiado a number para consistencia
-	moneda: string;
-	items?: string[];
-	onQuote: (details: { idProduct: string; title: string; moneda: string; dataPrice: number }) => void;
-	imageUrl?: string;
-	description?: string;
-	isPriceFixed?: boolean;
-	labelBtn?: string;
-	urlInfo?: string;
-	buttonLabelInfo?: string;
+  idProduct: string;
+  dataPrice: number;
+  title: string;
+  price: number; // Cambiado a number para consistencia
+  moneda: string;
+  items?: string[];
+  onQuote: (details: {
+    idProduct: string;
+    title: string;
+    moneda: string;
+    dataPrice: number;
+  }) => void;
+  imageUrl?: string;
+  description?: string;
+  isPriceFixed?: boolean;
+  labelBtn?: string;
+  urlInfo?: string;
+  buttonLabelInfo?: string;
 }
 
 function CardPacksProduct({
-	idProduct,
-	dataPrice,
-	title,
-	price,
-	moneda,
-	items = [],
-	onQuote,
-	imageUrl, // Nuevo prop para la URL de la imagen del producto
-	description, // Prop para la descripción corta
-	isPriceFixed = false, // Prop para definir si el precio es fijo
-	labelBtn = "Cotizar mi proyecto", // Prop para el texto del botón
-	urlInfo,
-	buttonLabelInfo,
+  idProduct,
+  dataPrice,
+  title,
+  price,
+  moneda,
+  items = [],
+  onQuote,
+  imageUrl,
+  description,
+  isPriceFixed = false,
+  labelBtn = "Cotizar mi proyecto",
+  urlInfo,
+  buttonLabelInfo,
 }: CardPacksProductProps) {
-	const handleQuoteRequest = () => {
-		onQuote({ idProduct, title, moneda, dataPrice });
-	};
+  const handleQuoteRequest = () => {
+    onQuote({ idProduct, title, moneda, dataPrice });
+  };
 
-	// Generar una descripción a partir de la lista de items (características)
-	const descriptionText = items.join(". ") + ".";
+  const descriptionText = items.join(". ") + ".";
 
-	return (
-		<li
-			itemScope // Indica que este elemento describe un ítem.
-			itemType="http://schema.org/Product" // Especifica que el ítem es un Producto.
-			id={idProduct}
-			className="flex flex-col bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-3xl text-gray-900 dark:text-white text-left shadow-md p-1 transition-all duration-300"
-			style={{ width: "22rem" }}
-			data-price={dataPrice}
-		>
-			{/* Microdatos para el ID del producto (importante para Facebook) */}
-			<meta itemProp="productID" content={idProduct} />
-			{imageUrl && <link itemProp="image" href={imageUrl} />}
-			{descriptionText && (
-				<meta itemProp="description" content={descriptionText} />
-			)}
+  return (
+    <div
+      itemScope
+      itemType="http://schema.org/Product"
+      id={idProduct}
+      className="relative flex flex-col w-full max-w-[22rem] bg-white dark:bg-surface-dark border border-gray-200 dark:border-white/10 rounded-[2rem] overflow-hidden shadow-sm hover:shadow-2xl hover:-translate-y-2 hover:border-blue-500/40 transition-all duration-300 group h-full"
+      data-price={dataPrice}
+    >
+      <meta itemProp="productID" content={idProduct} />
+      {imageUrl && <link itemProp="image" href={imageUrl} />}
+      {descriptionText && (
+        <meta itemProp="description" content={descriptionText} />
+      )}
 
-			<div className="flex flex-col justify-evenly flex-grow p-4">
-					<h3 itemProp="name" className="text-4xl font-extrabold text-center text-gray-900 dark:text-white">
-						{title}
-					</h3>
-					{description && (
-						<p className="text-gray-600 dark:text-white/50 text-center">{description}</p>
-					)}
-			</div>
-			<div className="flex flex-col p-4">
-				{/* Contenedor para la oferta del producto (precio, moneda, disponibilidad) */}
-				<div itemProp="offers" itemScope itemType="http://schema.org/Offer">
-					<meta itemProp="priceCurrency" content={moneda} />
-					<meta itemProp="price" content={dataPrice.toString()} />
-					{/* Para servicios, "InStock" o "AvailableForOrder" suelen ser apropiados */}
-					<link itemProp="availability" href="http://schema.org/InStock" />
+      {/* Premium Badge */}
+      <div className="absolute top-0 inset-x-0 h-1 bg-gradient-to-r from-blue-600 via-purple-500 to-cyan-500"></div>
 
-					<div className="flex justify-evenly items-center">
-						<p className="font-light m-0 text-gray-600 dark:text-gray-300">
-							{isPriceFixed ? "Precio: " : "Desde: "}
-						</p>
-						<h4 className="font-bold text-xl text-gray-900 dark:text-white">
-							<span className="font-light">$</span>
-							{price}
-						</h4>
-						<p className="m-0 text-gray-600 dark:text-gray-300">
-							<span> {moneda}</span>
-						</p>
-					</div>
-				</div>
-				<button className="mt-4 w-full rounded-xl bg-blue-600 text-white hover:bg-blue-700 dark:bg-white/5 dark:text-white dark:hover:bg-white/10 border border-transparent dark:border-white/10 font-bold py-3 px-6 transition-all active:scale-95 my-auto" onClick={handleQuoteRequest}>
-					<span className="font-bold">{labelBtn}</span>
-				</button>
+      <div className="flex flex-col p-8 gap-6 h-full">
+        <div className="text-center space-y-4">
+          <div className="inline-block px-3 py-1 rounded-full bg-blue-50 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 text-xs font-bold uppercase tracking-wider mb-2">
+            Paquete Recomendado
+          </div>
+          <h3
+            itemProp="name"
+            className="text-2xl font-bold text-gray-900 dark:text-white"
+          >
+            {title}
+          </h3>
+          {description && (
+            <p className="text-sm text-gray-500 dark:text-gray-400 min-h-[3rem]">
+              {description}
+            </p>
+          )}
+        </div>
 
-				{/* Podrías añadir una descripción del producto aquí con itemProp="description" */}
+        {/* Price Section */}
+        <div className="flex flex-col items-center justify-center py-6 bg-gray-50 dark:bg-white/5 rounded-2xl border border-gray-100 dark:border-white/5">
+          <p className="text-xs font-semibold text-gray-500 dark:text-gray-400 uppercase tracking-widest mb-1">
+            {isPriceFixed ? "Inversión única" : "Desde"}
+          </p>
+          <div
+            className="flex items-baseline gap-1"
+            itemProp="offers"
+            itemScope
+            itemType="http://schema.org/Offer"
+          >
+            <meta itemProp="priceCurrency" content={moneda} />
+            <meta itemProp="price" content={dataPrice.toString()} />
+            <link itemProp="availability" href="http://schema.org/InStock" />
 
-				<ul className="list-none p-0 mx-auto w-full mt-4">
-					{items.map((item, idx) => (
-						<li
-							key={idx}
-							className={`flex items-center bg-transparent text-gray-700 dark:text-white py-2 ${idx < items.length - 1 ? "border-b border-gray-200 dark:border-white/50" : ""
-								}`}
-						>
-							<span className="material-symbols-outlined text-blue-500 mr-2">check_circle</span>
-							<p className="flex-1 text-xl m-0">{item}</p>
-						</li>
-					))}
-				</ul>
-			</div>
+            <span className="text-lg text-gray-500 font-medium">$</span>
+            <span className="text-4xl font-black text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-purple-600 tracking-tight">
+              {price.toLocaleString()}
+            </span>
+            <span className="text-sm text-gray-500 font-medium">{moneda}</span>
+          </div>
+        </div>
 
-			<div className="flex flex-col justify-center items-center p-4">
-				<div className="flex justify-center items-end mt-auto pt-3">
-					{urlInfo && buttonLabelInfo && (
-						<Link
-							href={urlInfo}
-							className="text-blue-600 dark:text-blue-400 hover:underline text-sm font-medium"
-							role="button"
-							aria-label={buttonLabelInfo}
-							title={buttonLabelInfo}
-							target="_blank"
-							tabIndex={0}
-						>
-							Saber más
-						</Link>
-					)}
-				</div>
-			</div>
-		</li>
-	);
+        <ul className="flex-1 space-y-4 my-2">
+          {items.map((item, idx) => (
+            <li
+              key={idx}
+              className="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300"
+            >
+              <span className="flex items-center justify-center w-5 h-5 rounded-full bg-blue-100 dark:bg-blue-900/30 text-blue-600 dark:text-blue-400 shrink-0 mt-0.5">
+                <svg
+                  width="12"
+                  height="12"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+              </span>
+              <span className="leading-snug">{item}</span>
+            </li>
+          ))}
+        </ul>
+
+        <div className="mt-auto space-y-4 pt-4">
+          <button
+            className="w-full rounded-xl bg-gradient-to-r from-blue-600 to-purple-600 text-white font-bold py-3.5 px-6 hover:shadow-lg hover:shadow-blue-500/25 hover:scale-[1.02] transition-all duration-300 active:scale-95 flex items-center justify-center gap-2 group/btn"
+            onClick={handleQuoteRequest}
+          >
+            <span>{labelBtn}</span>
+            <svg
+              className="w-5 h-5 transform group-hover/btn:translate-x-1 transition-transform"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M13 7l5 5m0 0l-5 5m5-5H6"
+              />
+            </svg>
+          </button>
+
+          {urlInfo && buttonLabelInfo && (
+            <Link
+              href={urlInfo}
+              className="block text-center text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-blue-600 dark:hover:text-blue-400 transition-colors"
+              target="_blank"
+              aria-label={buttonLabelInfo}
+            >
+              Más información
+            </Link>
+          )}
+        </div>
+      </div>
+    </div>
+  );
 }
 
 export default CardPacksProduct;
