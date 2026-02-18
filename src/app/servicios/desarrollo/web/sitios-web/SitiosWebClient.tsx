@@ -1,6 +1,4 @@
 "use client";
-import Image from "next/image";
-import Link from "next/link";
 import StructuredData from "@/components/Seo/StructuredData";
 import FAQ from "@/components/Seo/FAQ";
 import SectionProcess from "@/components/SectionProcess";

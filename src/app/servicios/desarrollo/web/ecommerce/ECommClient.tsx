@@ -1,6 +1,5 @@
 // Ruta: /servicios/desarrollo/web/ecommerce/page
-import Image from "next/image";
-import Link from "next/link";
+
 // Importa tus componentes
 import StructuredData from "@/components/Seo/StructuredData"; // Ajusta esta ruta
 import FAQ from "@/components/Seo/FAQ"; // Ajusta esta ruta

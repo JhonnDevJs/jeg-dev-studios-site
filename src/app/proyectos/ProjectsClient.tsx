@@ -1,6 +1,5 @@
 "use client";
 import { useState, useRef, useEffect } from "react";
-import Image from "next/image";
 import ProjectCard from "@/components/Cards/ProjectCard";
 import DesignProjectCard from "@/components/Cards/DesignProjectCard";
 import CTA from "@/components/Cta/CTA";

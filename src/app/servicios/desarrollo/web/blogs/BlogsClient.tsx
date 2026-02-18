@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 // Importa tus componentes
 import StructuredData from "@/components/Seo/StructuredData"; // Ajusta esta ruta
 import FAQ from "@/components/Seo/FAQ";

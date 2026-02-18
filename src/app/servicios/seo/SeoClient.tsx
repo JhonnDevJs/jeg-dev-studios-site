@@ -1,6 +1,5 @@
 "use client";
 import { useMemo } from "react";
-import Image from "next/image";
 import StructuredData from "@/components/Seo/StructuredData";
 import CardNestedLists from "@/components/Cards/CardNestedLists";
 import CardServices from "@/components/Cards/CardServices";

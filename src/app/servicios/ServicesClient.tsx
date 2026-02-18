@@ -1,7 +1,6 @@
 "use client";
 
 // Imports Hooks
-import Image from "next/image";
 
 // Import Custom Hooks
 

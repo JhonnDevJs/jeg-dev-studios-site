@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import StructuredData from "@/components/Seo/StructuredData";
 import CTAProducts from "@/components/Cta/CTAProducts";
 import FAQ from "@/components/Seo/FAQ";
