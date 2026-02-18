@@ -19,7 +19,7 @@ export default function DisenoClient() {
           "Construimos la base de tu marca. Creamos logotipos y sistemas de identidad visual completos que comunican tus valores, te diferencian de la competencia y generan reconocimiento.",
         price: 1000,
         currency: "MXN",
-        url: "/contacto",
+        url: "/servicios/diseno/branding",
         buttonLabel: "Ver Servicios de Branding",
         items: [
           "Diseño de Logotipos Profesionales",
@@ -36,7 +36,7 @@ export default function DisenoClient() {
           "Diseñamos plataformas digitales centradas en el usuario. Creamos interfaces intuitivas y atractivas para sitios web, aplicaciones móviles y software, garantizando una navegación fluida que guía al usuario hacia la conversión.",
         price: 1000,
         currency: "MXN",
-        url: "/contacto",
+        url: "/servicios/diseno/ux-ui/web",
         buttonLabel: "Explorar Diseño UX/UI",
         items: [
           "Diseño UX/UI para Sitios Web",
@@ -53,7 +53,7 @@ export default function DisenoClient() {
           "Llevamos tu marca al formato físico y digital. Diseñamos desde catálogos y revistas hasta material publicitario para redes sociales, asegurando una comunicación visual coherente y profesional en todos tus canales.",
         price: 1000,
         currency: "MXN",
-        url: "/contacto",
+        url: "/servicios/diseno/publicidad",
         buttonLabel: "Ver Soluciones Editoriales",
         items: [
           "Diseño de Catálogos y Revistas",
