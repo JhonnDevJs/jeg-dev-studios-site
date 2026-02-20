@@ -1,7 +1,3 @@
-import ferPhoto from "@/assets/img/img/team/fer-briseno.webp";
-import leoPhoto from "@/assets/img/img/team/leonardo-gonzalez.webp";
-import jhonPhoto from "@/assets/img/img/team/jhonatan-espinal.webp";
-
 export const cardServices = [
   {
     title: "Desarrollo a Medida: Web, Apps y Software",
@@ -67,7 +63,7 @@ export const teamData = [
         icon: "icon-link",
       },
     ],
-    imageUrl: jhonPhoto,
+    imageUrl: "https://media.licdn.com/dms/image/v2/D4E03AQHw0Uic_48q2Q/profile-displayphoto-scale_200_200/B4EZsFcwcQGYAY-/0/1765322984034?e=1773273600&v=beta&t=jFaTK_Sqd-vYEDAWIgFbKBDUrnUohXnMrWab8yD-Ei0",
   },
   {
     name: "Fernanda Briseño",
@@ -86,7 +82,7 @@ export const teamData = [
         icon: "icon-behance",
       },
     ],
-    imageUrl: ferPhoto,
+    imageUrl: "https://media.licdn.com/dms/image/v2/D4E03AQGZnUrySE06lg/profile-displayphoto-shrink_200_200/B4EZWN3c_hGgAg-/0/1741841879421?e=1773273600&v=beta&t=nUz2EBoM44w0LX9srBS6VjQBmAbJ1xRMnuB8WrBgAyw",
   },
   {
     name: "Leonardo González",
@@ -100,7 +96,7 @@ export const teamData = [
         icon: "icon-linkedin-no-bg",
       },
     ],
-    imageUrl: leoPhoto,
+    imageUrl: "https://media.licdn.com/dms/image/v2/D4E35AQE_8HQ5Ush2Rg/profile-framedphoto-shrink_200_200/B4EZiFrLIpGwAY-/0/1754589344595?e=1772229600&v=beta&t=xIXTKlITPMeCVLEIumfE67dSUmTtLefjKpDcyAcVSyM",
   },
 ];
 

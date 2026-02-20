@@ -5,8 +5,7 @@ import DesignProjectCard from "@/components/Cards/DesignProjectCard";
 import CTA from "@/components/Cta/CTA";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
-import { db } from "@/lib/firebase";
-import { collection, getDocs } from "firebase/firestore";
+import { supabase } from "@/lib/supabase";
 import "./Projects.css";
 
 interface ProjectsClientProps {
@@ -22,7 +21,7 @@ interface Project {
   description: string;
   technologies: string[];
   link?: string;
-  figmaEmbedUrl?: string; // Propiedad que faltaba
+  figmaEmbedUrl?: string;
 }
 
 export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
@@ -36,55 +35,43 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
     const fetchProjects = async () => {
       setLoading(true);
       try {
-        // 1. Obtener los datos de los proyectos desde Firestore
-        const querySnapshot = await getDocs(collection(db, "projects"));
+        const { data: projectsData, error } = await supabase
+          .from("projects")
+          .select("*")
+          .order("sort_order", { ascending: true });
+
+        if (error) {
+          throw error;
+        }
+
         // Mapeamos explícitamente para asegurar que los datos coincidan con la interfaz Project
-        const projectsData: Project[] = querySnapshot.docs.map((doc) => {
-          const data = doc.data();
+        const projects: Project[] = projectsData.map((p: any) => {
+          let category = p.category;
+          if (category === "soft") {
+            category = "software";
+          }
+
           return {
-            id: doc.id,
-            image: data.image || "/placeholder.png",
-            category: data.category || "web",
-            title: data.title || "Sin Título",
-            description: data.description || "Sin Descripción",
-            technologies: data.technologies || [],
-            link: data.link, // Será undefined si no existe en Firestore
-            figmaEmbedUrl: data.figmaEmbedUrl, // Será undefined si no existe en Firestore
+            id: p.id.toString(),
+            image: p.image_url || "/placeholder.png",
+            category: category || "web",
+            title: p.title || "Sin Título",
+            description: p.description || "Sin Descripción",
+            technologies: [], // No hay datos de tecnologías en Supabase
+            link: p.project_url,
+            figmaEmbedUrl: p.iframe_url,
           };
         });
 
-        // 2. Asignar la URL de la imagen directamente desde los datos de Firestore
-        const projectsWithCorrectedImages = projectsData.map(
-          (project: Project) => {
-            let imageUrl = project.image || "/placeholder.png";
-
-            // Si la imagen es de Google Drive, la transformamos a un enlace directo.
-            if (imageUrl.includes("drive.google.com/file/d/")) {
-              try {
-                const fileId = imageUrl.split("/d/")[1].split("/")[0];
-                imageUrl = `https://drive.google.com/uc?export=view&id=${fileId}`;
-              } catch (e) {
-                console.error(
-                  "Could not parse Google Drive URL:",
-                  project.image,
-                );
-                imageUrl = "/placeholder.png"; // Volvemos al placeholder si falla
-              }
-            }
-
-            return { ...project, image: imageUrl }; // Sobrescribimos la propiedad 'image'
-          },
-        );
-
-        // 3. Agrupar proyectos por categoría
-        const groupedProjects = projectsWithCorrectedImages.reduce(
+        // Agrupar proyectos por categoría
+        const groupedProjects = projects.reduce(
           (acc: Record<string, Project[]>, project: Project) => {
             const category = project.category || "web"; // Categoría por defecto
             if (!acc[category]) acc[category] = [];
             acc[category].push(project);
             return acc;
           },
-          {}, // El tipo del acumulador (acc) ahora está definido
+          {},
         );
 
         setProjectsByCategory(groupedProjects);
@@ -173,11 +160,10 @@ export default function ProjectsClient({ initialFaqs }: ProjectsClientProps) {
                 key={category.id}
                 data-category-id={category.id}
                 type="button"
-                className={`relative z-1 px-4 py-2 text-lg font-bold shadow-lg rounded-md transition-colors duration-300 ${
-                  activeCategory === category.id
+                className={`relative z-1 px-4 py-2 text-lg font-bold shadow-lg rounded-md transition-colors duration-300 ${activeCategory === category.id
                     ? "text-white"
                     : "text-gray-600 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white"
-                }`}
+                  }`}
                 onClick={() => setActiveCategory(category.id)}
               >
                 {category.title}

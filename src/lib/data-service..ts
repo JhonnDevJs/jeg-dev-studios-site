@@ -67,3 +67,25 @@ export async function getLogos() {
   
   return logosMap;
 }
+
+// lib/data-service.js
+
+export async function getProjectsByCategory(category: any) {
+  let query = supabase
+    .from("projects")
+    .select("category, title, description, image_url, project_url, iframe_url")
+    .order("sort_order", { ascending: true });
+
+  // Si pasas 'all', trae todos, si no, filtra por categoría
+  if (category && category !== 'all') {
+    query = query.eq('category', category);
+  }
+
+  const { data, error } = await query;
+
+  if (error) {
+    console.error(`Error fetching projects for ${category}:`, error);
+    return [];
+  }
+  return data;
+}

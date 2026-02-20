@@ -6,6 +6,7 @@ import Link from "next/link";
 import FAQ from "@/components/Seo/FAQ";
 import StructuredData from "@/components/Seo/StructuredData";
 import Script from "next/script";
+import { teamData } from "@/lib/constants";
 import "./AboutClient.css";
 
 interface AboutClientProps {
@@ -254,12 +255,10 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
           </div>
           <div className="flex flex-col md:flex-row gap-6">
             <div className="flex flex-row md:flex-col md:justify-center md:text-center items-center gap-4">
-              <div
+              <img
+                src="https://media.licdn.com/dms/image/v2/D4E03AQHw0Uic_48q2Q/profile-displayphoto-scale_200_200/B4EZsFcwcQGYAY-/0/1765322984034?e=1773273600&v=beta&t=jFaTK_Sqd-vYEDAWIgFbKBDUrnUohXnMrWab8yD-Ei0"
                 className="w-16 h-16 rounded-full bg-cover bg-center border-2 border-blue-500/20 shrink-0"
-                style={{
-                  backgroundImage: `url('https://media.licdn.com/dms/image/v2/D4E03AQHw0Uic_48q2Q/profile-displayphoto-scale_400_400/B4EZsFcwcQGYAg-/0/1765322984034?e=1769040000&v=beta&t=TnSJDPNAaESoZZT0v2CkhLoALPtWHQy14dAM7QpMKZU')`,
-                }}
-              ></div>
+              />
               <div>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Jhonatan Espinal
@@ -273,12 +272,9 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
               </div>
             </div>
             <div className="flex flex-row md:flex-col md:justify-center md:text-center items-center gap-4">
-              <div
+              <img src="https://media.licdn.com/dms/image/v2/D4E35AQE_8HQ5Ush2Rg/profile-framedphoto-shrink_200_200/B4EZiFrLIpGwAY-/0/1754589344595?e=1772229600&v=beta&t=xIXTKlITPMeCVLEIumfE67dSUmTtLefjKpDcyAcVSyM"
                 className="w-16 h-16 rounded-full bg-cover bg-center border-2 border-transparent shrink-0 bg-gray-800"
-                style={{
-                  backgroundImage: `url('https://media.licdn.com/dms/image/v2/D4E35AQE_8HQ5Ush2Rg/profile-framedphoto-shrink_400_400/B4EZiFrLIpGwAc-/0/1754589344595?e=1768244400&v=beta&t=xXFEGXnGGMY8Ey35oVgRKlIWYtEE3WWTXk5DMl4j6Ds')`,
-                }}
-              ></div>
+              />
               <div>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Leonardo Valadez
@@ -292,12 +288,9 @@ export default function AboutClient({ initialFaqs }: AboutClientProps) {
               </div>
             </div>
             <div className="flex flex-row md:flex-col md:justify-center md:text-center items-center gap-4">
-              <div
+              <img src="https://media.licdn.com/dms/image/v2/D4E03AQGZnUrySE06lg/profile-displayphoto-shrink_200_200/B4EZWN3c_hGgAg-/0/1741841879421?e=1773273600&v=beta&t=nUz2EBoM44w0LX9srBS6VjQBmAbJ1xRMnuB8WrBgAyw"
                 className="w-16 h-16 rounded-full bg-cover bg-center border-2 border-transparent shrink-0 bg-gray-800"
-                style={{
-                  backgroundImage: `url('https://media.licdn.com/dms/image/v2/D4E03AQGZnUrySE06lg/profile-displayphoto-shrink_400_400/B4EZWN3c_hGgAo-/0/1741841879421?e=1769040000&v=beta&t=DknIFEk3VXoxgbN54cUwkVcb63ixVdUyd9iAktm2z3A')`,
-                }}
-              ></div>
+              />
               <div>
                 <h3 className="text-sm font-bold text-slate-900 dark:text-white">
                   Fernanda Briseño
