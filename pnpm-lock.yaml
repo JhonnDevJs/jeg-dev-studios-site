@@ -9,13 +9,13 @@ importers:
   .:
     dependencies:
       '@next/third-parties':
-        specifier: ^16.0.10
+        specifier: ^16.1.6
         version: 16.1.6(next@16.2.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
       '@supabase/supabase-js':
-        specifier: ^2.89.0
+        specifier: ^2.97.0
         version: 2.97.0
       firebase:
-        specifier: ^12.6.0
+        specifier: ^12.9.0
         version: 12.9.0
       next:
         specifier: ^16.2.6
@@ -43,16 +43,16 @@ importers:
         version: 12.1.2
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4.1.18
+        specifier: ^4.2.0
         version: 4.2.0
       '@tailwindcss/typography':
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.2.0)
       '@types/node':
-        specifier: ^20.19.27
+        specifier: ^20.19.33
         version: 20.19.33
       '@types/react':
-        specifier: ^19.2.7
+        specifier: ^19.2.14
         version: 19.2.14
       '@types/react-dom':
         specifier: ^19.2.3
@@ -64,7 +64,7 @@ importers:
         specifier: ^0.2.4
         version: 0.2.4
       tailwindcss:
-        specifier: ^4.1.18
+        specifier: ^4.2.0
         version: 4.2.0
       typescript:
         specifier: ^5.9.3
@@ -1139,8 +1139,8 @@ packages:
     resolution: {integrity: sha512-PS08Iboia9mts/2ygV3eLpY5ghnUcfLV/EXTOW1E2qYxJKGGBUtNjN76FYHnMs36RmARn41bC0AZmn+rR0OVpQ==}
     engines: {node: ^10 || ^12 || >=14}
 
-  postcss@8.5.6:
-    resolution: {integrity: sha512-3Ybi1tAuwAP9s0r1UQ2J4n5Y0G05bJkpUIO0/bI9MhwmD70S5aTWbXGBwxHrelT+XM1k6dM0pk+SwNkpTRN7Pg==}
+  postcss@8.5.14:
+    resolution: {integrity: sha512-SoSL4+OSEtR99LHFZQiJLkT59C5B1amGO1NzTwj7TT1qCUgUO6hxOvzkOYxD+vMrXBM3XJIKzokoERdqQq/Zmg==}
     engines: {node: ^10 || ^12 || >=14}
 
   prelude-ls@1.2.1:
@@ -1988,7 +1988,7 @@ snapshots:
       '@alloc/quick-lru': 5.2.0
       '@tailwindcss/node': 4.2.0
       '@tailwindcss/oxide': 4.2.0
-      postcss: 8.5.6
+      postcss: 8.5.14
       tailwindcss: 4.2.0
 
   '@tailwindcss/typography@0.5.19(tailwindcss@4.2.0)':
@@ -2410,7 +2410,7 @@ snapshots:
       picocolors: 1.1.1
       source-map-js: 1.2.1
 
-  postcss@8.5.6:
+  postcss@8.5.14:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
