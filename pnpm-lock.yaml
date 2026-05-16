@@ -9,13 +9,13 @@ importers:
   .:
     dependencies:
       '@next/third-parties':
-        specifier: ^16.0.10
+        specifier: ^16.1.6
         version: 16.1.6(next@16.2.6(react-dom@19.2.3(react@19.2.3))(react@19.2.3))(react@19.2.3)
       '@supabase/supabase-js':
-        specifier: ^2.89.0
+        specifier: ^2.97.0
         version: 2.97.0
       firebase:
-        specifier: ^12.6.0
+        specifier: ^12.9.0
         version: 12.9.0
       next:
         specifier: ^16.2.6
@@ -43,16 +43,16 @@ importers:
         version: 12.1.2
     devDependencies:
       '@tailwindcss/postcss':
-        specifier: ^4.1.18
+        specifier: ^4.2.0
         version: 4.2.0
       '@tailwindcss/typography':
         specifier: ^0.5.19
         version: 0.5.19(tailwindcss@4.2.0)
       '@types/node':
-        specifier: ^20.19.27
+        specifier: ^20.19.33
         version: 20.19.33
       '@types/react':
-        specifier: ^19.2.7
+        specifier: ^19.2.14
         version: 19.2.14
       '@types/react-dom':
         specifier: ^19.2.3
@@ -64,7 +64,7 @@ importers:
         specifier: ^0.2.4
         version: 0.2.4
       tailwindcss:
-        specifier: ^4.1.18
+        specifier: ^4.2.0
         version: 4.2.0
       typescript:
         specifier: ^5.9.3
@@ -581,8 +581,8 @@ packages:
   '@protobufjs/pool@1.1.0':
     resolution: {integrity: sha512-0kELaGSIDBKvcgS4zkjz1PeddatrjYcmMWOlAuAPwAeccUrPHdUqo/J6LiymHHEiJT5NrF1UVwxY14f+fy4WQw==}
 
-  '@protobufjs/utf8@1.1.0':
-    resolution: {integrity: sha512-Vvn3zZrhQZkkBE8LSuW3em98c0FwgO4nxzv6OdSxPKJIEKY2bGbHn+mhGIPerzI4twdxaP8/0+06HBpwf345Lw==}
+  '@protobufjs/utf8@1.1.1':
+    resolution: {integrity: sha512-oOAWABowe8EAbMyWKM0tYDKi8Yaox52D+HWZhAIJqQXbqe0xI/GV7FhLWqlEKreMkfDjshR5FKgi3mnle0h6Eg==}
 
   '@supabase/auth-js@2.97.0':
     resolution: {integrity: sha512-2Og/1lqp+AIavr8qS2X04aSl8RBY06y4LrtIAGxat06XoXYiDxKNQMQzWDAKm1EyZFZVRNH48DO5YvIZ7la5fQ==}
@@ -1878,7 +1878,7 @@ snapshots:
 
   '@protobufjs/pool@1.1.0': {}
 
-  '@protobufjs/utf8@1.1.0': {}
+  '@protobufjs/utf8@1.1.1': {}
 
   '@supabase/auth-js@2.97.0':
     dependencies:
@@ -2435,7 +2435,7 @@ snapshots:
       '@protobufjs/inquire': 1.1.0
       '@protobufjs/path': 1.1.2
       '@protobufjs/pool': 1.1.0
-      '@protobufjs/utf8': 1.1.0
+      '@protobufjs/utf8': 1.1.1
       '@types/node': 20.19.33
       long: 5.3.2
 
